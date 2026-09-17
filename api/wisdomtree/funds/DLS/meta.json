@@ -2,7 +2,7 @@
   "ticker": "DLS",
   "name": "WisdomTree International SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$88.14",
-    "value": 88.14,
-    "asOfDate": "Sep 15 2026"
+    "display": "$88.17",
+    "value": 88.175,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.05%",
-    "value": -0.05
+    "display": "-0.91%",
+    "value": -0.909
   },
   "aum": {
     "display": "$1.06 B",
     "value": 1062615740,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.4,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

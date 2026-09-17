@@ -2,7 +2,7 @@
   "ticker": "EES",
   "name": "WisdomTree U.S. SmallCap Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ees",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ees",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$66.56",
-    "value": 66.56,
-    "asOfDate": "Sep 15 2026"
+    "display": "$66.29",
+    "value": 66.286,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.087
+    "display": "0.06%",
+    "value": 0.055
   },
   "aum": {
     "display": "$699.49 M",
     "value": 699489600,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.16,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

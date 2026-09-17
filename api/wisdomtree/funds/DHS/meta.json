@@ -2,7 +2,7 @@
   "ticker": "DHS",
   "name": "WisdomTree U.S. High Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dhs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dhs",
@@ -41,7 +41,7 @@
     "display": "$1.61 B",
     "value": 1609620220,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.3,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

@@ -2,7 +2,7 @@
   "ticker": "WTLS",
   "name": "WisdomTree Efficient Long/Short U.S. Equity Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Long/Short",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtls",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$60.66",
-    "value": 60.664,
-    "asOfDate": "Sep 15 2026"
+    "display": "$60.33",
+    "value": 60.327,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.01
+    "display": "0.05%",
+    "value": 0.046
   },
   "aum": {
     "display": "$16.99 M",
     "value": 16987660,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,

@@ -2,7 +2,7 @@
   "ticker": "AIVL",
   "name": "WisdomTree U.S. AI Enhanced Value Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/aivl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/aivl",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$130.65",
-    "value": 130.652,
-    "asOfDate": "Sep 15 2026"
+    "display": "$129.98",
+    "value": 129.978,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.10%",
-    "value": -0.095
+    "display": "-0.01%",
+    "value": -0.006
   },
   "aum": {
     "display": "$418.49 M",
     "value": 418485250,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.48,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

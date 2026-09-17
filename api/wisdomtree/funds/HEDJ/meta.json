@@ -2,7 +2,7 @@
   "ticker": "HEDJ",
   "name": "WisdomTree Europe Hedged Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/hedj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/hedj",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$55.65",
-    "value": 55.65,
-    "asOfDate": "Sep 15 2026"
+    "display": "$55.76",
+    "value": 55.76,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.041
+    "display": "-0.27%",
+    "value": -0.268
   },
   "aum": {
     "display": "$1.76 B",
     "value": 1755041660,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.82,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Semi-Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 2,
     "headers": [
       "Ex-Date",
       "Amount"

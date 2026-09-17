@@ -2,7 +2,7 @@
   "ticker": "WSPC",
   "name": "WisdomTree Space Economy Fund",
   "category": "Thematic",
-  "categoryPath": "Thematic / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wspc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wspc",
@@ -41,7 +41,7 @@
     "display": "$1.32 M",
     "value": 1317770,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "previous run"
   },
   "yields": {
     "dividendYield": null,
@@ -98,8 +98,8 @@
     ],
     "pageSize": 250,
     "totalRows": 10,
-    "asOfDate": "2026-09-16",
-    "asOf": "Sep 16 2026",
+    "asOfDate": "2026-09-15",
+    "asOf": "Sep 15 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {

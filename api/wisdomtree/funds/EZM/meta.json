@@ -2,7 +2,7 @@
   "ticker": "EZM",
   "name": "WisdomTree U.S. MidCap Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ezm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ezm",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$74.19",
-    "value": 74.19,
-    "asOfDate": "Sep 15 2026"
+    "display": "$73.75",
+    "value": 73.75,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.25%",
-    "value": -0.246
+    "display": "-0.06%",
+    "value": -0.061
   },
   "aum": {
     "display": "$925.94 M",
     "value": 925936960,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.24,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

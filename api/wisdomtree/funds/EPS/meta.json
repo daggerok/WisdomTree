@@ -2,7 +2,7 @@
   "ticker": "EPS",
   "name": "WisdomTree U.S. LargeCap Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eps",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eps",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$80.01",
-    "value": 80.01,
-    "asOfDate": "Sep 15 2026"
+    "display": "$79.53",
+    "value": 79.53,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.032
+    "display": "0.05%",
+    "value": 0.048
   },
   "aum": {
     "display": "$1.65 B",
     "value": 1647672450,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.13,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

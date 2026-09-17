@@ -2,7 +2,7 @@
   "ticker": "WTMY",
   "name": "WisdomTree High Income Laddered Municipal Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Municipal Bonds",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmy",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$24.44",
-    "value": 24.44,
-    "asOfDate": "Sep 15 2026"
+    "display": "$24.43",
+    "value": 24.43,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.23%",
-    "value": -0.233
+    "display": "-0.25%",
+    "value": -0.249
   },
   "aum": {
     "display": "$4.90 M",
     "value": 4899400,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.84,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

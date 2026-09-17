@@ -2,7 +2,7 @@
   "ticker": "CXSE",
   "name": "WisdomTree China ex-State-Owned Enterprises Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/cxse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/cxse",
@@ -41,7 +41,7 @@
     "display": "$463.24 M",
     "value": 463236990,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.6,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

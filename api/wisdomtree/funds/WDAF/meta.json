@@ -2,7 +2,7 @@
   "ticker": "WDAF",
   "name": "WisdomTree Asia Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdaf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdaf",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$29.80",
-    "value": 29.8,
-    "asOfDate": "Sep 15 2026"
+    "display": "$29.42",
+    "value": 29.42,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.48%",
-    "value": -0.477
+    "display": "-1.27%",
+    "value": -1.275
   },
   "aum": {
     "display": "$10.48 M",
     "value": 10479790,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.13,

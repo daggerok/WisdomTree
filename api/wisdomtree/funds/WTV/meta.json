@@ -2,7 +2,7 @@
   "ticker": "WTV",
   "name": "WisdomTree U.S. Value Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wtv",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wtv",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$107.62",
-    "value": 107.62,
-    "asOfDate": "Sep 15 2026"
+    "display": "$106.49",
+    "value": 106.49,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.025
+    "display": "0.02%",
+    "value": 0.02
   },
   "aum": {
     "display": "$3.33 B",
     "value": 3327858940,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.85,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

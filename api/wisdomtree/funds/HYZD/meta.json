@@ -2,11 +2,11 @@
   "ticker": "HYZD",
   "name": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/HYZD",
@@ -26,11 +26,11 @@
   "nav": {
     "display": "$22.62",
     "value": 22.621,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 15 2026"
   },
   "marketPrice": {
-    "display": "$22.57",
-    "value": 22.566,
+    "display": "$22.61",
+    "value": 22.6108,
     "asOfDate": "Sep 15 2026"
   },
   "premiumDiscount": {
@@ -41,51 +41,51 @@
     "display": "$300.30 M",
     "value": 300300640,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 5.8,
     "dividendYieldText": "5.80%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.31,
+    "distributionRate": null,
     "secYield": 6.08,
     "secYieldText": "6.08%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.98,
-      "mo1Text": "0.98%",
-      "qtd": 2.54,
-      "qtdText": "2.54%",
-      "ytd": 4.52,
-      "ytdText": "4.52%",
-      "yr1": 7.09,
-      "yr1Text": "7.09%",
-      "yr3": 8.58,
-      "yr3Text": "8.58%",
-      "yr5": 6.3,
-      "yr5Text": "6.30%",
+      "asOfDate": "Sep 16 2026",
+      "mo1": 0.35,
+      "mo1Text": "0.35%",
+      "qtd": 1.23,
+      "qtdText": "1.23%",
+      "ytd": 4.28,
+      "ytdText": "4.28%",
+      "yr1": 6.23,
+      "yr1Text": "6.23%",
+      "yr3": 8.26,
+      "yr3Text": "8.26%",
+      "yr5": 6.17,
+      "yr5Text": "6.17%",
       "yr10": 5.24,
       "yr10Text": "5.24%",
-      "sinceInception": 4.47,
-      "sinceInceptionText": "4.47%"
+      "sinceInception": 4.27,
+      "sinceInceptionText": "4.27%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 6.7,
-      "yr3": 8.7,
-      "yr5": 6.04,
-      "yr10": 5.51,
-      "sinceInception": 4.4
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

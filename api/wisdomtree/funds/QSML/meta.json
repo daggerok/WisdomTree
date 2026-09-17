@@ -2,7 +2,7 @@
   "ticker": "QSML",
   "name": "WisdomTree U.S. SmallCap Quality Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Growth",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qsml",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qsml",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$33.26",
-    "value": 33.26,
-    "asOfDate": "Sep 15 2026"
+    "display": "$33.19",
+    "value": 33.185,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.11%",
-    "value": -0.106
+    "display": "0.01%",
+    "value": 0.014
   },
   "aum": {
     "display": "$12.49 M",
     "value": 12485730,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.54,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Semi-Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 2,
     "headers": [
       "Ex-Date",
       "Amount"

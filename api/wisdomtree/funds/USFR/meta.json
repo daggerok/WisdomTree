@@ -2,7 +2,7 @@
   "ticker": "USFR",
   "name": "WisdomTree Floating Rate Treasury Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Government Strategies",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usfr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usfr",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$50.47",
-    "value": 50.47,
-    "asOfDate": "Sep 15 2026"
+    "display": "$50.49",
+    "value": 50.49,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01
+    "display": "0.03%",
+    "value": 0.029
   },
   "aum": {
     "display": "$19.57 B",
     "value": 19569762300,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.74,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

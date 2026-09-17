@@ -2,7 +2,7 @@
   "ticker": "QMID",
   "name": "WisdomTree U.S. MidCap Quality Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Growth",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qmid",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qmid",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$29.43",
-    "value": 29.43,
-    "asOfDate": "Sep 15 2026"
+    "display": "$29.37",
+    "value": 29.37,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.071
+    "display": "-0.09%",
+    "value": -0.087
   },
   "aum": {
     "display": "$2.21 M",
     "value": 2208810,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.49,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 1,
     "headers": [
       "Ex-Date",
       "Amount"

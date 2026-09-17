@@ -2,7 +2,7 @@
   "ticker": "WTAI",
   "name": "WisdomTree Artificial Intelligence and Innovation Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wtai",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wtai",
@@ -41,7 +41,7 @@
     "display": "$646.51 M",
     "value": 646506820,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.3,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Semi-Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 2,
     "headers": [
       "Ex-Date",
       "Amount"

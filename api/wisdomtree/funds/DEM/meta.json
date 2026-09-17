@@ -2,7 +2,7 @@
   "ticker": "DEM",
   "name": "WisdomTree Emerging Markets High Dividend Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dem",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dem",
@@ -41,7 +41,7 @@
     "display": "$4.19 B",
     "value": 4185048830,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 4.02,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

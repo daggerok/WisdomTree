@@ -2,7 +2,7 @@
   "ticker": "QIG",
   "name": "WisdomTree U.S. Corporate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qig",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.88",
-    "value": 42.88,
-    "asOfDate": "Sep 15 2026"
+    "display": "$42.93",
+    "value": 42.931,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
     "display": "-0.14%",
-    "value": -0.145
+    "value": -0.139
   },
   "aum": {
     "display": "$17.18 M",
     "value": 17176840,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 5.03,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

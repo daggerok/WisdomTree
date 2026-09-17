@@ -2,7 +2,7 @@
   "ticker": "WTMU",
   "name": "WisdomTree Core Laddered Municipal Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Municipal Bonds",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmu",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmu",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$24.77",
-    "value": 24.775,
-    "asOfDate": "Sep 15 2026"
+    "display": "$24.73",
+    "value": 24.73,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.091
+    "display": "-0.21%",
+    "value": -0.21
   },
   "aum": {
     "display": "$8.93 M",
     "value": 8927100,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.28,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

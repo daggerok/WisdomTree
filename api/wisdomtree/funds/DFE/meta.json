@@ -2,7 +2,7 @@
   "ticker": "DFE",
   "name": "WisdomTree Europe SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfe",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$75.87",
-    "value": 75.871,
-    "asOfDate": "Sep 15 2026"
+    "display": "$76.01",
+    "value": 76.013,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.118
+    "display": "-0.82%",
+    "value": -0.817
   },
   "aum": {
     "display": "$167.11 M",
     "value": 167113700,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.89,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

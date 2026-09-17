@@ -2,7 +2,7 @@
   "ticker": "GTR",
   "name": "WisdomTree Target Range Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Option-Based",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gtr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gtr",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$27.46",
-    "value": 27.46,
-    "asOfDate": "Sep 15 2026"
+    "display": "$27.35",
+    "value": 27.35,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.14%",
-    "value": -0.141
+    "display": "-0.27%",
+    "value": -0.273
   },
   "aum": {
     "display": "$72.87 M",
     "value": 72871820,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 2.19,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

@@ -2,7 +2,7 @@
   "ticker": "QHY",
   "name": "WisdomTree U.S. High Yield Corporate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qhy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qhy",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$45.13",
-    "value": 45.125,
-    "asOfDate": "Sep 15 2026"
+    "display": "$45.17",
+    "value": 45.174,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.066
+    "display": "-0.05%",
+    "value": -0.046
   },
   "aum": {
     "display": "$243.83 M",
     "value": 243834980,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 6.31,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

@@ -2,7 +2,7 @@
   "ticker": "WDIG",
   "name": "WisdomTree Efficient Rare Earth Plus Strategic Metals Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Gold and Commodities",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wdig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wdig",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$41.82",
-    "value": 41.821,
-    "asOfDate": "Sep 15 2026"
+    "display": "$41.69",
+    "value": 41.686,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.34%",
-    "value": 0.339
+    "display": "-0.85%",
+    "value": -0.852
   },
   "aum": {
     "display": "$5.21 M",
     "value": 5209930,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": null,

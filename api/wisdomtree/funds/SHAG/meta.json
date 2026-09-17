@@ -2,7 +2,7 @@
   "ticker": "SHAG",
   "name": "WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/shag",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/shag",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$46.67",
-    "value": 46.67,
-    "asOfDate": "Sep 15 2026"
+    "display": "$46.63",
+    "value": 46.63,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.16%",
-    "value": -0.157
+    "display": "-0.17%",
+    "value": -0.167
   },
   "aum": {
     "display": "$65.44 M",
     "value": 65440660,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.27,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

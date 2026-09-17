@@ -2,7 +2,7 @@
   "ticker": "XC",
   "name": "WisdomTree True Emerging Markets Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xc",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$31.73",
-    "value": 31.735,
-    "asOfDate": "Sep 15 2026"
+    "display": "$31.40",
+    "value": 31.397,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.14%",
-    "value": 0.145
+    "display": "-0.84%",
+    "value": -0.837
   },
   "aum": {
     "display": "$76.05 M",
     "value": 76053220,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.06,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

@@ -2,7 +2,7 @@
   "ticker": "DGRE",
   "name": "WisdomTree Emerging Markets Quality Dividend Growth Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgre",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$40.18",
-    "value": 40.18,
-    "asOfDate": "Sep 15 2026"
+    "display": "$40.05",
+    "value": 40.05,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.30%",
-    "value": 0.296
+    "display": "-0.42%",
+    "value": -0.42
   },
   "aum": {
     "display": "$148.23 M",
     "value": 148225810,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.28,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

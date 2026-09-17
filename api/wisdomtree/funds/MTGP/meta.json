@@ -2,7 +2,7 @@
   "ticker": "MTGP",
   "name": "WisdomTree Mortgage Plus Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Securitized Sector",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/mtgp",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/mtgp",
@@ -30,18 +30,18 @@
   },
   "marketPrice": {
     "display": "$42.88",
-    "value": 42.882,
-    "asOfDate": "Sep 15 2026"
+    "value": 42.885,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.095
+    "display": "0.19%",
+    "value": 0.194
   },
   "aum": {
     "display": "$72.83 M",
     "value": 72829620,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.51,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

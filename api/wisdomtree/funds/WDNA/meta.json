@@ -2,7 +2,7 @@
   "ticker": "WDNA",
   "name": "WisdomTree BioRevolution Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdna",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdna",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$22.30",
-    "value": 22.296,
-    "asOfDate": "Sep 15 2026"
+    "display": "$22.27",
+    "value": 22.266,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.35%",
-    "value": -0.351
+    "display": "-0.29%",
+    "value": -0.29
   },
   "aum": {
     "display": "$4.47 M",
     "value": 4474790,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.45,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 1,
     "headers": [
       "Ex-Date",
       "Amount"

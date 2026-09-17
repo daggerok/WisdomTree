@@ -2,7 +2,7 @@
   "ticker": "QGRW",
   "name": "WisdomTree U.S. Quality Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Growth",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qgrw",
@@ -41,7 +41,7 @@
     "display": "$2.97 B",
     "value": 2967823100,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.08,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 1,
     "headers": [
       "Ex-Date",
       "Amount"

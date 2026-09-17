@@ -2,7 +2,7 @@
   "ticker": "DTD",
   "name": "WisdomTree U.S. Total Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dtd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dtd",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$95.74",
-    "value": 95.74,
-    "asOfDate": "Sep 15 2026"
+    "display": "$94.72",
+    "value": 94.72,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.031
+    "display": "-0.05%",
+    "value": -0.051
   },
   "aum": {
     "display": "$1.64 B",
     "value": 1641424900,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.85,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

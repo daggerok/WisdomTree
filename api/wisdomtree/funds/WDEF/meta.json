@@ -2,7 +2,7 @@
   "ticker": "WDEF",
   "name": "WisdomTree Europe Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdef",
@@ -41,7 +41,7 @@
     "display": "$84.37 M",
     "value": 84368680,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.07,

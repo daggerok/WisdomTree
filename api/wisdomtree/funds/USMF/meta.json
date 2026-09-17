@@ -2,7 +2,7 @@
   "ticker": "USMF",
   "name": "WisdomTree U.S. Multifactor Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/usmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/usmf",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$52.25",
-    "value": 52.253,
-    "asOfDate": "Sep 15 2026"
+    "display": "$52.02",
+    "value": 52.025,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.073
+    "display": "0.01%",
+    "value": 0.007
   },
   "aum": {
     "display": "$277.14 M",
     "value": 277140420,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.34,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

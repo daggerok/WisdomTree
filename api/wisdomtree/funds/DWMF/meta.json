@@ -2,7 +2,7 @@
   "ticker": "DWMF",
   "name": "WisdomTree International Multifactor Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwmf",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$33.65",
-    "value": 33.645,
-    "asOfDate": "Sep 15 2026"
+    "display": "$33.57",
+    "value": 33.569,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.60%",
-    "value": -0.601
+    "display": "-1.41%",
+    "value": -1.408
   },
   "aum": {
     "display": "$33.85 M",
     "value": 33847060,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.07,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

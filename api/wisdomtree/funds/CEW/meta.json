@@ -2,7 +2,7 @@
   "ticker": "CEW",
   "name": "WisdomTree Emerging Currency Strategy Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Currency Strategies",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/cew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/cew",
@@ -41,7 +41,7 @@
     "display": "$17.86 M",
     "value": 17864590,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 2.35,

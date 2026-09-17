@@ -2,7 +2,7 @@
   "ticker": "INDH",
   "name": "WisdomTree India Hedged Equity Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/indh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/indh",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$37.85",
-    "value": 37.854,
-    "asOfDate": "Sep 15 2026"
+    "display": "$37.75",
+    "value": 37.754,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.177
+    "display": "-0.72%",
+    "value": -0.719
   },
   "aum": {
     "display": "$5.67 M",
     "value": 5668110,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 1,
     "headers": [
       "Ex-Date",
       "Amount"

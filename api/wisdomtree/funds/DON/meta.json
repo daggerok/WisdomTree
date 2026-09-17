@@ -2,7 +2,7 @@
   "ticker": "DON",
   "name": "WisdomTree U.S. MidCap Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/don",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/don",
@@ -41,7 +41,7 @@
     "display": "$3.94 B",
     "value": 3938479870,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.38,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Monthly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 12,
     "headers": [
       "Ex-Date",
       "Amount"

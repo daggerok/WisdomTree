@@ -2,7 +2,7 @@
   "ticker": "WTRE",
   "name": "WisdomTree New Economy Real Estate Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / Global",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wtre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wtre",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$23.12",
-    "value": 23.117,
-    "asOfDate": "Sep 15 2026"
+    "display": "$23.19",
+    "value": 23.191,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.37%",
-    "value": -0.366
+    "display": "-0.54%",
+    "value": -0.542
   },
   "aum": {
     "display": "$15.08 M",
     "value": 15080980,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.43,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

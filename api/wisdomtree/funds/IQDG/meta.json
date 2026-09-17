@@ -2,7 +2,7 @@
   "ticker": "IQDG",
   "name": "WisdomTree International Quality Dividend Growth Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/iqdg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/iqdg",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$43.26",
-    "value": 43.26,
-    "asOfDate": "Sep 15 2026"
+    "display": "$43.11",
+    "value": 43.111,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.27%",
-    "value": 0.27
+    "display": "-0.53%",
+    "value": -0.529
   },
   "aum": {
     "display": "$696.76 M",
     "value": 696761340,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.38,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Quarterly",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 4,
     "headers": [
       "Ex-Date",
       "Amount"

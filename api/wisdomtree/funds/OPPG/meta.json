@@ -2,7 +2,7 @@
   "ticker": "OPPG",
   "name": "WisdomTree GeoAlpha Opportunities Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Global",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppg",
@@ -41,7 +41,7 @@
     "display": "$2.80 M",
     "value": 2802120,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.53,

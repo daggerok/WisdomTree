@@ -2,7 +2,7 @@
   "ticker": "WTMF",
   "name": "WisdomTree Managed Futures Strategy Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Managed Futures",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
@@ -29,19 +29,19 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.05",
-    "value": 42.05,
-    "asOfDate": "Sep 15 2026"
+    "display": "$42.30",
+    "value": 42.3,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.15%",
-    "value": 0.152
+    "display": "0.90%",
+    "value": 0.903
   },
   "aum": {
     "display": "$268.71 M",
     "value": 268711170,
     "asOfDate": "Sep 15 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 2.76,
@@ -85,7 +85,7 @@
   },
   "distributions": {
     "frequency": "Semi-Annual",
-    "paymentsPerYear": null,
+    "paymentsPerYear": 2,
     "headers": [
       "Ex-Date",
       "Amount"
