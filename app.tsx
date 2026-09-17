@@ -54,6 +54,7 @@ type IndexFund = {
     dividendYield?: number | null;
     dividendYieldText?: string | null;
     secYield?: number | null;
+    secYieldText?: string | null;
   };
   holdings: number;
   history: number;
