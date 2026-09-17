@@ -1,0 +1,89 @@
+{
+  "ticker": "NTSX",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 508,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "OTIS WORLDWIDE CORP",
+      "Ticker": "OTIS",
+      "Identifier": "68902V107",
+      "Weight": "0.038895557801",
+      "Market Value": "530412.8",
+      "Shares Held": "7408.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OLD DOMINION FREIGHT LINE INC",
+      "Ticker": "ODFL",
+      "Identifier": "679580100",
+      "Weight": "0.047189688678",
+      "Market Value": "643518.6",
+      "Shares Held": "2971.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GENUINE PARTS COMPANY",
+      "Ticker": "GPC",
+      "Identifier": "372460105",
+      "Weight": "0.025288508477",
+      "Market Value": "344855.54",
+      "Shares Held": "2923.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DOW INC",
+      "Ticker": "DOW",
+      "Identifier": "260557103",
+      "Weight": "0.027954178774",
+      "Market Value": "381206.88",
+      "Shares Held": "13933.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "L3HARRIS TECHNOLOGIES INC",
+      "Ticker": "-",
+      "Identifier": "502431109",
+      "Weight": "0.069446607249",
+      "Market Value": "947032.81",
+      "Shares Held": "3259.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BECTON DICKINSON & COMPANY",
+      "Ticker": "BDX",
+      "Identifier": "075887109",
+      "Weight": "0.049570921539",
+      "Market Value": "675991.11",
+      "Shares Held": "4467.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CBRE GROUP INC",
+      "Ticker": "CBRE",
+      "Identifier": "12504L109",
+      "Weight": "0.05391808454",
+      "Market Value": "735272.71",
+      "Shares Held": "5459.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "M&T BANK CORP",
+      "Ticker": "MTB",
+      "Identifier": "55261F104",
+      "Weight": "0.051435308417",
+      "Market Value": "701415.47",
+      "Shares Held": "2947.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "ticker": "WTLS",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 5,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797UM7",
+      "Weight": "44.65882174501",
+      "Market Value": "5328549.52",
+      "Shares Held": "5400000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-11-05"
+    },
+    {
+      "Name": "GOLDMAN SACHS BANK USA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.40278756727",
+      "Market Value": "48059.34",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797RG4",
+      "Weight": "45.09427142416",
+      "Market Value": "5380506",
+      "Shares Held": "5400000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-08-06"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.692187608349",
+      "Market Value": "321223.32",
+      "Shares Held": "31.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "9.212957647478",
+      "Market Value": "1099261",
+      "Shares Held": "1099261.00000000",
+      "Asset Category": "STIV"
+    }
+  ]
+}

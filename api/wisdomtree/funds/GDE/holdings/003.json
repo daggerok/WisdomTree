@@ -1,0 +1,71 @@
+{
+  "ticker": "GDE",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 506,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "ONEOK INC",
+      "Ticker": "-",
+      "Identifier": "682680103",
+      "Weight": "0.061740955276",
+      "Market Value": "367405.38",
+      "Shares Held": "4377.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VERTEX PHARMACEUTICALS INC",
+      "Ticker": "-",
+      "Identifier": "92532F100",
+      "Weight": "0.137403640078",
+      "Market Value": "817655.58",
+      "Shares Held": "1827.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EOG RESOURCES INC",
+      "Ticker": "EOG",
+      "Identifier": "26875P101",
+      "Weight": "0.094138621982",
+      "Market Value": "560196",
+      "Shares Held": "4200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REGENERON PHARMACEUTICALS INC",
+      "Ticker": "REGN",
+      "Identifier": "75886F107",
+      "Weight": "0.084301969828",
+      "Market Value": "501660.48",
+      "Shares Held": "816.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NRG ENERGY INC",
+      "Ticker": "NRG",
+      "Identifier": "629377508",
+      "Weight": "0.01286553773",
+      "Market Value": "76559.68",
+      "Shares Held": "571.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OLD DOMINION FREIGHT LINE INC",
+      "Ticker": "ODFL",
+      "Identifier": "679580100",
+      "Weight": "0.056942467748",
+      "Market Value": "338850.75",
+      "Shares Held": "1505.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

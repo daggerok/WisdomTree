@@ -1,0 +1,114 @@
+{
+  "ticker": "WSPC",
+  "name": "WisdomTree Space Economy Fund",
+  "category": "Thematic",
+  "categoryPath": "Thematic / -",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wspc",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wspc",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WSPC",
+    "holdingsSource": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y162",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.75%",
+    "value": 0.75
+  },
+  "nav": {
+    "display": "$26.70",
+    "value": 26.704,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$26.36",
+    "value": 26.365,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.04%",
+    "value": 0.037
+  },
+  "aum": {
+    "display": "$1.32 M",
+    "value": 1317770,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": 0,
+    "secYield": -0.41,
+    "secYieldText": "-0.41%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 6.12,
+      "mo1Text": "6.12%",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -8.97,
+      "sinceInceptionText": "-8.97%"
+    },
+    "quarterEnd": {
+      "asOfDate": "N/A",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
+    }
+  },
+  "distributions": {
+    "frequency": "—",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 10,
+    "asOfDate": "2026-09-16",
+    "asOf": "Sep 16 2026",
+    "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 49,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

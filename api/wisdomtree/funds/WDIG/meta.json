@@ -1,0 +1,114 @@
+{
+  "ticker": "WDIG",
+  "name": "WisdomTree Efficient Rare Earth Plus Strategic Metals Fund",
+  "category": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Gold and Commodities",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wdig",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wdig",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDIG",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028863, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y238",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.55%",
+    "value": 0.55
+  },
+  "nav": {
+    "display": "$42.04",
+    "value": 42.041,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$41.82",
+    "value": 41.821,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.34%",
+    "value": 0.339
+  },
+  "aum": {
+    "display": "$5.21 M",
+    "value": 5209930,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": 0,
+    "secYield": 0,
+    "secYieldText": "0.00%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 17.75,
+      "mo1Text": "17.75%",
+      "qtd": -11.93,
+      "qtdText": "-11.93%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -12.28,
+      "sinceInceptionText": "-12.28%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": -19.41
+    }
+  },
+  "distributions": {
+    "frequency": "—",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 112,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028863, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 91,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

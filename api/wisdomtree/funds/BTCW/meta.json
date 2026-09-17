@@ -1,0 +1,114 @@
+{
+  "ticker": "BTCW",
+  "name": "WisdomTree Bitcoin Fund",
+  "category": "Crypto ETPs",
+  "categoryPath": "Crypto ETPs / Bitcoin",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/BTCW",
+    "holdingsSource": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97720F101",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.25%",
+    "value": 0.25
+  },
+  "nav": {
+    "display": "$80.02",
+    "value": 80.023,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$80.38",
+    "value": 80.38,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.18%",
+    "value": 0.18
+  },
+  "aum": {
+    "display": "$159.67 M",
+    "value": 159668980,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 25.37,
+      "mo1Text": "25.37%",
+      "qtd": 7.27,
+      "qtdText": "7.27%",
+      "ytd": -10.06,
+      "ytdText": "-10.06%",
+      "yr1": -27.36,
+      "yr1Text": "-27.36%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 22.54,
+      "sinceInceptionText": "22.54%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": -45.62,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 10.31
+    }
+  },
+  "distributions": {
+    "frequency": "—",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 1,
+    "asOfDate": "2026-09-15",
+    "asOf": "Sep 15 2026",
+    "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 672,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

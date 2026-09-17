@@ -1,0 +1,72 @@
+{
+  "ticker": "USFR",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 5,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CPX3",
+      "Weight": "27.91124058723",
+      "Market Value": "4740918723.73",
+      "Shares Held": "4739107200.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.69400000",
+      "Maturity": "2028-01-31"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CNQ0",
+      "Weight": "27.92577651758",
+      "Market Value": "4743387752.8",
+      "Shares Held": "4738307600.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.75400000",
+      "Maturity": "2027-07-31"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CQM6",
+      "Weight": "15.89889825429",
+      "Market Value": "2700538665.95",
+      "Shares Held": "2699816600.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.69800000",
+      "Maturity": "2028-04-30"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CPG0",
+      "Weight": "27.95414549274",
+      "Market Value": "4748206420.93",
+      "Shares Held": "4739478600.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.78500000",
+      "Maturity": "2027-10-31"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008331411241",
+      "Market Value": "1415148.26",
+      "Shares Held": "1415148.26000000",
+      "Asset Category": "STIV"
+    }
+  ]
+}

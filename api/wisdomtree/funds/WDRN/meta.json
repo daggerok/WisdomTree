@@ -1,0 +1,114 @@
+{
+  "ticker": "WDRN",
+  "name": "WisdomTree Physical AI, Humanoids, and Drones Fund",
+  "category": "Thematic",
+  "categoryPath": "Thematic / Megatrends",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdrn",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdrn",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDRN",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036308, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y188",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.45%",
+    "value": 0.45
+  },
+  "nav": {
+    "display": "$25.55",
+    "value": 25.549,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$25.65",
+    "value": 25.652,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.22%",
+    "value": 0.224
+  },
+  "aum": {
+    "display": "$17.92 M",
+    "value": 17916350,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": 0,
+    "secYield": 0.14,
+    "secYieldText": "0.14%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.95,
+      "mo1Text": "2.95%",
+      "qtd": -19.55,
+      "qtdText": "-19.55%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -12.22,
+      "sinceInceptionText": "-12.22%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": -1.13
+    }
+  },
+  "distributions": {
+    "frequency": "—",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": []
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 64,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036308, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 86,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

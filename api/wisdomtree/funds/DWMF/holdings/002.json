@@ -1,0 +1,62 @@
+{
+  "ticker": "DWMF",
+  "page": 2,
+  "pageSize": 250,
+  "totalRows": 255,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "SHIMADZU CORP",
+      "Ticker": "SHMXY",
+      "Identifier": "000000000",
+      "Weight": "0.386939274732",
+      "Market Value": "131691.74",
+      "Shares Held": "5200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAPAN AIRLINES CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.22155287754",
+      "Market Value": "75403.78",
+      "Shares Held": "4300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.033489035681",
+      "Market Value": "11397.73",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "INVESTOR AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.58465939959",
+      "Market Value": "198984.23",
+      "Shares Held": "4784.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.00078750166",
+      "Market Value": "-268.02",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    }
+  ]
+}

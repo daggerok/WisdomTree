@@ -1,0 +1,170 @@
+{
+  "ticker": "WTMF",
+  "name": "WisdomTree Managed Futures Strategy Fund",
+  "category": "Alternative",
+  "categoryPath": "Alternative / Managed Futures",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTMF",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028876, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717W125",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.65%",
+    "value": 0.65
+  },
+  "nav": {
+    "display": "$41.92",
+    "value": 41.918,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$42.05",
+    "value": 42.05,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.15%",
+    "value": 0.152
+  },
+  "aum": {
+    "display": "$268.71 M",
+    "value": 268711170,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 2.76,
+    "dividendYieldText": "2.76%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0.79,
+    "secYield": 2.44,
+    "secYieldText": "2.44%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.81,
+      "mo1Text": "2.81%",
+      "qtd": 2.11,
+      "qtdText": "2.11%",
+      "ytd": 10.35,
+      "ytdText": "10.35%",
+      "yr1": 18.54,
+      "yr1Text": "18.54%",
+      "yr3": 10.39,
+      "yr3Text": "10.39%",
+      "yr5": 6.41,
+      "yr5Text": "6.41%",
+      "yr10": 3.86,
+      "yr10Text": "3.86%",
+      "sinceInception": 1.24,
+      "sinceInceptionText": "1.24%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 18.9,
+      "yr3": 9.28,
+      "yr5": 5.88,
+      "yr10": 3.16,
+      "sinceInception": 1.04
+    }
+  },
+  "distributions": {
+    "frequency": "Semi-Annual",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/21/2011",
+        "0.78"
+      ],
+      [
+        "12/24/2018",
+        "1.392"
+      ],
+      [
+        "12/23/2019",
+        "0.604"
+      ],
+      [
+        "12/21/2020",
+        "0.173"
+      ],
+      [
+        "10/08/2021",
+        "5.213"
+      ],
+      [
+        "10/25/2022",
+        "1.445"
+      ],
+      [
+        "12/23/2022",
+        "0.223"
+      ],
+      [
+        "10/25/2023",
+        "1.323"
+      ],
+      [
+        "12/22/2023",
+        "0.34"
+      ],
+      [
+        "10/28/2024",
+        "0.815"
+      ],
+      [
+        "12/26/2024",
+        "0.433"
+      ],
+      [
+        "10/28/2025",
+        "0.825"
+      ],
+      [
+        "12/26/2025",
+        "0.332"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 30,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028876, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json",
+      "history/004.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 3947,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

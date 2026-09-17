@@ -1,0 +1,74 @@
+{
+  "ticker": "HYZD",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 505,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "ADIENT GLOBAL HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "00687YAD7",
+      "Weight": "0.254231116608",
+      "Market Value": "602101.07",
+      "Shares Held": "580000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "7.50000000",
+      "Maturity": "2033-02-15"
+    },
+    {
+      "Name": "ON SEMICONDUCTOR CORP",
+      "Ticker": "ON",
+      "Identifier": "682189AQ8",
+      "Weight": "0.06101867836",
+      "Market Value": "144511.86",
+      "Shares Held": "148000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "3.87500000",
+      "Maturity": "2028-09-01"
+    },
+    {
+      "Name": "POST HOLDINGS INC",
+      "Ticker": "POST",
+      "Identifier": "737446AR5",
+      "Weight": "0.390671639089",
+      "Market Value": "925236.12",
+      "Shares Held": "985000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.50000000",
+      "Maturity": "2031-09-15"
+    },
+    {
+      "Name": "TRANSDIGM INC",
+      "Ticker": "-",
+      "Identifier": "893647BR7",
+      "Weight": "0.067629118997",
+      "Market Value": "160167.51",
+      "Shares Held": "158000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "6.75000000",
+      "Maturity": "2028-08-15"
+    },
+    {
+      "Name": "STATION CASINOS LLC",
+      "Ticker": "-",
+      "Identifier": "857691AG4",
+      "Weight": "0.212387417737",
+      "Market Value": "503001.73",
+      "Shares Held": "510000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.50000000",
+      "Maturity": "2028-02-15"
+    }
+  ]
+}

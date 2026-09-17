@@ -1,0 +1,440 @@
+{
+  "ticker": "MTGP",
+  "name": "WisdomTree Mortgage Plus Bond Fund",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income / Securitized Sector",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/mtgp",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/mtgp",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/MTGP",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028873, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y725",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.45%",
+    "value": 0.45
+  },
+  "nav": {
+    "display": "$42.80",
+    "value": 42.802,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$42.88",
+    "value": 42.882,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.10%",
+    "value": 0.095
+  },
+  "aum": {
+    "display": "$72.83 M",
+    "value": 72829620,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 4.51,
+    "dividendYieldText": "4.51%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 4.06,
+    "secYield": 4.35,
+    "secYieldText": "4.35%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.2,
+      "mo1Text": "0.20%",
+      "qtd": -0.37,
+      "qtdText": "-0.37%",
+      "ytd": 0.16,
+      "ytdText": "0.16%",
+      "yr1": 2.58,
+      "yr1Text": "2.58%",
+      "yr3": 4.58,
+      "yr3Text": "4.58%",
+      "yr5": 0.15,
+      "yr5Text": "0.15%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 0.91,
+      "sinceInceptionText": "0.91%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 4.62,
+      "yr3": 4.68,
+      "yr5": 0.43,
+      "yr10": null,
+      "sinceInception": 1.07
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "01/21/2020",
+        "0.099"
+      ],
+      [
+        "02/25/2020",
+        "0.105"
+      ],
+      [
+        "03/24/2020",
+        "0.105"
+      ],
+      [
+        "04/21/2020",
+        "0.093"
+      ],
+      [
+        "05/26/2020",
+        "0.093"
+      ],
+      [
+        "06/23/2020",
+        "0.088"
+      ],
+      [
+        "07/28/2020",
+        "0.068"
+      ],
+      [
+        "08/25/2020",
+        "0.073"
+      ],
+      [
+        "09/22/2020",
+        "0.073"
+      ],
+      [
+        "10/27/2020",
+        "0.075"
+      ],
+      [
+        "11/23/2020",
+        "0.075"
+      ],
+      [
+        "12/08/2020",
+        "0.319"
+      ],
+      [
+        "12/21/2020",
+        "0.078"
+      ],
+      [
+        "01/25/2021",
+        "0.078"
+      ],
+      [
+        "02/22/2021",
+        "0.078"
+      ],
+      [
+        "03/25/2021",
+        "0.073"
+      ],
+      [
+        "04/26/2021",
+        "0.075"
+      ],
+      [
+        "05/24/2021",
+        "0.075"
+      ],
+      [
+        "06/24/2021",
+        "0.075"
+      ],
+      [
+        "07/26/2021",
+        "0.075"
+      ],
+      [
+        "08/25/2021",
+        "0.06"
+      ],
+      [
+        "09/24/2021",
+        "0.06"
+      ],
+      [
+        "10/25/2021",
+        "0.06"
+      ],
+      [
+        "11/23/2021",
+        "0.058"
+      ],
+      [
+        "12/27/2021",
+        "0.058"
+      ],
+      [
+        "01/25/2022",
+        "0.065"
+      ],
+      [
+        "02/22/2022",
+        "0.055"
+      ],
+      [
+        "03/25/2022",
+        "0.04"
+      ],
+      [
+        "04/25/2022",
+        "0.05"
+      ],
+      [
+        "05/24/2022",
+        "0.055"
+      ],
+      [
+        "06/24/2022",
+        "0.05"
+      ],
+      [
+        "07/25/2022",
+        "0.06"
+      ],
+      [
+        "08/25/2022",
+        "0.07"
+      ],
+      [
+        "09/26/2022",
+        "0.09"
+      ],
+      [
+        "10/25/2022",
+        "0.105"
+      ],
+      [
+        "11/23/2022",
+        "0.135"
+      ],
+      [
+        "12/23/2022",
+        "0.3"
+      ],
+      [
+        "01/25/2023",
+        "0.075"
+      ],
+      [
+        "02/22/2023",
+        "0.1"
+      ],
+      [
+        "03/27/2023",
+        "0.1"
+      ],
+      [
+        "04/24/2023",
+        "0.1"
+      ],
+      [
+        "05/24/2023",
+        "0.1"
+      ],
+      [
+        "06/26/2023",
+        "0.1"
+      ],
+      [
+        "07/25/2023",
+        "0.125"
+      ],
+      [
+        "08/25/2023",
+        "0.115"
+      ],
+      [
+        "09/25/2023",
+        "0.115"
+      ],
+      [
+        "10/25/2023",
+        "0.105"
+      ],
+      [
+        "11/24/2023",
+        "0.12"
+      ],
+      [
+        "12/22/2023",
+        "0.169"
+      ],
+      [
+        "01/25/2024",
+        "0.11"
+      ],
+      [
+        "02/23/2024",
+        "0.105"
+      ],
+      [
+        "03/22/2024",
+        "0.115"
+      ],
+      [
+        "04/24/2024",
+        "0.125"
+      ],
+      [
+        "05/24/2024",
+        "0.14"
+      ],
+      [
+        "06/25/2024",
+        "0.14"
+      ],
+      [
+        "07/26/2024",
+        "0.135"
+      ],
+      [
+        "08/27/2024",
+        "0.125"
+      ],
+      [
+        "09/25/2024",
+        "0.13"
+      ],
+      [
+        "10/28/2024",
+        "0.13"
+      ],
+      [
+        "11/25/2024",
+        "0.18"
+      ],
+      [
+        "12/26/2024",
+        "0.315"
+      ],
+      [
+        "01/28/2025",
+        "0.135"
+      ],
+      [
+        "02/25/2025",
+        "0.12"
+      ],
+      [
+        "03/26/2025",
+        "0.135"
+      ],
+      [
+        "04/25/2025",
+        "0.14"
+      ],
+      [
+        "05/27/2025",
+        "0.14"
+      ],
+      [
+        "06/25/2025",
+        "0.125"
+      ],
+      [
+        "07/28/2025",
+        "0.145"
+      ],
+      [
+        "08/26/2025",
+        "0.14"
+      ],
+      [
+        "09/25/2025",
+        "0.145"
+      ],
+      [
+        "10/28/2025",
+        "0.195"
+      ],
+      [
+        "11/24/2025",
+        "0.195"
+      ],
+      [
+        "12/26/2025",
+        "0.25"
+      ],
+      [
+        "01/27/2026",
+        "0.145"
+      ],
+      [
+        "02/24/2026",
+        "0.13"
+      ],
+      [
+        "03/26/2026",
+        "0.14"
+      ],
+      [
+        "04/27/2026",
+        "0.14"
+      ],
+      [
+        "05/26/2026",
+        "0.15"
+      ],
+      [
+        "06/25/2026",
+        "0.145"
+      ],
+      [
+        "07/28/2026",
+        "0.15"
+      ],
+      [
+        "08/26/2026",
+        "0.145"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 184,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028873, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1702,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

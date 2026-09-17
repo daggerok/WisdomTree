@@ -1,0 +1,71 @@
+{
+  "ticker": "EPS",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 506,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "WESTERN DIGITAL CORP",
+      "Ticker": "WDC",
+      "Identifier": "958102105",
+      "Weight": "0.51613593503",
+      "Market Value": "8151983.36",
+      "Shares Held": "12763.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLOCK INC",
+      "Ticker": "XYZ",
+      "Identifier": "852234103",
+      "Weight": "0.051299407394",
+      "Market Value": "810236",
+      "Shares Held": "10661.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CASEY'S GENERAL STORES INC",
+      "Ticker": "CASY",
+      "Identifier": "147528103",
+      "Weight": "0.018115724506",
+      "Market Value": "286124.4",
+      "Shares Held": "360.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EOG RESOURCES INC",
+      "Ticker": "EOG",
+      "Identifier": "26875P101",
+      "Weight": "0.220662266965",
+      "Market Value": "3485196.45",
+      "Shares Held": "26865.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HEWLETT PACKARD ENTERPRISE COMPANY",
+      "Ticker": "HPE",
+      "Identifier": "42824C109",
+      "Weight": "0.262992683653",
+      "Market Value": "4153773.91",
+      "Shares Held": "92081.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHERWIN-WILLIAMS COMPANY (THE)",
+      "Ticker": "SHW",
+      "Identifier": "824348106",
+      "Weight": "0.091299780882",
+      "Market Value": "1442012.16",
+      "Shares Held": "4188.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "ticker": "DES",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 525,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "GLOBAL INDUSTRIAL COMPANY",
+      "Ticker": "GIC",
+      "Identifier": "37892E102",
+      "Weight": "0.232098183507",
+      "Market Value": "5073037.9",
+      "Shares Held": "151615.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ACADEMY SPORTS AND OUTDOORS INC",
+      "Ticker": "ASO",
+      "Identifier": "00402L107",
+      "Weight": "0.17079517783",
+      "Market Value": "3733120.17",
+      "Shares Held": "79209.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CONNECTONE BANCORP INC",
+      "Ticker": "CNOB",
+      "Identifier": "20786W107",
+      "Weight": "0.094247918133",
+      "Market Value": "2060004.32",
+      "Shares Held": "61603.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOOKER FURNISHINGS CORP",
+      "Ticker": "HOFT",
+      "Identifier": "439038100",
+      "Weight": "0.025025457222",
+      "Market Value": "546988.74",
+      "Shares Held": "30678.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KULICKE AND SOFFA INDUSTRIES INC",
+      "Ticker": "KLIC",
+      "Identifier": "501242101",
+      "Weight": "0.588066129581",
+      "Market Value": "12853533.44",
+      "Shares Held": "96094.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OIL-DRI CORP OF AMERICA",
+      "Ticker": "ODC",
+      "Identifier": "677864100",
+      "Weight": "0.198562608232",
+      "Market Value": "4340041.02",
+      "Shares Held": "42462.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALICO INC",
+      "Ticker": "ALCO",
+      "Identifier": "016230104",
+      "Weight": "0.073294159167",
+      "Market Value": "1602011.88",
+      "Shares Held": "38724.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNIVERSAL LOGISTICS HOLDINGS INC",
+      "Ticker": "ULH",
+      "Identifier": "91388P105",
+      "Weight": "0.085591296117",
+      "Market Value": "1870794",
+      "Shares Held": "126405.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TFS FINANCIAL CORP",
+      "Ticker": "TFSL",
+      "Identifier": "87240R107",
+      "Weight": "1.182386581815",
+      "Market Value": "25843769.44",
+      "Shares Held": "1458452.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WARRIOR MET COAL INC",
+      "Ticker": "HCC",
+      "Identifier": "93627C101",
+      "Weight": "0.156347038423",
+      "Market Value": "3417322.96",
+      "Shares Held": "42106.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SCOTTS MIRACLE-GRO COMPANY (THE)",
+      "Ticker": "SMG",
+      "Identifier": "810186106",
+      "Weight": "0.662129278318",
+      "Market Value": "14472353.35",
+      "Shares Held": "212485.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRIEDMAN INDUSTRIES INC",
+      "Ticker": "FRD",
+      "Identifier": "358435105",
+      "Weight": "0.050631623146",
+      "Market Value": "1106670.2",
+      "Shares Held": "34390.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNIVERSAL CORP",
+      "Ticker": "-",
+      "Identifier": "913456109",
+      "Weight": "0.312395230134",
+      "Market Value": "6828113.94",
+      "Shares Held": "130882.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GENIE ENERGY LTD",
+      "Ticker": "GNE",
+      "Identifier": "372284208",
+      "Weight": "0.083773442882",
+      "Market Value": "1831060.65",
+      "Shares Held": "126717.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARCUS CORP (THE)",
+      "Ticker": "MCS",
+      "Identifier": "566330106",
+      "Weight": "0.139986394533",
+      "Market Value": "3059723.58",
+      "Shares Held": "130423.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUTUREFUEL CORP",
+      "Ticker": "FF",
+      "Identifier": "36116M106",
+      "Weight": "0.040713370033",
+      "Market Value": "889884.04",
+      "Shares Held": "196877.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PHINIA INC",
+      "Ticker": "PHIN",
+      "Identifier": "71880K101",
+      "Weight": "0.306694788067",
+      "Market Value": "6703517.71",
+      "Shares Held": "81383.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOUTHERN MISSOURI BANCORP INC",
+      "Ticker": "SMBC",
+      "Identifier": "843380106",
+      "Weight": "0.039319607749",
+      "Market Value": "859420.17",
+      "Shares Held": "11277.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EMPIRE STATE REALTY TRUST INC",
+      "Ticker": "ESRT",
+      "Identifier": "292104106",
+      "Weight": "0.039886489945",
+      "Market Value": "871810.68",
+      "Shares Held": "161148.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAGNOLIA OIL & GAS CORP",
+      "Ticker": "MGY",
+      "Identifier": "559663109",
+      "Weight": "0.45359215337",
+      "Market Value": "9914296.4",
+      "Shares Held": "387580.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PERDOCEO EDUCATION CORP",
+      "Ticker": "PRDO",
+      "Identifier": "71363P106",
+      "Weight": "0.221733592405",
+      "Market Value": "4846496",
+      "Shares Held": "151453.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "U.S. PHYSICAL THERAPY INC",
+      "Ticker": "USPH",
+      "Identifier": "90337L108",
+      "Weight": "0.14429614057",
+      "Market Value": "3153922.96",
+      "Shares Held": "45922.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIRST BANCORP",
+      "Ticker": "-",
+      "Identifier": "318910106",
+      "Weight": "0.114751892664",
+      "Market Value": "2508165.69",
+      "Shares Held": "39233.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AVIENT CORP",
+      "Ticker": "AVNT",
+      "Identifier": "05368V106",
+      "Weight": "0.46540703663",
+      "Market Value": "10172537.76",
+      "Shares Held": "275231.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMERICOLD REALTY TRUST INC",
+      "Ticker": "COLD",
+      "Identifier": "03064D108",
+      "Weight": "0.692125282999",
+      "Market Value": "15127984.8",
+      "Shares Held": "962340.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

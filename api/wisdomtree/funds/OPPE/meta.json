@@ -1,0 +1,269 @@
+{
+  "ticker": "OPPE",
+  "name": "WisdomTree European Opportunities Fund",
+  "category": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/equity/oppe",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppe",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/OPPE",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036266, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717X552",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.58%",
+    "value": 0.58
+  },
+  "nav": {
+    "display": "$59.46",
+    "value": 59.457,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$59.56",
+    "value": 59.565,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.47%",
+    "value": 0.469
+  },
+  "aum": {
+    "display": "$293.46 M",
+    "value": 293463710,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 2.56,
+    "dividendYieldText": "2.56%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 7.96,
+    "secYield": 2.67,
+    "secYieldText": "2.67%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.16,
+      "mo1Text": "1.16%",
+      "qtd": 6.17,
+      "qtdText": "6.17%",
+      "ytd": 19.79,
+      "ytdText": "19.79%",
+      "yr1": 30.18,
+      "yr1Text": "30.18%",
+      "yr3": 24.85,
+      "yr3Text": "24.85%",
+      "yr5": 14.41,
+      "yr5Text": "14.41%",
+      "yr10": 13.13,
+      "yr10Text": "13.13%",
+      "sinceInception": 11.58,
+      "sinceInceptionText": "11.58%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 23.19,
+      "yr3": 22.49,
+      "yr5": 14.08,
+      "yr10": 12.91,
+      "sinceInception": 11.02
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "06/22/2015",
+        "0.438"
+      ],
+      [
+        "09/21/2015",
+        "0.098"
+      ],
+      [
+        "12/21/2015",
+        "0.543"
+      ],
+      [
+        "06/20/2016",
+        "0.295"
+      ],
+      [
+        "09/26/2016",
+        "0.1"
+      ],
+      [
+        "12/23/2016",
+        "0.277"
+      ],
+      [
+        "06/26/2017",
+        "0.385"
+      ],
+      [
+        "09/26/2017",
+        "0.07"
+      ],
+      [
+        "06/25/2018",
+        "0.618"
+      ],
+      [
+        "06/24/2019",
+        "0.72"
+      ],
+      [
+        "09/24/2019",
+        "0.17"
+      ],
+      [
+        "12/23/2019",
+        "0.122"
+      ],
+      [
+        "03/24/2020",
+        "0.028"
+      ],
+      [
+        "06/23/2020",
+        "0.355"
+      ],
+      [
+        "09/22/2020",
+        "0.485"
+      ],
+      [
+        "12/21/2020",
+        "0.184"
+      ],
+      [
+        "03/25/2021",
+        "0.027"
+      ],
+      [
+        "06/24/2021",
+        "0.615"
+      ],
+      [
+        "09/24/2021",
+        "0.1"
+      ],
+      [
+        "12/27/2021",
+        "0.143"
+      ],
+      [
+        "03/25/2022",
+        "0.035"
+      ],
+      [
+        "06/24/2022",
+        "0.99"
+      ],
+      [
+        "09/26/2022",
+        "0.41"
+      ],
+      [
+        "12/23/2022",
+        "0.165"
+      ],
+      [
+        "03/27/2023",
+        "0.065"
+      ],
+      [
+        "06/26/2023",
+        "0.87"
+      ],
+      [
+        "09/25/2023",
+        "0.165"
+      ],
+      [
+        "12/22/2023",
+        "0.17"
+      ],
+      [
+        "03/22/2024",
+        "0.035"
+      ],
+      [
+        "06/25/2024",
+        "1.015"
+      ],
+      [
+        "09/25/2024",
+        "0.165"
+      ],
+      [
+        "12/26/2024",
+        "0.308"
+      ],
+      [
+        "03/26/2025",
+        "0.025"
+      ],
+      [
+        "06/25/2025",
+        "1.23"
+      ],
+      [
+        "09/25/2025",
+        "0.14"
+      ],
+      [
+        "12/26/2025",
+        "0.119"
+      ],
+      [
+        "03/26/2026",
+        "0.085"
+      ],
+      [
+        "06/25/2026",
+        "1.18"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 131,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036266, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 2902,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

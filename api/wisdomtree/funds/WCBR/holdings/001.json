@@ -1,0 +1,260 @@
+{
+  "ticker": "WCBR",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 27,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "FORTINET INC",
+      "Ticker": "FTNT",
+      "Identifier": "34959E109",
+      "Weight": "6.124041296533",
+      "Market Value": "6305947.38",
+      "Shares Held": "41049.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AKAMAI TECHNOLOGIES INC",
+      "Ticker": "AKAM",
+      "Identifier": "00971T101",
+      "Weight": "2.81914423258",
+      "Market Value": "2902882.97",
+      "Shares Held": "24557.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELASTIC NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.776399689464",
+      "Market Value": "2858868.76",
+      "Shares Held": "50138.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NETSKOPE INC",
+      "Ticker": "NTSK",
+      "Identifier": "64119N608",
+      "Weight": "3.843138329774",
+      "Market Value": "3957293.38",
+      "Shares Held": "361727.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AHNLAB INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.323690583824",
+      "Market Value": "333305.36",
+      "Shares Held": "9836.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TENABLE HOLDINGS INC",
+      "Ticker": "TENB",
+      "Identifier": "88025T102",
+      "Weight": "6.126850784618",
+      "Market Value": "6308840.32",
+      "Shares Held": "171064.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TREND MICRO INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.663851543076",
+      "Market Value": "3772681.13",
+      "Shares Held": "102500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RUBRIK INC",
+      "Ticker": "RBRK",
+      "Identifier": "781154109",
+      "Weight": "4.986745070642",
+      "Market Value": "5134869.36",
+      "Shares Held": "63962.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.085737361561",
+      "Market Value": "88284.07",
+      "Shares Held": "88284.07000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "FASTLY INC",
+      "Ticker": "FSLY",
+      "Identifier": "31188V100",
+      "Weight": "1.906851483046",
+      "Market Value": "1963491.84",
+      "Shares Held": "106944.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.021373470932",
+      "Market Value": "22008.34",
+      "Shares Held": "22008.34000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "F5 INC",
+      "Ticker": "FFIV",
+      "Identifier": "315616102",
+      "Weight": "3.718460141033",
+      "Market Value": "3828911.8",
+      "Shares Held": "9205.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHECK POINT SOFTWARE TECHNOLOGIES LTD",
+      "Ticker": "CHKP",
+      "Identifier": "000000000",
+      "Weight": "2.83217448709",
+      "Market Value": "2916300.27",
+      "Shares Held": "22189.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CLOUDFLARE INC",
+      "Ticker": "NET",
+      "Identifier": "18915M107",
+      "Weight": "3.890117188467",
+      "Market Value": "4005667.68",
+      "Shares Held": "16331.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DATADOG INC",
+      "Ticker": "DDOG",
+      "Identifier": "23804L103",
+      "Weight": "6.865874246072",
+      "Market Value": "7069815.44",
+      "Shares Held": "27154.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OKTA INC",
+      "Ticker": "OKTA",
+      "Identifier": "679295105",
+      "Weight": "5.812720515028",
+      "Market Value": "5985379.25",
+      "Shares Held": "43865.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMMVAULT SYSTEMS INC",
+      "Ticker": "CVLT",
+      "Identifier": "204166102",
+      "Weight": "4.412237533693",
+      "Market Value": "4543296.88",
+      "Shares Held": "32056.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ZSCALER INC",
+      "Ticker": "ZS",
+      "Identifier": "98980G102",
+      "Weight": "4.163067403981",
+      "Market Value": "4286725.5",
+      "Shares Held": "30370.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PALO ALTO NETWORKS INC",
+      "Ticker": "PANW",
+      "Identifier": "697435105",
+      "Weight": "6.753808424597",
+      "Market Value": "6954420.86",
+      "Shares Held": "20393.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RAPID7 INC",
+      "Ticker": "RPD",
+      "Identifier": "753422104",
+      "Weight": "1.72182412208",
+      "Market Value": "1772968.5",
+      "Shares Held": "218885.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FFRI SECURITY INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.292525652821",
+      "Market Value": "1330918.32",
+      "Shares Held": "45300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CROWDSTRIKE HOLDINGS INC",
+      "Ticker": "CRWD",
+      "Identifier": "22788C105",
+      "Weight": "7.734389805815",
+      "Market Value": "7964129.04",
+      "Shares Held": "10436.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SENTINELONE INC",
+      "Ticker": "S",
+      "Identifier": "81730H109",
+      "Weight": "5.509833354601",
+      "Market Value": "5673495.25",
+      "Shares Held": "334325.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VARONIS SYSTEMS INC",
+      "Ticker": "VRNS",
+      "Identifier": "922280102",
+      "Weight": "4.368641337733",
+      "Market Value": "4498405.72",
+      "Shares Held": "107207.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QUALYS INC",
+      "Ticker": "QLYS",
+      "Identifier": "74758T303",
+      "Weight": "3.531305536852",
+      "Market Value": "3636198.03",
+      "Shares Held": "26447.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ONESPAN INC",
+      "Ticker": "OSPN",
+      "Identifier": "68287N100",
+      "Weight": "1.559778364714",
+      "Market Value": "1606109.4",
+      "Shares Held": "111924.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAILPOINT INC",
+      "Ticker": "SAIL",
+      "Identifier": "78781J109",
+      "Weight": "3.174325344306",
+      "Market Value": "3268614.24",
+      "Shares Held": "223266.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

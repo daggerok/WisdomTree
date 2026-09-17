@@ -1,0 +1,291 @@
+{
+  "ticker": "WTMF",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 30,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.06751776812",
+      "Market Value": "-158757.09",
+      "Shares Held": "43.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "-0.00474134312",
+      "Market Value": "-11148.5",
+      "Shares Held": "11.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.07886148844",
+      "Market Value": "-185430.01",
+      "Shares Held": "50.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.0292960951",
+      "Market Value": "-68885.02",
+      "Shares Held": "-104.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.084587424201",
+      "Market Value": "198893.62",
+      "Shares Held": "-124.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.034463004457",
+      "Market Value": "81034.17",
+      "Shares Held": "35.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.147932797614",
+      "Market Value": "347840",
+      "Shares Held": "160.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.14704144126",
+      "Market Value": "-345744.12",
+      "Shares Held": "209.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007792261447",
+      "Market Value": "18322.24",
+      "Shares Held": "157.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "MONTREAL EXCHANGE INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.249574571712",
+      "Market Value": "586834.16",
+      "Shares Held": "65.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.329202776828",
+      "Market Value": "774066.98",
+      "Shares Held": "51.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.13717602822",
+      "Market Value": "-322547.2",
+      "Shares Held": "27.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.02312969523",
+      "Market Value": "-54385.73",
+      "Shares Held": "-104.00000000",
+      "Asset Category": "DIR"
+    },
+    {
+      "Name": "ICE FUTURES U.S.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.08458464705",
+      "Market Value": "-198887.09",
+      "Shares Held": "236.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "CHICAGO MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.650491735885",
+      "Market Value": "1529525.9",
+      "Shares Held": "132.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "OSAKA SECURITIES EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.56848686687",
+      "Market Value": "1336704.74",
+      "Shares Held": "48.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007622460248",
+      "Market Value": "17922.98",
+      "Shares Held": "-106.00000000",
+      "Asset Category": "DIR"
+    },
+    {
+      "Name": "EUREX DEUTSCHLAND",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.307638960297",
+      "Market Value": "723363.16",
+      "Shares Held": "277.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797RG4",
+      "Weight": "80.26962639971",
+      "Market Value": "188741018.2",
+      "Shares Held": "190000000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-08-06"
+    },
+    {
+      "Name": "WisdomTree Trust",
+      "Ticker": "-",
+      "Identifier": "97717Y527",
+      "Weight": "4.396809906503",
+      "Market Value": "10338385.96",
+      "Shares Held": "205412.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TREASURY OBLIGATIONS CASH MANAGEMENT",
+      "Ticker": "-",
+      "Identifier": "261908107",
+      "Weight": "3.801740531493",
+      "Market Value": "8939176.76",
+      "Shares Held": "8939176.76000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "WISDOMTREE BITCOIN FUND",
+      "Ticker": "BTCW",
+      "Identifier": "97720F101",
+      "Weight": "2.712567174702",
+      "Market Value": "6378162.12",
+      "Shares Held": "82214.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ICE FUTURES EUROPE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.16843814443",
+      "Market Value": "-396055",
+      "Shares Held": "22.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.86903779652",
+      "Market Value": "6746077.43",
+      "Shares Held": "6746077.43000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.096702632943",
+      "Market Value": "227380.57",
+      "Shares Held": "61.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "0.0687329954",
+      "Market Value": "161614.5",
+      "Shares Held": "13.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.114012747862",
+      "Market Value": "268082.5",
+      "Shares Held": "25.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "ICE FUTURES EUROPE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01801149432",
+      "Market Value": "42351.11",
+      "Shares Held": "26.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.070408381965",
+      "Market Value": "165553.9",
+      "Shares Held": "145.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.056188630992",
+      "Market Value": "132118.46",
+      "Shares Held": "58.00000000",
+      "Asset Category": "DCO"
+    }
+  ]
+}

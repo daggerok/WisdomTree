@@ -1,0 +1,244 @@
+{
+  "ticker": "GDT",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 21,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "0.670923942018",
+      "Market Value": "70486.5",
+      "Shares Held": "21.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128282L3",
+      "Weight": "4.684685245845",
+      "Market Value": "492167.66",
+      "Shares Held": "366900.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.37500000",
+      "Maturity": "2027-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CNB3",
+      "Weight": "5.938839806468",
+      "Market Value": "623927.7",
+      "Shares Held": "600000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2030-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128283R9",
+      "Weight": "6.698951377189",
+      "Market Value": "703784.15",
+      "Shares Held": "533100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.50000000",
+      "Maturity": "2028-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828V49",
+      "Weight": "4.756391720487",
+      "Market Value": "499701.06",
+      "Shares Held": "366900.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.37500000",
+      "Maturity": "2027-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CJH5",
+      "Weight": "5.966572262216",
+      "Market Value": "626841.24",
+      "Shares Held": "566900.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.37500000",
+      "Maturity": "2028-10-15"
+    },
+    {
+      "Name": "DREYFUS TREASURY OBLIGATIONS CASH MANAGEMENT",
+      "Ticker": "-",
+      "Identifier": "261908107",
+      "Weight": "1.54926838517",
+      "Market Value": "162764.36",
+      "Shares Held": "162764.36000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CQP9",
+      "Weight": "2.843945565889",
+      "Market Value": "298781.66",
+      "Shares Held": "300000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.25000000",
+      "Maturity": "2031-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CBF7",
+      "Weight": "5.315003185933",
+      "Market Value": "558388.14",
+      "Shares Held": "470000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2031-01-15"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.427595916849",
+      "Market Value": "149981.59",
+      "Shares Held": "149981.59000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CKL4",
+      "Weight": "5.718519488161",
+      "Market Value": "600781.1",
+      "Shares Held": "553100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.12500000",
+      "Maturity": "2029-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CFR7",
+      "Weight": "4.159096128265",
+      "Market Value": "436949.87",
+      "Shares Held": "388900.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2027-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128287D6",
+      "Weight": "4.157221655112",
+      "Market Value": "436752.94",
+      "Shares Held": "350000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.25000000",
+      "Maturity": "2029-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CEJ6",
+      "Weight": "4.654384039426",
+      "Market Value": "488984.25",
+      "Shares Held": "422400.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2027-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828Z37",
+      "Weight": "5.037850817661",
+      "Market Value": "529270.83",
+      "Shares Held": "433100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2030-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828Y38",
+      "Weight": "4.130283991972",
+      "Market Value": "433922.9",
+      "Shares Held": "333100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.75000000",
+      "Maturity": "2028-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CLV1",
+      "Weight": "4.979094417738",
+      "Market Value": "523097.95",
+      "Shares Held": "494700.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2029-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128285W6",
+      "Weight": "4.395457455464",
+      "Market Value": "461781.72",
+      "Shares Held": "358100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.87500000",
+      "Maturity": "2029-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828ZZ6",
+      "Weight": "5.029565176112",
+      "Market Value": "528400.35",
+      "Shares Held": "433100.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2030-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CGW5",
+      "Weight": "5.222014449685",
+      "Market Value": "548618.85",
+      "Shares Held": "500000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.25000000",
+      "Maturity": "2028-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CPH8",
+      "Weight": "5.991233296661",
+      "Market Value": "629432.1",
+      "Shares Held": "625800.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.12500000",
+      "Maturity": "2030-10-15"
+    }
+  ]
+}

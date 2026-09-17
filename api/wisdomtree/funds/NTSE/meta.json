@@ -1,0 +1,205 @@
+{
+  "ticker": "NTSE",
+  "name": "WisdomTree Emerging Markets Efficient Core Fund",
+  "category": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntse",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntse",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSE",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036311, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y642",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.32%",
+    "value": 0.32
+  },
+  "nav": {
+    "display": "$45.85",
+    "value": 45.85,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$45.75",
+    "value": 45.746,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.14%",
+    "value": 0.137
+  },
+  "aum": {
+    "display": "$54.82 M",
+    "value": 54820030,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 2.69,
+    "dividendYieldText": "2.69%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 1.84,
+    "secYield": 1.45,
+    "secYieldText": "1.45%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 4.67,
+      "mo1Text": "4.67%",
+      "qtd": -3.08,
+      "qtdText": "-3.08%",
+      "ytd": 24.64,
+      "ytdText": "24.64%",
+      "yr1": 40.23,
+      "yr1Text": "40.23%",
+      "yr3": 23.4,
+      "yr3Text": "23.40%",
+      "yr5": 6.26,
+      "yr5Text": "6.26%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 6.14,
+      "sinceInceptionText": "6.14%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 51.21,
+      "yr3": 24.05,
+      "yr5": 6.29,
+      "yr10": null,
+      "sinceInception": 7.16
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "06/24/2021",
+        "0.06"
+      ],
+      [
+        "09/24/2021",
+        "0.3"
+      ],
+      [
+        "12/07/2021",
+        "0.263"
+      ],
+      [
+        "12/27/2021",
+        "0.157"
+      ],
+      [
+        "03/25/2022",
+        "0.12"
+      ],
+      [
+        "06/24/2022",
+        "0.155"
+      ],
+      [
+        "09/26/2022",
+        "0.425"
+      ],
+      [
+        "12/23/2022",
+        "0.154"
+      ],
+      [
+        "03/27/2023",
+        "0.07"
+      ],
+      [
+        "06/26/2023",
+        "0.185"
+      ],
+      [
+        "09/25/2023",
+        "0.37"
+      ],
+      [
+        "12/22/2023",
+        "0.065"
+      ],
+      [
+        "03/22/2024",
+        "0.075"
+      ],
+      [
+        "06/25/2024",
+        "0.095"
+      ],
+      [
+        "09/25/2024",
+        "0.44"
+      ],
+      [
+        "12/26/2024",
+        "0.317"
+      ],
+      [
+        "03/26/2025",
+        "0.105"
+      ],
+      [
+        "06/25/2025",
+        "0.225"
+      ],
+      [
+        "09/25/2025",
+        "0.54"
+      ],
+      [
+        "12/26/2025",
+        "0.393"
+      ],
+      [
+        "03/26/2026",
+        "0.09"
+      ],
+      [
+        "06/25/2026",
+        "0.21"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 441,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036311, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1337,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}
