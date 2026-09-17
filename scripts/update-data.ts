@@ -1109,8 +1109,7 @@ function matchesReturnFilters(metrics: JsonRecord, config: UpdaterConfig): strin
 async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: JsonRecord = {}): Promise<JsonRecord> {
   const reasons = catalogFilterReasons(fund, config);
   if (reasons.length) {
-    console.log(`[${fund.ticker.padEnd(5)}] skipped (${reasons.join(', ')})`);
-    return { __skipped: true, ticker: fund.ticker };
+    return { __skipped: true, ticker: fund.ticker, __skipReasons: reasons };
   }
   const fundDir = new URL(`funds/${fund.ticker}/`, API_ROOT);
   await mkdir(fundDir, { recursive: true });
@@ -1213,8 +1212,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   }
   const returnFilterReasons = matchesReturnFilters(metrics, config);
   if (returnFilterReasons.length) {
-    console.log(`[${fund.ticker.padEnd(5)}] skipped (${returnFilterReasons.join(', ')})`);
-    return { __skipped: true, ticker: fund.ticker };
+    return { __skipped: true, ticker: fund.ticker, __skipReasons: returnFilterReasons };
   }
 
   const history = historyRows(days);
@@ -1401,10 +1399,17 @@ async function main(): Promise<void> {
   const index = cursor ? universe.findIndex((fund) => fund.ticker === cursor) : -1;
   const ordered = index >= 0 ? universe.slice(index + 1).concat(universe.slice(0, index + 1)) : universe;
   const queue = ordered.slice();
+  const totalAttempts = config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length;
   const results: JsonRecord[] = [];
   let processed = 0;
+  let completed = 0;
   let failures = 0;
   let lastTicker: string | null = cursor || null;
+  const logProgress = (fund: CatalogFund, status: 'updated' | 'not updated', detail: string): void => {
+    completed += 1;
+    const ordinal = String(completed).padStart(String(Math.max(1, totalAttempts)).length, ' ');
+    console.log(`[progress] ${ordinal}/${totalAttempts} ${fund.ticker.padEnd(5)} ${status}${detail ? ` — ${detail}` : ''}`);
+  };
   const worker = async (): Promise<void> => {
     for (;;) {
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
@@ -1413,12 +1418,19 @@ async function main(): Promise<void> {
       processed += 1;
       try {
         const row = await processFund(fund, config, previous.get(fund.ticker) || {});
-        if (!row.__skipped) { results.push(row); lastTicker = fund.ticker; }
+        if (row.__skipped) {
+          logProgress(fund, 'not updated', `filtered: ${(row.__skipReasons || ['not eligible']).join(', ')}`);
+        } else {
+          results.push(row);
+          lastTicker = fund.ticker;
+          logProgress(fund, 'updated', `${row.holdings ?? 0} holdings, ${row.history ?? 0} history rows`);
+        }
       } catch (error) {
         failures += 1;
-        console.warn(`[error   ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+        const message = error instanceof Error ? error.message : String(error);
         const old = previous.get(fund.ticker);
         if (old && !hasConfiguredFilters(config)) results.push(old);
+        logProgress(fund, 'not updated', `error: ${message}`);
       }
     }
   };
