@@ -25,6 +25,8 @@ bunx serve . -p 1234
 open http://0:1234
 ```
 
+The published application is available at <https://daggerok.github.io/WisdomTree/>.
+
 The application is a static site: `index.html` loads `api/wisdomtree/index.json` and the paginated fund files with relative URLs. It can be hosted by GitHub Pages or any static file server.
 
 ## Updating the static WisdomTree data
