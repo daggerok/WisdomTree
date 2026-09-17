@@ -95,7 +95,7 @@ Each fund carries a `metrics` object and detailed `meta.json` that power the sha
 
 ### Full passes and resuming bounded runs
 
-Running the updater without filters refreshes all catalog rows in alphabetical ticker order and resets the saved cursor after a full pass. A positive `MAX_FETCHES` is a resumable batch, not a permanent first-page limit: repeated runs continue after the committed cursor and wrap around the catalog. A filter run publishes only the eligible result set; an unfiltered run preserves prior rows for a fund that fails transiently.
+Running the updater without filters refreshes all catalog rows in alphabetical ticker order and resets the saved cursor after a full pass. A positive `MAX_FETCHES` is a resumable batch, not a permanent first-page limit: repeated runs continue after the committed cursor and wrap around the catalog. A filter run publishes only the eligible result set; an unfiltered run preserves prior rows for a fund that fails transiently. During every run, the updater prints one `[progress] n/total TICKER updated` or `[progress] n/total TICKER not updated` line as each fund finishes.
 
 All range variables use `min:max`; both bounds are inclusive and optional, but the colon is required (`15:`, `:0.5`, `0.1:0.5`, `:`). AUM presets use the same sibling convention: nano (< $10M), micro ($10M–$300M), small ($300M–$2B), mid ($2B–$10B), large (>$10B).
 
