@@ -175,6 +175,9 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Validate inline browser script
+        run: bun ./scripts/check-index.ts
+
       - name: Run updater unit tests
         run: bun test scripts/update-data.test.ts
 
