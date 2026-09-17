@@ -117,6 +117,7 @@ The header toolbar includes the same integrated drag-and-drop upload as `daggero
 
 - `scripts/update-data.ts` — Bun updater with no runtime dependencies: WisdomTree catalog parser, SEC fund/series resolver, raw N-PORT XML parser, issuer fallback, Yahoo chart reader, derived metrics, strict range parsers, bounded-run cursor, retries and deterministic paginated writes.
 - `scripts/update-data.test.ts` — Bun tests for range/AUM parsing, catalog parsing and $(000) conversion, SEC mapping and raw N-PORT parsing, Atom resolution, Yahoo chart/return helpers and distribution-frequency inference.
+- `scripts/check-index.ts` — Bun transpile check for the inline browser TypeScript, preventing a syntax error from leaving the published catalog on its loading screen.
 - `api/wisdomtree/**` — generated static feed: `index.json`, `funds/{TICKER}/meta.json`, paginated `holdings/` and `history/` files, and `update-state.json`.
 - `index.html` — single-file TypeScript UI with inline styles and scripts, matching the sibling repositories' searchable catalog, persistent selection/blacklist, watchlist aggregation, detail tabs, exports and N-PORT upload workflow.
 - Verification before publishing: `bun test scripts/update-data.test.ts`, `bunx tsc --noEmit`, and a static-server smoke test.
