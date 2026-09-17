@@ -1,0 +1,329 @@
+{
+  "ticker": "DXJ",
+  "name": "WisdomTree Japan Hedged Equity Fund",
+  "category": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/equity/dxj",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dxj",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DXJ",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036274, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717W851",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.48%",
+    "value": 0.48
+  },
+  "nav": {
+    "display": "$177.29",
+    "value": 177.288,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$176.74",
+    "value": 176.74,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.46%",
+    "value": 0.456
+  },
+  "aum": {
+    "display": "$6.92 B",
+    "value": 6922979330,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 0.95,
+    "dividendYieldText": "0.95%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 2.63,
+    "secYield": 1.99,
+    "secYieldText": "1.99%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 3.34,
+      "mo1Text": "3.34%",
+      "qtd": 5.4,
+      "qtdText": "5.40%",
+      "ytd": 25.47,
+      "ytdText": "25.47%",
+      "yr1": 45.74,
+      "yr1Text": "45.74%",
+      "yr3": 30.98,
+      "yr3Text": "30.98%",
+      "yr5": 27.85,
+      "yr5Text": "27.85%",
+      "yr10": 18.39,
+      "yr10Text": "18.39%",
+      "sinceInception": 9.53,
+      "sinceInceptionText": "9.53%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 53.61,
+      "yr3": 31.01,
+      "yr5": 26.83,
+      "yr10": 19.27,
+      "sinceInception": 9.43
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/21/2006",
+        "0.209"
+      ],
+      [
+        "12/17/2007",
+        "0.479"
+      ],
+      [
+        "12/22/2008",
+        "0.8"
+      ],
+      [
+        "03/23/2009",
+        "0.211"
+      ],
+      [
+        "06/22/2009",
+        "0.338"
+      ],
+      [
+        "12/21/2009",
+        "0.183"
+      ],
+      [
+        "06/28/2010",
+        "0.185"
+      ],
+      [
+        "12/22/2010",
+        "0.264"
+      ],
+      [
+        "06/22/2011",
+        "0.476"
+      ],
+      [
+        "12/21/2011",
+        "0.27"
+      ],
+      [
+        "06/25/2012",
+        "0.316"
+      ],
+      [
+        "09/24/2012",
+        "0.004"
+      ],
+      [
+        "12/24/2012",
+        "0.233"
+      ],
+      [
+        "06/24/2013",
+        "0.247"
+      ],
+      [
+        "12/24/2013",
+        "0.992"
+      ],
+      [
+        "06/23/2014",
+        "0.546"
+      ],
+      [
+        "12/19/2014",
+        "5.172"
+      ],
+      [
+        "06/22/2015",
+        "0.324"
+      ],
+      [
+        "09/21/2015",
+        "0.036"
+      ],
+      [
+        "12/21/2015",
+        "2.62"
+      ],
+      [
+        "06/20/2016",
+        "0.435"
+      ],
+      [
+        "09/26/2016",
+        "0.05"
+      ],
+      [
+        "12/23/2016",
+        "0.496"
+      ],
+      [
+        "06/26/2017",
+        "0.83"
+      ],
+      [
+        "09/26/2017",
+        "0.045"
+      ],
+      [
+        "12/26/2017",
+        "0.492"
+      ],
+      [
+        "06/25/2018",
+        "1.092"
+      ],
+      [
+        "12/24/2018",
+        "0.262"
+      ],
+      [
+        "03/26/2019",
+        "0.02"
+      ],
+      [
+        "06/24/2019",
+        "0.578"
+      ],
+      [
+        "09/24/2019",
+        "0.065"
+      ],
+      [
+        "12/23/2019",
+        "0.664"
+      ],
+      [
+        "06/23/2020",
+        "0.586"
+      ],
+      [
+        "12/21/2020",
+        "0.792"
+      ],
+      [
+        "06/24/2021",
+        "0.473"
+      ],
+      [
+        "09/24/2021",
+        "0.065"
+      ],
+      [
+        "12/27/2021",
+        "1.11"
+      ],
+      [
+        "06/24/2022",
+        "0.75"
+      ],
+      [
+        "09/26/2022",
+        "0.13"
+      ],
+      [
+        "12/23/2022",
+        "1.065"
+      ],
+      [
+        "03/27/2023",
+        "0.625"
+      ],
+      [
+        "06/26/2023",
+        "0.782"
+      ],
+      [
+        "09/25/2023",
+        "0.012"
+      ],
+      [
+        "12/22/2023",
+        "1.61"
+      ],
+      [
+        "03/22/2024",
+        "0.305"
+      ],
+      [
+        "06/25/2024",
+        "0.518"
+      ],
+      [
+        "09/25/2024",
+        "0.135"
+      ],
+      [
+        "12/26/2024",
+        "2.883"
+      ],
+      [
+        "06/25/2025",
+        "1.34"
+      ],
+      [
+        "09/25/2025",
+        "0.14"
+      ],
+      [
+        "12/26/2025",
+        "0.385"
+      ],
+      [
+        "06/25/2026",
+        "1.155"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 439,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036274, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json",
+      "history/004.json",
+      "history/005.json",
+      "history/006.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 5094,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

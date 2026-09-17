@@ -1,0 +1,2267 @@
+{
+  "ticker": "DDWM",
+  "page": 6,
+  "pageSize": 250,
+  "totalRows": 1545,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "YARA INTERNATIONAL ASA",
+      "Ticker": "YARIY",
+      "Identifier": "000000000",
+      "Weight": "0.011854336545",
+      "Market Value": "171335.21",
+      "Shares Held": "3894.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RELO GROUP INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.014275136678",
+      "Market Value": "206323.95",
+      "Shares Held": "16800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "YAMABIKO CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.012534933138",
+      "Market Value": "181172.13",
+      "Shares Held": "7800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SEVERN TRENT PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.086521514092",
+      "Market Value": "1250528.17",
+      "Shares Held": "31874.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KRONES AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009789471191",
+      "Market Value": "141490.93",
+      "Shares Held": "1103.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TAISEI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.067336153051",
+      "Market Value": "973234.89",
+      "Shares Held": "11100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ISE CHEMICALS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.026361672917",
+      "Market Value": "381015.23",
+      "Shares Held": "13900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HEINEKEN NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.130388455717",
+      "Market Value": "1884553.67",
+      "Shares Held": "22396.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.00000673683",
+      "Market Value": "-97.37",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "TELEKOM AUSTRIA AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.039029248402",
+      "Market Value": "564104.49",
+      "Shares Held": "50866.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SWISS LIFE HOLDING AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.036777931829",
+      "Market Value": "531565.36",
+      "Shares Held": "482.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMPASS GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.135299780168",
+      "Market Value": "1955538.9",
+      "Shares Held": "60543.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIA GROUP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.174237365571",
+      "Market Value": "2518318.55",
+      "Shares Held": "276400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CK HUTCHISON HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.132097727389",
+      "Market Value": "1909258.42",
+      "Shares Held": "226000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKYO OHKA KOGYO CO LTD",
+      "Ticker": "TKCYY",
+      "Identifier": "000000000",
+      "Weight": "0.13155868732",
+      "Market Value": "1901467.47",
+      "Shares Held": "27300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RBC DOMINION SECURITIES INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000205845993",
+      "Market Value": "2975.17",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "PRYSMIAN SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.105455214938",
+      "Market Value": "1524184.11",
+      "Shares Held": "9128.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAPAN TOBACCO INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.353957899066",
+      "Market Value": "5115887.4",
+      "Shares Held": "138300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ISRAMCO NEGEV 2 LP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.015913260278",
+      "Market Value": "230000.37",
+      "Shares Held": "366457.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "KONAMI GROUP CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.058656845154",
+      "Market Value": "847789.57",
+      "Shares Held": "7800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHIP HEALTHCARE HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.005163651618",
+      "Market Value": "74632.21",
+      "Shares Held": "5600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TEIJIN LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007198869924",
+      "Market Value": "104047.99",
+      "Shares Held": "10400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JOHNSON MATTHEY PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007834016244",
+      "Market Value": "113228",
+      "Shares Held": "4509.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE BANK AKTIENGESELLSCHAFT",
+      "Ticker": "DB",
+      "Identifier": "000000000",
+      "Weight": "0.000018724342",
+      "Market Value": "270.63",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "KANDENKO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.046930244143",
+      "Market Value": "678300.57",
+      "Shares Held": "16400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIELMANN GROUP AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.03406921354",
+      "Market Value": "492415.23",
+      "Shares Held": "10063.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "YAMADA CONSULTING GROUP CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008600637016",
+      "Market Value": "124308.26",
+      "Shares Held": "12200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PUIG BRANDS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020077959973",
+      "Market Value": "290194.35",
+      "Shares Held": "15736.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SRG GLOBAL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.024715289657",
+      "Market Value": "357219.43",
+      "Shares Held": "129552.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000732814835",
+      "Market Value": "10591.65",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "PARK24 CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.040276533963",
+      "Market Value": "582131.98",
+      "Shares Held": "47000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TALENOM OYJ",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.002809875953",
+      "Market Value": "40612.2",
+      "Shares Held": "31105.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMET HOLDING AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.06753043289",
+      "Market Value": "976042.89",
+      "Shares Held": "1925.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUJI CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.002721287668",
+      "Market Value": "39331.8",
+      "Shares Held": "8400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITED UTILITIES GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.053038079866",
+      "Market Value": "766579.43",
+      "Shares Held": "44123.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SPAREBANKEN NORGE AS",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.02119398764",
+      "Market Value": "306324.72",
+      "Shares Held": "16311.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KANSAI ELECTRIC POWER CO INC (THE)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018695284612",
+      "Market Value": "270210.02",
+      "Shares Held": "19215.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "H&M HENNES & MAURITZ AB",
+      "Ticker": "HMRZF",
+      "Identifier": "000000000",
+      "Weight": "0.164185516967",
+      "Market Value": "2373035.38",
+      "Shares Held": "137772.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COLONIAL SFL SOCIMI SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.015806454798",
+      "Market Value": "228456.67",
+      "Shares Held": "35242.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BANQUE CANTONALE VAUDOISE SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011028768308",
+      "Market Value": "159402.96",
+      "Shares Held": "1086.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOTETSU HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.005183617193",
+      "Market Value": "74920.78",
+      "Shares Held": "4900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UMIOS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008686459167",
+      "Market Value": "125548.68",
+      "Shares Held": "15600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PROSEGUR CASH SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009735540547",
+      "Market Value": "140711.45",
+      "Shares Held": "194431.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BRIDGEPOINT GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007376783347",
+      "Market Value": "106619.44",
+      "Shares Held": "30614.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOWDEN JOINERY GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.025620919454",
+      "Market Value": "370308.84",
+      "Shares Held": "33314.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PENNON GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.038300936321",
+      "Market Value": "553577.92",
+      "Shares Held": "89542.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE BANK AKTIENGESELLSCHAFT",
+      "Ticker": "DB",
+      "Identifier": "000000000",
+      "Weight": "0.038100478687",
+      "Market Value": "550680.63",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "DAIICHI SANKYO COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.091279470939",
+      "Market Value": "1319296.72",
+      "Shares Held": "82200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KNORR BREMSE AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.068232654186",
+      "Market Value": "986192.36",
+      "Shares Held": "8490.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIDO STEEL COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018077846955",
+      "Market Value": "261285.96",
+      "Shares Held": "15400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELIS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.017273781649",
+      "Market Value": "249664.5",
+      "Shares Held": "8058.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRIEDRICH VORWERK GROUP SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.023837210514",
+      "Market Value": "344528.22",
+      "Shares Held": "4471.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE BANK AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.072350598722",
+      "Market Value": "1045710.57",
+      "Shares Held": "30874.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NICHICON CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.029326932614",
+      "Market Value": "423873.25",
+      "Shares Held": "16600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VOLVO AB",
+      "Ticker": "-",
+      "Identifier": "928856202",
+      "Weight": "0.130758592713",
+      "Market Value": "1889903.4",
+      "Shares Held": "55393.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BOC AVIATION LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.037562603052",
+      "Market Value": "542906.51",
+      "Shares Held": "52400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "J SAINSBURY PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020996913298",
+      "Market Value": "303476.33",
+      "Shares Held": "71498.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GETINGE AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009420522845",
+      "Market Value": "136158.38",
+      "Shares Held": "6652.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ANTOFAGASTA PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.103367115569",
+      "Market Value": "1494004.02",
+      "Shares Held": "29467.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OHSHO FOOD SERVICE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.025235891822",
+      "Market Value": "364743.89",
+      "Shares Held": "20800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SCREEN HOLDINGS CO LTD",
+      "Ticker": "SCRNY",
+      "Identifier": "000000000",
+      "Weight": "0.126581111922",
+      "Market Value": "1829524.69",
+      "Shares Held": "16700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTEA FASTIGHETER AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.027829421123",
+      "Market Value": "402229.15",
+      "Shares Held": "52820.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DWS GROUP GMBH & CO. KGAA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.028878757115",
+      "Market Value": "417395.6",
+      "Shares Held": "5561.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAKITA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008135382466",
+      "Market Value": "117583.76",
+      "Shares Held": "3300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SERCO GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011865313909",
+      "Market Value": "171493.87",
+      "Shares Held": "59000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHINA AVIATION OIL (SINGAPORE) CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.031079627351",
+      "Market Value": "449205.61",
+      "Shares Held": "317500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOYA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.11709913424",
+      "Market Value": "1692478.08",
+      "Shares Held": "10600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RINNAI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.006211869532",
+      "Market Value": "89782.5",
+      "Shares Held": "4100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOKKAIDO GAS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.017782448887",
+      "Market Value": "257016.46",
+      "Shares Held": "55400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PLANISWARE SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.026125701787",
+      "Market Value": "377604.65",
+      "Shares Held": "18167.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RENTOKIL INITIAL PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.048868286552",
+      "Market Value": "706311.83",
+      "Shares Held": "124745.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TECHMATRIX CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.016461480899",
+      "Market Value": "237924.01",
+      "Shares Held": "22600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HITACHI CONSTRUCTION MACHINERY CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.030418615106",
+      "Market Value": "439651.75",
+      "Shares Held": "13600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BILFINGER SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.015826179598",
+      "Market Value": "228741.76",
+      "Shares Held": "2490.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPON GAS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032988010258",
+      "Market Value": "476788.19",
+      "Shares Held": "27000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ITALGAS SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.097401552466",
+      "Market Value": "1407781.48",
+      "Shares Held": "121493.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MINEBEA MITSUMI INC",
+      "Ticker": "MINBY",
+      "Identifier": "000000000",
+      "Weight": "0.030167448221",
+      "Market Value": "436021.54",
+      "Shares Held": "14900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TESCO PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.109298465909",
+      "Market Value": "1579732.07",
+      "Shares Held": "259479.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMCO CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.036533167598",
+      "Market Value": "528027.69",
+      "Shares Held": "21300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TAMRON COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020208508691",
+      "Market Value": "292081.22",
+      "Shares Held": "41100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CURVES HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.00828493297",
+      "Market Value": "119745.27",
+      "Shares Held": "21200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE BANK AKTIENGESELLSCHAFT",
+      "Ticker": "DB",
+      "Identifier": "000000000",
+      "Weight": "0.005541861467",
+      "Market Value": "80098.62",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "AIDA ENGINEERING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.010485751315",
+      "Market Value": "151554.53",
+      "Shares Held": "21400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OILES CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01035454877",
+      "Market Value": "149658.21",
+      "Shares Held": "8800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEIKYU CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018053368248",
+      "Market Value": "260932.16",
+      "Shares Held": "28800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOCHTIEF AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.160019063356",
+      "Market Value": "2312816.05",
+      "Shares Held": "3990.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO MITSUI FINANCIAL GROUP INC",
+      "Ticker": "SMFG",
+      "Identifier": "000000000",
+      "Weight": "0.39361358233",
+      "Market Value": "5689045.99",
+      "Shares Held": "145700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SINGAPORE AIRLINES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.088365475382",
+      "Market Value": "1277179.64",
+      "Shares Held": "215100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SEMBCORP INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018681743141",
+      "Market Value": "270014.3",
+      "Shares Held": "55000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNION TOOL COMPANY",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.058480177114",
+      "Market Value": "845236.12",
+      "Shares Held": "6100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOVO NORDISK A/S",
+      "Ticker": "NVO",
+      "Identifier": "000000000",
+      "Weight": "0.611091046457",
+      "Market Value": "8832330.04",
+      "Shares Held": "183553.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOEI TECMO HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.028174821342",
+      "Market Value": "407221.35",
+      "Shares Held": "43700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COVIVIO SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032286842003",
+      "Market Value": "466653.94",
+      "Shares Held": "7615.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BANK OF QUEENSLAND LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000204462925",
+      "Market Value": "2955.18",
+      "Shares Held": "676.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THULE GROUP AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.037187868516",
+      "Market Value": "537490.33",
+      "Shares Held": "25252.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPN CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.00836173024",
+      "Market Value": "120855.25",
+      "Shares Held": "7000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASSICURAZIONI GENERALI SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.191977136548",
+      "Market Value": "2774718.17",
+      "Shares Held": "56957.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REDOX LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.016259818011",
+      "Market Value": "235009.3",
+      "Shares Held": "85445.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASAHI KASEI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.031940163883",
+      "Market Value": "461643.27",
+      "Shares Held": "41892.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HERA - HOLDING ENERGIA RISORSE AMBIENTE SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01508950269",
+      "Market Value": "218094.29",
+      "Shares Held": "52234.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UBS GROUP AG",
+      "Ticker": "UBS",
+      "Identifier": "000000000",
+      "Weight": "0.304888892658",
+      "Market Value": "4406674.49",
+      "Shares Held": "88733.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LAND DEVELOPMENT OF NIMRODI GROUP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.013392291867",
+      "Market Value": "193563.86",
+      "Shares Held": "16577.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOMOKU CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.010214405756",
+      "Market Value": "147632.67",
+      "Shares Held": "6200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOOSIERS HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007510146632",
+      "Market Value": "108546.99",
+      "Shares Held": "14800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CLOETTA AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018128630238",
+      "Market Value": "262019.95",
+      "Shares Held": "51563.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAMPO PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.07598584296",
+      "Market Value": "1098252.13",
+      "Shares Held": "104481.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VALQUA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.016199841721",
+      "Market Value": "234142.44",
+      "Shares Held": "5300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MTR CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.089242493874",
+      "Market Value": "1289855.52",
+      "Shares Held": "331643.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMPAGNIE FINANCIERE RICHEMONT SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.309502797369",
+      "Market Value": "4473361",
+      "Shares Held": "19343.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000002481772",
+      "Market Value": "35.87",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "SCROLL CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011088807559",
+      "Market Value": "160270.73",
+      "Shares Held": "16000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRESENIUS MEDICAL CARE AG",
+      "Ticker": "FMS",
+      "Identifier": "000000000",
+      "Weight": "0.010208699131",
+      "Market Value": "147550.19",
+      "Shares Held": "3259.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PACIFIC BASIN SHIPPING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.015055038083",
+      "Market Value": "217596.16",
+      "Shares Held": "632000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOSEI CORP",
+      "Ticker": "TEICY",
+      "Identifier": "000000000",
+      "Weight": "0.030865096191",
+      "Market Value": "446104.91",
+      "Shares Held": "42800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIRBUS SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.234784232527",
+      "Market Value": "3393425.32",
+      "Shares Held": "15257.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HEIWADO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007210449224",
+      "Market Value": "104215.35",
+      "Shares Held": "6700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CODAN LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.076030613116",
+      "Market Value": "1098899.21",
+      "Shares Held": "35935.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VALOR HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007295760767",
+      "Market Value": "105448.39",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOF CORP",
+      "Ticker": "NOFCF",
+      "Identifier": "000000000",
+      "Weight": "0.030108189411",
+      "Market Value": "435165.05",
+      "Shares Held": "26800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EDP RENEWABLES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.036128336984",
+      "Market Value": "522176.52",
+      "Shares Held": "32232.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AREALINK COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.004823171357",
+      "Market Value": "69711.12",
+      "Shares Held": "13800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WHITBREAD PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.02308723706",
+      "Market Value": "333688.57",
+      "Shares Held": "10515.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOLCIM AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.182180972112",
+      "Market Value": "2633130.5",
+      "Shares Held": "29144.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WOLTERS KLUWER NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.03263587459",
+      "Market Value": "471698.64",
+      "Shares Held": "7310.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NATWEST GROUP PLC",
+      "Ticker": "NWG",
+      "Identifier": "000000000",
+      "Weight": "0.422216785182",
+      "Market Value": "6102458.9",
+      "Shares Held": "689329.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RESONA HOLDINGS INC",
+      "Ticker": "RSHGY",
+      "Identifier": "000000000",
+      "Weight": "0.032723646458",
+      "Market Value": "472967.24",
+      "Shares Held": "36500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RYOBI LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.004308364378",
+      "Market Value": "62270.42",
+      "Shares Held": "3900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BIPROGY INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.012539657985",
+      "Market Value": "181240.42",
+      "Shares Held": "6900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INPEX CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.073388424602",
+      "Market Value": "1060710.66",
+      "Shares Held": "52800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MEGA OR HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.113958307285",
+      "Market Value": "1647082.52",
+      "Shares Held": "8179.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CK INFRASTRUCTURE HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.106659706351",
+      "Market Value": "1541593.08",
+      "Shares Held": "202500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUI & CO. LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.234705796193",
+      "Market Value": "3392291.65",
+      "Shares Held": "122600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CAR GROUP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.063311350061",
+      "Market Value": "915062.89",
+      "Shares Held": "51274.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JB HI-FI LTD",
+      "Ticker": "JBHIF",
+      "Identifier": "000000000",
+      "Weight": "0.027165800492",
+      "Market Value": "392637.59",
+      "Shares Held": "7042.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EQT AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.047961079962",
+      "Market Value": "693199.63",
+      "Shares Held": "24485.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOHO CO LTD (TOKYO)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032885712375",
+      "Market Value": "475309.64",
+      "Shares Held": "59400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOKUSAI ELECTRIC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.221348099698",
+      "Market Value": "3199227.81",
+      "Shares Held": "47900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHIN NIPPON BIOMEDICAL LABORATORIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007460765097",
+      "Market Value": "107833.26",
+      "Shares Held": "15200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CLP HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.07491522613",
+      "Market Value": "1082778.1",
+      "Shares Held": "116000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRATON SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.152674432353",
+      "Market Value": "2206661.32",
+      "Shares Held": "58170.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMIDA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.010781659989",
+      "Market Value": "155831.41",
+      "Shares Held": "18500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE BANK AKTIENGESELLSCHAFT",
+      "Ticker": "DB",
+      "Identifier": "000000000",
+      "Weight": "0.007494533673",
+      "Market Value": "108321.33",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "REPLY SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.027315337158",
+      "Market Value": "394798.9",
+      "Shares Held": "3776.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIKA AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.083397758579",
+      "Market Value": "1205379.35",
+      "Shares Held": "5831.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KONINKLIJKE PHILIPS NV",
+      "Ticker": "PHG",
+      "Identifier": "000000000",
+      "Weight": "0.103085623593",
+      "Market Value": "1489935.51",
+      "Shares Held": "54848.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANDVIK AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.202960410994",
+      "Market Value": "2933463.59",
+      "Shares Held": "70994.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHUBU ELECTRIC POWER CO INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.023968988702",
+      "Market Value": "346432.86",
+      "Shares Held": "18400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOHO GAS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.004551655596",
+      "Market Value": "65786.8",
+      "Shares Held": "8800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JMDC INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.012247580941",
+      "Market Value": "177018.92",
+      "Shares Held": "10000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRANSURBAN GROUP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.213379188348",
+      "Market Value": "3084050.12",
+      "Shares Held": "309567.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOEVIR HOLDINGS COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011773769221",
+      "Market Value": "170170.74",
+      "Shares Held": "6300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ENDESA SA - EMPRESA NACIONAL ELECTRICIDAD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.326209014131",
+      "Market Value": "4714822.27",
+      "Shares Held": "103407.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BT GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.082684071452",
+      "Market Value": "1195064.16",
+      "Shares Held": "473649.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JPMorgan Chase Bank, National Association",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000126065337",
+      "Market Value": "1822.07",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "KONINKLIJKE HEIJMANS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.017322999208",
+      "Market Value": "250375.86",
+      "Shares Held": "1921.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIN HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.017662569647",
+      "Market Value": "255283.8",
+      "Shares Held": "7500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SKISTAR AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.02248728874",
+      "Market Value": "325017.29",
+      "Shares Held": "19771.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MONY GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009156152818",
+      "Market Value": "132337.34",
+      "Shares Held": "53838.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BASF SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.256968305651",
+      "Market Value": "3714060.12",
+      "Shares Held": "69443.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HIROGIN HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01750539878",
+      "Market Value": "253012.15",
+      "Shares Held": "19600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEYENCE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.152869478103",
+      "Market Value": "2209480.39",
+      "Shares Held": "4430.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALCON AG",
+      "Ticker": "ALC",
+      "Identifier": "000000000",
+      "Weight": "0.030150124243",
+      "Market Value": "435771.15",
+      "Shares Held": "6438.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ORSERO SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008986693473",
+      "Market Value": "129888.08",
+      "Shares Held": "7406.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CORPORACION ACCIONA ENERGIAS RENOVABLES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01787968567",
+      "Market Value": "258421.86",
+      "Shares Held": "9768.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BNP PARIBAS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.851914948637",
+      "Market Value": "12313048.99",
+      "Shares Held": "105441.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ACOMO NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.026339060211",
+      "Market Value": "380688.4",
+      "Shares Held": "14766.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GREMS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009069595199",
+      "Market Value": "131086.29",
+      "Shares Held": "8800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRI CHEMICAL LABORATORIES INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.019138282082",
+      "Market Value": "276612.83",
+      "Shares Held": "12900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INDUSTRIA DE DISENO TEXTIL SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.808500097166",
+      "Market Value": "11685557.72",
+      "Shares Held": "185430.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GEA GROUP AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.041059970873",
+      "Market Value": "593455.29",
+      "Shares Held": "8644.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTESA SANPAOLO SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.141804270521",
+      "Market Value": "16502929.01",
+      "Shares Held": "2409761.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNIVERSAL MUSIC GROUP NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.127347748608",
+      "Market Value": "1840605.18",
+      "Shares Held": "87829.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAPPORO BREWERIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.024283585741",
+      "Market Value": "350979.85",
+      "Shares Held": "28100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KURA SUSHI INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01162988037",
+      "Market Value": "168091.06",
+      "Shares Held": "17000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BECHTLE AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018700522141",
+      "Market Value": "270285.72",
+      "Shares Held": "7631.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LANDIS+GYR GROUP AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008876286067",
+      "Market Value": "128292.32",
+      "Shares Held": "2390.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIHON FLUSH COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.012219101094",
+      "Market Value": "176607.29",
+      "Shares Held": "39700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RATIO ENERGIES LP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020021311625",
+      "Market Value": "289375.59",
+      "Shares Held": "200507.00000000",
+      "Asset Category": "EP"
+    },
+    {
+      "Name": "ACEA SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011310310791",
+      "Market Value": "163472.2",
+      "Shares Held": "6583.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KAKIYASU HONTEN COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.0092887495",
+      "Market Value": "134253.81",
+      "Shares Held": "8700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TROAX GROUP AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.011721739863",
+      "Market Value": "169418.74",
+      "Shares Held": "15950.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SISRAM MEDICAL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.005471514591",
+      "Market Value": "79081.87",
+      "Shares Held": "273200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HARVIA OYJ",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01845078122",
+      "Market Value": "266676.12",
+      "Shares Held": "5607.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANOMA OYJ",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018575210953",
+      "Market Value": "268474.55",
+      "Shares Held": "27757.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EXEDY CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.009382575315",
+      "Market Value": "135609.91",
+      "Shares Held": "3800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BACHEM HOLDING AG",
+      "Ticker": "BCHMY",
+      "Identifier": "000000000",
+      "Weight": "0.096706856747",
+      "Market Value": "1397740.78",
+      "Shares Held": "14904.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOLVAY NV/SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.00903661675",
+      "Market Value": "130609.64",
+      "Shares Held": "4347.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ATLAS COPCO AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.093824853019",
+      "Market Value": "1356086.09",
+      "Shares Held": "76438.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPON PAINT HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.059171524827",
+      "Market Value": "855228.43",
+      "Shares Held": "132000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DENTSU SOKEN INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.047485919077",
+      "Market Value": "686331.95",
+      "Shares Held": "52100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOPRE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.010238798669",
+      "Market Value": "147985.23",
+      "Shares Held": "9100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANRIO CO LTD",
+      "Ticker": "SNROY",
+      "Identifier": "000000000",
+      "Weight": "0.062327713589",
+      "Market Value": "900846.02",
+      "Shares Held": "133100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TSURUMI MANUFACTURING CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.021089934457",
+      "Market Value": "304820.8",
+      "Shares Held": "21400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO ELECTRIC INDUSTRIES LTD",
+      "Ticker": "SMTOY",
+      "Identifier": "000000000",
+      "Weight": "0.2163131391",
+      "Market Value": "3126455.62",
+      "Shares Held": "173600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DE' LONGHI SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.023388393643",
+      "Market Value": "338041.3",
+      "Shares Held": "7961.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNIPOL ASSICURAZIONI SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.035003263681",
+      "Market Value": "505915.41",
+      "Shares Held": "18128.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HAPPINET CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020758308874",
+      "Market Value": "300027.69",
+      "Shares Held": "16200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HKT TRUST AND HKT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.061414922145",
+      "Market Value": "887653.1",
+      "Shares Held": "597000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LOGISTEA AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.013041189867",
+      "Market Value": "188489.25",
+      "Shares Held": "136954.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HEIDELBERG MATERIALS AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.090540874756",
+      "Market Value": "1308621.51",
+      "Shares Held": "6858.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LINTEC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.013280345028",
+      "Market Value": "191945.85",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RECORDATI - INDUSTRIA CHIMICA E FARMACEUTICA SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.067995251557",
+      "Market Value": "982761.09",
+      "Shares Held": "16756.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAITO TRUST CONSTRUCTION CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.02074587787",
+      "Market Value": "299848.02",
+      "Shares Held": "15700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VISION INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.005775137033",
+      "Market Value": "83470.24",
+      "Shares Held": "14000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIRIUS REAL ESTATE LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.034177255409",
+      "Market Value": "493976.8",
+      "Shares Held": "384882.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ICHIBANYA COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.027223090213",
+      "Market Value": "393465.62",
+      "Shares Held": "73000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAPAN ELEVATOR SERVICE HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.038939985534",
+      "Market Value": "562814.34",
+      "Shares Held": "52600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CAPCOM CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.055520493969",
+      "Market Value": "802458.7",
+      "Shares Held": "43300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OJI HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.018589529405",
+      "Market Value": "268681.5",
+      "Shares Held": "54900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SEIKO GROUP CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.048036741166",
+      "Market Value": "694293.19",
+      "Shares Held": "14000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAI NIPPON TORYO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.004376051667",
+      "Market Value": "63248.73",
+      "Shares Held": "7700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RORZE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.099106216219",
+      "Market Value": "1432419.63",
+      "Shares Held": "48100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BANCO DE SABADELL SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.06996414696",
+      "Market Value": "1011218.28",
+      "Shares Held": "285406.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NINTENDO COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.069338464172",
+      "Market Value": "1002175.05",
+      "Shares Held": "23900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PNE AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.028675940172",
+      "Market Value": "414464.21",
+      "Shares Held": "33016.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANWA HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.038066860941",
+      "Market Value": "550194.74",
+      "Shares Held": "23600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MEITEC GROUP HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.01163950165",
+      "Market Value": "168230.12",
+      "Shares Held": "8800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LISI SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032533483995",
+      "Market Value": "470218.75",
+      "Shares Held": "6260.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRELLEBORG AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.026810112714",
+      "Market Value": "387496.7",
+      "Shares Held": "9292.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TASUKI HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.021029398437",
+      "Market Value": "303945.85",
+      "Shares Held": "41200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WAYPOINT REIT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.0146849938",
+      "Market Value": "212247.77",
+      "Shares Held": "126075.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIICHI LIFE GROUP INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.033086113966",
+      "Market Value": "478206.12",
+      "Shares Held": "43700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BUFAB AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.038159121724",
+      "Market Value": "551528.22",
+      "Shares Held": "42096.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOMATSU LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.147620770245",
+      "Market Value": "2133618.83",
+      "Shares Held": "55200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.003211213959",
+      "Market Value": "46412.89",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "STOLT-NIELSEN LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.00883528458",
+      "Market Value": "127699.71",
+      "Shares Held": "4335.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHIMADZU CORP",
+      "Ticker": "SHMXY",
+      "Identifier": "000000000",
+      "Weight": "0.02207782945",
+      "Market Value": "319099.22",
+      "Shares Held": "12600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IHI CORP",
+      "Ticker": "IHICF",
+      "Identifier": "000000000",
+      "Weight": "0.052289955116",
+      "Market Value": "755766.5",
+      "Shares Held": "45300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUTABA INDUSTRIAL CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.021768936268",
+      "Market Value": "314634.67",
+      "Shares Held": "54400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SKY PERFECT JSAT CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.013447477581",
+      "Market Value": "194361.48",
+      "Shares Held": "11800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAMES HALSTEAD PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.014192288227",
+      "Market Value": "205126.51",
+      "Shares Held": "121693.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RAYSEARCH LABORATORIES AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.016962158309",
+      "Market Value": "245160.49",
+      "Shares Held": "10785.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAEDA KOSEN COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.019105715301",
+      "Market Value": "276142.13",
+      "Shares Held": "25500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PIGEON CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.024856203426",
+      "Market Value": "359256.11",
+      "Shares Held": "28200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAH SING BANKING GROUP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.008288776362",
+      "Market Value": "119800.82",
+      "Shares Held": "81200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AXFOOD AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.033400070324",
+      "Market Value": "482743.85",
+      "Shares Held": "18151.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BANK HAPOALIM LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.042364717741",
+      "Market Value": "612313.29",
+      "Shares Held": "26598.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ENERGEAN PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.025782849762",
+      "Market Value": "372649.28",
+      "Shares Held": "41078.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHUGOKU ELECTRIC POWER COMPANY INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.005674882963",
+      "Market Value": "82021.23",
+      "Shares Held": "15000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOJITZ CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.025711525261",
+      "Market Value": "371618.4",
+      "Shares Held": "11680.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PRESS KOGYO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.019757046764",
+      "Market Value": "285556.07",
+      "Shares Held": "59500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "L'OREAL SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.517398282279",
+      "Market Value": "7478153.08",
+      "Shares Held": "17049.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MISUMI GROUP INC",
+      "Ticker": "MSUXF",
+      "Identifier": "000000000",
+      "Weight": "0.041486647592",
+      "Market Value": "599622.21",
+      "Shares Held": "24400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MIVNE REAL ESTATE (K.D.) LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.02066445815",
+      "Market Value": "298671.23",
+      "Shares Held": "68452.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WESTPAC BANKING CORP",
+      "Ticker": "WEBNF",
+      "Identifier": "000000000",
+      "Weight": "0.265828562249",
+      "Market Value": "3842120.76",
+      "Shares Held": "157506.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SWISS RE AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.104937614148",
+      "Market Value": "1516703.03",
+      "Shares Held": "9521.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.007494835333",
+      "Market Value": "108325.69",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "DANYA CEBUS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.023227375232",
+      "Market Value": "335714.04",
+      "Shares Held": "8192.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LIFCO AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.048596371576",
+      "Market Value": "702381.74",
+      "Shares Held": "21417.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TELE2 AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.084885654324",
+      "Market Value": "1226884.47",
+      "Shares Held": "70406.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

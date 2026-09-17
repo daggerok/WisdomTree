@@ -1,0 +1,135 @@
+{
+  "ticker": "GDT",
+  "name": "WisdomTree Efficient TIPS Plus Gold Fund",
+  "category": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / -",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GDT",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028866, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y2871",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.2%",
+    "value": 0.2
+  },
+  "nav": {
+    "display": "$35.29",
+    "value": 35.292,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$35.02",
+    "value": 35.023,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.14%",
+    "value": 0.136
+  },
+  "aum": {
+    "display": "$11.37 M",
+    "value": 11367150,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": 0,
+    "secYield": -0.4,
+    "secYieldText": "-0.40%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 8.61,
+      "mo1Text": "8.61%",
+      "qtd": -3.15,
+      "qtdText": "-3.15%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": -7.64,
+      "sinceInceptionText": "-7.64%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": -15.37
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "03/26/2026",
+        "0.035"
+      ],
+      [
+        "04/27/2026",
+        "0.24"
+      ],
+      [
+        "05/26/2026",
+        "0.385"
+      ],
+      [
+        "06/25/2026",
+        "0.265"
+      ],
+      [
+        "07/28/2026",
+        "0.245"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 21,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028866, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 164,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

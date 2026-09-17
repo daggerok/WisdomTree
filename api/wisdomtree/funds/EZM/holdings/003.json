@@ -1,0 +1,98 @@
+{
+  "ticker": "EZM",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 509,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "SELECTIVE INSURANCE GROUP INC",
+      "Ticker": "SIGI",
+      "Identifier": "816300107",
+      "Weight": "0.138995727436",
+      "Market Value": "1304590.48",
+      "Shares Held": "13448.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VISTANCE NETWORKS INC",
+      "Ticker": "VISN",
+      "Identifier": "20337X109",
+      "Weight": "0.101008201327",
+      "Market Value": "948045.96",
+      "Shares Held": "74182.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MERITAGE HOMES CORP",
+      "Ticker": "MTH",
+      "Identifier": "59001A102",
+      "Weight": "0.269252132224",
+      "Market Value": "2527155.15",
+      "Shares Held": "30139.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PROTAGONIST THERAPEUTICS INC",
+      "Ticker": "PTGX",
+      "Identifier": "74366E102",
+      "Weight": "0.06829131958",
+      "Market Value": "640970.82",
+      "Shares Held": "5229.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MERIT MEDICAL SYSTEMS INC",
+      "Ticker": "MMSI",
+      "Identifier": "589889104",
+      "Weight": "0.085941476587",
+      "Market Value": "806632.22",
+      "Shares Held": "11633.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAGNOLIA OIL & GAS CORP",
+      "Ticker": "MGY",
+      "Identifier": "559663109",
+      "Weight": "0.168017230684",
+      "Market Value": "1576981.42",
+      "Shares Held": "61649.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GLOBE LIFE INC",
+      "Ticker": "GL",
+      "Identifier": "37959E102",
+      "Weight": "0.598777212954",
+      "Market Value": "5620022.04",
+      "Shares Held": "31453.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARKETAXESS HOLDINGS INC",
+      "Ticker": "MKTX",
+      "Identifier": "57060D108",
+      "Weight": "0.047604746468",
+      "Market Value": "446810.13",
+      "Shares Held": "3937.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TEXAS CAPITAL BANCSHARES INC",
+      "Ticker": "-",
+      "Identifier": "88224Q107",
+      "Weight": "0.073304254224",
+      "Market Value": "688021.38",
+      "Shares Held": "6663.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

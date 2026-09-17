@@ -1,0 +1,77 @@
+{
+  "ticker": "WTPI",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 6,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.01441383912",
+      "Market Value": "-69025.88",
+      "Shares Held": "-3377.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.29585623118",
+      "Market Value": "-1416814.53",
+      "Shares Held": "-3309.00000000",
+      "Asset Category": "DE"
+    },
+    {
+      "Name": "WisdomTree Trust",
+      "Ticker": "-",
+      "Identifier": "97717Y527",
+      "Weight": "4.350743883548",
+      "Market Value": "20835110.1",
+      "Shares Held": "413970.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797RG4",
+      "Weight": "47.60615442853",
+      "Market Value": "227979282.51",
+      "Shares Held": "229500000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-08-06"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797UM7",
+      "Weight": "47.16063719286",
+      "Market Value": "225845762.15",
+      "Shares Held": "229500000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-11-05"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.225633490988",
+      "Market Value": "5869389.1",
+      "Shares Held": "5869389.10000000",
+      "Asset Category": "STIV"
+    }
+  ]
+}

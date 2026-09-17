@@ -1,0 +1,323 @@
+{
+  "ticker": "HYIN",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 34,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.349416789265",
+      "Market Value": "1725050.62",
+      "Shares Held": "1725050.62000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "AGNC INVESTMENT CORP",
+      "Ticker": "AGNC",
+      "Identifier": "00123Q104",
+      "Weight": "3.290559982144",
+      "Market Value": "1694737.59",
+      "Shares Held": "162799.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MFA FINANCIAL INC",
+      "Ticker": "MFA",
+      "Identifier": "55272X607",
+      "Weight": "3.129081298714",
+      "Market Value": "1611571.2",
+      "Shares Held": "167872.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLUE OWL TECHNOLOGY FINANCE CORP",
+      "Ticker": "OTF",
+      "Identifier": "095924106",
+      "Weight": "2.866600508235",
+      "Market Value": "1476385.68",
+      "Shares Held": "132888.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PIMCO DYNAMIC INCOME FUND",
+      "Ticker": "PDI",
+      "Identifier": "72201Y101",
+      "Weight": "3.14635626807",
+      "Market Value": "1620468.33",
+      "Shares Held": "96629.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DYNEX CAPITAL INC (NEW)",
+      "Ticker": "-",
+      "Identifier": "26817Q886",
+      "Weight": "3.332823915903",
+      "Market Value": "1716504.79",
+      "Shares Held": "131131.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLUE OWL CAPITAL CORP",
+      "Ticker": "OWL",
+      "Identifier": "69121K104",
+      "Weight": "3.144504357058",
+      "Market Value": "1619514.54",
+      "Shares Held": "143829.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OXFORD LANE CAPITAL CORP",
+      "Ticker": "OXLC",
+      "Identifier": "691543847",
+      "Weight": "3.616443410732",
+      "Market Value": "1862577.38",
+      "Shares Held": "186631.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "Guggenheim Strategic Opportunities Fund",
+      "Ticker": "GOF",
+      "Identifier": "40167F101",
+      "Weight": "3.259074465991",
+      "Market Value": "1678521.6",
+      "Shares Held": "149868.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLACKROCK CORPORATE HIGH YIELD FUND INC",
+      "Ticker": "HYT",
+      "Identifier": "09255P107",
+      "Weight": "3.219138861958",
+      "Market Value": "1657953.56",
+      "Shares Held": "192338.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EATON VANCE LTD DURATION INCOME FUND",
+      "Ticker": "EVV",
+      "Identifier": "27828H105",
+      "Weight": "3.218954717397",
+      "Market Value": "1657858.72",
+      "Shares Held": "176744.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RITHM CAPITAL CORP",
+      "Ticker": "RITM",
+      "Identifier": "64828T201",
+      "Weight": "3.268739841956",
+      "Market Value": "1683499.56",
+      "Shares Held": "180633.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "APOLLO COMMERCIAL REAL ESTATE FINANCE INC",
+      "Ticker": "ARI",
+      "Identifier": "03762U105",
+      "Weight": "3.339156923828",
+      "Market Value": "1719766.48",
+      "Shares Held": "156913.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ANNALY CAPITAL MANAGEMENT INC",
+      "Ticker": "NLY",
+      "Identifier": "035710839",
+      "Weight": "3.2600837273",
+      "Market Value": "1679041.4",
+      "Shares Held": "76844.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LADDER CAPITAL CORP",
+      "Ticker": "LADR",
+      "Identifier": "505743104",
+      "Weight": "3.263759434465",
+      "Market Value": "1680934.5",
+      "Shares Held": "164475.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELLINGTON FINANCIAL INC",
+      "Ticker": "EFC",
+      "Identifier": "28852N109",
+      "Weight": "3.723574479397",
+      "Market Value": "1917753.11",
+      "Shares Held": "141323.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLACKSTONE MORTGAGE TRUST INC",
+      "Ticker": "BXMT",
+      "Identifier": "09257W100",
+      "Weight": "3.085980287741",
+      "Market Value": "1589372.88",
+      "Shares Held": "86946.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARMOUR RESIDENTIAL REIT INC",
+      "Ticker": "ARR",
+      "Identifier": "042315705",
+      "Weight": "3.437724396694",
+      "Market Value": "1770531.7",
+      "Shares Held": "103238.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BLACKSTONE SECURED LENDING FUND",
+      "Ticker": "BXSL",
+      "Identifier": "09261X102",
+      "Weight": "3.066381590331",
+      "Market Value": "1579278.96",
+      "Shares Held": "66552.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NUVEEN FLOATING RATE INCOME FUND",
+      "Ticker": "JFR",
+      "Identifier": "67072T108",
+      "Weight": "3.269108072828",
+      "Market Value": "1683689.21",
+      "Shares Held": "220667.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HERCULES CAPITAL INC",
+      "Ticker": "HTGC",
+      "Identifier": "427096508",
+      "Weight": "3.383291951943",
+      "Market Value": "1742497.35",
+      "Shares Held": "112783.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIXTH STREET SPECIALTY LENDING INC",
+      "Ticker": "TSLX",
+      "Identifier": "83012A109",
+      "Weight": "3.002093217663",
+      "Market Value": "1546168.51",
+      "Shares Held": "89737.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PIMCO CORPORATE & INCOME OPPORTUNITY FUND",
+      "Ticker": "PTY",
+      "Identifier": "72201B101",
+      "Weight": "3.169882871473",
+      "Market Value": "1632585.24",
+      "Shares Held": "137423.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WisdomTree Treasury Money Market Digital Fund",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "9.12567940154",
+      "Market Value": "4700000",
+      "Shares Held": "4700000.00000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.049426174696",
+      "Market Value": "25455.97",
+      "Shares Held": "25455.97000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "CHIMERA INVESTMENT CORP",
+      "Ticker": "CIM",
+      "Identifier": "16934Q802",
+      "Weight": "3.39406400099",
+      "Market Value": "1748045.28",
+      "Shares Held": "128344.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BRIGHTSPIRE CAPITAL INC",
+      "Ticker": "BRSP",
+      "Identifier": "10949T109",
+      "Weight": "3.284685529901",
+      "Market Value": "1691712.07",
+      "Shares Held": "293191.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARBOR REALTY TRUST INC",
+      "Ticker": "ABR",
+      "Identifier": "038923108",
+      "Weight": "2.392206083728",
+      "Market Value": "1232058.25",
+      "Shares Held": "214271.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FS KKR CAPITAL CORP",
+      "Ticker": "FSK",
+      "Identifier": "302635206",
+      "Weight": "3.303632304307",
+      "Market Value": "1701470.23",
+      "Shares Held": "156529.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STARWOOD PROPERTY TRUST INC",
+      "Ticker": "STWD",
+      "Identifier": "85571B105",
+      "Weight": "3.104066840657",
+      "Market Value": "1598688",
+      "Shares Held": "93600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOLUB CAPITAL BDC INC",
+      "Ticker": "GBDC",
+      "Identifier": "38173M102",
+      "Weight": "3.308588072463",
+      "Market Value": "1704022.6",
+      "Shares Held": "129485.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAIN STREET CAPITAL CORP",
+      "Ticker": "MAIN",
+      "Identifier": "56035L104",
+      "Weight": "2.956582949663",
+      "Market Value": "1522729.35",
+      "Shares Held": "29735.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARES CAPITAL CORP",
+      "Ticker": "ARCC",
+      "Identifier": "04010L103",
+      "Weight": "3.300932501181",
+      "Market Value": "1700079.75",
+      "Shares Held": "89525.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRANKLIN BSP REALTY TRUST INC",
+      "Ticker": "FBRT",
+      "Identifier": "35243J101",
+      "Weight": "3.120562787654",
+      "Market Value": "1607183.91",
+      "Shares Held": "185373.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

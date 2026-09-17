@@ -1,0 +1,26 @@
+{
+  "ticker": "BTCW",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 1,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "BITCOIN",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "100",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    }
+  ]
+}

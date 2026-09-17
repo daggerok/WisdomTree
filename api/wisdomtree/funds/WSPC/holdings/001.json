@@ -1,0 +1,107 @@
+{
+  "ticker": "WSPC",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 10,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "Space Exploration Techn-Cl A",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "15.74",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Rocket Lab Corp",
+      "Ticker": "RKLB",
+      "Identifier": "-",
+      "Weight": "4.92",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Firefly Aerospace Inc",
+      "Ticker": "FLY",
+      "Identifier": "-",
+      "Weight": "3.66",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Avio SpA",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.56",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Intuitive Machines Inc",
+      "Ticker": "LUNR",
+      "Identifier": "-",
+      "Weight": "3.45",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Redwire Corp",
+      "Ticker": "RDW",
+      "Identifier": "-",
+      "Weight": "3.34",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Voyager Technologies Inc-A",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.89",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Mitsubishi Heavy Industries Ltd",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.89",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Synspective Inc",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.83",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "IHI Corp",
+      "Ticker": "IHICF",
+      "Identifier": "-",
+      "Weight": "2.82",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    }
+  ]
+}

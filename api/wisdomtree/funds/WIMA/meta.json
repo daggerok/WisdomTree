@@ -1,0 +1,120 @@
+{
+  "ticker": "WIMA",
+  "name": "WisdomTree International Adaptive Moving Average Fund",
+  "category": "International Equity",
+  "categoryPath": "International Equity / International",
+  "source": {
+    "fundPage": "https://wisdomtree.com/us/products/equity/wima",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wima",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WIMA",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036301, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y212",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.42%",
+    "value": 0.42
+  },
+  "nav": {
+    "display": "$43.03",
+    "value": 43.027,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$43.08",
+    "value": 43.082,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.49%",
+    "value": 0.486
+  },
+  "aum": {
+    "display": "$71.81 M",
+    "value": 71810860,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": 3.92,
+    "secYield": 1.81,
+    "secYieldText": "1.81%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.56,
+      "mo1Text": "1.56%",
+      "qtd": 4.44,
+      "qtdText": "4.44%",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 11.5,
+      "sinceInceptionText": "11.50%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 7.19
+    }
+  },
+  "distributions": {
+    "frequency": "Unknown",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "06/25/2026",
+        "0.42"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 491,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036301, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 130,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

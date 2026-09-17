@@ -1,0 +1,119 @@
+{
+  "ticker": "OPPG",
+  "name": "WisdomTree GeoAlpha Opportunities Fund",
+  "category": "International Equity",
+  "categoryPath": "International Equity / Global",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/equity/oppg",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppg",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/OPPG",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036262, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y345",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.58%",
+    "value": 0.58
+  },
+  "nav": {
+    "display": "$37.09",
+    "value": 37.087,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$37.38",
+    "value": 37.377,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.04%",
+    "value": 0.04
+  },
+  "aum": {
+    "display": "$2.80 M",
+    "value": 2802120,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 0.53,
+    "dividendYieldText": "0.53%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0.53,
+    "secYield": 1.03,
+    "secYieldText": "1.03%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 3.84,
+      "mo1Text": "3.84%",
+      "qtd": 2.2,
+      "qtdText": "2.20%",
+      "ytd": 13.87,
+      "ytdText": "13.87%",
+      "yr1": 27.26,
+      "yr1Text": "27.26%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 23.13,
+      "sinceInceptionText": "23.13%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 20.87
+    }
+  },
+  "distributions": {
+    "frequency": "Unknown",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/26/2025",
+        "0.198"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 66,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036262, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 301,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

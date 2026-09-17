@@ -1,0 +1,593 @@
+{
+  "ticker": "WDRN",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 64,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "SENSATA TECHNOLOGIES HOLDING PLC",
+      "Ticker": "ST",
+      "Identifier": "000000000",
+      "Weight": "0.727423456994",
+      "Market Value": "129232.18",
+      "Shares Held": "2707.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HARMONIC DRIVE SYSTEMS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.755546558139",
+      "Market Value": "667200.74",
+      "Shares Held": "13920.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TESLA INC",
+      "Ticker": "TSLA",
+      "Identifier": "88160R101",
+      "Weight": "5.729296066571",
+      "Market Value": "1017852",
+      "Shares Held": "2420.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "67066G104",
+      "Weight": "4.616575405841",
+      "Market Value": "820168.91",
+      "Shares Held": "4099.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DOOSAN ROBOTICS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.564902318291",
+      "Market Value": "278016.52",
+      "Shares Held": "4770.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ROCKWELL AUTOMATION INC",
+      "Ticker": "ROK",
+      "Identifier": "773903109",
+      "Weight": "1.811362489649",
+      "Market Value": "321802",
+      "Shares Held": "650.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AEROVIRONMENT INC",
+      "Ticker": "AVAV",
+      "Identifier": "008073108",
+      "Weight": "1.876878467058",
+      "Market Value": "333441.4",
+      "Shares Held": "2020.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KUBOTA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.117959507275",
+      "Market Value": "198613.81",
+      "Shares Held": "12020.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TEXTRON INC",
+      "Ticker": "TXT",
+      "Identifier": "883203101",
+      "Weight": "1.729708149539",
+      "Market Value": "307295.5",
+      "Shares Held": "3350.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIDEC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.64673569623",
+      "Market Value": "114897.4",
+      "Shares Held": "7060.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BETA TECHNOLOGIES INC",
+      "Ticker": "BETA",
+      "Identifier": "086921103",
+      "Weight": "0.457081931154",
+      "Market Value": "81204",
+      "Shares Held": "4848.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AURORA INNOVATION INC",
+      "Ticker": "AUR",
+      "Identifier": "051774107",
+      "Weight": "3.269585901928",
+      "Market Value": "580866.22",
+      "Shares Held": "85171.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RAINBOW ROBOTICS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.587671194657",
+      "Market Value": "282061.58",
+      "Shares Held": "842.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEERE & COMPANY",
+      "Ticker": "DE",
+      "Identifier": "244199105",
+      "Weight": "1.867383733149",
+      "Market Value": "331754.59",
+      "Shares Held": "523.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NABTESCO CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.249204794012",
+      "Market Value": "221930.51",
+      "Shares Held": "7016.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RED CAT HOLDINGS INC",
+      "Ticker": "RCAT",
+      "Identifier": "75644T100",
+      "Weight": "3.354744626905",
+      "Market Value": "595995.3",
+      "Shares Held": "55962.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REGAL REXNORD CORP",
+      "Ticker": "RRX",
+      "Identifier": "758750103",
+      "Weight": "1.442621587798",
+      "Market Value": "256292.44",
+      "Shares Held": "1076.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COGNEX CORP",
+      "Ticker": "CGNX",
+      "Identifier": "192422103",
+      "Weight": "0.744347826799",
+      "Market Value": "132238.92",
+      "Shares Held": "1826.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SCHAEFFLER AG",
+      "Ticker": "SCAFF",
+      "Identifier": "000000000",
+      "Weight": "1.613486327",
+      "Market Value": "286647.83",
+      "Shares Held": "29566.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMPRIUS TECHNOLOGIES INC",
+      "Ticker": "AMPX",
+      "Identifier": "03214Q108",
+      "Weight": "4.344126734776",
+      "Market Value": "771766.38",
+      "Shares Held": "55683.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KAWASAKI HEAVY INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.475717177924",
+      "Market Value": "84514.69",
+      "Shares Held": "4700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIEMENS AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.605418229758",
+      "Market Value": "462871.9",
+      "Shares Held": "1440.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DRAGANFLY INC",
+      "Ticker": "DPRO",
+      "Identifier": "26142Q304",
+      "Weight": "0.351087826232",
+      "Market Value": "62373.36",
+      "Shares Held": "11508.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THUNDER TIGER CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.001021460248",
+      "Market Value": "181.47",
+      "Shares Held": "94.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "YASKAWA ELECTRIC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.681684263767",
+      "Market Value": "298763.7",
+      "Shares Held": "6910.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STMICROELECTRONICS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.30482352127",
+      "Market Value": "231811.59",
+      "Shares Held": "3144.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MOOG INC",
+      "Ticker": "MOG-A",
+      "Identifier": "615394202",
+      "Weight": "1.984914929596",
+      "Market Value": "352634.88",
+      "Shares Held": "832.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HYUNDAI MOTOR COMPANY",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.665228901091",
+      "Market Value": "473497.71",
+      "Shares Held": "1482.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FANUC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.222701314428",
+      "Market Value": "217221.97",
+      "Shares Held": "4800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LIGHTPATH TECHNOLOGIES INC",
+      "Ticker": "LPTH",
+      "Identifier": "532257805",
+      "Weight": "0.893069331927",
+      "Market Value": "158660.4",
+      "Shares Held": "9704.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELECTRO OPTIC SYSTEMS HOLDING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.602052565802",
+      "Market Value": "106959.11",
+      "Shares Held": "14989.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KRATOS DEFENSE & SECURITY SOLUTIONS INC",
+      "Ticker": "KTOS",
+      "Identifier": "50077B207",
+      "Weight": "1.619645540358",
+      "Market Value": "287742.06",
+      "Shares Held": "5771.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ONDAS INC",
+      "Ticker": "ONDS",
+      "Identifier": "68236H204",
+      "Weight": "2.762336971676",
+      "Market Value": "490749.68",
+      "Shares Held": "59557.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RBC BEARINGS INC",
+      "Ticker": "RBC",
+      "Identifier": "75524B104",
+      "Weight": "1.366734977273",
+      "Market Value": "242810.62",
+      "Shares Held": "377.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SKF AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.058495458096",
+      "Market Value": "188049.58",
+      "Shares Held": "7315.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNUSUAL MACHINES INC",
+      "Ticker": "UMAC",
+      "Identifier": "91532F102",
+      "Weight": "2.516976669898",
+      "Market Value": "447159.6",
+      "Shares Held": "20052.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TELEDYNE TECHNOLOGIES INC",
+      "Ticker": "TDY",
+      "Identifier": "879360105",
+      "Weight": "2.060865708561",
+      "Market Value": "366128.1",
+      "Shares Held": "549.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOVANTA INC",
+      "Ticker": "NOVT",
+      "Identifier": "67000B104",
+      "Weight": "1.683061183402",
+      "Market Value": "299008.32",
+      "Shares Held": "1843.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LEONARDO SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.984626115327",
+      "Market Value": "352583.57",
+      "Shares Held": "6572.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THUNDER TIGER CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.212951088809",
+      "Market Value": "215489.77",
+      "Shares Held": "40500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EXAIL TECHNOLOGIES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.002443368714",
+      "Market Value": "178091.51",
+      "Shares Held": "1297.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAMSARA INC",
+      "Ticker": "IOT",
+      "Identifier": "79589L106",
+      "Weight": "1.987338301398",
+      "Market Value": "353065.41",
+      "Shares Held": "10887.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SERVE ROBOTICS INC",
+      "Ticker": "-",
+      "Identifier": "81758H106",
+      "Weight": "0.307485934021",
+      "Market Value": "54627.16",
+      "Shares Held": "8302.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NXP SEMICONDUCTORS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.442660539167",
+      "Market Value": "256299.36",
+      "Shares Held": "912.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELSIGHT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.86894273017",
+      "Market Value": "154374.13",
+      "Shares Held": "31384.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KRAKEN ROBOTICS INC",
+      "Ticker": "-",
+      "Identifier": "50077N102",
+      "Weight": "1.606736032247",
+      "Market Value": "285448.59",
+      "Shares Held": "63877.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TE CONNECTIVITY PLC",
+      "Ticker": "TEL",
+      "Identifier": "000000000",
+      "Weight": "0.346121470404",
+      "Market Value": "61491.05",
+      "Shares Held": "305.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEYENCE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.407071863295",
+      "Market Value": "72319.34",
+      "Shares Held": "145.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEXT VISION STABILIZED SYS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.709995379568",
+      "Market Value": "303793.38",
+      "Shares Held": "3762.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DRONESHIELD LTD",
+      "Ticker": "DRSHF",
+      "Identifier": "000000000",
+      "Weight": "1.54385765917",
+      "Market Value": "274277.78",
+      "Shares Held": "163594.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MOBILEYE GLOBAL INC",
+      "Ticker": "MBLY",
+      "Identifier": "60741F104",
+      "Weight": "1.310028200937",
+      "Market Value": "232736.24",
+      "Shares Held": "24043.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIHEN CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.418840298933",
+      "Market Value": "74410.09",
+      "Shares Held": "670.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.135098094975",
+      "Market Value": "24001.18",
+      "Shares Held": "24001.18000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "DAIFUKU CO LTD",
+      "Ticker": "DFKUY",
+      "Identifier": "000000000",
+      "Weight": "0.648988627649",
+      "Market Value": "115297.65",
+      "Shares Held": "2630.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RICHTECH ROBOTICS INC",
+      "Ticker": "RR",
+      "Identifier": "765504105",
+      "Weight": "0.46507135226",
+      "Market Value": "82623.38",
+      "Shares Held": "39158.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SYMBOTIC INC",
+      "Ticker": "SYM",
+      "Identifier": "87151X101",
+      "Weight": "0.683646621351",
+      "Market Value": "121454.9",
+      "Shares Held": "2702.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OUSTER INC",
+      "Ticker": "OUST",
+      "Identifier": "68989M202",
+      "Weight": "1.814816552949",
+      "Market Value": "322415.64",
+      "Shares Held": "5157.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DASSAULT SYSTEMES SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.480370909615",
+      "Market Value": "85341.46",
+      "Shares Held": "4190.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALLIENT INC",
+      "Ticker": "ALNT",
+      "Identifier": "019330109",
+      "Weight": "2.650054247042",
+      "Market Value": "470801.82",
+      "Shares Held": "4574.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TERADYNE INC",
+      "Ticker": "TER",
+      "Identifier": "880770102",
+      "Weight": "2.200542503183",
+      "Market Value": "390942.72",
+      "Shares Held": "808.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIRO GROUP HOLDINGS INC",
+      "Ticker": "AIRO",
+      "Identifier": "009422106",
+      "Weight": "0.460602583283",
+      "Market Value": "81829.47",
+      "Shares Held": "11073.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALLEGRO MICROSYSTEMS INC",
+      "Ticker": "ALGM",
+      "Identifier": "01749D105",
+      "Weight": "2.215677023813",
+      "Market Value": "393631.48",
+      "Shares Held": "5654.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTUITIVE SURGICAL INC",
+      "Ticker": "ISRG",
+      "Identifier": "46120E602",
+      "Weight": "1.24458674898",
+      "Market Value": "221110.08",
+      "Shares Held": "556.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ROBOTIS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.458137896012",
+      "Market Value": "81391.6",
+      "Shares Held": "485.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

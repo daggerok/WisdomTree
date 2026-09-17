@@ -1,0 +1,128 @@
+{
+  "ticker": "WCBR",
+  "name": "WisdomTree Cybersecurity Fund",
+  "category": "Thematic",
+  "categoryPath": "Megatrends / -",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wcbr",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wcbr",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WCBR",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036222, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y659",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.45%",
+    "value": 0.45
+  },
+  "nav": {
+    "display": "$43.79",
+    "value": 43.789,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$44.11",
+    "value": 44.11,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.17%",
+    "value": 0.174
+  },
+  "aum": {
+    "display": "$151.03 M",
+    "value": 151033360,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 0,
+    "dividendYieldText": "0.00%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0,
+    "secYield": -0.36,
+    "secYieldText": "-0.36%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 14.47,
+      "mo1Text": "14.47%",
+      "qtd": 22.76,
+      "qtdText": "22.76%",
+      "ytd": 52.87,
+      "ytdText": "52.87%",
+      "yr1": 38.27,
+      "yr1Text": "38.27%",
+      "yr3": 27.09,
+      "yr3Text": "27.09%",
+      "yr5": 9.05,
+      "yr5Text": "9.05%",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 10.75,
+      "sinceInceptionText": "10.75%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 13.63,
+      "yr3": 23.13,
+      "yr5": 8.23,
+      "yr10": null,
+      "sinceInception": 7.83
+    }
+  },
+  "distributions": {
+    "frequency": "Irregular",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/27/2021",
+        "0.113"
+      ],
+      [
+        "12/23/2022",
+        "0.004"
+      ],
+      [
+        "12/26/2024",
+        "0.007"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 27,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036222, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1415,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

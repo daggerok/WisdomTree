@@ -1,0 +1,836 @@
+{
+  "ticker": "OPPJ",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 91,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "HANWA CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.869731221805",
+      "Market Value": "5239648.05",
+      "Shares Held": "502700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ENDO LIGHTING CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.27564541664",
+      "Market Value": "772455.93",
+      "Shares Held": "53400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKYO ELECTRON LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.184569042137",
+      "Market Value": "8924288.57",
+      "Shares Held": "18800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHIMOJIMA COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.243799068093",
+      "Market Value": "683211.2",
+      "Shares Held": "83300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIICHI LIFE GROUP INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.571725297323",
+      "Market Value": "4404530.07",
+      "Shares Held": "402500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKYO OHKA KOGYO CO LTD",
+      "Ticker": "TKCYY",
+      "Identifier": "000000000",
+      "Weight": "1.083651921327",
+      "Market Value": "3036775.88",
+      "Shares Held": "43600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RIGAKU HOLDINGS CORP",
+      "Ticker": "RGKUY",
+      "Identifier": "000000000",
+      "Weight": "1.722462744453",
+      "Market Value": "4826949.7",
+      "Shares Held": "313800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPON KAYAKU CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.964878837829",
+      "Market Value": "2703931.7",
+      "Shares Held": "220500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TORAY INDUSTRIES INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.792179169496",
+      "Market Value": "2219966.16",
+      "Shares Held": "320000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MS & AD INSURANCE GROUP HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.351728161158",
+      "Market Value": "3788020.3",
+      "Shares Held": "145200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKYU CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.204845722097",
+      "Market Value": "574050.15",
+      "Shares Held": "55700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MEGMILK SNOW BRAND COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.299290252047",
+      "Market Value": "838717.12",
+      "Shares Held": "37500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MANAGEMENT SOLUTIONS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.298955858131",
+      "Market Value": "837780.03",
+      "Shares Held": "104900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TSUBAKIMOTO CHAIN COMPANY",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.307297014603",
+      "Market Value": "861154.9",
+      "Shares Held": "54800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEIO CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.241028504108",
+      "Market Value": "675447.1",
+      "Shares Held": "146800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEIHAN HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.229854475312",
+      "Market Value": "644133.52",
+      "Shares Held": "32900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MEITO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.34324543647",
+      "Market Value": "961895.09",
+      "Shares Held": "48400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NISSHIN OILLIO GROUP LTD (THE)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.251016504852",
+      "Market Value": "703437.01",
+      "Shares Held": "62100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "YAMATANE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.187441273306",
+      "Market Value": "525276.73",
+      "Shares Held": "42200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MIRAI INDUSTRY CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.216074112341",
+      "Market Value": "605516.07",
+      "Shares Held": "31900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ISETAN MITSUKOSHI HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.403253448682",
+      "Market Value": "1130058.76",
+      "Shares Held": "44600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUBISHI GAS CHEMICAL CO INC",
+      "Ticker": "MBSHY",
+      "Identifier": "000000000",
+      "Weight": "0.916897327129",
+      "Market Value": "2569470.54",
+      "Shares Held": "82400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAPAN AIRLINES CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.336028438627",
+      "Market Value": "941670.51",
+      "Shares Held": "53700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RYOBI LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.256963116981",
+      "Market Value": "720101.52",
+      "Shares Held": "45100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WASEDA ACADEMY CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.234008583464",
+      "Market Value": "655774.8",
+      "Shares Held": "45900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "T & D HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.544099697341",
+      "Market Value": "4327113.37",
+      "Shares Held": "146300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ITOCHU CORP",
+      "Ticker": "ITOCF",
+      "Identifier": "000000000",
+      "Weight": "5.167724161701",
+      "Market Value": "14481790.49",
+      "Shares Held": "1269500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SURUGA BANK LTD",
+      "Ticker": "SRGBF",
+      "Identifier": "000000000",
+      "Weight": "0.334801966001",
+      "Market Value": "938233.5",
+      "Shares Held": "62700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO CHEMICAL COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.908837541286",
+      "Market Value": "2546884.17",
+      "Shares Held": "806100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KURABO INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.291433231479",
+      "Market Value": "816698.97",
+      "Shares Held": "13300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIKOKU DENKI COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.221210323531",
+      "Market Value": "619909.55",
+      "Shares Held": "45200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "7.327142661165",
+      "Market Value": "20533244.73",
+      "Shares Held": "2154400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PANASONIC HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.586819361099",
+      "Market Value": "7249182.59",
+      "Shares Held": "261700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HIDAY HIDAKA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.307255078425",
+      "Market Value": "861037.38",
+      "Shares Held": "54900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRE HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.346126090059",
+      "Market Value": "969967.7",
+      "Shares Held": "75500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPON YAKIN KOGYO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.839764809384",
+      "Market Value": "2353317.95",
+      "Shares Held": "81900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TAKEUCHI MANUFACTURING CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.225083835403",
+      "Market Value": "630764.5",
+      "Shares Held": "14500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KANEKA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.023190293984",
+      "Market Value": "2867341.02",
+      "Shares Held": "81800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOLI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.292121777703",
+      "Market Value": "818628.52",
+      "Shares Held": "197400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HOKUHOKU FINANCIAL GROUP INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.32540647435",
+      "Market Value": "911904.01",
+      "Shares Held": "22200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARUBENI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "6.841626410707",
+      "Market Value": "19172656.51",
+      "Shares Held": "664400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANWA HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.214635325323",
+      "Market Value": "601484.08",
+      "Shares Held": "25800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ESPEC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.034623758276",
+      "Market Value": "2899381.63",
+      "Shares Held": "111400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DAIICHI SANKYO COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.781772484974",
+      "Market Value": "2190802.95",
+      "Shares Held": "136500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKYO TEKKO CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.311803522964",
+      "Market Value": "873783.73",
+      "Shares Held": "77900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FERROTEC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.370538028586",
+      "Market Value": "3840732.2",
+      "Shares Held": "65500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TADANO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.255450117345",
+      "Market Value": "715861.56",
+      "Shares Held": "91900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUJIFILM HOLDINGS CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.766535394423",
+      "Market Value": "4950456.85",
+      "Shares Held": "231000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIDA ENGINEERING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.306038704453",
+      "Market Value": "857628.67",
+      "Shares Held": "121100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASAHI KASEI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.903261439144",
+      "Market Value": "2531257.96",
+      "Shares Held": "229700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "M UP HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.336421454695",
+      "Market Value": "942771.88",
+      "Shares Held": "214000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FAST RETAILING COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.781827879196",
+      "Market Value": "4993311.8",
+      "Shares Held": "9800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUI & CO. LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "6.205618295974",
+      "Market Value": "17390336.87",
+      "Shares Held": "628500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LIFE CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.243173536757",
+      "Market Value": "681458.24",
+      "Shares Held": "42000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AD-SOL NISSIN CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.212096752047",
+      "Market Value": "594370.1",
+      "Shares Held": "69000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOYODA GOSEI COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.328927589581",
+      "Market Value": "921771.42",
+      "Shares Held": "29300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NISSHIN SEIFUN GROUP INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.24935771348",
+      "Market Value": "698788.49",
+      "Shares Held": "57200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUBISHI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "6.820395221444",
+      "Market Value": "19113159.21",
+      "Shares Held": "714600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOPY INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.282630998291",
+      "Market Value": "792032",
+      "Shares Held": "47500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JFE HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.707296555589",
+      "Market Value": "1982095.06",
+      "Shares Held": "206500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COSMOS INITIA COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.274584055224",
+      "Market Value": "769481.62",
+      "Shares Held": "96200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO BAKELITE CO LTD",
+      "Ticker": "SBCLY",
+      "Identifier": "000000000",
+      "Weight": "1.179998737973",
+      "Market Value": "3306773.73",
+      "Shares Held": "72100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.111113354233",
+      "Market Value": "311378.91",
+      "Shares Held": "311378.91000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "HITACHI LTD",
+      "Ticker": "HTHIY",
+      "Identifier": "000000000",
+      "Weight": "1.103387018171",
+      "Market Value": "3092080.6",
+      "Shares Held": "112400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOKIO MARINE HOLDINGS INC",
+      "Ticker": "TKOMY",
+      "Identifier": "000000000",
+      "Weight": "3.682811534494",
+      "Market Value": "10320540.22",
+      "Shares Held": "232900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MUGEN ESTATE CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.161771418654",
+      "Market Value": "453340.72",
+      "Shares Held": "41300.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHIN-ETSU CHEMICAL COMPANY LTD",
+      "Ticker": "SHECF",
+      "Identifier": "000000000",
+      "Weight": "0.984761260834",
+      "Market Value": "2759649.28",
+      "Shares Held": "64000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUJITSU LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.209107808841",
+      "Market Value": "3388347.64",
+      "Shares Held": "169600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COCA-COLA BOTTLERS JAPAN HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.39673334005",
+      "Market Value": "1111787.11",
+      "Shares Held": "42100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.105165212747",
+      "Market Value": "3097063.73",
+      "Shares Held": "3097063.73000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "SYSMEX CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.7525999603",
+      "Market Value": "2109051.22",
+      "Shares Held": "233100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WisdomTree Treasury Money Market Digital Fund",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.999160128904",
+      "Market Value": "2800000",
+      "Shares Held": "2800000.00000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "BANDO CHEMICAL INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.261195173897",
+      "Market Value": "731961.24",
+      "Shares Held": "54000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUBISHI STEEL MFG CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.297673179179",
+      "Market Value": "834185.51",
+      "Shares Held": "63000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAKITA CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.328042537107",
+      "Market Value": "919291.19",
+      "Shares Held": "25800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOMATSU LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.689643783391",
+      "Market Value": "1932625.75",
+      "Shares Held": "50000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NCD CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.321306816856",
+      "Market Value": "900415.32",
+      "Shares Held": "60000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TACHI-S CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.248913322739",
+      "Market Value": "697543.15",
+      "Shares Held": "53400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NISHI-NIPPON RAILROAD CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.320066291756",
+      "Market Value": "896938.93",
+      "Shares Held": "50000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUZUKI MOTOR CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.276037727658",
+      "Market Value": "3575908.94",
+      "Shares Held": "297200.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOMPO HOLDINGS INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.425781545723",
+      "Market Value": "3995544.07",
+      "Shares Held": "104100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAWAI GROUP HOLDINGS CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.202739025081",
+      "Market Value": "568146.44",
+      "Shares Held": "54800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TSUGAMI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.515917566665",
+      "Market Value": "7050490.69",
+      "Shares Held": "142700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "B-LOT COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.325050345132",
+      "Market Value": "910906.01",
+      "Shares Held": "102100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "M3 INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.889064130219",
+      "Market Value": "2491472.08",
+      "Shares Held": "223100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KENKO MAYONNAISE COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.269418204663",
+      "Market Value": "755005.08",
+      "Shares Held": "61600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOFTBANK GROUP CORP",
+      "Ticker": "SFTBF",
+      "Identifier": "000000000",
+      "Weight": "1.808070570192",
+      "Market Value": "5066853.1",
+      "Shares Held": "138100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOHO HOLDINGS COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.192912535003",
+      "Market Value": "540609.14",
+      "Shares Held": "22500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LEC INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.220154671602",
+      "Market Value": "616951.24",
+      "Shares Held": "108400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AGC INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.912961242855",
+      "Market Value": "2558440.24",
+      "Shares Held": "59700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KIOXIA HOLDINGS CORP",
+      "Ticker": "KXIAY",
+      "Identifier": "000000000",
+      "Weight": "7.009749315448",
+      "Market Value": "19643796.34",
+      "Shares Held": "35600.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

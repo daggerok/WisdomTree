@@ -1,0 +1,413 @@
+{
+  "ticker": "WDEF",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 44,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "SAAB AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.781159148739",
+      "Market Value": "4208430",
+      "Shares Held": "81006.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CICOR TECHNOLOGIES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.122884570969",
+      "Market Value": "108164.38",
+      "Shares Held": "714.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LEONARDO SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.741343092549",
+      "Market Value": "4173383.46",
+      "Shares Held": "77790.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AIRBUS SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "5.289994337486",
+      "Market Value": "4656312.45",
+      "Shares Held": "20935.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RENK GROUP AG",
+      "Ticker": "RKGRY",
+      "Identifier": "000000000",
+      "Weight": "2.49006155835",
+      "Market Value": "2191780.16",
+      "Shares Held": "45455.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MELROSE INDUSTRIES PLC",
+      "Ticker": "MROSY",
+      "Identifier": "000000000",
+      "Weight": "2.514543636218",
+      "Market Value": "2213329.56",
+      "Shares Held": "351149.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INVISIO AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.506146016073",
+      "Market Value": "445515.41",
+      "Shares Held": "21033.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COHORT PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.366968412902",
+      "Market Value": "323009.72",
+      "Shares Held": "19786.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EXAIL TECHNOLOGIES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.323790816797",
+      "Market Value": "1165215.55",
+      "Shares Held": "8486.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FINCANTIERI SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.288249802608",
+      "Market Value": "1133931.95",
+      "Shares Held": "99679.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BAE SYSTEMS PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "10.10620003956",
+      "Market Value": "8895590.82",
+      "Shares Held": "363464.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BITTIUM OYJ",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.655296384474",
+      "Market Value": "576799.24",
+      "Shares Held": "16067.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.58140051971",
+      "Market Value": "2272177.74",
+      "Shares Held": "2272177.74000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "THALES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "10.04040649173",
+      "Market Value": "8837678.6",
+      "Shares Held": "34386.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OVZON AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.291506072336",
+      "Market Value": "256586.92",
+      "Shares Held": "56464.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RHEINMETALL AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "8.614761430847",
+      "Market Value": "7582809.8",
+      "Shares Held": "6696.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KITRON ASA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.386221268719",
+      "Market Value": "339956.3",
+      "Shares Held": "31528.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SAFRAN SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "5.569210962055",
+      "Market Value": "4902082.06",
+      "Shares Held": "12428.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CSG NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.237120382532",
+      "Market Value": "1088927.26",
+      "Shares Held": "74561.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QINETIQ GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.390366483701",
+      "Market Value": "1223816.2",
+      "Shares Held": "218293.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DASSAULT AVIATION SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.102716240811",
+      "Market Value": "3611256.93",
+      "Shares Held": "10998.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OHB SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.771302061198",
+      "Market Value": "678908.74",
+      "Shares Held": "2102.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SERCO GROUP PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.93362476771",
+      "Market Value": "821787.01",
+      "Shares Held": "282724.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHEMRING GROUP PLC",
+      "Ticker": "CMGMF",
+      "Identifier": "000000000",
+      "Weight": "0.870474267265",
+      "Market Value": "766201.23",
+      "Shares Held": "112751.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SENIOR PLC",
+      "Ticker": "SNIRF",
+      "Identifier": "000000000",
+      "Weight": "0.247463405702",
+      "Market Value": "217820.07",
+      "Shares Held": "56984.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EUTELSAT COMMUNICATIONS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.665663123314",
+      "Market Value": "585924.16",
+      "Shares Held": "212385.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THEON INTERNATIONAL PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.256836888418",
+      "Market Value": "1106281.95",
+      "Shares Held": "32427.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AVIO SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.292364741222",
+      "Market Value": "257342.73",
+      "Shares Held": "7157.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HENSOLDT AG",
+      "Ticker": "HNSDF",
+      "Identifier": "000000000",
+      "Weight": "4.092427562778",
+      "Market Value": "3602200.72",
+      "Shares Held": "46498.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EXOSENS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.678690956113",
+      "Market Value": "1477602.64",
+      "Shares Held": "22634.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COLT CZ GROUP SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.431053484467",
+      "Market Value": "379418.12",
+      "Shares Held": "8792.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TKMS AG & CO. KGAA",
+      "Ticker": "TKMSF",
+      "Identifier": "000000000",
+      "Weight": "2.930758989248",
+      "Market Value": "2579686.99",
+      "Shares Held": "30246.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VINCORION SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.511211856887",
+      "Market Value": "449974.42",
+      "Shares Held": "23483.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AVON TECHNOLOGIES PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.318005575032",
+      "Market Value": "279912.08",
+      "Shares Held": "12290.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOODWIN PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.499297489539",
+      "Market Value": "439487.26",
+      "Shares Held": "2024.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ROLLS-ROYCE HOLDINGS PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "5.515332985833",
+      "Market Value": "4854658.06",
+      "Shares Held": "253197.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MILDEF GROUP AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.407673676101",
+      "Market Value": "358838.95",
+      "Shares Held": "18808.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OHB SE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.003363692579",
+      "Market Value": "2960.76",
+      "Shares Held": "2102.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INDRA SISTEMAS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.955606286267",
+      "Market Value": "2601557.86",
+      "Shares Held": "47485.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.433462678891",
+      "Market Value": "381538.72",
+      "Shares Held": "46576.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KONGSBERG MARITIME ASA",
+      "Ticker": "KGBMY",
+      "Identifier": "000000000",
+      "Weight": "0.771718154501",
+      "Market Value": "679274.99",
+      "Shares Held": "131182.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BABCOCK INTERNATIONAL GROUP PLC",
+      "Ticker": "BCKIF",
+      "Identifier": "000000000",
+      "Weight": "3.070731412995",
+      "Market Value": "2702892.29",
+      "Shares Held": "213959.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KONGSBERG GRUPPEN ASA",
+      "Ticker": "KBGGY",
+      "Identifier": "000000000",
+      "Weight": "4.560531233264",
+      "Market Value": "4014230.83",
+      "Shares Held": "133164.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.015844389894",
+      "Market Value": "13946.41",
+      "Shares Held": "13946.41000000",
+      "Asset Category": "STIV"
+    }
+  ]
+}

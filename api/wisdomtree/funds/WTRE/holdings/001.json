@@ -1,0 +1,584 @@
+{
+  "ticker": "WTRE",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 63,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "ARRAY DIGITAL INFRASTRUCTURE INC",
+      "Ticker": "AD",
+      "Identifier": "911684108",
+      "Weight": "0.608916757718",
+      "Market Value": "99062.32",
+      "Shares Held": "2732.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EASTGROUP PROPERTIES INC",
+      "Ticker": "EGP",
+      "Identifier": "277276101",
+      "Weight": "1.89973632856",
+      "Market Value": "309060.78",
+      "Shares Held": "1526.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CAPITALAND ASCENDAS REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.603257117191",
+      "Market Value": "260827.72",
+      "Shares Held": "135489.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INFRASTRUTTURE WIRELESS ITALIANE SPA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.317669490959",
+      "Market Value": "214366.57",
+      "Shares Held": "30438.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEBIUS GROUP NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.922933046988",
+      "Market Value": "800893",
+      "Shares Held": "2900.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CROWN CASTLE INC",
+      "Ticker": "CCI",
+      "Identifier": "22822V101",
+      "Weight": "3.717928835477",
+      "Market Value": "604855.51",
+      "Shares Held": "7987.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.147810251359",
+      "Market Value": "24046.68",
+      "Shares Held": "24046.68000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "REXFORD INDUSTRIAL REALTY INC",
+      "Ticker": "REXR",
+      "Identifier": "76169C100",
+      "Weight": "1.364824274762",
+      "Market Value": "222038",
+      "Shares Held": "6628.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SBA COMMUNICATIONS CORP",
+      "Ticker": "SBAC",
+      "Identifier": "78410G104",
+      "Weight": "3.003437936891",
+      "Market Value": "488617.74",
+      "Shares Held": "2769.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IRIDIUM COMMUNICATIONS INC",
+      "Ticker": "IRDM",
+      "Identifier": "46269C102",
+      "Weight": "1.325345498029",
+      "Market Value": "215615.35",
+      "Shares Held": "3931.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GLOBALSTAR INC",
+      "Ticker": "GSAT",
+      "Identifier": "378973507",
+      "Weight": "1.880272409257",
+      "Market Value": "305894.27",
+      "Shares Held": "3763.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUI FUDOSAN LOGISTICS PARK INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.656408017624",
+      "Market Value": "106788.49",
+      "Shares Held": "161.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAPLETREE INDUSTRIAL TRUST",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.880580026725",
+      "Market Value": "143258.17",
+      "Shares Held": "96509.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EQUINIX INC",
+      "Ticker": "EQIX",
+      "Identifier": "29444U700",
+      "Weight": "5.324522807197",
+      "Market Value": "866226.09",
+      "Shares Held": "831.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RIOT PLATFORMS INC",
+      "Ticker": "RIOT",
+      "Identifier": "767292105",
+      "Weight": "0.929349944994",
+      "Market Value": "151192.36",
+      "Shares Held": "5522.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMERICAN TOWER CORP",
+      "Ticker": "-",
+      "Identifier": "03027X100",
+      "Weight": "4.504339318812",
+      "Market Value": "732793.6",
+      "Shares Held": "4480.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOODMAN GROUP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.886961206876",
+      "Market Value": "795040.88",
+      "Shares Held": "36864.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEPPEL DC REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.032580739415",
+      "Market Value": "167986.58",
+      "Shares Held": "97001.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PROLOGIS INC",
+      "Ticker": "PLD",
+      "Identifier": "74340W103",
+      "Weight": "5.104497985919",
+      "Market Value": "830431.1",
+      "Shares Held": "6130.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DIGITAL REALTY TRUST INC",
+      "Ticker": "DLR",
+      "Identifier": "253868103",
+      "Weight": "4.941906143917",
+      "Market Value": "803979.66",
+      "Shares Held": "4477.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "APPLIED DIGITAL CORP",
+      "Ticker": "APLD",
+      "Identifier": "038169207",
+      "Weight": "0.853823169235",
+      "Market Value": "138905.2",
+      "Shares Held": "3724.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LASALLE LOGIPORT REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.524572759084",
+      "Market Value": "85340.72",
+      "Shares Held": "95.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUNEVISION HOLDINGS LTD",
+      "Ticker": "SNEVY",
+      "Identifier": "000000000",
+      "Weight": "0.484169502889",
+      "Market Value": "78767.67",
+      "Shares Held": "142000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CLEANSPARK INC",
+      "Ticker": "CLSK",
+      "Identifier": "18452B209",
+      "Weight": "0.324921031028",
+      "Market Value": "52860.15",
+      "Shares Held": "3633.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.676140859643",
+      "Market Value": "109998.75",
+      "Shares Held": "13428.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COREWEAVE INC",
+      "Ticker": "CRWV",
+      "Identifier": "21873S108",
+      "Weight": "2.783319130966",
+      "Market Value": "452807.46",
+      "Shares Held": "4549.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARA HOLDINGS INC",
+      "Ticker": "MARA",
+      "Identifier": "565788106",
+      "Weight": "0.432701383124",
+      "Market Value": "70394.52",
+      "Shares Held": "5068.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIRST INDUSTRIAL REALTY TRUST INC",
+      "Ticker": "FR",
+      "Identifier": "32054K103",
+      "Weight": "1.501035812545",
+      "Market Value": "244197.73",
+      "Shares Held": "3983.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BITDEER TECHNOLOGIES GROUP",
+      "Ticker": "BTDR",
+      "Identifier": "000000000",
+      "Weight": "0.321329022627",
+      "Market Value": "52275.78",
+      "Shares Held": "3294.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CORE SCIENTIFIC INC",
+      "Ticker": "-",
+      "Identifier": "21874A106",
+      "Weight": "0.618648071955",
+      "Market Value": "100645.47",
+      "Shares Held": "3933.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HEALTHPEAK PROPERTIES INC",
+      "Ticker": "DOC",
+      "Identifier": "42250P103",
+      "Weight": "2.642408176404",
+      "Market Value": "429883.2",
+      "Shares Held": "20088.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LXP INDUSTRIAL TRUST",
+      "Ticker": "LXP",
+      "Identifier": "529043408",
+      "Weight": "0.814395841259",
+      "Market Value": "132490.92",
+      "Shares Held": "2459.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TERRENO REALTY CORP",
+      "Ticker": "TRNO",
+      "Identifier": "88146M101",
+      "Weight": "1.246938636816",
+      "Market Value": "202859.64",
+      "Shares Held": "3132.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IRON MOUNTAIN INC (REIT)",
+      "Ticker": "-",
+      "Identifier": "46284V101",
+      "Weight": "4.051270497526",
+      "Market Value": "659085.58",
+      "Shares Held": "5218.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IREN LTD",
+      "Ticker": "IREN",
+      "Identifier": "000000000",
+      "Weight": "1.262390413601",
+      "Market Value": "205373.43",
+      "Shares Held": "4491.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NTT DC REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.349568796808",
+      "Market Value": "56870",
+      "Shares Held": "60500.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.17862836434",
+      "Market Value": "29060.36",
+      "Shares Held": "29060.36000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "GLP J-REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.893808381227",
+      "Market Value": "145410.24",
+      "Shares Held": "172.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TERAWULF INC",
+      "Ticker": "WULF",
+      "Identifier": "88080T104",
+      "Weight": "0.856602754428",
+      "Market Value": "139357.4",
+      "Shares Held": "5642.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HUT 8 CORP",
+      "Ticker": "HUT",
+      "Identifier": "44812J104",
+      "Weight": "1.122615511528",
+      "Market Value": "182633.99",
+      "Shares Held": "1582.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MONTEA NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.513403031024",
+      "Market Value": "83523.56",
+      "Shares Held": "1092.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUBISHI ESTATE LOGISTICS REIT INVESTMENT CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.424839619609",
+      "Market Value": "69115.52",
+      "Shares Held": "94.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EUTELSAT COMMUNICATIONS SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.722330287731",
+      "Market Value": "117513.13",
+      "Shares Held": "42596.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CELLNEX TELECOM SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.236791305592",
+      "Market Value": "526581.1",
+      "Shares Held": "17613.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IHS HOLDING LTD (NEW)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.582572535244",
+      "Market Value": "94776.48",
+      "Shares Held": "11502.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WAREHOUSE DE PAUW NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.239928328721",
+      "Market Value": "201719.16",
+      "Shares Held": "7998.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LONDONMETRIC PROPERTY PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.173960756661",
+      "Market Value": "190987.15",
+      "Shares Held": "76419.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIPPON PROLOGIS REIT INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.850254149884",
+      "Market Value": "138324.57",
+      "Shares Held": "259.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOSILA LOGISTICS REIT INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.287353910631",
+      "Market Value": "46748.5",
+      "Shares Held": "67.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VIASAT INC",
+      "Ticker": "VSAT",
+      "Identifier": "92552V100",
+      "Weight": "2.161806463505",
+      "Market Value": "351695.96",
+      "Shares Held": "3916.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SEGRO PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.682708780958",
+      "Market Value": "436439.55",
+      "Shares Held": "37572.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALEXANDRIA REAL ESTATE EQUITIES INC",
+      "Ticker": "ARE",
+      "Identifier": "015271109",
+      "Weight": "1.698360974932",
+      "Market Value": "276299.8",
+      "Shares Held": "5228.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HELIOS TOWERS PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.693107209164",
+      "Market Value": "112758.94",
+      "Shares Held": "42436.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEXTDC LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.403522407268",
+      "Market Value": "228333.65",
+      "Shares Held": "22605.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRASERS LOGISTICS & COMMERCIAL TRUST",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.750716171465",
+      "Market Value": "122131.12",
+      "Shares Held": "163700.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITI GROUP INC",
+      "Ticker": "UNIT",
+      "Identifier": "912932100",
+      "Weight": "1.001859745953",
+      "Market Value": "162988.7",
+      "Shares Held": "14210.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ESR-REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.342282128363",
+      "Market Value": "55684.56",
+      "Shares Held": "30780.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AST SPACEMOBILE INC",
+      "Ticker": "ASTS",
+      "Identifier": "00217D100",
+      "Weight": "4.518754682816",
+      "Market Value": "735138.78",
+      "Shares Held": "8273.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRITAX BIG BOX REIT PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.143695118509",
+      "Market Value": "186063.35",
+      "Shares Held": "86857.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CIPHER DIGITAL INC",
+      "Ticker": "CIFR",
+      "Identifier": "17253J106",
+      "Weight": "0.906592260264",
+      "Market Value": "147490",
+      "Shares Held": "6020.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DIGITAL CORE REIT MANAGEMENT PTE LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.284338902809",
+      "Market Value": "46258",
+      "Shares Held": "91600.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DIGICO INFRASTRUCTURE REIT",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.560685176626",
+      "Market Value": "91215.71",
+      "Shares Held": "53960.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JAPAN LOGISTICS FUND INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.531198891871",
+      "Market Value": "86418.7",
+      "Shares Held": "148.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

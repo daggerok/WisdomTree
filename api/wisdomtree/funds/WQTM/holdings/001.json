@@ -1,0 +1,458 @@
+{
+  "ticker": "WQTM",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 49,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "INTERNATIONAL BUSINESS MACHINES CORP",
+      "Ticker": "IBM",
+      "Identifier": "459200101",
+      "Weight": "3.553905672739",
+      "Market Value": "11676401.62",
+      "Shares Held": "41522.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ADVANCED MICRO DEVICES INC",
+      "Ticker": "AMD",
+      "Identifier": "007903107",
+      "Weight": "2.502916024109",
+      "Market Value": "8223361.96",
+      "Shares Held": "14156.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASML HOLDING NV",
+      "Ticker": "ASML",
+      "Identifier": "000000000",
+      "Weight": "1.831792977238",
+      "Market Value": "6018378.78",
+      "Shares Held": "3058.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "XANADU QUANTUM TECHNOLOGIES LTD",
+      "Ticker": "XNDU",
+      "Identifier": "98390R102",
+      "Weight": "2.197793517135",
+      "Market Value": "7220878.14",
+      "Shares Held": "596274.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LAM RESEARCH CORP",
+      "Ticker": "LRCX",
+      "Identifier": "512807306",
+      "Weight": "2.163278512566",
+      "Market Value": "7107478.66",
+      "Shares Held": "16402.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KEYSIGHT TECHNOLOGIES INC",
+      "Ticker": "KEYS",
+      "Identifier": "49338L103",
+      "Weight": "1.444492737721",
+      "Market Value": "4745898.99",
+      "Shares Held": "13557.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALPHABET INC",
+      "Ticker": "GOOGL",
+      "Identifier": "02079K305",
+      "Weight": "2.464435005142",
+      "Market Value": "8096932.09",
+      "Shares Held": "22657.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HITACHI LTD",
+      "Ticker": "HTHIY",
+      "Identifier": "000000000",
+      "Weight": "1.979219369773",
+      "Market Value": "6502750.04",
+      "Shares Held": "236381.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GLOBALFOUNDRIES INC",
+      "Ticker": "GFS",
+      "Identifier": "000000000",
+      "Weight": "1.66803424401",
+      "Market Value": "5480347.41",
+      "Shares Held": "66501.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TAIWAN SEMICONDUCTOR MANUFACTURING COMPANY LTD",
+      "Ticker": "TSM",
+      "Identifier": "000000000",
+      "Weight": "1.565758466067",
+      "Market Value": "5144319.06",
+      "Shares Held": "68000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NTT INC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.991342342865",
+      "Market Value": "6542580.22",
+      "Shares Held": "7333330.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NVIDIA CORP",
+      "Ticker": "NVDA",
+      "Identifier": "67066G104",
+      "Weight": "2.331156843536",
+      "Market Value": "7659045.02",
+      "Shares Held": "38278.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CORNING INC",
+      "Ticker": "-",
+      "Identifier": "219350105",
+      "Weight": "1.813619940476",
+      "Market Value": "5958671.04",
+      "Shares Held": "23328.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "APPLIED MATERIALS INC",
+      "Ticker": "-",
+      "Identifier": "038222105",
+      "Weight": "2.450554647184",
+      "Market Value": "8051328",
+      "Shares Held": "11136.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CREOTECH QUANTUM SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.334201129901",
+      "Market Value": "1098022",
+      "Shares Held": "13850.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DELL TECHNOLOGIES INC",
+      "Ticker": "DELL",
+      "Identifier": "24703L202",
+      "Weight": "2.589669380656",
+      "Market Value": "8508391.2",
+      "Shares Held": "19720.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTEL CORP",
+      "Ticker": "INTC",
+      "Identifier": "458140100",
+      "Weight": "3.048856489515",
+      "Market Value": "10017056.2",
+      "Shares Held": "71740.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.734923022689",
+      "Market Value": "2414598.8",
+      "Shares Held": "294760.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QUANTUM COMPUTING INC",
+      "Ticker": "QUBT",
+      "Identifier": "74766W108",
+      "Weight": "2.785098372036",
+      "Market Value": "9150475.6",
+      "Shares Held": "943348.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOKIA OYJ (NOKIA CORP)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.835709653824",
+      "Market Value": "6031247.07",
+      "Shares Held": "456538.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SYNOPSYS INC",
+      "Ticker": "SNPS",
+      "Identifier": "871607107",
+      "Weight": "1.292111398325",
+      "Market Value": "4245248.19",
+      "Shares Held": "9517.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RIGETTI COMPUTING INC",
+      "Ticker": "RGTI",
+      "Identifier": "76655K103",
+      "Weight": "5.143075524179",
+      "Market Value": "16897639.08",
+      "Shares Held": "874619.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FORMFACTOR INC",
+      "Ticker": "FORM",
+      "Identifier": "346375108",
+      "Weight": "1.863173743266",
+      "Market Value": "6121480.68",
+      "Shares Held": "38276.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WisdomTree Treasury Money Market Digital Fund",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.565497730035",
+      "Market Value": "15000000",
+      "Shares Held": "15000000.00000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "CADENCE DESIGN SYSTEMS INC",
+      "Ticker": "CDNS",
+      "Identifier": "127387108",
+      "Weight": "1.576326564553",
+      "Market Value": "5179040.68",
+      "Shares Held": "13799.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SKYWATER TECHNOLOGY INC",
+      "Ticker": "-",
+      "Identifier": "83089J108",
+      "Weight": "1.437910553115",
+      "Market Value": "4724273.14",
+      "Shares Held": "135677.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AELUMA INC",
+      "Ticker": "ALMU",
+      "Identifier": "00776X109",
+      "Weight": "0.431322804842",
+      "Market Value": "1417116.48",
+      "Shares Held": "64181.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CISCO SYSTEMS INC",
+      "Ticker": "CSCO",
+      "Identifier": "17275R102",
+      "Weight": "2.161498863289",
+      "Market Value": "7101631.6",
+      "Shares Held": "60460.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FUJITSU LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.496432070752",
+      "Market Value": "8202058.85",
+      "Shares Held": "410545.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INFINEON TECHNOLOGIES AG",
+      "Ticker": "IFNNY",
+      "Identifier": "000000000",
+      "Weight": "1.744117697559",
+      "Market Value": "5730320.55",
+      "Shares Held": "61370.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SEALSQ CORP",
+      "Ticker": "LAES",
+      "Identifier": "000000000",
+      "Weight": "1.190959116325",
+      "Market Value": "3912911.1",
+      "Shares Held": "1242194.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.96684202191",
+      "Market Value": "16318621.7",
+      "Shares Held": "16318621.70000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "COHERENT CORP",
+      "Ticker": "COHR",
+      "Identifier": "19247G107",
+      "Weight": "1.444243351973",
+      "Market Value": "4745079.63",
+      "Shares Held": "12029.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEC CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.999781969786",
+      "Market Value": "6570308.72",
+      "Shares Held": "272061.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BTQ TECHNOLOGIES CORP",
+      "Ticker": "BTQ",
+      "Identifier": "055869101",
+      "Weight": "1.252647299863",
+      "Market Value": "4115588.4",
+      "Shares Held": "763560.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMAZON.COM INC",
+      "Ticker": "AMZN",
+      "Identifier": "023135106",
+      "Weight": "2.465001464708",
+      "Market Value": "8098793.2",
+      "Shares Held": "33980.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QUANTUM EMOTION CORP",
+      "Ticker": "QNC",
+      "Identifier": "74767K103",
+      "Weight": "0.750315650028",
+      "Market Value": "2465171.47",
+      "Shares Held": "791281.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "QUANTINUUM INC",
+      "Ticker": "QNT",
+      "Identifier": "74768A104",
+      "Weight": "7.157092770673",
+      "Market Value": "23514717.98",
+      "Shares Held": "287677.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INFLEQTION INC",
+      "Ticker": "INFQ",
+      "Identifier": "45676K103",
+      "Weight": "2.618571063154",
+      "Market Value": "8603348.04",
+      "Shares Held": "645897.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "D-WAVE QUANTUM INC",
+      "Ticker": "QBTS",
+      "Identifier": "26740W109",
+      "Weight": "5.528441739723",
+      "Market Value": "18163764.61",
+      "Shares Held": "757139.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARQIT QUANTUM INC",
+      "Ticker": "ARQQ",
+      "Identifier": "000000000",
+      "Weight": "0.89683410203",
+      "Market Value": "2946559.68",
+      "Shares Held": "99144.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CIENA CORP",
+      "Ticker": "CIEN",
+      "Identifier": "171779309",
+      "Weight": "1.228522990714",
+      "Market Value": "4036327.68",
+      "Shares Held": "8228.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IONQ INC",
+      "Ticker": "IONQ",
+      "Identifier": "46222L108",
+      "Weight": "4.752790474861",
+      "Market Value": "15615352.66",
+      "Shares Held": "293191.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SK TELECOM CO LTD",
+      "Ticker": "SKM",
+      "Identifier": "000000000",
+      "Weight": "1.75808558524",
+      "Market Value": "5776212.22",
+      "Shares Held": "101234.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DEUTSCHE TELEKOM AG",
+      "Ticker": "DTEGY",
+      "Identifier": "000000000",
+      "Weight": "1.805952734898",
+      "Market Value": "5933480.34",
+      "Shares Held": "217601.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NXP SEMICONDUCTORS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.415024063016",
+      "Market Value": "4649079.29",
+      "Shares Held": "16543.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.064333149862",
+      "Market Value": "211367.37",
+      "Shares Held": "211367.37000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "MICROSOFT CORP",
+      "Ticker": "MSFT",
+      "Identifier": "594918104",
+      "Weight": "2.51729353129",
+      "Market Value": "8270599.44",
+      "Shares Held": "22172.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STMICROELECTRONICS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.700522974158",
+      "Market Value": "5587089.54",
+      "Shares Held": "75741.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

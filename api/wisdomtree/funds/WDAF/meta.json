@@ -1,0 +1,119 @@
+{
+  "ticker": "WDAF",
+  "name": "WisdomTree Asia Defense Fund",
+  "category": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/equity/wdaf",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdaf",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDAF",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036115, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y311",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.45%",
+    "value": 0.45
+  },
+  "nav": {
+    "display": "$29.80",
+    "value": 29.795,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$29.80",
+    "value": 29.8,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "-0.48%",
+    "value": -0.477
+  },
+  "aum": {
+    "display": "$10.48 M",
+    "value": 10479790,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 0.13,
+    "dividendYieldText": "0.13%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0.13,
+    "secYield": 0.25,
+    "secYieldText": "0.25%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 8.67,
+      "mo1Text": "8.67%",
+      "qtd": -8.86,
+      "qtdText": "-8.86%",
+      "ytd": 8.63,
+      "ytdText": "8.63%",
+      "yr1": -4.99,
+      "yr1Text": "-4.99%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 2.25,
+      "sinceInceptionText": "2.25%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 1.39
+    }
+  },
+  "distributions": {
+    "frequency": "Unknown",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "12/26/2025",
+        "0.038"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 62,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036115, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 254,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

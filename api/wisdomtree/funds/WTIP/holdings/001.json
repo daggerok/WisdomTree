@@ -1,0 +1,392 @@
+{
+  "ticker": "WTIP",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 37,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "0.027009545576",
+      "Market Value": "6156",
+      "Shares Held": "9.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.00096384941",
+      "Market Value": "219.68",
+      "Shares Held": "49.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "ICE FUTURES EUROPE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.03411657485",
+      "Market Value": "7775.83",
+      "Shares Held": "9.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.103478807795",
+      "Market Value": "23584.83",
+      "Shares Held": "11.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.164108612465",
+      "Market Value": "37403.54",
+      "Shares Held": "17.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "-0.04816614544",
+      "Market Value": "-10978",
+      "Shares Held": "8.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CFR7",
+      "Weight": "4.835944840635",
+      "Market Value": "1102205.75",
+      "Shares Held": "981000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2027-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828Z37",
+      "Weight": "4.123203649024",
+      "Market Value": "939758.19",
+      "Shares Held": "769000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2030-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828Y38",
+      "Weight": "3.715095294639",
+      "Market Value": "846742.37",
+      "Shares Held": "650000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.75000000",
+      "Maturity": "2028-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CLV1",
+      "Weight": "5.205382335179",
+      "Market Value": "1186407.73",
+      "Shares Held": "1122000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2029-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128285W6",
+      "Weight": "3.207998359722",
+      "Market Value": "731165.13",
+      "Shares Held": "567000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.87500000",
+      "Maturity": "2029-01-15"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.290436109364",
+      "Market Value": "66196.03",
+      "Shares Held": "19.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "WISDOMTREE BITCOIN FUND",
+      "Ticker": "BTCW",
+      "Identifier": "97720F101",
+      "Weight": "4.841614256572",
+      "Market Value": "1103497.92",
+      "Shares Held": "14224.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828ZZ6",
+      "Weight": "4.485776173526",
+      "Market Value": "1022395.51",
+      "Shares Held": "838000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2030-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CGW5",
+      "Weight": "4.713050311385",
+      "Market Value": "1074195.7",
+      "Shares Held": "979000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.25000000",
+      "Maturity": "2028-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CPH8",
+      "Weight": "5.414726890843",
+      "Market Value": "1234121.42",
+      "Shares Held": "1227000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.12500000",
+      "Maturity": "2030-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128282L3",
+      "Weight": "4.2022534285",
+      "Market Value": "957775.17",
+      "Shares Held": "714000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.37500000",
+      "Maturity": "2027-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CNB3",
+      "Weight": "5.374610213011",
+      "Market Value": "1224978.05",
+      "Shares Held": "1178000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.62500000",
+      "Maturity": "2030-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128283R9",
+      "Weight": "4.26890952962",
+      "Market Value": "972967.39",
+      "Shares Held": "737000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.50000000",
+      "Maturity": "2028-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828V49",
+      "Weight": "3.752674277366",
+      "Market Value": "855307.35",
+      "Shares Held": "628000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.37500000",
+      "Maturity": "2027-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912828S50",
+      "Weight": "4.180063612604",
+      "Market Value": "952717.68",
+      "Shares Held": "687000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2026-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CJH5",
+      "Weight": "4.996972934575",
+      "Market Value": "1138907.18",
+      "Shares Held": "1030000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.37500000",
+      "Maturity": "2028-10-15"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.32441123071",
+      "Market Value": "-73939.62",
+      "Shares Held": "37.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "DREYFUS TREASURY OBLIGATIONS CASH MANAGEMENT",
+      "Ticker": "-",
+      "Identifier": "261908107",
+      "Weight": "4.333812555036",
+      "Market Value": "987760.05",
+      "Shares Held": "987760.05000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CQP9",
+      "Weight": "2.792236511004",
+      "Market Value": "636404.93",
+      "Shares Held": "639000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "1.25000000",
+      "Maturity": "2031-04-15"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.438434291321",
+      "Market Value": "99927.69",
+      "Shares Held": "99927.69000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CKL4",
+      "Weight": "5.018334914042",
+      "Market Value": "1143775.99",
+      "Shares Held": "1053000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "2.12500000",
+      "Maturity": "2029-04-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CBF7",
+      "Weight": "4.602753260587",
+      "Market Value": "1049056.86",
+      "Shares Held": "883000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2031-01-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CDC2",
+      "Weight": "4.687746807346",
+      "Market Value": "1068428.54",
+      "Shares Held": "882000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2026-10-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "9128287D6",
+      "Weight": "3.706594965934",
+      "Market Value": "844804.98",
+      "Shares Held": "677000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.25000000",
+      "Maturity": "2029-07-15"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "91282CEJ6",
+      "Weight": "4.733752452391",
+      "Market Value": "1078914.12",
+      "Shares Held": "932000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.12500000",
+      "Maturity": "2027-04-15"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.178377602708",
+      "Market Value": "40655.72",
+      "Shares Held": "46.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.08839874143",
+      "Market Value": "-20147.79",
+      "Shares Held": "-33.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.20401196929",
+      "Market Value": "-46498.29",
+      "Shares Held": "13.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.331484256742",
+      "Market Value": "75551.7",
+      "Shares Held": "9.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CHICAGO BOARD OF TRADE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.47599804937",
+      "Market Value": "-108489.2",
+      "Shares Held": "65.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "ICE FUTURES EUROPE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.52669930128",
+      "Market Value": "-120045",
+      "Shares Held": "8.00000000",
+      "Asset Category": "DCO"
+    }
+  ]
+}

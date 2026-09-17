@@ -1,0 +1,311 @@
+{
+  "ticker": "UNIY",
+  "name": "WisdomTree Voya Yield Enhanced USD Universal Bond Fund",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/UNIY",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028879, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y469",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.15%",
+    "value": 0.15
+  },
+  "nav": {
+    "display": "$46.95",
+    "value": 46.955,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$46.93",
+    "value": 46.929,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "-0.04%",
+    "value": -0.037
+  },
+  "aum": {
+    "display": "$1.29 B",
+    "value": 1294784380,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 4.93,
+    "dividendYieldText": "4.93%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 4.86,
+    "secYield": 5.07,
+    "secYieldText": "5.07%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.42,
+      "mo1Text": "0.42%",
+      "qtd": -0.68,
+      "qtdText": "-0.68%",
+      "ytd": -0.06,
+      "ytdText": "-0.06%",
+      "yr1": 2.09,
+      "yr1Text": "2.09%",
+      "yr3": 4.5,
+      "yr3Text": "4.50%",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.6,
+      "sinceInceptionText": "3.60%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 4.14,
+      "yr3": 4.68,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 4.07
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "02/22/2023",
+        "0.12"
+      ],
+      [
+        "03/27/2023",
+        "0.179"
+      ],
+      [
+        "04/24/2023",
+        "0.18"
+      ],
+      [
+        "05/24/2023",
+        "0.18"
+      ],
+      [
+        "06/26/2023",
+        "0.18"
+      ],
+      [
+        "07/25/2023",
+        "0.18"
+      ],
+      [
+        "08/25/2023",
+        "0.18"
+      ],
+      [
+        "09/25/2023",
+        "0.18"
+      ],
+      [
+        "10/25/2023",
+        "0.18"
+      ],
+      [
+        "11/24/2023",
+        "0.177"
+      ],
+      [
+        "12/22/2023",
+        "0.238"
+      ],
+      [
+        "01/25/2024",
+        "0.155"
+      ],
+      [
+        "02/23/2024",
+        "0.16"
+      ],
+      [
+        "03/22/2024",
+        "0.17"
+      ],
+      [
+        "04/24/2024",
+        "0.175"
+      ],
+      [
+        "05/24/2024",
+        "0.2"
+      ],
+      [
+        "06/25/2024",
+        "0.2"
+      ],
+      [
+        "07/26/2024",
+        "0.2"
+      ],
+      [
+        "08/27/2024",
+        "0.21"
+      ],
+      [
+        "09/25/2024",
+        "0.21"
+      ],
+      [
+        "10/28/2024",
+        "0.21"
+      ],
+      [
+        "11/25/2024",
+        "0.21"
+      ],
+      [
+        "12/26/2024",
+        "0.235"
+      ],
+      [
+        "01/28/2025",
+        "0.2"
+      ],
+      [
+        "02/25/2025",
+        "0.195"
+      ],
+      [
+        "03/26/2025",
+        "0.215"
+      ],
+      [
+        "04/25/2025",
+        "0.205"
+      ],
+      [
+        "05/27/2025",
+        "0.2"
+      ],
+      [
+        "06/25/2025",
+        "0.19"
+      ],
+      [
+        "07/28/2025",
+        "0.205"
+      ],
+      [
+        "08/26/2025",
+        "0.2"
+      ],
+      [
+        "09/25/2025",
+        "0.19"
+      ],
+      [
+        "10/28/2025",
+        "0.205"
+      ],
+      [
+        "11/24/2025",
+        "0.215"
+      ],
+      [
+        "12/26/2025",
+        "0.21"
+      ],
+      [
+        "01/27/2026",
+        "0.19"
+      ],
+      [
+        "02/24/2026",
+        "0.165"
+      ],
+      [
+        "03/26/2026",
+        "0.205"
+      ],
+      [
+        "04/27/2026",
+        "0.18"
+      ],
+      [
+        "05/26/2026",
+        "0.19"
+      ],
+      [
+        "06/25/2026",
+        "0.175"
+      ],
+      [
+        "07/28/2026",
+        "0.2"
+      ],
+      [
+        "08/26/2026",
+        "0.19"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json",
+      "holdings/003.json",
+      "holdings/004.json",
+      "holdings/005.json",
+      "holdings/006.json",
+      "holdings/007.json",
+      "holdings/008.json",
+      "holdings/009.json",
+      "holdings/010.json",
+      "holdings/011.json",
+      "holdings/012.json",
+      "holdings/013.json",
+      "holdings/014.json",
+      "holdings/015.json",
+      "holdings/016.json",
+      "holdings/017.json",
+      "holdings/018.json",
+      "holdings/019.json",
+      "holdings/020.json",
+      "holdings/021.json",
+      "holdings/022.json",
+      "holdings/023.json",
+      "holdings/024.json",
+      "holdings/025.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 6159,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028879, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 905,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

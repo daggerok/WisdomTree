@@ -1,0 +1,746 @@
+{
+  "ticker": "INDH",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 81,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "TITAN COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.907922912626",
+      "Market Value": "110636.49",
+      "Shares Held": "2378.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NTPC LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.661921351122",
+      "Market Value": "96371.37",
+      "Shares Held": "25578.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.425322091972",
+      "Market Value": "82651.47",
+      "Shares Held": "4322.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VEDANTA IRON AND STEEL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.028264160362",
+      "Market Value": "1638.98",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GAIL (INDIA) LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.30163159176",
+      "Market Value": "17490.99",
+      "Shares Held": "9545.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BAJAJ FINSERV LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.643770410089",
+      "Market Value": "37330.91",
+      "Shares Held": "1985.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ITC LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.882639279695",
+      "Market Value": "51182.42",
+      "Shares Held": "16884.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HDFC BANK LTD",
+      "Ticker": "HDB",
+      "Identifier": "000000000",
+      "Weight": "7.897271770957",
+      "Market Value": "457946.4",
+      "Shares Held": "54325.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BAJAJ AUTO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.695635518571",
+      "Market Value": "40338.46",
+      "Shares Held": "393.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PIDILITE INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.377786757348",
+      "Market Value": "21907.07",
+      "Shares Held": "1302.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TATA POWER COMPANY LTD (THE)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.704061238294",
+      "Market Value": "40827.05",
+      "Shares Held": "10025.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CUMMINS INDIA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.737200724027",
+      "Market Value": "42748.74",
+      "Shares Held": "715.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ICICI BANK LTD",
+      "Ticker": "IBN",
+      "Identifier": "000000000",
+      "Weight": "7.210132331585",
+      "Market Value": "418100.61",
+      "Shares Held": "28779.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BRITANNIA INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.619747994912",
+      "Market Value": "35937.9",
+      "Shares Held": "661.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COFORGE LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.457675458866",
+      "Market Value": "26539.65",
+      "Shares Held": "1714.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TECH MAHINDRA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.901566841038",
+      "Market Value": "52279.99",
+      "Shares Held": "3523.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAHINDRA & MAHINDRA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.140884611",
+      "Market Value": "182133.38",
+      "Shares Held": "5618.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STATE BANK OF INDIA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.906543142604",
+      "Market Value": "110556.48",
+      "Shares Held": "10191.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AXIS BANK LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.181443572477",
+      "Market Value": "184485.31",
+      "Shares Held": "12977.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VARUN BEVERAGES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.619057678777",
+      "Market Value": "35897.87",
+      "Shares Held": "6695.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ADANI POWER LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.025848405686",
+      "Market Value": "59486.82",
+      "Shares Held": "25164.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GODREJ CONSUMER PRODUCTS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.461477629775",
+      "Market Value": "26760.13",
+      "Shares Held": "2508.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUN PHARMACEUTICAL INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.083708820991",
+      "Market Value": "120829.95",
+      "Shares Held": "6141.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WIPRO LTD",
+      "Ticker": "WIT",
+      "Identifier": "000000000",
+      "Weight": "0.446162717125",
+      "Market Value": "25872.05",
+      "Shares Held": "14373.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DLF LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.429590473738",
+      "Market Value": "24911.06",
+      "Shares Held": "3803.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BHARAT ELECTRONICS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.511991170658",
+      "Market Value": "87677.23",
+      "Shares Held": "20154.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARUTI SUZUKI INDIA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.787176049408",
+      "Market Value": "103634.63",
+      "Shares Held": "695.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITED SPIRITS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.468661366783",
+      "Market Value": "27176.7",
+      "Shares Held": "1905.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMBUJA CEMENTS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.308256591752",
+      "Market Value": "17875.16",
+      "Shares Held": "4011.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOLDMAN SACHS & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.3628119155",
+      "Market Value": "-21038.71",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "ADANI GREEN ENERGY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.55756349659",
+      "Market Value": "32331.95",
+      "Shares Held": "2051.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HINDALCO INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.340688092154",
+      "Market Value": "77743.72",
+      "Shares Held": "7693.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ULTRATECH CEMENT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.398151952484",
+      "Market Value": "81075.93",
+      "Shares Held": "682.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GRASIM INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.102974807965",
+      "Market Value": "63959.22",
+      "Shares Held": "1953.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTERGLOBE AVIATION LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.452822034606",
+      "Market Value": "26258.21",
+      "Shares Held": "463.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JSW STEEL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.247611127645",
+      "Market Value": "72346.38",
+      "Shares Held": "5584.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HERO MOTOCORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.676032989116",
+      "Market Value": "39201.75",
+      "Shares Held": "774.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HCL TECHNOLOGIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.113573221415",
+      "Market Value": "64573.8",
+      "Shares Held": "5703.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ASIAN PAINT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.218198624752",
+      "Market Value": "70640.81",
+      "Shares Held": "2537.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BHARTI AIRTEL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "4.658118424883",
+      "Market Value": "270114.62",
+      "Shares Held": "13806.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OIL AND NATURAL GAS CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.947591423197",
+      "Market Value": "54948.86",
+      "Shares Held": "22143.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRENT LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.918567104572",
+      "Market Value": "53265.8",
+      "Shares Held": "1536.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HINDUSTAN AERONAUTICS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.735113392901",
+      "Market Value": "42627.7",
+      "Shares Held": "921.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PB FINTECH LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.249523846556",
+      "Market Value": "14469.37",
+      "Shares Held": "841.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUZLON ENERGY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.284581662713",
+      "Market Value": "16502.3",
+      "Shares Held": "26521.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "POWER GRID CORP OF INDIA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.289456218959",
+      "Market Value": "74772.89",
+      "Shares Held": "24722.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VEDANTA ALUMINIUM METAL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.359482774108",
+      "Market Value": "20845.66",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INFO EDGE (INDIA) LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.361333676701",
+      "Market Value": "20952.99",
+      "Shares Held": "2028.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VEDANTA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.20177545723",
+      "Market Value": "11700.54",
+      "Shares Held": "3945.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LTM LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.223015741453",
+      "Market Value": "12932.22",
+      "Shares Held": "346.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TVS MOTOR CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.871286743723",
+      "Market Value": "50524.11",
+      "Shares Held": "1382.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AVENUE SUPERMARTS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.65841414852",
+      "Market Value": "38180.07",
+      "Shares Held": "825.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INDIAN OIL CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.515768588138",
+      "Market Value": "29908.35",
+      "Shares Held": "20312.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COAL INDIA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.844015548713",
+      "Market Value": "48942.71",
+      "Shares Held": "10552.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BHARAT PETROLEUM CORP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.563626310571",
+      "Market Value": "32683.52",
+      "Shares Held": "10192.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VEDANTA POWER LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032288274031",
+      "Market Value": "1872.33",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INDIAN HOTELS COMPANY LTD (THE)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.627706720857",
+      "Market Value": "36399.41",
+      "Shares Held": "4826.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HDFC LIFE INSURANCE CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.513947174443",
+      "Market Value": "29802.73",
+      "Shares Held": "4899.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NESTLE' INDIA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.046527711046",
+      "Market Value": "60685.97",
+      "Shares Held": "4088.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INFOSYS LTD",
+      "Ticker": "INFY",
+      "Identifier": "000000000",
+      "Weight": "3.613535773963",
+      "Market Value": "209541.44",
+      "Shares Held": "19827.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MAX HEALTHCARE INSTITUTE LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.810976773602",
+      "Market Value": "47026.86",
+      "Shares Held": "3942.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TATA STEEL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.522517845034",
+      "Market Value": "88287.65",
+      "Shares Held": "44439.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TATA MOTORS PASSENGER VEHICLES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.675453730585",
+      "Market Value": "39168.16",
+      "Shares Held": "10527.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VEDANTA OIL AND GAS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.025843311522",
+      "Market Value": "1498.6",
+      "Shares Held": "4400.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PERSISTENT SYSTEMS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.220696982833",
+      "Market Value": "12797.76",
+      "Shares Held": "280.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TATA CONSULTANCY SERVICES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.089581767856",
+      "Market Value": "121170.51",
+      "Shares Held": "5646.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SBI LIFE INSURANCE CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.863056581956",
+      "Market Value": "50046.86",
+      "Shares Held": "2683.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EICHER MOTORS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.083757186233",
+      "Market Value": "62844.83",
+      "Shares Held": "841.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CIPLA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.825195595981",
+      "Market Value": "47851.38",
+      "Shares Held": "3091.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DR. REDDY'S LABORATORIES LTD",
+      "Ticker": "RDY",
+      "Identifier": "000000000",
+      "Weight": "0.831210813845",
+      "Market Value": "48200.19",
+      "Shares Held": "3362.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RELIANCE INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "8.875215375443",
+      "Market Value": "514655.32",
+      "Shares Held": "37651.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DIVI'S LABORATORIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.812626944748",
+      "Market Value": "47122.55",
+      "Shares Held": "678.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "APOLLO HOSPITALS ENTERPRISES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.866766319827",
+      "Market Value": "50261.98",
+      "Shares Held": "548.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ICICI LOMBARD GENERAL INSURANCE CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.36934137836",
+      "Market Value": "21417.34",
+      "Shares Held": "1164.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HINDUSTAN UNILEVER LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.990058116341",
+      "Market Value": "115399.34",
+      "Shares Held": "5157.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LARSEN & TOUBRO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.823879991042",
+      "Market Value": "163750.94",
+      "Shares Held": "3741.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOTAK MAHINDRA BANK LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.141949912102",
+      "Market Value": "124207.23",
+      "Shares Held": "29974.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TATA CONSUMER PRODUCTS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.670160042251",
+      "Market Value": "38861.19",
+      "Shares Held": "3420.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.058671008205",
+      "Market Value": "3402.21",
+      "Shares Held": "3402.21000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "ETERNAL LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.325394735717",
+      "Market Value": "76856.89",
+      "Shares Held": "27495.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ADANI ENTERPRISES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.784295356554",
+      "Market Value": "45479.66",
+      "Shares Held": "1418.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

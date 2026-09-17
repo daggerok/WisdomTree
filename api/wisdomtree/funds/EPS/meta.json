@@ -1,0 +1,433 @@
+{
+  "ticker": "EPS",
+  "name": "WisdomTree U.S. LargeCap Fund",
+  "category": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Large Cap Core",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/equity/eps",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eps",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/EPS",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036286, report period 2026-06-30)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717W588",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.08%",
+    "value": 0.08
+  },
+  "nav": {
+    "display": "$79.49",
+    "value": 79.492,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$80.01",
+    "value": 80.01,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.03%",
+    "value": 0.032
+  },
+  "aum": {
+    "display": "$1.65 B",
+    "value": 1647672450,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 1.13,
+    "dividendYieldText": "1.13%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 1.13,
+    "secYield": 1.13,
+    "secYieldText": "1.13%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.7,
+      "mo1Text": "2.70%",
+      "qtd": 2.5,
+      "qtdText": "2.50%",
+      "ytd": 14.54,
+      "ytdText": "14.54%",
+      "yr1": 21.63,
+      "yr1Text": "21.63%",
+      "yr3": 20.89,
+      "yr3Text": "20.89%",
+      "yr5": 12.53,
+      "yr5Text": "12.53%",
+      "yr10": 14.72,
+      "yr10Text": "14.72%",
+      "sinceInception": 10.47,
+      "sinceInceptionText": "10.47%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 23.1,
+      "yr3": 20.3,
+      "yr5": 12.8,
+      "yr10": 14.83,
+      "sinceInception": 10.36
+    }
+  },
+  "distributions": {
+    "frequency": "Quarterly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "03/26/2007",
+        "0.03"
+      ],
+      [
+        "06/25/2007",
+        "0.071"
+      ],
+      [
+        "09/24/2007",
+        "0.062667"
+      ],
+      [
+        "12/17/2007",
+        "0.075"
+      ],
+      [
+        "03/24/2008",
+        "0.071667"
+      ],
+      [
+        "06/23/2008",
+        "0.062333"
+      ],
+      [
+        "09/22/2008",
+        "0.067667"
+      ],
+      [
+        "12/22/2008",
+        "0.083"
+      ],
+      [
+        "03/23/2009",
+        "0.068667"
+      ],
+      [
+        "06/22/2009",
+        "0.058667"
+      ],
+      [
+        "09/21/2009",
+        "0.053667"
+      ],
+      [
+        "12/21/2009",
+        "0.069333"
+      ],
+      [
+        "03/29/2010",
+        "0.043667"
+      ],
+      [
+        "06/28/2010",
+        "0.063"
+      ],
+      [
+        "09/20/2010",
+        "0.058333"
+      ],
+      [
+        "12/22/2010",
+        "0.081"
+      ],
+      [
+        "03/21/2011",
+        "0.055"
+      ],
+      [
+        "06/22/2011",
+        "0.070667"
+      ],
+      [
+        "09/26/2011",
+        "0.071667"
+      ],
+      [
+        "12/21/2011",
+        "0.089"
+      ],
+      [
+        "03/26/2012",
+        "0.065333"
+      ],
+      [
+        "06/25/2012",
+        "0.083333"
+      ],
+      [
+        "09/24/2012",
+        "0.093"
+      ],
+      [
+        "12/24/2012",
+        "0.116333"
+      ],
+      [
+        "03/22/2013",
+        "0.073667"
+      ],
+      [
+        "06/24/2013",
+        "0.083333"
+      ],
+      [
+        "09/23/2013",
+        "0.084333"
+      ],
+      [
+        "12/24/2013",
+        "0.108333"
+      ],
+      [
+        "03/24/2014",
+        "0.087333"
+      ],
+      [
+        "06/23/2014",
+        "0.096667"
+      ],
+      [
+        "09/22/2014",
+        "0.106"
+      ],
+      [
+        "12/19/2014",
+        "0.107333"
+      ],
+      [
+        "03/23/2015",
+        "0.110667"
+      ],
+      [
+        "06/22/2015",
+        "0.112667"
+      ],
+      [
+        "09/21/2015",
+        "0.121667"
+      ],
+      [
+        "12/21/2015",
+        "0.153"
+      ],
+      [
+        "03/21/2016",
+        "0.109333"
+      ],
+      [
+        "06/20/2016",
+        "0.113333"
+      ],
+      [
+        "09/26/2016",
+        "0.138333"
+      ],
+      [
+        "12/23/2016",
+        "0.150333"
+      ],
+      [
+        "03/27/2017",
+        "0.111667"
+      ],
+      [
+        "06/26/2017",
+        "0.116667"
+      ],
+      [
+        "09/26/2017",
+        "0.126667"
+      ],
+      [
+        "12/26/2017",
+        "0.138"
+      ],
+      [
+        "03/20/2018",
+        "0.103"
+      ],
+      [
+        "06/25/2018",
+        "0.146"
+      ],
+      [
+        "09/25/2018",
+        "0.156"
+      ],
+      [
+        "12/24/2018",
+        "0.164"
+      ],
+      [
+        "03/26/2019",
+        "0.125"
+      ],
+      [
+        "06/24/2019",
+        "0.16"
+      ],
+      [
+        "09/24/2019",
+        "0.175"
+      ],
+      [
+        "12/23/2019",
+        "0.164"
+      ],
+      [
+        "03/24/2020",
+        "0.179"
+      ],
+      [
+        "06/23/2020",
+        "0.19"
+      ],
+      [
+        "09/22/2020",
+        "0.175"
+      ],
+      [
+        "12/21/2020",
+        "0.2"
+      ],
+      [
+        "03/25/2021",
+        "0.169"
+      ],
+      [
+        "06/24/2021",
+        "0.185"
+      ],
+      [
+        "09/24/2021",
+        "0.19"
+      ],
+      [
+        "12/27/2021",
+        "0.217"
+      ],
+      [
+        "03/25/2022",
+        "0.17"
+      ],
+      [
+        "06/24/2022",
+        "0.205"
+      ],
+      [
+        "09/26/2022",
+        "0.215"
+      ],
+      [
+        "12/23/2022",
+        "0.223"
+      ],
+      [
+        "03/27/2023",
+        "0.19"
+      ],
+      [
+        "06/26/2023",
+        "0.22"
+      ],
+      [
+        "09/25/2023",
+        "0.215"
+      ],
+      [
+        "12/22/2023",
+        "0.24"
+      ],
+      [
+        "03/22/2024",
+        "0.205"
+      ],
+      [
+        "06/25/2024",
+        "0.225"
+      ],
+      [
+        "09/25/2024",
+        "0.22"
+      ],
+      [
+        "12/26/2024",
+        "0.25"
+      ],
+      [
+        "03/26/2025",
+        "0.195"
+      ],
+      [
+        "06/25/2025",
+        "0.23"
+      ],
+      [
+        "09/25/2025",
+        "0.225"
+      ],
+      [
+        "12/26/2025",
+        "0.245"
+      ],
+      [
+        "03/26/2026",
+        "0.2"
+      ],
+      [
+        "06/25/2026",
+        "0.225"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json",
+      "holdings/002.json",
+      "holdings/003.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 506,
+    "asOfDate": "2026-06-30",
+    "asOf": "Jun 30 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036286, report period 2026-06-30)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json",
+      "history/002.json",
+      "history/003.json",
+      "history/004.json",
+      "history/005.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 4922,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

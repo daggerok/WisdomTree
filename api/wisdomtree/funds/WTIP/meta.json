@@ -1,0 +1,163 @@
+{
+  "ticker": "WTIP",
+  "name": "WisdomTree Inflation Plus Fund",
+  "category": "Alternative",
+  "categoryPath": "Alternative / Commodities",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtip",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtip",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTIP",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028871, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y352",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.65%",
+    "value": 0.65
+  },
+  "nav": {
+    "display": "$37.27",
+    "value": 37.267,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$37.50",
+    "value": 37.5,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.23%",
+    "value": 0.226
+  },
+  "aum": {
+    "display": "$26.19 M",
+    "value": 26190570,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 3.64,
+    "dividendYieldText": "3.64%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0,
+    "secYield": -0.38,
+    "secYieldText": "-0.38%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 5.04,
+      "mo1Text": "5.04%",
+      "qtd": -1.09,
+      "qtdText": "-1.09%",
+      "ytd": 13.4,
+      "ytdText": "13.40%",
+      "yr1": 27.16,
+      "yr1Text": "27.16%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 23.47,
+      "sinceInceptionText": "23.47%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 19.58,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 18.31
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "07/28/2025",
+        "0.07"
+      ],
+      [
+        "08/26/2025",
+        "0.09"
+      ],
+      [
+        "09/25/2025",
+        "0.105"
+      ],
+      [
+        "10/28/2025",
+        "0.085"
+      ],
+      [
+        "11/24/2025",
+        "0.085"
+      ],
+      [
+        "12/10/2025",
+        "0.009"
+      ],
+      [
+        "12/26/2025",
+        "0.09"
+      ],
+      [
+        "03/26/2026",
+        "0.015"
+      ],
+      [
+        "04/27/2026",
+        "0.175"
+      ],
+      [
+        "05/26/2026",
+        "0.335"
+      ],
+      [
+        "06/25/2026",
+        "0.265"
+      ],
+      [
+        "07/28/2026",
+        "0.2"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 37,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028871, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 313,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

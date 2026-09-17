@@ -1,0 +1,62 @@
+{
+  "ticker": "WAMA",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 505,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "CME GROUP INC",
+      "Ticker": "CME",
+      "Identifier": "12572Q105",
+      "Weight": "0.120301388272",
+      "Market Value": "224142.45",
+      "Shares Held": "1015.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PROCTER & GAMBLE COMPANY (THE)",
+      "Ticker": "PG",
+      "Identifier": "742718109",
+      "Weight": "0.528263888916",
+      "Market Value": "984247.68",
+      "Shares Held": "6712.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOUTHWEST AIRLINES COMPANY",
+      "Ticker": "LUV",
+      "Identifier": "844741108",
+      "Weight": "0.039327239323",
+      "Market Value": "73273.5",
+      "Shares Held": "1425.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VERSANT MEDIA GROUP INC",
+      "Ticker": "VSNT",
+      "Identifier": "925283103",
+      "Weight": "0.008948508125",
+      "Market Value": "16672.63",
+      "Shares Held": "463.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THERMO FISHER SCIENTIFIC INC",
+      "Ticker": "TMO",
+      "Identifier": "883556102",
+      "Weight": "0.283081798355",
+      "Market Value": "527430.72",
+      "Shares Held": "1052.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

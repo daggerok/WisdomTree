@@ -1,0 +1,63 @@
+{
+  "ticker": "QIG",
+  "page": 3,
+  "pageSize": 250,
+  "totalRows": 504,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "UNITEDHEALTH GROUP INC",
+      "Ticker": "UNH",
+      "Identifier": "91324PER9",
+      "Weight": "0.144654549888",
+      "Market Value": "25671.02",
+      "Shares Held": "25000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.35000000",
+      "Maturity": "2033-02-15"
+    },
+    {
+      "Name": "MOODY'S CORP",
+      "Ticker": "-",
+      "Identifier": "615369AE5",
+      "Weight": "0.181092805957",
+      "Market Value": "32137.51",
+      "Shares Held": "34000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "5.25000000",
+      "Maturity": "2044-07-15"
+    },
+    {
+      "Name": "INTERNATIONAL PAPER COMPANY",
+      "Ticker": "-",
+      "Identifier": "460146CK7",
+      "Weight": "0.014586594838",
+      "Market Value": "2588.6",
+      "Shares Held": "3000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.80000000",
+      "Maturity": "2044-06-15"
+    },
+    {
+      "Name": "MPLX LP",
+      "Ticker": "MPLX",
+      "Identifier": "55336VAR1",
+      "Weight": "0.150696722509",
+      "Market Value": "26743.29",
+      "Shares Held": "27000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "4.00000000",
+      "Maturity": "2028-03-15"
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "ticker": "CEW",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 32,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category",
+    "Coupon",
+    "Maturity"
+  ],
+  "rows": [
+    {
+      "Name": "JPMorgan Chase Bank, National Association",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.017837705062",
+      "Market Value": "2776.96",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000422792459",
+      "Market Value": "65.82",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "STANDARD CHARTERED BANK",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.060923545458",
+      "Market Value": "9484.53",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "GOLDMAN SACHS & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.00389531757",
+      "Market Value": "-606.42",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "RBC DOMINION SECURITIES INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.01307521972",
+      "Market Value": "-2035.54",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "JPMorgan Chase Bank, National Association",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.0343722818",
+      "Market Value": "-5351.05",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "MERRILL LYNCH, PIERCE, FENNER & SMITH INCORPORATED",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.110416342439",
+      "Market Value": "17189.53",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.051722510114",
+      "Market Value": "8052.12",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "RBC DOMINION SECURITIES INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.01239234117",
+      "Market Value": "-1929.23",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "GOLDMAN SACHS & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.001215448026",
+      "Market Value": "189.22",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "JPMorgan Chase Bank, National Association",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.11397462081",
+      "Market Value": "-17743.48",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.00146538504",
+      "Market Value": "-228.13",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.032726975505",
+      "Market Value": "5094.91",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "BARCLAYS PLC",
+      "Ticker": "BCS",
+      "Identifier": "000000000",
+      "Weight": "-0.16834205683",
+      "Market Value": "-26207.36",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.012838129634",
+      "Market Value": "1998.63",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "RBC DOMINION SECURITIES INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.002029493732",
+      "Market Value": "315.95",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "GOLDMAN SACHS & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.002067970286",
+      "Market Value": "321.94",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.112034220541",
+      "Market Value": "17441.4",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "RBC DOMINION SECURITIES INC.",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000970007433",
+      "Market Value": "151.01",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "CITIGROUP INC.",
+      "Ticker": "C",
+      "Identifier": "000000000",
+      "Weight": "-0.01415956483",
+      "Market Value": "-2204.35",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "JPMorgan Chase Bank, National Association",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.030468549484",
+      "Market Value": "4743.32",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "WisdomTree Trust",
+      "Ticker": "-",
+      "Identifier": "97717Y527",
+      "Weight": "2.58634390352",
+      "Market Value": "402640",
+      "Shares Held": "8000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CITIGROUP INC.",
+      "Ticker": "C",
+      "Identifier": "000000000",
+      "Weight": "-0.01355807157",
+      "Market Value": "-2110.71",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797UN5",
+      "Weight": "33.92108227644",
+      "Market Value": "5280807.61",
+      "Shares Held": "5300000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-07-07"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797UA3",
+      "Weight": "32.71010132004",
+      "Market Value": "5092283.04",
+      "Shares Held": "5100000.00000000",
+      "Asset Category": "DBT",
+      "Coupon": "0.00000000",
+      "Maturity": "2026-06-16"
+    },
+    {
+      "Name": "CITIGROUP INC.",
+      "Ticker": "C",
+      "Identifier": "000000000",
+      "Weight": "29.80487709202",
+      "Market Value": "4640000",
+      "Shares Held": "4640000.00000000",
+      "Asset Category": "RA"
+    },
+    {
+      "Name": "BARCLAYS PLC",
+      "Ticker": "BCS",
+      "Identifier": "000000000",
+      "Weight": "-0.01590064499",
+      "Market Value": "-2475.4",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "DEUTSCHE BANK AKTIENGESELLSCHAFT",
+      "Ticker": "DB",
+      "Identifier": "000000000",
+      "Weight": "0.239227304347",
+      "Market Value": "37242.72",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "CITIGROUP INC.",
+      "Ticker": "C",
+      "Identifier": "000000000",
+      "Weight": "-0.00130248597",
+      "Market Value": "-202.77",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "STANDARD CHARTERED BANK",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.00194708067",
+      "Market Value": "-303.12",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.280464343078",
+      "Market Value": "43662.47",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    },
+    {
+      "Name": "HSBC BANK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.037929468189",
+      "Market Value": "5904.83",
+      "Shares Held": "1.00000000",
+      "Asset Category": "DFE"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "ticker": "WTMY",
+  "name": "WisdomTree High Income Laddered Municipal Fund",
+  "category": "Fixed Income",
+  "categoryPath": "Fixed Income / Municipal Bonds",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmy",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmy",
+    "productPageAsOf": "Aug 31 2026",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTMY",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028875, report period 2026-05-31)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y378",
+    "isin": null,
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.35%",
+    "value": 0.35
+  },
+  "nav": {
+    "display": "$24.49",
+    "value": 24.491,
+    "asOfDate": "Sep 16 2026"
+  },
+  "marketPrice": {
+    "display": "$24.44",
+    "value": 24.44,
+    "asOfDate": "Sep 15 2026"
+  },
+  "premiumDiscount": {
+    "display": "-0.23%",
+    "value": -0.233
+  },
+  "aum": {
+    "display": "$4.90 M",
+    "value": 4899400,
+    "asOfDate": "Sep 15 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": 3.84,
+    "dividendYieldText": "3.84%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 5.14,
+    "secYield": 4.07,
+    "secYieldText": "4.07%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "monthEnd": {
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.3,
+      "mo1Text": "0.30%",
+      "qtd": -0.42,
+      "qtdText": "-0.42%",
+      "ytd": 0.38,
+      "ytdText": "0.38%",
+      "yr1": 4.15,
+      "yr1Text": "4.15%",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": 3.27,
+      "sinceInceptionText": "3.27%"
+    },
+    "quarterEnd": {
+      "asOfDate": "Jun 30 2026",
+      "ytd": null,
+      "yr1": 5.5,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": 4.75
+    }
+  },
+  "distributions": {
+    "frequency": "Monthly",
+    "paymentsPerYear": null,
+    "headers": [
+      "Ex-Date",
+      "Amount"
+    ],
+    "rows": [
+      [
+        "04/25/2025",
+        "0.02"
+      ],
+      [
+        "05/27/2025",
+        "0.075"
+      ],
+      [
+        "06/25/2025",
+        "0.1"
+      ],
+      [
+        "07/28/2025",
+        "0.08"
+      ],
+      [
+        "08/26/2025",
+        "0.055"
+      ],
+      [
+        "09/25/2025",
+        "0.06"
+      ],
+      [
+        "10/28/2025",
+        "0.08"
+      ],
+      [
+        "11/24/2025",
+        "0.095"
+      ],
+      [
+        "12/26/2025",
+        "0.085"
+      ],
+      [
+        "01/27/2026",
+        "0.08"
+      ],
+      [
+        "02/24/2026",
+        "0.07"
+      ],
+      [
+        "03/26/2026",
+        "0.045"
+      ],
+      [
+        "04/27/2026",
+        "0.055"
+      ],
+      [
+        "05/26/2026",
+        "0.065"
+      ],
+      [
+        "06/25/2026",
+        "0.095"
+      ],
+      [
+        "07/28/2026",
+        "0.105"
+      ],
+      [
+        "08/26/2026",
+        "0.105"
+      ]
+    ]
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 81,
+    "asOfDate": "2026-05-31",
+    "asOf": "May 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028875, report period 2026-05-31)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 365,
+    "asOf": "Sep 16 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

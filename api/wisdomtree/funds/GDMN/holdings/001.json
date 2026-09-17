@@ -1,0 +1,548 @@
+{
+  "ticker": "GDMN",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 59,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "0.725480088231",
+      "Market Value": "1520183.96",
+      "Shares Held": "400.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "WESTGOLD RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.268100669131",
+      "Market Value": "561782.94",
+      "Shares Held": "152202.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GREATLAND RESOURCES LTD",
+      "Ticker": "GTLRY",
+      "Identifier": "000000000",
+      "Weight": "0.50899163937",
+      "Market Value": "1066550.19",
+      "Shares Held": "108597.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALAMOS GOLD INC",
+      "Ticker": "AGI",
+      "Identifier": "011532108",
+      "Weight": "2.693158634867",
+      "Market Value": "5643292.8",
+      "Shares Held": "138316.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EVOLUTION MINING LTD",
+      "Ticker": "CAHPF",
+      "Identifier": "000000000",
+      "Weight": "2.734254905052",
+      "Market Value": "5729406.66",
+      "Shares Held": "655934.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SSR MINING INC",
+      "Ticker": "SSRM",
+      "Identifier": "784730103",
+      "Weight": "1.098948321719",
+      "Market Value": "2302755.98",
+      "Shares Held": "73759.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ENDEAVOUR MINING PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.945564256169",
+      "Market Value": "4076770.16",
+      "Shares Held": "65007.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OR ROYALTIES INC",
+      "Ticker": "OR",
+      "Identifier": "68390D106",
+      "Weight": "0.952336139681",
+      "Market Value": "1995542.19",
+      "Shares Held": "53919.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WESDOME GOLD MINES LTD",
+      "Ticker": "-",
+      "Identifier": "95083R100",
+      "Weight": "0.473472299697",
+      "Market Value": "992122.33",
+      "Shares Held": "48863.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VAULT MINERALS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.232267831133",
+      "Market Value": "486698.17",
+      "Shares Held": "161057.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EQUINOX GOLD CORP",
+      "Ticker": "EQX",
+      "Identifier": "29446Y502",
+      "Weight": "0.615814669963",
+      "Market Value": "1290389.08",
+      "Shares Held": "95302.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEWMONT CORP",
+      "Ticker": "-",
+      "Identifier": "651639106",
+      "Weight": "10.90769668175",
+      "Market Value": "22856182.83",
+      "Shares Held": "208143.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARTEMIS GOLD INC",
+      "Ticker": "-",
+      "Identifier": "04302L100",
+      "Weight": "0.427364508889",
+      "Market Value": "895507.24",
+      "Shares Held": "37382.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "B2GOLD CORP",
+      "Ticker": "BTG",
+      "Identifier": "11777Q209",
+      "Weight": "0.83110289523",
+      "Market Value": "1741507.88",
+      "Shares Held": "365863.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELDORADO GOLD CORP",
+      "Ticker": "-",
+      "Identifier": "284902509",
+      "Weight": "1.020881034845",
+      "Market Value": "2139172.39",
+      "Shares Held": "63233.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IAMGOLD CORP",
+      "Ticker": "IAG",
+      "Identifier": "450913108",
+      "Weight": "1.412588145682",
+      "Market Value": "2959962.48",
+      "Shares Held": "165546.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ANGLOGOLD ASHANTI PLC",
+      "Ticker": "AU",
+      "Identifier": "000000000",
+      "Weight": "5.499091509405",
+      "Market Value": "11522894.76",
+      "Shares Held": "118989.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FORTUNA MINING CORP",
+      "Ticker": "FSM",
+      "Identifier": "349942102",
+      "Weight": "0.271670534604",
+      "Market Value": "569263.3",
+      "Shares Held": "56702.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOLD FIELDS LTD",
+      "Ticker": "GFI",
+      "Identifier": "38059T106",
+      "Weight": "4.217925816751",
+      "Market Value": "8838317.24",
+      "Shares Held": "221734.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.222771281524",
+      "Market Value": "466798.93",
+      "Shares Held": "466798.93000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "ALKANE RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.096343245132",
+      "Market Value": "201879.36",
+      "Shares Held": "189583.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PAN AMERICAN SILVER CORP",
+      "Ticker": "PAAS",
+      "Identifier": "697900108",
+      "Weight": "3.456060141592",
+      "Market Value": "7241890.27",
+      "Shares Held": "127073.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CATALYST METALS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.07179734424",
+      "Market Value": "150445.44",
+      "Shares Held": "40211.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AGNICO EAGLE MINES LTD",
+      "Ticker": "AEM",
+      "Identifier": "008474108",
+      "Weight": "6.978939584611",
+      "Market Value": "14623794.9",
+      "Shares Held": "79846.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ZHAOJIN MINING INDUSTRY COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.613088225748",
+      "Market Value": "1284676.04",
+      "Shares Held": "467000.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OCEANAGOLD CORP",
+      "Ticker": "OGC",
+      "Identifier": "675222400",
+      "Weight": "1.103771774845",
+      "Market Value": "2312863.13",
+      "Shares Held": "76515.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PETROPAVLOVSK PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0",
+      "Market Value": "0",
+      "Shares Held": "40769.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "G MINING VENTURES CORP (NEW)",
+      "Ticker": "-",
+      "Identifier": "36270K102",
+      "Weight": "0.558537269482",
+      "Market Value": "1170368.99",
+      "Shares Held": "37355.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRESNILLO PLC",
+      "Ticker": "FNLPF",
+      "Identifier": "000000000",
+      "Weight": "1.388492932933",
+      "Market Value": "2909472.94",
+      "Shares Held": "65686.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ZIJIN MINING GROUP CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.267181799485",
+      "Market Value": "2655275.42",
+      "Shares Held": "589800.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RAMELIUS RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.326131251115",
+      "Market Value": "683381.26",
+      "Shares Held": "294969.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REGIS RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.582503515116",
+      "Market Value": "1220588.29",
+      "Shares Held": "277196.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BARRICK MINING CORP",
+      "Ticker": "B",
+      "Identifier": "06849F108",
+      "Weight": "7.22129510758",
+      "Market Value": "15131631",
+      "Shares Held": "355620.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ORA BANDA MINING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.114343492278",
+      "Market Value": "239597.4",
+      "Shares Held": "243960.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DPM METALS INC",
+      "Ticker": "-",
+      "Identifier": "26139R109",
+      "Weight": "1.077836423187",
+      "Market Value": "2258517.73",
+      "Shares Held": "67197.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "K92 MINING INC",
+      "Ticker": "-",
+      "Identifier": "499113108",
+      "Weight": "0.698617341612",
+      "Market Value": "1463895.28",
+      "Shares Held": "78223.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COEUR MINING INC",
+      "Ticker": "CDE",
+      "Identifier": "192108504",
+      "Weight": "1.924081858749",
+      "Market Value": "4031755.56",
+      "Shares Held": "208683.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOLIDCORE RES PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.020936682885",
+      "Market Value": "43871.1",
+      "Shares Held": "4821.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRANCO-NEVADA CORP",
+      "Ticker": "FNV",
+      "Identifier": "351858105",
+      "Weight": "3.457091124483",
+      "Market Value": "7244050.61",
+      "Shares Held": "31247.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WHEATON PRECIOUS METALS CORP",
+      "Ticker": "WPM",
+      "Identifier": "962879102",
+      "Weight": "3.787806821508",
+      "Market Value": "7937038.2",
+      "Shares Held": "59857.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PERSEUS MINING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.803190248252",
+      "Market Value": "1683019.22",
+      "Shares Held": "452447.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ST BARBARA LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.042156302173",
+      "Market Value": "88335.07",
+      "Shares Held": "213518.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LUNDIN GOLD INC",
+      "Ticker": "-",
+      "Identifier": "550371108",
+      "Weight": "0.908177019831",
+      "Market Value": "1903010.38",
+      "Shares Held": "28479.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GOGOLD RESOURCES INC",
+      "Ticker": "-",
+      "Identifier": "38045Y102",
+      "Weight": "0.116212317588",
+      "Market Value": "243513.37",
+      "Shares Held": "96672.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "OREZONE GOLD CORP",
+      "Ticker": "-",
+      "Identifier": "68616T109",
+      "Weight": "0.083148721952",
+      "Market Value": "174231.32",
+      "Shares Held": "95243.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HARMONY GOLD MINING COMPANY LTD",
+      "Ticker": "HMY",
+      "Identifier": "413216300",
+      "Weight": "1.629934442519",
+      "Market Value": "3415393.8",
+      "Shares Held": "186940.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TOREX GOLD RESOURCES INC",
+      "Ticker": "-",
+      "Identifier": "891054603",
+      "Weight": "0.666203831098",
+      "Market Value": "1395975.43",
+      "Shares Held": "30418.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SHANDONG GOLD MINING COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.208047278231",
+      "Market Value": "435945.99",
+      "Shares Held": "102100.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KINROSS GOLD CORP",
+      "Ticker": "KGC",
+      "Identifier": "496902404",
+      "Weight": "5.079224407133",
+      "Market Value": "10643097.72",
+      "Shares Held": "352654.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TREASURY OBLIGATIONS CASH MANAGEMENT",
+      "Ticker": "-",
+      "Identifier": "261908107",
+      "Weight": "0.909617395999",
+      "Market Value": "1906028.57",
+      "Shares Held": "1906028.57000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "ROYAL GOLD INC",
+      "Ticker": "RGLD",
+      "Identifier": "780287108",
+      "Weight": "2.419829595767",
+      "Market Value": "5070554.24",
+      "Shares Held": "22588.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GENESIS MINERALS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.128424716867",
+      "Market Value": "269103.45",
+      "Shares Held": "63825.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NORTHERN STAR RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.582217628563",
+      "Market Value": "5410825.03",
+      "Shares Held": "399801.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "INTEGRA RESOURCES CORP",
+      "Ticker": "ITRG",
+      "Identifier": "45826T509",
+      "Weight": "0.002642780712",
+      "Market Value": "5537.73",
+      "Shares Held": "2090.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMPANIA DE MINAS BUENAVENTURA SA",
+      "Ticker": "-",
+      "Identifier": "204448104",
+      "Weight": "1.399058114248",
+      "Market Value": "2931611.41",
+      "Shares Held": "79469.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREY INST PREF GOV MM-M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.000531421442",
+      "Market Value": "1113.55",
+      "Shares Held": "1113.55000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "RESOLUTE MINING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.12863744293",
+      "Market Value": "269549.2",
+      "Shares Held": "291544.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CENTERRA GOLD INC",
+      "Ticker": "CGAU",
+      "Identifier": "152006102",
+      "Weight": "0.614330273936",
+      "Market Value": "1287278.65",
+      "Shares Held": "72855.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARIS MINING CORP",
+      "Ticker": "ARIS",
+      "Identifier": "04040Y109",
+      "Weight": "0.288782333673",
+      "Market Value": "605119.67",
+      "Shares Held": "33370.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}

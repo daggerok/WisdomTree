@@ -1,0 +1,1025 @@
+{
+  "ticker": "WDIG",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 112,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.11344380434",
+      "Market Value": "8995.68",
+      "Shares Held": "14.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "INDUSTRIAS PENOLES SAB DE CV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.890206888126",
+      "Market Value": "70590.16",
+      "Shares Held": "1214.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WA1 RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.43389485802",
+      "Market Value": "34406.28",
+      "Shares Held": "3582.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GRUPO MEXICO SAB DE CV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.785847821849",
+      "Market Value": "141611.22",
+      "Shares Held": "11409.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMG CRITICAL MATERIALS NV",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.422738355078",
+      "Market Value": "33521.61",
+      "Shares Held": "682.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "JX ADVANCED METALS CORP",
+      "Ticker": "JXAMY",
+      "Identifier": "000000000",
+      "Weight": "0.739847514854",
+      "Market Value": "58667.21",
+      "Shares Held": "2377.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NORTHAM PLATINUM HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.484856722301",
+      "Market Value": "38447.37",
+      "Shares Held": "1973.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MARUBENI CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.221286929948",
+      "Market Value": "96843.6",
+      "Shares Held": "2967.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TRILOGY METALS INC",
+      "Ticker": "TMQ",
+      "Identifier": "89621C105",
+      "Weight": "0.630187743286",
+      "Market Value": "49971.59",
+      "Shares Held": "10793.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VULCAN ENERGY RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.37170132971",
+      "Market Value": "29474.56",
+      "Shares Held": "10267.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "WHEATON PRECIOUS METALS CORP",
+      "Ticker": "WPM",
+      "Identifier": "962879102",
+      "Weight": "1.429737877454",
+      "Market Value": "113373",
+      "Shares Held": "855.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIRST MAJESTIC SILVER CORP",
+      "Ticker": "AG",
+      "Identifier": "32076V103",
+      "Weight": "0.581919823818",
+      "Market Value": "46144.12",
+      "Shares Held": "2189.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIGMA LITHIUM CORP",
+      "Ticker": "SGML",
+      "Identifier": "826599102",
+      "Weight": "0.364177402387",
+      "Market Value": "28877.94",
+      "Shares Held": "1722.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TREASURY OBLIGATIONS CASH MANAGEMENT",
+      "Ticker": "-",
+      "Identifier": "261908107",
+      "Weight": "1.361318968294",
+      "Market Value": "107947.63",
+      "Shares Held": "107947.63000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "KGHM POLSKA MIEDZ SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.822769739118",
+      "Market Value": "65242.64",
+      "Shares Held": "676.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LIONTOWN LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.718751462787",
+      "Market Value": "56994.37",
+      "Shares Held": "32733.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ERAMET SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.400731037904",
+      "Market Value": "31776.51",
+      "Shares Held": "496.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LUNDIN MINING CORP",
+      "Ticker": "-",
+      "Identifier": "550372106",
+      "Weight": "0.982803706078",
+      "Market Value": "77932.75",
+      "Shares Held": "2607.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "VALTERRA PLATINUM LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.84203367667",
+      "Market Value": "66770.2",
+      "Shares Held": "801.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "REALLOYS INC",
+      "Ticker": "ALOY",
+      "Identifier": "75606V101",
+      "Weight": "0.258293844821",
+      "Market Value": "20481.76",
+      "Shares Held": "2236.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UACJ CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.316135722831",
+      "Market Value": "25068.41",
+      "Shares Held": "1202.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "GLENCORE PLC",
+      "Ticker": "GLCNF",
+      "Identifier": "000000000",
+      "Weight": "1.516807581217",
+      "Market Value": "120277.31",
+      "Shares Held": "15715.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BOLIDEN AB",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.804524890043",
+      "Market Value": "63795.89",
+      "Shares Held": "1023.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "USA RARE EARTH INC",
+      "Ticker": "USAR",
+      "Identifier": "91733P107",
+      "Weight": "1.884138848685",
+      "Market Value": "149405.34",
+      "Shares Held": "5334.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.312865711174",
+      "Market Value": "24809.11",
+      "Shares Held": "3.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "CONSTELLIUM SE",
+      "Ticker": "CSTM",
+      "Identifier": "000000000",
+      "Weight": "0.333110652223",
+      "Market Value": "26414.46",
+      "Shares Held": "771.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ERO COPPER CORP",
+      "Ticker": "ERO",
+      "Identifier": "296006109",
+      "Weight": "0.291362200269",
+      "Market Value": "23103.96",
+      "Shares Held": "759.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IVANHOE MINES LTD",
+      "Ticker": "-",
+      "Identifier": "46579R104",
+      "Weight": "0.649651816145",
+      "Market Value": "51515.02",
+      "Shares Held": "5812.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AMERICAN BATTERY TECHNOLOGY COMPANY",
+      "Ticker": "ABAT",
+      "Identifier": "02451V309",
+      "Weight": "0.442643684041",
+      "Market Value": "35100.03",
+      "Shares Held": "9723.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEO PERFORMANCE MATERIALS INC",
+      "Ticker": "-",
+      "Identifier": "64046G106",
+      "Weight": "1.255918913416",
+      "Market Value": "99589.79",
+      "Shares Held": "4407.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MP MATERIALS CORP",
+      "Ticker": "-",
+      "Identifier": "553368101",
+      "Weight": "2.541611201001",
+      "Market Value": "201540.5",
+      "Shares Held": "3115.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AYA GOLD & SILVER INC",
+      "Ticker": "AYA",
+      "Identifier": "05466C109",
+      "Weight": "0.295421151106",
+      "Market Value": "23425.82",
+      "Shares Held": "1112.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEXA RESOURCES SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.460139696663",
+      "Market Value": "36487.4",
+      "Shares Held": "2410.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ANGLO AMERICAN PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.325325762079",
+      "Market Value": "105093.5",
+      "Shares Held": "1955.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SIBANYE-STILLWATER LTD",
+      "Ticker": "SBSW",
+      "Identifier": "82575P107",
+      "Weight": "0.516338497855",
+      "Market Value": "40943.76",
+      "Shares Held": "3432.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.164710726786",
+      "Market Value": "13060.96",
+      "Shares Held": "8.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "METEORIC RESOURCES NL",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.291252485262",
+      "Market Value": "23095.26",
+      "Shares Held": "178328.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NORSK HYDRO ASA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.75062947346",
+      "Market Value": "59522.18",
+      "Shares Held": "4856.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALPHAMIN RESOURCES CORP",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.337138454086",
+      "Market Value": "26733.85",
+      "Shares Held": "27483.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AURUBIS AG",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.607698184517",
+      "Market Value": "48188.25",
+      "Shares Held": "191.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FRESNILLO PLC",
+      "Ticker": "FNLPF",
+      "Identifier": "000000000",
+      "Weight": "1.035614205179",
+      "Market Value": "82120.43",
+      "Shares Held": "1854.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ARAFURA RARE EARTHS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.654425932277",
+      "Market Value": "51893.59",
+      "Shares Held": "272168.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FIRST QUANTUM MINERALS LTD",
+      "Ticker": "-",
+      "Identifier": "335934105",
+      "Weight": "1.061828651505",
+      "Market Value": "84199.14",
+      "Shares Held": "2733.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IMPALA PLATINUM HOLDINGS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.622831541204",
+      "Market Value": "49388.27",
+      "Shares Held": "3450.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LYNAS RARE EARTHS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "3.275226777326",
+      "Market Value": "259713.54",
+      "Shares Held": "18810.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "EQ RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.646116092395",
+      "Market Value": "51234.65",
+      "Shares Held": "309603.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "0.057045498387",
+      "Market Value": "4523.5",
+      "Shares Held": "4.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "PMET RESOURCES INC",
+      "Ticker": "-",
+      "Identifier": "73015G104",
+      "Weight": "0.342609828007",
+      "Market Value": "27167.71",
+      "Shares Held": "5286.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ECOPRO BM CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.591985229928",
+      "Market Value": "46942.27",
+      "Shares Held": "326.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "STANDARD LITHIUM LTD",
+      "Ticker": "SLI",
+      "Identifier": "853606101",
+      "Weight": "0.298903026226",
+      "Market Value": "23701.92",
+      "Shares Held": "5896.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UNITED STATES ANTIMONY CORP",
+      "Ticker": "UAMY",
+      "Identifier": "911549103",
+      "Weight": "0.640632990318",
+      "Market Value": "50799.86",
+      "Shares Held": "5657.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TMC THE METALS COMPANY INC",
+      "Ticker": "TMC",
+      "Identifier": "87261Y106",
+      "Weight": "1.137803267508",
+      "Market Value": "90223.65",
+      "Shares Held": "14913.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BRAZILIAN RARE EARTHS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.477710618153",
+      "Market Value": "37880.71",
+      "Shares Held": "7965.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "HECLA MINING COMPANY",
+      "Ticker": "-",
+      "Identifier": "422704106",
+      "Weight": "0.608420790255",
+      "Market Value": "48245.55",
+      "Shares Held": "2715.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SILVERCORP METALS INC",
+      "Ticker": "SVM",
+      "Identifier": "82835P103",
+      "Weight": "0.25804528358",
+      "Market Value": "20462.05",
+      "Shares Held": "1615.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COEUR MINING INC",
+      "Ticker": "CDE",
+      "Identifier": "192108504",
+      "Weight": "0.837644571938",
+      "Market Value": "66422.16",
+      "Shares Held": "3438.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "KOREA ZINC COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.631926789208",
+      "Market Value": "50109.49",
+      "Shares Held": "55.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NEW YORK MERCANTILE EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.64960112024",
+      "Market Value": "-51511",
+      "Shares Held": "6.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "HUDBAY MINERALS INC",
+      "Ticker": "HBM",
+      "Identifier": "443628102",
+      "Weight": "0.679573242519",
+      "Market Value": "53887.68",
+      "Shares Held": "1848.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NICKEL INDUSTRIES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.601719473268",
+      "Market Value": "47714.16",
+      "Shares Held": "62562.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AFRICAN RAINBOW MINERALS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.2419761966",
+      "Market Value": "19187.83",
+      "Shares Held": "1471.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "RAMACO RESOURCES INC",
+      "Ticker": "METC",
+      "Identifier": "75134P600",
+      "Weight": "0.781717031643",
+      "Market Value": "61987.31",
+      "Shares Held": "3971.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FREEPORT-MCMORAN INC",
+      "Ticker": "FCX",
+      "Identifier": "35671D857",
+      "Weight": "1.862835725305",
+      "Market Value": "147716.08",
+      "Shares Held": "2248.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "AUSTRALIAN STRATEGIC MATERIALS LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.23854337796",
+      "Market Value": "18915.62",
+      "Shares Held": "18131.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CHALICE MINING LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.278719878687",
+      "Market Value": "22101.47",
+      "Shares Held": "21258.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LARVOTTO RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.46988554205",
+      "Market Value": "37260.21",
+      "Shares Held": "41429.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "UCORE RARE METALS INC",
+      "Ticker": "PPURF",
+      "Identifier": "90348V301",
+      "Weight": "0.590158159782",
+      "Market Value": "46797.39",
+      "Shares Held": "11553.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COMPANIA DE MINAS BUENAVENTURA SA",
+      "Ticker": "-",
+      "Identifier": "204448104",
+      "Weight": "0.545234151965",
+      "Market Value": "43235.08",
+      "Shares Held": "1172.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.19524554832",
+      "Market Value": "-15482.26",
+      "Shares Held": "2.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "TECK RESOURCES LTD",
+      "Ticker": "TECK",
+      "Identifier": "878742204",
+      "Weight": "1.002874868644",
+      "Market Value": "79524.32",
+      "Shares Held": "1202.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "5N PLUS INC",
+      "Ticker": "-",
+      "Identifier": "33833X101",
+      "Weight": "2.302218855879",
+      "Market Value": "182557.56",
+      "Shares Held": "5884.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUI KINZOKU CO LTD",
+      "Ticker": "XZJCF",
+      "Identifier": "000000000",
+      "Weight": "0.695315706661",
+      "Market Value": "55136",
+      "Shares Held": "170.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CARPENTER TECHNOLOGY CORP",
+      "Ticker": "CRS",
+      "Identifier": "144285103",
+      "Weight": "0.780683566717",
+      "Market Value": "61905.36",
+      "Shares Held": "132.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ENDEAVOUR SILVER CORP",
+      "Ticker": "EXK",
+      "Identifier": "29258Y103",
+      "Weight": "0.324008468212",
+      "Market Value": "25692.69",
+      "Shares Held": "2577.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CRITICAL METALS CORP",
+      "Ticker": "CRML",
+      "Identifier": "000000000",
+      "Weight": "0.848018819488",
+      "Market Value": "67244.8",
+      "Shares Held": "6004.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ELEVRA LITHIUM LTD",
+      "Ticker": "ELVR",
+      "Identifier": "000000000",
+      "Weight": "0.369938701367",
+      "Market Value": "29334.79",
+      "Shares Held": "3163.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SUMITOMO METAL MINING COMPANY LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.75707844593",
+      "Market Value": "60033.56",
+      "Shares Held": "1051.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NIOCORP DEVELOPMENTS LTD",
+      "Ticker": "NB",
+      "Identifier": "654484609",
+      "Weight": "1.20440645635",
+      "Market Value": "95505.04",
+      "Shares Held": "16552.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALBEMARLE CORP",
+      "Ticker": "ALB",
+      "Identifier": "012653101",
+      "Weight": "1.423883888209",
+      "Market Value": "112908.8",
+      "Shares Held": "640.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.490563794324",
+      "Market Value": "38899.92",
+      "Shares Held": "16.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "MATERION CORP",
+      "Ticker": "MTRN",
+      "Identifier": "576690101",
+      "Weight": "2.855379223529",
+      "Market Value": "226421.16",
+      "Shares Held": "1029.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALMONTY INDUSTRIES INC",
+      "Ticker": "ALM",
+      "Identifier": "020398707",
+      "Weight": "1.636838447605",
+      "Market Value": "129795.32",
+      "Shares Held": "6602.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IGO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.442881273781",
+      "Market Value": "35118.87",
+      "Shares Held": "5095.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "BEFESA SA",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.426346213292",
+      "Market Value": "33807.7",
+      "Shares Held": "783.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PERPETUA RESOURCES CORP",
+      "Ticker": "PPTA",
+      "Identifier": "714266103",
+      "Weight": "1.322838258032",
+      "Market Value": "104896.25",
+      "Shares Held": "3875.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SSR MINING INC",
+      "Ticker": "SSRM",
+      "Identifier": "784730103",
+      "Weight": "0.456707004133",
+      "Market Value": "36215.2",
+      "Shares Held": "1160.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ALCOA CORP",
+      "Ticker": "AA",
+      "Identifier": "013872106",
+      "Weight": "0.831265968404",
+      "Market Value": "65916.36",
+      "Shares Held": "849.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FURUKAWA ELECTRIC CO LTD (THE)",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.973300999236",
+      "Market Value": "77179.22",
+      "Shares Held": "236.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOUTHERN COPPER CORP",
+      "Ticker": "SCCO",
+      "Identifier": "84265V105",
+      "Weight": "2.317200629304",
+      "Market Value": "183745.56",
+      "Shares Held": "960.51000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CAPSTONE COPPER CORP",
+      "Ticker": "CSCCY",
+      "Identifier": "14071L108",
+      "Weight": "0.589903545299",
+      "Market Value": "46777.2",
+      "Shares Held": "4293.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "THE LONDON METAL EXCHANGE",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "-0.13257129173",
+      "Market Value": "-10512.42",
+      "Shares Held": "6.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "ANTOFAGASTA PLC",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.345163118181",
+      "Market Value": "106666.53",
+      "Shares Held": "1931.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LITHIUM ARGENTINA AG",
+      "Ticker": "LAR",
+      "Identifier": "000000000",
+      "Weight": "0.379558437551",
+      "Market Value": "30097.6",
+      "Shares Held": "2894.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "IPERIONX LTD",
+      "Ticker": "IPX",
+      "Identifier": "44916E100",
+      "Weight": "0.811068822743",
+      "Market Value": "64314.8",
+      "Shares Held": "1555.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "DREYFUS TRSY OBLIG CASH M",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.493066976267",
+      "Market Value": "197691.12",
+      "Shares Held": "197691.12000000",
+      "Asset Category": "STIV"
+    },
+    {
+      "Name": "TASEKO MINES LTD",
+      "Ticker": "-",
+      "Identifier": "876511106",
+      "Weight": "0.295971491672",
+      "Market Value": "23469.46",
+      "Shares Held": "3163.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "PLS GROUP LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "1.315735031013",
+      "Market Value": "104332.99",
+      "Shares Held": "22447.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "LITHIUM AMERICAS CORP",
+      "Ticker": "LAC",
+      "Identifier": "53681J103",
+      "Weight": "0.368527539376",
+      "Market Value": "29222.89",
+      "Shares Held": "5609.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "METALS X LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.356355479015",
+      "Market Value": "28257.69",
+      "Shares Held": "24857.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NOUVEAU MONDE GRAPHITE INC",
+      "Ticker": "NMG",
+      "Identifier": "66979W842",
+      "Weight": "0.385124267265",
+      "Market Value": "30538.95",
+      "Shares Held": "15661.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SANDFIRE RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.472892489908",
+      "Market Value": "37498.65",
+      "Shares Held": "2655.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CME Group Inc.",
+      "Ticker": "CME",
+      "Identifier": "000000000",
+      "Weight": "-1.27038628739",
+      "Market Value": "-100737",
+      "Shares Held": "2.00000000",
+      "Asset Category": "DCO"
+    },
+    {
+      "Name": "ENERGY FUELS INC",
+      "Ticker": "UUUU",
+      "Identifier": "292671708",
+      "Weight": "2.495082958001",
+      "Market Value": "197850.98",
+      "Shares Held": "10859.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "NGEX MINERALS LTD",
+      "Ticker": "NGXXF",
+      "Identifier": "62930A102",
+      "Weight": "0.4099796347",
+      "Market Value": "32509.89",
+      "Shares Held": "1555.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "COSMO ADVANCED MATERIALS & TECHNOLOGY CO LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.31014326568",
+      "Market Value": "24593.23",
+      "Shares Held": "710.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOCIEDAD QUIMICA Y MINERA DE CHILE SA",
+      "Ticker": "-",
+      "Identifier": "833635105",
+      "Weight": "1.068822037407",
+      "Market Value": "84753.69",
+      "Shares Held": "987.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "MITSUBISHI MATERIALS CORP",
+      "Ticker": "MIMTF",
+      "Identifier": "000000000",
+      "Weight": "0.431893631063",
+      "Market Value": "34247.59",
+      "Shares Held": "1058.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ATI INC",
+      "Ticker": "ATI",
+      "Identifier": "01741R102",
+      "Weight": "3.461391454099",
+      "Market Value": "274475.72",
+      "Shares Held": "1567.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "FORTUNA MINING CORP",
+      "Ticker": "FSM",
+      "Identifier": "349942102",
+      "Weight": "0.321604952895",
+      "Market Value": "25502.1",
+      "Shares Held": "2535.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "CENTURY ALUMINUM COMPANY",
+      "Ticker": "CENX",
+      "Identifier": "156431108",
+      "Weight": "0.402660130396",
+      "Market Value": "31929.48",
+      "Shares Held": "484.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ILUKA RESOURCES LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "2.540521743588",
+      "Market Value": "201454.11",
+      "Shares Held": "35442.00000000",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SOUTH32 LTD",
+      "Ticker": "-",
+      "Identifier": "000000000",
+      "Weight": "0.7538595085",
+      "Market Value": "59778.31",
+      "Shares Held": "17273.00000000",
+      "Asset Category": "EC"
+    }
+  ]
+}
