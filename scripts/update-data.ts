@@ -20,7 +20,7 @@
 // Usage: bun ./scripts/update-data.ts [--help]
 
 // Bun provides Node-compatible fs/promises; node types are intentionally not required at runtime.
-// @ts-ignore
+/// <reference types="bun" />
 import { appendFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 
 declare const process: {
