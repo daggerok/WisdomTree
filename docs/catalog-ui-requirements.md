@@ -23,8 +23,17 @@ so it only ever touches the catalog table, never those others.
 
 WisdomTree already has this column (see git history: "Add dividend frequency
 catalog column (#7)"). Investigation confirms it already meets the full spec.
-**No code changes are required for Feature 1.** Do not add a second frequency
-column or a second formatting function.
+**No further code changes are required for Feature 1.** Do not add a second
+frequency column or a second formatting function.
+
+Note: an earlier version of this plan judged that the column's label
+("Dividend Frequency") and placement (right after Expense) were WisdomTree's
+own established contract and should be preserved as-is, since neither
+`README.md` nor `docs/ui-contract.md` mandates a stricter order. That call was
+overridden directly by the repo owner: the column has since been renamed to
+**"Frequency"** and moved to the shared-contract position (after **SEC
+Yield**, before **YTD Return**) in commit `78a599d`. The description below
+reflects that corrected, current state — do not revert the name or position.
 
 What exists today, verified against `app.tsx`:
 
@@ -47,34 +56,31 @@ What exists today, verified against `app.tsx`:
   `row.dividendFrequency = formatDividendFrequency(fund.distributions.frequency ?? '—')`,
   so the coded string is what's sorted, displayed and exported — never
   recomputed in the browser.
-- **Catalog header**: `sortHeader('Dividend Frequency', 'dividendFrequency')`
-  at `app.tsx` line 899. WisdomTree's column label is **"Dividend Frequency"**
-  (not the bare "Frequency" SPDR uses) — this is this repo's own established
-  naming (paired with the existing "Dividend Yield" and "SEC Yield" columns)
-  and should be kept as-is; do not rename it.
-- **Column placement**: `TER`(Expense) → **Dividend Frequency** →
-  `Dividend Yield` → `SEC Yield` → `YTD Return` → ... (see the header row in
-  `renderFundsTable()`, `app.tsx` lines 890–916). Neither `README.md` nor
-  `docs/ui-contract.md` enumerates a stricter explicit column order than what
-  is already implemented, so this existing placement **is** WisdomTree's
-  column contract — keep it exactly where it is. Do not move it to "after SEC
-  Yield" (that was SPDR's own layout, not a cross-repo requirement — the
-  generic checklist explicitly says to preserve a sibling's existing explicit
-  order when it differs).
-- **Header tooltip**: `COLUMN_TOOLTIPS['Dividend Frequency']` (`app.tsx` line
-  150) already states the source and the numeric codes: *"Dividend Frequency
-  — sortable payment cadence from the Yahoo dividend history: 01 - Monthly,
+- **Catalog header**: `sortHeader('Frequency', 'dividendFrequency')` in
+  `renderFundsTable()` (`app.tsx`), placed right after the `SEC Yield` header
+  and right before `YTD Return` — matching the shared cross-repo contract
+  exactly (label **"Frequency"**, not "Dividend Frequency").
+- **Column placement**: `... → Expense → Dividend Yield → SEC Yield →
+  Frequency → YTD Return → ...` (see the header row in `renderFundsTable()`).
+  The row-template `<td>`s and the CSV/TXT export column order were moved to
+  match — all three (header, row, export) stay in lockstep.
+- **Header tooltip**: `COLUMN_TOOLTIPS.Frequency` (`app.tsx`, near the other
+  column tooltips) states the source and the numeric codes: *"Frequency —
+  sortable payment cadence from the Yahoo dividend history: 01 - Monthly,
   04 - Quarterly, 06 - Semi-annually, 12 - Annually; 00 denotes
   unavailable/unknown and 99 denotes irregular."* Rendered via
   `getHeaderTooltip()` as the `title` attribute on both the `<th>` and the
-  sort `<button>` inside `sortHeader()`.
-- **CSV/TXT export**: `currentExportRows()` (`app.tsx` line 1443) includes
-  `'Dividend Frequency'` in the `headers` array at the same relative position
-  as the visible catalog column, and `fund.dividendFrequency || ''` in the row
-  values (line 1525), in the same order. Both `exportCsv()` and `exportTxt()`
-  (lines 1561/1571) call the same `currentExportRows()`, so CSV and TXT are
-  automatically kept in sync — no separate export-formatting code exists that
-  could drift.
+  sort `<button>` inside `sortHeader()`. (A stale, generic `Frequency` tooltip
+  entry used to exist separately and shadow/be-shadowed-by this one when the
+  header was still called "Dividend Frequency" — that duplicate has been
+  removed; there is now exactly one `Frequency` entry in `COLUMN_TOOLTIPS`.)
+- **CSV/TXT export**: `currentExportRows()` (`app.tsx`) includes `'Frequency'`
+  in the `headers` array at the same relative position as the visible catalog
+  column (after `SEC Yield (%)`, before `YTD Return (%)`), and
+  `fund.dividendFrequency || ''` in the row values, in the same order. Both
+  `exportCsv()` and `exportTxt()` call the same `currentExportRows()`, so CSV
+  and TXT are automatically kept in sync — no separate export-formatting code
+  exists that could drift.
 - **Detail view**: `renderOverviewTable()`'s Distributions section (line
   1229) and `renderDistributionsTable()`'s subtitle (line 1311) both continue
   to show the raw, uncoded label (e.g. "Monthly") from
@@ -82,10 +88,13 @@ What exists today, verified against `app.tsx`:
   coded value is only required for the sortable catalog column and exports.
 
 **Conclusion: nothing to build here.** If the implementing agent is told to
-"add" this feature, it must first re-read `app.tsx` lines 301–313, 409–437,
-899, and 1516–1525 and confirm this description still matches before touching
-anything — it should not create a duplicate column, a duplicate formatting
-function, or a second export header.
+"add" this feature, it must first re-read the `formatDividendFrequency()`
+function, `normalizeFundRow()`'s wiring of `dividendFrequency`, the header row
+and row-template in `renderFundsTable()`, and `currentExportRows()`, and
+confirm this description still matches before touching anything — it should
+not create a duplicate column, a duplicate formatting function, rename the
+header away from "Frequency", move it away from between SEC Yield and YTD
+Return, or add a second export header.
 
 ## 2. Horizontally pinned catalog columns — needs to be built from scratch
 
