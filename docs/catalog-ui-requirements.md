@@ -327,3 +327,43 @@ tokens (`w-20` Use column, `dark:bg-slate-800/50` card background over
 values. The Ticker column's `7rem` width is an estimate that must be
 confirmed (or adjusted) by actually scrolling the rendered table, per the
 acceptance checklist.
+
+## Implementation status
+
+Feature 2 is implemented exactly as specified above — same selectors, class
+names and token values, no deviations:
+
+- `app.tsx`: `sortHeader()` gained the optional trailing `extraClass` parameter,
+  passed only at the catalog's `Ticker` call site; `useHeader()` hard-codes the
+  sticky classes (single call site); the two pinned `<td>`s in
+  `renderFundsTable()`'s row template carry the same classes.
+- `index.html`: the CSS block from section 2.2, inserted directly after the
+  existing `#table-scroll{overscroll-behavior:contain}` rule; the `<table>`'s
+  `border-collapse` utility class was left untouched (the ID+tag rule in the new
+  block overrides it in place, as documented).
+
+Feature 1 needed no changes and was re-verified as-is: the `Frequency` header
+still sits between `SEC Yield` and `YTD Return`, still renders the `00`/`01`/
+`04`/`06`/`12`/`99` codes, still sorts, and `currentExportRows()` still exports
+it in the same relative position for both CSV and TXT.
+
+Verification was performed in a real headless Chromium against the checked-in
+`api/wisdomtree` feed, as an automated counterpart of the section 2.3 checklist
+(36/36 checks, covering every bullet plus the Watchlist/Overview/Distributions/
+Holdings tables, search, sort, selection, dark theme and lazy loading). The
+mandatory step — scrolling `#table-scroll` all the way to the right, including
+on the last visible rows with the table also scrolled vertically — was run in
+light and dark theme at 1600px, 820px and 420px viewport widths; both pinned
+columns stayed visible, legible and clickable in every case.
+
+The `7rem` Ticker width from section 2.2 was confirmed by measurement rather
+than assumption: the `Use` column renders exactly 80px wide, so `Ticker`'s
+`left:5rem` offset is exact, and the `7rem` box fits both the `Ticker` header
+label plus sort arrow (48px) and the 4-character tickers with no overflow and no
+gap — the estimate did not need adjusting.
+
+Because "no bleed-through" is the exact regression this feature is about, the
+check for it was itself controlled: forcing
+`.catalog-sticky-col{background:transparent}` makes both the pinned-cell
+pixel-identity comparison and the text-free-interior scan detect the
+scrolled-behind column content, and removing the override makes them pass again.

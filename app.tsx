@@ -836,22 +836,28 @@ function sortRows(rows: any[]): any[] {
   return [...rows].sort((a, b) => compareValues(sortValue(a, key), sortValue(b, key)) * direction);
 }
 
-function sortHeader(label: string, key: string, numeric = false): string {
+// `extraClass` is opt-in and only used by the All ETFs catalog for its
+// horizontally pinned columns (`Use` + `Ticker`). Every other call site
+// (Watchlist, Overview, Distributions, generic sheet views) omits it and
+// renders exactly as before. See the `catalog-sticky-*` rules in index.html.
+function sortHeader(label: string, key: string, numeric = false, extraClass = ''): string {
   const active = state.sortKey === key;
   const arrow = active ? (state.sortDir === 'asc' ? ' ↑' : ' ↓') : '';
   const align = numeric ? ' text-right' : '';
   const tooltip = getHeaderTooltip(label);
-  return `<th class="py-3.5 px-4${align}" title="${escapeHtml(tooltip)}"><button data-sort="${escapeHtml(key)}" title="${escapeHtml(tooltip)}" class="uppercase tracking-wider hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400">${escapeHtml(label)}${arrow}</button></th>`;
+  return `<th class="py-3.5 px-4${align}${extraClass ? ' ' + extraClass : ''}" title="${escapeHtml(tooltip)}"><button data-sort="${escapeHtml(key)}" title="${escapeHtml(tooltip)}" class="uppercase tracking-wider hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:text-blue-600 dark:focus:text-blue-400">${escapeHtml(label)}${arrow}</button></th>`;
 }
 
 function indexHeader(): string {
   return `<th class="py-3.5 px-4 w-12 text-center" title="${escapeHtml(getHeaderTooltip('#'))}">#</th>`;
 }
 
+// Only the All ETFs catalog uses this header (single call site), so the
+// horizontal pin is hard-coded here rather than parameterized.
 function useHeader(): string {
   const candidates = visibleFunds();
   const allSelected = candidates.length > 0 && state.selected.size === candidates.length;
-  return `<th class="py-3.5 px-4 w-20 text-center" title="${escapeHtml(getHeaderTooltip('Use'))}">
+  return `<th class="catalog-sticky-col catalog-sticky-use py-3.5 px-4 w-20 text-center" title="${escapeHtml(getHeaderTooltip('Use'))}">
     <div class="inline-flex items-center justify-center gap-1">
       <input type="checkbox" id="select-all-checkbox" ${allSelected ? 'checked' : ''} class="w-4 h-4 accent-blue-600 cursor-pointer" title="Select / Deselect all ETFs" />
       <span>Use</span>
@@ -889,7 +895,7 @@ function renderFundsTable(): void {
     <tr>
       ${indexHeader()}
       ${useHeader()}
-      ${sortHeader('Ticker', 'ticker')}
+      ${sortHeader('Ticker', 'ticker', false, 'catalog-sticky-col catalog-sticky-ticker')}
       ${sortHeader('Fund Name', 'name')}
       ${sortHeader('Type', 'category')}
       ${sortHeader('NAV', 'navValue', true)}
@@ -925,13 +931,13 @@ function renderFundsTable(): void {
       return `
         <tr data-ticker="${escapeHtml(fund.ticker)}" class="cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/30 transition border-b border-slate-100 dark:border-slate-700/30 ${selected ? 'selected-row' : ''}">
           <td class="py-2.5 px-4 text-slate-400 dark:text-slate-500 text-xs text-center font-mono">${index + 1}</td>
-          <td class="py-2.5 px-4 text-center">
+          <td class="catalog-sticky-col catalog-sticky-use py-2.5 px-4 text-center">
             <div class="inline-flex items-center justify-center gap-1.5">
               <input data-checkbox="${escapeHtml(fund.ticker)}" type="checkbox" ${selected ? 'checked' : ''} class="w-4 h-4 accent-blue-600" aria-label="Use ${escapeHtml(fund.ticker)}" />
               <button data-blacklist="${escapeHtml(fund.ticker)}" class="w-4 h-4 rounded text-slate-300 dark:text-slate-600 hover:text-rose-500 dark:hover:text-rose-400 leading-none transition" title="Blacklist ${escapeHtml(fund.ticker)} — hide it from All ETFs">✕</button>
             </div>
           </td>
-          <td class="py-2.5 px-4 font-mono font-semibold text-blue-600 dark:text-blue-400">${escapeHtml(fund.ticker)}</td>
+          <td class="catalog-sticky-col catalog-sticky-ticker py-2.5 px-4 font-mono font-semibold text-blue-600 dark:text-blue-400">${escapeHtml(fund.ticker)}</td>
           <td class="py-2.5 px-4 text-slate-700 dark:text-slate-300 font-medium" title="${escapeHtml(fund.name)}">${escapeHtml(fund.name)}</td>
           <td class="py-2.5 px-4 text-slate-600 dark:text-slate-300">${escapeHtml(categoryLabel(fund.category))}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${escapeHtml(fund.nav || '—')}</td>
