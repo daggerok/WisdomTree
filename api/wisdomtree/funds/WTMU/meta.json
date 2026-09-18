@@ -2,7 +2,7 @@
   "ticker": "WTMU",
   "name": "WisdomTree Core Laddered Municipal Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Municipal Bonds",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmu",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmu",
@@ -24,9 +24,9 @@
     "value": 0.25
   },
   "nav": {
-    "display": "$24.78",
-    "value": 24.782,
-    "asOfDate": "Sep 16 2026"
+    "display": "$24.81",
+    "value": 24.808,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$24.73",
@@ -38,18 +38,18 @@
     "value": -0.21
   },
   "aum": {
-    "display": "$8.93 M",
-    "value": 8927100,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$8.92 M",
+    "value": 8921530,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.28,
-    "dividendYieldText": "3.28%",
+    "dividendYield": 3.27,
+    "dividendYieldText": "3.27%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 3.39,
-    "secYield": 3.33,
-    "secYieldText": "3.33%",
+    "secYield": 3.34,
+    "secYieldText": "3.34%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -176,8 +176,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 365,
-    "asOf": "Sep 16 2026",
+    "totalRows": 366,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

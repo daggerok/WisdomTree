@@ -2,7 +2,7 @@
   "ticker": "DLN",
   "name": "WisdomTree U.S. LargeCap Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Large Cap Value",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dln",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dln",
@@ -24,32 +24,32 @@
     "value": 0.28
   },
   "nav": {
-    "display": "$98.36",
-    "value": 98.356,
-    "asOfDate": "Sep 16 2026"
+    "display": "$98.98",
+    "value": 98.983,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$99.31",
-    "value": 99.31,
-    "asOfDate": "Sep 15 2026"
+    "display": "$98.34",
+    "value": 98.34,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
     "display": "-0.02%",
-    "value": -0.018
+    "value": -0.016
   },
   "aum": {
-    "display": "$6.27 B",
-    "value": 6267586560,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$6.21 B",
+    "value": 6211182590,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.77,
-    "dividendYieldText": "1.77%",
+    "dividendYield": 1.76,
+    "dividendYieldText": "1.76%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.57,
-    "secYield": 1.78,
-    "secYieldText": "1.78%",
+    "distributionRate": 1.59,
+    "secYield": 1.79,
+    "secYieldText": "1.79%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -878,8 +878,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5094,
-    "asOf": "Sep 16 2026",
+    "totalRows": 5095,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

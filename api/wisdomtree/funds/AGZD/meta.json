@@ -2,7 +2,7 @@
   "ticker": "AGZD",
   "name": "WisdomTree Interest Rate Hedged U.S. Aggregate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/agzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/agzd",
@@ -24,32 +24,32 @@
     "value": 0.23
   },
   "nav": {
-    "display": "$22.60",
-    "value": 22.597,
-    "asOfDate": "Sep 16 2026"
+    "display": "$22.64",
+    "value": 22.64,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$22.50",
-    "value": 22.5,
-    "asOfDate": "Sep 15 2026"
+    "display": "$22.65",
+    "value": 22.65,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.39%",
-    "value": -0.386
+    "display": "0.24%",
+    "value": 0.236
   },
   "aum": {
-    "display": "$144.56 M",
-    "value": 144555380,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$144.62 M",
+    "value": 144617550,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.99,
-    "dividendYieldText": "3.99%",
+    "dividendYield": 3.98,
+    "dividendYieldText": "3.98%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 4.25,
-    "secYield": 4.43,
-    "secYieldText": "4.43%",
+    "secYield": 4.44,
+    "secYieldText": "4.44%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -712,8 +712,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3204,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3205,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

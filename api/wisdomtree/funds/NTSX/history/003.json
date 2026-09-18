@@ -2,7 +2,7 @@
   "ticker": "NTSX",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2041,
+  "totalRows": 2042,
   "headers": [
     "Date",
     "Close",
@@ -255,6 +255,12 @@
       "Close": "58.65999984741211",
       "Adj Close": "58.65999984741211",
       "Volume": "28500"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "59.400001525878906",
+      "Adj Close": "59.400001525878906",
+      "Volume": "35400"
     }
   ]
 }

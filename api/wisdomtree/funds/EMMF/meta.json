@@ -1,12 +1,12 @@
 {
   "ticker": "EMMF",
-  "name": "WisdomTree Emerging Markets Multifactor Fund",
+  "name": "Emerging Markets Multifactor",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/emmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/emmf",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/EMMF",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y782",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$37.42",
-    "value": 37.42,
+    "display": "$38.10",
+    "value": 38.1,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.13%",
-    "value": 0.129
+    "display": "1.95%",
+    "value": 1.95
   },
   "aum": {
-    "display": "$178.83 M",
-    "value": 178828900,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$179.38 M",
+    "value": 179384480,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.98,
-    "dividendYieldText": "1.98%",
+    "dividendYield": 1.97,
+    "dividendYieldText": "1.97%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.42,
-    "secYield": 1.06,
-    "secYieldText": "1.06%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 5.63,
-      "mo1Text": "5.63%",
-      "qtd": -3.57,
-      "qtdText": "-3.57%",
-      "ytd": 22.1,
-      "ytdText": "22.10%",
-      "yr1": 32.25,
-      "yr1Text": "32.25%",
-      "yr3": 20.29,
-      "yr3Text": "20.29%",
-      "yr5": 10.41,
-      "yr5Text": "10.41%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": -0.76,
+      "mo1Text": "-0.76%",
+      "qtd": 0.79,
+      "qtdText": "0.79%",
+      "ytd": 21.81,
+      "ytdText": "21.81%",
+      "yr1": 26.94,
+      "yr1Text": "26.94%",
+      "yr3": 20.06,
+      "yr3Text": "20.06%",
+      "yr5": 10.46,
+      "yr5Text": "10.46%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 8.11,
-      "sinceInceptionText": "8.11%"
+      "sinceInception": 7.99,
+      "sinceInceptionText": "7.99%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 37.05,
-      "yr3": 21.64,
-      "yr5": 10.63,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
       "yr10": null,
-      "sinceInception": 8.43
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -239,8 +239,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2035,
-    "asOf": "Sep 16 2026",
+    "totalRows": 2036,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

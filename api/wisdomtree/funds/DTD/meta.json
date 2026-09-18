@@ -2,7 +2,7 @@
   "ticker": "DTD",
   "name": "WisdomTree U.S. Total Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Large Cap Value",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dtd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dtd",
@@ -24,9 +24,9 @@
     "value": 0.28
   },
   "nav": {
-    "display": "$94.77",
-    "value": 94.768,
-    "asOfDate": "Sep 16 2026"
+    "display": "$95.33",
+    "value": 95.33,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$94.72",
@@ -38,16 +38,16 @@
     "value": -0.051
   },
   "aum": {
-    "display": "$1.64 B",
-    "value": 1641424900,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$1.63 B",
+    "value": 1625270910,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.85,
-    "dividendYieldText": "1.85%",
+    "dividendYield": 1.84,
+    "dividendYieldText": "1.84%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.63,
+    "distributionRate": 1.65,
     "secYield": 1.87,
     "secYieldText": "1.87%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -872,8 +872,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5094,
-    "asOf": "Sep 16 2026",
+    "totalRows": 5095,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

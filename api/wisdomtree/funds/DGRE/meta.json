@@ -2,7 +2,7 @@
   "ticker": "DGRE",
   "name": "WisdomTree Emerging Markets Quality Dividend Growth Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgre",
@@ -24,9 +24,9 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$40.22",
-    "value": 40.218,
-    "asOfDate": "Sep 16 2026"
+    "display": "$40.31",
+    "value": 40.308,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$40.05",
@@ -38,18 +38,18 @@
     "value": -0.42
   },
   "aum": {
-    "display": "$148.23 M",
-    "value": 148225810,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$148.81 M",
+    "value": 148807070,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 1.28,
     "dividendYieldText": "1.28%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.05,
-    "secYield": 1.61,
-    "secYieldText": "1.61%",
+    "distributionRate": 2.04,
+    "secYield": 1.64,
+    "secYieldText": "1.64%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -300,8 +300,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3301,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3302,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

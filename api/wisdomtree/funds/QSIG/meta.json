@@ -1,12 +1,12 @@
 {
   "ticker": "QSIG",
-  "name": "WisdomTree U.S. Short-Term Corporate Bond Fund",
+  "name": "U.S. Short-Term Corporate Bond",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Credit",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qsig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qsig",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/QSIG",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717X156",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$47.64",
-    "value": 47.644,
+    "display": "$47.73",
+    "value": 47.725,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.05%",
-    "value": -0.054
+    "display": "0.12%",
+    "value": 0.12
   },
   "aum": {
-    "display": "$52.47 M",
-    "value": 52469270,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$52.44 M",
+    "value": 52436580,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.48,
-    "dividendYieldText": "4.48%",
+    "dividendYield": 4.47,
+    "dividendYieldText": "4.47%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 4.4,
-    "secYield": 4.85,
-    "secYieldText": "4.85%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.26,
-      "mo1Text": "0.26%",
-      "qtd": 0.29,
-      "qtdText": "0.29%",
-      "ytd": 0.98,
-      "ytdText": "0.98%",
-      "yr1": 2.66,
-      "yr1Text": "2.66%",
-      "yr3": 5.26,
-      "yr3Text": "5.26%",
-      "yr5": 2.24,
-      "yr5Text": "2.24%",
-      "yr10": 2.47,
-      "yr10Text": "2.47%",
-      "sinceInception": 2.38,
-      "sinceInceptionText": "2.38%"
+      "asOfDate": "Sep 17 2026",
+      "mo1": -0.77,
+      "mo1Text": "-0.77%",
+      "qtd": -0.45,
+      "qtdText": "-0.45%",
+      "ytd": 0.29,
+      "ytdText": "0.29%",
+      "yr1": 1.31,
+      "yr1Text": "1.31%",
+      "yr3": 5.13,
+      "yr3Text": "5.13%",
+      "yr5": 2.1,
+      "yr5Text": "2.10%",
+      "yr10": 2.4,
+      "yr10Text": "2.40%",
+      "sinceInception": 2.34,
+      "sinceInceptionText": "2.34%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 3.58,
-      "yr3": 5.43,
-      "yr5": 2.25,
-      "yr10": 2.47,
-      "sinceInception": 2.41
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -616,8 +616,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2612,
-    "asOf": "Sep 16 2026",
+    "totalRows": 2613,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

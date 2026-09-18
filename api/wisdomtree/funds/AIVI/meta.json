@@ -2,7 +2,7 @@
   "ticker": "AIVI",
   "name": "WisdomTree International AI Enhanced Value Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/aivi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/aivi",
@@ -24,9 +24,9 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$59.54",
-    "value": 59.544,
-    "asOfDate": "Sep 16 2026"
+    "display": "$59.73",
+    "value": 59.735,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$58.94",
@@ -38,18 +38,18 @@
     "value": -1.023
   },
   "aum": {
-    "display": "$62.30 M",
-    "value": 62295200,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$62.52 M",
+    "value": 62521400,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.92,
-    "dividendYieldText": "4.92%",
+    "dividendYield": 4.91,
+    "dividendYieldText": "4.91%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 10.99,
-    "secYield": 2.92,
-    "secYieldText": "2.92%",
+    "distributionRate": 10.95,
+    "secYield": 2.93,
+    "secYieldText": "2.93%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -405,8 +405,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5094,
-    "asOf": "Sep 16 2026",
+    "totalRows": 5095,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

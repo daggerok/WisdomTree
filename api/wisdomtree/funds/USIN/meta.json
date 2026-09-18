@@ -2,7 +2,7 @@
   "ticker": "USIN",
   "name": "WisdomTree 7-10 Year Laddered Treasury Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Government Strategies",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usin",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usin",
@@ -24,9 +24,9 @@
     "value": 0.15
   },
   "nav": {
-    "display": "$47.73",
-    "value": 47.734,
-    "asOfDate": "Sep 16 2026"
+    "display": "$48.01",
+    "value": 48.009,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$47.73",
@@ -39,17 +39,17 @@
   },
   "aum": {
     "display": "$4.30 M",
-    "value": 4300950,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "value": 4296090,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.2,
-    "dividendYieldText": "4.20%",
+    "dividendYield": 4.17,
+    "dividendYieldText": "4.17%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 4.27,
-    "secYield": 4.67,
-    "secYieldText": "4.67%",
+    "secYield": 4.68,
+    "secYieldText": "4.68%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -228,8 +228,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 629,
-    "asOf": "Sep 16 2026",
+    "totalRows": 630,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

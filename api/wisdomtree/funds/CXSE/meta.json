@@ -1,12 +1,12 @@
 {
   "ticker": "CXSE",
-  "name": "WisdomTree China ex-State-Owned Enterprises Fund",
+  "name": "China ex-State-Owned Enterprises",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/cxse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/cxse",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/CXSE",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717X719",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$36.02",
-    "value": 36.02,
-    "asOfDate": "Sep 15 2026"
+    "display": "$36.03",
+    "value": 36.035,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.11%",
-    "value": 0.112
+    "display": "-0.26%",
+    "value": -0.26
   },
   "aum": {
-    "display": "$463.24 M",
-    "value": 463236990,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$465.14 M",
+    "value": 465142590,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.6,
-    "dividendYieldText": "1.60%",
+    "dividendYield": 1.61,
+    "dividendYieldText": "1.61%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1,
-    "secYield": 0.94,
-    "secYieldText": "0.94%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": -1.96,
-      "mo1Text": "-1.96%",
-      "qtd": -5.48,
-      "qtdText": "-5.48%",
-      "ytd": -6.18,
-      "ytdText": "-6.18%",
-      "yr1": -6.71,
-      "yr1Text": "-6.71%",
-      "yr3": 8.08,
-      "yr3Text": "8.08%",
-      "yr5": -6.37,
-      "yr5Text": "-6.37%",
-      "yr10": 5.41,
-      "yr10Text": "5.41%",
-      "sinceInception": 4.43,
-      "sinceInceptionText": "4.43%"
+      "asOfDate": "Sep 17 2026",
+      "mo1": -7.49,
+      "mo1Text": "-7.49%",
+      "qtd": -6.92,
+      "qtdText": "-6.92%",
+      "ytd": -9.89,
+      "ytdText": "-9.89%",
+      "yr1": -15.49,
+      "yr1Text": "-15.49%",
+      "yr3": 7.71,
+      "yr3Text": "7.71%",
+      "yr5": -6.21,
+      "yr5Text": "-6.21%",
+      "yr10": 4.48,
+      "yr10Text": "4.48%",
+      "sinceInception": 4.05,
+      "sinceInceptionText": "4.05%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 14.34,
-      "yr3": 10.03,
-      "yr5": -9.08,
-      "yr10": 6.94,
-      "sinceInception": 4.74
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -264,8 +264,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3516,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3517,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "CEW",
   "name": "WisdomTree Emerging Currency Strategy Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Currency Strategies",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/cew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/cew",
@@ -24,28 +24,28 @@
     "value": 0.55
   },
   "nav": {
-    "display": "$19.84",
-    "value": 19.843,
-    "asOfDate": "Sep 16 2026"
+    "display": "$19.80",
+    "value": 19.796,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$19.81",
-    "value": 19.808,
-    "asOfDate": "Sep 15 2026"
+    "display": "$19.74",
+    "value": 19.743,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.21%",
-    "value": -0.21
+    "display": "-0.51%",
+    "value": -0.507
   },
   "aum": {
-    "display": "$17.86 M",
-    "value": 17864590,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$19.84 M",
+    "value": 19843090,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.35,
-    "dividendYieldText": "2.35%",
+    "dividendYield": 2.36,
+    "dividendYieldText": "2.36%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 2.35,
     "secYield": 3.09,
@@ -152,8 +152,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4350,
-    "asOf": "Sep 16 2026",
+    "totalRows": 4351,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

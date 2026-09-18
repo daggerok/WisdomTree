@@ -2,7 +2,7 @@
   "ticker": "DEW",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5094,
+  "totalRows": 5095,
   "headers": [
     "Date",
     "Close",
@@ -573,6 +573,12 @@
       "Close": "71.29000091552734",
       "Adj Close": "71.29000091552734",
       "Volume": "23100"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "71.75",
+      "Adj Close": "71.75",
+      "Volume": "4000"
     }
   ]
 }

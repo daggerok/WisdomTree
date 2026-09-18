@@ -1,12 +1,12 @@
 {
   "ticker": "WDEF",
-  "name": "WisdomTree Europe Defense Fund",
+  "name": "Europe Defense",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country Small Cap",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdef",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDEF",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y337",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,49 +29,49 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$29.11",
-    "value": 29.112,
-    "asOfDate": "Sep 15 2026"
+    "display": "$29.30",
+    "value": 29.305,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.07%",
-    "value": 0.066
+    "display": "0.08%",
+    "value": 0.08
   },
   "aum": {
-    "display": "$84.37 M",
-    "value": 84368680,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$84.91 M",
+    "value": 84914380,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0.07,
     "dividendYieldText": "0.07%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.07,
-    "secYield": 0.63,
-    "secYieldText": "0.63%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.86,
-      "mo1Text": "0.86%",
-      "qtd": -2.33,
-      "qtdText": "-2.33%",
-      "ytd": 4.91,
-      "ytdText": "4.91%",
-      "yr1": 4.73,
-      "yr1Text": "4.73%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": -11.67,
+      "mo1Text": "-11.67%",
+      "qtd": 4.77,
+      "qtdText": "4.77%",
+      "ytd": 1.02,
+      "ytdText": "1.02%",
+      "yr1": -8.86,
+      "yr1Text": "-8.86%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 3.06,
-      "sinceInceptionText": "3.06%"
+      "sinceInception": -2.1,
+      "sinceInceptionText": "-2.10%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,7 +80,7 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": -7.85
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -112,8 +112,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 294,
-    "asOf": "Sep 16 2026",
+    "totalRows": 295,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -1,8 +1,8 @@
 {
   "ticker": "NTSD",
-  "name": "WisdomTree Efficient U.S. Plus International Equity Fund",
+  "name": "Efficient U.S. Plus International Equity",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y246",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -26,40 +26,40 @@
   "nav": {
     "display": "$46.59",
     "value": 46.595,
-    "asOfDate": "Sep 15 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$46.67",
-    "value": 46.67,
-    "asOfDate": "Sep 15 2026"
+    "display": "$47.33",
+    "value": 47.327,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.16%",
-    "value": 0.161
+    "display": "1.57%",
+    "value": 1.57
   },
   "aum": {
-    "display": "$45.60 M",
-    "value": 45599410,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$45.43 M",
+    "value": 45430180,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": null,
-    "secYield": 0.87,
-    "secYieldText": "0.87%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 16 2026",
-      "mo1": -4.36,
-      "mo1Text": "-4.36%",
-      "qtd": 1.54,
-      "qtdText": "1.54%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": -3.07,
+      "mo1Text": "-3.07%",
+      "qtd": 2.98,
+      "qtdText": "2.98%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -70,8 +70,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 44.01,
-      "sinceInceptionText": "44.01%"
+      "sinceInception": 47.83,
+      "sinceInceptionText": "47.83%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -114,8 +114,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 125,
-    "asOf": "Sep 16 2026",
+    "totalRows": 126,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

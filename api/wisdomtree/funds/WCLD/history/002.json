@@ -2,7 +2,7 @@
   "ticker": "WCLD",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1766,
+  "totalRows": 1767,
   "headers": [
     "Date",
     "Close",
@@ -4605,6 +4605,12 @@
       "Close": "40.86000061035156",
       "Adj Close": "40.86000061035156",
       "Volume": "453300"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "41.060001373291016",
+      "Adj Close": "41.060001373291016",
+      "Volume": "606500"
     }
   ]
 }

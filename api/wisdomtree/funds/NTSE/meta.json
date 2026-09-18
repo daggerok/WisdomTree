@@ -2,7 +2,7 @@
   "ticker": "NTSE",
   "name": "WisdomTree Emerging Markets Efficient Core Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntse",
@@ -24,9 +24,9 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$45.85",
-    "value": 45.85,
-    "asOfDate": "Sep 16 2026"
+    "display": "$45.96",
+    "value": 45.959,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$45.69",
@@ -38,18 +38,18 @@
     "value": -0.341
   },
   "aum": {
-    "display": "$54.82 M",
-    "value": 54820030,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$55.02 M",
+    "value": 55019940,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.69,
-    "dividendYieldText": "2.69%",
+    "dividendYield": 2.68,
+    "dividendYieldText": "2.68%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.84,
-    "secYield": 1.45,
-    "secYieldText": "1.45%",
+    "distributionRate": 1.83,
+    "secYield": 1.47,
+    "secYieldText": "1.47%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -198,8 +198,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1337,
-    "asOf": "Sep 16 2026",
+    "totalRows": 1338,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

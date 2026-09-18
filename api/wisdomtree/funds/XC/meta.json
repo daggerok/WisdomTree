@@ -2,7 +2,7 @@
   "ticker": "XC",
   "name": "WisdomTree True Emerging Markets Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xc",
@@ -24,9 +24,9 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$31.66",
-    "value": 31.66,
-    "asOfDate": "Sep 16 2026"
+    "display": "$31.82",
+    "value": 31.822,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$31.40",
@@ -38,18 +38,18 @@
     "value": -0.837
   },
   "aum": {
-    "display": "$76.05 M",
-    "value": 76053220,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$75.98 M",
+    "value": 75984100,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.06,
-    "dividendYieldText": "2.06%",
+    "dividendYield": 2.05,
+    "dividendYieldText": "2.05%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 2.21,
-    "secYield": 1.67,
-    "secYieldText": "1.67%",
+    "secYield": 1.71,
+    "secYieldText": "1.71%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -174,8 +174,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 999,
-    "asOf": "Sep 16 2026",
+    "totalRows": 1000,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "EUDG",
   "name": "WisdomTree Europe Quality Dividend Growth Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eudg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eudg",
@@ -24,30 +24,30 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$38.78",
-    "value": 38.782,
-    "asOfDate": "Sep 16 2026"
+    "display": "$38.85",
+    "value": 38.853,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$38.53",
-    "value": 38.532,
-    "asOfDate": "Sep 15 2026"
+    "display": "$38.29",
+    "value": 38.288,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.27%",
-    "value": -0.271
+    "display": "-1.29%",
+    "value": -1.292
   },
   "aum": {
-    "display": "$67.61 M",
-    "value": 67612700,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$67.87 M",
+    "value": 67869180,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.38,
-    "dividendYieldText": "2.38%",
+    "dividendYield": 2.37,
+    "dividendYieldText": "2.37%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.54,
+    "distributionRate": 5.52,
     "secYield": 2.11,
     "secYieldText": "2.11%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -307,8 +307,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3109,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3110,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

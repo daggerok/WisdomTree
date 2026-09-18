@@ -1,12 +1,12 @@
 {
   "ticker": "WTMF",
-  "name": "WisdomTree Managed Futures Strategy Fund",
+  "name": "Managed Futures Strategy",
   "category": "Alternative",
-  "categoryPath": "Alternative",
+  "categoryPath": "Alternative / Managed Futures",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTMF",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W125",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.30",
-    "value": 42.3,
+    "display": "$42.03",
+    "value": 42.026,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.90%",
-    "value": 0.903
+    "display": "0.26%",
+    "value": 0.26
   },
   "aum": {
-    "display": "$268.71 M",
-    "value": 268711170,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$268.28 M",
+    "value": 268276610,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.76,
-    "dividendYieldText": "2.76%",
+    "dividendYield": 2.75,
+    "dividendYieldText": "2.75%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.79,
-    "secYield": 2.44,
-    "secYieldText": "2.44%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 2.81,
-      "mo1Text": "2.81%",
-      "qtd": 2.11,
-      "qtdText": "2.11%",
-      "ytd": 10.35,
-      "ytdText": "10.35%",
-      "yr1": 18.54,
-      "yr1Text": "18.54%",
-      "yr3": 10.39,
-      "yr3Text": "10.39%",
-      "yr5": 6.41,
-      "yr5Text": "6.41%",
-      "yr10": 3.86,
-      "yr10Text": "3.86%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": 0.36,
+      "mo1Text": "0.36%",
+      "qtd": 3.57,
+      "qtdText": "3.57%",
+      "ytd": 10.55,
+      "ytdText": "10.55%",
+      "yr1": 15.91,
+      "yr1Text": "15.91%",
+      "yr3": 9.87,
+      "yr3Text": "9.87%",
+      "yr5": 6.46,
+      "yr5Text": "6.46%",
+      "yr10": 3.76,
+      "yr10Text": "3.76%",
       "sinceInception": 1.24,
       "sinceInceptionText": "1.24%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 18.9,
-      "yr3": 9.28,
-      "yr5": 5.88,
-      "yr10": 3.16,
-      "sinceInception": 1.04
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -163,8 +163,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3947,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3948,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

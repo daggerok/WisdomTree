@@ -2,7 +2,7 @@
   "ticker": "WDRN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 86,
+  "totalRows": 87,
   "headers": [
     "Date",
     "Close",
@@ -525,6 +525,12 @@
       "Close": "25.549999237060547",
       "Adj Close": "25.549999237060547",
       "Volume": "4000"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "26.18000030517578",
+      "Adj Close": "26.18000030517578",
+      "Volume": "4300"
     }
   ]
 }

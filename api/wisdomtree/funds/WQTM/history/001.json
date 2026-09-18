@@ -2,7 +2,7 @@
   "ticker": "WQTM",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 235,
+  "totalRows": 236,
   "headers": [
     "Date",
     "Close",
@@ -1419,6 +1419,12 @@
       "Close": "31.059999465942383",
       "Adj Close": "31.059999465942383",
       "Volume": "218000"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "32.13999938964844",
+      "Adj Close": "32.13999938964844",
+      "Volume": "243400"
     }
   ]
 }

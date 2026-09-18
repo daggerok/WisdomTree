@@ -2,7 +2,7 @@
   "ticker": "USSH",
   "name": "WisdomTree 1-3 Year Laddered Treasury Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Government Strategies",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/ussh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/ussh",
@@ -24,9 +24,9 @@
     "value": 0.15
   },
   "nav": {
-    "display": "$49.84",
-    "value": 49.837,
-    "asOfDate": "Sep 16 2026"
+    "display": "$49.90",
+    "value": 49.896,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$49.84",
@@ -38,18 +38,18 @@
     "value": 0.016
   },
   "aum": {
-    "display": "$22.45 M",
-    "value": 22447720,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$22.43 M",
+    "value": 22426760,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 3.58,
     "dividendYieldText": "3.58%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 3.73,
-    "secYield": 4.25,
-    "secYieldText": "4.25%",
+    "secYield": 4.26,
+    "secYieldText": "4.26%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -232,8 +232,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 629,
-    "asOf": "Sep 16 2026",
+    "totalRows": 630,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

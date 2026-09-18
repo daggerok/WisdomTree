@@ -2,7 +2,7 @@
   "ticker": "EPI",
   "name": "WisdomTree India Earnings Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/epi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/epi",
@@ -24,24 +24,24 @@
     "value": 0.84
   },
   "nav": {
-    "display": "$41.61",
-    "value": 41.609,
-    "asOfDate": "Sep 16 2026"
+    "display": "$41.73",
+    "value": 41.733,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$41.37",
-    "value": 41.37,
-    "asOfDate": "Sep 15 2026"
+    "display": "$41.34",
+    "value": 41.34,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.06%",
-    "value": -0.057
+    "display": "-0.65%",
+    "value": -0.649
   },
   "aum": {
-    "display": "$1.92 B",
-    "value": 1920653440,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$1.93 B",
+    "value": 1930633980,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0,
@@ -318,8 +318,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4669,
-    "asOf": "Sep 16 2026",
+    "totalRows": 4670,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

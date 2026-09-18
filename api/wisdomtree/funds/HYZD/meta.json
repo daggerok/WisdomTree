@@ -1,8 +1,8 @@
 {
   "ticker": "HYZD",
-  "name": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
+  "name": "Interest Rate Hedged High Yield Bond",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Credit",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W430",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -26,52 +26,52 @@
   "nav": {
     "display": "$22.62",
     "value": 22.621,
-    "asOfDate": "Sep 15 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$22.61",
-    "value": 22.6108,
-    "asOfDate": "Sep 15 2026"
+    "display": "$22.64",
+    "value": 22.64,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.06%",
-    "value": -0.056
+    "display": "0.08%",
+    "value": 0.08
   },
   "aum": {
-    "display": "$300.30 M",
-    "value": 300300640,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$300.86 M",
+    "value": 300855070,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 5.8,
     "dividendYieldText": "5.80%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 6.08,
-    "secYieldText": "6.08%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 16 2026",
-      "mo1": 0.35,
-      "mo1Text": "0.35%",
-      "qtd": 1.23,
-      "qtdText": "1.23%",
-      "ytd": 4.28,
-      "ytdText": "4.28%",
-      "yr1": 6.23,
-      "yr1Text": "6.23%",
-      "yr3": 8.26,
-      "yr3Text": "8.26%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": 0.49,
+      "mo1Text": "0.49%",
+      "qtd": 1.36,
+      "qtdText": "1.36%",
+      "ytd": 4.42,
+      "ytdText": "4.42%",
+      "yr1": 6.28,
+      "yr1Text": "6.28%",
+      "yr3": 8.31,
+      "yr3Text": "8.31%",
       "yr5": 6.17,
       "yr5Text": "6.17%",
-      "yr10": 5.24,
-      "yr10Text": "5.24%",
-      "sinceInception": 4.27,
-      "sinceInceptionText": "4.27%"
+      "yr10": 5.32,
+      "yr10Text": "5.32%",
+      "sinceInception": 4.28,
+      "sinceInceptionText": "4.28%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -705,8 +705,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3204,
-    "asOf": "Sep 16 2026",
+    "totalRows": 3205,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "WSPC",
   "name": "WisdomTree Space Economy Fund",
   "category": "Thematic",
-  "categoryPath": "Thematic",
+  "categoryPath": "Thematic / -",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wspc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wspc",
@@ -24,24 +24,24 @@
     "value": 0.75
   },
   "nav": {
-    "display": "$26.70",
-    "value": 26.704,
-    "asOfDate": "Sep 16 2026"
+    "display": "$27.36",
+    "value": 27.359,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$26.36",
-    "value": 26.365,
-    "asOfDate": "Sep 15 2026"
+    "display": "$26.67",
+    "value": 26.67,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.037
+    "display": "-0.13%",
+    "value": -0.127
   },
   "aum": {
-    "display": "$1.32 M",
-    "value": 1317770,
-    "asOfDate": "Sep 15 2026",
-    "source": "previous run"
+    "display": "$1.34 M",
+    "value": 1335190,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": null,
@@ -98,8 +98,8 @@
     ],
     "pageSize": 250,
     "totalRows": 10,
-    "asOfDate": "2026-09-15",
-    "asOf": "Sep 15 2026",
+    "asOfDate": "2026-09-16",
+    "asOf": "Sep 16 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -107,8 +107,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 49,
-    "asOf": "Sep 16 2026",
+    "totalRows": 50,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

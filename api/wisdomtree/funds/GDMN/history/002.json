@@ -2,7 +2,7 @@
   "ticker": "GDMN",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1191,
+  "totalRows": 1192,
   "headers": [
     "Date",
     "Close",
@@ -1155,6 +1155,12 @@
       "Close": "89.55000305175781",
       "Adj Close": "89.55000305175781",
       "Volume": "35800"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "93.43000030517578",
+      "Adj Close": "93.43000030517578",
+      "Volume": "20900"
     }
   ]
 }

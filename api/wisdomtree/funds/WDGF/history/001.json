@@ -2,7 +2,7 @@
   "ticker": "WDGF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 254,
+  "totalRows": 255,
   "headers": [
     "Date",
     "Close",
@@ -1533,6 +1533,12 @@
       "Close": "30.60300064086914",
       "Adj Close": "30.60300064086914",
       "Volume": "400"
+    },
+    {
+      "Date": "Sep 17 2026",
+      "Close": "30.929000854492188",
+      "Adj Close": "30.929000854492188",
+      "Volume": "200"
     }
   ]
 }

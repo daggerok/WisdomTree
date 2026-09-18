@@ -1,12 +1,12 @@
 {
   "ticker": "MTGP",
-  "name": "WisdomTree Mortgage Plus Bond Fund",
+  "name": "Mortgage Plus Bond",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Securitized Sector",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/mtgp",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/mtgp",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/MTGP",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y725",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.88",
-    "value": 42.885,
+    "display": "$43.10",
+    "value": 43.1,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.19%",
-    "value": 0.194
+    "display": "0.70%",
+    "value": 0.7
   },
   "aum": {
-    "display": "$72.83 M",
-    "value": 72829620,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$72.76 M",
+    "value": 72763280,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.51,
-    "dividendYieldText": "4.51%",
+    "dividendYield": 4.48,
+    "dividendYieldText": "4.48%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 4.06,
-    "secYield": 4.35,
-    "secYieldText": "4.35%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.2,
-      "mo1Text": "0.20%",
-      "qtd": -0.37,
-      "qtdText": "-0.37%",
-      "ytd": 0.16,
-      "ytdText": "0.16%",
-      "yr1": 2.58,
-      "yr1Text": "2.58%",
-      "yr3": 4.58,
-      "yr3Text": "4.58%",
-      "yr5": 0.15,
-      "yr5Text": "0.15%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": -1.16,
+      "mo1Text": "-1.16%",
+      "qtd": -1.48,
+      "qtdText": "-1.48%",
+      "ytd": -0.71,
+      "ytdText": "-0.71%",
+      "yr1": 0.27,
+      "yr1Text": "0.27%",
+      "yr3": 4.65,
+      "yr3Text": "4.65%",
+      "yr5": 0,
+      "yr5Text": "0.00%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 0.91,
-      "sinceInceptionText": "0.91%"
+      "sinceInception": 0.75,
+      "sinceInceptionText": "0.75%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 4.62,
-      "yr3": 4.68,
-      "yr5": 0.43,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
       "yr10": null,
-      "sinceInception": 1.07
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -433,8 +433,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1702,
-    "asOf": "Sep 16 2026",
+    "totalRows": 1703,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "WCLD",
   "name": "WisdomTree Cloud Computing Fund",
   "category": "Thematic",
-  "categoryPath": "Thematic",
+  "categoryPath": "Megatrends / -",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wcld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wcld",
@@ -24,9 +24,9 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$40.85",
-    "value": 40.854,
-    "asOfDate": "Sep 16 2026"
+    "display": "$41.04",
+    "value": 41.041,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$40.86",
@@ -38,10 +38,10 @@
     "value": 0.016
   },
   "aum": {
-    "display": "$299.56 M",
-    "value": 299557020,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$294.15 M",
+    "value": 294145570,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0,
@@ -108,8 +108,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1766,
-    "asOf": "Sep 16 2026",
+    "totalRows": 1767,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

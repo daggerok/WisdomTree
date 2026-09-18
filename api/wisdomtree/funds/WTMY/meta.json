@@ -2,7 +2,7 @@
   "ticker": "WTMY",
   "name": "WisdomTree High Income Laddered Municipal Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Municipal Bonds",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmy",
@@ -24,9 +24,9 @@
     "value": 0.35
   },
   "nav": {
-    "display": "$24.49",
-    "value": 24.491,
-    "asOfDate": "Sep 16 2026"
+    "display": "$24.55",
+    "value": 24.551,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$24.43",
@@ -39,17 +39,17 @@
   },
   "aum": {
     "display": "$4.90 M",
-    "value": 4899400,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "value": 4898150,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.84,
-    "dividendYieldText": "3.84%",
+    "dividendYield": 3.83,
+    "dividendYieldText": "3.83%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 5.14,
-    "secYield": 4.07,
-    "secYieldText": "4.07%",
+    "secYield": 4.09,
+    "secYieldText": "4.09%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -176,8 +176,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 365,
-    "asOf": "Sep 16 2026",
+    "totalRows": 366,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

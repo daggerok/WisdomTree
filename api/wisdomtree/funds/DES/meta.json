@@ -1,12 +1,12 @@
 {
   "ticker": "DES",
-  "name": "WisdomTree U.S. SmallCap Dividend Fund",
+  "name": "U.S. SmallCap Dividend",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Mid & Small Cap Value",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/des",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/des",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DES",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W604",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -29,58 +29,58 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$39.35",
-    "value": 39.35,
-    "asOfDate": "Sep 15 2026"
+    "display": "$39.11",
+    "value": 39.11,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0.001
+    "display": "0.08%",
+    "value": 0.08
   },
   "aum": {
-    "display": "$2.14 B",
-    "value": 2138659070,
-    "asOfDate": "Sep 15 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$2.10 B",
+    "value": 2104448380,
+    "asOfDate": "Sep 16 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 2.35,
     "dividendYieldText": "2.35%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.29,
-    "secYield": 2.57,
-    "secYieldText": "2.57%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": -1.12,
-      "mo1Text": "-1.12%",
-      "qtd": 4.84,
-      "qtdText": "4.84%",
-      "ytd": 21.6,
-      "ytdText": "21.60%",
-      "yr1": 20.64,
-      "yr1Text": "20.64%",
-      "yr3": 13.79,
-      "yr3Text": "13.79%",
-      "yr5": 7.69,
-      "yr5Text": "7.69%",
-      "yr10": 7.89,
-      "yr10Text": "7.89%",
-      "sinceInception": 7.83,
-      "sinceInceptionText": "7.83%"
+      "asOfDate": "Sep 17 2026",
+      "mo1": -5.65,
+      "mo1Text": "-5.65%",
+      "qtd": -3.48,
+      "qtdText": "-3.48%",
+      "ytd": 18.37,
+      "ytdText": "18.37%",
+      "yr1": 18.08,
+      "yr1Text": "18.08%",
+      "yr3": 13.7,
+      "yr3Text": "13.70%",
+      "yr5": 7.87,
+      "yr5Text": "7.87%",
+      "yr10": 7.82,
+      "yr10Text": "7.82%",
+      "sinceInception": 7.67,
+      "sinceInceptionText": "7.67%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 31.19,
-      "yr3": 15.36,
-      "yr5": 7.94,
-      "yr10": 8.55,
-      "sinceInception": 7.95
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {
@@ -887,8 +887,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5094,
-    "asOf": "Sep 16 2026",
+    "totalRows": 5095,
+    "asOf": "Sep 17 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
