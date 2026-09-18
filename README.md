@@ -120,6 +120,7 @@ The header toolbar includes the same integrated drag-and-drop upload as `daggero
 - `scripts/check-index.ts` — Bun transpile check for the inline browser TypeScript, preventing a syntax error from leaving the published catalog on its loading screen.
 - `api/wisdomtree/**` — generated static feed: `index.json`, `funds/{TICKER}/meta.json`, paginated `holdings/` and `history/` files, and `update-state.json`.
 - `index.html` — single-file TypeScript UI with inline styles and scripts, matching the sibling repositories' searchable catalog, persistent selection/blacklist, watchlist aggregation, detail tabs, exports and N-PORT upload workflow.
+- The app keeps search and sort preferences in browser localStorage and reapplies them after reload. Sort order is remembered **per tab** and is **never reset by any button or checkbox**: sort All ETFs by *YTD Return*, round-trip through Watchlist or a fund detail tab, toggle select-all, search, blacklist, export, switch the theme or press **Clear** — the YTD Return order is still there. Like the checkbox selections, the remembered sorts live in browser localStorage (`wisdomtree-tab-sorts`) and are reapplied after reload. A tab that was never sorted keeps its default order (Watchlist: Weight Sum desc, Overview: Section asc, sheets: source order); **Clear** clears only the selection and the searches. To return to the default catalog order, click the *Ticker* header (asc).
 - Verification before publishing: `bun test scripts/update-data.test.ts`, `bunx tsc --noEmit`, and a static-server smoke test.
 
 ## TypeScript
