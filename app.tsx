@@ -147,7 +147,6 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Type: 'Category — the asset-class part of the official WisdomTree grouping (see the Category column). Same source as the category tabs.',
   Expense: 'Gross Expense Ratio — Total annual fund operating expenses as a % of assets.',
   'Dividend Yield': 'Dividend Yield — the trailing-12-month yield published in the WisdomTree catalog when present; otherwise indicated (latest distribution per share x payments per year / market price) from Yahoo dividend history.',
-  'Dividend Frequency': 'Dividend Frequency — sortable payment cadence from the Yahoo dividend history: 01 - Monthly, 04 - Quarterly, 06 - Semi-annually, 12 - Annually; 00 denotes unavailable/unknown and 99 denotes irregular.',
   'SEC Yield': 'SEC Yield (30-Day) — The 30-day SEC yield as published on the official WisdomTree product page; "—" when that page does not publish one.',
   'YTD Return': 'YTD Return — Market-price total return since the start of the year, computed from adjusted closes (Yahoo). Not an official NAV return.',
   'TR 1Y': 'TR 1Y (1-Year Total Return) — Official WisdomTree Market Price Return where published, otherwise adjusted market-price return from Yahoo.',
@@ -171,7 +170,7 @@ const COLUMN_TOOLTIPS: Record<string, string> = {
   Holdings: 'Rows in the fund\'s latest daily holdings file.',
   History: 'Rows in the fund\'s NAV history file.',
   'As Of': 'NAV / AUM as-of date.',
-  Frequency: 'Distribution frequency (Monthly, Quarterly, ...).',
+  Frequency: 'Frequency — sortable payment cadence from the Yahoo dividend history: 01 - Monthly, 04 - Quarterly, 06 - Semi-annually, 12 - Annually; 00 denotes unavailable/unknown and 99 denotes irregular.',
   'Ex-Date': 'Ex-dividend date of the latest distribution.',
   Dividend: 'Latest dividend per share.',
   Coupon: 'Bond annual coupon rate (%).',
@@ -896,9 +895,9 @@ function renderFundsTable(): void {
       ${sortHeader('NAV', 'navValue', true)}
       ${sortHeader('Net Assets', 'aumValue', true)}
       ${sortHeader('Expense', 'terValue', true)}
-      ${sortHeader('Dividend Frequency', 'dividendFrequency')}
       ${sortHeader('Dividend Yield', 'dividendYield', true)}
       ${sortHeader('SEC Yield', 'secYield', true)}
+      ${sortHeader('Frequency', 'dividendFrequency')}
       ${sortHeader('YTD Return', 'ytd', true)}
       ${sortHeader('TR 1Y', 'yr1', true)}
       ${sortHeader('TR 3Y', 'tr3y', true)}
@@ -938,9 +937,9 @@ function renderFundsTable(): void {
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${escapeHtml(fund.nav || '—')}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatMoney(fund.aumValue)}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${escapeHtml(fund.ter || '—')}</td>
-          <td class="py-2.5 px-4 text-slate-700 dark:text-slate-300">${escapeHtml(fund.dividendFrequency || '—')}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatPercent(fund.dividendYield)}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatPercent(fund.secYield)}</td>
+          <td class="py-2.5 px-4 text-slate-700 dark:text-slate-300">${escapeHtml(fund.dividendFrequency || '—')}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatPercent(fund.ytd)}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatPercent(fund.yr1)}</td>
           <td class="py-2.5 px-4 text-right font-mono text-slate-700 dark:text-slate-300">${formatPercent(fund.tr3y)}</td>
@@ -1513,7 +1512,7 @@ function currentExportRows(): { headers: string[]; rows: string[][]; scope: stri
   }
 
   return {
-    headers: ['Selected', 'Ticker', 'Fund Name', 'Type', 'NAV', 'Net Assets ($)', 'Expense (%)', 'Dividend Frequency', 'Dividend Yield (%)', 'SEC Yield (%)', 'YTD Return (%)', 'TR 1Y (%)', 'TR 3Y (%)', 'TR 5Y (%)', 'TR 10Y (%)', 'CAGR 3Y (%)', 'CAGR 5Y (%)', 'CAGR 10Y (%)', 'SI Ann. (%)', 'Return As Of', 'Inception', 'Holdings', 'History', 'As Of'],
+    headers: ['Selected', 'Ticker', 'Fund Name', 'Type', 'NAV', 'Net Assets ($)', 'Expense (%)', 'Dividend Yield (%)', 'SEC Yield (%)', 'Frequency', 'YTD Return (%)', 'TR 1Y (%)', 'TR 3Y (%)', 'TR 5Y (%)', 'TR 10Y (%)', 'CAGR 3Y (%)', 'CAGR 5Y (%)', 'CAGR 10Y (%)', 'SI Ann. (%)', 'Return As Of', 'Inception', 'Holdings', 'History', 'As Of'],
     rows: filterRows(visibleFunds()).map(fund => [
       state.selected.has(fund.ticker) ? 'yes' : 'no',
       fund.ticker,
@@ -1522,9 +1521,9 @@ function currentExportRows(): { headers: string[]; rows: string[][]; scope: stri
       fund.nav || '',
       numberCell(fund.aumValue),
       numberCell(fund.terValue),
-      fund.dividendFrequency || '',
       numberCell(fund.dividendYield),
       numberCell(fund.secYield),
+      fund.dividendFrequency || '',
       numberCell(fund.ytd),
       numberCell(fund.yr1),
       numberCell(fund.tr3y),
