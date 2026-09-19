@@ -110,6 +110,17 @@
     .dark #table-scroll tbody tr:hover .catalog-sticky-col{background:#1f2a3c}
     .dark #table-scroll tbody tr.selected-row .catalog-sticky-col{background:#18274e}
 
+    /* Horizontally pinned Watchlist Ticker column at the left edge.
+       Same opaque-background + z-index discipline as the catalog pins so
+       scrolled cells never bleed through while scrolling horizontally. */
+    #table-scroll .watchlist-sticky-col{position:sticky;background:#fff;background-clip:padding-box}
+    #table-scroll thead .watchlist-sticky-col{top:0;z-index:30}
+    #table-scroll tbody .watchlist-sticky-col{z-index:20}
+    #table-scroll .watchlist-sticky-ticker{left:0;min-width:6rem;box-shadow:4px 0 6px -6px rgba(15,23,42,.7)}
+    .dark #table-scroll .watchlist-sticky-col{background:#162032}
+    #table-scroll tbody tr:hover .watchlist-sticky-col{background:#f8fafc}
+    .dark #table-scroll tbody tr:hover .watchlist-sticky-col{background:#1f2a3c}
+
     /* Detail navigation expands into place after an ETF is selected. */
     main.space-y-6 > #selected-tabs-panel{max-height:0;margin-top:0;overflow:hidden;opacity:0;transform:translateY(-10px);padding-top:0;padding-bottom:0;border-color:transparent;transition:max-height .32s ease,margin-top .32s ease,padding .32s ease,opacity .22s ease,transform .32s ease,border-color .22s ease}
     main.space-y-6 > #selected-tabs-panel.is-visible{max-height:8rem;margin-top:1.5rem;padding-top:1rem;padding-bottom:1rem;opacity:1;transform:translateY(0);border-color:rgb(226 232 240)}
@@ -152,14 +163,25 @@
       <!-- Search, Tabs & Action Bar -->
       <div class="flex flex-col lg:flex-row justify-between items-center gap-4 bg-white dark:bg-slate-800/80 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm backdrop-blur">
 
-        <!-- One full-text search input. It filters ETFs, fund sheets or watchlist rows case-insensitively. -->
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search ETFs, fund names, holdings, tickers, CUSIPs, ISINs..."
-          disabled
-          class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 rounded-lg px-4 py-2 w-full lg:w-96 focus:outline-none focus:border-blue-500 text-sm placeholder-slate-400 dark:placeholder-slate-500 disabled:opacity-50 disabled:cursor-not-allowed shrink-0 transition"
-        />
+        <!-- One full-text search input, scoped to the active tab (per-tab filters
+             live in wisdomtree-tab-filters). The right-edge ✕ is the 1-click
+             clear button: it clears only the active tab's query. -->
+        <div class="relative flex items-center w-full lg:w-96 shrink-0">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search ETFs, fund names, holdings, tickers, CUSIPs, ISINs..."
+            disabled
+            class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 rounded-lg pl-4 pr-8 py-2 w-full focus:outline-none focus:border-blue-500 text-sm placeholder-slate-400 dark:placeholder-slate-500 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          />
+          <button
+            type="button"
+            id="search-clear-btn"
+            class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 flex items-center justify-center rounded text-slate-300 dark:text-slate-600 hover:text-rose-500 dark:hover:text-rose-400 text-sm leading-none transition focus:outline-none"
+            title="Clear search filter"
+            aria-label="Clear search filter"
+          >✕</button>
+        </div>
 
         <!-- ETF catalogue tabs: All ETFs + WisdomTree categories. -->
         <div id="tabs-bar" class="hidden flex flex-wrap items-center justify-center gap-1.5 overflow-x-auto py-1 w-full max-w-full flex-1 themed-scroll"></div>
