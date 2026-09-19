@@ -2,11 +2,11 @@
   "ticker": "WDNA",
   "name": "WisdomTree BioRevolution Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdna",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdna",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDNA",
@@ -26,11 +26,11 @@
   "nav": {
     "display": "$23.18",
     "value": 23.184,
-    "asOfDate": "Sep 17 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$22.27",
-    "value": 22.266,
+    "display": "$23.09",
+    "value": 23.091,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,46 +41,46 @@
     "display": "$4.47 M",
     "value": 4466150,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.32,
     "dividendYieldText": "3.32%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 3.45,
+    "distributionRate": null,
     "secYield": 0.01,
     "secYieldText": "0.01%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 19.15,
-      "mo1Text": "19.15%",
-      "qtd": 26.23,
-      "qtdText": "26.23%",
-      "ytd": 37.15,
-      "ytdText": "37.15%",
-      "yr1": 69.49,
-      "yr1Text": "69.49%",
-      "yr3": 13.97,
-      "yr3Text": "13.97%",
-      "yr5": -1.94,
-      "yr5Text": "-1.94%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": 8.59,
+      "mo1Text": "8.59%",
+      "qtd": 12.71,
+      "qtdText": "12.71%",
+      "ytd": 38.01,
+      "ytdText": "38.01%",
+      "yr1": 65.39,
+      "yr1Text": "65.39%",
+      "yr3": 15.5,
+      "yr3Text": "15.50%",
+      "yr5": -1.49,
+      "yr5Text": "-1.49%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -0.26,
-      "sinceInceptionText": "-0.26%"
+      "sinceInception": -0.12,
+      "sinceInceptionText": "-0.12%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 57.13,
-      "yr3": 7.83,
-      "yr5": -3.85,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
       "yr10": null,
-      "sinceInception": -2.57
+      "sinceInception": null
     }
   },
   "distributions": {

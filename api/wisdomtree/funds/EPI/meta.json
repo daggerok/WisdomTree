@@ -2,7 +2,7 @@
   "ticker": "EPI",
   "name": "WisdomTree India Earnings Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/epi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/epi",
@@ -24,24 +24,24 @@
     "value": 0.84
   },
   "nav": {
-    "display": "$41.73",
-    "value": 41.733,
-    "asOfDate": "Sep 17 2026"
+    "display": "$41.95",
+    "value": 41.954,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$41.34",
-    "value": 41.34,
-    "asOfDate": "Sep 16 2026"
+    "display": "$41.65",
+    "value": 41.65,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.65%",
-    "value": -0.649
+    "display": "-0.20%",
+    "value": -0.2
   },
   "aum": {
     "display": "$1.93 B",
     "value": 1930633980,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,

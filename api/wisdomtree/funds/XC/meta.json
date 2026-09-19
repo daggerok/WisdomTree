@@ -2,11 +2,11 @@
   "ticker": "XC",
   "name": "WisdomTree True Emerging Markets Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xc",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/XC",
@@ -26,11 +26,11 @@
   "nav": {
     "display": "$31.82",
     "value": 31.822,
-    "asOfDate": "Sep 17 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$31.40",
-    "value": 31.397,
+    "display": "$31.74",
+    "value": 31.7422,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,46 +41,46 @@
     "display": "$75.98 M",
     "value": 75984100,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.05,
     "dividendYieldText": "2.05%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.21,
+    "distributionRate": null,
     "secYield": 1.71,
     "secYieldText": "1.71%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 1.09,
-      "mo1Text": "1.09%",
-      "qtd": 2.6,
-      "qtdText": "2.60%",
-      "ytd": 1.16,
-      "ytdText": "1.16%",
-      "yr1": 7.12,
-      "yr1Text": "7.12%",
-      "yr3": 11.37,
-      "yr3Text": "11.37%",
+      "asOfDate": "Sep 17 2026",
+      "mo1": -0.69,
+      "mo1Text": "-0.69%",
+      "qtd": 0.71,
+      "qtdText": "0.71%",
+      "ytd": -0.97,
+      "ytdText": "-0.97%",
+      "yr1": 2.28,
+      "yr1Text": "2.28%",
+      "yr3": 10.41,
+      "yr3Text": "10.41%",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 11.56,
-      "sinceInceptionText": "11.56%"
+      "sinceInception": 11.07,
+      "sinceInceptionText": "11.07%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 3.28,
-      "yr3": 10.09,
+      "yr1": null,
+      "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 11.31
+      "sinceInception": null
     }
   },
   "distributions": {

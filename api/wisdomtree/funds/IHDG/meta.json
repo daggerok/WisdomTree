@@ -2,7 +2,7 @@
   "ticker": "IHDG",
   "name": "WisdomTree International Hedged Quality Dividend Growth Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ihdg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ihdg",
@@ -24,32 +24,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$52.46",
-    "value": 52.457,
-    "asOfDate": "Sep 17 2026"
+    "display": "$52.06",
+    "value": 52.057,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$52.03",
-    "value": 52.03,
-    "asOfDate": "Sep 16 2026"
+    "display": "$52.44",
+    "value": 52.435,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.15%",
-    "value": -0.149
+    "display": "-0.04%",
+    "value": -0.042
   },
   "aum": {
     "display": "$2.11 B",
     "value": 2107742460,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.82,
     "dividendYieldText": "1.82%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.3,
-    "secYield": 2,
-    "secYieldText": "2.00%",
+    "distributionRate": 5.26,
+    "secYield": 1.99,
+    "secYieldText": "1.99%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

@@ -2,7 +2,7 @@
   "ticker": "EMMF",
   "name": "Emerging Markets Multifactor",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/emmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/emmf",
@@ -29,8 +29,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$38.10",
-    "value": 38.1,
+    "display": "$38.26",
+    "value": 38.26,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,7 +41,7 @@
     "display": "$179.38 M",
     "value": 179384480,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.97,

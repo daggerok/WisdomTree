@@ -2,7 +2,7 @@
   "ticker": "OPPE",
   "name": "WisdomTree European Opportunities Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppe",
@@ -24,32 +24,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$59.74",
-    "value": 59.739,
-    "asOfDate": "Sep 17 2026"
+    "display": "$58.85",
+    "value": 58.854,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$59.18",
-    "value": 59.182,
-    "asOfDate": "Sep 16 2026"
+    "display": "$59.81",
+    "value": 59.806,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.47%",
-    "value": -0.465
+    "display": "0.11%",
+    "value": 0.111
   },
   "aum": {
     "display": "$294.31 M",
     "value": 294312160,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.55,
     "dividendYieldText": "2.55%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 7.94,
-    "secYield": 2.66,
-    "secYieldText": "2.66%",
+    "distributionRate": 7.9,
+    "secYield": 2.58,
+    "secYieldText": "2.58%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

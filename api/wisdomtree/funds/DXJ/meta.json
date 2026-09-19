@@ -2,7 +2,7 @@
   "ticker": "DXJ",
   "name": "WisdomTree Japan Hedged Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dxj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dxj",
@@ -24,32 +24,32 @@
     "value": 0.48
   },
   "nav": {
-    "display": "$178.92",
-    "value": 178.916,
-    "asOfDate": "Sep 17 2026"
+    "display": "$178.53",
+    "value": 178.526,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$178.29",
-    "value": 178.29,
-    "asOfDate": "Sep 16 2026"
+    "display": "$179.83",
+    "value": 179.83,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.56%",
-    "value": 0.562
+    "display": "0.51%",
+    "value": 0.508
   },
   "aum": {
     "display": "$6.98 B",
     "value": 6976262140,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.94,
     "dividendYieldText": "0.94%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.61,
-    "secYield": 2,
-    "secYieldText": "2.00%",
+    "distributionRate": 2.58,
+    "secYield": 1.99,
+    "secYieldText": "1.99%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

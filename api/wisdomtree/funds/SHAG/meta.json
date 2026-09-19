@@ -2,7 +2,7 @@
   "ticker": "SHAG",
   "name": "WisdomTree Yield Enhanced U.S. Short-Term Aggregate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/shag",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/shag",
@@ -24,32 +24,32 @@
     "value": 0.12
   },
   "nav": {
-    "display": "$46.81",
-    "value": 46.807,
-    "asOfDate": "Sep 17 2026"
+    "display": "$46.72",
+    "value": 46.716,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$46.63",
-    "value": 46.63,
-    "asOfDate": "Sep 16 2026"
+    "display": "$46.72",
+    "value": 46.715,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.17%",
-    "value": -0.167
+    "display": "-0.20%",
+    "value": -0.196
   },
   "aum": {
     "display": "$65.39 M",
     "value": 65391040,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.26,
     "dividendYieldText": "4.26%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 4.24,
-    "secYield": 4.67,
-    "secYieldText": "4.67%",
+    "distributionRate": 4.23,
+    "secYield": 4.69,
+    "secYieldText": "4.69%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

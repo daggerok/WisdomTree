@@ -2,7 +2,7 @@
   "ticker": "WTPI",
   "name": "WisdomTree Equity Premium Income Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Option-Based",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtpi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtpi",
@@ -24,32 +24,32 @@
     "value": 0.44
   },
   "nav": {
-    "display": "$32.91",
-    "value": 32.907,
-    "asOfDate": "Sep 17 2026"
+    "display": "$32.96",
+    "value": 32.957,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$32.65",
-    "value": 32.65,
-    "asOfDate": "Sep 16 2026"
+    "display": "$32.97",
+    "value": 32.97,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.22%",
-    "value": 0.219
+    "display": "0.19%",
+    "value": 0.193
   },
   "aum": {
     "display": "$534.29 M",
     "value": 534286690,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 10.02,
     "dividendYieldText": "10.02%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 12.24,
-    "secYield": 3.51,
-    "secYieldText": "3.51%",
+    "distributionRate": 12.12,
+    "secYield": 3.52,
+    "secYieldText": "3.52%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

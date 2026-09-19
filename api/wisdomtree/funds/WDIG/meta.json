@@ -2,7 +2,7 @@
   "ticker": "WDIG",
   "name": "WisdomTree Efficient Rare Earth Plus Strategic Metals Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Gold and Commodities",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wdig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wdig",
@@ -24,32 +24,32 @@
     "value": 0.55
   },
   "nav": {
-    "display": "$43.18",
-    "value": 43.184,
-    "asOfDate": "Sep 17 2026"
+    "display": "$43.44",
+    "value": 43.443,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$41.69",
-    "value": 41.686,
-    "asOfDate": "Sep 16 2026"
+    "display": "$43.15",
+    "value": 43.147,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.85%",
-    "value": -0.852
+    "display": "-0.09%",
+    "value": -0.086
   },
   "aum": {
     "display": "$5.26 M",
     "value": 5255140,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": -0.01,
-    "secYieldText": "-0.01%",
+    "secYield": -0.04,
+    "secYieldText": "-0.04%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

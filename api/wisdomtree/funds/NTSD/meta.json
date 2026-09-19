@@ -1,12 +1,12 @@
 {
   "ticker": "NTSD",
-  "name": "Efficient U.S. Plus International Equity",
+  "name": "WisdomTree Efficient U.S. Plus International Equity Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Core",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSD",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717Y246",
     "isin": null,
     "indexTicker": null
   },
@@ -24,42 +24,42 @@
     "value": 0.35
   },
   "nav": {
-    "display": "$46.59",
-    "value": 46.595,
-    "asOfDate": "Sep 16 2026"
+    "display": "$47.09",
+    "value": 47.093,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$47.33",
-    "value": 47.327,
-    "asOfDate": "Sep 16 2026"
+    "value": 47.328,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "1.57%",
-    "value": 1.57
+    "display": "0.02%",
+    "value": 0.024
   },
   "aum": {
     "display": "$45.43 M",
     "value": 45430180,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 0.55,
+    "secYield": 0.88,
+    "secYieldText": "0.88%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -3.07,
-      "mo1Text": "-3.07%",
-      "qtd": 2.98,
-      "qtdText": "2.98%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 3.28,
+      "mo1Text": "3.28%",
+      "qtd": 3.54,
+      "qtdText": "3.54%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -70,8 +70,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 47.83,
-      "sinceInceptionText": "47.83%"
+      "sinceInception": 22.47,
+      "sinceInceptionText": "22.47%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,7 +80,7 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 17.96
     }
   },
   "distributions": {
@@ -114,8 +114,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 126,
-    "asOf": "Sep 17 2026",
+    "totalRows": 127,
+    "asOf": "Sep 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

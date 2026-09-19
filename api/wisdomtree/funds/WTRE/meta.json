@@ -1,12 +1,12 @@
 {
   "ticker": "WTRE",
-  "name": "New Economy Real Estate",
+  "name": "WisdomTree New Economy Real Estate Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / Global",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wtre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wtre",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTRE",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717W331",
     "isin": null,
     "indexTicker": null
   },
@@ -24,63 +24,63 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$23.32",
-    "value": 23.316,
-    "asOfDate": "Sep 16 2026"
+    "display": "$23.49",
+    "value": 23.489,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$23.43",
-    "value": 23.4324,
-    "asOfDate": "Sep 16 2026"
+    "value": 23.432,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.50%",
-    "value": 0.5
+    "display": "-0.42%",
+    "value": -0.417
   },
   "aum": {
     "display": "$15.16 M",
     "value": 15155460,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.41,
     "dividendYieldText": "2.41%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 2.8,
+    "secYield": 2,
+    "secYieldText": "2.00%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -5.75,
-      "mo1Text": "-5.75%",
-      "qtd": -4.52,
-      "qtdText": "-4.52%",
-      "ytd": 10.88,
-      "ytdText": "10.88%",
-      "yr1": 9.7,
-      "yr1Text": "9.70%",
-      "yr3": 14.16,
-      "yr3Text": "14.16%",
-      "yr5": 0.49,
-      "yr5Text": "0.49%",
-      "yr10": 2.27,
-      "yr10Text": "2.27%",
-      "sinceInception": 0.88,
-      "sinceInceptionText": "0.88%"
+      "asOfDate": "Aug 31 2026",
+      "mo1": -1.87,
+      "mo1Text": "-1.87%",
+      "qtd": -10.78,
+      "qtdText": "-10.78%",
+      "ytd": 11.76,
+      "ytdText": "11.76%",
+      "yr1": 16.88,
+      "yr1Text": "16.88%",
+      "yr3": 14.02,
+      "yr3Text": "14.02%",
+      "yr5": 0.1,
+      "yr5Text": "0.10%",
+      "yr10": 2.21,
+      "yr10Text": "2.21%",
+      "sinceInception": 0.89,
+      "sinceInceptionText": "0.89%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
-      "yr10": null,
-      "sinceInception": null
+      "yr1": 31.94,
+      "yr3": 16.84,
+      "yr5": 1.51,
+      "yr10": 3.38,
+      "sinceInception": 1.22
     }
   },
   "distributions": {

@@ -1,12 +1,12 @@
 {
   "ticker": "WAMA",
-  "name": "U.S. Adaptive Moving Average",
+  "name": "WisdomTree U.S. Adaptive Moving Average Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wama",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wama",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WAMA",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "WAMA-TBD",
     "isin": null,
     "indexTicker": null
   },
@@ -24,42 +24,42 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$26.51",
-    "value": 26.511,
-    "asOfDate": "Sep 16 2026"
+    "display": "$26.84",
+    "value": 26.837,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$26.82",
-    "value": 26.8196,
-    "asOfDate": "Sep 16 2026"
+    "display": "$26.83",
+    "value": 26.83,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "1.16%",
-    "value": 1.16
+    "display": "0.08%",
+    "value": 0.077
   },
   "aum": {
     "display": "$188.76 M",
     "value": 188759380,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 1.64,
+    "secYield": 0.74,
+    "secYieldText": "0.74%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -1,
-      "mo1Text": "-1.00%",
-      "qtd": 2.6,
-      "qtdText": "2.60%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 2.75,
+      "mo1Text": "2.75%",
+      "qtd": 1.59,
+      "qtdText": "1.59%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -70,8 +70,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 19.15,
-      "sinceInceptionText": "19.15%"
+      "sinceInception": 8.14,
+      "sinceInceptionText": "8.14%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,7 +80,7 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 5.17
     }
   },
   "distributions": {

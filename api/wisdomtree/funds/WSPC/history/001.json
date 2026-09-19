@@ -2,7 +2,7 @@
   "ticker": "WSPC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 50,
+  "totalRows": 51,
   "headers": [
     "Date",
     "Close",
@@ -309,6 +309,12 @@
       "Close": "27.389999389648438",
       "Adj Close": "27.389999389648438",
       "Volume": "3400"
+    },
+    {
+      "Date": "Sep 18 2026",
+      "Close": "26.977800369262695",
+      "Adj Close": "26.977800369262695",
+      "Volume": "454"
     }
   ]
 }

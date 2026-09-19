@@ -1,12 +1,12 @@
 {
   "ticker": "WDAF",
-  "name": "Asia Defense",
+  "name": "WisdomTree Asia Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdaf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdaf",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDAF",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717Y311",
     "isin": null,
     "indexTicker": null
   },
@@ -24,44 +24,44 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$29.80",
-    "value": 29.795,
-    "asOfDate": "Sep 16 2026"
+    "display": "$30.86",
+    "value": 30.858,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$30.98",
-    "value": 30.982,
-    "asOfDate": "Sep 16 2026"
+    "display": "$31.03",
+    "value": 31.03,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "3.98%",
-    "value": 3.98
+    "display": "1.22%",
+    "value": 1.215
   },
   "aum": {
     "display": "$10.43 M",
     "value": 10428310,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.12,
     "dividendYieldText": "0.12%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 0.12,
+    "secYield": 0.26,
+    "secYieldText": "0.26%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -5.81,
-      "mo1Text": "-5.81%",
-      "qtd": 0.19,
-      "qtdText": "0.19%",
-      "ytd": 8.68,
-      "ytdText": "8.68%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 8.67,
+      "mo1Text": "8.67%",
+      "qtd": -8.86,
+      "qtdText": "-8.86%",
+      "ytd": 8.63,
+      "ytdText": "8.63%",
       "yr1": -1.6,
       "yr1Text": "-1.60%",
       "yr3": null,
@@ -70,8 +70,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 0.4,
-      "sinceInceptionText": "0.40%"
+      "sinceInception": 2.25,
+      "sinceInceptionText": "2.25%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,7 +80,7 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 1.39
     }
   },
   "distributions": {

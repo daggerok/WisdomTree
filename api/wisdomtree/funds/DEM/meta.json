@@ -2,7 +2,7 @@
   "ticker": "DEM",
   "name": "WisdomTree Emerging Markets High Dividend Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dem",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dem",
@@ -24,32 +24,32 @@
     "value": 0.63
   },
   "nav": {
-    "display": "$55.98",
-    "value": 55.984,
-    "asOfDate": "Sep 17 2026"
+    "display": "$56.23",
+    "value": 56.23,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$55.68",
-    "value": 55.68,
-    "asOfDate": "Sep 16 2026"
+    "display": "$56.41",
+    "value": 56.41,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.39%",
-    "value": -0.392
+    "display": "0.76%",
+    "value": 0.756
   },
   "aum": {
     "display": "$4.20 B",
     "value": 4197943300,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 4.01,
     "dividendYieldText": "4.01%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.19,
-    "secYield": 3.52,
-    "secYieldText": "3.52%",
+    "distributionRate": 5.18,
+    "secYield": 3.41,
+    "secYieldText": "3.41%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

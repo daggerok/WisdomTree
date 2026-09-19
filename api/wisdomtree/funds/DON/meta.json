@@ -2,7 +2,7 @@
   "ticker": "DON",
   "name": "WisdomTree U.S. MidCap Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/don",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/don",
@@ -24,32 +24,32 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$56.10",
-    "value": 56.099,
-    "asOfDate": "Sep 17 2026"
+    "display": "$55.73",
+    "value": 55.729,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$55.96",
-    "value": 55.96,
-    "asOfDate": "Sep 16 2026"
+    "display": "$56.15",
+    "value": 56.15,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.039
+    "display": "0.09%",
+    "value": 0.09
   },
   "aum": {
     "display": "$3.89 B",
     "value": 3893302780,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.37,
     "dividendYieldText": "2.37%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.36,
-    "secYield": 2.29,
-    "secYieldText": "2.29%",
+    "distributionRate": 2.35,
+    "secYield": 2.31,
+    "secYieldText": "2.31%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

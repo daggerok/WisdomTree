@@ -1,12 +1,12 @@
 {
   "ticker": "ELD",
-  "name": "Emerging Markets Local Debt",
+  "name": "WisdomTree Emerging Markets Local Debt Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Emerging Markets",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/eld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/eld",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/ELD",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717X867",
     "isin": null,
     "indexTicker": null
   },
@@ -24,63 +24,63 @@
     "value": 0.55
   },
   "nav": {
-    "display": "$28.55",
-    "value": 28.546,
-    "asOfDate": "Sep 16 2026"
+    "display": "$28.47",
+    "value": 28.469,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$28.55",
     "value": 28.55,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.01
+    "display": "0.06%",
+    "value": 0.062
   },
   "aum": {
     "display": "$139.88 M",
     "value": 139875780,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 6.06,
     "dividendYieldText": "6.06%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 6.1,
+    "secYield": 6.99,
+    "secYieldText": "6.99%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -0.68,
-      "mo1Text": "-0.68%",
-      "qtd": 0.7,
-      "qtdText": "0.70%",
-      "ytd": 1.78,
-      "ytdText": "1.78%",
-      "yr1": 4.45,
-      "yr1Text": "4.45%",
-      "yr3": 7.37,
-      "yr3Text": "7.37%",
-      "yr5": 2.94,
-      "yr5Text": "2.94%",
-      "yr10": 2.47,
-      "yr10Text": "2.47%",
-      "sinceInception": 1.28,
-      "sinceInceptionText": "1.28%"
+      "asOfDate": "Aug 31 2026",
+      "mo1": 0.89,
+      "mo1Text": "0.89%",
+      "qtd": 1.84,
+      "qtdText": "1.84%",
+      "ytd": 2.48,
+      "ytdText": "2.48%",
+      "yr1": 7.7,
+      "yr1Text": "7.70%",
+      "yr3": 7.36,
+      "yr3Text": "7.36%",
+      "yr5": 3.02,
+      "yr5Text": "3.02%",
+      "yr10": 2.6,
+      "yr10Text": "2.60%",
+      "sinceInception": 1.37,
+      "sinceInceptionText": "1.37%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
-      "yr10": null,
-      "sinceInception": null
+      "yr1": 8.81,
+      "yr3": 7.1,
+      "yr5": 2.81,
+      "yr10": 2.58,
+      "sinceInception": 1.31
     }
   },
   "distributions": {

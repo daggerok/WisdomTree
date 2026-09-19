@@ -2,7 +2,7 @@
   "ticker": "WCBR",
   "name": "WisdomTree Cybersecurity Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wcbr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wcbr",
@@ -24,24 +24,24 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$44.31",
-    "value": 44.31,
-    "asOfDate": "Sep 17 2026"
+    "display": "$43.44",
+    "value": 43.435,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$43.78",
-    "value": 43.78,
-    "asOfDate": "Sep 16 2026"
+    "display": "$44.41",
+    "value": 44.41,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.021
+    "display": "0.23%",
+    "value": 0.225
   },
   "aum": {
     "display": "$150.20 M",
     "value": 150196720,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,

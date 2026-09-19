@@ -2,7 +2,7 @@
   "ticker": "DFE",
   "name": "WisdomTree Europe SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfe",
@@ -24,32 +24,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$76.86",
-    "value": 76.862,
-    "asOfDate": "Sep 17 2026"
+    "display": "$76.16",
+    "value": 76.156,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$76.01",
-    "value": 76.013,
-    "asOfDate": "Sep 16 2026"
+    "display": "$76.57",
+    "value": 76.567,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.82%",
-    "value": -0.817
+    "display": "-0.39%",
+    "value": -0.385
   },
   "aum": {
     "display": "$168.59 M",
     "value": 168594060,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.87,
     "dividendYieldText": "3.87%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 8.25,
-    "secYield": 3.75,
-    "secYieldText": "3.75%",
+    "distributionRate": 8.22,
+    "secYield": 3.72,
+    "secYieldText": "3.72%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

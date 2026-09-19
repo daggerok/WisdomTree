@@ -2,7 +2,7 @@
   "ticker": "OPPG",
   "name": "WisdomTree GeoAlpha Opportunities Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Global",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppg",
@@ -24,32 +24,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$37.33",
-    "value": 37.332,
-    "asOfDate": "Sep 17 2026"
+    "display": "$36.84",
+    "value": 36.837,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$37.00",
-    "value": 36.997,
-    "asOfDate": "Sep 16 2026"
+    "display": "$37.37",
+    "value": 37.365,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.24%",
-    "value": -0.242
+    "display": "0.09%",
+    "value": 0.087
   },
   "aum": {
     "display": "$2.78 M",
     "value": 2781500,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.53,
     "dividendYieldText": "0.53%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0.53,
-    "secYield": 1.04,
-    "secYieldText": "1.04%",
+    "secYield": 1.06,
+    "secYieldText": "1.06%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

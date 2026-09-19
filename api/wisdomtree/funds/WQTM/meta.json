@@ -2,7 +2,7 @@
   "ticker": "WQTM",
   "name": "WisdomTree Quantum Computing Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wqtm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wqtm",
@@ -29,27 +29,27 @@
     "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
-    "display": "$31.06",
-    "value": 31.06,
-    "asOfDate": "Sep 16 2026"
+    "display": "$32.14",
+    "value": 32.14,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.13%",
-    "value": 0.128
+    "display": "0.26%",
+    "value": 0.263
   },
   "aum": {
     "display": "$332.69 M",
     "value": 332691140,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,
     "dividendYieldText": "0.00%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0,
-    "secYield": 0.18,
-    "secYieldText": "0.18%",
+    "secYield": 0.17,
+    "secYieldText": "0.17%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

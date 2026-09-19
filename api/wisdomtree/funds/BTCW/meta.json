@@ -1,12 +1,12 @@
 {
   "ticker": "BTCW",
-  "name": "Bitcoin",
+  "name": "WisdomTree Bitcoin Fund",
   "category": "Crypto ETPs",
-  "categoryPath": "Crypto ETPs / Bitcoin",
+  "categoryPath": "Crypto ETPs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/BTCW",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97720F101",
     "isin": null,
     "indexTicker": null
   },
@@ -24,24 +24,24 @@
     "value": 0.25
   },
   "nav": {
-    "display": "$80.02",
-    "value": 80.023,
-    "asOfDate": "Sep 16 2026"
+    "display": "$80.82",
+    "value": 80.821,
+    "asOfDate": "Sep 17 2026"
   },
   "marketPrice": {
     "display": "$80.86",
     "value": 80.86,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "1.05%",
-    "value": 1.05
+    "display": "0.05%",
+    "value": 0.048
   },
   "aum": {
     "display": "$159.25 M",
     "value": 159245570,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "previous run"
   },
   "yields": {
     "dividendYield": null,
@@ -53,34 +53,34 @@
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": 19.05,
-      "mo1Text": "19.05%",
-      "qtd": 27.56,
-      "qtdText": "27.56%",
-      "ytd": -12.75,
-      "ytdText": "-12.75%",
-      "yr1": -34.71,
-      "yr1Text": "-34.71%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 25.37,
+      "mo1Text": "25.37%",
+      "qtd": 7.27,
+      "qtdText": "7.27%",
+      "ytd": -10.06,
+      "ytdText": "-10.06%",
+      "yr1": -27.36,
+      "yr1Text": "-27.36%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 20.23,
-      "sinceInceptionText": "20.23%"
+      "sinceInception": 22.54,
+      "sinceInceptionText": "22.54%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
+      "yr1": -45.62,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 10.31
     }
   },
   "distributions": {

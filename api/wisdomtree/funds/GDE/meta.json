@@ -1,12 +1,12 @@
 {
   "ticker": "GDE",
-  "name": "Efficient Gold Plus Equity Strategy",
+  "name": "WisdomTree Efficient Gold Plus Equity Strategy Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Core",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gde",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gde",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GDE",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717Y568",
     "isin": null,
     "indexTicker": null
   },
@@ -24,63 +24,63 @@
     "value": 0.2
   },
   "nav": {
-    "display": "$65.71",
-    "value": 65.712,
-    "asOfDate": "Sep 16 2026"
+    "display": "$66.92",
+    "value": 66.925,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$66.27",
     "value": 66.272,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.85%",
-    "value": 0.85
+    "display": "-0.37%",
+    "value": -0.371
   },
   "aum": {
     "display": "$469.84 M",
     "value": 469841340,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4,
     "dividendYieldText": "4.00%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 0.21,
+    "secYield": 0.76,
+    "secYieldText": "0.76%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -2.54,
-      "mo1Text": "-2.54%",
-      "qtd": 7.69,
-      "qtdText": "7.69%",
-      "ytd": 7.55,
-      "ytdText": "7.55%",
-      "yr1": 26.12,
-      "yr1Text": "26.12%",
-      "yr3": 44.94,
-      "yr3Text": "44.94%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 11.01,
+      "mo1Text": "11.01%",
+      "qtd": -2.1,
+      "qtdText": "-2.10%",
+      "ytd": 10.72,
+      "ytdText": "10.72%",
+      "yr1": 40.36,
+      "yr1Text": "40.36%",
+      "yr3": 45.48,
+      "yr3Text": "45.48%",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 27.11,
-      "sinceInceptionText": "27.11%"
+      "sinceInception": 28.94,
+      "sinceInceptionText": "28.94%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
+      "yr1": 36.09,
+      "yr3": 41.05,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 27.04
     }
   },
   "distributions": {

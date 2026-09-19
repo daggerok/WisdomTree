@@ -2,7 +2,7 @@
   "ticker": "DDLS",
   "name": "WisdomTree Dynamic International SmallCap Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddls",
@@ -24,32 +24,32 @@
     "value": 0.48
   },
   "nav": {
-    "display": "$46.42",
-    "value": 46.422,
-    "asOfDate": "Sep 17 2026"
+    "display": "$46.15",
+    "value": 46.151,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$45.86",
-    "value": 45.856,
-    "asOfDate": "Sep 16 2026"
+    "display": "$46.29",
+    "value": 46.288,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.75%",
-    "value": -0.751
+    "display": "-0.29%",
+    "value": -0.289
   },
   "aum": {
     "display": "$431.97 M",
     "value": 431971070,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.5,
     "dividendYieldText": "3.50%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 6.62,
-    "secYield": 2.82,
-    "secYieldText": "2.82%",
+    "distributionRate": 6.59,
+    "secYield": 2.78,
+    "secYieldText": "2.78%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

@@ -2,11 +2,11 @@
   "ticker": "AIVL",
   "name": "WisdomTree U.S. AI Enhanced Value Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/aivl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/aivl",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/AIVL",
@@ -26,11 +26,11 @@
   "nav": {
     "display": "$130.54",
     "value": 130.542,
-    "asOfDate": "Sep 17 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$129.98",
-    "value": 129.978,
+    "display": "$130.10",
+    "value": 130.1,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,46 +41,46 @@
     "display": "$415.96 M",
     "value": 415955710,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.48,
     "dividendYieldText": "1.48%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.69,
+    "distributionRate": null,
     "secYield": 1.6,
     "secYieldText": "1.60%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 0.75,
-      "mo1Text": "0.75%",
-      "qtd": 5.94,
-      "qtdText": "5.94%",
-      "ytd": 16.98,
-      "ytdText": "16.98%",
-      "yr1": 18.46,
-      "yr1Text": "18.46%",
-      "yr3": 14.58,
-      "yr3Text": "14.58%",
-      "yr5": 8.51,
-      "yr5Text": "8.51%",
-      "yr10": 8.47,
-      "yr10Text": "8.47%",
-      "sinceInception": 8.36,
-      "sinceInceptionText": "8.36%"
+      "asOfDate": "Sep 17 2026",
+      "mo1": -3.38,
+      "mo1Text": "-3.38%",
+      "qtd": 0.34,
+      "qtdText": "0.34%",
+      "ytd": 14.37,
+      "ytdText": "14.37%",
+      "yr1": 17.02,
+      "yr1Text": "17.02%",
+      "yr3": 14.24,
+      "yr3Text": "14.24%",
+      "yr5": 8.42,
+      "yr5Text": "8.42%",
+      "yr10": 8.33,
+      "yr10Text": "8.33%",
+      "sinceInception": 8.22,
+      "sinceInceptionText": "8.22%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 17.82,
-      "yr3": 14.16,
-      "yr5": 8.51,
-      "yr10": 8.49,
-      "sinceInception": 8.33
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null
     }
   },
   "distributions": {

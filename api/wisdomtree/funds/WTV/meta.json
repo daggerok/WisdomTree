@@ -2,7 +2,7 @@
   "ticker": "WTV",
   "name": "WisdomTree U.S. Value Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wtv",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wtv",
@@ -24,32 +24,32 @@
     "value": 0.12
   },
   "nav": {
-    "display": "$106.92",
-    "value": 106.919,
-    "asOfDate": "Sep 17 2026"
+    "display": "$106.00",
+    "value": 105.995,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$106.49",
-    "value": 106.49,
-    "asOfDate": "Sep 16 2026"
+    "display": "$106.97",
+    "value": 106.97,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.02
+    "display": "0.05%",
+    "value": 0.047
   },
   "aum": {
     "display": "$3.29 B",
     "value": 3293085440,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.84,
     "dividendYieldText": "1.84%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.2,
-    "secYield": 2.14,
-    "secYieldText": "2.14%",
+    "distributionRate": 2.19,
+    "secYield": 2.16,
+    "secYieldText": "2.16%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

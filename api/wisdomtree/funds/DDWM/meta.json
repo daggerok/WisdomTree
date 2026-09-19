@@ -2,7 +2,7 @@
   "ticker": "DDWM",
   "name": "WisdomTree Dynamic International Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddwm",
@@ -24,32 +24,32 @@
     "value": 0.4
   },
   "nav": {
-    "display": "$46.83",
-    "value": 46.829,
-    "asOfDate": "Sep 17 2026"
+    "display": "$46.34",
+    "value": 46.34,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$46.47",
-    "value": 46.47,
-    "asOfDate": "Sep 16 2026"
+    "display": "$46.86",
+    "value": 46.86,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.36%",
-    "value": -0.36
+    "display": "0.07%",
+    "value": 0.065
   },
   "aum": {
     "display": "$1.45 B",
     "value": 1452752900,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.52,
     "dividendYieldText": "2.52%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.66,
-    "secYield": 2.29,
-    "secYieldText": "2.29%",
+    "distributionRate": 5.64,
+    "secYield": 2.26,
+    "secYieldText": "2.26%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

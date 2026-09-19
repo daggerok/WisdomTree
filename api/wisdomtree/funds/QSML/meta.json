@@ -2,7 +2,7 @@
   "ticker": "QSML",
   "name": "WisdomTree U.S. SmallCap Quality Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Growth",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qsml",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qsml",
@@ -24,24 +24,24 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$33.14",
-    "value": 33.141,
-    "asOfDate": "Sep 17 2026"
+    "display": "$32.90",
+    "value": 32.903,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$33.19",
-    "value": 33.185,
-    "asOfDate": "Sep 16 2026"
+    "display": "$33.13",
+    "value": 33.13,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.014
+    "display": "-0.03%",
+    "value": -0.032
   },
   "aum": {
     "display": "$12.44 M",
     "value": 12442680,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.54,
@@ -121,8 +121,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 664,
-    "asOf": "Sep 17 2026",
+    "totalRows": 665,
+    "asOf": "Sep 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

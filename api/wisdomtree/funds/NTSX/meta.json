@@ -2,7 +2,7 @@
   "ticker": "NTSX",
   "name": "U.S. Efficient Core",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Core",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsx",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsx",
@@ -29,8 +29,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$59.40",
-    "value": 59.4,
+    "display": "$59.29",
+    "value": 59.29,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,7 +41,7 @@
     "display": "$1.36 B",
     "value": 1361992960,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.08,

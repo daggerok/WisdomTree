@@ -2,7 +2,7 @@
   "ticker": "HYZD",
   "name": "Interest Rate Hedged High Yield Bond",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
@@ -29,8 +29,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$22.64",
-    "value": 22.64,
+    "display": "$22.68",
+    "value": 22.683,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,7 +41,7 @@
     "display": "$300.86 M",
     "value": 300855070,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 5.8,

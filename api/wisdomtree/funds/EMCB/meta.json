@@ -2,7 +2,7 @@
   "ticker": "EMCB",
   "name": "WisdomTree Emerging Markets Corporate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Emerging Markets",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/emcb",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/emcb",
@@ -24,24 +24,24 @@
     "value": 0.6
   },
   "nav": {
-    "display": "$65.26",
-    "value": 65.264,
-    "asOfDate": "Sep 17 2026"
+    "display": "$65.22",
+    "value": 65.223,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$64.93",
-    "value": 64.93,
-    "asOfDate": "Sep 16 2026"
+    "display": "$65.11",
+    "value": 65.11,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.39%",
-    "value": -0.389
+    "display": "-0.24%",
+    "value": -0.237
   },
   "aum": {
     "display": "$97.77 M",
     "value": 97774330,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 5.42,

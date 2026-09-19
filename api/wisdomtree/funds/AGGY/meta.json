@@ -2,7 +2,7 @@
   "ticker": "AGGY",
   "name": "Yield Enhanced U.S. Aggregate Bond",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/aggy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/aggy",
@@ -29,8 +29,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.30",
-    "value": 42.295,
+    "display": "$42.13",
+    "value": 42.13,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -41,7 +41,7 @@
     "display": "$895.83 M",
     "value": 895833660,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.66,

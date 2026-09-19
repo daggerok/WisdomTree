@@ -2,7 +2,7 @@
   "ticker": "DGRS",
   "name": "WisdomTree U.S. SmallCap Quality Dividend Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrs",
@@ -24,32 +24,32 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$57.25",
-    "value": 57.248,
-    "asOfDate": "Sep 17 2026"
+    "display": "$57.09",
+    "value": 57.09,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$57.32",
-    "value": 57.32,
-    "asOfDate": "Sep 16 2026"
+    "display": "$57.22",
+    "value": 57.22,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.038
+    "display": "-0.05%",
+    "value": -0.048
   },
   "aum": {
     "display": "$392.50 M",
     "value": 392503200,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.15,
     "dividendYieldText": "2.15%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.67,
-    "secYield": 2.05,
-    "secYieldText": "2.05%",
+    "distributionRate": 1.68,
+    "secYield": 2.06,
+    "secYieldText": "2.06%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

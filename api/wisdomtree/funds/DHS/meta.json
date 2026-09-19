@@ -1,12 +1,12 @@
 {
   "ticker": "DHS",
-  "name": "U.S. High Dividend",
+  "name": "WisdomTree U.S. High Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dhs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dhs",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DHS",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717W208",
     "isin": null,
     "indexTicker": null
   },
@@ -24,63 +24,63 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$115.76",
-    "value": 115.76,
-    "asOfDate": "Sep 16 2026"
+    "display": "$115.23",
+    "value": 115.227,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$115.91",
     "value": 115.91,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.13%",
-    "value": 0.13
+    "display": "0.05%",
+    "value": 0.054
   },
   "aum": {
     "display": "$1.59 B",
     "value": 1585907460,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.3,
     "dividendYieldText": "3.30%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 3.26,
+    "secYield": 3.31,
+    "secYieldText": "3.31%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -1.78,
-      "mo1Text": "-1.78%",
-      "qtd": 2.32,
-      "qtdText": "2.32%",
-      "ytd": 16.29,
-      "ytdText": "16.29%",
-      "yr1": 20.08,
-      "yr1Text": "20.08%",
-      "yr3": 16.99,
-      "yr3Text": "16.99%",
-      "yr5": 12.01,
-      "yr5Text": "12.01%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 1.36,
+      "mo1Text": "1.36%",
+      "qtd": 6.23,
+      "qtdText": "6.23%",
+      "ytd": 18.25,
+      "ytdText": "18.25%",
+      "yr1": 20.56,
+      "yr1Text": "20.56%",
+      "yr3": 17.77,
+      "yr3Text": "17.77%",
+      "yr5": 11.95,
+      "yr5Text": "11.95%",
       "yr10": 9.85,
       "yr10Text": "9.85%",
-      "sinceInception": 8.16,
-      "sinceInceptionText": "8.16%"
+      "sinceInception": 8.28,
+      "sinceInceptionText": "8.28%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
-      "yr10": null,
-      "sinceInception": null
+      "yr1": 22.43,
+      "yr3": 16.9,
+      "yr5": 11.88,
+      "yr10": 9.44,
+      "sinceInception": 8.13
     }
   },
   "distributions": {

@@ -2,7 +2,7 @@
   "ticker": "GTR",
   "name": "WisdomTree Target Range Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Option-Based",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gtr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gtr",
@@ -24,32 +24,32 @@
     "value": 0.7
   },
   "nav": {
-    "display": "$27.65",
-    "value": 27.65,
-    "asOfDate": "Sep 17 2026"
+    "display": "$27.58",
+    "value": 27.582,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$27.35",
-    "value": 27.35,
-    "asOfDate": "Sep 16 2026"
+    "display": "$27.61",
+    "value": 27.608,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.27%",
-    "value": -0.273
+    "display": "-0.15%",
+    "value": -0.152
   },
   "aum": {
     "display": "$72.68 M",
     "value": 72675070,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 2.18,
     "dividendYieldText": "2.18%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.19,
-    "secYield": 2.33,
-    "secYieldText": "2.33%",
+    "distributionRate": 2.17,
+    "secYield": 2.35,
+    "secYieldText": "2.35%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -169,8 +169,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1241,
-    "asOf": "Sep 17 2026",
+    "totalRows": 1242,
+    "asOf": "Sep 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

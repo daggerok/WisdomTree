@@ -2,7 +2,7 @@
   "ticker": "USMF",
   "name": "WisdomTree U.S. Multifactor Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/usmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/usmf",
@@ -25,29 +25,29 @@
   },
   "nav": {
     "display": "$52.57",
-    "value": 52.569,
-    "asOfDate": "Sep 17 2026"
+    "value": 52.573,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$52.02",
-    "value": 52.025,
-    "asOfDate": "Sep 16 2026"
+    "display": "$52.60",
+    "value": 52.597,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.007
+    "display": "0.05%",
+    "value": 0.054
   },
   "aum": {
     "display": "$275.72 M",
     "value": 275715070,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.32,
     "dividendYieldText": "1.32%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.35,
+    "distributionRate": 1.33,
     "secYield": 0.83,
     "secYieldText": "0.83%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -250,8 +250,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2317,
-    "asOf": "Sep 17 2026",
+    "totalRows": 2318,
+    "asOf": "Sep 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

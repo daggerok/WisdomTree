@@ -2,7 +2,7 @@
   "ticker": "DFJ",
   "name": "WisdomTree Japan SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfj",
@@ -24,32 +24,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$116.80",
-    "value": 116.796,
-    "asOfDate": "Sep 17 2026"
+    "display": "$115.61",
+    "value": 115.607,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
-    "display": "$116.46",
-    "value": 116.464,
-    "asOfDate": "Sep 16 2026"
+    "display": "$117.31",
+    "value": 117.31,
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "0.23%",
-    "value": 0.226
+    "display": "0.44%",
+    "value": 0.438
   },
   "aum": {
     "display": "$453.18 M",
     "value": 453183810,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.39,
     "dividendYieldText": "2.39%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 4.58,
-    "secYield": 2.19,
-    "secYieldText": "2.19%",
+    "distributionRate": 4.55,
+    "secYield": 2.17,
+    "secYieldText": "2.17%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

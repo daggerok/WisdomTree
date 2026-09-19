@@ -1,12 +1,12 @@
 {
   "ticker": "GCC",
-  "name": "Enhanced Commodity Strategy",
+  "name": "WisdomTree Enhanced Commodity Strategy Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Commodity",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gcc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gcc",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCC",
@@ -15,7 +15,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717Y683",
     "isin": null,
     "indexTicker": null
   },
@@ -24,63 +24,63 @@
     "value": 0.55
   },
   "nav": {
-    "display": "$27.03",
-    "value": 27.028,
-    "asOfDate": "Sep 16 2026"
+    "display": "$27.17",
+    "value": 27.17,
+    "asOfDate": "Sep 18 2026"
   },
   "marketPrice": {
     "display": "$26.99",
     "value": 26.99,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.14%",
-    "value": -0.14
+    "display": "-0.17%",
+    "value": -0.175
   },
   "aum": {
     "display": "$335.15 M",
     "value": 335147680,
     "asOfDate": "Sep 16 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 5.19,
     "dividendYieldText": "5.19%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 1.18,
+    "secYield": 2.6,
+    "secYieldText": "2.60%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": 5.31,
-      "mo1Text": "5.31%",
-      "qtd": 19.11,
-      "qtdText": "19.11%",
-      "ytd": 27.61,
-      "ytdText": "27.61%",
-      "yr1": 35.42,
-      "yr1Text": "35.42%",
-      "yr3": 18.79,
-      "yr3Text": "18.79%",
-      "yr5": 13.68,
-      "yr5Text": "13.68%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 9.13,
+      "mo1Text": "9.13%",
+      "qtd": 6.1,
+      "qtdText": "6.10%",
+      "ytd": 25.15,
+      "ytdText": "25.15%",
+      "yr1": 36.8,
+      "yr1Text": "36.80%",
+      "yr3": 18.82,
+      "yr3Text": "18.82%",
+      "yr5": 13,
+      "yr5Text": "13.00%",
       "yr10": 7.97,
       "yr10Text": "7.97%",
-      "sinceInception": 1.67,
-      "sinceInceptionText": "1.67%"
+      "sinceInception": 14.61,
+      "sinceInceptionText": "14.61%"
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
+      "yr1": 21.53,
+      "yr3": 14.96,
+      "yr5": 9.56,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": 11.92
     }
   },
   "distributions": {
