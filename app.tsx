@@ -1650,7 +1650,12 @@ function setStatusRow(message: string, tone: 'info' | 'error'): void {
 /** Active fund fallback: if the active fund was deselected, fall back to the
  *  first remaining selected fund (or none). */
 function updateActiveFundFallback(): void {
-  if (state.activeFundTicker && !state.selected.has(state.activeFundTicker)) {
+  // Bulk selection writers (the filtered header checkbox and the All ETFs
+  // pill) can add the first selected fund without going through toggleFund.
+  // Keep a selected fund active in that case too, otherwise the selected-tabs
+  // panel renders as an empty shell until the next page reload restores the
+  // fallback in loadCatalog().
+  if (!state.activeFundTicker || !state.selected.has(state.activeFundTicker)) {
     state.activeFundTicker = [...state.selected][0] || null;
   }
 }

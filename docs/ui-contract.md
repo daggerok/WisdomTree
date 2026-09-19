@@ -105,8 +105,8 @@ updates immediately (no extra click needed):
 
 - selected ETF count and clickable ticker badges in the subtitle (the active
   fund is highlighted);
-- active fund ticker (falls back to another selected fund when the active one
-  is deselected);
+- active fund ticker (establishes the first selected fund for bulk selection
+  and falls back to another selected fund when the active one is deselected);
 - detail-tabs panel visibility and per-sheet counts (Overview, Holdings,
   History, Distributions);
 - Watchlist tab visibility, loading state and count;

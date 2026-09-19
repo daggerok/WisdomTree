@@ -228,6 +228,21 @@ test("2. header Use check selects exactly the filtered ETFs", async () => {
   expect(selectedTickers(app)).toEqual(visible);
 }, 60000);
 
+test("2b. filtered bulk selection immediately opens the selected-fund panel", async () => {
+  const app = await bootFresh();
+  setSearch(app, "dg"); // the user-facing regression: select all visible matches
+  const visible = app.run<string[]>("visibleCatalogRows().map((f) => f.ticker)").sort();
+  expect(visible.length).toBeGreaterThan(1);
+
+  setChecked(headerCheckbox(app), true);
+
+  // Bulk selection must establish an active fund just like a row click. The
+  // panel must be populated in the same render, not only after a hard reload.
+  expect(app.run("state.activeFundTicker")).toBe(visible[0]);
+  expect(app.el("selected-tabs-panel").classList.contains("is-visible")).toBe(true);
+  expect(app.el("selected-tabs-bar").innerHTML).toContain(`${visible[0]} Overview`);
+}, 60000);
+
 test("3. header Use uncheck removes only visible tickers; hidden selections survive", async () => {
   const app = await bootFresh();
 
