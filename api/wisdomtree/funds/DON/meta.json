@@ -1,8 +1,8 @@
 {
   "ticker": "DON",
-  "name": "WisdomTree U.S. MidCap Dividend Fund",
+  "name": "U.S. MidCap Dividend",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Mid & Small Cap Value",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/don",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/don",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W505",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$55.73",
     "value": 55.729,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$54.72",
     "value": 54.72,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.09%",
-    "value": 0.09
+    "display": "-1.81%",
+    "value": -1.81
   },
   "aum": {
-    "display": "$3.89 B",
-    "value": 3893302780,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$3.84 B",
+    "value": 3835069700,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.37,
-    "dividendYieldText": "2.37%",
+    "dividendYield": 2.43,
+    "dividendYieldText": "2.43%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 2.31,
-    "secYieldText": "2.31%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {

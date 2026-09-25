@@ -2,7 +2,7 @@
   "ticker": "UNIY",
   "name": "WisdomTree Voya Yield Enhanced USD Universal Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
@@ -39,14 +39,14 @@
     "value": -0.004
   },
   "aum": {
-    "display": "$1.30 B",
-    "value": 1295012610,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$1.28 B",
+    "value": 1276749310,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.91,
-    "dividendYieldText": "4.91%",
+    "dividendYield": 4.97,
+    "dividendYieldText": "4.97%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 4.84,
     "secYield": 5.1,

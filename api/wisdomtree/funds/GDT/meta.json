@@ -2,7 +2,7 @@
   "ticker": "GDT",
   "name": "WisdomTree Efficient TIPS Plus Gold Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / -",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
@@ -39,15 +39,15 @@
     "value": 0.027
   },
   "aum": {
-    "display": "$11.47 M",
-    "value": 11469940,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$11.28 M",
+    "value": 11275160,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 8.46,
-    "dividendYieldText": "8.46%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYield": 0.86,
+    "dividendYieldText": "0.86%",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
     "secYield": 0.63,
     "secYieldText": "0.63%",

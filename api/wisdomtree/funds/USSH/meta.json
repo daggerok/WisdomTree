@@ -1,8 +1,8 @@
 {
   "ticker": "USSH",
-  "name": "WisdomTree 1-3 Year Laddered Treasury Fund",
+  "name": "1-3 Year Laddered Treasury",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Government Strategies",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/ussh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/ussh",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y394",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$49.82",
     "value": 49.823,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$49.73",
     "value": 49.735,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.00%",
-    "value": -0.001
+    "display": "-0.18%",
+    "value": -0.18
   },
   "aum": {
-    "display": "$22.43 M",
-    "value": 22426760,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$22.39 M",
+    "value": 22390500,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.58,
-    "dividendYieldText": "3.58%",
+    "dividendYield": 3.59,
+    "dividendYieldText": "3.59%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 4.28,
-    "secYieldText": "4.28%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {

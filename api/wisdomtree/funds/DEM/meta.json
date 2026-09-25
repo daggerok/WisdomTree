@@ -1,8 +1,8 @@
 {
   "ticker": "DEM",
-  "name": "WisdomTree Emerging Markets High Dividend Fund",
+  "name": "Emerging Markets High Dividend",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dem",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dem",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W315",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$56.23",
     "value": 56.23,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$56.30",
     "value": 56.3,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.76%",
-    "value": 0.756
+    "display": "0.12%",
+    "value": 0.12
   },
   "aum": {
-    "display": "$4.20 B",
-    "value": 4197943300,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$4.26 B",
+    "value": 4261599740,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.01,
-    "dividendYieldText": "4.01%",
+    "dividendYield": 3.97,
+    "dividendYieldText": "3.97%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 3.41,
-    "secYieldText": "3.41%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {

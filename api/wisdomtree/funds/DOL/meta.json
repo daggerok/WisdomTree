@@ -2,7 +2,7 @@
   "ticker": "DOL",
   "name": "WisdomTree True Developed International Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dol",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dol",
@@ -39,14 +39,14 @@
     "value": -0.081
   },
   "aum": {
-    "display": "$841.34 M",
-    "value": 841338820,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$839.79 M",
+    "value": 839785470,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.43,
-    "dividendYieldText": "2.43%",
+    "dividendYield": 2.46,
+    "dividendYieldText": "2.46%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 5.29,
     "secYield": 2.07,

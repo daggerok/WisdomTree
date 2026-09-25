@@ -1,12 +1,12 @@
 {
   "ticker": "BTCW",
-  "name": "WisdomTree Bitcoin Fund",
+  "name": "Bitcoin",
   "category": "Crypto ETPs",
-  "categoryPath": "Crypto ETPs",
+  "categoryPath": "Crypto ETPs / Bitcoin",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/BTCW",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97720F101",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,22 +27,22 @@
   "nav": {
     "display": "$89.25",
     "value": 89.246,
-    "asOfDate": "Sep 24 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$89.32",
-    "value": 89.32,
+    "display": "$89.11",
+    "value": 89.11,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.182
+    "display": "-0.15%",
+    "value": -0.15
   },
   "aum": {
-    "display": "$159.25 M",
-    "value": 159245570,
-    "asOfDate": "Sep 16 2026",
-    "source": "previous run"
+    "display": "$177.42 M",
+    "value": 177423570,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": null,
@@ -54,61 +54,37 @@
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 25.37,
-      "mo1Text": "25.37%",
-      "qtd": 7.27,
-      "qtdText": "7.27%",
-      "ytd": -10.06,
-      "ytdText": "-10.06%",
-      "yr1": -27.36,
-      "yr1Text": "-27.36%",
+      "asOfDate": "Sep 24 2026",
+      "mo1": 7.06,
+      "mo1Text": "7.06%",
+      "qtd": 40.57,
+      "qtdText": "40.57%",
+      "ytd": -3.85,
+      "ytdText": "-3.85%",
+      "yr1": -24.66,
+      "yr1Text": "-24.66%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 22.54,
-      "sinceInceptionText": "22.54%",
-      "navReturns": {
-        "mo1": 25.54,
-        "mo1Text": "25.54%",
-        "qtd": 7.64,
-        "qtdText": "7.64%",
-        "ytd": -9.61,
-        "ytdText": "-9.61%",
-        "yr1": -27.29,
-        "yr1Text": "-27.29%",
-        "yr3": null,
-        "yr3Text": "—",
-        "yr5": null,
-        "yr5Text": "—",
-        "yr10": null,
-        "yr10Text": "—",
-        "sinceInception": 22.65,
-        "sinceInceptionText": "22.65%"
-      },
+      "sinceInception": 24.47,
+      "sinceInceptionText": "24.47%",
+      "navReturns": null,
       "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": -45.62,
+      "yr1": null,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 10.31,
-      "navReturns": {
-        "ytd": null,
-        "yr1": -45.61,
-        "yr3": null,
-        "yr5": null,
-        "yr10": null,
-        "sinceInception": 10.21
-      },
+      "sinceInception": null,
+      "navReturns": null,
       "indexReturns": null
     }
   },

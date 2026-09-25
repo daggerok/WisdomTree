@@ -1,8 +1,8 @@
 {
   "ticker": "NTSI",
-  "name": "WisdomTree International Efficient Core Fund",
+  "name": "International Efficient Core",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsi",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y634",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$46.64",
     "value": 46.64,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$46.21",
     "value": 46.21,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.25%",
-    "value": 0.249
+    "display": "-0.92%",
+    "value": -0.92
   },
   "aum": {
-    "display": "$488.53 M",
-    "value": 488533500,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$482.92 M",
+    "value": 482919230,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.5,
-    "dividendYieldText": "3.50%",
+    "dividendYield": 3.59,
+    "dividendYieldText": "3.59%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 2.14,
-    "secYieldText": "2.14%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {

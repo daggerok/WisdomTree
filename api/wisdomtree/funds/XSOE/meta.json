@@ -2,7 +2,7 @@
   "ticker": "XSOE",
   "name": "WisdomTree Emerging Markets ex-State-Owned Enterprises Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xsoe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xsoe",
@@ -39,14 +39,14 @@
     "value": -1.576
   },
   "aum": {
-    "display": "$2.08 B",
-    "value": 2084166780,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$2.15 B",
+    "value": 2145601920,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.61,
-    "dividendYieldText": "1.61%",
+    "dividendYield": 1.58,
+    "dividendYieldText": "1.58%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 2.31,
     "secYield": 0.95,

@@ -2,7 +2,7 @@
   "ticker": "NTSX",
   "name": "WisdomTree U.S. Efficient Core Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsx",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsx",
@@ -39,14 +39,14 @@
     "value": -0.104
   },
   "aum": {
-    "display": "$1.36 B",
-    "value": 1361992960,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$1.38 B",
+    "value": 1383122690,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.08,
-    "dividendYieldText": "1.08%",
+    "dividendYield": 1.09,
+    "dividendYieldText": "1.09%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 1.08,
     "secYield": 1.03,

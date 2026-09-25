@@ -1,12 +1,12 @@
 {
   "ticker": "WDIG",
-  "name": "WisdomTree Efficient Rare Earth Plus Strategic Metals Fund",
+  "name": "Efficient Rare Earth Plus Strategic Metals",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Gold and Commodities",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wdig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wdig",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDIG",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y238",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,40 +27,40 @@
   "nav": {
     "display": "$42.98",
     "value": 42.981,
-    "asOfDate": "Sep 24 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$43.30",
-    "value": 43.301,
+    "display": "$43.17",
+    "value": 43.17,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.06%",
-    "value": -0.058
+    "display": "0.44%",
+    "value": 0.44
   },
   "aum": {
-    "display": "$5.26 M",
-    "value": 5255140,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$6.50 M",
+    "value": 6498870,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": 0,
-    "secYield": -0.13,
-    "secYieldText": "-0.13%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 17.75,
-      "mo1Text": "17.75%",
-      "qtd": -11.93,
-      "qtdText": "-11.93%",
+      "asOfDate": "Sep 24 2026",
+      "mo1": -9.27,
+      "mo1Text": "-9.27%",
+      "qtd": 2.69,
+      "qtdText": "2.69%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -71,26 +71,9 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -12.28,
-      "sinceInceptionText": "-12.28%",
-      "navReturns": {
-        "mo1": 18.18,
-        "mo1Text": "18.18%",
-        "qtd": -11.94,
-        "qtdText": "-11.94%",
-        "ytd": null,
-        "ytdText": "—",
-        "yr1": null,
-        "yr1Text": "—",
-        "yr3": null,
-        "yr3Text": "—",
-        "yr5": null,
-        "yr5Text": "—",
-        "yr10": null,
-        "yr10Text": "—",
-        "sinceInception": -12.2,
-        "sinceInceptionText": "-12.20%"
-      },
+      "sinceInception": -40.16,
+      "sinceInceptionText": "-40.16%",
+      "navReturns": null,
       "indexReturns": null
     },
     "quarterEnd": {
@@ -100,15 +83,8 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": -19.41,
-      "navReturns": {
-        "ytd": null,
-        "yr1": null,
-        "yr3": null,
-        "yr5": null,
-        "yr10": null,
-        "sinceInception": -19.84
-      },
+      "sinceInception": null,
+      "navReturns": null,
       "indexReturns": null
     }
   },

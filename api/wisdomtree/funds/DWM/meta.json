@@ -2,7 +2,7 @@
   "ticker": "DWM",
   "name": "WisdomTree International Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwm",
@@ -39,14 +39,14 @@
     "value": -0.332
   },
   "aum": {
-    "display": "$667.85 M",
-    "value": 667850240,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$661.28 M",
+    "value": 661280380,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.69,
-    "dividendYieldText": "2.69%",
+    "dividendYield": 2.74,
+    "dividendYieldText": "2.74%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 5.81,
     "secYield": 2.28,

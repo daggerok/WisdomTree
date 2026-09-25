@@ -2,7 +2,7 @@
   "ticker": "HYIN",
   "name": "WisdomTree Private Credit & Alternative Income Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative",
+  "categoryPath": "Alternative / Credit",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/hyin",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/hyin",
@@ -39,14 +39,14 @@
     "value": 0.168
   },
   "aum": {
-    "display": "$50.09 M",
-    "value": 50086800,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$49.00 M",
+    "value": 48997160,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 13.82,
-    "dividendYieldText": "13.82%",
+    "dividendYield": 14.39,
+    "dividendYieldText": "14.39%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 11.78,
     "secYield": 13.66,

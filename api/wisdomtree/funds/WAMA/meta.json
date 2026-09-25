@@ -2,7 +2,7 @@
   "ticker": "WAMA",
   "name": "WisdomTree U.S. Adaptive Moving Average Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Large Cap Core",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wama",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wama",
@@ -39,10 +39,10 @@
     "value": -0.074
   },
   "aum": {
-    "display": "$188.76 M",
-    "value": 188759380,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$192.31 M",
+    "value": 192310820,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0.67,

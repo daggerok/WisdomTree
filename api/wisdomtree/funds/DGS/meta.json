@@ -2,17 +2,17 @@
   "ticker": "DGS",
   "name": "WisdomTree Emerging Markets SmallCap Dividend Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgs",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DGS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036250, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 64 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -25,73 +25,121 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$64.11",
-    "value": 64.107,
-    "asOfDate": "Sep 16 2026"
+    "display": "$64.01",
+    "value": 64.01,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$63.59",
-    "value": 63.59,
-    "asOfDate": "Sep 16 2026"
+    "display": "$63.66",
+    "value": 63.66,
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.36%",
-    "value": 0.361
+    "display": "-1.21%",
+    "value": -1.206
   },
   "aum": {
-    "display": "$1.72 B",
-    "value": 1716559360,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$1.74 B",
+    "value": 1739542910,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.79,
-    "dividendYieldText": "3.79%",
+    "dividendYield": 3.77,
+    "dividendYieldText": "3.77%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": 2.66,
-    "secYieldText": "2.66%",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 5.22,
+    "secYield": 2.55,
+    "secYieldText": "2.55%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": 0.57,
-      "mo1Text": "0.57%",
-      "qtd": -0.34,
-      "qtdText": "-0.34%",
-      "ytd": 12.94,
-      "ytdText": "12.94%",
-      "yr1": 12.95,
-      "yr1Text": "12.95%",
-      "yr3": 14.24,
-      "yr3Text": "14.24%",
-      "yr5": 7.16,
-      "yr5Text": "7.16%",
-      "yr10": 8.37,
-      "yr10Text": "8.37%",
-      "sinceInception": 4.86,
-      "sinceInceptionText": "4.86%",
-      "navReturns": null,
-      "indexReturns": null
+      "asOfDate": "Aug 31 2026",
+      "mo1": 5.44,
+      "mo1Text": "5.44%",
+      "qtd": -1.08,
+      "qtdText": "-1.08%",
+      "ytd": 14.03,
+      "ytdText": "14.03%",
+      "yr1": 17.28,
+      "yr1Text": "17.28%",
+      "yr3": 14.32,
+      "yr3Text": "14.32%",
+      "yr5": 7.39,
+      "yr5Text": "7.39%",
+      "yr10": 8.7,
+      "yr10Text": "8.70%",
+      "sinceInception": 4.94,
+      "sinceInceptionText": "4.94%",
+      "navReturns": {
+        "mo1": 5.19,
+        "mo1Text": "5.19%",
+        "qtd": -0.92,
+        "qtdText": "-0.92%",
+        "ytd": 14.51,
+        "ytdText": "14.51%",
+        "yr1": 17.61,
+        "yr1Text": "17.61%",
+        "yr3": 14.57,
+        "yr3Text": "14.57%",
+        "yr5": 7.5,
+        "yr5Text": "7.50%",
+        "yr10": 8.77,
+        "yr10Text": "8.77%",
+        "sinceInception": 4.97,
+        "sinceInceptionText": "4.97%"
+      },
+      "indexReturns": {
+        "mo1": 5.24,
+        "mo1Text": "5.24%",
+        "qtd": -0.77,
+        "qtdText": "-0.77%",
+        "ytd": 15.09,
+        "ytdText": "15.09%",
+        "yr1": 18.51,
+        "yr1Text": "18.51%",
+        "yr3": 15.4,
+        "yr3Text": "15.40%",
+        "yr5": 8.48,
+        "yr5Text": "8.48%",
+        "yr10": 9.79,
+        "yr10Text": "9.79%",
+        "sinceInception": 6.06,
+        "sinceInceptionText": "6.06%"
+      }
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
-      "yr10": null,
-      "sinceInception": null,
-      "navReturns": null,
-      "indexReturns": null
+      "yr1": 22,
+      "yr3": 15.76,
+      "yr5": 7.91,
+      "yr10": 9.54,
+      "sinceInception": 5.04,
+      "navReturns": {
+        "ytd": null,
+        "yr1": 21.47,
+        "yr3": 15.78,
+        "yr5": 7.79,
+        "yr10": 9.57,
+        "sinceInception": 5
+      },
+      "indexReturns": {
+        "ytd": null,
+        "yr1": 22.39,
+        "yr3": 16.84,
+        "yr5": 8.81,
+        "yr10": 10.65,
+        "sinceInception": 6.11
+      }
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 64 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
       "Record Date",
@@ -745,33 +793,43 @@
       ],
       [
         "12/26/2025",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "0.579"
+        "12/26/2025",
+        "12/30/2025",
+        "0.57891",
+        "0",
+        "0",
+        "0",
+        "0.57891"
       ],
       [
         "03/26/2026",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
+        "03/26/2026",
+        "03/30/2026",
+        "0.2",
+        "0",
+        "0",
+        "0",
         "0.2"
       ],
       [
         "06/25/2026",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
+        "06/25/2026",
+        "06/29/2026",
+        "0.84",
+        "0",
+        "0",
+        "0",
         "0.84"
+      ],
+      [
+        "09/25/2026",
+        "09/25/2026",
+        "09/29/2026",
+        "0.76",
+        "0",
+        "0",
+        "0",
+        "0.76"
       ]
     ]
   },

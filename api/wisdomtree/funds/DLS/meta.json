@@ -1,8 +1,8 @@
 {
   "ticker": "DLS",
-  "name": "WisdomTree International SmallCap Dividend Fund",
+  "name": "International SmallCap Dividend",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International Mid & Small Cap",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717W760",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$88.74",
     "value": 88.742,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$87.75",
     "value": 87.745,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.34%",
-    "value": -0.338
+    "display": "-1.12%",
+    "value": -1.12
   },
   "aum": {
-    "display": "$1.07 B",
-    "value": 1072171710,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$1.06 B",
+    "value": 1064466880,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.38,
-    "dividendYieldText": "3.38%",
+    "dividendYield": 3.45,
+    "dividendYieldText": "3.45%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 2.8,
-    "secYieldText": "2.80%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {

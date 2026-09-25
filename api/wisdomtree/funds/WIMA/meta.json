@@ -1,8 +1,8 @@
 {
   "ticker": "WIMA",
-  "name": "WisdomTree International Adaptive Moving Average Fund",
+  "name": "International Adaptive Moving Average",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wima",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wima",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y212",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,38 +27,38 @@
   "nav": {
     "display": "$42.68",
     "value": 42.677,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$42.64",
     "value": 42.642,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.34%",
-    "value": 0.341
+    "display": "-0.08%",
+    "value": -0.08
   },
   "aum": {
-    "display": "$72.07 M",
-    "value": 72069830,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$71.44 M",
+    "value": 71444490,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": null,
-    "secYield": 1.8,
-    "secYieldText": "1.80%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
       "asOfDate": "Sep 24 2026",
-      "mo1": -3.06,
-      "mo1Text": "-3.06%",
+      "mo1": -3.07,
+      "mo1Text": "-3.07%",
       "qtd": 2.11,
       "qtdText": "2.11%",
       "ytd": null,
@@ -71,8 +71,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 19.66,
-      "sinceInceptionText": "19.66%",
+      "sinceInception": 19.64,
+      "sinceInceptionText": "19.64%",
       "navReturns": null,
       "indexReturns": null
     },
