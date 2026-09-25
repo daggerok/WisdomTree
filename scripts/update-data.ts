@@ -9,8 +9,15 @@
 //             https://www.wisdomtree.com/us/products
 //   holdings  SEC EDGAR Form N-PORT-P for the exact ETF series (full reported
 //             portfolio; the issuer page is used as a small fallback)
+//   returns   The per-fund product page's official "Total Returns" table
+//             (Market Price, NAV and Underlying Index Returns rows)
+//   distributions  The per-fund product page's official "Recent
+//             Distributions" table (ex-date plus the Ordinary Income /
+//             Short-Term / Long-Term Capital Gains / Return of Capital
+//             breakdown); Yahoo Finance dividend events fill in only the
+//             older ex-dates that small official table doesn't cover
 //   history   Yahoo Finance's public chart endpoint (daily close, adjusted
-//             close, volume and distributions)
+//             close and volume)
 //
 // WisdomTree currently protects some HTML/API routes with Cloudflare. The
 // catalog fetch first tries the official page and then uses the read-only
@@ -122,6 +129,21 @@ export type ParsedNport = {
   netAssets: number | null;
 };
 
+// A single labeled row from the official product page's "Total Returns"
+// table (Market Price Returns, NAV Returns or Underlying Index Returns),
+// holding the same cumulative/annualized tenors as the primary row below but
+// with no asOfDate of its own (it shares the section's asOfDate).
+export type OfficialReturnRow = {
+  mo1: number | null;
+  qtd: number | null;
+  ytd: number | null;
+  yr1: number | null;
+  cagr3y: number | null;
+  cagr5y: number | null;
+  cagr10y: number | null;
+  siAnn: number | null;
+};
+
 export type OfficialProductReturns = PriceReturns & {
   qtd: number | null;
   ytd: number | null;
@@ -130,6 +152,12 @@ export type OfficialProductReturns = PriceReturns & {
   cagr5y: number | null;
   cagr10y: number | null;
   siAnn: number | null;
+  // The primary fields above are the table's "Market Price Returns" row
+  // (kept for backward compatibility with the merge-with-Yahoo path below).
+  // These are the same official table's "NAV Returns" and "Underlying Index
+  // Returns" (benchmark) rows, kept alongside rather than overwriting them.
+  navReturns: OfficialReturnRow | null;
+  indexReturns: OfficialReturnRow | null;
 };
 
 export type ProductPageSummary = {
@@ -239,6 +267,16 @@ function formatDate(value: string | null | undefined): string {
 function formatUsDate(epoch: number): string {
   const date = new Date(epoch * 1000);
   return `${String(date.getUTCMonth() + 1).padStart(2, '0')}/${String(date.getUTCDate()).padStart(2, '0')}/${date.getUTCFullYear()}`;
+}
+
+function isoToUsDate(iso: string | null): string {
+  const match = iso ? /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso) : null;
+  return match ? `${match[2]}/${match[3]}/${match[1]}` : '—';
+}
+
+function isoDateEpoch(iso: string): number | null {
+  const parsed = Date.parse(`${iso}T00:00:00Z`);
+  return Number.isNaN(parsed) ? null : Math.floor(parsed / 1000);
 }
 
 function formatAumDisplay(value: number | null): string {
@@ -556,34 +594,63 @@ function heroMetric(markdown: string, labelPattern: string): { value: number | n
 }
 
 function emptyOfficialReturns(): OfficialProductReturns {
-  return { asOfDate: '', mo1: null, qtd: null, ytd: null, yr1: null, cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null };
+  return { asOfDate: '', mo1: null, qtd: null, ytd: null, yr1: null, cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null, navReturns: null, indexReturns: null };
 }
 
+function emptyOfficialReturnRow(): OfficialReturnRow {
+  return { mo1: null, qtd: null, ytd: null, yr1: null, cagr3y: null, cagr5y: null, cagr10y: null, siAnn: null };
+}
+
+function applyReturnRowValues(target: OfficialReturnRow, mode: 'cumulative' | 'annual' | null, values: Array<number | null>): void {
+  if (mode === 'cumulative') {
+    target.mo1 = values[0] ?? null;
+    target.qtd = values[1] ?? null;
+    target.ytd = values[2] ?? null;
+  } else if (mode === 'annual') {
+    target.yr1 = values[0] ?? null;
+    target.cagr3y = values[1] ?? null;
+    target.cagr5y = values[2] ?? null;
+    target.cagr10y = values[3] ?? null;
+    target.siAnn = values[4] ?? null;
+  }
+}
+
+// The official "Total Returns" table always carries three rows per section
+// (Underlying Index Returns, NAV Returns, Market Price Returns, in that
+// order) — verified live against wisdomtree.com/us/products/equity/dgrw and
+// .../fixed-income/usfr. Market Price Returns stays the primary row (used
+// to merge with the Yahoo fallback elsewhere); NAV Returns and Underlying
+// Index Returns are captured alongside as their own labeled rows.
 function productReturnSection(block: string, asOfDate: string): OfficialProductReturns | null {
   const lines = block.split(/\r?\n/);
   let mode: 'cumulative' | 'annual' | null = null;
   const result = emptyOfficialReturns();
   result.asOfDate = asOfDate;
+  const nav = emptyOfficialReturnRow();
+  const index = emptyOfficialReturnRow();
   let found = false;
+  let foundNav = false;
+  let foundIndex = false;
   for (const line of lines) {
     const cells = line.trim().startsWith('|') ? markdownPipeCells(line) : [];
-    if (cells[0]?.toLowerCase() === 'cumulative') mode = 'cumulative';
-    if (cells[0]?.toLowerCase() === 'average annual') mode = 'annual';
-    if (cells[0]?.toLowerCase() !== 'market price returns') continue;
+    const label = cells[0]?.toLowerCase();
+    if (label === 'cumulative') mode = 'cumulative';
+    if (label === 'average annual') mode = 'annual';
+    if (!label) continue;
     const values = cells.slice(1).map((value) => numberOrNull(value));
-    if (mode === 'cumulative') {
-      result.mo1 = values[0] ?? null;
-      result.qtd = values[1] ?? null;
-      result.ytd = values[2] ?? null;
-    } else if (mode === 'annual') {
-      result.yr1 = values[0] ?? null;
-      result.cagr3y = values[1] ?? null;
-      result.cagr5y = values[2] ?? null;
-      result.cagr10y = values[3] ?? null;
-      result.siAnn = values[4] ?? null;
+    if (label === 'market price returns') {
+      applyReturnRowValues(result, mode, values);
+      found = true;
+    } else if (label === 'nav returns') {
+      applyReturnRowValues(nav, mode, values);
+      foundNav = true;
+    } else if (label === 'underlying index returns') {
+      applyReturnRowValues(index, mode, values);
+      foundIndex = true;
     }
-    found = true;
   }
+  result.navReturns = foundNav ? nav : null;
+  result.indexReturns = foundIndex ? index : null;
   return found ? result : null;
 }
 
@@ -627,6 +694,120 @@ export function parseProductPageSummary(markdown: string): ProductPageSummary {
     productAsOfDate: productAsOf,
     officialReturns: { monthEnd: monthReturns, quarterEnd: quarterReturns },
   };
+}
+
+// A single row of the official product page's "Recent Distributions" table:
+// ex-date plus the full Ordinary Income / Short-Term Capital Gains /
+// Long-Term Capital Gains / Return of Capital / Total tax-character
+// breakdown. Also used (with only exDate/total populated) to represent a
+// Yahoo dividend-event fallback row in the merged distributions table.
+export type DistributionRow = {
+  exDate: string;
+  recordDate: string | null;
+  payableDate: string | null;
+  ordinaryIncome: number | null;
+  shortTermCapitalGains: number | null;
+  longTermCapitalGains: number | null;
+  returnOfCapital: number | null;
+  total: number | null;
+};
+
+export const DISTRIBUTION_HEADERS = ['Ex-Date', 'Record Date', 'Payable Date', 'Ordinary Income', 'Short-Term Capital Gains', 'Long-Term Capital Gains', 'Return of Capital', 'Total Distribution'];
+
+// Parses the official "Recent Distributions" table, which — verified live
+// against wisdomtree.com/us/products/equity/dgrw and .../fixed-income/usfr —
+// carries: Ex-Dividend Date | Record Date | Payable Date | Ordinary Income |
+// Short Term Capital Gains | Long Term Capital Gains | Return of Capital |
+// Total Distribution. The site only ever shows a small window of the most
+// recent distributions here, so this is combined with the Yahoo
+// dividend-events history for older ex-dates elsewhere (mergeDistributionRecords).
+export function parseOfficialDistributions(markdown: string): DistributionRow[] {
+  const source = String(markdown ?? '').replace(/\r/g, '');
+  const start = source.search(/###\s+Recent Distributions\b/i);
+  if (start < 0) return [];
+  const afterHeading = source.slice(start + 1);
+  const nextHeading = afterHeading.search(/\n###\s+/);
+  const block = nextHeading >= 0 ? source.slice(start, start + 1 + nextHeading) : source.slice(start);
+  const rows: DistributionRow[] = [];
+  let tableStarted = false;
+  for (const line of block.split('\n')) {
+    if (!line.trim().startsWith('|')) {
+      if (tableStarted && rows.length) break;
+      continue;
+    }
+    const cells = markdownPipeCells(line);
+    if (cells.length < 2) continue;
+    if (cells[0].toLowerCase() === 'ex-dividend date') { tableStarted = true; continue; }
+    if (!tableStarted || /^-+$/.test(cells[0])) continue;
+    const exDate = toIsoDate(cells[0]);
+    if (!exDate) continue;
+    rows.push({
+      exDate,
+      recordDate: toIsoDate(cells[1]) || null,
+      payableDate: toIsoDate(cells[2]) || null,
+      ordinaryIncome: numberOrNull(cells[3]),
+      shortTermCapitalGains: numberOrNull(cells[4]),
+      longTermCapitalGains: numberOrNull(cells[5]),
+      returnOfCapital: numberOrNull(cells[6]),
+      total: numberOrNull(cells[7]),
+    });
+  }
+  return rows;
+}
+
+function yahooToDistributionRow(item: { epoch: number; amount: number }): DistributionRow {
+  return {
+    exDate: new Date(item.epoch * 1000).toISOString().slice(0, 10),
+    recordDate: null,
+    payableDate: null,
+    ordinaryIncome: null,
+    shortTermCapitalGains: null,
+    longTermCapitalGains: null,
+    returnOfCapital: null,
+    total: round(item.amount, 6),
+  };
+}
+
+// House policy: official issuer data wins whenever it exists and is
+// non-empty; Yahoo is used only for ex-dates the official table doesn't
+// cover (it only ever shows a handful of the most recent distributions).
+export function mergeDistributionRecords(official: DistributionRow[], yahoo: Array<{ epoch: number; amount: number }>): { rows: DistributionRow[]; yahooOnlyCount: number } {
+  const officialDates = new Set(official.map((row) => row.exDate));
+  const fallbackRows = yahoo
+    .filter((item) => !officialDates.has(new Date(item.epoch * 1000).toISOString().slice(0, 10)))
+    .map(yahooToDistributionRow);
+  const rows = [...fallbackRows, ...official].sort((a, b) => a.exDate.localeCompare(b.exDate));
+  return { rows, yahooOnlyCount: fallbackRows.length };
+}
+
+function distributionAmount(row: DistributionRow): number | null {
+  if (row.total !== null) return row.total;
+  const parts = [row.ordinaryIncome, row.shortTermCapitalGains, row.longTermCapitalGains, row.returnOfCapital].filter((value): value is number => value !== null);
+  return parts.length ? round(parts.reduce((sum, value) => sum + value, 0), 6) : null;
+}
+
+export function distributionRecordEvents(rows: DistributionRow[]): Array<{ epoch: number; amount: number }> {
+  const events: Array<{ epoch: number; amount: number }> = [];
+  for (const row of rows) {
+    const epoch = isoDateEpoch(row.exDate);
+    const amount = distributionAmount(row);
+    if (epoch !== null && amount !== null) events.push({ epoch, amount });
+  }
+  return events.sort((a, b) => a.epoch - b.epoch);
+}
+
+function distributionRowToCells(row: DistributionRow): string[] {
+  const amountCell = (value: number | null) => (value === null ? '—' : String(round(value, 6)));
+  return [
+    isoToUsDate(row.exDate),
+    isoToUsDate(row.recordDate),
+    isoToUsDate(row.payableDate),
+    amountCell(row.ordinaryIncome),
+    amountCell(row.shortTermCapitalGains),
+    amountCell(row.longTermCapitalGains),
+    amountCell(row.returnOfCapital),
+    amountCell(row.total),
+  ];
 }
 
 export function parseTopHoldingsMarkdown(markdown: string, ticker: string, companyNames: Map<string, string> = new Map()): { headers: string[]; rows: JsonRecord[]; asOfDate: string | null } {
@@ -957,10 +1138,6 @@ function historyRows(days: ChartDay[]): JsonRecord[] {
   return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': String(day.adjClose), Volume: String(day.volume) }));
 }
 
-function distributionRows(dividends: Array<{ epoch: number; amount: number }>): string[][] {
-  return dividends.map((item) => [formatUsDate(item.epoch), String(round(item.amount, 6))]);
-}
-
 function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductReturns | null): PriceReturns {
   if (!official) return derived;
   return {
@@ -975,6 +1152,33 @@ function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductRe
     cagr10y: official.cagr10y ?? derived.cagr10y,
     siAnn: official.siAnn ?? derived.siAnn,
   };
+}
+
+function pctText(value: number | null): string {
+  return value === null ? '—' : `${value.toFixed(2)}%`;
+}
+
+// month-end nested rows keep the same Text-suffixed convention as the
+// primary monthEnd fields they sit alongside.
+function formatOfficialReturnRow(row: OfficialReturnRow | null): JsonRecord | null {
+  if (!row) return null;
+  return {
+    mo1: row.mo1, mo1Text: pctText(row.mo1),
+    qtd: row.qtd, qtdText: pctText(row.qtd),
+    ytd: row.ytd, ytdText: pctText(row.ytd),
+    yr1: row.yr1, yr1Text: pctText(row.yr1),
+    yr3: row.cagr3y, yr3Text: pctText(row.cagr3y),
+    yr5: row.cagr5y, yr5Text: pctText(row.cagr5y),
+    yr10: row.cagr10y, yr10Text: pctText(row.cagr10y),
+    sinceInception: row.siAnn, sinceInceptionText: pctText(row.siAnn),
+  };
+}
+
+// quarter-end nested rows keep the same plain-value convention (no Text
+// fields) as the primary quarterEnd fields they sit alongside.
+function formatOfficialReturnRowPlain(row: OfficialReturnRow | null): JsonRecord | null {
+  if (!row) return null;
+  return { ytd: row.ytd, yr1: row.yr1, yr3: row.cagr3y, yr5: row.cagr5y, yr10: row.cagr10y, sinceInception: row.siAnn };
 }
 
 function parsePreviousFund(ticker: string, row: JsonRecord): CatalogFund {
@@ -1199,14 +1403,22 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     if (previousRows.length) historySource = previousMeta?.history?.source || 'previous run';
   }
 
-  const dividends = chart?.dividends || [];
-  const frequency = inferDistributionFrequency(dividends);
-  const latest = dividends[dividends.length - 1] || null;
+  // House policy: prefer official issuer data whenever it exists and is
+  // non-empty. The official "Recent Distributions" table only ever shows a
+  // small recent window, so Yahoo dividend events fill in older ex-dates it
+  // doesn't cover (or the whole history when the product-page fetch failed,
+  // both direct and proxy).
+  const officialDistributions = productPageMarkdown ? parseOfficialDistributions(productPageMarkdown) : [];
+  const yahooDividends = chart?.dividends || [];
+  const { rows: distributionRecords, yahooOnlyCount } = mergeDistributionRecords(officialDistributions, yahooDividends);
+  const distributionEvents = distributionRecordEvents(distributionRecords);
+  const frequency = inferDistributionFrequency(distributionEvents);
+  const latest = distributionEvents[distributionEvents.length - 1] || null;
   const derived = priceReturns(days);
   const officialReturns = productSummary?.officialReturns.monthEnd || null;
   const effectiveReturns = mergeOfficialReturns(derived, officialReturns);
   const price = productSummary?.marketPrice ?? chart?.regularMarketPrice ?? (days.length ? days[days.length - 1].close : numberOrNull(previous.closePriceValue));
-  const metrics = deriveMetrics(effectiveReturns, fund, dividends, frequency, price);
+  const metrics = deriveMetrics(effectiveReturns, fund, distributionEvents, frequency, price);
   if (officialReturns) {
     metrics.returnsBasis = 'WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values';
   }
@@ -1219,8 +1431,27 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const historyAsOf = derived.asOfDate || previousMeta?.history?.asOf || null;
   const holdingManifest = await writePages(fundDir, fund.ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
   const historyManifest = await writePages(fundDir, fund.ticker, 'history', historyHeaders(), history, config.historyPageSize, historyAsOf, historySource);
-  const distributionTable = dividends.length ? distributionRows(dividends) : (previousMeta?.distributions?.rows || []);
-  const distributionFrequency = dividends.length ? frequency.frequency : (previousMeta?.distributions?.frequency || '—');
+  let distributionHeaders = DISTRIBUTION_HEADERS;
+  let distributionTable: string[][];
+  let distributionFrequency: string;
+  let distributionPaymentsPerYear: number | null;
+  let distributionsSource: string;
+  if (distributionRecords.length) {
+    distributionTable = distributionRecords.map(distributionRowToCells);
+    distributionFrequency = frequency.frequency;
+    distributionPaymentsPerYear = frequency.paymentsPerYear;
+    distributionsSource = officialDistributions.length
+      ? (yahooOnlyCount > 0
+          ? `WisdomTree official product page Recent Distributions table (${officialDistributions.length} most recent ex-date${officialDistributions.length === 1 ? '' : 's'}; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for ${yahooOnlyCount} earlier ex-date${yahooOnlyCount === 1 ? '' : 's'} the official table does not cover (ex-date and total amount only)`
+          : 'WisdomTree official product page Recent Distributions table (Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown)')
+      : 'Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)';
+  } else {
+    distributionHeaders = previousMeta?.distributions?.headers || DISTRIBUTION_HEADERS;
+    distributionTable = previousMeta?.distributions?.rows || [];
+    distributionFrequency = previousMeta?.distributions?.frequency || '—';
+    distributionPaymentsPerYear = previousMeta?.distributions?.paymentsPerYear ?? null;
+    distributionsSource = previousMeta?.distributions?.source || 'not available';
+  }
   const marketPrice = price;
   const nav = fund.nav ?? numberOrNull(previous.navValue);
   const premiumDiscount = fund.premiumDiscount ?? (nav && marketPrice ? round((marketPrice / nav - 1) * 100, 2) : numberOrNull(previous.premiumDiscountValue));
@@ -1230,7 +1461,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const navAsOfLabel = productSummary?.navAsOfDate ? formatDate(productSummary.navAsOfDate) : asOfLabel;
   const marketPriceAsOfLabel = productSummary?.marketPriceAsOfDate ? formatDate(productSummary.marketPriceAsOfDate) : asOfLabel;
   const returns = {
-    derivedFrom: officialReturns ? 'WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values' : 'adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns',
+    derivedFrom: officialReturns
+      ? 'WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).'
+      : 'adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns',
     monthEnd: {
       asOfDate: effectiveReturns.asOfDate ? formatDate(effectiveReturns.asOfDate) : '—',
       mo1: effectiveReturns.mo1, mo1Text: effectiveReturns.mo1 === null ? '—' : `${effectiveReturns.mo1.toFixed(2)}%`,
@@ -1241,6 +1474,8 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       yr5: effectiveReturns.cagr5y, yr5Text: effectiveReturns.cagr5y === null ? '—' : `${effectiveReturns.cagr5y.toFixed(2)}%`,
       yr10: effectiveReturns.cagr10y, yr10Text: effectiveReturns.cagr10y === null ? '—' : `${effectiveReturns.cagr10y.toFixed(2)}%`,
       sinceInception: effectiveReturns.siAnn, sinceInceptionText: effectiveReturns.siAnn === null ? '—' : `${effectiveReturns.siAnn.toFixed(2)}%`,
+      navReturns: formatOfficialReturnRow(officialReturns?.navReturns ?? null),
+      indexReturns: formatOfficialReturnRow(officialReturns?.indexReturns ?? null),
     },
     quarterEnd: productSummary?.officialReturns.quarterEnd ? {
       asOfDate: formatDate(productSummary.officialReturns.quarterEnd.asOfDate),
@@ -1250,7 +1485,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       yr5: productSummary.officialReturns.quarterEnd.cagr5y,
       yr10: productSummary.officialReturns.quarterEnd.cagr10y,
       sinceInception: productSummary.officialReturns.quarterEnd.siAnn,
-    } : { asOfDate: formatDate(lastCompletedQuarterEnd()), ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null },
+      navReturns: formatOfficialReturnRowPlain(productSummary.officialReturns.quarterEnd.navReturns),
+      indexReturns: formatOfficialReturnRowPlain(productSummary.officialReturns.quarterEnd.indexReturns),
+    } : { asOfDate: formatDate(lastCompletedQuarterEnd()), ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, navReturns: null, indexReturns: null },
   };
 
   const meta: JsonRecord = {
@@ -1267,6 +1504,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       yahooChart: `${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}`,
       holdingsSource,
       historySource,
+      distributionsSource,
       provider: 'WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API',
     },
     identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, indexTicker: fund.benchmark || null },
@@ -1277,7 +1515,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: asOfDate ? formatDate(asOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : '—'), source: fund.source === 'wisdomtree' ? 'WisdomTree product table Assets Under Mgmt $(000)' : nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run' },
     yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldKind: fund.dividendYield !== null ? 'trailing 12-month, published by WisdomTree catalog' : 'indicated (latest distribution x inferred frequency / market price)', distributionRate: productSummary?.distributionYield ?? null, secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: productSummary?.secYield !== null && productSummary?.secYield !== undefined ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
     returns,
-    distributions: { frequency: distributionFrequency, paymentsPerYear: frequency.paymentsPerYear, headers: ['Ex-Date', 'Amount'], rows: distributionTable },
+    distributions: { frequency: distributionFrequency, paymentsPerYear: distributionPaymentsPerYear, source: distributionsSource, headers: distributionHeaders, rows: distributionTable },
     holdings: holdingManifest,
     history: historyManifest,
   };
@@ -1333,10 +1571,17 @@ const USAGE = `
 WisdomTree ETF static data updater
 
 Sources:
-  catalog  WisdomTree U.S. ETF product table (official page; read-only Jina
-           rendering fallback when Cloudflare blocks a non-browser request)
-  holdings SEC EDGAR Form N-PORT-P for each exact ETF series
-  history  Yahoo Finance public chart API (adjusted market-price closes)
+  catalog       WisdomTree U.S. ETF product table (official page; read-only
+                Jina rendering fallback when Cloudflare blocks a non-browser
+                request)
+  holdings      SEC EDGAR Form N-PORT-P for each exact ETF series
+  returns       Official product-page Total Returns table (Market Price, NAV
+                and Underlying Index Returns rows)
+  distributions Official product-page Recent Distributions table (ex-date,
+                record/payable date, Ordinary Income/ST/LT Capital Gains and
+                Return of Capital); Yahoo dividend events fill in only the
+                older ex-dates that table does not cover
+  history       Yahoo Finance public chart API (adjusted market-price closes)
 
 Environment variables (all filters use AND logic):
   MAX_FETCHES=0       all eligible funds; positive value is a resumable batch
@@ -1365,7 +1610,7 @@ async function main(): Promise<void> {
   requestSleepSeconds = config.requestSleep;
   requestGateAt = 0;
   console.log('WisdomTree ETF static data updater');
-  console.log('Sources: WisdomTree product table + SEC EDGAR N-PORT-P + Yahoo Finance public chart API');
+  console.log('Sources: WisdomTree product table + official product page (returns/distributions) + SEC EDGAR N-PORT-P + Yahoo Finance public chart API');
   for (const line of configLines(config)) console.log(`  ${line}`);
 
   const previous = await readPreviousIndex();
@@ -1455,7 +1700,9 @@ async function main(): Promise<void> {
       catalog: WISDOMTREE_CATALOG_URL,
       catalogFallback: WISDOMTREE_CATALOG_PROXY_URL,
       holdings: 'SEC EDGAR Form N-PORT-P for exact series (issuer product-page top holdings fallback)',
-      history: 'Yahoo Finance public chart API (adjusted close and distributions)',
+      returns: 'Official WisdomTree product-page Total Returns table (Market Price, NAV and Underlying Index Returns rows)',
+      distributions: 'Official WisdomTree product-page Recent Distributions table (Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown); Yahoo Finance dividend events fill in older ex-dates the official table does not cover',
+      history: 'Yahoo Finance public chart API (adjusted close)',
     },
     counts,
     funds,
