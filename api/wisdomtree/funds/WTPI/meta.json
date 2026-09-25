@@ -2,7 +2,7 @@
   "ticker": "WTPI",
   "name": "WisdomTree Equity Premium Income Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative",
+  "categoryPath": "Alternative / Option-Based",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtpi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtpi",
@@ -39,14 +39,14 @@
     "value": 0.201
   },
   "aum": {
-    "display": "$534.29 M",
-    "value": 534286690,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$547.19 M",
+    "value": 547194940,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 10.02,
-    "dividendYieldText": "10.02%",
+    "dividendYield": 9.95,
+    "dividendYieldText": "9.95%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 12.03,
     "secYield": 3.46,

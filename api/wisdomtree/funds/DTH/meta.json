@@ -2,7 +2,7 @@
   "ticker": "DTH",
   "name": "WisdomTree International High Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dth",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dth",
@@ -39,14 +39,14 @@
     "value": 0.12
   },
   "aum": {
-    "display": "$658.96 M",
-    "value": 658959550,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$647.65 M",
+    "value": 647645570,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.74,
-    "dividendYieldText": "3.74%",
+    "dividendYield": 3.84,
+    "dividendYieldText": "3.84%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 8.55,
     "secYield": 3.52,

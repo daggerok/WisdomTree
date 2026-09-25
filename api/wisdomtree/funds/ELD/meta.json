@@ -2,7 +2,7 @@
   "ticker": "ELD",
   "name": "WisdomTree Emerging Markets Local Debt Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Emerging Markets",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/eld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/eld",
@@ -39,14 +39,14 @@
     "value": -0.324
   },
   "aum": {
-    "display": "$139.88 M",
-    "value": 139875780,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$139.17 M",
+    "value": 139168640,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 6.06,
-    "dividendYieldText": "6.06%",
+    "dividendYield": 6.14,
+    "dividendYieldText": "6.14%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 6.13,
     "secYield": 6.94,

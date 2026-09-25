@@ -1,8 +1,8 @@
 {
   "ticker": "GTR",
-  "name": "WisdomTree Target Range Fund",
+  "name": "Target Range",
   "category": "Alternative",
-  "categoryPath": "Alternative",
+  "categoryPath": "Alternative / Option-Based",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gtr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gtr",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y675",
+    "cusip": null,
     "isin": null,
     "indexTicker": null
   },
@@ -27,30 +27,30 @@
   "nav": {
     "display": "$27.58",
     "value": 27.582,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
     "display": "$27.59",
     "value": 27.587,
-    "asOfDate": "Sep 16 2026"
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.15%",
-    "value": -0.152
+    "display": "0.02%",
+    "value": 0.02
   },
   "aum": {
-    "display": "$72.68 M",
-    "value": 72675070,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$73.29 M",
+    "value": 73289990,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 2.18,
     "dividendYieldText": "2.18%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": 2.35,
-    "secYieldText": "2.35%",
+    "secYield": null,
+    "secYieldText": "—",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
@@ -59,8 +59,8 @@
       "asOfDate": "Sep 24 2026",
       "mo1": -0.35,
       "mo1Text": "-0.35%",
-      "qtd": 1.78,
-      "qtdText": "1.78%",
+      "qtd": 1.77,
+      "qtdText": "1.77%",
       "ytd": 10.47,
       "ytdText": "10.47%",
       "yr1": 12.69,

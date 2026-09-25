@@ -2,7 +2,7 @@
   "ticker": "AIVI",
   "name": "WisdomTree International AI Enhanced Value Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / International",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/aivi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/aivi",
@@ -39,14 +39,14 @@
     "value": -0.416
   },
   "aum": {
-    "display": "$62.52 M",
-    "value": 62521400,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$61.64 M",
+    "value": 61644100,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.91,
-    "dividendYieldText": "4.91%",
+    "dividendYield": 5.02,
+    "dividendYieldText": "5.02%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 11.11,
     "secYield": 3.14,

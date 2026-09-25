@@ -2,17 +2,17 @@
   "ticker": "NTSE",
   "name": "WisdomTree Emerging Markets Efficient Core Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntse",
-    "productPageAsOf": null,
+    "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036311, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 19 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -25,73 +25,97 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$45.96",
-    "value": 45.959,
-    "asOfDate": "Sep 16 2026"
+    "display": "$46.94",
+    "value": 46.938,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$46.69",
-    "value": 46.6928,
-    "asOfDate": "Sep 16 2026"
+    "display": "$46.99",
+    "value": 46.988,
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.34%",
-    "value": -0.341
+    "display": "-0.81%",
+    "value": -0.806
   },
   "aum": {
-    "display": "$55.02 M",
-    "value": 55019940,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$56.84 M",
+    "value": 56840390,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.68,
-    "dividendYieldText": "2.68%",
+    "dividendYield": 2.63,
+    "dividendYieldText": "2.63%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": null,
-    "secYield": 1.47,
-    "secYieldText": "1.47%",
-    "secYieldKind": "not present in the current official product-page rendering"
+    "distributionRate": 1.77,
+    "secYield": 1.27,
+    "secYieldText": "1.27%",
+    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": 1.09,
-      "mo1Text": "1.09%",
-      "qtd": -0.31,
-      "qtdText": "-0.31%",
-      "ytd": 24.58,
-      "ytdText": "24.58%",
-      "yr1": 31.66,
-      "yr1Text": "31.66%",
-      "yr3": 24.28,
-      "yr3Text": "24.28%",
-      "yr5": 6.7,
-      "yr5Text": "6.70%",
+      "asOfDate": "Aug 31 2026",
+      "mo1": 4.67,
+      "mo1Text": "4.67%",
+      "qtd": -3.08,
+      "qtdText": "-3.08%",
+      "ytd": 24.64,
+      "ytdText": "24.64%",
+      "yr1": 40.23,
+      "yr1Text": "40.23%",
+      "yr3": 23.4,
+      "yr3Text": "23.40%",
+      "yr5": 6.26,
+      "yr5Text": "6.26%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 5.76,
-      "sinceInceptionText": "5.76%",
-      "navReturns": null,
+      "sinceInception": 6.14,
+      "sinceInceptionText": "6.14%",
+      "navReturns": {
+        "mo1": 2.41,
+        "mo1Text": "2.41%",
+        "qtd": -2.55,
+        "qtdText": "-2.55%",
+        "ytd": 23.85,
+        "ytdText": "23.85%",
+        "yr1": 41.48,
+        "yr1Text": "41.48%",
+        "yr3": 23.55,
+        "yr3Text": "23.55%",
+        "yr5": 6.28,
+        "yr5Text": "6.28%",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 6.12,
+        "sinceInceptionText": "6.12%"
+      },
       "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": null,
-      "yr3": null,
-      "yr5": null,
+      "yr1": 51.21,
+      "yr3": 24.05,
+      "yr5": 6.29,
       "yr10": null,
-      "sinceInception": null,
-      "navReturns": null,
+      "sinceInception": 7.16,
+      "navReturns": {
+        "ytd": null,
+        "yr1": 48.84,
+        "yr3": 23.54,
+        "yr5": 5.9,
+        "yr10": null,
+        "sinceInception": 6.7
+      },
       "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
-    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 19 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
       "Record Date",
@@ -295,33 +319,43 @@
       ],
       [
         "12/26/2025",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "0.393"
+        "12/26/2025",
+        "12/30/2025",
+        "0.39272",
+        "0",
+        "0",
+        "0",
+        "0.39272"
       ],
       [
         "03/26/2026",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
+        "03/26/2026",
+        "03/30/2026",
+        "0.09",
+        "0",
+        "0",
+        "0",
         "0.09"
       ],
       [
         "06/25/2026",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
-        "—",
+        "06/25/2026",
+        "06/29/2026",
+        "0.21",
+        "0",
+        "0",
+        "0",
         "0.21"
+      ],
+      [
+        "09/25/2026",
+        "09/25/2026",
+        "09/29/2026",
+        "0.245",
+        "0",
+        "0",
+        "0",
+        "0.245"
       ]
     ]
   },

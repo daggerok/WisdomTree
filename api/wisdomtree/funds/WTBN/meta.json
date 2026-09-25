@@ -2,7 +2,7 @@
   "ticker": "WTBN",
   "name": "WisdomTree Bianco Total Return Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtbn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtbn",
@@ -39,14 +39,14 @@
     "value": -0.058
   },
   "aum": {
-    "display": "$101.70 M",
-    "value": 101695520,
-    "asOfDate": "Sep 16 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$99.12 M",
+    "value": 99117620,
+    "asOfDate": "Sep 23 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.14,
-    "dividendYieldText": "4.14%",
+    "dividendYield": 4.2,
+    "dividendYieldText": "4.20%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 3.96,
     "secYield": 3.8,
