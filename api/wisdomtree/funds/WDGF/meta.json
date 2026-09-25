@@ -6,12 +6,13 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdgf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdgf",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDGF",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036259, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,12 +27,12 @@
   "nav": {
     "display": "$30.76",
     "value": 30.764,
-    "asOfDate": "Sep 18 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$30.93",
-    "value": 30.929,
-    "asOfDate": "Sep 17 2026"
+    "display": "$30.49",
+    "value": 30.489,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
     "display": "0.20%",
@@ -47,31 +48,33 @@
     "dividendYield": 0.05,
     "dividendYieldText": "0.05%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.05,
+    "distributionRate": null,
     "secYield": 0.51,
     "secYieldText": "0.51%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 1.97,
-      "mo1Text": "1.97%",
-      "qtd": -4.27,
-      "qtdText": "-4.27%",
-      "ytd": 4.94,
-      "ytdText": "4.94%",
-      "yr1": -0.43,
-      "yr1Text": "-0.43%",
+      "asOfDate": "Sep 24 2026",
+      "mo1": -6.21,
+      "mo1Text": "-6.21%",
+      "qtd": -1.96,
+      "qtdText": "-1.96%",
+      "ytd": -0.31,
+      "ytdText": "-0.31%",
+      "yr1": -2.4,
+      "yr1Text": "-2.40%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 5.4,
-      "sinceInceptionText": "5.40%"
+      "sinceInception": -0.54,
+      "sinceInceptionText": "-0.54%",
+      "navReturns": null,
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,19 +83,34 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 0.25
+      "sinceInception": null,
+      "navReturns": null,
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Unknown",
     "paymentsPerYear": null,
+    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "12/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.015"
       ]
     ]
@@ -112,8 +130,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 255,
-    "asOf": "Sep 17 2026",
+    "totalRows": 259,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

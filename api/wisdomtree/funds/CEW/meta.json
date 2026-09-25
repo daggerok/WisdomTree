@@ -12,6 +12,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/CEW",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028868, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -29,8 +30,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$19.75",
-    "value": 19.752,
+    "display": "$19.59",
+    "value": 19.589,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -55,23 +56,25 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": 0.1,
-      "mo1Text": "0.10%",
-      "qtd": 2.59,
-      "qtdText": "2.59%",
-      "ytd": 4.6,
-      "ytdText": "4.60%",
-      "yr1": 6.57,
-      "yr1Text": "6.57%",
-      "yr3": 7.42,
-      "yr3Text": "7.42%",
-      "yr5": 3.97,
-      "yr5Text": "3.97%",
-      "yr10": 2.49,
-      "yr10Text": "2.49%",
-      "sinceInception": 1.11,
-      "sinceInceptionText": "1.11%"
+      "asOfDate": "Sep 24 2026",
+      "mo1": -2,
+      "mo1Text": "-2.00%",
+      "qtd": 1.66,
+      "qtdText": "1.66%",
+      "ytd": 3.65,
+      "ytdText": "3.65%",
+      "yr1": 6.04,
+      "yr1Text": "6.04%",
+      "yr3": 7.09,
+      "yr3Text": "7.09%",
+      "yr5": 3.92,
+      "yr5Text": "3.92%",
+      "yr10": 2.25,
+      "yr10Text": "2.25%",
+      "sinceInception": 1.05,
+      "sinceInceptionText": "1.05%",
+      "navReturns": null,
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,55 +83,124 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": null,
+      "navReturns": null,
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Irregular",
     "paymentsPerYear": null,
+    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "12/21/2009",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.178"
       ],
       [
         "12/22/2010",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.839"
       ],
       [
         "12/21/2011",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "1.057"
       ],
       [
         "12/24/2018",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.338"
       ],
       [
         "12/23/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.353"
       ],
       [
         "12/21/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.118"
       ],
       [
         "12/23/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.134"
       ],
       [
         "12/22/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.36"
       ],
       [
         "12/26/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.917"
       ],
       [
         "12/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.467"
       ]
     ]
@@ -152,8 +224,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4351,
-    "asOf": "Sep 17 2026",
+    "totalRows": 4355,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

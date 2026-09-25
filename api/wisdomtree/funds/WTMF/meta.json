@@ -6,12 +6,13 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTMF",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028876, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,12 +27,12 @@
   "nav": {
     "display": "$42.06",
     "value": 42.058,
-    "asOfDate": "Sep 18 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$42.03",
-    "value": 42.026,
-    "asOfDate": "Sep 17 2026"
+    "display": "$42.51",
+    "value": 42.51,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
     "display": "0.06%",
@@ -47,100 +48,189 @@
     "dividendYield": 2.75,
     "dividendYieldText": "2.75%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.79,
+    "distributionRate": null,
     "secYield": 2.45,
     "secYieldText": "2.45%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 2.81,
-      "mo1Text": "2.81%",
-      "qtd": 2.11,
-      "qtdText": "2.11%",
-      "ytd": 10.35,
-      "ytdText": "10.35%",
-      "yr1": 18.54,
-      "yr1Text": "18.54%",
-      "yr3": 10.39,
-      "yr3Text": "10.39%",
-      "yr5": 6.41,
-      "yr5Text": "6.41%",
-      "yr10": 3.86,
-      "yr10Text": "3.86%",
-      "sinceInception": 1.24,
-      "sinceInceptionText": "1.24%"
+      "asOfDate": "Sep 24 2026",
+      "mo1": 1.65,
+      "mo1Text": "1.65%",
+      "qtd": 4.76,
+      "qtdText": "4.76%",
+      "ytd": 11.81,
+      "ytdText": "11.81%",
+      "yr1": 16.21,
+      "yr1Text": "16.21%",
+      "yr3": 10.56,
+      "yr3Text": "10.56%",
+      "yr5": 6.72,
+      "yr5Text": "6.72%",
+      "yr10": 3.77,
+      "yr10Text": "3.77%",
+      "sinceInception": 1.31,
+      "sinceInceptionText": "1.31%",
+      "navReturns": null,
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 18.9,
-      "yr3": 9.28,
-      "yr5": 5.88,
-      "yr10": 3.16,
-      "sinceInception": 1.04
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "navReturns": null,
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Semi-Annual",
     "paymentsPerYear": 2,
+    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "12/21/2011",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.78"
       ],
       [
         "12/24/2018",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "1.392"
       ],
       [
         "12/23/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.604"
       ],
       [
         "12/21/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.173"
       ],
       [
         "10/08/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "5.213"
       ],
       [
         "10/25/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "1.445"
       ],
       [
         "12/23/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.223"
       ],
       [
         "10/25/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "1.323"
       ],
       [
         "12/22/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.34"
       ],
       [
         "10/28/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.815"
       ],
       [
         "12/26/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.433"
       ],
       [
         "10/28/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.825"
       ],
       [
         "12/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.332"
       ]
     ]
@@ -163,8 +253,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3948,
-    "asOf": "Sep 17 2026",
+    "totalRows": 3952,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

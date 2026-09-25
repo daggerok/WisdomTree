@@ -12,6 +12,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/INDH",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036245, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 2 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -24,18 +25,18 @@
     "value": 0.64
   },
   "nav": {
-    "display": "$38.07",
-    "value": 38.068,
-    "asOfDate": "Sep 17 2026"
+    "display": "$37.70",
+    "value": 37.703,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$38.01",
-    "value": 38.01,
-    "asOfDate": "Sep 17 2026"
+    "display": "$37.93",
+    "value": 37.93,
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.15%",
-    "value": -0.153
+    "display": "-1.10%",
+    "value": -1.1
   },
   "aum": {
     "display": "$5.70 M",
@@ -48,12 +49,12 @@
     "dividendYieldText": "0.00%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0,
-    "secYield": 0.63,
-    "secYieldText": "0.63%",
+    "secYield": 0.62,
+    "secYieldText": "0.62%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": -0.48,
@@ -71,7 +72,43 @@
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 1.44,
-      "sinceInceptionText": "1.44%"
+      "sinceInceptionText": "1.44%",
+      "navReturns": {
+        "mo1": -0.86,
+        "mo1Text": "-0.86%",
+        "qtd": 1.42,
+        "qtdText": "1.42%",
+        "ytd": -7.77,
+        "ytdText": "-7.77%",
+        "yr1": -2.51,
+        "yr1Text": "-2.51%",
+        "yr3": null,
+        "yr3Text": "—",
+        "yr5": null,
+        "yr5Text": "—",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 1.4,
+        "sinceInceptionText": "1.40%"
+      },
+      "indexReturns": {
+        "mo1": -1.28,
+        "mo1Text": "-1.28%",
+        "qtd": 1.3,
+        "qtdText": "1.30%",
+        "ytd": -7.44,
+        "ytdText": "-7.44%",
+        "yr1": -1.87,
+        "yr1Text": "-1.87%",
+        "yr3": null,
+        "yr3Text": "—",
+        "yr5": null,
+        "yr5Text": "—",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 2.41,
+        "sinceInceptionText": "2.41%"
+      }
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,24 +117,99 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 1.32
+      "sinceInception": 1.32,
+      "navReturns": {
+        "ytd": null,
+        "yr1": -7.52,
+        "yr3": null,
+        "yr5": null,
+        "yr10": null,
+        "sinceInception": 0.85
+      },
+      "indexReturns": {
+        "ytd": null,
+        "yr1": -7,
+        "yr3": null,
+        "yr5": null,
+        "yr10": null,
+        "sinceInception": 2
+      }
     }
   },
   "distributions": {
-    "frequency": "Annual",
-    "paymentsPerYear": 1,
+    "frequency": "Semi-Annual",
+    "paymentsPerYear": 2,
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 2 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "12/06/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.128"
       ],
       [
         "12/10/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "2.224"
+      ],
+      [
+        "12/26/2025",
+        "12/26/2025",
+        "12/30/2025",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "03/26/2026",
+        "03/26/2026",
+        "03/30/2026",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "06/25/2026",
+        "06/25/2026",
+        "06/29/2026",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "09/25/2026",
+        "09/25/2026",
+        "09/29/2026",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
       ]
     ]
   },
@@ -116,8 +228,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 591,
-    "asOf": "Sep 17 2026",
+    "totalRows": 595,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
