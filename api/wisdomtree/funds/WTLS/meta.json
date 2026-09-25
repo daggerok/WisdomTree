@@ -12,6 +12,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTLS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036217, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -24,18 +25,18 @@
     "value": 0.88
   },
   "nav": {
-    "display": "$60.93",
-    "value": 60.932,
-    "asOfDate": "Sep 18 2026"
+    "display": "$61.49",
+    "value": 61.494,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$61.07",
-    "value": 61.071,
-    "asOfDate": "Sep 17 2026"
+    "display": "$61.69",
+    "value": 61.692,
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.14%",
-    "value": 0.145
+    "display": "-0.04%",
+    "value": -0.045
   },
   "aum": {
     "display": "$16.88 M",
@@ -48,12 +49,12 @@
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 3.03,
-    "secYieldText": "3.03%",
+    "secYield": 2.97,
+    "secYieldText": "2.97%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 1.24,
@@ -71,7 +72,26 @@
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 21.81,
-      "sinceInceptionText": "21.81%"
+      "sinceInceptionText": "21.81%",
+      "navReturns": {
+        "mo1": 1.34,
+        "mo1Text": "1.34%",
+        "qtd": 3.19,
+        "qtdText": "3.19%",
+        "ytd": null,
+        "ytdText": "—",
+        "yr1": null,
+        "yr1Text": "—",
+        "yr3": null,
+        "yr3Text": "—",
+        "yr5": null,
+        "yr5Text": "—",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 21.83,
+        "sinceInceptionText": "21.83%"
+      },
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,12 +100,22 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 17.14
+      "sinceInception": 17.14,
+      "navReturns": {
+        "ytd": null,
+        "yr1": null,
+        "yr3": null,
+        "yr5": null,
+        "yr10": null,
+        "sinceInception": 17
+      },
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "—",
     "paymentsPerYear": null,
+    "source": "not available",
     "headers": [
       "Ex-Date",
       "Amount"
@@ -107,8 +137,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 164,
-    "asOf": "Sep 17 2026",
+    "totalRows": 168,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

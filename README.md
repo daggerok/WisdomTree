@@ -1,6 +1,6 @@
 # WisdomTree
 
-WisdomTree ETF holdings to Watchlist. A single-file client-side tool reading the generated `./api/wisdomtree` static feed (WisdomTree product pages, SEC EDGAR N-PORT-P holdings, Yahoo Finance history) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist, N-PORT upload, CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
+WisdomTree ETF holdings to Watchlist. A single-file client-side tool reading the generated `./api/wisdomtree` static feed (WisdomTree product pages — including official Market Price/NAV/Underlying Index returns and the official tax-character distributions table, SEC EDGAR N-PORT-P holdings, Yahoo Finance history with a narrow distributions/returns fallback) into a searchable ETF/asset-class catalog with per-fund tabs, watchlist, N-PORT upload, CSV/TXT export — the same look, feel, columns and business logic as the sibling applications.
 
 ## Using Bun
 
@@ -31,7 +31,8 @@ The **Update WisdomTree ETF data** GitHub Actions workflow exposes the same sett
 | --- | --- |
 | Catalog (all US WisdomTree ETFs) | `https://www.wisdomtree.com/investments` (WisdomTree product table) |
 | Holdings per fund | SEC EDGAR N-PORT-P `primary_doc.xml` (WisdomTree Trust CIK 0001350487) |
-| Daily history, distributions | Yahoo Finance chart API for daily history |
+| Per-fund returns, distributions | WisdomTree product page's "Total Returns" table (Market Price/NAV/Underlying Index rows) and "Recent Distributions" table (ex/record/payable date + Ordinary Income/ST/LT Cap Gains/Return of Capital) — the primary source for both |
+| Daily history; returns/distributions fallback | Yahoo Finance chart API for daily history unconditionally, and as fallback for Market Price Returns tenors and distribution ex-dates the official page doesn't cover |
 | Fallback | WisdomTree product pages for NAV, expense ratio, yields |
 
 Each fund carries a derived `metrics` object that powers the catalog columns shared with the sibling sites:

@@ -1565,7 +1565,7 @@ function renderOverviewTable(fund: FundRow): void {
   }
 
   el.tickerCount.textContent = fund.ticker;
-  renderSubtitle(`${fund.ticker} overview · ${rows.length} metrics. Returns are derived from adjusted market-price closes, not official NAV returns.`);
+  renderSubtitle(`${fund.ticker} overview · ${rows.length} metrics. Headline returns use official Market Price Returns where WisdomTree publishes them, falling back to adjusted market-price closes; official NAV/Underlying Index returns are recorded separately in the data feed.`);
 }
 
 function renderDistributionsTable(fund: FundRow): void {
@@ -1601,7 +1601,7 @@ function renderDistributionsTable(fund: FundRow): void {
   }
 
   el.tickerCount.textContent = fund.ticker;
-  renderSubtitle(`${fund.ticker} distributions · dividend history from the Yahoo chart feed (ex-date, amount); frequency is inferred from the cadence.`);
+  renderSubtitle(`${fund.ticker} distributions · the official WisdomTree tax-character breakdown for recent ex-dates, with Yahoo dividend events (ex-date, amount only) filling in older ex-dates it doesn't cover; frequency is inferred from the cadence.`);
 }
 
 // =========================================================================

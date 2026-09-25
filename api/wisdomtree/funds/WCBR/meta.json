@@ -12,6 +12,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WCBR",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036222, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 1 earlier ex-date the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -24,18 +25,18 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$43.44",
-    "value": 43.435,
-    "asOfDate": "Sep 18 2026"
+    "display": "$46.14",
+    "value": 46.136,
+    "asOfDate": "Sep 24 2026"
   },
   "marketPrice": {
-    "display": "$44.41",
-    "value": 44.41,
-    "asOfDate": "Sep 17 2026"
+    "display": "$46.59",
+    "value": 46.59,
+    "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.23%",
-    "value": 0.225
+    "display": "0.13%",
+    "value": 0.129
   },
   "aum": {
     "display": "$150.20 M",
@@ -53,7 +54,7 @@
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
       "asOfDate": "Aug 31 2026",
       "mo1": 14.47,
@@ -71,7 +72,43 @@
       "yr10": null,
       "yr10Text": "—",
       "sinceInception": 10.75,
-      "sinceInceptionText": "10.75%"
+      "sinceInceptionText": "10.75%",
+      "navReturns": {
+        "mo1": 14.21,
+        "mo1Text": "14.21%",
+        "qtd": 22.54,
+        "qtdText": "22.54%",
+        "ytd": 52.62,
+        "ytdText": "52.62%",
+        "yr1": 38.14,
+        "yr1Text": "38.14%",
+        "yr3": 27.05,
+        "yr3Text": "27.05%",
+        "yr5": 9.06,
+        "yr5Text": "9.06%",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 10.72,
+        "sinceInceptionText": "10.72%"
+      },
+      "indexReturns": {
+        "mo1": 14.25,
+        "mo1Text": "14.25%",
+        "qtd": 22.63,
+        "qtdText": "22.63%",
+        "ytd": 52.63,
+        "ytdText": "52.63%",
+        "yr1": 38.39,
+        "yr1Text": "38.39%",
+        "yr3": 27.45,
+        "yr3Text": "27.45%",
+        "yr5": 9.29,
+        "yr5Text": "9.29%",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 11.01,
+        "sinceInceptionText": "11.01%"
+      }
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,28 +117,89 @@
       "yr3": 23.13,
       "yr5": 8.23,
       "yr10": null,
-      "sinceInception": 7.83
+      "sinceInception": 7.83,
+      "navReturns": {
+        "ytd": null,
+        "yr1": 13.81,
+        "yr3": 23.3,
+        "yr5": 8.32,
+        "yr10": null,
+        "sinceInception": 7.86
+      },
+      "indexReturns": {
+        "ytd": null,
+        "yr1": 14.02,
+        "yr3": 23.68,
+        "yr5": 8.57,
+        "yr10": null,
+        "sinceInception": 8.14
+      }
     }
   },
   "distributions": {
-    "frequency": "Irregular",
-    "paymentsPerYear": null,
+    "frequency": "Annual",
+    "paymentsPerYear": 1,
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 1 earlier ex-date the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "12/27/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.113"
       ],
       [
         "12/23/2022",
-        "0.004"
+        "12/27/2022",
+        "12/29/2022",
+        "0.00423",
+        "0",
+        "0",
+        "0",
+        "0.00423"
+      ],
+      [
+        "12/22/2023",
+        "12/26/2023",
+        "12/28/2023",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
       ],
       [
         "12/26/2024",
-        "0.007"
+        "12/26/2024",
+        "12/30/2024",
+        "0.00665",
+        "0",
+        "0",
+        "0",
+        "0.00665"
+      ],
+      [
+        "12/26/2025",
+        "12/26/2025",
+        "12/30/2025",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
       ]
     ]
   },
@@ -121,8 +219,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1416,
-    "asOf": "Sep 17 2026",
+    "totalRows": 1420,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

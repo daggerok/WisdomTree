@@ -12,6 +12,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036311, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -29,8 +30,8 @@
     "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$46.48",
-    "value": 46.48,
+    "display": "$46.69",
+    "value": 46.6928,
     "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
@@ -55,23 +56,25 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 17 2026",
-      "mo1": -0.97,
-      "mo1Text": "-0.97%",
-      "qtd": -0.64,
-      "qtdText": "-0.64%",
-      "ytd": 24.17,
-      "ytdText": "24.17%",
-      "yr1": 30.92,
-      "yr1Text": "30.92%",
-      "yr3": 23.35,
-      "yr3Text": "23.35%",
-      "yr5": 6.49,
-      "yr5Text": "6.49%",
+      "asOfDate": "Sep 24 2026",
+      "mo1": 1.09,
+      "mo1Text": "1.09%",
+      "qtd": -0.31,
+      "qtdText": "-0.31%",
+      "ytd": 24.58,
+      "ytdText": "24.58%",
+      "yr1": 31.66,
+      "yr1Text": "31.66%",
+      "yr3": 24.28,
+      "yr3Text": "24.28%",
+      "yr5": 6.7,
+      "yr5Text": "6.70%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 5.72,
-      "sinceInceptionText": "5.72%"
+      "sinceInception": 5.76,
+      "sinceInceptionText": "5.76%",
+      "navReturns": null,
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
@@ -80,103 +83,244 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": null
+      "sinceInception": null,
+      "navReturns": null,
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
+    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "06/24/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.06"
       ],
       [
         "09/24/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.3"
       ],
       [
         "12/07/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.263"
       ],
       [
         "12/27/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.157"
       ],
       [
         "03/25/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.12"
       ],
       [
         "06/24/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.155"
       ],
       [
         "09/26/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.425"
       ],
       [
         "12/23/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.154"
       ],
       [
         "03/27/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.07"
       ],
       [
         "06/26/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.185"
       ],
       [
         "09/25/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.37"
       ],
       [
         "12/22/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.065"
       ],
       [
         "03/22/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.075"
       ],
       [
         "06/25/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.095"
       ],
       [
         "09/25/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.44"
       ],
       [
         "12/26/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.317"
       ],
       [
         "03/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.105"
       ],
       [
         "06/25/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.225"
       ],
       [
         "09/25/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.54"
       ],
       [
         "12/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.393"
       ],
       [
         "03/26/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.09"
       ],
       [
         "06/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.21"
       ]
     ]
@@ -198,8 +342,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1338,
-    "asOf": "Sep 17 2026",
+    "totalRows": 1342,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

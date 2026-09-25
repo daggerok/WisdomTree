@@ -6,12 +6,13 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgre",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": null,
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DGRE",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036265, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -26,12 +27,12 @@
   "nav": {
     "display": "$40.82",
     "value": 40.822,
-    "asOfDate": "Sep 18 2026"
+    "asOfDate": "Sep 16 2026"
   },
   "marketPrice": {
-    "display": "$40.73",
-    "value": 40.73,
-    "asOfDate": "Sep 17 2026"
+    "display": "$40.92",
+    "value": 40.925,
+    "asOfDate": "Sep 16 2026"
   },
   "premiumDiscount": {
     "display": "1.04%",
@@ -47,236 +48,529 @@
     "dividendYield": 1.28,
     "dividendYieldText": "1.28%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.03,
+    "distributionRate": null,
     "secYield": 1.56,
     "secYieldText": "1.56%",
-    "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
+    "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
-    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values",
+    "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 5.96,
-      "mo1Text": "5.96%",
-      "qtd": 1.36,
-      "qtdText": "1.36%",
-      "ytd": 30.35,
-      "ytdText": "30.35%",
-      "yr1": 49.27,
-      "yr1Text": "49.27%",
-      "yr3": 23.52,
-      "yr3Text": "23.52%",
-      "yr5": 9.22,
-      "yr5Text": "9.22%",
-      "yr10": 8.65,
-      "yr10Text": "8.65%",
-      "sinceInception": 6.11,
-      "sinceInceptionText": "6.11%"
+      "asOfDate": "Sep 24 2026",
+      "mo1": 2.55,
+      "mo1Text": "2.55%",
+      "qtd": 3.27,
+      "qtdText": "3.27%",
+      "ytd": 31.64,
+      "ytdText": "31.64%",
+      "yr1": 41.96,
+      "yr1Text": "41.96%",
+      "yr3": 24.26,
+      "yr3Text": "24.26%",
+      "yr5": 9.92,
+      "yr5Text": "9.92%",
+      "yr10": 8.48,
+      "yr10Text": "8.48%",
+      "sinceInception": 6.04,
+      "sinceInceptionText": "6.04%",
+      "navReturns": null,
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Jun 30 2026",
       "ytd": null,
-      "yr1": 50.23,
-      "yr3": 23.72,
-      "yr5": 9.05,
-      "yr10": 9.24,
-      "sinceInception": 6.23
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "navReturns": null,
+      "indexReturns": null
     }
   },
   "distributions": {
     "frequency": "Quarterly",
     "paymentsPerYear": 4,
+    "source": "Yahoo Finance dividend events (ex-date and total amount only; the official WisdomTree Recent Distributions table was unavailable for this fund or the product-page fetch failed)",
     "headers": [
       "Ex-Date",
-      "Amount"
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
     ],
     "rows": [
       [
         "09/23/2013",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.063"
       ],
       [
         "12/24/2013",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.08"
       ],
       [
         "03/24/2014",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.072"
       ],
       [
         "06/23/2014",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.23"
       ],
       [
         "09/22/2014",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.212"
       ],
       [
         "12/19/2014",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.085"
       ],
       [
         "09/21/2015",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.326"
       ],
       [
         "06/20/2016",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.18"
       ],
       [
         "09/26/2016",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.325"
       ],
       [
         "12/23/2016",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.116"
       ],
       [
         "03/27/2017",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.045"
       ],
       [
         "06/26/2017",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.175"
       ],
       [
         "09/26/2017",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.285"
       ],
       [
         "12/26/2017",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.065"
       ],
       [
         "06/25/2018",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.177"
       ],
       [
         "09/25/2018",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.254"
       ],
       [
         "12/24/2018",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.171"
       ],
       [
         "03/26/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.035"
       ],
       [
         "06/24/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.205"
       ],
       [
         "09/24/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.26"
       ],
       [
         "12/23/2019",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.109"
       ],
       [
         "03/24/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.045"
       ],
       [
         "06/23/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.175"
       ],
       [
         "09/22/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.265"
       ],
       [
         "12/21/2020",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.114"
       ],
       [
         "03/25/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.058"
       ],
       [
         "06/24/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.215"
       ],
       [
         "09/24/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.29"
       ],
       [
         "12/27/2021",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.164"
       ],
       [
         "03/25/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.12"
       ],
       [
         "06/24/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.51"
       ],
       [
         "09/26/2022",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.3"
       ],
       [
         "03/27/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.09"
       ],
       [
         "06/26/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.15"
       ],
       [
         "09/25/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.16"
       ],
       [
         "12/22/2023",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.145"
       ],
       [
         "03/22/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.09"
       ],
       [
         "06/25/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.14"
       ],
       [
         "09/25/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.17"
       ],
       [
         "12/26/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.039"
       ],
       [
         "12/31/2024",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.037"
       ],
       [
         "03/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.095"
       ],
       [
         "06/25/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.175"
       ],
       [
         "09/25/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.155"
       ],
       [
         "12/26/2025",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.09"
       ],
       [
         "03/26/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.065"
       ],
       [
         "06/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.205"
       ]
     ]
@@ -300,8 +594,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3302,
-    "asOf": "Sep 17 2026",
+    "totalRows": 3306,
+    "asOf": "Sep 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
