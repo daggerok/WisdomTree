@@ -1,4 +1,5 @@
 #!/usr/bin/env bun
+import { hasOutputFilters, printConfig, printFilter, createReporter } from './update-output.ts';
 
 // WisdomTree U.S.-listed ETF static data updater.
 //
@@ -1609,9 +1610,7 @@ async function main(): Promise<void> {
   const config = readConfig();
   requestSleepSeconds = config.requestSleep;
   requestGateAt = 0;
-  console.log('WisdomTree ETF static data updater');
-  console.log('Sources: WisdomTree product table + official product page (returns/distributions) + SEC EDGAR N-PORT-P + Yahoo Finance public chart API');
-  for (const line of configLines(config)) console.log(`  ${line}`);
+  printConfig('WisdomTree', config);
 
   const previous = await readPreviousIndex();
   const catalog = new Map<string, CatalogFund>();
@@ -1647,35 +1646,32 @@ async function main(): Promise<void> {
   const totalAttempts = config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length;
   const results: JsonRecord[] = [];
   let processed = 0;
-  let completed = 0;
   let failures = 0;
   let lastTicker: string | null = cursor || null;
-  const logProgress = (fund: CatalogFund, status: 'updated' | 'not updated', detail: string): void => {
-    completed += 1;
-    const ordinal = String(completed).padStart(String(Math.max(1, totalAttempts)).length, ' ');
-    console.log(`[progress] ${ordinal}/${totalAttempts} ${fund.ticker.padEnd(5)} ${status}${detail ? ` — ${detail}` : ''}`);
-  };
+  printFilter(universe.length, universe.length, hasOutputFilters(config));
+  const output = createReporter(API_ROOT, totalAttempts);
   const worker = async (): Promise<void> => {
     for (;;) {
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
       const fund = queue.shift();
       if (!fund) return;
       processed += 1;
+      const before = await output.before(fund.ticker);
       try {
         const row = await processFund(fund, config, previous.get(fund.ticker) || {});
         if (row.__skipped) {
-          logProgress(fund, 'not updated', `filtered: ${(row.__skipReasons || ['not eligible']).join(', ')}`);
+          await output.result(fund.ticker, before, 'skipped', (row.__skipReasons || ['not eligible']).join(', '));
         } else {
           results.push(row);
           lastTicker = fund.ticker;
-          logProgress(fund, 'updated', `${row.holdings ?? 0} holdings, ${row.history ?? 0} history rows`);
+          await output.result(fund.ticker, before);
         }
       } catch (error) {
         failures += 1;
         const message = error instanceof Error ? error.message : String(error);
         const old = previous.get(fund.ticker);
         if (old && !hasConfiguredFilters(config)) results.push(old);
-        logProgress(fund, 'not updated', `error: ${message}`);
+        await output.result(fund.ticker, before, 'failed', message);
       }
     }
   };
