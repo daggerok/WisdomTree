@@ -2,7 +2,7 @@
   "ticker": "WDIG",
   "name": "Efficient Rare Earth Plus Strategic Metals",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Gold and Commodities",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wdig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wdig",
@@ -30,8 +30,8 @@
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$43.17",
-    "value": 43.17,
+    "display": "$43.22",
+    "value": 43.223,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
@@ -42,7 +42,7 @@
     "display": "$6.50 M",
     "value": 6498870,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": null,
@@ -56,11 +56,11 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": -9.27,
-      "mo1Text": "-9.27%",
-      "qtd": 2.69,
-      "qtdText": "2.69%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": -10.94,
+      "mo1Text": "-10.94%",
+      "qtd": 2.81,
+      "qtdText": "2.81%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -71,8 +71,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -40.16,
-      "sinceInceptionText": "-40.16%",
+      "sinceInception": -39.76,
+      "sinceInceptionText": "-39.76%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -113,8 +113,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 96,
-    "asOf": "Sep 24 2026",
+    "totalRows": 98,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

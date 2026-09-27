@@ -2,7 +2,7 @@
   "ticker": "DGS",
   "name": "WisdomTree Emerging Markets SmallCap Dividend Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgs",
@@ -25,30 +25,30 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$64.01",
-    "value": 64.01,
-    "asOfDate": "Sep 24 2026"
+    "display": "$63.29",
+    "value": 63.293,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$63.66",
-    "value": 63.66,
-    "asOfDate": "Sep 23 2026"
+    "display": "$63.31",
+    "value": 63.31,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-1.21%",
-    "value": -1.206
+    "display": "0.03%",
+    "value": 0.027
   },
   "aum": {
     "display": "$1.74 B",
     "value": 1739542910,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.77,
     "dividendYieldText": "3.77%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.22,
+    "distributionRate": 4.8,
     "secYield": 2.55,
     "secYieldText": "2.55%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -856,8 +856,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4754,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4756,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

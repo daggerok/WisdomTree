@@ -2,7 +2,7 @@
   "ticker": "XSOE",
   "name": "WisdomTree Emerging Markets ex-State-Owned Enterprises Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xsoe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xsoe",
@@ -25,32 +25,32 @@
     "value": 0.32
   },
   "nav": {
-    "display": "$48.01",
-    "value": 48.011,
-    "asOfDate": "Sep 24 2026"
+    "display": "$47.85",
+    "value": 47.854,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$47.79",
-    "value": 47.79,
-    "asOfDate": "Sep 23 2026"
+    "display": "$47.72",
+    "value": 47.72,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-1.58%",
-    "value": -1.576
+    "display": "-0.28%",
+    "value": -0.281
   },
   "aum": {
     "display": "$2.15 B",
     "value": 2145601920,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.58,
     "dividendYieldText": "1.58%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.31,
-    "secYield": 0.95,
-    "secYieldText": "0.95%",
+    "distributionRate": 1.8,
+    "secYield": 0.96,
+    "secYieldText": "0.96%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -573,8 +573,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2951,
-    "asOf": "Sep 24 2026",
+    "totalRows": 2953,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

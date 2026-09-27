@@ -2,7 +2,7 @@
   "ticker": "WDEF",
   "name": "WisdomTree Europe Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdef",
@@ -26,31 +26,31 @@
   },
   "nav": {
     "display": "$28.61",
-    "value": 28.608,
-    "asOfDate": "Sep 24 2026"
+    "value": 28.612,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$29.23",
-    "value": 29.234,
-    "asOfDate": "Sep 23 2026"
+    "display": "$28.75",
+    "value": 28.747,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.32%",
-    "value": -0.322
+    "display": "0.47%",
+    "value": 0.469
   },
   "aum": {
     "display": "$85.05 M",
     "value": 85050470,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.07,
     "dividendYieldText": "0.07%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0.07,
-    "secYield": 0.64,
-    "secYieldText": "0.64%",
+    "secYield": 0.65,
+    "secYieldText": "0.65%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -178,8 +178,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 299,
-    "asOf": "Sep 24 2026",
+    "totalRows": 301,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

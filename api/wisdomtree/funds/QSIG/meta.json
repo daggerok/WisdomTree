@@ -2,7 +2,7 @@
   "ticker": "QSIG",
   "name": "WisdomTree U.S. Short-Term Corporate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qsig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qsig",
@@ -25,32 +25,32 @@
     "value": 0.18
   },
   "nav": {
-    "display": "$47.48",
-    "value": 47.481,
-    "asOfDate": "Sep 24 2026"
+    "display": "$47.37",
+    "value": 47.372,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$47.49",
-    "value": 47.493,
-    "asOfDate": "Sep 23 2026"
+    "display": "$47.31",
+    "value": 47.31,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
     "display": "-0.13%",
-    "value": -0.125
+    "value": -0.131
   },
   "aum": {
     "display": "$52.31 M",
     "value": 52308000,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 4.5,
     "dividendYieldText": "4.50%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 4.42,
-    "secYield": 4.97,
-    "secYieldText": "4.97%",
+    "secYield": 5.01,
+    "secYieldText": "5.01%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1442,8 +1442,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2617,
-    "asOf": "Sep 24 2026",
+    "totalRows": 2619,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

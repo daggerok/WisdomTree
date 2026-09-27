@@ -2,7 +2,7 @@
   "ticker": "WQTM",
   "name": "WisdomTree Quantum Computing Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wqtm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wqtm",
@@ -25,24 +25,24 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$32.34",
-    "value": 32.338,
-    "asOfDate": "Sep 24 2026"
+    "display": "$32.59",
+    "value": 32.595,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$32.17",
-    "value": 32.17,
-    "asOfDate": "Sep 23 2026"
+    "display": "$32.69",
+    "value": 32.69,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.07%",
-    "value": 0.072
+    "display": "0.29%",
+    "value": 0.291
   },
   "aum": {
     "display": "$346.38 M",
     "value": 346383900,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,
@@ -178,8 +178,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 240,
-    "asOf": "Sep 24 2026",
+    "totalRows": 242,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

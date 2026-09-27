@@ -2,7 +2,7 @@
   "ticker": "WDRN",
   "name": "WisdomTree Physical AI, Humanoids, and Drones Fund",
   "category": "Thematic",
-  "categoryPath": "Thematic / Megatrends",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdrn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdrn",
@@ -25,32 +25,32 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$26.24",
-    "value": 26.238,
-    "asOfDate": "Sep 24 2026"
+    "display": "$26.38",
+    "value": 26.378,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$26.32",
-    "value": 26.324,
-    "asOfDate": "Sep 23 2026"
+    "display": "$26.44",
+    "value": 26.44,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.38%",
-    "value": 0.384
+    "display": "0.23%",
+    "value": 0.234
   },
   "aum": {
     "display": "$18.36 M",
     "value": 18355710,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 0.15,
-    "secYieldText": "0.15%",
+    "secYield": 0.14,
+    "secYieldText": "0.14%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -137,8 +137,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 91,
-    "asOf": "Sep 24 2026",
+    "totalRows": 93,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

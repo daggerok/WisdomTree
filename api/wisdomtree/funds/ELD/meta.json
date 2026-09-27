@@ -2,7 +2,7 @@
   "ticker": "ELD",
   "name": "WisdomTree Emerging Markets Local Debt Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Emerging Markets",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/eld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/eld",
@@ -25,32 +25,32 @@
     "value": 0.55
   },
   "nav": {
-    "display": "$28.19",
-    "value": 28.192,
-    "asOfDate": "Sep 24 2026"
+    "display": "$28.03",
+    "value": 28.03,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$28.31",
-    "value": 28.31,
-    "asOfDate": "Sep 23 2026"
+    "display": "$28.07",
+    "value": 28.075,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.32%",
-    "value": -0.324
+    "display": "0.16%",
+    "value": 0.162
   },
   "aum": {
     "display": "$139.17 M",
     "value": 139168640,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 6.14,
     "dividendYieldText": "6.14%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 6.13,
-    "secYield": 6.94,
-    "secYieldText": "6.94%",
+    "distributionRate": 6.17,
+    "secYield": 6.98,
+    "secYieldText": "6.98%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -2058,8 +2058,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4056,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4058,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

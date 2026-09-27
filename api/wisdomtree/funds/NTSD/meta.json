@@ -2,7 +2,7 @@
   "ticker": "NTSD",
   "name": "WisdomTree Efficient U.S. Plus International Equity Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Core",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
@@ -25,32 +25,32 @@
     "value": 0.35
   },
   "nav": {
-    "display": "$47.31",
-    "value": 47.314,
-    "asOfDate": "Sep 24 2026"
+    "display": "$47.63",
+    "value": 47.626,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$47.38",
-    "value": 47.381,
-    "asOfDate": "Sep 23 2026"
+    "display": "$47.82",
+    "value": 47.823,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.088
+    "display": "0.41%",
+    "value": 0.413
   },
   "aum": {
     "display": "$49.79 M",
     "value": 49793340,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.8,
     "dividendYieldText": "0.80%",
-    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": 0.55,
-    "secYield": 0.85,
-    "secYieldText": "0.85%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "distributionRate": 0.8,
+    "secYield": 0.86,
+    "secYieldText": "0.86%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -166,8 +166,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 130,
-    "asOf": "Sep 24 2026",
+    "totalRows": 132,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

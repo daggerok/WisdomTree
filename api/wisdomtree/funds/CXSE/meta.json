@@ -2,7 +2,7 @@
   "ticker": "CXSE",
   "name": "China ex-State-Owned Enterprises",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/cxse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/cxse",
@@ -30,8 +30,8 @@
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$36.12",
-    "value": 36.12,
+    "display": "$35.79",
+    "value": 35.79,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
@@ -42,7 +42,7 @@
     "display": "$472.95 M",
     "value": 472947420,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.6,
@@ -56,23 +56,23 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": -4.39,
-      "mo1Text": "-4.39%",
-      "qtd": -6.71,
-      "qtdText": "-6.71%",
-      "ytd": -9.69,
-      "ytdText": "-9.69%",
-      "yr1": -14.81,
-      "yr1Text": "-14.81%",
-      "yr3": 8.02,
-      "yr3Text": "8.02%",
-      "yr5": -6.12,
-      "yr5Text": "-6.12%",
-      "yr10": 4.36,
-      "yr10Text": "4.36%",
-      "sinceInception": 4.06,
-      "sinceInceptionText": "4.06%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": -5.32,
+      "mo1Text": "-5.32%",
+      "qtd": -6.91,
+      "qtdText": "-6.91%",
+      "ytd": -9.88,
+      "ytdText": "-9.88%",
+      "yr1": -16.48,
+      "yr1Text": "-16.48%",
+      "yr3": 8.43,
+      "yr3Text": "8.43%",
+      "yr5": -5.9,
+      "yr5Text": "-5.90%",
+      "yr10": 4.34,
+      "yr10Text": "4.34%",
+      "sinceInception": 4.04,
+      "sinceInceptionText": "4.04%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -482,6 +482,16 @@
         "—",
         "—",
         "0.09"
+      ],
+      [
+        "09/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "0.255"
       ]
     ]
   },
@@ -504,8 +514,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3521,
-    "asOf": "Sep 24 2026",
+    "totalRows": 3523,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

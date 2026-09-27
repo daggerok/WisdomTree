@@ -2,7 +2,7 @@
   "ticker": "WTIP",
   "name": "WisdomTree Inflation Plus Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Commodities",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtip",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtip",
@@ -25,32 +25,32 @@
     "value": 0.65
   },
   "nav": {
-    "display": "$37.06",
-    "value": 37.06,
-    "asOfDate": "Sep 24 2026"
+    "display": "$36.95",
+    "value": 36.947,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$37.23",
-    "value": 37.23,
-    "asOfDate": "Sep 23 2026"
+    "display": "$36.80",
+    "value": 36.8,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.25%",
-    "value": 0.249
+    "display": "-0.40%",
+    "value": -0.4
   },
   "aum": {
     "display": "$26.00 M",
     "value": 25996230,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.66,
     "dividendYieldText": "3.66%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0,
-    "secYield": 0.46,
-    "secYieldText": "0.46%",
+    "secYield": 0.57,
+    "secYieldText": "0.57%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -284,8 +284,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 318,
-    "asOf": "Sep 24 2026",
+    "totalRows": 320,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

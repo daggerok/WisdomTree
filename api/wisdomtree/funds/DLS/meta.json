@@ -1,8 +1,8 @@
 {
   "ticker": "DLS",
-  "name": "International SmallCap Dividend",
+  "name": "WisdomTree International SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
@@ -16,7 +16,7 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": null,
+    "cusip": "97717W760",
     "isin": null,
     "indexTicker": null
   },
@@ -25,54 +25,54 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$88.74",
-    "value": 88.742,
+    "display": "$87.83",
+    "value": 87.825,
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$87.75",
-    "value": 87.745,
+    "display": "$87.91",
+    "value": 87.9056,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
-    "display": "-1.12%",
-    "value": -1.12
+    "display": "0.09%",
+    "value": 0.092
   },
   "aum": {
     "display": "$1.06 B",
     "value": 1064466880,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.45,
     "dividendYieldText": "3.45%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": null,
-    "secYield": null,
-    "secYieldText": "—",
+    "secYield": 3.06,
+    "secYieldText": "3.06%",
     "secYieldKind": "not present in the current official product-page rendering"
   },
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": -1.19,
-      "mo1Text": "-1.19%",
-      "qtd": 4.27,
-      "qtdText": "4.27%",
-      "ytd": 10.39,
-      "ytdText": "10.39%",
-      "yr1": 13.76,
-      "yr1Text": "13.76%",
-      "yr3": 18.99,
-      "yr3Text": "18.99%",
-      "yr5": 7.05,
-      "yr5Text": "7.05%",
-      "yr10": 7.56,
-      "yr10Text": "7.56%",
-      "sinceInception": 6.49,
-      "sinceInceptionText": "6.49%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": -1.25,
+      "mo1Text": "-1.25%",
+      "qtd": 5.19,
+      "qtdText": "5.19%",
+      "ytd": 11.37,
+      "ytdText": "11.37%",
+      "yr1": 15.79,
+      "yr1Text": "15.79%",
+      "yr3": 19.45,
+      "yr3Text": "19.45%",
+      "yr5": 7.39,
+      "yr5Text": "7.39%",
+      "yr10": 7.66,
+      "yr10Text": "7.66%",
+      "sinceInception": 6.53,
+      "sinceInceptionText": "6.53%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -842,6 +842,16 @@
         "—",
         "—",
         "1.435"
+      ],
+      [
+        "09/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "0.6"
       ]
     ]
   },
@@ -869,8 +879,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5099,
-    "asOf": "Sep 24 2026",
+    "totalRows": 5101,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

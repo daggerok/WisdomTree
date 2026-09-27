@@ -2,7 +2,7 @@
   "ticker": "WTLS",
   "name": "WisdomTree Efficient Long/Short U.S. Equity Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Long/Short",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtls",
@@ -25,32 +25,32 @@
     "value": 0.88
   },
   "nav": {
-    "display": "$61.49",
-    "value": 61.494,
-    "asOfDate": "Sep 24 2026"
+    "display": "$62.20",
+    "value": 62.203,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$61.69",
-    "value": 61.692,
-    "asOfDate": "Sep 23 2026"
+    "display": "$62.48",
+    "value": 62.48,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.045
+    "display": "0.44%",
+    "value": 0.443
   },
   "aum": {
     "display": "$19.75 M",
     "value": 19750380,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 2.97,
-    "secYieldText": "2.97%",
+    "secYield": 2.99,
+    "secYieldText": "2.99%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -137,8 +137,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 168,
-    "asOf": "Sep 24 2026",
+    "totalRows": 170,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

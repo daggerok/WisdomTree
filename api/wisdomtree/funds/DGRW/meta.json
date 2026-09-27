@@ -2,7 +2,7 @@
   "ticker": "DGRW",
   "name": "WisdomTree U.S. Quality Dividend Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrw",
@@ -25,32 +25,32 @@
     "value": 0.28
   },
   "nav": {
-    "display": "$98.12",
-    "value": 98.12,
-    "asOfDate": "Sep 24 2026"
+    "display": "$98.49",
+    "value": 98.489,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$98.30",
-    "value": 98.3,
-    "asOfDate": "Sep 23 2026"
+    "display": "$98.49",
+    "value": 98.49,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.026
+    "display": "0.00%",
+    "value": 0.001
   },
   "aum": {
     "display": "$17.02 B",
     "value": 17016293380,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.23,
     "dividendYieldText": "1.23%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.67,
-    "secYield": 1.19,
-    "secYieldText": "1.19%",
+    "distributionRate": 2.07,
+    "secYield": 1.2,
+    "secYieldText": "1.20%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1771,8 +1771,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3355,
-    "asOf": "Sep 24 2026",
+    "totalRows": 3357,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

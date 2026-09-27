@@ -2,7 +2,7 @@
   "ticker": "UNIY",
   "name": "WisdomTree Voya Yield Enhanced USD Universal Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Strategic Core/Core Plus",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
@@ -25,24 +25,24 @@
     "value": 0.15
   },
   "nav": {
-    "display": "$46.53",
-    "value": 46.53,
-    "asOfDate": "Sep 24 2026"
+    "display": "$46.37",
+    "value": 46.373,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$46.77",
-    "value": 46.766,
-    "asOfDate": "Sep 23 2026"
+    "display": "$46.37",
+    "value": 46.371,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.00%",
-    "value": -0.004
+    "display": "-0.01%",
+    "value": -0.005
   },
   "aum": {
     "display": "$1.28 B",
     "value": 1276749310,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.97,
@@ -632,8 +632,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 910,
-    "asOf": "Sep 24 2026",
+    "totalRows": 912,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

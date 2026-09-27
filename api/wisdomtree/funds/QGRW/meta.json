@@ -2,7 +2,7 @@
   "ticker": "QGRW",
   "name": "WisdomTree U.S. Quality Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Growth",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qgrw",
@@ -25,24 +25,24 @@
     "value": 0.28
   },
   "nav": {
-    "display": "$68.84",
-    "value": 68.838,
-    "asOfDate": "Sep 24 2026"
+    "display": "$69.13",
+    "value": 69.134,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$68.56",
-    "value": 68.56,
-    "asOfDate": "Sep 23 2026"
+    "display": "$69.16",
+    "value": 69.16,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.011
+    "display": "0.04%",
+    "value": 0.038
   },
   "aum": {
     "display": "$3.17 B",
     "value": 3172250880,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.07,
@@ -208,8 +208,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 940,
-    "asOf": "Sep 24 2026",
+    "totalRows": 942,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

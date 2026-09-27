@@ -2,7 +2,7 @@
   "ticker": "EMMF",
   "name": "Emerging Markets Multifactor",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/emmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/emmf",
@@ -30,8 +30,8 @@
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$38.34",
-    "value": 38.3386,
+    "display": "$38.46",
+    "value": 38.4574,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
@@ -42,7 +42,7 @@
     "display": "$185.23 M",
     "value": 185227790,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.93,
@@ -56,23 +56,23 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": 1.83,
-      "mo1Text": "1.83%",
-      "qtd": 1.43,
-      "qtdText": "1.43%",
-      "ytd": 22.57,
-      "ytdText": "22.57%",
-      "yr1": 27.32,
-      "yr1Text": "27.32%",
-      "yr3": 20.41,
-      "yr3Text": "20.41%",
-      "yr5": 10.63,
-      "yr5Text": "10.63%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": 0.94,
+      "mo1Text": "0.94%",
+      "qtd": 2.15,
+      "qtdText": "2.15%",
+      "ytd": 23.44,
+      "ytdText": "23.44%",
+      "yr1": 28.47,
+      "yr1Text": "28.47%",
+      "yr3": 20.64,
+      "yr3Text": "20.64%",
+      "yr5": 11.04,
+      "yr5Text": "11.04%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 8.05,
-      "sinceInceptionText": "8.05%",
+      "sinceInception": 8.15,
+      "sinceInceptionText": "8.15%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -422,6 +422,16 @@
         "—",
         "—",
         "0.225"
+      ],
+      [
+        "09/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "0.15"
       ]
     ]
   },
@@ -443,8 +453,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2040,
-    "asOf": "Sep 24 2026",
+    "totalRows": 2042,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

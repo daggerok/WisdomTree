@@ -2,7 +2,7 @@
   "ticker": "DIM",
   "name": "International MidCap Dividend",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dim",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dim",
@@ -30,8 +30,8 @@
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$87.68",
-    "value": 87.681,
+    "display": "$87.61",
+    "value": 87.611,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
@@ -42,7 +42,7 @@
     "display": "$162.96 M",
     "value": 162961920,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.99,
@@ -56,23 +56,23 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": -1.91,
-      "mo1Text": "-1.91%",
-      "qtd": 2.83,
-      "qtdText": "2.83%",
-      "ytd": 11.02,
-      "ytdText": "11.02%",
-      "yr1": 16.45,
-      "yr1Text": "16.45%",
-      "yr3": 19.34,
-      "yr3Text": "19.34%",
-      "yr5": 8.67,
-      "yr5Text": "8.67%",
-      "yr10": 8.11,
-      "yr10Text": "8.11%",
-      "sinceInception": 6.31,
-      "sinceInceptionText": "6.31%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": -2.33,
+      "mo1Text": "-2.33%",
+      "qtd": 3.37,
+      "qtdText": "3.37%",
+      "ytd": 11.6,
+      "ytdText": "11.60%",
+      "yr1": 17.98,
+      "yr1Text": "17.98%",
+      "yr3": 19.72,
+      "yr3Text": "19.72%",
+      "yr5": 9.01,
+      "yr5Text": "9.01%",
+      "yr10": 8.16,
+      "yr10Text": "8.16%",
+      "sinceInception": 6.34,
+      "sinceInceptionText": "6.34%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -842,6 +842,16 @@
         "—",
         "—",
         "1.63"
+      ],
+      [
+        "09/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "0.53"
       ]
     ]
   },
@@ -867,8 +877,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5099,
-    "asOf": "Sep 24 2026",
+    "totalRows": 5101,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
