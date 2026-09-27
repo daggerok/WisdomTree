@@ -1261,7 +1261,12 @@ function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividends: Arra
 }
 
 function historyRows(days: ChartDay[]): JsonRecord[] {
-  return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': String(day.adjClose), Volume: String(day.volume) }));
+  // Yahoo recomputes the split/dividend-adjusted close on every request; storing
+  // the raw float lets the last digit or two jitter between otherwise identical
+  // requests, making every history row (and the fund) look "updated" on every
+  // single run. Rounding to 2 decimals is well past any meaningful price
+  // precision and absorbs that jitter.
+  return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': String(round(day.adjClose, 2)), Volume: String(day.volume) }));
 }
 
 function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductReturns | null): PriceReturns {
@@ -1384,10 +1389,25 @@ async function readPreviousHeaders(ticker: string, kind: 'holdings' | 'history')
   }
 }
 
+// Comparing raw text would treat a run that only refreshed generatedAt (with
+// every fund's actual data unchanged) as a real change and rewrite the file
+// every time. Compare with both timestamps stripped instead.
+export function samePublishedContent(previous: string, value: unknown): boolean {
+  const withoutRunTimestamp = (item: unknown): unknown => {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) return item;
+    const { generatedAt, savedAt, ...content } = item as Record<string, unknown>;
+    return content;
+  };
+  try {
+    return JSON.stringify(withoutRunTimestamp(JSON.parse(previous))) === JSON.stringify(withoutRunTimestamp(value));
+  } catch { return false; }
+}
+
 async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
   const text = `${JSON.stringify(value, null, 2)}\n`;
   try {
-    if (await readFile(file, 'utf8') === text) return false;
+    const previous = await readFile(file, 'utf8');
+    if (previous === text || samePublishedContent(previous, value)) return false;
   } catch {
     // New file.
   }
