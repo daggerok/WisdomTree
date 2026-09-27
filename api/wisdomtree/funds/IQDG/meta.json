@@ -2,7 +2,7 @@
   "ticker": "IQDG",
   "name": "WisdomTree International Quality Dividend Growth Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/iqdg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/iqdg",
@@ -25,32 +25,32 @@
     "value": 0.42
   },
   "nav": {
-    "display": "$42.54",
-    "value": 42.543,
-    "asOfDate": "Sep 24 2026"
+    "display": "$42.85",
+    "value": 42.848,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$42.87",
-    "value": 42.867,
-    "asOfDate": "Sep 23 2026"
+    "display": "$43.18",
+    "value": 43.18,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.033
+    "display": "0.77%",
+    "value": 0.77
   },
   "aum": {
     "display": "$692.52 M",
     "value": 692520510,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.42,
     "dividendYieldText": "2.42%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.69,
-    "secYield": 2.16,
-    "secYieldText": "2.16%",
+    "distributionRate": 1.12,
+    "secYield": 2.2,
+    "secYieldText": "2.20%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -601,8 +601,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2631,
-    "asOf": "Sep 24 2026",
+    "totalRows": 2633,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

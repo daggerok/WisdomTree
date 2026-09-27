@@ -2,7 +2,7 @@
   "ticker": "OPPJ",
   "name": "WisdomTree Japan Opportunities Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppj",
@@ -25,32 +25,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$58.46",
-    "value": 58.458,
-    "asOfDate": "Sep 24 2026"
+    "display": "$59.70",
+    "value": 59.699,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$60.26",
-    "value": 60.26,
-    "asOfDate": "Sep 23 2026"
+    "display": "$59.93",
+    "value": 59.93,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "1.77%",
-    "value": 1.773
+    "display": "0.39%",
+    "value": 0.385
   },
   "aum": {
     "display": "$337.39 M",
     "value": 337391200,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.1,
     "dividendYieldText": "1.10%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 2.3,
-    "secYield": 1.7,
-    "secYieldText": "1.70%",
+    "distributionRate": 0,
+    "secYield": 1.73,
+    "secYieldText": "1.73%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -511,8 +511,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3329,
-    "asOf": "Sep 24 2026",
+    "totalRows": 3331,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

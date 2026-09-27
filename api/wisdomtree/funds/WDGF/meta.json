@@ -2,7 +2,7 @@
   "ticker": "WDGF",
   "name": "WisdomTree Global Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Global",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdgf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdgf",
@@ -25,24 +25,24 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$30.45",
-    "value": 30.454,
-    "asOfDate": "Sep 24 2026"
+    "display": "$30.42",
+    "value": 30.417,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$30.70",
-    "value": 30.7,
-    "asOfDate": "Sep 23 2026"
+    "display": "$30.40",
+    "value": 30.4,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.34%",
-    "value": -0.342
+    "display": "-0.06%",
+    "value": -0.056
   },
   "aum": {
     "display": "$5.39 M",
     "value": 5390860,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.05,
@@ -63,8 +63,8 @@
       "qtdText": "-4.27%",
       "ytd": 4.94,
       "ytdText": "4.94%",
-      "yr1": -2.4,
-      "yr1Text": "-2.40%",
+      "yr1": -3.1,
+      "yr1Text": "-3.10%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
@@ -178,8 +178,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 259,
-    "asOf": "Sep 24 2026",
+    "totalRows": 261,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

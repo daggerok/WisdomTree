@@ -2,7 +2,7 @@
   "ticker": "INDH",
   "name": "WisdomTree India Hedged Equity Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/indh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/indh",
@@ -25,32 +25,32 @@
     "value": 0.64
   },
   "nav": {
-    "display": "$37.70",
-    "value": 37.703,
-    "asOfDate": "Sep 24 2026"
+    "display": "$37.96",
+    "value": 37.959,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$37.93",
-    "value": 37.93,
-    "asOfDate": "Sep 23 2026"
+    "display": "$37.83",
+    "value": 37.825,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-1.10%",
-    "value": -1.1
+    "display": "-0.36%",
+    "value": -0.356
   },
   "aum": {
     "display": "$5.75 M",
     "value": 5752080,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0,
     "dividendYieldText": "0.00%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0,
-    "secYield": 0.62,
-    "secYieldText": "0.62%",
+    "secYield": 0.63,
+    "secYieldText": "0.63%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -228,8 +228,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 595,
-    "asOf": "Sep 24 2026",
+    "totalRows": 597,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "HEDJ",
   "name": "WisdomTree Europe Hedged Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/hedj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/hedj",
@@ -25,32 +25,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$55.93",
-    "value": 55.934,
-    "asOfDate": "Sep 24 2026"
+    "display": "$56.03",
+    "value": 56.028,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$56.07",
-    "value": 56.07,
-    "asOfDate": "Sep 23 2026"
+    "display": "$56.17",
+    "value": 56.17,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.21%",
-    "value": -0.208
+    "display": "0.25%",
+    "value": 0.253
   },
   "aum": {
     "display": "$1.76 B",
     "value": 1764256900,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.81,
     "dividendYieldText": "1.81%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 7.01,
-    "secYield": 2.19,
-    "secYieldText": "2.19%",
+    "distributionRate": 0.32,
+    "secYield": 2.22,
+    "secYieldText": "2.22%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -762,8 +762,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4197,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4199,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "EZM",
   "name": "U.S. MidCap",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ezm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ezm",
@@ -30,8 +30,8 @@
     "asOfDate": "Sep 23 2026"
   },
   "marketPrice": {
-    "display": "$72.67",
-    "value": 72.67,
+    "display": "$72.97",
+    "value": 72.97,
     "asOfDate": "Sep 23 2026"
   },
   "premiumDiscount": {
@@ -42,7 +42,7 @@
     "display": "$910.24 M",
     "value": 910242560,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.26,
@@ -56,23 +56,23 @@
   "returns": {
     "derivedFrom": "adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns",
     "monthEnd": {
-      "asOfDate": "Sep 24 2026",
-      "mo1": -4.92,
-      "mo1Text": "-4.92%",
-      "qtd": -3.39,
-      "qtdText": "-3.39%",
-      "ytd": 9.43,
-      "ytdText": "9.43%",
-      "yr1": 11.32,
-      "yr1Text": "11.32%",
+      "asOfDate": "Sep 25 2026",
+      "mo1": -4.36,
+      "mo1Text": "-4.36%",
+      "qtd": -2.7,
+      "qtdText": "-2.70%",
+      "ytd": 10.21,
+      "ytdText": "10.21%",
+      "yr1": 12.53,
+      "yr1Text": "12.53%",
       "yr3": 14.43,
       "yr3Text": "14.43%",
-      "yr5": 8.01,
-      "yr5Text": "8.01%",
-      "yr10": 10.18,
-      "yr10Text": "10.18%",
-      "sinceInception": 9.31,
-      "sinceInceptionText": "9.31%",
+      "yr5": 8.19,
+      "yr5Text": "8.19%",
+      "yr10": 10.26,
+      "yr10Text": "10.26%",
+      "sinceInception": 9.35,
+      "sinceInceptionText": "9.35%",
       "navReturns": null,
       "indexReturns": null
     },
@@ -892,6 +892,16 @@
         "—",
         "—",
         "0.24"
+      ],
+      [
+        "09/25/2026",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "0.22"
       ]
     ]
   },
@@ -916,8 +926,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4927,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4929,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

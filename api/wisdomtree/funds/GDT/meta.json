@@ -2,7 +2,7 @@
   "ticker": "GDT",
   "name": "WisdomTree Efficient TIPS Plus Gold Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / -",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
@@ -25,32 +25,32 @@
     "value": 0.2
   },
   "nav": {
-    "display": "$34.51",
-    "value": 34.511,
-    "asOfDate": "Sep 24 2026"
+    "display": "$34.71",
+    "value": 34.711,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$34.70",
-    "value": 34.702,
-    "asOfDate": "Sep 23 2026"
+    "display": "$34.75",
+    "value": 34.747,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.027
+    "display": "0.10%",
+    "value": 0.103
   },
   "aum": {
     "display": "$11.28 M",
     "value": 11275160,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 0.86,
     "dividendYieldText": "0.86%",
-    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0,
-    "secYield": 0.63,
-    "secYieldText": "0.63%",
+    "secYield": 0.78,
+    "secYieldText": "0.78%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -214,8 +214,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 169,
-    "asOf": "Sep 24 2026",
+    "totalRows": 171,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

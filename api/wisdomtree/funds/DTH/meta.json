@@ -2,7 +2,7 @@
   "ticker": "DTH",
   "name": "WisdomTree International High Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dth",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dth",
@@ -25,32 +25,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$56.88",
-    "value": 56.875,
-    "asOfDate": "Sep 24 2026"
+    "display": "$56.72",
+    "value": 56.72,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$57.13",
-    "value": 57.13,
-    "asOfDate": "Sep 23 2026"
+    "display": "$57.10",
+    "value": 57.1,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.12%",
-    "value": 0.12
+    "display": "0.67%",
+    "value": 0.665
   },
   "aum": {
     "display": "$647.65 M",
     "value": 647645570,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.84,
     "dividendYieldText": "3.84%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 8.55,
-    "secYield": 3.52,
-    "secYieldText": "3.52%",
+    "distributionRate": 2.93,
+    "secYield": 3.71,
+    "secYieldText": "3.71%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -915,8 +915,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5099,
-    "asOf": "Sep 24 2026",
+    "totalRows": 5101,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

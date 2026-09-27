@@ -2,7 +2,7 @@
   "ticker": "WTMF",
   "name": "WisdomTree Managed Futures Strategy Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Managed Futures",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
@@ -25,32 +25,32 @@
     "value": 0.65
   },
   "nav": {
-    "display": "$42.13",
-    "value": 42.125,
-    "asOfDate": "Sep 24 2026"
+    "display": "$42.16",
+    "value": 42.159,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$42.26",
-    "value": 42.26,
-    "asOfDate": "Sep 23 2026"
+    "display": "$41.75",
+    "value": 41.75,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.35%",
-    "value": 0.354
+    "display": "-0.98%",
+    "value": -0.98
   },
   "aum": {
     "display": "$277.93 M",
     "value": 277929410,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 2.75,
     "dividendYieldText": "2.75%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0.79,
-    "secYield": 2.48,
-    "secYieldText": "2.48%",
+    "secYield": 2.49,
+    "secYieldText": "2.49%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -277,8 +277,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3952,
-    "asOf": "Sep 24 2026",
+    "totalRows": 3954,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

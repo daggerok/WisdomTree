@@ -2,7 +2,7 @@
   "ticker": "GDE",
   "name": "WisdomTree Efficient Gold Plus Equity Strategy Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Core",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gde",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gde",
@@ -25,32 +25,32 @@
     "value": 0.2
   },
   "nav": {
-    "display": "$65.55",
-    "value": 65.549,
-    "asOfDate": "Sep 24 2026"
+    "display": "$66.14",
+    "value": 66.14,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$65.69",
-    "value": 65.69,
-    "asOfDate": "Sep 23 2026"
+    "display": "$66.17",
+    "value": 66.165,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.22%",
-    "value": -0.216
+    "display": "0.04%",
+    "value": 0.038
   },
   "aum": {
     "display": "$470.70 M",
     "value": 470699710,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 4.06,
     "dividendYieldText": "4.06%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
     "distributionRate": 0.22,
-    "secYield": 0.74,
-    "secYieldText": "0.74%",
+    "secYield": 0.75,
+    "secYieldText": "0.75%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -227,8 +227,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1134,
-    "asOf": "Sep 24 2026",
+    "totalRows": 1136,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

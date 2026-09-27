@@ -2,7 +2,7 @@
   "ticker": "DEW",
   "name": "WisdomTree Global High Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Global",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dew",
@@ -25,32 +25,32 @@
     "value": 0.58
   },
   "nav": {
-    "display": "$70.29",
-    "value": 70.29,
-    "asOfDate": "Sep 24 2026"
+    "display": "$70.02",
+    "value": 70.018,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$70.29",
-    "value": 70.29,
-    "asOfDate": "Sep 23 2026"
+    "display": "$70.08",
+    "value": 70.076,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.27%",
-    "value": -0.27
+    "display": "0.08%",
+    "value": 0.083
   },
   "aum": {
     "display": "$158.58 M",
     "value": 158579140,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.2,
     "dividendYieldText": "3.20%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.08,
-    "secYield": 3.01,
-    "secYieldText": "3.01%",
+    "distributionRate": 2.71,
+    "secYield": 3.07,
+    "secYieldText": "3.07%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -915,8 +915,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5099,
-    "asOf": "Sep 24 2026",
+    "totalRows": 5101,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

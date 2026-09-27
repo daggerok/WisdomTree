@@ -2,7 +2,7 @@
   "ticker": "EES",
   "name": "WisdomTree U.S. SmallCap Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ees",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ees",
@@ -25,32 +25,32 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$65.62",
-    "value": 65.622,
-    "asOfDate": "Sep 24 2026"
+    "display": "$65.54",
+    "value": 65.542,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$65.54",
-    "value": 65.54,
-    "asOfDate": "Sep 23 2026"
+    "display": "$65.61",
+    "value": 65.612,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.066
+    "display": "0.11%",
+    "value": 0.106
   },
   "aum": {
     "display": "$688.63 M",
     "value": 688625150,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.17,
     "dividendYieldText": "1.17%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.56,
-    "secYield": 1.12,
-    "secYieldText": "1.12%",
+    "distributionRate": 1.25,
+    "secYield": 1.13,
+    "secYieldText": "1.13%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -985,8 +985,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4927,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4929,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

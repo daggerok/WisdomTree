@@ -2,7 +2,7 @@
   "ticker": "WDAF",
   "name": "WisdomTree Asia Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdaf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdaf",
@@ -25,24 +25,24 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$30.27",
-    "value": 30.272,
-    "asOfDate": "Sep 24 2026"
+    "display": "$30.43",
+    "value": 30.426,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$30.07",
-    "value": 30.07,
-    "asOfDate": "Sep 23 2026"
+    "display": "$30.39",
+    "value": 30.385,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-1.29%",
-    "value": -1.287
+    "display": "-0.14%",
+    "value": -0.136
   },
   "aum": {
     "display": "$10.66 M",
     "value": 10659990,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.12,
@@ -63,8 +63,8 @@
       "qtdText": "-8.86%",
       "ytd": 8.63,
       "ytdText": "8.63%",
-      "yr1": -4.03,
-      "yr1Text": "-4.03%",
+      "yr1": -2.68,
+      "yr1Text": "-2.68%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
@@ -178,8 +178,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 259,
-    "asOf": "Sep 24 2026",
+    "totalRows": 261,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "AIVL",
   "name": "WisdomTree U.S. AI Enhanced Value Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/aivl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/aivl",
@@ -25,32 +25,32 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$129.24",
-    "value": 129.238,
-    "asOfDate": "Sep 24 2026"
+    "display": "$129.17",
+    "value": 129.172,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$129.95",
-    "value": 129.947,
-    "asOfDate": "Sep 23 2026"
+    "display": "$129.18",
+    "value": 129.178,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.039
+    "display": "0.01%",
+    "value": 0.005
   },
   "aum": {
     "display": "$412.74 M",
     "value": 412741600,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.49,
     "dividendYieldText": "1.49%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.69,
-    "secYield": 1.6,
-    "secYieldText": "1.60%",
+    "distributionRate": 1.55,
+    "secYield": 1.61,
+    "secYieldText": "1.61%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1749,8 +1749,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5099,
-    "asOf": "Sep 24 2026",
+    "totalRows": 5101,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

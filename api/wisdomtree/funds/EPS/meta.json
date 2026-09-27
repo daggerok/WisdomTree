@@ -2,7 +2,7 @@
   "ticker": "EPS",
   "name": "WisdomTree U.S. LargeCap Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Large Cap Core",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eps",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eps",
@@ -25,32 +25,32 @@
     "value": 0.08
   },
   "nav": {
-    "display": "$80.71",
-    "value": 80.713,
-    "asOfDate": "Sep 24 2026"
+    "display": "$80.88",
+    "value": 80.875,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$80.73",
-    "value": 80.73,
-    "asOfDate": "Sep 23 2026"
+    "display": "$80.85",
+    "value": 80.85,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.023
+    "display": "-0.03%",
+    "value": -0.031
   },
   "aum": {
     "display": "$1.66 B",
     "value": 1662660740,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.11,
     "dividendYieldText": "1.11%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 1.12,
-    "secYield": 1.13,
-    "secYieldText": "1.13%",
+    "distributionRate": 1.11,
+    "secYield": 1.14,
+    "secYieldText": "1.14%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -964,8 +964,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4927,
-    "asOf": "Sep 24 2026",
+    "totalRows": 4929,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

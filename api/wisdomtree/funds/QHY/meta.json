@@ -2,7 +2,7 @@
   "ticker": "QHY",
   "name": "WisdomTree U.S. High Yield Corporate Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Credit",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qhy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qhy",
@@ -25,32 +25,32 @@
     "value": 0.38
   },
   "nav": {
-    "display": "$44.87",
-    "value": 44.87,
-    "asOfDate": "Sep 24 2026"
+    "display": "$44.57",
+    "value": 44.574,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$44.99",
-    "value": 44.99,
-    "asOfDate": "Sep 23 2026"
+    "display": "$44.64",
+    "value": 44.64,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.065
+    "display": "0.15%",
+    "value": 0.148
   },
   "aum": {
     "display": "$243.10 M",
     "value": 243103570,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 6.36,
     "dividendYieldText": "6.36%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 6.26,
-    "secYield": 6.34,
-    "secYieldText": "6.34%",
+    "distributionRate": 6.28,
+    "secYield": 6.41,
+    "secYieldText": "6.41%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1451,8 +1451,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2617,
-    "asOf": "Sep 24 2026",
+    "totalRows": 2619,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "WTAI",
   "name": "WisdomTree Artificial Intelligence and Innovation Fund",
   "category": "Thematic",
-  "categoryPath": "Megatrends / -",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wtai",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wtai",
@@ -25,24 +25,24 @@
     "value": 0.45
   },
   "nav": {
-    "display": "$43.83",
-    "value": 43.826,
-    "asOfDate": "Sep 24 2026"
+    "display": "$44.03",
+    "value": 44.03,
+    "asOfDate": "Sep 25 2026"
   },
   "marketPrice": {
-    "display": "$43.81",
-    "value": 43.81,
-    "asOfDate": "Sep 23 2026"
+    "display": "$43.95",
+    "value": 43.95,
+    "asOfDate": "Sep 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.03
+    "display": "-0.18%",
+    "value": -0.182
   },
   "aum": {
     "display": "$694.18 M",
     "value": 694177860,
     "asOfDate": "Sep 23 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 1.2,
@@ -229,8 +229,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1201,
-    "asOf": "Sep 24 2026",
+    "totalRows": 1203,
+    "asOf": "Sep 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
