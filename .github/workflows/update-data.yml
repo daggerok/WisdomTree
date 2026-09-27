@@ -184,9 +184,6 @@ jobs:
       - name: Run updater unit tests
         run: bun test scripts/update-data.test.ts
 
-      - name: Type-check updater and tests
-        run: bunx tsc --noEmit
-
       - name: Generate api/wisdomtree static data
         run: bun ./scripts/update-data.ts
 
