@@ -18,6 +18,9 @@ import {
   parseProductPageSummary,
   parseRange,
   priceReturns,
+  parseRanges,
+  hasConfiguredFilters,
+  readConfig,
   toIsoDate,
 } from './update-data';
 
@@ -370,4 +373,17 @@ headerTest('header markup supplies a focusable counter and hidden rich panel wit
   headerExpect(html).toContain("event.key !== 'Escape'");
   headerExpect(html).toContain("trigger.addEventListener('focus', show)");
   headerExpect(html).toContain("trigger.addEventListener('pointerenter'");
+});
+
+
+describe('configured filter semantics', () => {
+  test('colon range defaults mean no filter and partial batches retain the full universe', () => {
+    const config = readConfig({
+      AUM: ':', TER: ':', DIVIDEND_YIELD: ':', TICKERS: '',
+      PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':', PERFORMANCE_3Y: ':', PERFORMANCE_5Y: ':', PERFORMANCE_10Y: ':',
+      TOTAL_RETURN_YTD: ':', TOTAL_RETURN_1Y: ':', TOTAL_RETURN_3Y: ':', TOTAL_RETURN_5Y: ':', TOTAL_RETURN_10Y: ':',
+    });
+    expect(parseRanges({ PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':' }, 'PERFORMANCE')).toEqual({});
+    expect(hasConfiguredFilters(config)).toBe(false);
+  });
 });
