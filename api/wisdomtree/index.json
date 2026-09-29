@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T03:48:43Z",
+  "generatedAt": "2026-09-29T04:53:07Z",
   "source": {
     "provider": "WisdomTree Asset Management, Inc. (U.S.-listed ETFs)",
     "market": "us",
@@ -14,7 +14,7 @@
   "counts": {
     "funds": 94,
     "holdings": 39243,
-    "history": 250231
+    "history": 250232
   },
   "funds": [
     {
@@ -27,8 +27,8 @@
       "isin": null,
       "ter": "0.12%",
       "terValue": 0.12,
-      "nav": "$41.49",
-      "navValue": 41.489,
+      "nav": "$41.26",
+      "navValue": 41.264,
       "aum": "$892.14 M",
       "aumValue": 892144060,
       "asOfDate": "Sep 23 2026",
@@ -138,12 +138,12 @@
         "siAnn": 1.94,
         "dividendYield": 4.73,
         "dividendYieldText": "4.73%",
-        "secYield": 5.22,
-        "secYieldText": "5.22%",
+        "secYield": 5.26,
+        "secYieldText": "5.26%",
         "returnsBasis": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values"
       },
       "holdings": 2147,
-      "history": 2821
+      "history": 2822
     },
     {
       "ticker": "AGZD",
