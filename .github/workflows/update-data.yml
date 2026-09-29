@@ -14,32 +14,32 @@ on:
       request_sleep:
         description: "Seconds between outgoing request starts; keep requests polite to WisdomTree, SEC and Yahoo"
         required: false
-        default: "2"
+        default: ""
         type: string
       aum:
         description: "AUM min:max; bounds may be amounts or K/M/B/T suffixes, or nano/micro/small/mid/large"
         required: false
-        default: ":"
+        default: ""
         type: string
       ter:
         description: "Net expense ratio range in percent: min:max"
         required: false
-        default: ":"
+        default: ""
         type: string
       concurrency:
         description: "Parallel fund workers (keep low)"
         required: false
-        default: "2"
+        default: ""
         type: string
       holdings_page_size:
         description: "Rows in each generated holdings JSON page"
         required: false
-        default: "250"
+        default: ""
         type: string
       history_page_size:
         description: "Rows in each generated history JSON page"
         required: false
-        default: "1000"
+        default: ""
         type: string
       store_raw_downloads:
         description: "Store the official rendered catalog under api/wisdomtree/raw"
@@ -49,7 +49,7 @@ on:
       max_retries:
         description: "Retries after the initial request"
         required: false
-        default: "2"
+        default: ""
         type: string
       tickers:
         description: "Only update these tickers, separated by spaces or commas"
@@ -59,17 +59,17 @@ on:
       dividend_yield:
         description: "Catalog trailing-yield percentage range; colon required"
         required: false
-        default: ":"
+        default: ""
         type: string
       history_range:
         description: "Yahoo chart range for history rows (max, 10y, 5y, ...)"
         required: false
-        default: "max"
+        default: ""
         type: string
       edgar_fallback:
         description: "Use SEC EDGAR Form N-PORT-P for full holdings (default on)"
         required: false
-        default: "1"
+        default: ""
         type: string
       skip_yahoo:
         description: "Keep previous history and distributions while refreshing catalog/holdings"
@@ -143,19 +143,19 @@ jobs:
   update-data:
     runs-on: ubuntu-latest
     env:
-      MAX_FETCHES: ${{ inputs.max_fetches || '0' }}
-      REQUEST_SLEEP: ${{ inputs.request_sleep || '2' }}
-      AUM: ${{ inputs.aum || ':' }}
-      TER: ${{ inputs.ter || ':' }}
-      CONCURRENCY: ${{ inputs.concurrency || '2' }}
-      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '250' }}
-      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '1000' }}
+      MAX_FETCHES: ${{ inputs.max_fetches || '' }}
+      REQUEST_SLEEP: ${{ inputs.request_sleep || '' }}
+      AUM: ${{ inputs.aum || '' }}
+      TER: ${{ inputs.ter || '' }}
+      CONCURRENCY: ${{ inputs.concurrency || '' }}
+      HOLDINGS_PAGE_SIZE: ${{ inputs.holdings_page_size || '' }}
+      HISTORY_PAGE_SIZE: ${{ inputs.history_page_size || '' }}
       STORE_RAW_DOWNLOADS: ${{ inputs.store_raw_downloads || '' }}
-      MAX_RETRIES: ${{ inputs.max_retries || '2' }}
+      MAX_RETRIES: ${{ inputs.max_retries || '' }}
       TICKERS: ${{ inputs.tickers || '' }}
-      DIVIDEND_YIELD: ${{ inputs.dividend_yield || ':' }}
-      HISTORY_RANGE: ${{ inputs.history_range || 'max' }}
-      EDGAR_FALLBACK: ${{ inputs.edgar_fallback || '1' }}
+      DIVIDEND_YIELD: ${{ inputs.dividend_yield || '' }}
+      HISTORY_RANGE: ${{ inputs.history_range || '' }}
+      EDGAR_FALLBACK: ${{ inputs.edgar_fallback || '' }}
       SKIP_YAHOO: ${{ inputs.skip_yahoo || '' }}
       SKIP_WISDOMTREE: ${{ inputs.skip_wisdomtree || '' }}
       PERFORMANCE_YTD: ${{ inputs.performance_ytd || '' }}

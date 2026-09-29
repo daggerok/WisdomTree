@@ -1,3 +1,4 @@
+import './load-update-data-config'; // JSON defaults; explicit process.env overrides.
 #!/usr/bin/env bun
 // Bun provides Node-compatible fs/promises; node types are intentionally not required at runtime.
 /// <reference types="bun" />
