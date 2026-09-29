@@ -486,11 +486,14 @@ export function parseAumRange(value: string): Range | undefined {
   return { min, max };
 }
 
-function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMANCE' | 'TOTAL_RETURN'): RangeMap {
+export function parseRanges(env: Record<string, string | undefined>, prefix: 'PERFORMANCE' | 'TOTAL_RETURN'): RangeMap {
   const result: RangeMap = {};
   for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y'] as ReturnPeriod[]) {
     const value = env[`${prefix}_${period}`];
-    if (value !== undefined && value.trim() !== '') result[period] = parseRange(value, `${prefix}_${period}`);
+    if (value !== undefined && value.trim() !== '') {
+      const parsed = parseRange(value, `${prefix}_${period}`);
+      if (parsed) result[period] = parsed;
+    }
   }
   return result;
 }
@@ -500,11 +503,11 @@ function readTickerSet(value: string | undefined): Set<string> | null {
   return tickers.length ? new Set(tickers) : null;
 }
 
-function hasConfiguredFilters(config: UpdaterConfig): boolean {
+export function hasConfiguredFilters(config: UpdaterConfig): boolean {
   return Boolean(config.aum || config.ter || config.dividendYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
 }
 
-function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
+export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
   return {
     maxFetches: parsePositiveInt(env.MAX_FETCHES, 0),
     requestSleep: parseDecimal(env.REQUEST_SLEEP, 1.5),
