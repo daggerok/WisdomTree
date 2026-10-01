@@ -1,15 +1,4 @@
 #!/usr/bin/env bun
-// Checked-in JSON is the runtime default; any nonblank environment value wins.
-import { readFileSync as readUpdaterConfig } from 'node:fs';
-try {
-  const updaterDefaults = JSON.parse(readUpdaterConfig(new URL('./update-data.config.json', import.meta.url), 'utf8')) as Record<string, unknown>;
-  for (const [key, value] of Object.entries(updaterDefaults)) {
-    const current = process.env[key];
-    if ((current === undefined || current.trim() === '') && value !== null && value !== undefined) process.env[key] = String(value);
-  }
-} catch (error) {
-  if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
-}
 // Bun provides Node-compatible fs/promises; node types are intentionally not required at runtime.
 /// <reference types="bun" />
 import { readFile as outputReadFile, readdir as outputReadDir } from 'node:fs/promises';
@@ -53,7 +42,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
 }
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|^SEC_UA$/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
@@ -189,7 +178,9 @@ const SEC_BROWSE_URL = `${SEC_SITE}/cgi-bin/browse-edgar`;
 const SEC_ARCHIVES = `${SEC_SITE}/Archives/edgar/data`;
 const SEC_FUND_TICKERS_URL = `${SEC_SITE}/files/company_tickers_mf.json`;
 const SEC_COMPANY_TICKERS_URL = `${SEC_SITE}/files/company_tickers.json`;
-const SEC_UA = 'DaggerOk WisdomTree ETF feed admin@daggerok.example.com';
+const DEFAULT_SEC_UA = 'DaggerOk WisdomTree ETF feed https://github.com/daggerok/WisdomTree';
+// Replaced from the resolved SEC_UA control in main(); the real contact comes from the protected SEC_UA variable.
+let SEC_UA = DEFAULT_SEC_UA;
 
 const API_ROOT = new URL('../api/wisdomtree/', import.meta.url);
 const INDEX_FILE = new URL('index.json', API_ROOT);
@@ -334,6 +325,7 @@ type UpdaterConfig = {
   edgarFallback: boolean;
   skipWisdomTree: boolean;
   skipYahoo: boolean;
+  secUa: string;
 };
 
 const EMPTY_RETURNS: CatalogReturns = { ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null };
@@ -526,6 +518,7 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     edgarFallback: !['0', 'false', 'off', 'no'].includes(String(env.EDGAR_FALLBACK ?? '1').toLowerCase()),
     skipWisdomTree: parseBoolean(env.SKIP_WISDOMTREE),
     skipYahoo: parseBoolean(env.SKIP_YAHOO),
+    secUa: env.SEC_UA?.trim() || DEFAULT_SEC_UA,
   };
 }
 
@@ -1765,6 +1758,10 @@ Environment variables (all filters use AND logic):
   EDGAR_FALLBACK=1
   SKIP_WISDOMTREE=off  use the previously published catalog
   SKIP_YAHOO=off       keep previously published history when possible
+  SEC_UA=...           SEC/HTTP User-Agent; real contact comes from the protected SEC_UA Actions variable
+  VERBOSE=off          print per-fund retry and fallback notices
+
+Defaults live in scripts/update-data.config.json (file < advanced JSON < nonblank inputs < environment).
 
 Examples:
   TICKERS="USFR DGRW WCLD" ./scripts/update-data.ts
@@ -1772,8 +1769,68 @@ Examples:
   PERFORMANCE_3Y="10:" TOTAL_RETURN_1Y="15:" ./scripts/update-data.ts
 `;
 
+// File defaults and explicit overrides, one mechanism for the CLI and the
+// GitHub Actions workflow: allowlisted scalar controls only, so nothing is
+// interpolated into bash. Precedence: config file < advanced JSON < nonblank
+// inputs < environment (explicit env wins, including a deliberately blank one).
+export const CONTROL_NAMES = [
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'TICKERS',
+  'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES', 'HISTORY_RANGE',
+  'STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_WISDOMTREE', 'SEC_UA', 'VERBOSE',
+  ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
+] as const;
+export type ControlName = (typeof CONTROL_NAMES)[number];
+export const CONFIG_FILE_URL = new URL('./update-data.config.json', import.meta.url);
+
+export function resolveControls(
+  file: unknown = {},
+  advanced: unknown = {},
+  inputs: unknown = {},
+  env: Record<string, string | undefined> = {},
+): Record<string, string> {
+  const result: Record<string, string> = {};
+  const known = new Set<string>(CONTROL_NAMES);
+  const apply = (value: unknown, skipEmpty = false): void => {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Configuration must be a JSON object');
+    for (const [key, raw] of Object.entries(value)) {
+      if (!known.has(key)) throw new Error(`Unknown updater control: ${key}`);
+      if (skipEmpty && (raw === '' || raw === undefined || raw === null)) continue;
+      if (!['string', 'number', 'boolean'].includes(typeof raw)) throw new Error(`${key}: expected string, number or boolean`);
+      const text = String(raw);
+      if (/[\r\n\0]/.test(text)) throw new Error(`${key}: multiline/control characters are not allowed`);
+      result[key] = text;
+    }
+  };
+  apply(file);
+  apply(advanced);
+  apply(inputs, true);
+  for (const key of CONTROL_NAMES) {
+    const value = env[key];
+    if (value !== undefined) apply({ [key]: value });
+  }
+  for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
+    const v = result[key];
+    if (v === undefined || v === '') continue;
+    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
+  }
+  if (result.REQUEST_SLEEP && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
+  for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_WISDOMTREE', 'VERBOSE']) {
+    if (result[key] && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key])) throw new Error(`${key}: expected boolean`);
+  }
+  readConfig(result); // validate every min:max filter before any request or write
+  return result;
+}
+
+export async function runtimeControls(env: Record<string, string | undefined> = process.env): Promise<Record<string, string>> {
+  return resolveControls(JSON.parse(await readFile(CONFIG_FILE_URL, 'utf8')), {}, {}, env);
+}
+
 async function main(): Promise<void> {
-  const config = readConfig();
+  const controls = await runtimeControls();
+  process.env.VERBOSE = controls.VERBOSE ?? '';
+  const config = readConfig(controls);
+  SEC_UA = config.secUa;
   requestSleepSeconds = config.requestSleep;
   requestGates = new Array(Math.max(1, config.concurrency)).fill(0);
   outputPrintConfig('WisdomTree', config);
