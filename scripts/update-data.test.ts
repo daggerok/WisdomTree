@@ -4,6 +4,10 @@ import { describe, expect, test } from 'bun:test';
 import { readFileSync } from 'node:fs';
 import {
   annualizedToTotal,
+  deriveMetrics,
+  performanceAsOfDate,
+  RETURNS_BASIS_OFFICIAL,
+  RETURNS_BASIS_DERIVED,
   cleanHoldingTicker,
   inferDistributionFrequency,
   mergeDistributionRecords,
@@ -228,6 +232,24 @@ describe('Yahoo chart and derived metrics', () => {
     const result = priceReturns(days, new Date('2026-01-03T00:00:00Z'));
     expect(result.yr1).toBe(32.25);
     expect(annualizedToTotal(10, 3)).toBe(33.1);
+  });
+
+  test('metrics end with returnsBasis then performanceAsOf', () => {
+    const days = [
+      { date: '2025-01-02', close: 100, adjClose: 100, volume: 1 },
+      { date: '2026-01-02', close: 110, adjClose: 110, volume: 1 },
+    ];
+    const fund = { dividendYield: null, secYield: null } as any;
+    const derived = priceReturns(days, new Date('2026-01-03T00:00:00Z'));
+    const estimated = deriveMetrics(derived, fund, [], { paymentsPerYear: null }, 110);
+    expect(estimated.returnsBasis).toBe(RETURNS_BASIS_DERIVED);
+    expect(estimated.performanceAsOf).toBe('2026-01-02');
+    expect(Object.keys(estimated).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
+    const official = deriveMetrics({ ...derived, asOfDate: '2025-12-31' }, fund, [], { paymentsPerYear: null }, 110, true);
+    expect(official.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
+    expect(official.performanceAsOf).toBe('2025-12-31');
+    expect(performanceAsOfDate({ ...derived, asOfDate: '' })).toBeNull();
+    expect(estimated.ytd).not.toBe(0);
   });
 
   test('frequency inference follows the shared ETF updater convention', () => {

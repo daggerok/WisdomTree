@@ -1258,7 +1258,16 @@ function lastCompletedQuarterEnd(now = new Date()): string {
   return day.toISOString().slice(0, 10);
 }
 
-function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividends: Array<{ epoch: number; amount: number }>, frequency: { paymentsPerYear: number | null }, price: number | null): JsonRecord {
+export const RETURNS_BASIS_OFFICIAL = 'official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes';
+export const RETURNS_BASIS_DERIVED = 'estimates derived from Yahoo Finance adjusted market-price closes, not official WisdomTree NAV returns';
+
+/** performanceAsOf: the provider's month-end performance table date, or the last Yahoo close date when derived; null when unknown. */
+export function performanceAsOfDate(returns: PriceReturns): string | null {
+  const iso = toIsoDate(returns.asOfDate);
+  return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null;
+}
+
+export function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividends: Array<{ epoch: number; amount: number }>, frequency: { paymentsPerYear: number | null }, price: number | null, official = false): JsonRecord {
   const latest = dividends[dividends.length - 1];
   const indicated = fund.dividendYield ?? (latest && frequency.paymentsPerYear && price ? round((latest.amount * frequency.paymentsPerYear / price) * 100, 2) : null);
   return {
@@ -1275,7 +1284,8 @@ function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividends: Arra
     dividendYieldText: indicated === null ? '—' : `${indicated.toFixed(2)}%`,
     secYield: fund.secYield,
     secYieldText: fund.secYield === null ? '—' : `${fund.secYield.toFixed(2)}%`,
-    returnsBasis: 'adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns',
+    returnsBasis: official ? RETURNS_BASIS_OFFICIAL : RETURNS_BASIS_DERIVED,
+    performanceAsOf: performanceAsOfDate(derived),
   };
 }
 
@@ -1584,10 +1594,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const officialReturns = productSummary?.officialReturns.monthEnd || null;
   const effectiveReturns = mergeOfficialReturns(derived, officialReturns);
   const price = productSummary?.marketPrice ?? chart?.regularMarketPrice ?? (days.length ? days[days.length - 1].close : numberOrNull(previous.closePriceValue));
-  const metrics = deriveMetrics(effectiveReturns, fund, distributionEvents, frequency, price);
-  if (officialReturns) {
-    metrics.returnsBasis = 'WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values';
-  }
+  const metrics = deriveMetrics(effectiveReturns, fund, distributionEvents, frequency, price, Boolean(officialReturns));
   const returnFilterReasons = matchesReturnFilters(metrics, config);
   if (returnFilterReasons.length) {
     return { __skipped: true, ticker: fund.ticker, __skipReasons: returnFilterReasons };

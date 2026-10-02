@@ -44,6 +44,8 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `siAnn` - since-inception annualized -> *SI Ann.*
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
 - `secYield` - 30-day SEC yield when published; unavailable values stay empty and are never shown as 0
+- `returnsBasis` - mandatory non-empty text saying how the returns were computed: official WisdomTree month-end Market Price Returns (gaps filled with Yahoo estimates), or estimates derived from Yahoo adjusted closes when the product page is unavailable
+- `performanceAsOf` - mandatory ISO `YYYY-MM-DD` date the returns are as of: the WisdomTree month-end performance table date, or the last Yahoo close date when derived (not the NAV date); `null` only when truly unknown
 - NAV and the catalog figures come from WisdomTree; history and returns derived from Yahoo adjusted closes are market-price estimates, not official NAV returns
 - A limited `HISTORY_RANGE` shortens the published history, so long-tenor figures derived from Yahoo are unavailable for ranges shorter than the tenor
 
