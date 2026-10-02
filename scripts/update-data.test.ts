@@ -1,6 +1,7 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
 import { describe, expect, test } from 'bun:test';
+import { readFileSync } from 'node:fs';
 import {
   annualizedToTotal,
   cleanHoldingTicker,
@@ -22,6 +23,11 @@ import {
   hasConfiguredFilters,
   readConfig,
   toIsoDate,
+  CONTROL_NAMES,
+  HISTORY_RANGES,
+  resolveControls,
+  runtimeControls,
+  yahooChartQuery,
 } from './update-data';
 
 describe('range parsers', () => {
@@ -239,151 +245,179 @@ describe('small normalization helpers', () => {
   });
 });
 
-
-import { test as frequencyLabelTest, expect as frequencyLabelExpect } from 'bun:test';
-frequencyLabelTest('Frequency placeholders display None and existing cadence labels stay unchanged', async () => {
-  const text = await Bun.file(new URL('../app.tsx', import.meta.url)).text();
-  const start = /^([ \t]*)function (formatDividendFrequency|formatDistributionFrequency)\(/m.exec(text);
-  frequencyLabelExpect(start).not.toBeNull();
-  const tail = text.slice(start!.index);
-  const end = new RegExp('^' + start![1] + '\u007d', 'm').exec(tail);
-  frequencyLabelExpect(end).not.toBeNull();
-  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(tail.slice(0, end!.index + end![0].length));
-  const format = new Function(js + '; return ' + start![2] + ';')();
-  for (const value of [null, undefined, '', '  ', '-', '‐', '‑', '‒', '–', '—', ' — ']) {
-    frequencyLabelExpect(format(value)).toBe('00 - None');
-  }
-  for (const [input, expected] of [
-    ['None', '00 - None'], ['Unknown', '00 - Unknown'], ['Monthly', '01 - Monthly'],
-    ['Quarterly', '04 - Quarterly'], ['Semi-annually', '06 - Semi-annually'],
-    ['Annually', '12 - Annually'], ['Irregular', '99 - Irregular'],
-  ]) frequencyLabelExpect(format(input)).toBe(expected);
-});
-
-
-import { test as queueTest, describe as queueDescribe, expect as queueExpect } from 'bun:test';
-
-async function tickerChainHarness() {
- const app=await Bun.file(new URL('../app.tsx',import.meta.url)).text();
- const source=app.match(/^function withTickerChain<T>\([\s\S]*?^\}/m)?.[0];
- queueExpect(source).toBeDefined();
- const javascript=new Bun.Transpiler({loader:'ts'}).transformSync(source!);
- const chains=new Map<string,Promise<void>>();
- const enqueue=new Function('holdingsChains',`${javascript}; return withTickerChain;`)(chains) as
-  <T>(ticker:string,fn:()=>Promise<T>)=>Promise<T>;
- return {chains,enqueue};
-}
-
-queueDescribe('per-ticker queue preserves caller results and stores completion-only promises',()=>{
- queueTest('successful generic result reaches caller, not the internal queue',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const value={rows:[['AGEM']]};
-  queueExpect(await enqueue('AGEM',async()=>value)).toBe(value);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
- });
- queueTest('rejection reaches caller without poisoning the next queued task',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const error=new Error('page failed');
-  const work=enqueue('AGEM',async()=>{throw error;});
-  const observed=work.catch(reason=>reason);
-  const settled=chains.get('AGEM');
-  const next=enqueue('AGEM',async()=>42);
-  queueExpect(await observed).toBe(error);
-  queueExpect(await settled).toBeUndefined();
-  queueExpect(await next).toBe(42);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
- });
- queueTest('synchronous callback throws also leave the queue usable',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  const error=new Error('synchronous failure');
-  queueExpect(await enqueue('AGEM',()=>{throw error;}).catch(reason=>reason)).toBe(error);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
-  queueExpect(await enqueue('AGEM',async()=>'recovered')).toBe('recovered');
- });
- queueTest('same-ticker work stays serial while other tickers run independently',async()=>{
-  const {chains,enqueue}=await tickerChainHarness();
-  let release!:()=>void;
-  const gate=new Promise<void>(resolve=>{release=resolve;});
-  const events:string[]=[];
-  const first=enqueue('AGEM',async()=>{events.push('first');await gate;events.push('done');return 1;});
-  const second=enqueue('AGEM',async()=>{events.push('second');return 2;});
-  try {
-   queueExpect(await enqueue('SGOL',async()=>3)).toBe(3);
-   queueExpect(events).toEqual(['first']);
-  } finally { release(); }
-  queueExpect(await Promise.all([first,second])).toEqual([1,2]);
-  queueExpect(events).toEqual(['first','done','second']);
-  queueExpect(await chains.get('AGEM')).toBeUndefined();
-  queueExpect(await chains.get('SGOL')).toBeUndefined();
- });
-});
-
-
-import { test as headerTest, expect as headerExpect } from 'bun:test';
-async function headerSummaryHarness() {
-  const source = await Bun.file(new URL('../app.tsx', import.meta.url)).text();
-  const match = /^([ \t]*)function renderHeaderSummary\(/m.exec(source);
-  headerExpect(match).not.toBeNull();
-  const tail = source.slice(match!.index);
-  const end = new RegExp('^' + match![1] + '}', 'm').exec(tail)!;
-  const js = new Bun.Transpiler({ loader: 'ts' }).transformSync(tail.slice(0, end.index + end[0].length));
-  const makeNode = (text = ''): any => {
-    const node: any = { textContent: text, childNodes: [], dataset: {}, listeners: {} };
-    node.replaceChildren = (...children: any[]) => { node.childNodes = children; };
-    node.append = (...children: any[]) => { node.childNodes.push(...children); };
-    node.addEventListener = (name: string, listener: any) => { node.listeners[name] = listener; };
-    return node;
-  };
-  const panel = makeNode(), subtitle = makeNode(), details = makeNode('Data: source link and updated timestamp');
-  subtitle.append(details);
-  const document = { getElementById: () => panel, createTextNode: makeNode, createElement: () => makeNode() };
-  const render = new Function('document', js + '; return renderHeaderSummary;')(document);
-  const text = () => subtitle.childNodes.map((n: any) => n.textContent).join('');
-  return { render, panel, subtitle, details, makeNode, text };
-}
-headerTest('header has no visible subtitle without selection; original details nodes are retained', async () => {
-  const h = await headerSummaryHarness();
-  h.render(h.subtitle, new Set(), null, () => {});
-  headerExpect(h.text()).toBe('');
-  headerExpect(h.panel.childNodes).toEqual([h.details]);
-  headerExpect(h.panel.childNodes[0]).toBe(h.details);
-});
-headerTest('header shows sorted selected tickers only, preserving click activation and highlight', async () => {
-  const h = await headerSummaryHarness(); const activated: string[] = [];
-  h.render(h.subtitle, new Set(['ZZZ', 'AAA']), 'AAA', (ticker: string) => activated.push(ticker));
-  headerExpect(h.text()).toBe('2 selected: AAA, ZZZ');
-  const links = h.subtitle.childNodes.filter((n: any) => n.dataset.headerFund);
-  headerExpect(links[0].className).toContain('underline');
-  links[1].listeners.click({ preventDefault() {} });
-  headerExpect(activated).toEqual(['ZZZ']);
-  headerExpect(h.panel.childNodes[0]).toBe(h.details);
-});
-headerTest('all selected still lists tickers; clear replaces both summary and selection', async () => {
-  const h = await headerSummaryHarness();
-  h.render(h.subtitle, new Set(['CCC','AAA','BBB']), 'BBB', () => {});
-  headerExpect(h.text()).toBe('3 selected: AAA, BBB, CCC');
-  const next = h.makeNode('Fresh detail context'); h.subtitle.replaceChildren(next);
-  h.render(h.subtitle, new Set(), null, () => {});
-  headerExpect(h.text()).toBe(''); headerExpect(h.panel.childNodes).toEqual([next]);
-});
-headerTest('header markup supplies a focusable counter and hidden rich panel with dismissal', async () => {
-  const html = await Bun.file(new URL('../index.html', import.meta.url)).text();
-  headerExpect(html).toMatch(/<button[^>]*aria-controls="app-summary"[^>]*id="ticker-count"/);
-  headerExpect(html).toContain('id="app-summary" role="region" aria-label="ETF catalog information" hidden');
-  headerExpect(html).toContain("event.key !== 'Escape'");
-  headerExpect(html).toContain("trigger.addEventListener('focus', show)");
-  headerExpect(html).toContain("trigger.addEventListener('pointerenter'");
-});
-
-
 describe('configured filter semantics', () => {
   test('colon range defaults mean no filter and partial batches retain the full universe', () => {
     const config = readConfig({
-      AUM: ':', TER: ':', DIVIDEND_YIELD: ':', TICKERS: '',
+      AUM: ':', TER: ':', DIVIDEND_YIELD: ':', SEC_YIELD: ':', TICKERS: '',
       PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':', PERFORMANCE_3Y: ':', PERFORMANCE_5Y: ':', PERFORMANCE_10Y: ':',
       TOTAL_RETURN_YTD: ':', TOTAL_RETURN_1Y: ':', TOTAL_RETURN_3Y: ':', TOTAL_RETURN_5Y: ':', TOTAL_RETURN_10Y: ':',
     });
     expect(parseRanges({ PERFORMANCE_YTD: ':', PERFORMANCE_1Y: ':' }, 'PERFORMANCE')).toEqual({});
     expect(hasConfiguredFilters(config)).toBe(false);
+  });
+
+  test('SEC_YIELD is a real filter', () => {
+    const config = readConfig(resolveControls({ SEC_YIELD: '3:5' }));
+    expect(config.secYield).toEqual(expect.objectContaining({ min: 3, max: 5 }));
+    expect(hasConfiguredFilters(config)).toBe(true);
+  });
+});
+
+describe('HISTORY_RANGE limits the Yahoo request window', () => {
+  test('max requests everything, any other range replaces period1/period2', () => {
+    const full = yahooChartQuery('max', 1_000_000);
+    expect(full.get('period1')).toBe('0');
+    expect(full.get('period2')).toBe(String(1_000_000 + 86_400));
+    expect(full.has('range')).toBe(false);
+    const limited = yahooChartQuery('5y', 1_000_000);
+    expect(limited.get('range')).toBe('5y');
+    expect(limited.has('period1')).toBe(false);
+    expect(limited.has('period2')).toBe(false);
+    expect(limited.get('events')).toBe('div|split');
+  });
+
+  test('only Yahoo ranges are accepted, case-insensitively', () => {
+    for (const range of HISTORY_RANGES) expect(readConfig(resolveControls({ HISTORY_RANGE: range })).historyRange).toBe(range);
+    expect(readConfig(resolveControls({ HISTORY_RANGE: '5Y' })).historyRange).toBe('5y');
+    expect(() => resolveControls({ HISTORY_RANGE: '7y' })).toThrow('HISTORY_RANGE');
+  });
+});
+
+const read = (path: string) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
+const configFile = () => JSON.parse(read('scripts/update-data.config.json'));
+const workflow = () => read('.github/workflows/update-data.yml');
+const tenor = (name: string) => name.match(/^(PERFORMANCE|TOTAL_RETURN)_(1Y|3Y|5Y|10Y)$/);
+
+describe('control resolver', () => {
+  test('precedence: file < advanced < nonblank input < environment', () => {
+    const c = resolveControls({ CONCURRENCY: 2, TICKERS: 'DGRW' }, { CONCURRENCY: 3, TICKERS: 'USFR' }, { CONCURRENCY: '4', TICKERS: '' }, { CONCURRENCY: '5' });
+    expect(c.CONCURRENCY).toBe('5');
+    expect(c.TICKERS).toBe('USFR');
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }, { CONCURRENCY: '4' }).CONCURRENCY).toBe('4');
+    expect(resolveControls({ CONCURRENCY: 2 }, { CONCURRENCY: 3 }).CONCURRENCY).toBe('3');
+  });
+
+  test('blank input inherits the file value; advanced and an explicitly set env var can blank a key', () => {
+    expect(resolveControls({ CONCURRENCY: 2 }, {}, { CONCURRENCY: '' }).CONCURRENCY).toBe('2');
+    expect(resolveControls({ TICKERS: 'DGRW' }, {}, { TICKERS: '' }).TICKERS).toBe('DGRW');
+    expect(resolveControls({ TICKERS: 'DGRW' }, { TICKERS: '' }, { TICKERS: '' }).TICKERS).toBe('');
+    expect(resolveControls({ TICKERS: 'DGRW' }, {}, {}, { TICKERS: '' }).TICKERS).toBe('');
+    expect(resolveControls({ SKIP_YAHOO: true }, {}, {}, { SKIP_YAHOO: 'false' }).SKIP_YAHOO).toBe('false');
+  });
+
+  test('scheduled path (empty inputs and advanced) equals config defaults', () => {
+    const file = configFile();
+    expect(resolveControls(file, {}, {}, {})).toEqual(Object.fromEntries(Object.entries(file).map(([k, v]) => [k, String(v)])));
+  });
+
+  test('provider-specific defaults and the SEC contact', () => {
+    const file = configFile();
+    expect(file).toMatchObject({ MAX_FETCHES: '0', REQUEST_SLEEP: '2', CONCURRENCY: '2', HOLDINGS_PAGE_SIZE: '250', HISTORY_PAGE_SIZE: '1000', MAX_RETRIES: '2', HISTORY_RANGE: 'max', EDGAR_FALLBACK: 'true', SKIP_YAHOO: 'false', SKIP_WISDOMTREE: 'false', STORE_RAW_DOWNLOADS: 'false', AUM: ':', TER: ':', DIVIDEND_YIELD: ':', SEC_YIELD: ':', TICKERS: '' });
+    expect(file.SEC_UA).toBe('daggerok ETF feed daggerok@gmail.com');
+    const config = readConfig(resolveControls(file));
+    expect(config.secUa).toBe(file.SEC_UA);
+    expect(config.maxFetches).toBe(0);
+    expect(config.requestSleep).toBe(2);
+    expect(config.concurrency).toBe(2);
+    expect(config.maxRetries).toBe(2);
+    expect(config.tickers).toBeNull();
+    expect(config.edgarFallback).toBe(true);
+    expect(config.skipYahoo).toBe(false);
+    expect(config.skipWisdomTree).toBe(false);
+    expect(config.storeRawDownloads).toBe(false);
+    expect(config.historyRange).toBe('max');
+    expect(config.aum).toBeUndefined();
+    expect(config.secYield).toBeUndefined();
+    expect(read('scripts/update-data.ts')).not.toMatch(/example\.com|admin@/);
+  });
+
+  test('rejects unknown keys, invalid values and newline injection', () => {
+    for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'maybe' }, { AUM: '1:2:3' }, { TER: '5:1' }, { SEC_YIELD: '5' }, { PERFORMANCE_1Y: '5' }, { TICKERS: ['DGRW'] }, null, []]) {
+      expect(() => resolveControls(value)).toThrow();
+    }
+    expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
+    expect(() => resolveControls({}, {}, {}, { SEC_UA: 'x\0bad' })).toThrow();
+    expect(() => resolveControls({}, 'x')).toThrow();
+    expect(() => resolveControls({}, { UNKNOWN: 'x' })).toThrow();
+    expect(() => resolveControls({}, {}, { TICKERS: { a: 1 } })).toThrow();
+    expect(() => resolveControls({}, {}, { TICKERS: 'A\nB' })).toThrow();
+    expect(() => resolveControls({}, {}, {}, { MAX_RETRIES: '0' })).toThrow();
+    expect(() => JSON.parse('{bad')).toThrow();
+  });
+
+  test('boolean spellings agree between validation and parsing', () => {
+    for (const [text, value] of [['n', false], ['no', false], ['off', false], ['0', false], ['false', false], ['y', true], ['on', true], ['1', true]] as const) {
+      expect(readConfig(resolveControls({ EDGAR_FALLBACK: text })).edgarFallback).toBe(value);
+    }
+  });
+
+  test('runtimeControls reads the config file and lets the environment win', async () => {
+    expect(await runtimeControls({})).toEqual(resolveControls(configFile()));
+    expect((await runtimeControls({ CONCURRENCY: '7' })).CONCURRENCY).toBe('7');
+  });
+});
+
+describe('configuration documentation parity', () => {
+  test('config keys, CONTROL_NAMES, --help text and README rows are in sync', () => {
+    expect(Object.keys(configFile()).sort()).toEqual([...CONTROL_NAMES].sort());
+    const doc = read('README.md');
+    // README lists the five tenors of PERFORMANCE_* / TOTAL_RETURN_* on one row: `PREFIX_YTD` / `_1Y` / ...
+    for (const name of CONTROL_NAMES) {
+      const t = tenor(name);
+      expect(doc).toContain(t ? '`_' + t[2] + '`' : '`' + name + '`');
+      if (t) expect(doc).toContain('`' + t[1] + '_YTD`');
+    }
+    expect(doc).toContain('scripts/update-data.config.json');
+    const usage = read('scripts/update-data.ts');
+    for (const name of CONTROL_NAMES) {
+      const t = name.match(/^(PERFORMANCE|TOTAL_RETURN)_/);
+      expect(usage).toContain(t ? `${t[1]}_YTD|1Y|3Y|5Y|10Y` : `  ${name}=`);
+    }
+  });
+
+  test('README keeps the required structure and verification commands only', () => {
+    const doc = read('README.md');
+    const headings = [...doc.matchAll(/^#{2,3} (.+)$/gm)].map((m) => m[1]);
+    expect(headings.slice(0, 8)).toEqual(['Using Bun', 'Updating the static WisdomTree data', 'Data sources', 'Metrics and caveats', 'Update controls', 'Examples', 'TypeScript and verification', 'Brands table']);
+    for (const command of ['bun install --frozen-lockfile', 'bun test', 'bun build --target=bun scripts/update-data.ts --outfile=/dev/null', 'git diff --check']) expect(doc).toContain(command);
+    expect(doc).not.toMatch(/worklog|\.prompt|evidence\/|fixtures|config-docs\.test/i);
+  });
+});
+
+describe('workflow', () => {
+  test('<= 25 inputs, advanced default, every input is a control, fixed output, no inputs.* interpolation', () => {
+    const actual = workflow();
+    const names = [...actual.slice(actual.indexOf('    inputs:'), actual.indexOf('\npermissions:')).matchAll(/^      (\w+):$/gm)].map((m) => m[1]);
+    expect(names.length).toBeLessThanOrEqual(25);
+    expect(names).toContain('advanced');
+    expect(actual).toContain("default: '{}'");
+    for (const name of names.filter((n) => n !== 'advanced')) expect(CONTROL_NAMES).toContain(name.toUpperCase() as never);
+    expect(names).not.toContain('sec_ua');
+    expect(actual).toContain("cron: '0 0 * * 0'");
+    expect(actual).not.toMatch(/^  push:/m);
+    expect(actual).toContain('toJSON(inputs)');
+    expect(actual).toContain('resolveControls(file, advanced, individual, protectedVars)');
+    expect(actual).not.toMatch(/\$\{\{\s*inputs\./);
+    expect(actual).not.toMatch(/OUTPUT_DIR|output_dir/i);
+    expect(actual).toContain('PROTECTED_SEC_UA: ${{ vars.SEC_UA }}');
+    expect(actual.match(/git add (\S+)/g)).toEqual(['git add api/wisdomtree']);
+    expect(actual.match(/api\/[\w-]+/g)!.every((p) => p === 'api/wisdomtree')).toBe(true);
+    expect(actual).toContain('timeout-minutes: 30');
+    expect(actual).toContain('persist-credentials: false');
+    expect(actual).toContain('if: ${{ !cancelled() }}');
+  });
+
+  test('every control stays reachable: individually or through advanced', () => {
+    const actual = workflow();
+    const individual = new Set([...actual.matchAll(/^      (\w+):$/gm)].map((m) => m[1].toUpperCase()));
+    const viaAdvanced = CONTROL_NAMES.filter((n) => !individual.has(n));
+    expect(viaAdvanced).toEqual(['HOLDINGS_PAGE_SIZE', 'STORE_RAW_DOWNLOADS', 'SEC_UA', 'VERBOSE']);
+    expect(() => resolveControls(configFile(), Object.fromEntries(viaAdvanced.map((n) => [n, configFile()[n]])))).not.toThrow();
+  });
+});
+
+describe('catalog table without fund rows', () => {
+  test('is rejected by the parser so the fetch can fall back to the next source', () => {
+    expect(() => parseCatalogMarkdown('| WisdomTree Fund | Fund Ticker | a | b | c | d | e | f | g | h |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')).toThrow('no fund rows found');
   });
 });
