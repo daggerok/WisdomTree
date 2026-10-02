@@ -17,13 +17,12 @@ The published application is available at <https://daggerok.github.io/WisdomTree
 Run the updater with Bun:
 
 ```bash
-bun test
-./scripts/update-data.ts
+bun scripts/update-data.ts
 ```
 
-Run `./scripts/update-data.ts -h` (or `--help`) to print every control with its default and usage examples.
+Run `bun scripts/update-data.ts -h` (or `--help`) to print every control with its default and usage examples.
 
-Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < protected Actions variable or environment variable. A blank input inherits the file value, and the CLI and the **Update WisdomTree ETF data** workflow share one resolver (`resolveControls` in `scripts/update-data.ts`). The workflow exposes 24 controls as individual inputs; every other control (`STORE_RAW_DOWNLOADS`, `SEC_UA`, `VERBOSE`) is reachable through the `advanced` JSON input, for example `{"STORE_RAW_DOWNLOADS":"true"}`. The real SEC contact belongs in the protected `SEC_UA` repository Actions variable, which wins when nonblank. Output is always written to `api/wisdomtree`. All supplied filters use **AND** logic.
+Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < protected Actions variable or environment variable. A blank input inherits the file value, and the CLI and the **Update WisdomTree ETF data** workflow share one resolver (`resolveControls` in `scripts/update-data.ts`). The workflow exposes 24 controls as individual inputs; every other control (`HOLDINGS_PAGE_SIZE`, `STORE_RAW_DOWNLOADS`, `SEC_UA`, `VERBOSE`) is reachable through the `advanced` JSON input, for example `{"STORE_RAW_DOWNLOADS":"true"}`. An explicitly set environment variable always wins, even when empty. The protected `SEC_UA` repository Actions variable overrides the SEC contact when nonblank. Output is always written to `api/wisdomtree`. All supplied filters use **AND** logic.
 
 ### Data sources
 
@@ -31,7 +30,7 @@ Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < 
 | --- | --- |
 | Catalog (all US WisdomTree ETFs) | `https://www.wisdomtree.com/investments` (WisdomTree product table) |
 | Holdings per fund | SEC EDGAR N-PORT-P `primary_doc.xml` (WisdomTree Trust CIK 0001350487) |
-| Per-fund returns, distributions | WisdomTree product page's "Total Returns" table (Market Price/NAV/Underlying Index rows) and "Recent Distributions" table (ex/record/payable date + Ordinary Income/ST/LT Cap Gains/Return of Capital) — the primary source for both |
+| Per-fund returns, distributions | WisdomTree product page's "Total Returns" table (Market Price/NAV/Underlying Index rows) and "Recent Distributions" table (ex/record/payable date + Ordinary Income/ST/LT Cap Gains/Return of Capital) - the primary source for both |
 | Daily history; returns/distributions fallback | Yahoo Finance chart API for daily history unconditionally, and as fallback for Market Price Returns tenors and distribution ex-dates the official page doesn't cover |
 | Fallback | WisdomTree product pages for NAV, expense ratio, yields |
 
@@ -39,12 +38,14 @@ Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < 
 
 Each fund carries a derived `metrics` object that powers the catalog columns shared with the sibling sites:
 
-- `ytd` / `tr1y` — official YTD and 1-year returns → *YTD Return*, *TR 1Y*
-- `cagr3y` / `cagr5y` / `cagr10y` — published annualized 3Y/5Y/10Y figures → *CAGR 3Y/5Y/10Y*
-- `tr3y` / `tr5y` / `tr10y` — cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` → *TR 3Y/5Y/10Y*
-- `siAnn` — since-inception annualized → *SI Ann.*
-- `dividendYield` — 12-month trailing yield or indicated yield (latest distribution × frequency ÷ price)
-- `secYield` — 30-day SEC yield when published; `—` otherwise
+- `ytd` / `tr1y` - official YTD and 1-year returns -> *YTD Return*, *TR 1Y*
+- `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
+- `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
+- `siAnn` - since-inception annualized -> *SI Ann.*
+- `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
+- `secYield` - 30-day SEC yield when published; unavailable values stay empty and are never shown as 0
+- NAV and the catalog figures come from WisdomTree; history and returns derived from Yahoo adjusted closes are market-price estimates, not official NAV returns
+- A limited `HISTORY_RANGE` shortens the published history, so long-tenor figures derived from Yahoo are unavailable for ranges shorter than the tenor
 
 ### Update controls
 
@@ -58,16 +59,17 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |
+| `SEC_YIELD` | `:` | 30-day SEC yield percentage range (strict `min:max`), read from the product page; funds without a published SEC yield do not match. |
 | `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `DGRW USFR WCLD`. |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. |
-| `MAX_RETRIES` | `2` | Retries after the initial request. Network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
-| `HISTORY_RANGE` | `max` | Yahoo chart range for history rows (`max`, `10y`, `5y`, ...). |
+| `MAX_RETRIES` | `2` | Retries after the initial request (integer, at least 1). Network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
+| `HISTORY_RANGE` | `max` | Yahoo history window: `max` requests everything, otherwise one of `ytd`, `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `10y`. |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the rendered official catalog under `api/wisdomtree/raw`. |
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings. |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions while refreshing catalog and holdings. |
 | `SKIP_WISDOMTREE` | `false` | Keep the previously published official catalog. |
-| `SEC_UA` | repo descriptor | User-Agent for SEC and WisdomTree requests. The default is a non-personal repository descriptor; SEC policy asks automated tools to declare a contact, so set the protected `SEC_UA` Actions variable. Never printed. |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | User-Agent for SEC and WisdomTree requests. SEC policy asks automated tools to declare a contact; the protected `SEC_UA` Actions variable overrides the default. Redacted in logs. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized adjusted-close return range per tenor: `min:max`. |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative adjusted-close return range per tenor: `min:max`. |
@@ -80,6 +82,7 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 MAX_FETCHES=10 ./scripts/update-data.ts
 TICKERS="DGRW USFR WCLD" ./scripts/update-data.ts
 AUM="1B:" TER=":0.5" ./scripts/update-data.ts
+HISTORY_RANGE=5y SEC_YIELD="3:" ./scripts/update-data.ts
 PERFORMANCE_1Y="15:" ./scripts/update-data.ts
 ```
 
@@ -96,7 +99,7 @@ bun build --target=bun scripts/update-data.ts --outfile=/dev/null
 git diff --check
 ```
 
-`bun test` also covers the config file, `--help`, README controls table and workflow checks (`scripts/config-docs.test.ts`).
+`bun test` (`scripts/update-data.test.ts`) also covers the config file, `--help`, README controls table and workflow shape.
 
 ## Brands table
 
@@ -121,7 +124,7 @@ git diff --check
 | **ProShares** | [proshares.com](https://www.proshares.com/our-etfs/find-proshares-etfs) \| [ProShares](https://daggerok.github.io/ProShares/) |
 | **Schwab** | [schwabassetmanagement.com](https://www.schwabassetmanagement.com/products) \| [Schwab](https://daggerok.github.io/Schwab/) |
 | **SPDR** | [ssga.com](https://www.ssga.com/us/en/intermediary/etfs/fund-finder) \| [SPDR](https://daggerok.github.io/SPDR/) |
-| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) (deployment pending) |
+| **Sprott ETFs** | [sprottetfs.com](https://sprottetfs.com/) \| [Sprott](https://daggerok.github.io/Sprott/) |
 | **Tema ETFs** | [temaetfs.com](https://temaetfs.com/funds) \| [Tema](https://daggerok.github.io/Tema/) |
 | **Themes ETFs** | [themesetfs.com/etfs](https://themesetfs.com/etfs) \| [Themes](https://daggerok.github.io/Themes/) |
 | **VanEck** | [vaneck.com](https://www.vaneck.com/us/en/etf-mutual-fund-finder/) \| [VanEck](https://daggerok.github.io/VanEck/) |
@@ -164,6 +167,6 @@ git diff --check
 
 ## License
 
-[MIT — same as all sibling ETF repositories.](./LICENSE)
+[MIT - same as all sibling ETF repositories.](./LICENSE)
 
 WisdomTree® and the fund names/tickers referenced here are trademarks of WisdomTree, Inc. This is an independent, unofficial tool; it is not affiliated with, endorsed by, or sponsored by WisdomTree. All data is reproduced from WisdomTree's own public product pages, public SEC EDGAR filings and Yahoo Finance for research purposes. All other trademarks, including index names, are the property of their respective owners.
