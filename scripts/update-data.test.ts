@@ -1,7 +1,10 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
 import { describe, expect, test } from 'bun:test';
-import { readFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import {
   annualizedToTotal,
   deriveMetrics,
@@ -34,6 +37,11 @@ import {
   yahooChartQuery,
   isCertError,
   installSystemCa,
+  readKnownRows,
+  rowFromMeta,
+  runUpdate,
+  setApiRoot,
+  writeIndex,
 } from './update-data';
 
 describe('range parsers', () => {
@@ -493,5 +501,114 @@ describe('system CA support', () => {
     } finally {
       globalThis.fetch = original;
     }
+  });
+});
+
+describe('filtered and catalog-less runs never shrink the feed', () => {
+  const metaFor = (ticker: string, official: boolean) => ({
+    ticker, name: `Fund ${ticker}`, category: 'Domestic Equity',
+    source: { fundPage: `https://www.wisdomtree.com/us/products/equity/${ticker.toLowerCase()}` },
+    identifiers: { cusip: '123456789', isin: null },
+    expenseRatio: { value: 0.28 }, nav: { value: 50 }, marketPrice: { value: 50.5 }, premiumDiscount: { value: 0.1 },
+    aum: { value: 1_000_000_000, asOfDate: 'Sep 23 2026' }, yields: { dividendYield: null, secYield: null },
+    returns: {
+      derivedFrom: official ? 'WisdomTree product-page Market Price Returns' : 'adjusted market-price closes (Yahoo chart API)',
+      monthEnd: { asOfDate: 'Aug 31 2026', ytd: 11.49, yr1: 14.75, yr3: null, yr5: null, yr10: null, sinceInception: null },
+    },
+    distributions: { frequency: 'Monthly', paymentsPerYear: 12, rows: [['06/24/2026', '—', '—', '0.1'], ['07/22/2026', '—', '—', '0.2']] },
+    holdings: { pages: [], totalRows: 7 }, history: { pages: [], totalRows: 9 },
+  });
+
+  function setup(published: string[], metaOnly: string[]): URL {
+    const dir = mkdtempSync(join(tmpdir(), 'wt-feed-'));
+    const root = pathToFileURL(`${dir}/`);
+    const rows = published.map((ticker) => ({ ...rowFromMeta(metaFor(ticker, true)), name: `Published ${ticker}` }));
+    writeFileSync(join(dir, 'index.json'), JSON.stringify({ funds: rows }));
+    for (const ticker of [...published, ...metaOnly]) {
+      mkdirSync(join(dir, 'funds', ticker), { recursive: true });
+      writeFileSync(join(dir, 'funds', ticker, 'meta.json'), JSON.stringify(metaFor(ticker, ticker !== 'AAA')));
+    }
+    return root;
+  }
+
+  async function withMockedRun(root: URL, env: Record<string, string>, handler: (url: string) => Response): Promise<{ funds: any[]; counts: any }> {
+    const original = globalThis.fetch;
+    const originalRoot = new URL('../api/wisdomtree/', import.meta.url);
+    globalThis.fetch = (async (input: any) => handler(String(input?.url ?? input))) as unknown as typeof fetch;
+    setApiRoot(root);
+    try {
+      const config = readConfig(resolveControls({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false', ...env }));
+      await runUpdate(config);
+      return JSON.parse(readFileSync(new URL('index.json', root), 'utf8'));
+    } finally {
+      globalThis.fetch = original;
+      setApiRoot(originalRoot);
+      rmSync(root, { recursive: true, force: true });
+    }
+  }
+
+  test('rowFromMeta rebuilds the shared row shape; unknown metrics stay null, never 0', () => {
+    const official = rowFromMeta(metaFor('AAA', true));
+    expect(official.dataFile).toBe('./funds/AAA/meta.json');
+    expect(official.metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
+    expect(official.metrics.performanceAsOf).toBe('2026-08-31');
+    expect(official.metrics.cagr3y).toBeNull();
+    expect(official.metrics.tr3y).toBeNull();
+    expect(official.metrics.secYield).toBeNull();
+    expect(official.metrics.dividendYield).toBe(4.75);
+    expect(official.holdings).toBe(7);
+    expect(official.distributions.exDate).toBe('07/22/2026');
+    const derived = rowFromMeta(metaFor('AAA', false));
+    expect(derived.metrics.returnsBasis).toBe(RETURNS_BASIS_DERIVED);
+    const noDate = rowFromMeta({ ...metaFor('AAA', false), returns: { derivedFrom: 'x', monthEnd: { asOfDate: '—' } } });
+    expect(noDate.metrics.performanceAsOf).toBeNull();
+    expect(noDate.metrics.ytd).toBeNull();
+  });
+
+  test('readKnownRows is the union of the published index and funds/*/meta.json', async () => {
+    const root = setup(['AAA'], ['BBB', 'CCC']);
+    setApiRoot(root);
+    try {
+      const known = await readKnownRows();
+      expect([...known.keys()].sort()).toEqual(['AAA', 'BBB', 'CCC']);
+      expect(known.get('AAA')!.name).toBe('Published AAA');
+      await writeIndex([...known.values()]);
+      expect(JSON.parse(readFileSync(new URL('index.json', root), 'utf8')).counts.funds).toBe(3);
+    } finally {
+      setApiRoot(new URL('../api/wisdomtree/', import.meta.url));
+      rmSync(root, { recursive: true, force: true });
+    }
+  });
+
+  test('a one-ticker run with an unreadable catalog keeps every row', async () => {
+    const root = setup(['AAA'], ['BBB', 'CCC']);
+    const index = await withMockedRun(root, { TICKERS: 'AAA' }, () => new Response('blocked', { status: 404 }));
+    expect(index.funds.map((row) => row.ticker)).toEqual(['AAA', 'BBB', 'CCC']);
+    expect(index.counts.funds).toBe(3);
+  });
+
+  test('a one-ticker run with a catalog that lists only that fund keeps the same row count', async () => {
+    const root = setup(['AAA', 'BBB'], ['CCC']);
+    const catalog = [
+      'As of 9/15/2026',
+      '| WisdomTree Fund | Fund Ticker | Asset Class | Category | Inception Date | Gross Expense Ratio | Net Expense Ratio | Assets Under Mgmt $(000) | TTM Yield | Average Daily Volume |',
+      '| --- | --- | --- | --- | --- | --- | --- | ---: | ---: | ---: |',
+      '| [Fund AAA](https://www.wisdomtree.com/investments/etfs/equity/aaa) | [$AAA](https://www.wisdomtree.com/investments/etfs/equity/aaa) | Equity | Core | 12/11/2014 | 0.15% | 0.15% | $16,985,696.89 | 4.72% | $100,000,000 |',
+    ].join('\n');
+    const index = await withMockedRun(root, { TICKERS: 'AAA' }, (url) => url.includes('/us/products') && !url.includes('/equity/') ? new Response(catalog) : new Response('nope', { status: 404 }));
+    expect(index.funds.map((row) => row.ticker)).toEqual(['AAA', 'BBB', 'CCC']);
+    expect(index.funds.find((row) => row.ticker === 'BBB').name).toBe('Published BBB');
+  });
+
+  test('an unfiltered run whose catalog failed also keeps every row', async () => {
+    const root = setup(['AAA'], ['BBB']);
+    const index = await withMockedRun(root, {}, () => new Response('blocked', { status: 404 }));
+    expect(index.counts.funds).toBe(2);
+  });
+
+  test('MAX_FETCHES-bounded runs keep unselected rows', async () => {
+    const root = setup(['AAA', 'BBB'], ['CCC']);
+    const index = await withMockedRun(root, { MAX_FETCHES: '1' }, () => new Response('blocked', { status: 404 }));
+    expect(index.counts.funds).toBe(3);
   });
 });
