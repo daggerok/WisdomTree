@@ -28,6 +28,8 @@ import {
   resolveControls,
   runtimeControls,
   yahooChartQuery,
+  isCertError,
+  installSystemCa,
 } from './update-data';
 
 describe('range parsers', () => {
@@ -332,7 +334,7 @@ describe('control resolver', () => {
   });
 
   test('rejects unknown keys, invalid values and newline injection', () => {
-    for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { EDGAR_FALLBACK: 'maybe' }, { AUM: '1:2:3' }, { TER: '5:1' }, { SEC_YIELD: '5' }, { PERFORMANCE_1Y: '5' }, { TICKERS: ['DGRW'] }, null, []]) {
+    for (const value of [{ UNKNOWN: 1 }, { SEC_UA: 'x\nEVIL=yes' }, { CONCURRENCY: 0 }, { MAX_RETRIES: 0 }, { MAX_RETRIES: -1 }, { MAX_FETCHES: 1.5 }, { REQUEST_SLEEP: '-1' }, { VERBOSE: 'maybe' }, { USE_SYSTEM_CA: 'maybe' }, { EDGAR_FALLBACK: 'maybe' }, { AUM: '1:2:3' }, { TER: '5:1' }, { SEC_YIELD: '5' }, { PERFORMANCE_1Y: '5' }, { TICKERS: ['DGRW'] }, null, []]) {
       expect(() => resolveControls(value)).toThrow();
     }
     expect(() => resolveControls({}, { SEC_UA: 'x\rfoo' })).toThrow();
@@ -411,7 +413,7 @@ describe('workflow', () => {
     const actual = workflow();
     const individual = new Set([...actual.matchAll(/^      (\w+):$/gm)].map((m) => m[1].toUpperCase()));
     const viaAdvanced = CONTROL_NAMES.filter((n) => !individual.has(n));
-    expect(viaAdvanced).toEqual(['HOLDINGS_PAGE_SIZE', 'STORE_RAW_DOWNLOADS', 'SEC_UA', 'VERBOSE']);
+    expect(viaAdvanced).toEqual(['HOLDINGS_PAGE_SIZE', 'STORE_RAW_DOWNLOADS', 'SEC_UA', 'VERBOSE', 'USE_SYSTEM_CA']);
     expect(() => resolveControls(configFile(), Object.fromEntries(viaAdvanced.map((n) => [n, configFile()[n]])))).not.toThrow();
   });
 });
@@ -419,5 +421,55 @@ describe('workflow', () => {
 describe('catalog table without fund rows', () => {
   test('is rejected by the parser so the fetch can fall back to the next source', () => {
     expect(() => parseCatalogMarkdown('| WisdomTree Fund | Fund Ticker | a | b | c | d | e | f | g | h |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')).toThrow('no fund rows found');
+  });
+});
+
+describe('system CA support', () => {
+  test('USE_SYSTEM_CA resolver: default auto, case-insensitive, strict', () => {
+    expect(resolveControls(configFile()).USE_SYSTEM_CA).toBe('auto');
+    for (const mode of ['auto', 'true', 'false', 'TRUE', 'Auto']) expect(resolveControls(configFile(), {}, {}, { USE_SYSTEM_CA: mode }).USE_SYSTEM_CA).toBe(mode.toLowerCase());
+    expect(() => resolveControls(configFile(), {}, {}, { USE_SYSTEM_CA: 'maybe' })).toThrow('USE_SYSTEM_CA');
+  });
+
+  test('isCertError recognizes untrusted-certificate failures only', () => {
+    expect(isCertError({ code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' })).toBe(true);
+    expect(isCertError(new Error('unable to get local issuer certificate'))).toBe(true);
+    expect(isCertError(new Error('fetch failed', { cause: new Error('unable to get local issuer certificate') }))).toBe(true);
+    expect(isCertError({ code: 'ECONNRESET' })).toBe(false);
+    expect(isCertError(new Error('HTTP 403 for https://example.test'))).toBe(false);
+  });
+
+  test('installSystemCa modes', async () => {
+    const original = globalThis.fetch;
+    const reexec = (calls: { n: number }) => (() => { calls.n += 1; throw new Error('reexec'); }) as () => never;
+    try {
+      let calls = { n: 0 };
+      installSystemCa('false', reexec(calls), false);
+      expect(globalThis.fetch).toBe(original);
+      installSystemCa('auto', reexec(calls), true);
+      expect(globalThis.fetch).toBe(original);
+      expect(() => installSystemCa('true', reexec(calls), false)).toThrow('reexec');
+      expect(calls.n).toBe(1);
+
+      calls = { n: 0 };
+      globalThis.fetch = (async () => new Response('ok')) as unknown as typeof fetch;
+      const ok = globalThis.fetch;
+      installSystemCa('auto', reexec(calls), false);
+      expect(globalThis.fetch).not.toBe(ok);
+      expect(await (await fetch('https://x.test')).text()).toBe('ok');
+      expect(calls.n).toBe(0);
+
+      globalThis.fetch = (async () => { throw new Error('connection reset'); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec(calls), false);
+      await expect(fetch('https://x.test')).rejects.toThrow('connection reset');
+      expect(calls.n).toBe(0);
+
+      globalThis.fetch = (async () => { throw Object.assign(new Error('x'), { code: 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY' }); }) as unknown as typeof fetch;
+      installSystemCa('auto', reexec(calls), false);
+      await expect(fetch('https://x.test')).rejects.toThrow('reexec');
+      expect(calls.n).toBe(1);
+    } finally {
+      globalThis.fetch = original;
+    }
   });
 });

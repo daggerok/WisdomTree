@@ -22,7 +22,7 @@ bun scripts/update-data.ts
 
 Run `bun scripts/update-data.ts -h` (or `--help`) to print every control with its default and usage examples.
 
-Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < protected Actions variable or environment variable. A blank input inherits the file value, and the CLI and the **Update WisdomTree ETF data** workflow share one resolver (`resolveControls` in `scripts/update-data.ts`). The workflow exposes 24 controls as individual inputs; every other control (`HOLDINGS_PAGE_SIZE`, `STORE_RAW_DOWNLOADS`, `SEC_UA`, `VERBOSE`) is reachable through the `advanced` JSON input, for example `{"STORE_RAW_DOWNLOADS":"true"}`. An explicitly set environment variable always wins, even when empty. The protected `SEC_UA` repository Actions variable overrides the SEC contact when nonblank. Output is always written to `api/wisdomtree`. All supplied filters use **AND** logic.
+Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < `advanced` JSON < nonblank workflow inputs < protected Actions variable or environment variable. A blank input inherits the file value, and the CLI and the **Update WisdomTree ETF data** workflow share one resolver (`resolveControls` in `scripts/update-data.ts`). The workflow exposes 24 controls as individual inputs; every other control (`HOLDINGS_PAGE_SIZE`, `STORE_RAW_DOWNLOADS`, `SEC_UA`, `VERBOSE`, `USE_SYSTEM_CA`) is reachable through the `advanced` JSON input, for example `{"STORE_RAW_DOWNLOADS":"true"}`. An explicitly set environment variable always wins, even when empty. The protected `SEC_UA` repository Actions variable overrides the SEC contact when nonblank. Output is always written to `api/wisdomtree`. All supplied filters use **AND** logic.
 
 ### Data sources
 
@@ -71,6 +71,7 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 | `SKIP_WISDOMTREE` | `false` | Keep the previously published official catalog. |
 | `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | User-Agent for SEC and WisdomTree requests. SEC policy asks automated tools to declare a contact; the protected `SEC_UA` Actions variable overrides the default. Redacted in logs. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
+| `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized adjusted-close return range per tenor: `min:max`. |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative adjusted-close return range per tenor: `min:max`. |
 
