@@ -140,7 +140,8 @@
         "dividendYieldText": "3.73%",
         "secYield": 3.81,
         "secYieldText": "3.81%",
-        "returnsBasis": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values"
+        "returnsBasis": "official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes",
+        "performanceAsOf": "2026-08-31"
       },
       "holdings": 5,
       "history": 3184
