@@ -182,9 +182,16 @@ const DEFAULT_SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
 // Replaced from the resolved SEC_UA control in main(); the protected SEC_UA Actions variable overrides the default.
 let SEC_UA = DEFAULT_SEC_UA;
 
-const API_ROOT = new URL('../api/wisdomtree/', import.meta.url);
-const INDEX_FILE = new URL('index.json', API_ROOT);
-const STATE_FILE = new URL('update-state.json', API_ROOT);
+let API_ROOT = new URL('../api/wisdomtree/', import.meta.url);
+let INDEX_FILE = new URL('index.json', API_ROOT);
+let STATE_FILE = new URL('update-state.json', API_ROOT);
+
+/** Points the updater at another output folder (offline tests only; the CLI always writes api/wisdomtree). */
+export function setApiRoot(root: URL): void {
+  API_ROOT = root;
+  INDEX_FILE = new URL('index.json', root);
+  STATE_FILE = new URL('update-state.json', root);
+}
 
 const HOLDINGS_HEADERS = ['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category'];
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -307,7 +314,7 @@ export type ProductPageSummary = {
 type SecSeriesRef = { cik: string; seriesId: string; classId: string };
 type NportAccession = { accession: string; filed: string; reportDate: string; url: string };
 
-type UpdaterConfig = {
+export type UpdaterConfig = {
   maxFetches: number;
   requestSleep: number;
   aum?: Range;
@@ -1694,6 +1701,42 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   };
   await writeIfChanged(new URL('meta.json', fundDir), meta);
 
+  return buildIndexRow({
+    fund,
+    nav,
+    marketPrice,
+    premiumDiscount,
+    netAssets,
+    asOfLabel,
+    inceptionDate: fund.inception ? formatDate(fund.inception) : chart?.firstTradeDate ? formatDate(new Date(chart.firstTradeDate * 1000).toISOString().slice(0, 10)) : (previous.inceptionDate || '—'),
+    exchange: fund.exchange || chart?.exchangeName || previous.exchange || '',
+    distributions: { frequency: distributionFrequency, exDate: latest ? formatUsDate(latest.epoch) : (previous.distributions?.exDate || '—'), dividend: latest ? String(round(latest.amount, 6)) : (previous.distributions?.dividend || '—') },
+    returns,
+    metrics,
+    holdings: holdingsRows.length,
+    history: history.length,
+  });
+}
+
+type IndexRowInput = {
+  fund: Pick<CatalogFund, 'ticker' | 'name' | 'category' | 'fundPage' | 'cusip' | 'isin' | 'ter'>;
+  nav: number | null;
+  marketPrice: number | null;
+  premiumDiscount: number | null;
+  netAssets: number | null;
+  asOfLabel: string;
+  inceptionDate: string;
+  exchange: string;
+  distributions: JsonRecord;
+  returns: JsonRecord;
+  metrics: JsonRecord;
+  holdings: number;
+  history: number;
+};
+
+/** The one place that shapes an api/wisdomtree/index.json row (used by a live update and by the offline rebuild from meta.json). */
+export function buildIndexRow(input: IndexRowInput): JsonRecord {
+  const { fund, nav, marketPrice, premiumDiscount, netAssets } = input;
   return {
     ticker: fund.ticker,
     name: fund.name,
@@ -1708,19 +1751,86 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     navValue: nav,
     aum: formatAumDisplay(netAssets),
     aumValue: netAssets,
-    asOfDate: asOfLabel,
-    inceptionDate: fund.inception ? formatDate(fund.inception) : chart?.firstTradeDate ? formatDate(new Date(chart.firstTradeDate * 1000).toISOString().slice(0, 10)) : (previous.inceptionDate || '—'),
-    exchange: fund.exchange || chart?.exchangeName || previous.exchange || '',
+    asOfDate: input.asOfLabel,
+    inceptionDate: input.inceptionDate,
+    exchange: input.exchange,
     closePrice: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`,
     closePriceValue: marketPrice,
     premiumDiscount: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`,
     premiumDiscountValue: premiumDiscount,
-    distributions: { frequency: distributionFrequency, exDate: latest ? formatUsDate(latest.epoch) : (previous.distributions?.exDate || '—'), dividend: latest ? String(round(latest.amount, 6)) : (previous.distributions?.dividend || '—') },
-    returns,
-    metrics,
-    holdings: holdingsRows.length,
-    history: history.length,
+    distributions: input.distributions,
+    returns: input.returns,
+    metrics: input.metrics,
+    holdings: input.holdings,
+    history: input.history,
   };
+}
+
+/** Rebuilds an index row offline from a fund's published meta.json; `previous` (an existing index row) only fills what meta does not carry. Unknown metric inputs stay null, never 0. */
+export function rowFromMeta(meta: JsonRecord, firstHistoryDate: string | null = null, previous: JsonRecord = {}): JsonRecord {
+  const ticker = String(meta.ticker);
+  const monthEnd = meta.returns?.monthEnd || {};
+  const asOfIso = toIsoDate(monthEnd.asOfDate);
+  const derived: PriceReturns = {
+    asOfDate: /^\d{4}-\d{2}-\d{2}$/.test(asOfIso) ? asOfIso : '',
+    mo1: numberOrNull(monthEnd.mo1), qtd: numberOrNull(monthEnd.qtd), ytd: numberOrNull(monthEnd.ytd), yr1: numberOrNull(monthEnd.yr1),
+    cagr3y: numberOrNull(monthEnd.yr3), cagr5y: numberOrNull(monthEnd.yr5), cagr10y: numberOrNull(monthEnd.yr10), siAnn: numberOrNull(monthEnd.sinceInception),
+  };
+  const dividends = (Array.isArray(meta.distributions?.rows) ? meta.distributions.rows : [])
+    .map((row: string[]) => ({ epoch: Date.parse(`${toIsoDate(row[0])}T00:00:00Z`) / 1000, amount: numberOrNull(row[row.length - 1]) }))
+    .filter((item: { epoch: number; amount: number | null }) => Number.isFinite(item.epoch) && item.amount !== null && item.amount > 0) as Array<{ epoch: number; amount: number }>;
+  const latest = dividends[dividends.length - 1] || null;
+  const frequency = String(meta.distributions?.frequency || previous.distributions?.frequency || '—');
+  const paymentsPerYear = numberOrNull(meta.distributions?.paymentsPerYear);
+  const marketPrice = numberOrNull(meta.marketPrice?.value);
+  const fund = {
+    ticker,
+    name: String(meta.name || ticker),
+    category: String(meta.category || 'ETF'),
+    fundPage: String(meta.source?.fundPage || `${WISDOMTREE_SITE}/us/products/etf/${ticker.toLowerCase()}`),
+    cusip: String(meta.identifiers?.cusip || ''),
+    isin: String(meta.identifiers?.isin || ''),
+    ter: numberOrNull(meta.expenseRatio?.value),
+    dividendYield: numberOrNull(meta.yields?.dividendYield),
+    secYield: numberOrNull(meta.yields?.secYield),
+  };
+  const official = /^WisdomTree product-page/.test(String(meta.returns?.derivedFrom || ''));
+  const metrics = deriveMetrics(derived, fund as CatalogFund, dividends, { paymentsPerYear }, marketPrice, official);
+  const metaLabel = String(meta.aum?.asOfDate || '');
+  return buildIndexRow({
+    fund,
+    nav: numberOrNull(meta.nav?.value),
+    marketPrice,
+    premiumDiscount: numberOrNull(meta.premiumDiscount?.value),
+    netAssets: numberOrNull(meta.aum?.value),
+    asOfLabel: previous.asOfDate || (metaLabel && metaLabel !== '—' ? metaLabel : '—'),
+    inceptionDate: previous.inceptionDate || (firstHistoryDate ? formatDate(firstHistoryDate) : '—'),
+    exchange: previous.exchange || '',
+    distributions: { frequency, exDate: latest ? formatUsDate(latest.epoch) : (previous.distributions?.exDate || '—'), dividend: latest ? String(round(latest.amount, 6)) : (previous.distributions?.dividend || '—') },
+    returns: meta.returns,
+    metrics,
+    holdings: numberOrNull(meta.holdings?.totalRows) ?? 0,
+    history: numberOrNull(meta.history?.totalRows) ?? 0,
+  });
+}
+
+/** Every known fund: the published index rows plus a row rebuilt from each funds/<T>/meta.json that the index lacks. Never shrinks. */
+export async function readKnownRows(): Promise<Map<string, JsonRecord>> {
+  const known = await readPreviousIndex();
+  let dirs: string[] = [];
+  try { dirs = await readdir(new URL('funds/', API_ROOT)); } catch { dirs = []; }
+  for (const ticker of dirs.sort()) {
+    if (known.has(ticker)) continue;
+    const meta = await readPreviousMeta(ticker);
+    if (!meta?.ticker) continue;
+    let first: string | null = null;
+    try {
+      const page = JSON.parse(await readFile(new URL(`funds/${ticker}/${String(meta.history?.pages?.[0] || 'history/001.json')}`, API_ROOT), 'utf8')) as JsonRecord;
+      first = toIsoDate(page.rows?.[0]?.Date) || null;
+    } catch { first = null; }
+    known.set(String(meta.ticker), rowFromMeta(meta, first));
+  }
+  return known;
 }
 
 export const HISTORY_RANGES = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'] as const;
@@ -1903,13 +2013,39 @@ async function main(): Promise<void> {
   const controls = await runtimeControls();
   process.env.VERBOSE = controls.VERBOSE ?? '';
   installSystemCa(controls.USE_SYSTEM_CA || 'auto');
-  const config = readConfig(controls);
+  await runUpdate(readConfig(controls));
+}
+
+/** Writes index.json from the given rows (counts derived from them). */
+export async function writeIndex(funds: JsonRecord[]): Promise<void> {
+  const sorted = [...funds].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  const counts = { funds: sorted.length, holdings: sorted.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: sorted.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
+  await writeIfChanged(INDEX_FILE, {
+    generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
+    source: {
+      provider: 'WisdomTree Asset Management, Inc. (U.S.-listed ETFs)',
+      market: 'us',
+      site: WISDOMTREE_SITE,
+      catalog: WISDOMTREE_CATALOG_URL,
+      catalogFallback: WISDOMTREE_CATALOG_PROXY_URL,
+      holdings: 'SEC EDGAR Form N-PORT-P for exact series (issuer product-page top holdings fallback)',
+      returns: 'Official WisdomTree product-page Total Returns table (Market Price, NAV and Underlying Index Returns rows)',
+      distributions: 'Official WisdomTree product-page Recent Distributions table (Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown); Yahoo Finance dividend events fill in older ex-dates the official table does not cover',
+      history: 'Yahoo Finance public chart API (adjusted close)',
+    },
+    counts,
+    funds: sorted,
+  });
+}
+
+export async function runUpdate(config: UpdaterConfig): Promise<void> {
   SEC_UA = config.secUa;
   requestSleepSeconds = config.requestSleep;
   requestGates = new Array(Math.max(1, config.concurrency)).fill(0);
   outputPrintConfig('WisdomTree', config);
 
-  const previous = await readPreviousIndex();
+  // Every fund already published (index rows plus funds/*/meta.json): the floor of the feed, never shrunk by this run.
+  const previous = await readKnownRows();
   const catalog = new Map<string, CatalogFund>();
   let catalogSource = 'previous api/wisdomtree/index.json';
   if (!config.skipWisdomTree) {
@@ -1924,7 +2060,7 @@ async function main(): Promise<void> {
         await writeFile(new URL(`product-table-${new Date().toISOString().slice(0, 10)}.md`, raw), fetched.markdown, 'utf8');
       }
     } catch (error) {
-      console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} — keeping the published feed`);
+      console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - keeping the published feed`);
     }
   }
   if (!catalog.size) for (const [ticker, row] of previous) catalog.set(ticker, parsePreviousFund(ticker, row));
@@ -1967,39 +2103,18 @@ async function main(): Promise<void> {
         failures += 1;
         const message = error instanceof Error ? error.message : String(error);
         const old = previous.get(fund.ticker);
-        if (old && !hasConfiguredFilters(config)) results.push(old);
         await output.result(fund.ticker, before, 'failed', message);
       }
     }
   };
   await Promise.all(Array.from({ length: config.concurrency }, () => worker()));
 
-  const filterRun = hasConfiguredFilters(config);
-  const funds = [...results].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
-  if (!filterRun) {
-    for (const fund of universe) if (!funds.some((row) => row.ticker === fund.ticker)) {
-      const old = previous.get(fund.ticker);
-      if (old) funds.push(old);
-    }
-    funds.sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
-  }
+  // Selected funds are refreshed; every other known fund keeps its published row (filtered, bounded, failed or catalog-less runs never shrink the index).
+  const merged = new Map<string, JsonRecord>(previous);
+  for (const row of results) merged.set(String(row.ticker), row);
+  const funds = [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
   const counts = { funds: funds.length, holdings: funds.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: funds.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
-  await writeIfChanged(INDEX_FILE, {
-    generatedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z'),
-    source: {
-      provider: 'WisdomTree Asset Management, Inc. (U.S.-listed ETFs)',
-      market: 'us',
-      site: WISDOMTREE_SITE,
-      catalog: WISDOMTREE_CATALOG_URL,
-      catalogFallback: WISDOMTREE_CATALOG_PROXY_URL,
-      holdings: 'SEC EDGAR Form N-PORT-P for exact series (issuer product-page top holdings fallback)',
-      returns: 'Official WisdomTree product-page Total Returns table (Market Price, NAV and Underlying Index Returns rows)',
-      distributions: 'Official WisdomTree product-page Recent Distributions table (Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown); Yahoo Finance dividend events fill in older ex-dates the official table does not cover',
-      history: 'Yahoo Finance public chart API (adjusted close)',
-    },
-    counts,
-    funds,
-  });
+  await writeIndex(funds);
   await writeIfChanged(STATE_FILE, { cursor: config.maxFetches > 0 ? lastTicker : null, savedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') });
   console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${failures} failures`);
   console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
