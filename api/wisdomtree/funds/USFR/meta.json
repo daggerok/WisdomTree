@@ -2,7 +2,7 @@
   "ticker": "USFR",
   "name": "WisdomTree Floating Rate Treasury Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Government Strategies",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usfr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usfr",
@@ -25,32 +25,32 @@
     "value": 0.15
   },
   "nav": {
-    "display": "$50.35",
-    "value": 50.354,
-    "asOfDate": "Sep 25 2026"
+    "display": "$50.39",
+    "value": 50.391,
+    "asOfDate": "Oct 1 2026"
   },
   "marketPrice": {
-    "display": "$50.35",
-    "value": 50.35,
-    "asOfDate": "Sep 25 2026"
+    "display": "$50.39",
+    "value": 50.39,
+    "asOfDate": "Sep 30 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.007
+    "display": "0.01%",
+    "value": 0.009
   },
   "aum": {
-    "display": "$19.69 B",
-    "value": 19692089340,
-    "asOfDate": "Sep 23 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$19.78 B",
+    "value": 19778600960,
+    "asOfDate": "Sep 30 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.74,
-    "dividendYieldText": "3.74%",
+    "dividendYield": 3.73,
+    "dividendYieldText": "3.73%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 3.81,
-    "secYield": 3.75,
-    "secYieldText": "3.75%",
+    "distributionRate": 3.77,
+    "secYield": 3.81,
+    "secYieldText": "3.81%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1321,8 +1321,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3180,
-    "asOf": "Sep 25 2026",
+    "totalRows": 3184,
+    "asOf": "Oct 1 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
