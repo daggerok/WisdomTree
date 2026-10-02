@@ -178,8 +178,8 @@ const SEC_BROWSE_URL = `${SEC_SITE}/cgi-bin/browse-edgar`;
 const SEC_ARCHIVES = `${SEC_SITE}/Archives/edgar/data`;
 const SEC_FUND_TICKERS_URL = `${SEC_SITE}/files/company_tickers_mf.json`;
 const SEC_COMPANY_TICKERS_URL = `${SEC_SITE}/files/company_tickers.json`;
-const DEFAULT_SEC_UA = 'DaggerOk WisdomTree ETF feed https://github.com/daggerok/WisdomTree';
-// Replaced from the resolved SEC_UA control in main(); the real contact comes from the protected SEC_UA variable.
+const DEFAULT_SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
+// Replaced from the resolved SEC_UA control in main(); the protected SEC_UA Actions variable overrides the default.
 let SEC_UA = DEFAULT_SEC_UA;
 
 const API_ROOT = new URL('../api/wisdomtree/', import.meta.url);
@@ -313,6 +313,7 @@ type UpdaterConfig = {
   aum?: Range;
   ter?: Range;
   dividendYield?: Range;
+  secYield?: Range;
   performance: RangeMap;
   totalReturn: RangeMap;
   concurrency: number;
@@ -496,7 +497,7 @@ function readTickerSet(value: string | undefined): Set<string> | null {
 }
 
 export function hasConfiguredFilters(config: UpdaterConfig): boolean {
-  return Boolean(config.aum || config.ter || config.dividendYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
+  return Boolean(config.aum || config.ter || config.dividendYield || config.secYield || config.tickers || Object.keys(config.performance).length || Object.keys(config.totalReturn).length);
 }
 
 export function readConfig(env: Record<string, string | undefined> = process.env): UpdaterConfig {
@@ -506,16 +507,17 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     aum: parseAumRange(env.AUM ?? ':'),
     ter: parseRange(env.TER ?? ':', 'TER'),
     dividendYield: parseRange(env.DIVIDEND_YIELD ?? ':', 'DIVIDEND_YIELD'),
+    secYield: parseRange(env.SEC_YIELD ?? ':', 'SEC_YIELD'),
     performance: parseRanges(env, 'PERFORMANCE'),
     totalReturn: parseRanges(env, 'TOTAL_RETURN'),
     concurrency: Math.max(1, parsePositiveInt(env.CONCURRENCY, 3)),
     holdingsPageSize: Math.max(1, parsePositiveInt(env.HOLDINGS_PAGE_SIZE, 250)),
     historyPageSize: Math.max(1, parsePositiveInt(env.HISTORY_PAGE_SIZE, 1000)),
     storeRawDownloads: parseBoolean(env.STORE_RAW_DOWNLOADS),
-    maxRetries: Math.max(0, parsePositiveInt(env.MAX_RETRIES, 2)),
+    maxRetries: Math.max(1, parsePositiveInt(env.MAX_RETRIES, 2)),
     tickers: readTickerSet(env.TICKERS),
-    historyRange: env.HISTORY_RANGE?.trim() || 'max',
-    edgarFallback: !['0', 'false', 'off', 'no'].includes(String(env.EDGAR_FALLBACK ?? '1').toLowerCase()),
+    historyRange: env.HISTORY_RANGE?.trim().toLowerCase() || 'max',
+    edgarFallback: String(env.EDGAR_FALLBACK ?? '').trim() === '' ? true : parseBoolean(env.EDGAR_FALLBACK),
     skipWisdomTree: parseBoolean(env.SKIP_WISDOMTREE),
     skipYahoo: parseBoolean(env.SKIP_YAHOO),
     secUa: env.SEC_UA?.trim() || DEFAULT_SEC_UA,
@@ -681,7 +683,10 @@ async function fetchCatalog(config: UpdaterConfig): Promise<{ markdown: string; 
   for (const url of urls) {
     try {
       const markdown = await fetchText(url, `[catalog ] ${url}`, config, { Accept: 'text/markdown,text/html;q=0.9' });
-      if (/WisdomTree Fund\s*\|\s*Fund Ticker/i.test(markdown)) return { markdown, source: url === WISDOMTREE_CATALOG_URL ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
+      if (/WisdomTree Fund\s*\|\s*Fund Ticker/i.test(markdown)) {
+        parseCatalogMarkdown(markdown); // a table without fund rows falls through to the next source
+        return { markdown, source: url === WISDOMTREE_CATALOG_URL ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
+      }
       lastError = new Error('product table not present');
     } catch (error) {
       lastError = error;
@@ -1495,6 +1500,8 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       outputNote(`[ ${'product'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
+  // SEC yield is only known after the product page, so this filter is applied here rather than from the catalog row.
+  if (!rangeMatches(fund.secYield, config.secYield)) return { __skipped: true, ticker: fund.ticker, __skipReasons: ['SEC_YIELD'] };
 
   let holdingsRows: JsonRecord[] = [];
   let holdingsHeaders = HOLDINGS_HEADERS;
@@ -1548,8 +1555,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   let historySource = 'Yahoo Finance public chart API (adjusted close)';
   if (!config.skipYahoo) {
     try {
-      const query = new URLSearchParams({ period1: '0', period2: String(Math.floor(Date.now() / 1000) + 86_400), interval: '1d', events: 'div|split', includeAdjustedClose: 'true' });
-      if (config.historyRange && config.historyRange !== 'max') query.set('range', config.historyRange);
+      const query = yahooChartQuery(config.historyRange);
       const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[chart   ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
       chart = parseChart(payload);
       days = chart.days;
@@ -1710,6 +1716,20 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   };
 }
 
+export const HISTORY_RANGES = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'] as const;
+
+/** Yahoo chart query: `max` requests the full window; any other range limits the requested history window. */
+export function yahooChartQuery(historyRange: string, nowSeconds = Math.floor(Date.now() / 1000)): URLSearchParams {
+  const query = new URLSearchParams({ interval: '1d', events: 'div|split', includeAdjustedClose: 'true' });
+  if (!historyRange || historyRange === 'max') {
+    query.set('period1', '0');
+    query.set('period2', String(nowSeconds + 86_400));
+  } else {
+    query.set('range', historyRange);
+  }
+  return query;
+}
+
 function historyHeaders(): string[] {
   return ['Date', 'Close', 'Adj Close', 'Volume'];
 }
@@ -1747,18 +1767,22 @@ Environment variables (all filters use AND logic):
   MAX_FETCHES=0       all eligible funds; positive value is a resumable batch
   REQUEST_SLEEP=1.5   seconds between request starts
   CONCURRENCY=3       parallel fund workers; SEC/Yahoo requests stay paced
-  AUM=:\n  TER=:\n  DIVIDEND_YIELD=:\n  TICKERS="USFR DGRW"  optional ticker allowlist
+  AUM=:               min:max; amounts, K/M/B/T suffixes or nano|micro|small|mid|large
+  TER=:               net expense ratio range in percent
+  DIVIDEND_YIELD=:    catalog trailing-yield range in percent
+  SEC_YIELD=:         30-day SEC yield range in percent (read from the product page)
+  TICKERS="USFR DGRW"  optional ticker allowlist
   PERFORMANCE_YTD|1Y|3Y|5Y|10Y=min:max   annualized ranges
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y=min:max cumulative ranges
   HOLDINGS_PAGE_SIZE=250
   HISTORY_PAGE_SIZE=1000
-  HISTORY_RANGE=max
-  MAX_RETRIES=2
+  HISTORY_RANGE=max   Yahoo window: max, ytd, 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y or 10y
+  MAX_RETRIES=2       retries after the first request (integer >= 1)
   STORE_RAW_DOWNLOADS=off
   EDGAR_FALLBACK=1
   SKIP_WISDOMTREE=off  use the previously published catalog
   SKIP_YAHOO=off       keep previously published history when possible
-  SEC_UA=...           SEC/HTTP User-Agent; real contact comes from the protected SEC_UA Actions variable
+  SEC_UA=...           SEC/HTTP User-Agent (default daggerok ETF feed daggerok@gmail.com); the protected SEC_UA Actions variable overrides it
   VERBOSE=off          print per-fund retry and fallback notices
 
 Defaults live in scripts/update-data.config.json (file < advanced JSON < nonblank inputs < environment).
@@ -1774,7 +1798,7 @@ Examples:
 // interpolated into bash. Precedence: config file < advanced JSON < nonblank
 // inputs < environment (explicit env wins, including a deliberately blank one).
 export const CONTROL_NAMES = [
-  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'TICKERS',
+  'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES', 'HISTORY_RANGE',
   'STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_WISDOMTREE', 'SEC_UA', 'VERBOSE',
   ...['PERFORMANCE', 'TOTAL_RETURN'].flatMap((prefix) => ['YTD', '1Y', '3Y', '5Y', '10Y'].map((period) => `${prefix}_${period}`)),
@@ -1811,13 +1835,14 @@ export function resolveControls(
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {
     const v = result[key];
     if (v === undefined || v === '') continue;
-    const min = ['MAX_FETCHES', 'MAX_RETRIES'].includes(key) ? 0 : 1;
+    const min = key === 'MAX_FETCHES' ? 0 : 1;
     if (!/^\d+$/.test(v) || !Number.isSafeInteger(Number(v)) || Number(v) < min) throw new Error(`${key}: expected integer >= ${min}`);
   }
   if (result.REQUEST_SLEEP && (!Number.isFinite(Number(result.REQUEST_SLEEP)) || Number(result.REQUEST_SLEEP) < 0)) throw new Error('REQUEST_SLEEP: expected nonnegative seconds');
   for (const key of ['STORE_RAW_DOWNLOADS', 'EDGAR_FALLBACK', 'SKIP_YAHOO', 'SKIP_WISDOMTREE', 'VERBOSE']) {
     if (result[key] && !/^(0|1|true|false|yes|no|y|n|on|off)$/i.test(result[key])) throw new Error(`${key}: expected boolean`);
   }
+  if (result.HISTORY_RANGE && !(HISTORY_RANGES as readonly string[]).includes(result.HISTORY_RANGE.toLowerCase())) throw new Error(`HISTORY_RANGE: expected one of ${HISTORY_RANGES.join(', ')}`);
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
