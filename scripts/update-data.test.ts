@@ -1,7 +1,7 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
 import { afterEach, describe, expect, test } from 'bun:test';
-import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -37,6 +37,7 @@ import {
   resolveControls,
   runtimeControls,
   yahooChartQuery,
+  formatDate,
   isCertError,
   installSystemCa,
   readKnownRows,
@@ -617,5 +618,377 @@ describe('filtered and catalog-less runs never shrink the feed', () => {
     const root = setup(['AAA', 'BBB'], ['CCC']);
     const index = await withMockedRun(root, { MAX_FETCHES: '1' }, () => new Response('blocked', { status: 404 }));
     expect(index.counts.funds).toBe(3);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Mocked end-to-end scenarios: wisdomtree.com is blocked, the r.jina.ai proxy serves markdown, Yahoo serves a chart.
+// ---------------------------------------------------------------------------
+
+type Call = { url: string; ua: string; at: number };
+
+const productPage = (ticker: string, ytd = '2.59%'): string => [
+  `# ${ticker} WisdomTree ${ticker} Fund`,
+  '',
+  '| Product Overview | As of 9/16/2026 |', '| --- | --- |', '| Expense Ratio | 0.15% |', '| CUSIP | 037833100 |', '| Total Assets (000) | $19,560,180.26 |', '| SEC 30-day Yield | 3.68% |',
+  '',
+  '### Net Asset Value', '', '| Net Asset Value | As of 9/16/2026 |', '| --- | --- |', '| NAV | $50.476 |', '| Premium/Discount to NAV | 0.01% |',
+  '',
+  '### Closing Market Price', '', '| Closing Market Value | As of 9/15/2026 |', '| --- | --- |', '| Closing Market Price | $50.470 |',
+  '',
+  '### Total Returns', '', 'Month End Performance (8/31/2026)', '',
+  '| Cumulative | 1 Month | 3 Month | YTD | Since Inception* | |', '| --- | --- | --- | --- | --- | --- |', `| Market Price Returns | 0.32% | 1.02% | ${ytd} | 28.05% | |`,
+  '| Average Annual | 1 Year | 3 Year | 5 Year | 10 Year | Since Inception* |', '| Market Price Returns | 4.00% | 4.65% | 3.86% | 2.52% | 1.99% |',
+  '',
+  'Quarter End Performance (6/30/2026)', '',
+  '| Cumulative | Since Inception* | | | | |', '| --- | --- | --- | --- | --- | --- |', '| Market Price Returns | 27.19% | | | | |',
+  '| Average Annual | 1 Year | 3 Year | 5 Year | 10 Year | Since Inception* |', '| Market Price Returns | 4.12% | 4.69% | 3.90% | 2.53% | 2.01% |',
+  '',
+  '### Recent Distributions', '',
+  '| Ex-Dividend Date | Record Date | Payable Date | Ordinary Income | Short Term Capital Gains | Long Term Capital Gains | Return of Capital | Total Distribution |', '| --- | --- | --- | --- | --- | --- | --- | --- |',
+  '| 9/25/2026 | 9/25/2026 | 9/29/2026 | 0.17 | 0 | 0 | 0 | 0.17 |',
+].join('\n');
+
+const catalogFor = (tickers: string[]): string => [
+  'As of 9/15/2026',
+  '| WisdomTree Fund | Fund Ticker | Asset Class | Category | Inception Date | Gross Expense Ratio | Net Expense Ratio | Assets Under Mgmt $(000) | TTM Yield | Average Daily Volume |',
+  '| --- | --- | --- | --- | --- | --- | --- | ---: | ---: | ---: |',
+  ...tickers.map((t) => `| [Fund ${t}](https://www.wisdomtree.com/investments/etfs/equity/${t.toLowerCase()}) | [$${t}](https://www.wisdomtree.com/investments/etfs/equity/${t.toLowerCase()}) | Equity | Core | 06/04/2014 | 0.40% | 0.15% | $16,985,696.89 | 4.72% | $100,000,000 |`),
+].join('\n');
+
+function chartPayload(days = 400, last = Date.UTC(2026, 8, 25)): any {
+  const timestamps = Array.from({ length: days }, (_, i) => Math.floor((last - (days - 1 - i) * 86_400_000) / 1000));
+  const close = timestamps.map((_, i) => 100 + i * 0.1);
+  return { chart: { result: [{ timestamp: timestamps, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: {} }, meta: { exchangeName: 'NGM', regularMarketPrice: 140, regularMarketTime: Math.floor(last / 1000) } } ] } };
+}
+
+class Scenario {
+  dir = mkdtempSync(join(tmpdir(), 'wt-scn-'));
+  root = pathToFileURL(`${this.dir}/api/wisdomtree/`);
+  calls: Call[] = [];
+  logs: string[] = [];
+  constructor(public tickers: string[] = ['AAA', 'BBB', 'CCC']) { mkdirSync(join(this.dir, 'api/wisdomtree'), { recursive: true }); }
+  /** Default world: direct wisdomtree.com is Cloudflare-blocked, the proxy serves the catalog and product pages, Yahoo serves a chart, SEC is empty. */
+  handler = (url: string, _init?: any): Response | Promise<Response> => {
+    if (url.startsWith('https://r.jina.ai/')) return url.endsWith('/us/products') ? new Response(catalogFor(this.tickers)) : new Response(productPage(url.split('/').pop()!.toUpperCase()));
+    if (url.includes('wisdomtree.com')) return new Response('blocked', { status: 403 });
+    if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload()));
+    return new Response('nope', { status: 404 });
+  };
+  async run(env: Record<string, string> = {}, overrides: Record<string, unknown> = {}, deadlineMs?: number): Promise<void> {
+    const original = globalThis.fetch;
+    const originalLog = console.log;
+    globalThis.fetch = (async (input: any, init: any) => {
+      const url = String(input?.url ?? input);
+      this.calls.push({ url, ua: String(init?.headers?.['User-Agent'] ?? ''), at: Date.now() });
+      return this.handler(url, init);
+    }) as unknown as typeof fetch;
+    console.log = (...args: unknown[]) => { this.logs.push(args.join(' ')); };
+    setApiRoot(this.root);
+    try {
+      const config = { ...readConfig(resolveControls({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', EDGAR_FALLBACK: 'false', CONCURRENCY: '1', ...env })), proxyGapMs: 0, retryDelayMs: 0, ...overrides } as any;
+      await runUpdate(config, deadlineMs);
+    } finally {
+      globalThis.fetch = original;
+      console.log = originalLog;
+      setApiRoot(new URL('../api/wisdomtree/', import.meta.url));
+    }
+  }
+  index(): any { return JSON.parse(readFileSync(new URL('index.json', this.root), 'utf8')); }
+  meta(ticker: string): any { return JSON.parse(readFileSync(new URL(`funds/${ticker}/meta.json`, this.root), 'utf8')); }
+  state(): any { return JSON.parse(readFileSync(new URL('update-state.json', this.root), 'utf8')); }
+  snapshot(): Record<string, number> {
+    const out: Record<string, number> = {};
+    const walk = (dir: string): void => { for (const entry of readdirSync(dir, { withFileTypes: true })) { const path = join(dir, entry.name); if (entry.isDirectory()) walk(path); else out[path] = statSync(path).mtimeMs; } };
+    walk(join(this.dir, 'api/wisdomtree'));
+    return out;
+  }
+  cleanup(): void { rmSync(this.dir, { recursive: true, force: true }); }
+}
+
+async function withScenario(fn: (s: Scenario) => Promise<void>, tickers?: string[]): Promise<void> {
+  const s = new Scenario(tickers);
+  try { await fn(s); } finally { s.cleanup(); }
+}
+
+describe('product pages: direct first, proxy as the gated fallback', () => {
+  test('a blocked direct request latches; proxy starts are >= the gap apart and a failing page is retried once', async () => {
+    await withScenario(async (s) => {
+      const base = s.handler;
+      s.handler = (url, init) => (url.endsWith('/ccc') && url.startsWith('https://r.jina.ai/') ? new Response('boom', { status: 502 }) : base(url));
+      await s.run({ CONCURRENCY: '3', MAX_RETRIES: '5' }, { proxyGapMs: 40 });
+      const direct = s.calls.filter((c) => c.url.includes('wisdomtree.com') && !c.url.startsWith('https://r.jina.ai/'));
+      expect(direct).toHaveLength(1); // the first (catalog) request got a 403; the block latched for every product page
+      const proxy = s.calls.filter((c) => c.url.startsWith('https://r.jina.ai/'));
+      expect(proxy.filter((c) => c.url.endsWith('/ccc'))).toHaveLength(2); // one retry, not MAX_RETRIES
+      expect(proxy).toHaveLength(1 + 1 + 1 + 2); // catalog + AAA + BBB + CCC twice
+      for (let i = 1; i < proxy.length; i += 1) expect(proxy[i].at - proxy[i - 1].at).toBeGreaterThanOrEqual(35);
+    });
+  });
+
+  test('a reachable direct page is used and the proxy is never called', async () => {
+    await withScenario(async (s) => {
+      s.handler = (url, init) => url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.includes('wisdomtree.com') ? new Response(url.endsWith('/us/products') ? catalogFor(s.tickers) : productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload())) : new Response('no', { status: 404 });
+      await s.run();
+      expect(s.calls.some((c) => c.url.startsWith('https://r.jina.ai/'))).toBe(false);
+      expect(s.meta('AAA').source.productPageStatus).toContain('directly');
+    });
+  });
+
+  test('a Cloudflare verification page served with HTTP 200 is a failure, not an empty product page', () => {
+    expect(looksLikeProductPage('Title: Just a moment...\n\n## Performing security verification')).toBe(false);
+    expect(looksLikeProductPage(productPage('AAA'))).toBe(true);
+  });
+
+  test('requests carry a timeout that aborts a hanging response', async () => {
+    await withScenario(async (s) => {
+      s.handler = (_url, init) => new Promise<Response>((_, reject) => init.signal.addEventListener('abort', () => reject(new Error('aborted'))));
+      const started = Date.now();
+      await expect(s.run({}, { fetchTimeoutMs: 30 })).rejects.toThrow('No catalog rows'); // no hang: every attempt was aborted by its signal
+      expect(Date.now() - started).toBeLessThan(2_000);
+    });
+  });
+});
+
+describe('only the SEC receives the SEC contact as User-Agent', () => {
+  test('proxy, wisdomtree.com and Yahoo get a generic agent', async () => {
+    await withScenario(async (s) => {
+      const base = s.handler;
+      s.handler = (url, init) => (url.includes('sec.gov') ? new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [] })) : base(url));
+      await s.run({ EDGAR_FALLBACK: 'true' });
+      const sec = s.calls.filter((c) => c.url.includes('sec.gov'));
+      expect(sec.length).toBeGreaterThan(0);
+      expect(sec.every((c) => c.ua.includes('daggerok'))).toBe(true);
+      const others = s.calls.filter((c) => !c.url.includes('sec.gov'));
+      expect(others.length).toBeGreaterThan(3);
+      expect(others.every((c) => c.ua !== '' && !c.ua.includes('daggerok'))).toBe(true);
+    });
+  });
+});
+
+describe('a failed product page keeps the previous official data as one unit', () => {
+  test('returns, quarter-end, distributions, NAV, price and premium all stay official and dated as before', async () => {
+    await withScenario(async (s) => {
+      await s.run(); // run 1: everything fetched
+      const before = s.meta('AAA');
+      expect(s.index().funds[0].metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
+      const base = s.handler;
+      // run 2: the proxy answers a verification page for the product pages (HTTP 200), Yahoo is fine and fresher
+      s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response('Title: Just a moment...') : base(url));
+      await s.run({ TICKERS: 'AAA' });
+      const after = s.meta('AAA');
+      expect(after.returns).toEqual(before.returns);
+      expect(after.returns.quarterEnd.asOfDate).toBe('Jun 30 2026');
+      expect(after.distributions).toEqual(before.distributions);
+      expect(after.distributions.rows[0][3]).toBe('0.17'); // tax-character breakdown survives
+      expect([after.nav, after.marketPrice, after.premiumDiscount]).toEqual([before.nav, before.marketPrice, before.premiumDiscount]);
+      expect(after.source.productPageStatus).toContain('retained');
+      const row = s.index().funds.find((f: any) => f.ticker === 'AAA');
+      expect(row.metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
+      expect(row.metrics.performanceAsOf).toBe('2026-08-31');
+      expect(row.metrics.secYield).toBe(3.68);
+    });
+  });
+
+  test('an honest page without a quarter-end table does not get a fabricated quarter-end date', async () => {
+    await withScenario(async (s) => {
+      const base = s.handler;
+      s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(productPage('AAA').replace(/Quarter End Performance[\s\S]*?\n\n### Recent/, '### Recent')) : base(url));
+      await s.run({ TICKERS: 'AAA' });
+      expect(s.meta('AAA').returns.quarterEnd).toMatchObject({ asOfDate: '—', yr1: null, sinceInception: null });
+    });
+  });
+});
+
+describe('bounded runs, cursor and filters', () => {
+  test('the cursor advances past skipped funds so a batch can never loop on itself', async () => {
+    await withScenario(async (s) => {
+      // TOTAL_RETURN_1Y=1000: nothing passes after the fetch, so every fund is skipped
+      await s.run({ MAX_FETCHES: '1', TOTAL_RETURN_1Y: '1000:' });
+      expect(s.state().cursor).toBe('AAA');
+      await s.run({ MAX_FETCHES: '1', TOTAL_RETURN_1Y: '1000:' });
+      expect(s.state().cursor).toBe('BBB');
+      await s.run({ MAX_FETCHES: '2', TOTAL_RETURN_1Y: '1000:' });
+      expect(s.state().cursor).toBe('AAA'); // CCC, then wrapped to AAA
+    }, ['AAA', 'BBB', 'CCC']);
+  });
+
+  test('batches wrap around and count only funds that pass the catalog filters; a TICKERS run leaves the cursor alone', async () => {
+    await withScenario(async (s) => {
+      await s.run({ MAX_FETCHES: '2' });
+      expect(s.state().cursor).toBe('BBB');
+      await s.run({ MAX_FETCHES: '2' });
+      expect(s.state().cursor).toBe('AAA'); // CCC then wrapped to AAA
+      const stateBefore = readFileSync(new URL('update-state.json', s.root), 'utf8');
+      await s.run({ TICKERS: 'BBB', MAX_FETCHES: '1' });
+      expect(readFileSync(new URL('update-state.json', s.root), 'utf8')).toBe(stateBefore);
+      await s.run({ AUM: '1T:' }); // nothing passes the catalog filter; no fund counts against MAX_FETCHES
+      expect(s.state().cursor).toBeNull();
+    });
+  });
+
+  test('return filters exclude funds whose value for a bounded range is unavailable', async () => {
+    await withScenario(async (s) => {
+      const base = s.handler;
+      // the page publishes no 10-year figure, so the 10-year CAGR is null for every fund
+      s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(productPage('AAA').replace('| 2.52% |', '| — |')) : base(url, init));
+      await s.run({ PERFORMANCE_10Y: '0:', SKIP_YAHOO: 'true' });
+      expect(s.logs.filter((l) => l.includes('skipped')).length).toBe(3);
+    });
+  });
+
+  test('unknown TICKERS is an error', async () => {
+    await withScenario(async (s) => {
+      await expect(s.run({ TICKERS: 'AAA ZZZ' })).rejects.toThrow('unknown ticker ZZZ');
+    });
+  });
+
+  test('a run where every fund failed to get live data exits non-zero', async () => {
+    await withScenario(async (s) => {
+      await s.run();
+      s.handler = (url, init) => new Response('down', { status: 500 });
+      process.exitCode = 0;
+      await s.run();
+      expect(process.exitCode).toBe(1);
+    });
+  });
+});
+
+describe('write only on change, atomically, in order', () => {
+  test('a rerun with identical upstream data rewrites nothing', async () => {
+    await withScenario(async (s) => {
+      await s.run();
+      const first = s.snapshot();
+      await new Promise((resolve) => setTimeout(resolve, 20));
+      await s.run();
+      expect(s.snapshot()).toEqual(first);
+      expect(Object.keys(first).some((path) => path.includes('.tmp-'))).toBe(false);
+    });
+  });
+
+  test('stale page files are removed once the new meta.json is written', async () => {
+    await withScenario(async (s) => {
+      await s.run({ HISTORY_PAGE_SIZE: '100' });
+      const pages = readdirSync(new URL('funds/AAA/history/', s.root));
+      expect(pages).toContain('004.json');
+      await s.run({ HISTORY_PAGE_SIZE: '1000' });
+      expect(readdirSync(new URL('funds/AAA/history/', s.root))).toEqual(['001.json']);
+      expect(s.meta('AAA').history.pages).toEqual(['history/001.json']);
+    });
+  });
+
+  test('the run stops taking new funds at the soft deadline and still writes the index', async () => {
+    await withScenario(async (s) => {
+      await s.run({}, {}, 0);
+      expect(existsSync(new URL('index.json', s.root).pathname.replace('file://', ''))).toBe(true);
+    }, ['AAA', 'BBB']);
+  });
+});
+
+describe('index.json contract', () => {
+  test('rows get a full metrics key set, TER net and gross, a derived ISIN and dataFile null without meta.json', async () => {
+    await withScenario(async (s) => {
+      await s.run();
+      const row = s.index().funds[0];
+      expect(row.terValue).toBe(0.15);
+      expect(row.terGrossValue).toBe(0.4);
+      expect(row.isin).toBe('US0378331005');
+      expect(row.cusip).toBe('037833100');
+      expect(row.dataFile).toBe('./funds/AAA/meta.json');
+      expect(s.meta('AAA').expenseRatio).toMatchObject({ value: 0.15, grossValue: 0.4 });
+      // a published row whose meta.json vanished loses its dataFile but keeps the shape
+      rmSync(new URL('funds/BBB/meta.json', s.root));
+      await s.run({ TICKERS: 'AAA' });
+      const orphan = s.index().funds.find((f: any) => f.ticker === 'BBB');
+      expect(orphan.dataFile).toBeNull();
+      expect(Object.keys(orphan.metrics)).toEqual(expect.arrayContaining(['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf']));
+    });
+  });
+
+  test('isinFromCusip follows the ISO 6166 check digit', () => {
+    expect(isinFromCusip('037833100')).toBe('US0378331005'); // Apple
+    expect(isinFromCusip('594918104')).toBe('US5949181045'); // Microsoft
+    expect(isinFromCusip('bad')).toBeNull();
+  });
+
+  test('siAnn needs at least one year of history', () => {
+    const day = (date: string, close: number) => ({ date, close, adjClose: close, volume: 1 });
+    expect(priceReturns([day('2026-06-01', 100), day('2026-09-25', 110)]).siAnn).toBeNull();
+    expect(priceReturns([day('2024-09-25', 100), day('2026-09-25', 121)]).siAnn).toBeCloseTo(10, 0);
+  });
+
+  test('HISTORY_RANGE reaches the Yahoo URL as explicit period1/period2', async () => {
+    await withScenario(async (s) => {
+      await s.run({ HISTORY_RANGE: '1y' });
+      const yahoo = s.calls.find((c) => c.url.includes('finance.yahoo.com'))!;
+      const query = new URL(yahoo.url).searchParams;
+      expect(Number(query.get('period1'))).toBeGreaterThan(Date.now() / 1000 - 2 * 365 * 86_400);
+      expect(query.has('range')).toBe(false);
+    });
+  });
+});
+
+describe('dates are UTC and zero-padded', () => {
+  test('toIsoDate and formatDate do not depend on the machine time zone', () => {
+    const original = process.env.TZ;
+    try {
+      for (const zone of ['Pacific/Auckland', 'America/Los_Angeles', 'UTC']) {
+        process.env.TZ = zone;
+        expect(toIsoDate('Sep 25 2026')).toBe('2026-09-25');
+        expect(toIsoDate('August 31, 2026')).toBe('2026-08-31');
+        expect(formatDate('2026-06-04')).toBe('Jun 04 2026');
+      }
+    } finally {
+      if (original === undefined) delete process.env.TZ; else process.env.TZ = original;
+    }
+  });
+});
+
+describe('catalog changes are reported', () => {
+  test('NEW FUNDS and DROPPED FUNDS are printed and written to the step summary', async () => {
+    await withScenario(async (s) => {
+      await s.run();
+      s.tickers = ['AAA', 'BBB', 'DDD'];
+      const summary = join(s.dir, 'summary.md');
+      const original = process.env.GITHUB_STEP_SUMMARY;
+      process.env.GITHUB_STEP_SUMMARY = summary;
+      try { await s.run({ TICKERS: 'AAA' }); } finally { if (original === undefined) delete process.env.GITHUB_STEP_SUMMARY; else process.env.GITHUB_STEP_SUMMARY = original; }
+      expect(s.logs.some((l) => l.includes('NEW FUNDS: DDD'))).toBe(true);
+      expect(s.logs.some((l) => l.includes('DROPPED FUNDS: CCC'))).toBe(true);
+      expect(readFileSync(summary, 'utf8')).toContain('NEW FUNDS: DDD');
+      expect(s.index().funds.map((f: any) => f.ticker)).toContain('CCC'); // the delisted fund's data is kept
+    });
+  });
+
+  test('STORE_RAW_DOWNLOADS writes outside the committed api folder', async () => {
+    await withScenario(async (s) => {
+      await s.run({ STORE_RAW_DOWNLOADS: 'true' });
+      expect(readdirSync(join(s.dir, 'data/raw')).some((name) => name.startsWith('product-table-'))).toBe(true);
+      expect(existsSync(join(s.dir, 'api/wisdomtree/raw'))).toBe(false);
+    });
+  });
+});
+
+describe('concurrency is real', () => {
+  async function peak(concurrency: number): Promise<number> {
+    let inFlight = 0;
+    let max = 0;
+    const s = new Scenario(['AAA', 'BBB', 'CCC', 'DDD']);
+    try {
+      const base = s.handler;
+      s.handler = async (url) => {
+        if (!url.includes('finance.yahoo.com')) return base(url);
+        inFlight += 1; max = Math.max(max, inFlight);
+        await new Promise((resolve) => setTimeout(resolve, 40));
+        inFlight -= 1;
+        return base(url);
+      };
+      await s.run({ CONCURRENCY: String(concurrency) });
+    } finally { s.cleanup(); }
+    return max;
+  }
+  test('peak in-flight requests is 1 at CONCURRENCY=1 and N at N', async () => {
+    expect(await peak(1)).toBe(1);
+    expect(await peak(3)).toBe(3);
   });
 });
