@@ -25,6 +25,7 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
   };
   const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
   for (const [key, value] of Object.entries(config)) {
+    if (['proxyGapMs', 'fetchTimeoutMs', 'retryDelayMs'].includes(key)) continue;
     const name = aliases[key] ?? key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
     if (name === 'PERFORMANCE' || name === 'TOTAL_RETURN') {
       for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y']) values.set(`${name}_${period}`, range(value?.[period]));
@@ -154,7 +155,7 @@ function outputCreateReporter(root: URL | string, total: number) {
 //
 // Usage: bun ./scripts/update-data.ts [--help]
 
-import { appendFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { appendFile, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 
 declare const process: {
   env: Record<string, string | undefined>;
@@ -179,6 +180,14 @@ const SEC_ARCHIVES = `${SEC_SITE}/Archives/edgar/data`;
 const SEC_FUND_TICKERS_URL = `${SEC_SITE}/files/company_tickers_mf.json`;
 const SEC_COMPANY_TICKERS_URL = `${SEC_SITE}/files/company_tickers.json`;
 const DEFAULT_SEC_UA = 'daggerok ETF feed daggerok@gmail.com';
+// The SEC contact is sent to sec.gov only; every other host (wisdomtree.com, r.jina.ai, Yahoo) gets a generic agent.
+const GENERIC_UA = 'Mozilla/5.0 (compatible; etf-feed-updater)';
+const FETCH_TIMEOUT_MS = 45_000;
+const RETRY_DELAY_MS = 800;
+// r.jina.ai is rate-limited: one global gate, at least 3.2 s between request starts, one retry at most.
+const PROXY_GAP_MS = 3_200;
+// The run stops taking new funds after this long and still writes the index (the workflow times out at 30 minutes).
+const SOFT_DEADLINE_MS = 25 * 60_000;
 // Replaced from the resolved SEC_UA control in main(); the protected SEC_UA Actions variable overrides the default.
 let SEC_UA = DEFAULT_SEC_UA;
 
@@ -334,6 +343,10 @@ export type UpdaterConfig = {
   skipWisdomTree: boolean;
   skipYahoo: boolean;
   secUa: string;
+  // Timing knobs, not user controls: tests shrink them, production uses the defaults.
+  proxyGapMs: number;
+  fetchTimeoutMs: number;
+  retryDelayMs: number;
 };
 
 const EMPTY_RETURNS: CatalogReturns = { ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null };
@@ -395,7 +408,8 @@ export function toIsoDate(value: unknown): string {
   }
   const us = /^(\d{1,2})[/-](\d{1,2})[/-](\d{4})$/.exec(raw);
   if (us) return `${us[3]}-${us[1].padStart(2, '0')}-${us[2].padStart(2, '0')}`;
-  const parsed = Date.parse(raw);
+  // Month-name dates are parsed as UTC so a run east of UTC gives the same date.
+  const parsed = Date.parse(/[T:]|\b(?:UTC|GMT|Z)\b/.test(raw) ? raw : `${raw} UTC`);
   return Number.isNaN(parsed) ? raw : new Date(parsed).toISOString().slice(0, 10);
 }
 
@@ -403,7 +417,7 @@ function formatDate(value: string | null | undefined): string {
   const iso = toIsoDate(value);
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
   if (!match) return iso || '—';
-  return `${MONTHS[Number(match[2]) - 1]} ${Number(match[3])} ${match[1]}`;
+  return `${MONTHS[Number(match[2]) - 1]} ${match[3]} ${match[1]}`;
 }
 
 function formatUsDate(epoch: number): string {
@@ -528,6 +542,9 @@ export function readConfig(env: Record<string, string | undefined> = process.env
     skipWisdomTree: parseBoolean(env.SKIP_WISDOMTREE),
     skipYahoo: parseBoolean(env.SKIP_YAHOO),
     secUa: env.SEC_UA?.trim() || DEFAULT_SEC_UA,
+    proxyGapMs: PROXY_GAP_MS,
+    fetchTimeoutMs: FETCH_TIMEOUT_MS,
+    retryDelayMs: RETRY_DELAY_MS,
   };
 }
 
@@ -640,9 +657,22 @@ async function paceRequests(): Promise<void> {
   let lane = 0;
   for (let i = 1; i < requestGates.length; i++) if (requestGates[i] < requestGates[lane]) lane = i;
   const wait = Math.max(0, requestGates[lane] - now);
+  // The lane slot is reserved synchronously, before awaiting.
   requestGates[lane] = Math.max(now, requestGates[lane]) + Math.max(0, requestSleepSeconds * 1000);
   if (wait) await sleep(wait);
 }
+
+// r.jina.ai is shared by every worker: one global gate, the slot is reserved before awaiting.
+let proxyNextStart = 0;
+async function paceProxy(config: UpdaterConfig): Promise<void> {
+  const now = Date.now();
+  const start = Math.max(now, proxyNextStart);
+  proxyNextStart = start + Math.max(0, config.proxyGapMs);
+  if (start > now) await sleep(start - now);
+}
+
+// Set when wisdomtree.com answered a direct request with a Cloudflare block: later funds in the run go straight to the proxy.
+let directBlocked = false;
 
 class HttpError extends Error {
   status: number;
@@ -658,18 +688,23 @@ function retryable(error: unknown): boolean {
   return true;
 }
 
+/** One request with a timeout that covers headers and body. */
+async function fetchOnce(url: string, config: UpdaterConfig, headers: Record<string, string>): Promise<string> {
+  const response = await fetch(url, { headers: { 'User-Agent': GENERIC_UA, Accept: '*/*', ...headers }, signal: AbortSignal.timeout(config.fetchTimeoutMs) });
+  if (!response.ok) throw new HttpError(response.status, `${response.status} ${response.statusText}`);
+  return await response.text();
+}
+
 async function fetchText(url: string, label: string, config: UpdaterConfig, headers: Record<string, string> = {}): Promise<string> {
   let lastError: unknown = new Error('no request attempted');
   for (let attempt = 0; attempt <= config.maxRetries; attempt += 1) {
     try {
       await paceRequests();
-      const response = await fetch(url, { headers: { 'User-Agent': SEC_UA, Accept: '*/*', ...headers } });
-      if (!response.ok) throw new HttpError(response.status, `${response.status} ${response.statusText}`);
-      return await response.text();
+      return await fetchOnce(url, config, headers);
     } catch (error) {
       lastError = error;
       if (attempt >= config.maxRetries || !retryable(error)) break;
-      await sleep(Math.min(30_000, 800 * 2 ** attempt));
+      await sleep(Math.min(30_000, config.retryDelayMs * 2 ** attempt));
     }
   }
   throw new Error(`${label}: ${lastError instanceof Error ? lastError.message : String(lastError)}`);
@@ -684,22 +719,50 @@ async function fetchJson(url: string, label: string, config: UpdaterConfig, head
   }
 }
 
-async function fetchCatalog(config: UpdaterConfig): Promise<{ markdown: string; source: string }> {
-  const urls = [WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL];
-  let lastError: unknown;
-  for (const url of urls) {
+/** The read-only r.jina.ai rendering: one global gate (>= 3.2 s between starts), at most one retry, and a verification page counts as a failure. */
+async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<string> {
+  let lastError: unknown = new Error('no request attempted');
+  for (let attempt = 0; attempt < 2; attempt += 1) {
     try {
-      const markdown = await fetchText(url, `[catalog ] ${url}`, config, { Accept: 'text/markdown,text/html;q=0.9' });
-      if (/WisdomTree Fund\s*\|\s*Fund Ticker/i.test(markdown)) {
-        parseCatalogMarkdown(markdown); // a table without fund rows falls through to the next source
-        return { markdown, source: url === WISDOMTREE_CATALOG_URL ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
-      }
-      lastError = new Error('product table not present');
+      await paceProxy(config);
+      const text = await fetchOnce(url, config, { Accept: 'text/markdown' });
+      if (!valid(text)) throw new Error('proxy returned a verification page or an unexpected document');
+      return text;
     } catch (error) {
       lastError = error;
     }
   }
-  throw lastError instanceof Error ? lastError : new Error(String(lastError));
+  throw new Error(`${label}: ${lastError instanceof Error ? lastError.message : String(lastError)}`);
+}
+
+/** Direct first (a single read-only GET, no retry), the proxy only as the fallback. A Cloudflare block latches for the rest of the run. */
+async function fetchWisdomTreePage(directUrl: string, proxyUrl: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<{ text: string; via: 'direct' | 'proxy' }> {
+  if (!directBlocked) {
+    try {
+      await paceRequests();
+      const text = await fetchOnce(directUrl, config, { Accept: 'text/markdown,text/html;q=0.9' });
+      if (valid(text)) return { text, via: 'direct' };
+      directBlocked = true;
+    } catch (error) {
+      if (error instanceof HttpError && (error.status === 403 || error.status === 429)) directBlocked = true;
+    }
+  }
+  return { text: await fetchViaProxy(proxyUrl, label, config, valid), via: 'proxy' };
+}
+
+function looksLikeCatalog(text: string): boolean {
+  if (!/WisdomTree Fund\s*\|\s*Fund Ticker/i.test(text)) return false;
+  try { return parseCatalogMarkdown(text).length > 0; } catch { return false; }
+}
+
+/** A real product page carries the NAV table or the Total Returns section; a Cloudflare "Just a moment" page carries neither. */
+export function looksLikeProductPage(text: string): boolean {
+  return /###\s+Total Returns\b/i.test(text) || /\|\s*NAV\s*\|/i.test(text) || /\|\s*Closing Market Price\s*\|/i.test(text);
+}
+
+async function fetchCatalog(config: UpdaterConfig): Promise<{ markdown: string; source: string }> {
+  const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, '[catalog ] WisdomTree product table', config, looksLikeCatalog);
+  return { markdown: text, source: via === 'direct' ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
 }
 
 function productProxyUrl(fundPage: string): string {
@@ -1208,6 +1271,12 @@ function annualized(start: number | null, end: number | null, years: number): nu
   return round(((end / start) ** (1 / years) - 1) * 100, 2);
 }
 
+/** Since-inception annualized return; null under one year of history (a few weeks annualized is noise). */
+function annualizedSince(first: ChartDay, end: number, date: Date): number | null {
+  const years = (date.getTime() - new Date(`${first.date}T00:00:00Z`).getTime()) / (365.25 * 86_400_000);
+  return years < 1 ? null : annualized(first.adjClose, end, years);
+}
+
 function anchor(days: ChartDay[], target: Date): ChartDay | null {
   let found: ChartDay | null = null;
   for (const day of days) {
@@ -1238,7 +1307,7 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
     cagr3y: annualized(start(anchor(ordered, target(3))), end, 3),
     cagr5y: annualized(start(anchor(ordered, target(5))), end, 5),
     cagr10y: annualized(start(anchor(ordered, target(10))), end, 10),
-    siAnn: ordered.length > 1 ? annualized(ordered[0].adjClose, end, Math.max(1 / 365, (date.getTime() - new Date(`${ordered[0].date}T00:00:00Z`).getTime()) / (365.25 * 86_400_000))) : null,
+    siAnn: ordered.length > 1 ? annualizedSince(ordered[0], end, date) : null,
   };
 }
 
@@ -1254,15 +1323,6 @@ export function inferDistributionFrequency(dividends: Array<{ epoch: number; amo
   if (average <= 240) return { frequency: 'Semi-Annual', paymentsPerYear: 2 };
   if (average <= 500) return { frequency: 'Annual', paymentsPerYear: 1 };
   return { frequency: 'Irregular', paymentsPerYear: null };
-}
-
-function lastCompletedQuarterEnd(now = new Date()): string {
-  const month = now.getUTCMonth();
-  const quarterEndMonth = Math.floor(month / 3) * 3 - 1;
-  const year = quarterEndMonth < 0 ? now.getUTCFullYear() - 1 : now.getUTCFullYear();
-  const normalizedMonth = (quarterEndMonth + 12) % 12;
-  const day = new Date(Date.UTC(year, normalizedMonth + 1, 0));
-  return day.toISOString().slice(0, 10);
 }
 
 export const RETURNS_BASIS_OFFICIAL = 'official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes';
@@ -1362,7 +1422,7 @@ function parsePreviousFund(ticker: string, row: JsonRecord): CatalogFund {
     isin: String(row.isin || ''),
     benchmark: '',
     ter: numberOrNull(row.terValue),
-    grossTer: null,
+    grossTer: numberOrNull(row.terGrossValue),
     nav: numberOrNull(row.navValue),
     close: numberOrNull(row.closePriceValue),
     premiumDiscount: numberOrNull(row.premiumDiscountValue),
@@ -1439,6 +1499,19 @@ export function samePublishedContent(previous: string, value: unknown): boolean 
   } catch { return false; }
 }
 
+/** Writes through a temp file and a rename so a killed run never leaves a half-written JSON file. */
+async function writeAtomic(file: URL, text: string): Promise<void> {
+  await mkdir(new URL('.', file), { recursive: true });
+  const tmp = new URL(`${file.pathname.split('/').pop()}.tmp-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`, file);
+  try {
+    await writeFile(tmp, text, 'utf8');
+    await rename(tmp, file);
+  } catch (error) {
+    await rm(tmp, { force: true }).catch(() => {});
+    throw error;
+  }
+}
+
 async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
   const text = `${JSON.stringify(value, null, 2)}\n`;
   try {
@@ -1447,14 +1520,13 @@ async function writeIfChanged(file: URL, value: unknown): Promise<boolean> {
   } catch {
     // New file.
   }
-  await mkdir(new URL('.', file), { recursive: true });
-  await writeFile(file, text, 'utf8');
+  await writeAtomic(file, text);
   return true;
 }
 
-async function writePages(fundDir: URL, ticker: string, kind: 'holdings' | 'history', headers: string[], rows: JsonRecord[], pageSize: number, asOfDate: string | null, source: string): Promise<JsonRecord> {
+/** Writes the page files and returns the manifest plus the stale page files; those are removed only after the new meta.json is written. */
+async function writePages(fundDir: URL, ticker: string, kind: 'holdings' | 'history', headers: string[], rows: JsonRecord[], pageSize: number, asOfDate: string | null, source: string): Promise<{ manifest: JsonRecord; stale: URL[] }> {
   const dir = new URL(`${kind}/`, fundDir);
-  await mkdir(dir, { recursive: true });
   const pageCount = rows.length ? Math.ceil(rows.length / pageSize) : 0;
   const kept = new Set<string>();
   for (let page = 0; page < pageCount; page += 1) {
@@ -1462,12 +1534,14 @@ async function writePages(fundDir: URL, ticker: string, kind: 'holdings' | 'hist
     kept.add(name);
     await writeIfChanged(new URL(name, dir), { ticker, page: page + 1, pageSize, totalRows: rows.length, headers, rows: rows.slice(page * pageSize, (page + 1) * pageSize) });
   }
+  const stale: URL[] = [];
   try {
-    for (const name of await readdir(dir)) if (name.endsWith('.json') && !kept.has(name)) await rm(new URL(name, dir), { force: true });
+    for (const name of await readdir(dir)) if (name.endsWith('.json') && !kept.has(name)) stale.push(new URL(name, dir));
   } catch {
     // Directory may not exist on a zero-row first run.
   }
-  return { pages: [...kept].sort().map((name) => `${kind}/${name}`), pageSize, totalRows: rows.length, ...(kind === 'holdings' ? { asOfDate, asOf: asOfDate ? formatDate(asOfDate) : '—', source } : { asOf: asOfDate ? formatDate(asOfDate) : '—', source }) };
+  const manifest = { pages: [...kept].sort().map((name) => `${kind}/${name}`), pageSize, totalRows: rows.length, ...(kind === 'holdings' ? { asOfDate, asOf: asOfDate ? formatDate(asOfDate) : '—', source } : { asOf: asOfDate ? formatDate(asOfDate) : '—', source }) };
+  return { manifest, stale };
 }
 
 function catalogFilterReasons(fund: CatalogFund, config: UpdaterConfig): string[] {
@@ -1476,21 +1550,61 @@ function catalogFilterReasons(fund: CatalogFund, config: UpdaterConfig): string[
   if (!rangeMatches(fund.netAssets, config.aum)) reasons.push('AUM');
   if (!rangeMatches(fund.ter, config.ter)) reasons.push('TER');
   if (!rangeMatches(fund.dividendYield, config.dividendYield)) reasons.push('DIVIDEND_YIELD');
-  for (const [period, range] of Object.entries(config.performance) as [ReturnPeriod, Range][]) {
-    const value = period === 'YTD' ? null : null; // returns are derived after Yahoo; young funds remain eligible.
-    if (value !== null && !rangeMatches(value, range)) reasons.push(`PERFORMANCE_${period}`);
-  }
   return reasons;
 }
 
+/** Return filters need the fetched returns: a fund whose value for a bounded range is unavailable (null) is excluded. */
 function matchesReturnFilters(metrics: JsonRecord, config: UpdaterConfig): string[] {
   const reasons: string[] = [];
-  const annual: Record<ReturnPeriod, number | null> = { YTD: metrics.ytd, '1Y': metrics.cagr1y ?? metrics.tr1y, '3Y': metrics.cagr3y, '5Y': metrics.cagr5y, '10Y': metrics.cagr10y };
+  const annual: Record<ReturnPeriod, number | null> = { YTD: metrics.ytd, '1Y': metrics.tr1y, '3Y': metrics.cagr3y, '5Y': metrics.cagr5y, '10Y': metrics.cagr10y };
   const cumulative: Record<ReturnPeriod, number | null> = { YTD: metrics.ytd, '1Y': metrics.tr1y, '3Y': metrics.tr3y, '5Y': metrics.tr5y, '10Y': metrics.tr10y };
-  for (const [period, range] of Object.entries(config.performance) as [ReturnPeriod, Range][]) if (annual[period] !== null && !rangeMatches(annual[period], range)) reasons.push(`PERFORMANCE_${period}`);
-  for (const [period, range] of Object.entries(config.totalReturn) as [ReturnPeriod, Range][]) if (cumulative[period] !== null && !rangeMatches(cumulative[period], range)) reasons.push(`TOTAL_RETURN_${period}`);
+  for (const [period, range] of Object.entries(config.performance) as [ReturnPeriod, Range][]) if (!rangeMatches(annual[period], range)) reasons.push(`PERFORMANCE_${period}`);
+  for (const [period, range] of Object.entries(config.totalReturn) as [ReturnPeriod, Range][]) if (!rangeMatches(cumulative[period], range)) reasons.push(`TOTAL_RETURN_${period}`);
   return reasons;
 }
+
+/** US ISIN from a 9-character CUSIP: country code US + CUSIP + Luhn check digit. Null when the CUSIP is malformed. */
+export function isinFromCusip(cusip: string): string | null {
+  const c = String(cusip ?? '').trim().toUpperCase();
+  if (!/^[0-9A-Z]{8}[0-9]$/.test(c)) return null;
+  const digits = [...`US${c}`].map((ch) => (/\d/.test(ch) ? ch : String(ch.charCodeAt(0) - 55))).join('');
+  let sum = 0;
+  let double = true;
+  for (let i = digits.length - 1; i >= 0; i -= 1) {
+    let d = Number(digits[i]);
+    if (double) { d *= 2; if (d > 9) d -= 9; }
+    sum += d;
+    double = !double;
+  }
+  return `US${c}${(10 - (sum % 10)) % 10}`;
+}
+
+const NULL_QUARTER_END = { asOfDate: '—', ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, navReturns: null, indexReturns: null };
+const METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'] as const;
+
+function monthEndToPriceReturns(monthEnd: JsonRecord): PriceReturns {
+  const iso = toIsoDate(monthEnd?.asOfDate);
+  return {
+    asOfDate: /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : '',
+    mo1: numberOrNull(monthEnd?.mo1), qtd: numberOrNull(monthEnd?.qtd), ytd: numberOrNull(monthEnd?.ytd), yr1: numberOrNull(monthEnd?.yr1),
+    cagr3y: numberOrNull(monthEnd?.yr3), cagr5y: numberOrNull(monthEnd?.yr5), cagr10y: numberOrNull(monthEnd?.yr10), siAnn: numberOrNull(monthEnd?.sinceInception),
+  };
+}
+
+/** Rows of a published distributions table (US-formatted date cells) back into DistributionRow values. */
+function distributionRowsFromTable(rows: unknown): DistributionRow[] {
+  const isoOrNull = (cell: unknown): string | null => { const iso = toIsoDate(cell); return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : null; };
+  const result: DistributionRow[] = [];
+  for (const cells of Array.isArray(rows) ? rows : []) {
+    if (!Array.isArray(cells)) continue;
+    const exDate = isoOrNull(cells[0]);
+    if (!exDate) continue;
+    result.push({ exDate, recordDate: isoOrNull(cells[1]), payableDate: isoOrNull(cells[2]), ordinaryIncome: numberOrNull(cells[3]), shortTermCapitalGains: numberOrNull(cells[4]), longTermCapitalGains: numberOrNull(cells[5]), returnOfCapital: numberOrNull(cells[6]), total: numberOrNull(cells[7] ?? cells[cells.length - 1]) });
+  }
+  return result;
+}
+
+const isOfficialSource = (value: unknown): boolean => /^WisdomTree (official|product-page)/.test(String(value ?? ''));
 
 async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: JsonRecord = {}): Promise<JsonRecord> {
   const reasons = catalogFilterReasons(fund, config);
@@ -1498,14 +1612,18 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     return { __skipped: true, ticker: fund.ticker, __skipReasons: reasons };
   }
   const fundDir = new URL(`funds/${fund.ticker}/`, API_ROOT);
-  await mkdir(fundDir, { recursive: true });
   const previousMeta = await readPreviousMeta(fund.ticker);
+  let fresh = false;
   let productPageMarkdown: string | null = null;
   let productSummary: ProductPageSummary | null = null;
+  let productVia: 'direct' | 'proxy' | null = null;
   if (!config.skipWisdomTree && fund.fundPage) {
     try {
-      productPageMarkdown = await fetchText(productProxyUrl(fund.fundPage), `[product ] ${fund.ticker}`, config, { Accept: 'text/markdown' });
+      const page = await fetchWisdomTreePage(fund.fundPage, productProxyUrl(fund.fundPage), `[product ] ${fund.ticker}`, config, looksLikeProductPage);
+      productPageMarkdown = page.text;
+      productVia = page.via;
       productSummary = parseProductPageSummary(productPageMarkdown);
+      fresh = true;
       if (productSummary.name) fund.name = productSummary.name;
       if (productSummary.cusip) fund.cusip = productSummary.cusip;
       if (productSummary.nav !== null) fund.nav = productSummary.nav;
@@ -1514,9 +1632,16 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       if (productSummary.netExpenseRatio !== null) fund.ter = productSummary.netExpenseRatio;
       if (productSummary.secYield !== null) fund.secYield = productSummary.secYield;
     } catch (error) {
+      productPageMarkdown = null;
+      productSummary = null;
       outputNote(`[ ${'product'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
+  const productFetched = productSummary !== null;
+  // The product page is one source: when it failed (or is skipped) everything it supplies is kept from the previous run as one unit.
+  if (!productFetched) fund.secYield = fund.secYield ?? numberOrNull(previous.metrics?.secYield);
+  fund.cusip = fund.cusip || String(previous.cusip || '');
+  fund.isin = fund.isin || String(previous.isin || '') || isinFromCusip(fund.cusip) || '';
   // SEC yield is only known after the product page, so this filter is applied here rather than from the catalog row.
   if (!rangeMatches(fund.secYield, config.secYield)) return { __skipped: true, ticker: fund.ticker, __skipReasons: ['SEC_YIELD'] };
 
@@ -1531,12 +1656,16 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       if (filing) {
         const parsed = parseNport(await fetchText(filing.accession.url, `[nport   ] ${fund.ticker}`, config, secHeaders()));
         const seriesMatches = !parsed.seriesId || parsed.seriesId.toUpperCase() === filing.ref.seriesId.toUpperCase();
-        if (seriesMatches && parsed.holdings.length) {
+        // A filing older than the published sheet never replaces it.
+        const previousAsOf = String(previousMeta?.holdings?.asOfDate || '');
+        const fresher = !previousAsOf || !parsed.repPdDate || parsed.repPdDate >= previousAsOf;
+        if (seriesMatches && fresher && parsed.holdings.length) {
           const names = await loadCompanyTickerTable(config);
           holdingsRows = fillNportTickers(parsed.holdings, names);
           holdingsHeaders = holdingsRows.some((row) => 'Coupon' in row || 'Maturity' in row) ? [...HOLDINGS_HEADERS, 'Coupon', 'Maturity'] : HOLDINGS_HEADERS;
           holdingsAsOf = parsed.repPdDate || null;
           nport = parsed;
+          fresh = true;
           holdingsSource = `SEC EDGAR Form N-PORT-P (accession ${filing.accession.accession}, report period ${parsed.repPdDate || 'n/a'})`;
         }
       }
@@ -1545,18 +1674,13 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     }
   }
 
-  if (!holdingsRows.length && config.edgarFallback && fund.fundPage) {
-    try {
-      const issuerMarkdown = productPageMarkdown ?? await fetchText(productProxyUrl(fund.fundPage), `[issuer  ] ${fund.ticker}`, config, { Accept: 'text/markdown' });
-      const top = parseTopHoldingsMarkdown(issuerMarkdown, fund.ticker, companyTickerMap || new Map());
-      if (top.rows.length) {
-        holdingsRows = top.rows;
-        holdingsHeaders = top.headers;
-        holdingsAsOf = top.asOfDate;
-        holdingsSource = 'WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)';
-      }
-    } catch {
-      // SEC is the normal route; keep a previous sheet or an empty sheet below.
+  if (!holdingsRows.length && config.edgarFallback && productPageMarkdown) {
+    const top = parseTopHoldingsMarkdown(productPageMarkdown, fund.ticker, companyTickerMap || new Map());
+    if (top.rows.length && (!previousMeta?.holdings?.totalRows || /^WisdomTree product page/.test(String(previousMeta.holdings.source || '')))) {
+      holdingsRows = top.rows;
+      holdingsHeaders = top.headers;
+      holdingsAsOf = top.asOfDate;
+      holdingsSource = 'WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)';
     }
   }
 
@@ -1576,6 +1700,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[chart   ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
       chart = parseChart(payload);
       days = chart.days;
+      fresh = fresh || days.length > 0;
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
@@ -1586,22 +1711,34 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     if (previousRows.length) historySource = previousMeta?.history?.source || 'previous run';
   }
 
-  // House policy: prefer official issuer data whenever it exists and is
-  // non-empty. The official "Recent Distributions" table only ever shows a
-  // small recent window, so Yahoo dividend events fill in older ex-dates it
-  // doesn't cover (or the whole history when the product-page fetch failed,
-  // both direct and proxy).
+  // Official returns, quarter-end returns and the official distributions table come from the product page. When it failed
+  // they are retained from the previous run together (returns with their date and basis), never replaced by Yahoo estimates.
+  const retainedReturns: JsonRecord | null = !productFetched && isOfficialSource(previousMeta?.returns?.derivedFrom) && previousMeta?.returns?.monthEnd ? previousMeta.returns : null;
+  const retainedDistributions: JsonRecord | null = !productFetched && isOfficialSource(previousMeta?.distributions?.source) && Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions : null;
   const officialDistributions = productPageMarkdown ? parseOfficialDistributions(productPageMarkdown) : [];
   const yahooDividends = chart?.dividends || [];
-  const { rows: distributionRecords, yahooOnlyCount } = mergeDistributionRecords(officialDistributions, yahooDividends);
+  const merged = mergeDistributionRecords(officialDistributions, yahooDividends);
+  const distributionRecords = retainedDistributions ? distributionRowsFromTable(retainedDistributions.rows) : merged.rows;
+  const yahooOnlyCount = merged.yahooOnlyCount;
   const distributionEvents = distributionRecordEvents(distributionRecords);
-  const frequency = inferDistributionFrequency(distributionEvents);
+  const frequency = retainedDistributions ? { frequency: String(retainedDistributions.frequency || '—'), paymentsPerYear: numberOrNull(retainedDistributions.paymentsPerYear) } : inferDistributionFrequency(distributionEvents);
   const latest = distributionEvents[distributionEvents.length - 1] || null;
   const derived = priceReturns(days);
   const officialReturns = productSummary?.officialReturns.monthEnd || null;
-  const effectiveReturns = mergeOfficialReturns(derived, officialReturns);
-  const price = productSummary?.marketPrice ?? chart?.regularMarketPrice ?? (days.length ? days[days.length - 1].close : numberOrNull(previous.closePriceValue));
-  const metrics = deriveMetrics(effectiveReturns, fund, distributionEvents, frequency, price, Boolean(officialReturns));
+  const effectiveReturns = retainedReturns ? monthEndToPriceReturns(retainedReturns.monthEnd) : mergeOfficialReturns(derived, officialReturns);
+  const officialBasis = Boolean(officialReturns) || retainedReturns !== null;
+
+  // NAV, market price and premium/discount travel together: from the page, or all retained when the page failed.
+  const retainedQuote = !productFetched && previous.navValue !== undefined;
+  const nav = retainedQuote ? numberOrNull(previous.navValue) : fund.nav;
+  const price = retainedQuote
+    ? numberOrNull(previous.closePriceValue)
+    : productSummary?.marketPrice ?? chart?.regularMarketPrice ?? (days.length ? days[days.length - 1].close : numberOrNull(previous.closePriceValue));
+  const marketPrice = price;
+  const premiumDiscount = retainedQuote
+    ? numberOrNull(previous.premiumDiscountValue)
+    : productSummary?.premiumDiscount ?? (nav && productSummary?.marketPrice ? round((productSummary.marketPrice / nav - 1) * 100, 2) : null);
+  const metrics = deriveMetrics(effectiveReturns, fund, distributionEvents, frequency, price, officialBasis);
   const returnFilterReasons = matchesReturnFilters(metrics, config);
   if (returnFilterReasons.length) {
     return { __skipped: true, ticker: fund.ticker, __skipReasons: returnFilterReasons };
@@ -1609,14 +1746,20 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
 
   const history = historyRows(days);
   const historyAsOf = derived.asOfDate || previousMeta?.history?.asOf || null;
-  const holdingManifest = await writePages(fundDir, fund.ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
-  const historyManifest = await writePages(fundDir, fund.ticker, 'history', historyHeaders(), history, config.historyPageSize, historyAsOf, historySource);
+  const holdingPages = await writePages(fundDir, fund.ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
+  const historyPages = await writePages(fundDir, fund.ticker, 'history', historyHeaders(), history, config.historyPageSize, historyAsOf, historySource);
   let distributionHeaders = DISTRIBUTION_HEADERS;
   let distributionTable: string[][];
   let distributionFrequency: string;
   let distributionPaymentsPerYear: number | null;
   let distributionsSource: string;
-  if (distributionRecords.length) {
+  if (retainedDistributions) {
+    distributionHeaders = retainedDistributions.headers || DISTRIBUTION_HEADERS;
+    distributionTable = retainedDistributions.rows;
+    distributionFrequency = frequency.frequency;
+    distributionPaymentsPerYear = frequency.paymentsPerYear;
+    distributionsSource = String(retainedDistributions.source);
+  } else if (distributionRecords.length) {
     distributionTable = distributionRecords.map(distributionRowToCells);
     distributionFrequency = frequency.frequency;
     distributionPaymentsPerYear = frequency.paymentsPerYear;
@@ -1632,28 +1775,25 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     distributionPaymentsPerYear = previousMeta?.distributions?.paymentsPerYear ?? null;
     distributionsSource = previousMeta?.distributions?.source || 'not available';
   }
-  const marketPrice = price;
-  const nav = fund.nav ?? numberOrNull(previous.navValue);
-  const premiumDiscount = fund.premiumDiscount ?? (nav && marketPrice ? round((marketPrice / nav - 1) * 100, 2) : numberOrNull(previous.premiumDiscountValue));
   const netAssets = fund.netAssets ?? nport?.netAssets ?? numberOrNull(previous.aumValue);
   const asOfDate = fund.asOfDate || toIsoDate(previous.asOfDate) || null;
   const asOfLabel = asOfDate ? formatDate(asOfDate) : chart?.regularMarketTime ? formatDate(new Date(chart.regularMarketTime * 1000).toISOString().slice(0, 10)) : '—';
-  const navAsOfLabel = productSummary?.navAsOfDate ? formatDate(productSummary.navAsOfDate) : asOfLabel;
-  const marketPriceAsOfLabel = productSummary?.marketPriceAsOfDate ? formatDate(productSummary.marketPriceAsOfDate) : asOfLabel;
-  const returns = {
+  const navAsOfLabel = productSummary?.navAsOfDate ? formatDate(productSummary.navAsOfDate) : retainedQuote && previousMeta?.nav?.asOfDate ? String(previousMeta.nav.asOfDate) : asOfLabel;
+  const marketPriceAsOfLabel = productSummary?.marketPriceAsOfDate ? formatDate(productSummary.marketPriceAsOfDate) : retainedQuote && previousMeta?.marketPrice?.asOfDate ? String(previousMeta.marketPrice.asOfDate) : asOfLabel;
+  const returns = retainedReturns ?? {
     derivedFrom: officialReturns
       ? 'WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).'
       : 'adjusted market-price closes (Yahoo chart API), not official WisdomTree NAV returns',
     monthEnd: {
       asOfDate: effectiveReturns.asOfDate ? formatDate(effectiveReturns.asOfDate) : '—',
-      mo1: effectiveReturns.mo1, mo1Text: effectiveReturns.mo1 === null ? '—' : `${effectiveReturns.mo1.toFixed(2)}%`,
-      qtd: effectiveReturns.qtd, qtdText: effectiveReturns.qtd === null ? '—' : `${effectiveReturns.qtd.toFixed(2)}%`,
-      ytd: effectiveReturns.ytd, ytdText: effectiveReturns.ytd === null ? '—' : `${effectiveReturns.ytd.toFixed(2)}%`,
-      yr1: effectiveReturns.yr1, yr1Text: effectiveReturns.yr1 === null ? '—' : `${effectiveReturns.yr1.toFixed(2)}%`,
-      yr3: effectiveReturns.cagr3y, yr3Text: effectiveReturns.cagr3y === null ? '—' : `${effectiveReturns.cagr3y.toFixed(2)}%`,
-      yr5: effectiveReturns.cagr5y, yr5Text: effectiveReturns.cagr5y === null ? '—' : `${effectiveReturns.cagr5y.toFixed(2)}%`,
-      yr10: effectiveReturns.cagr10y, yr10Text: effectiveReturns.cagr10y === null ? '—' : `${effectiveReturns.cagr10y.toFixed(2)}%`,
-      sinceInception: effectiveReturns.siAnn, sinceInceptionText: effectiveReturns.siAnn === null ? '—' : `${effectiveReturns.siAnn.toFixed(2)}%`,
+      mo1: effectiveReturns.mo1, mo1Text: pctText(effectiveReturns.mo1),
+      qtd: effectiveReturns.qtd, qtdText: pctText(effectiveReturns.qtd),
+      ytd: effectiveReturns.ytd, ytdText: pctText(effectiveReturns.ytd),
+      yr1: effectiveReturns.yr1, yr1Text: pctText(effectiveReturns.yr1),
+      yr3: effectiveReturns.cagr3y, yr3Text: pctText(effectiveReturns.cagr3y),
+      yr5: effectiveReturns.cagr5y, yr5Text: pctText(effectiveReturns.cagr5y),
+      yr10: effectiveReturns.cagr10y, yr10Text: pctText(effectiveReturns.cagr10y),
+      sinceInception: effectiveReturns.siAnn, sinceInceptionText: pctText(effectiveReturns.siAnn),
       navReturns: formatOfficialReturnRow(officialReturns?.navReturns ?? null),
       indexReturns: formatOfficialReturnRow(officialReturns?.indexReturns ?? null),
     },
@@ -1667,9 +1807,14 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       sinceInception: productSummary.officialReturns.quarterEnd.siAnn,
       navReturns: formatOfficialReturnRowPlain(productSummary.officialReturns.quarterEnd.navReturns),
       indexReturns: formatOfficialReturnRowPlain(productSummary.officialReturns.quarterEnd.indexReturns),
-    } : { asOfDate: formatDate(lastCompletedQuarterEnd()), ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, navReturns: null, indexReturns: null },
+    } : { ...NULL_QUARTER_END },
   };
 
+  const productPageStatus = productFetched
+    ? `fetched ${productVia === 'direct' ? 'directly' : 'through the read-only rendering proxy'}`
+    : config.skipWisdomTree
+      ? 'skipped (SKIP_WISDOMTREE); official values retained from the previous run'
+      : retainedReturns || retainedDistributions || retainedQuote ? 'unavailable this run; official values retained from the previous run' : 'unavailable this run; no previous official values';
   const meta: JsonRecord = {
     ticker: fund.ticker,
     name: fund.name,
@@ -1678,7 +1823,8 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     source: {
       fundPage: fund.fundPage,
       officialProductPage: productProxyUrl(fund.fundPage),
-      productPageAsOf: productSummary?.productAsOfDate ? formatDate(productSummary.productAsOfDate) : null,
+      productPageStatus,
+      productPageAsOf: productSummary?.productAsOfDate ? formatDate(productSummary.productAsOfDate) : (previousMeta?.source?.productPageAsOf ?? null),
       holdingsDownload: null,
       pricesDownload: null,
       yahooChart: `${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}`,
@@ -1687,39 +1833,44 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       distributionsSource,
       provider: 'WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API',
     },
-    identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, indexTicker: fund.benchmark || null },
-    expenseRatio: { display: fund.ter === null ? '—' : `${fund.ter}%`, value: fund.ter },
+    identifiers: { cusip: fund.cusip || null, isin: fund.isin || null, isinSource: fund.isin ? 'US ISIN derived from the CUSIP (country code + CUSIP + check digit)' : null, indexTicker: fund.benchmark || null },
+    expenseRatio: { display: fund.ter === null ? '—' : `${fund.ter}%`, value: fund.ter, grossDisplay: fund.grossTer === null ? '—' : `${fund.grossTer}%`, grossValue: fund.grossTer, basis: 'value is the net expense ratio (after waivers); grossValue is the gross expense ratio' },
     nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate: navAsOfLabel },
     marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount },
     aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: asOfDate ? formatDate(asOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : '—'), source: fund.source === 'wisdomtree' ? 'WisdomTree product table Assets Under Mgmt $(000)' : nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run' },
-    yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldKind: fund.dividendYield !== null ? 'trailing 12-month, published by WisdomTree catalog' : 'indicated (latest distribution x inferred frequency / market price)', distributionRate: productSummary?.distributionYield ?? null, secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: productSummary?.secYield !== null && productSummary?.secYield !== undefined ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
+    yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldKind: fund.dividendYield !== null ? 'trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)' : 'indicated (latest distribution x inferred frequency / market price)', distributionRate: productSummary?.distributionYield ?? numberOrNull(previousMeta?.yields?.distributionRate), secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: metrics.secYield !== null ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
     returns,
     distributions: { frequency: distributionFrequency, paymentsPerYear: distributionPaymentsPerYear, source: distributionsSource, headers: distributionHeaders, rows: distributionTable },
-    holdings: holdingManifest,
-    history: historyManifest,
+    holdings: holdingPages.manifest,
+    history: historyPages.manifest,
   };
   await writeIfChanged(new URL('meta.json', fundDir), meta);
+  // Stale pages go only after the new meta.json no longer lists them.
+  for (const file of [...holdingPages.stale, ...historyPages.stale]) await rm(file, { force: true });
 
-  return buildIndexRow({
-    fund,
-    nav,
-    marketPrice,
-    premiumDiscount,
-    netAssets,
-    asOfLabel,
-    inceptionDate: fund.inception ? formatDate(fund.inception) : chart?.firstTradeDate ? formatDate(new Date(chart.firstTradeDate * 1000).toISOString().slice(0, 10)) : (previous.inceptionDate || '—'),
-    exchange: fund.exchange || chart?.exchangeName || previous.exchange || '',
-    distributions: { frequency: distributionFrequency, exDate: latest ? formatUsDate(latest.epoch) : (previous.distributions?.exDate || '—'), dividend: latest ? String(round(latest.amount, 6)) : (previous.distributions?.dividend || '—') },
-    returns,
-    metrics,
-    holdings: holdingsRows.length,
-    history: history.length,
-  });
+  return {
+    ...buildIndexRow({
+      fund,
+      nav,
+      marketPrice,
+      premiumDiscount,
+      netAssets,
+      asOfLabel,
+      inceptionDate: fund.inception ? formatDate(fund.inception) : chart?.firstTradeDate ? formatDate(new Date(chart.firstTradeDate * 1000).toISOString().slice(0, 10)) : (previous.inceptionDate || '—'),
+      exchange: fund.exchange || chart?.exchangeName || previous.exchange || '',
+      distributions: { frequency: distributionFrequency, exDate: latest ? formatUsDate(latest.epoch) : (previous.distributions?.exDate || '—'), dividend: latest ? String(round(latest.amount, 6)) : (previous.distributions?.dividend || '—') },
+      returns,
+      metrics,
+      holdings: holdingsRows.length,
+      history: history.length,
+    }),
+    __fresh: fresh,
+  };
 }
 
 type IndexRowInput = {
-  fund: Pick<CatalogFund, 'ticker' | 'name' | 'category' | 'fundPage' | 'cusip' | 'isin' | 'ter'>;
+  fund: Pick<CatalogFund, 'ticker' | 'name' | 'category' | 'fundPage' | 'cusip' | 'isin' | 'ter'> & { grossTer?: number | null };
   nav: number | null;
   marketPrice: number | null;
   premiumDiscount: number | null;
@@ -1747,6 +1898,8 @@ export function buildIndexRow(input: IndexRowInput): JsonRecord {
     isin: fund.isin || null,
     ter: fund.ter === null ? '—' : `${fund.ter}%`,
     terValue: fund.ter,
+    terGross: fund.grossTer === null || fund.grossTer === undefined ? '—' : `${fund.grossTer}%`,
+    terGrossValue: fund.grossTer ?? null,
     nav: nav === null ? '—' : `$${nav.toFixed(2)}`,
     navValue: nav,
     aum: formatAumDisplay(netAssets),
@@ -1791,6 +1944,7 @@ export function rowFromMeta(meta: JsonRecord, firstHistoryDate: string | null = 
     cusip: String(meta.identifiers?.cusip || ''),
     isin: String(meta.identifiers?.isin || ''),
     ter: numberOrNull(meta.expenseRatio?.value),
+    grossTer: numberOrNull(meta.expenseRatio?.grossValue),
     dividendYield: numberOrNull(meta.yields?.dividendYield),
     secYield: numberOrNull(meta.yields?.secYield),
   };
@@ -1833,17 +1987,15 @@ export async function readKnownRows(): Promise<Map<string, JsonRecord>> {
   return known;
 }
 
-export const HISTORY_RANGES = ['1d', '5d', '1mo', '3mo', '6mo', '1y', '2y', '5y', '10y', 'ytd', 'max'] as const;
+/** Accepted HISTORY_RANGE values: `max` or a whole number of years such as `5y`. */
+export const HISTORY_RANGE_PATTERN = /^(max|[1-9]\d?y)$/;
 
-/** Yahoo chart query: `max` requests the full window; any other range limits the requested history window. */
+/** Yahoo chart query. Yahoo ignores `range` when period1=0, so every window is explicit: `max` starts at 0, `Ny` starts N years before now. */
 export function yahooChartQuery(historyRange: string, nowSeconds = Math.floor(Date.now() / 1000)): URLSearchParams {
   const query = new URLSearchParams({ interval: '1d', events: 'div|split', includeAdjustedClose: 'true' });
-  if (!historyRange || historyRange === 'max') {
-    query.set('period1', '0');
-    query.set('period2', String(nowSeconds + 86_400));
-  } else {
-    query.set('range', historyRange);
-  }
+  const years = /^([1-9]\d?)y$/.exec(historyRange || '')?.[1];
+  query.set('period1', years ? String(Math.max(0, Math.floor(nowSeconds - Number(years) * 365.25 * 86_400))) : '0');
+  query.set('period2', String(nowSeconds + 86_400));
   return query;
 }
 
@@ -1929,7 +2081,7 @@ Environment variables (all filters use AND logic):
   TOTAL_RETURN_YTD|1Y|3Y|5Y|10Y=min:max cumulative ranges
   HOLDINGS_PAGE_SIZE=250
   HISTORY_PAGE_SIZE=1000
-  HISTORY_RANGE=max   Yahoo window: max, ytd, 1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y or 10y
+  HISTORY_RANGE=max   Yahoo window: max or N years (1y, 5y, 10y ...), sent as explicit period1/period2
   MAX_RETRIES=2       retries after the first request (integer >= 1)
   STORE_RAW_DOWNLOADS=off
   EDGAR_FALLBACK=1
@@ -2000,7 +2152,7 @@ export function resolveControls(
     result.USE_SYSTEM_CA = result.USE_SYSTEM_CA.toLowerCase();
     if (!['auto', 'true', 'false'].includes(result.USE_SYSTEM_CA)) throw new Error('USE_SYSTEM_CA: expected auto, true or false');
   }
-  if (result.HISTORY_RANGE && !(HISTORY_RANGES as readonly string[]).includes(result.HISTORY_RANGE.toLowerCase())) throw new Error(`HISTORY_RANGE: expected one of ${HISTORY_RANGES.join(', ')}`);
+  if (result.HISTORY_RANGE && !HISTORY_RANGE_PATTERN.test(result.HISTORY_RANGE.toLowerCase())) throw new Error('HISTORY_RANGE: expected max or a number of years such as 5y');
   readConfig(result); // validate every min:max filter before any request or write
   return result;
 }
@@ -2038,24 +2190,42 @@ export async function writeIndex(funds: JsonRecord[]): Promise<void> {
   });
 }
 
-export async function runUpdate(config: UpdaterConfig): Promise<void> {
+/** Index rows always carry the full metrics key set (null when unavailable); a row without funds/<T>/meta.json has no dataFile. */
+function normalizeIndexRow(row: JsonRecord, hasMeta: boolean): JsonRecord {
+  const metrics: JsonRecord = {};
+  for (const key of METRIC_KEYS) metrics[key] = row.metrics?.[key] ?? (key === 'returnsBasis' ? RETURNS_BASIS_DERIVED : key.endsWith('Text') ? '—' : null);
+  for (const [key, value] of Object.entries(row.metrics || {})) if (!(key in metrics)) metrics[key] = value;
+  return { ...row, dataFile: hasMeta ? row.dataFile ?? `./funds/${row.ticker}/meta.json` : null, metrics };
+}
+
+async function hasMetaFile(ticker: string): Promise<boolean> {
+  try { await readFile(new URL(`funds/${ticker}/meta.json`, API_ROOT), 'utf8'); return true; } catch { return false; }
+}
+
+export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT_DEADLINE_MS): Promise<void> {
+  const startedAt = Date.now();
   SEC_UA = config.secUa;
   requestSleepSeconds = config.requestSleep;
   requestGates = new Array(Math.max(1, config.concurrency)).fill(0);
+  proxyNextStart = 0;
+  directBlocked = false;
   outputPrintConfig('WisdomTree', config);
 
   // Every fund already published (index rows plus funds/*/meta.json): the floor of the feed, never shrunk by this run.
   const previous = await readKnownRows();
   const catalog = new Map<string, CatalogFund>();
   let catalogSource = 'previous api/wisdomtree/index.json';
+  let liveCatalog: CatalogFund[] | null = null;
   if (!config.skipWisdomTree) {
     try {
       const fetched = await fetchCatalog(config);
       const parsed = parseCatalogMarkdown(fetched.markdown);
+      liveCatalog = parsed;
       for (const fund of parsed) catalog.set(fund.ticker, fund);
       catalogSource = fetched.source;
       if (config.storeRawDownloads) {
-        const raw = new URL('raw/', API_ROOT);
+        // Raw downloads are a debugging aid: they live outside api/wisdomtree so the workflow never commits them.
+        const raw = new URL('../../data/raw/', API_ROOT);
         await mkdir(raw, { recursive: true });
         await writeFile(new URL(`product-table-${new Date().toISOString().slice(0, 10)}.md`, raw), fetched.markdown, 'utf8');
       }
@@ -2069,40 +2239,61 @@ export async function runUpdate(config: UpdaterConfig): Promise<void> {
   const universe = [...catalog.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
   if (!universe.length) throw new Error('No catalog rows available. Run this where www.wisdomtree.com is reachable or seed api/wisdomtree/index.json first.');
   console.log(`[ ${'catalog'.padEnd(9)}] ${universe.length} WisdomTree ETFs (${catalogSource})`);
+  const noteLines: string[] = [];
+  if (liveCatalog && previous.size) {
+    const live = new Set(liveCatalog.map((fund) => fund.ticker));
+    const added = liveCatalog.map((fund) => fund.ticker).filter((ticker) => !previous.has(ticker));
+    if (added.length) noteLines.push(`NEW FUNDS: ${added.join(', ')}`);
+    // A catalog that lost more than half of the known funds is treated as truncated: nothing is reported then.
+    const dropped = [...previous.keys()].filter((ticker) => !live.has(ticker)).sort();
+    if (dropped.length && live.size * 2 >= previous.size) noteLines.push(`DROPPED FUNDS: ${dropped.join(', ')} (no longer in the live catalog; their published data is kept)`);
+  }
+  for (const line of noteLines) console.log(`[ ${'catalog'.padEnd(9)}] ${line}`);
+  if (config.tickers) {
+    const known = new Set(universe.map((fund) => fund.ticker));
+    const unknown = [...config.tickers].filter((ticker) => !known.has(ticker));
+    if (unknown.length) throw new Error(`TICKERS: unknown ticker${unknown.length === 1 ? '' : 's'} ${unknown.join(', ')}`);
+  }
 
   let state: JsonRecord = {};
   try { state = JSON.parse(await readFile(STATE_FILE, 'utf8')) as JsonRecord; } catch { state = {}; }
-  const cursor = config.maxFetches > 0 ? String(state.cursor || '') : '';
-  const index = cursor ? universe.findIndex((fund) => fund.ticker === cursor) : -1;
-  const ordered = index >= 0 ? universe.slice(index + 1).concat(universe.slice(0, index + 1)) : universe;
+  // The batch is taken from the funds that pass the catalog filters, in ticker order, starting after the cursor (wrapping around).
+  const eligible = universe.filter((fund) => catalogFilterReasons(fund, config).length === 0);
+  const cursor = config.maxFetches > 0 && !config.tickers ? String(state.cursor || '') : '';
+  const ordered = cursor ? eligible.filter((fund) => fund.ticker > cursor).concat(eligible.filter((fund) => fund.ticker <= cursor)) : eligible;
   const queue = ordered.slice();
   const totalAttempts = config.maxFetches > 0 ? Math.min(config.maxFetches, ordered.length) : ordered.length;
   const results: JsonRecord[] = [];
   let processed = 0;
   let failures = 0;
-  let lastTicker: string | null = cursor || null;
-  outputPrintFilter(universe.length, universe.length, outputHasOutputFilters(config));
+  let fundsWithFreshData = 0;
+  let stoppedAtDeadline = false;
+  // Advances for every fund taken from the queue, whatever its outcome, so a failing batch can never pin the cursor.
+  let lastDispatched: string | null = null;
+  outputPrintFilter(eligible.length, universe.length, outputHasOutputFilters(config));
   const output = outputCreateReporter(API_ROOT, totalAttempts);
   const worker = async (): Promise<void> => {
     for (;;) {
       if (config.maxFetches > 0 && processed >= config.maxFetches) return;
+      if (Date.now() - startedAt >= deadlineMs) { stoppedAtDeadline = stoppedAtDeadline || queue.length > 0; return; }
       const fund = queue.shift();
       if (!fund) return;
       processed += 1;
+      lastDispatched = fund.ticker;
       const before = await output.before(fund.ticker);
       try {
         const row = await processFund(fund, config, previous.get(fund.ticker) || {});
         if (row.__skipped) {
           await output.result(fund.ticker, before, 'skipped', (row.__skipReasons || ['not eligible']).join(', '));
         } else {
+          if (row.__fresh) fundsWithFreshData += 1;
+          delete row.__fresh;
           results.push(row);
-          lastTicker = fund.ticker;
           await output.result(fund.ticker, before);
         }
       } catch (error) {
         failures += 1;
         const message = error instanceof Error ? error.message : String(error);
-        const old = previous.get(fund.ticker);
         await output.result(fund.ticker, before, 'failed', message);
       }
     }
@@ -2110,15 +2301,24 @@ export async function runUpdate(config: UpdaterConfig): Promise<void> {
   await Promise.all(Array.from({ length: config.concurrency }, () => worker()));
 
   // Selected funds are refreshed; every other known fund keeps its published row (filtered, bounded, failed or catalog-less runs never shrink the index).
-  const merged = new Map<string, JsonRecord>(previous);
-  for (const row of results) merged.set(String(row.ticker), row);
-  const funds = [...merged.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)));
+  const mergedRows = new Map<string, JsonRecord>(previous);
+  for (const row of results) mergedRows.set(String(row.ticker), row);
+  const funds: JsonRecord[] = [];
+  for (const row of [...mergedRows.values()].sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)))) funds.push(normalizeIndexRow(row, await hasMetaFile(String(row.ticker))));
   const counts = { funds: funds.length, holdings: funds.reduce((sum, row) => sum + (numberOrNull(row.holdings) || 0), 0), history: funds.reduce((sum, row) => sum + (numberOrNull(row.history) || 0), 0) };
   await writeIndex(funds);
-  await writeIfChanged(STATE_FILE, { cursor: config.maxFetches > 0 ? lastTicker : null, savedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') });
+  // A TICKERS run never touches the cursor; a full run resets it.
+  if (!config.tickers) await writeIfChanged(STATE_FILE, { cursor: config.maxFetches > 0 ? lastDispatched ?? (cursor || null) : null, savedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') });
   console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${failures} failures`);
   console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### WisdomTree data update\n\n- updated: ${results.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n`, 'utf8');
+  if (stoppedAtDeadline) console.warn(`[ ${'done'.padEnd(9)}] soft deadline reached; ${queue.length} funds were not taken this run (the index was still written)`);
+  if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### WisdomTree data update\n\n- updated: ${results.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n${noteLines.map((line) => `- ${line}\n`).join('')}${stoppedAtDeadline ? '- soft deadline reached before every fund was taken\n' : ''}`, 'utf8');
+  // Every fund failed (or no fund got fresh data from any enabled source): the run is red.
+  const sourcesEnabled = !config.skipWisdomTree || !config.skipYahoo || config.edgarFallback;
+  if ((processed > 0 && failures === processed) || (sourcesEnabled && results.length > 0 && fundsWithFreshData === 0)) {
+    console.error(`[ ${'failed'.padEnd(9)}] no fund was updated from a live source`);
+    process.exitCode = 1;
+  }
 }
 
 if ((import.meta as { main?: boolean }).main) {

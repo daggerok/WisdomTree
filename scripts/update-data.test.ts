@@ -1,6 +1,6 @@
 // Bun's test runner provides these globals at runtime.
 // @ts-ignore the repository intentionally keeps runtime dependencies at zero.
-import { describe, expect, test } from 'bun:test';
+import { afterEach, describe, expect, test } from 'bun:test';
 import { mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -31,7 +31,9 @@ import {
   readConfig,
   toIsoDate,
   CONTROL_NAMES,
-  HISTORY_RANGES,
+  HISTORY_RANGE_PATTERN,
+  isinFromCusip,
+  looksLikeProductPage,
   resolveControls,
   runtimeControls,
   yahooChartQuery,
@@ -43,6 +45,9 @@ import {
   setApiRoot,
   writeIndex,
 } from './update-data';
+
+// main() sets process.exitCode = 1 when a run updated nothing from a live source; a test must never leak that into the runner's exit code.
+afterEach(() => { process.exitCode = 0; });
 
 describe('range parsers', () => {
   test('parseRange keeps inclusive numeric bounds', () => {
@@ -296,22 +301,24 @@ describe('configured filter semantics', () => {
 });
 
 describe('HISTORY_RANGE limits the Yahoo request window', () => {
-  test('max requests everything, any other range replaces period1/period2', () => {
-    const full = yahooChartQuery('max', 1_000_000);
+  test('max starts at 0, Ny starts N years before now; range is never sent', () => {
+    const now = 2_000_000_000;
+    const full = yahooChartQuery('max', now);
     expect(full.get('period1')).toBe('0');
-    expect(full.get('period2')).toBe(String(1_000_000 + 86_400));
+    expect(full.get('period2')).toBe(String(now + 86_400));
     expect(full.has('range')).toBe(false);
-    const limited = yahooChartQuery('5y', 1_000_000);
-    expect(limited.get('range')).toBe('5y');
-    expect(limited.has('period1')).toBe(false);
-    expect(limited.has('period2')).toBe(false);
+    const limited = yahooChartQuery('5y', now);
+    expect(limited.has('range')).toBe(false);
+    expect(Number(limited.get('period1'))).toBe(Math.floor(now - 5 * 365.25 * 86_400));
+    expect(limited.get('period2')).toBe(String(now + 86_400));
     expect(limited.get('events')).toBe('div|split');
   });
 
-  test('only Yahoo ranges are accepted, case-insensitively', () => {
-    for (const range of HISTORY_RANGES) expect(readConfig(resolveControls({ HISTORY_RANGE: range })).historyRange).toBe(range);
+  test('only max and whole years are accepted, case-insensitively', () => {
+    for (const range of ['max', '1y', '5y', '10y']) expect(readConfig(resolveControls({ HISTORY_RANGE: range })).historyRange).toBe(range);
     expect(readConfig(resolveControls({ HISTORY_RANGE: '5Y' })).historyRange).toBe('5y');
-    expect(() => resolveControls({ HISTORY_RANGE: '7y' })).toThrow('HISTORY_RANGE');
+    expect(HISTORY_RANGE_PATTERN.test('0y')).toBe(false);
+    for (const bad of ['7d', 'ytd', '6mo', '0y', 'y', '5', '-1y', '1.5y']) expect(() => resolveControls({ HISTORY_RANGE: bad })).toThrow('HISTORY_RANGE');
   });
 });
 
@@ -537,7 +544,7 @@ describe('filtered and catalog-less runs never shrink the feed', () => {
     globalThis.fetch = (async (input: any) => handler(String(input?.url ?? input))) as unknown as typeof fetch;
     setApiRoot(root);
     try {
-      const config = readConfig(resolveControls({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false', ...env }));
+      const config = { ...readConfig(resolveControls({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', SKIP_YAHOO: 'true', EDGAR_FALLBACK: 'false', ...env })), proxyGapMs: 0, retryDelayMs: 0 };
       await runUpdate(config);
       return JSON.parse(readFileSync(new URL('index.json', root), 'utf8'));
     } finally {
