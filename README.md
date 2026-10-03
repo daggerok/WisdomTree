@@ -33,6 +33,7 @@ Defaults live in `scripts/update-data.config.json`. Precedence: file defaults < 
 | Per-fund returns, distributions | WisdomTree product page's "Total Returns" table (Market Price/NAV/Underlying Index rows) and "Recent Distributions" table (ex/record/payable date + Ordinary Income/ST/LT Cap Gains/Return of Capital) - the primary source for both |
 | Daily history; returns/distributions fallback | Yahoo Finance chart API for daily history unconditionally, and as fallback for Market Price Returns tenors and distribution ex-dates the official page doesn't cover |
 | Fallback | WisdomTree product pages for NAV, expense ratio, yields |
+| Access path | wisdomtree.com is Cloudflare-protected. Each page is tried directly once (a block latches for the rest of the run), then through the read-only r.jina.ai rendering: one global gate (at least 3.2 s between starts), at most one retry, and a verification page counts as a failure. Only the SEC receives the `SEC_UA` contact; other hosts get a generic User-Agent |
 
 ### Metrics and caveats
 
@@ -41,12 +42,15 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `ytd` / `tr1y` - official YTD and 1-year returns -> *YTD Return*, *TR 1Y*
 - `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
-- `siAnn` - since-inception annualized -> *SI Ann.*
-- `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price)
+- `siAnn` - since-inception annualized -> *SI Ann.*; derived only for funds with at least one year of history
+- `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price); a catalog 0.00% is the provider's published value and is kept as published (`yields.dividendYieldKind` says so)
 - `secYield` - 30-day SEC yield when published; unavailable values stay empty and are never shown as 0
 - `returnsBasis` - mandatory non-empty text saying how the returns were computed: official WisdomTree month-end Market Price Returns (gaps filled with Yahoo estimates), or estimates derived from Yahoo adjusted closes when the product page is unavailable
 - `performanceAsOf` - mandatory ISO `YYYY-MM-DD` date the returns are as of: the WisdomTree month-end performance table date, or the last Yahoo close date when derived (not the NAV date); `null` only when truly unknown
 - NAV and the catalog figures come from WisdomTree; history and returns derived from Yahoo adjusted closes are market-price estimates, not official NAV returns
+- When the product page cannot be fetched, the previous official returns, quarter-end returns, distributions table, NAV, market price and premium/discount are kept together as one unit (with their own dates and basis); they are never replaced by Yahoo estimates or mixed with a fresh price. `meta.json` `source.productPageStatus` says which case applied. A page that is fetched but publishes no quarter-end table leaves quarter-end empty (`asOfDate` `—`)
+- Expense ratio: `terValue` is the net expense ratio (after waivers), `terGrossValue` the gross ratio from the catalog; both are `null` when unknown
+- `isin` is derived from the CUSIP (US prefix plus check digit) because the pages do not publish it; `cusip` stays empty for the few funds whose page lacks it, and `exchange` comes from Yahoo and stays empty when Yahoo is unavailable
 - A limited `HISTORY_RANGE` shortens the published history, so long-tenor figures derived from Yahoo are unavailable for ranges shorter than the tenor
 
 ### Update controls
@@ -55,7 +59,7 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 
 | Control | Default | Meaning |
 | --- | --: | --- |
-| `MAX_FETCHES` | `0` | Batch size: with a positive value the updater continues after the committed cursor in `api/wisdomtree/update-state.json`; `0` is a full pass over every fund. |
+| `MAX_FETCHES` | `0` | Batch size over the funds that pass `TICKERS`/`AUM`/`TER`/`DIVIDEND_YIELD`: with a positive value the updater continues after the committed cursor in `api/wisdomtree/update-state.json` (in ticker order, wrapping around; the cursor moves past every fund taken, whatever its outcome); `0` is a full pass. A `TICKERS` run never touches the cursor. |
 | `REQUEST_SLEEP` | `2` | Minimum delay in seconds between outgoing request starts, including retries. |
 | `CONCURRENCY` | `2` | Number of parallel fund update workers, each with its own request pacing lane. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
@@ -66,16 +70,18 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. |
 | `MAX_RETRIES` | `2` | Retries after the initial request (integer, at least 1). Network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
-| `HISTORY_RANGE` | `max` | Yahoo history window: `max` requests everything, otherwise one of `ytd`, `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `10y`. |
-| `STORE_RAW_DOWNLOADS` | `false` | Store the rendered official catalog under `api/wisdomtree/raw`. |
+| `HISTORY_RANGE` | `max` | Yahoo history window: `max` or a whole number of years such as `5y`; sent as explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Anything else is an error. |
+| `STORE_RAW_DOWNLOADS` | `false` | Store the rendered official catalog under `data/raw/` (outside `api/wisdomtree`, so the workflow never commits it). |
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings. |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions while refreshing catalog and holdings. |
 | `SKIP_WISDOMTREE` | `false` | Keep the previously published official catalog. |
-| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | User-Agent for SEC and WisdomTree requests. SEC policy asks automated tools to declare a contact; the protected `SEC_UA` Actions variable overrides the default. Redacted in logs. |
+| `SEC_UA` | `daggerok ETF feed daggerok@gmail.com` | User-Agent for SEC requests only (other hosts get a generic agent). SEC policy asks automated tools to declare a contact; the protected `SEC_UA` Actions variable overrides the default. Redacted in logs. |
 | `VERBOSE` | `false` | Print per-fund retry and fallback notices. |
 | `USE_SYSTEM_CA` | `auto` | TLS trust store: `auto` restarts the updater once with Bun's `--use-system-ca` when a request fails with an untrusted-certificate error; `true` always uses the system CA store; `false` never restarts. Not an individual workflow input: use `advanced`, the config file or the CLI environment. |
 | `PERFORMANCE_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Annualized adjusted-close return range per tenor: `min:max`. |
 | `TOTAL_RETURN_YTD` / `_1Y` / `_3Y` / `_5Y` / `_10Y` | `:` | Cumulative adjusted-close return range per tenor: `min:max`. |
+
+Unknown `TICKERS` are an error. Return filters (`PERFORMANCE_*`, `TOTAL_RETURN_*`) exclude funds whose value for a bounded range is unavailable. The run takes no new fund after 25 minutes and still writes the index; it exits non-zero when every fund failed or no fund got data from a live source. A rerun with identical upstream data changes no file. When the live catalog adds or drops funds the run prints `NEW FUNDS: ...` or `DROPPED FUNDS: ...` (also in the Actions step summary); dropped funds keep their published data. Files are written through a temp file and a rename, pages first, then `meta.json`, with stale pages removed afterwards.
 
 `TICKERS` combines with the AUM, TER, yield and return filters using AND logic; it does not override them. Filtered or bounded runs (`TICKERS`, `MAX_FETCHES`, filters, `SKIP_WISDOMTREE`) and runs where the live catalog could not be read never shrink the feed: funds that were not refreshed keep their published row and files, and `index.json` always lists every known fund (the published index plus every `funds/*/meta.json`).
 
