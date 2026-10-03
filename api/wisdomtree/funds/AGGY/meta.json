@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/aggy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/aggy",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97717X511",
-    "isin": null,
+    "isin": "US97717X5115",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.12%",
-    "value": 0.12
+    "value": 0.12,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$41.26",
-    "value": 41.264,
-    "asOfDate": "Sep 28 2026"
+    "display": "$41.16",
+    "value": 41.164,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$41.48",
-    "value": 41.48,
-    "asOfDate": "Sep 25 2026"
+    "display": "$41.27",
+    "value": 41.27,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.022
+    "display": "0.06%",
+    "value": 0.063
   },
   "aum": {
     "display": "$892.14 M",
@@ -47,10 +52,10 @@
   "yields": {
     "dividendYield": 4.73,
     "dividendYieldText": "4.73%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 5.21,
-    "secYield": 5.26,
-    "secYieldText": "5.26%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "distributionRate": 5.24,
+    "secYield": 5.34,
+    "secYieldText": "5.34%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1548,8 +1553,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2822,
-    "asOf": "Sep 28 2026",
+    "totalRows": 2826,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

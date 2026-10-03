@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qsig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qsig",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,12 +18,16 @@
   },
   "identifiers": {
     "cusip": "97717X156",
-    "isin": null,
+    "isin": "US97717X1569",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.18%",
-    "value": 0.18
+    "value": 0.18,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
     "display": "$47.37",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 4.5,
     "dividendYieldText": "4.50%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 4.42,
     "secYield": 5.01,
     "secYieldText": "5.01%",
@@ -1442,8 +1447,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2619,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2624,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

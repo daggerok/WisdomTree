@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qsml",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qsml",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,12 +18,16 @@
   },
   "identifiers": {
     "cusip": "97717Y436",
-    "isin": null,
+    "isin": "US97717Y4364",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.38%",
-    "value": 0.38
+    "value": 0.38,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
     "display": "$32.70",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 0.55,
     "dividendYieldText": "0.55%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.55,
     "secYield": 0.42,
     "secYieldText": "0.42%",
@@ -199,8 +204,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 670,
-    "asOf": "Sep 25 2026",
+    "totalRows": 675,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

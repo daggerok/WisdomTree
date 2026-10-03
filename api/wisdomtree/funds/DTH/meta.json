@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dth",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dth",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,12 +18,16 @@
   },
   "identifiers": {
     "cusip": "97717W802",
-    "isin": null,
+    "isin": "US97717W8029",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.58%",
-    "value": 0.58
+    "value": 0.58,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
     "display": "$56.72",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 3.84,
     "dividendYieldText": "3.84%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.93,
     "secYield": 3.71,
     "secYieldText": "3.71%",
@@ -915,8 +920,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5101,
-    "asOf": "Sep 25 2026",
+    "totalRows": 5106,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

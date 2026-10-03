@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wama",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wama",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -16,27 +17,31 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "WAMA-TBD",
-    "isin": null,
+    "cusip": "97717Y220",
+    "isin": "US97717Y2202",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.32%",
-    "value": 0.32
+    "value": 0.32,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$27.09",
-    "value": 27.092,
-    "asOfDate": "Sep 25 2026"
+    "display": "$27.00",
+    "value": 27,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$27.07",
-    "value": 27.07,
-    "asOfDate": "Sep 25 2026"
+    "display": "$26.80",
+    "value": 26.8,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.08%",
-    "value": -0.082
+    "display": "0.01%",
+    "value": 0.014
   },
   "aum": {
     "display": "$192.31 M",
@@ -47,8 +52,8 @@
   "yields": {
     "dividendYield": 0.67,
     "dividendYieldText": "0.67%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0.66,
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "distributionRate": 0.67,
     "secYield": 0.73,
     "secYieldText": "0.73%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -166,8 +171,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 137,
-    "asOf": "Sep 25 2026",
+    "totalRows": 142,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

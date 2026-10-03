@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xsoe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xsoe",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,12 +18,16 @@
   },
   "identifiers": {
     "cusip": "97717X578",
-    "isin": null,
+    "isin": "US97717X5784",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.32%",
-    "value": 0.32
+    "value": 0.32,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
     "display": "$47.85",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 1.58,
     "dividendYieldText": "1.58%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.8,
     "secYield": 0.96,
     "secYieldText": "0.96%",
@@ -573,8 +578,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2953,
-    "asOf": "Sep 25 2026",
+    "totalRows": 2958,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

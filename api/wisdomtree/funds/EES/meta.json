@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ees",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ees",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,12 +18,16 @@
   },
   "identifiers": {
     "cusip": "97717W562",
-    "isin": null,
+    "isin": "US97717W5629",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.38%",
-    "value": 0.38
+    "value": 0.38,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
     "display": "$65.54",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 1.17,
     "dividendYieldText": "1.17%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.25,
     "secYield": 1.13,
     "secYieldText": "1.13%",
@@ -985,8 +990,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4929,
-    "asOf": "Sep 25 2026",
+    "totalRows": 4934,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

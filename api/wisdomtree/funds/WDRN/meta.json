@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdrn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdrn",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97717Y188",
-    "isin": null,
+    "isin": "US97717Y1881",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.45%",
-    "value": 0.45
+    "value": 0.45,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$26.38",
-    "value": 26.378,
-    "asOfDate": "Sep 25 2026"
+    "display": "$26.46",
+    "value": 26.464,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$26.44",
-    "value": 26.44,
-    "asOfDate": "Sep 25 2026"
+    "display": "$26.02",
+    "value": 26.023,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.23%",
-    "value": 0.234
+    "display": "0.12%",
+    "value": 0.117
   },
   "aum": {
     "display": "$18.36 M",
@@ -49,8 +54,8 @@
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 0.14,
-    "secYieldText": "0.14%",
+    "secYield": 0.19,
+    "secYieldText": "0.19%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -137,8 +142,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 93,
-    "asOf": "Sep 25 2026",
+    "totalRows": 98,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

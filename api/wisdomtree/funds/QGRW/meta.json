@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qgrw",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97717Y477",
-    "isin": null,
+    "isin": "US97717Y4778",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.28%",
-    "value": 0.28
+    "value": 0.28,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$69.13",
-    "value": 69.134,
-    "asOfDate": "Sep 25 2026"
+    "display": "$69.50",
+    "value": 69.502,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$69.16",
-    "value": 69.16,
-    "asOfDate": "Sep 25 2026"
+    "display": "$68.91",
+    "value": 68.91,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.04%",
-    "value": 0.038
+    "display": "0.06%",
+    "value": 0.062
   },
   "aum": {
     "display": "$3.17 B",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 0.07,
     "dividendYieldText": "0.07%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.07,
     "secYield": 0.14,
     "secYieldText": "0.14%",
@@ -208,8 +213,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 942,
-    "asOf": "Sep 25 2026",
+    "totalRows": 947,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

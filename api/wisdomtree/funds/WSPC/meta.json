@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wspc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wspc",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97717Y162",
-    "isin": null,
+    "isin": "US97717Y1626",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.75%",
-    "value": 0.75
+    "value": 0.75,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$27.39",
-    "value": 27.395,
-    "asOfDate": "Sep 25 2026"
+    "display": "$27.24",
+    "value": 27.24,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$27.41",
-    "value": 27.413,
-    "asOfDate": "Sep 25 2026"
+    "display": "$26.45",
+    "value": 26.455,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.07%",
-    "value": 0.067
+    "display": "0.21%",
+    "value": 0.212
   },
   "aum": {
     "display": "$1.35 M",
@@ -49,8 +54,8 @@
     "dividendYieldText": "—",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": -0.37,
-    "secYieldText": "-0.37%",
+    "secYield": -0.4,
+    "secYieldText": "-0.40%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -59,8 +64,8 @@
       "asOfDate": "Aug 31 2026",
       "mo1": 6.12,
       "mo1Text": "6.12%",
-      "qtd": null,
-      "qtdText": "—",
+      "qtd": 3.17,
+      "qtdText": "3.17%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -128,8 +133,8 @@
     ],
     "pageSize": 250,
     "totalRows": 10,
-    "asOfDate": "2026-09-25",
-    "asOf": "Sep 25 2026",
+    "asOfDate": "2026-10-01",
+    "asOf": "Oct 01 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -137,8 +142,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 56,
-    "asOf": "Sep 25 2026",
+    "totalRows": 61,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

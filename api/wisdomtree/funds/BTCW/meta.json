@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97720F101",
-    "isin": null,
+    "isin": "US97720F1012",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.25%",
-    "value": 0.25
+    "value": 0.25,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$88.71",
-    "value": 88.709,
-    "asOfDate": "Sep 25 2026"
+    "display": "$88.88",
+    "value": 88.882,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$88.68",
-    "value": 88.68,
-    "asOfDate": "Sep 25 2026"
+    "display": "$89.45",
+    "value": 89.45,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.033
+    "display": "0.01%",
+    "value": 0.014
   },
   "aum": {
     "display": "$177.42 M",
@@ -128,8 +133,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-09-18",
-    "asOf": "Sep 18 2026",
+    "asOfDate": "2026-10-02",
+    "asOf": "Oct 02 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -137,8 +142,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 679,
-    "asOf": "Sep 25 2026",
+    "totalRows": 684,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

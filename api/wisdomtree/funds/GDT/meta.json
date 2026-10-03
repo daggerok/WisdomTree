@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -16,27 +17,31 @@
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
-    "cusip": "97717Y2871",
-    "isin": null,
+    "cusip": "97717Y287",
+    "isin": "US97717Y2871",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.2%",
-    "value": 0.2
+    "value": 0.2,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$34.71",
-    "value": 34.711,
-    "asOfDate": "Sep 25 2026"
+    "display": "$33.57",
+    "value": 33.566,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$34.75",
-    "value": 34.747,
-    "asOfDate": "Sep 25 2026"
+    "display": "$33.92",
+    "value": 33.925,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.103
+    "display": "0.07%",
+    "value": 0.068
   },
   "aum": {
     "display": "$11.28 M",
@@ -47,10 +52,10 @@
   "yields": {
     "dividendYield": 0.86,
     "dividendYieldText": "0.86%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
-    "distributionRate": 0,
-    "secYield": 0.78,
-    "secYieldText": "0.78%",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "distributionRate": 0.89,
+    "secYield": 1.52,
+    "secYieldText": "1.52%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -214,8 +219,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 171,
-    "asOf": "Sep 25 2026",
+    "totalRows": 176,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,10 +2,11 @@
   "ticker": "USFR",
   "name": "WisdomTree Floating Rate Treasury Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Government Strategies",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usfr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usfr",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,37 +18,41 @@
   },
   "identifiers": {
     "cusip": "97717Y527",
-    "isin": null,
+    "isin": "US97717Y5270",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.15%",
-    "value": 0.15
+    "value": 0.15,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$50.39",
-    "value": 50.391,
-    "asOfDate": "Oct 1 2026"
+    "display": "$50.40",
+    "value": 50.395,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
     "display": "$50.39",
     "value": 50.39,
-    "asOfDate": "Sep 30 2026"
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.009
+    "display": "-0.00%",
+    "value": -0.003
   },
   "aum": {
     "display": "$19.78 B",
     "value": 19778600960,
     "asOfDate": "Sep 30 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.73,
     "dividendYieldText": "3.73%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 3.77,
     "secYield": 3.81,
     "secYieldText": "3.81%",
@@ -1321,8 +1326,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3184,
-    "asOf": "Oct 1 2026",
+    "totalRows": 3185,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

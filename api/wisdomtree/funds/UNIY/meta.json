@@ -6,6 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -17,26 +18,30 @@
   },
   "identifiers": {
     "cusip": "97717Y469",
-    "isin": null,
+    "isin": "US97717Y4695",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
     "indexTicker": null
   },
   "expenseRatio": {
     "display": "0.15%",
-    "value": 0.15
+    "value": 0.15,
+    "grossDisplay": "—",
+    "grossValue": null,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$46.37",
-    "value": 46.373,
-    "asOfDate": "Sep 25 2026"
+    "display": "$46.04",
+    "value": 46.044,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$46.37",
-    "value": 46.371,
-    "asOfDate": "Sep 25 2026"
+    "display": "$46.09",
+    "value": 46.09,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.005
+    "display": "-0.08%",
+    "value": -0.076
   },
   "aum": {
     "display": "$1.28 B",
@@ -47,7 +52,7 @@
   "yields": {
     "dividendYield": 4.97,
     "dividendYieldText": "4.97%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 4.84,
     "secYield": 5.1,
     "secYieldText": "5.10%",
@@ -632,8 +637,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 912,
-    "asOf": "Sep 25 2026",
+    "totalRows": 917,
+    "asOf": "Oct 02 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
