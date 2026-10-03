@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wtai",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wtai",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$44.03",
-    "value": 44.03,
-    "asOfDate": "Sep 25 2026"
+    "display": "$45.13",
+    "value": 45.125,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$43.95",
-    "value": 43.95,
-    "asOfDate": "Sep 25 2026"
+    "display": "$44.49",
+    "value": 44.49,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.18%",
-    "value": -0.182
+    "display": "-0.16%",
+    "value": -0.161
   },
   "aum": {
     "display": "$694.18 M",
@@ -53,9 +53,9 @@
     "dividendYield": 1.2,
     "dividendYieldText": "1.20%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.2,
-    "secYield": -0.15,
-    "secYieldText": "-0.15%",
+    "distributionRate": 1.17,
+    "secYield": -0.35,
+    "secYieldText": "-0.35%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

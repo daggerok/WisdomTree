@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtbn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtbn",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$24.09",
-    "value": 24.089,
-    "asOfDate": "Sep 25 2026"
+    "display": "$23.93",
+    "value": 23.935,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$24.09",
-    "value": 24.095,
-    "asOfDate": "Sep 25 2026"
+    "display": "$23.97",
+    "value": 23.97,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "0.03%",
-    "value": 0.027
+    "display": "-0.05%",
+    "value": -0.048
   },
   "aum": {
     "display": "$99.12 M",
@@ -53,9 +53,9 @@
     "dividendYield": 4.2,
     "dividendYieldText": "4.20%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 3.98,
-    "secYield": 3.83,
-    "secYieldText": "3.83%",
+    "distributionRate": 3.76,
+    "secYield": 3.88,
+    "secYieldText": "3.88%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

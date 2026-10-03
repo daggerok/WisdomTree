@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qig",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$42.41",
-    "value": 42.408,
-    "asOfDate": "Sep 25 2026"
+    "display": "$42.12",
+    "value": 42.121,
+    "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$42.36",
-    "value": 42.36,
-    "asOfDate": "Sep 25 2026"
+    "display": "$42.10",
+    "value": 42.104,
+    "asOfDate": "Oct 01 2026"
   },
   "premiumDiscount": {
-    "display": "-0.11%",
-    "value": -0.114
+    "display": "-0.20%",
+    "value": -0.198
   },
   "aum": {
     "display": "$17.13 M",
@@ -53,9 +53,9 @@
     "dividendYield": 5.08,
     "dividendYieldText": "5.08%",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 5.07,
-    "secYield": 5.48,
-    "secYieldText": "5.48%",
+    "distributionRate": 5.12,
+    "secYield": 5.63,
+    "secYieldText": "5.63%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
