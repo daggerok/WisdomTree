@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$46.09",
-    "value": 46.09,
-    "asOfDate": "Oct 01 2026"
+    "display": "$46.06",
+    "value": 46.058,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.08%",
-    "value": -0.076
+    "display": "0.03%",
+    "value": 0.03
   },
   "aum": {
     "display": "$1.28 B",
@@ -52,7 +52,8 @@
   "yields": {
     "dividendYield": 4.97,
     "dividendYieldText": "4.97%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "dividendYieldBasis": "indicated",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 4.84,
     "secYield": 5.1,
     "secYieldText": "5.10%",

@@ -52,7 +52,8 @@
   "yields": {
     "dividendYield": 0.86,
     "dividendYieldText": "0.86%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "dividendYieldBasis": "indicated",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0.89,
     "secYield": 1.52,
     "secYieldText": "1.52%",

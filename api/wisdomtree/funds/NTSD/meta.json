@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$46.50",
-    "value": 46.501,
-    "asOfDate": "Oct 01 2026"
+    "display": "$47.24",
+    "value": 47.242,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.16%",
-    "value": -0.162
+    "display": "0.28%",
+    "value": 0.283
   },
   "aum": {
     "display": "$49.79 M",
@@ -52,7 +52,8 @@
   "yields": {
     "dividendYield": 0.8,
     "dividendYieldText": "0.80%",
-    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
+    "dividendYieldBasis": "indicated",
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0.81,
     "secYield": 0.87,
     "secYieldText": "0.87%",
