@@ -61,6 +61,14 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
 - `siAnn` - since-inception annualized -> *SI Ann.*; derived only for funds with at least one year of history
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price); a catalog 0.00% is the provider's published value and is kept as published (`yields.dividendYieldKind` says so)
+- `dividendYieldBasis` - code of the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it travels with the yield (a retained yield keeps its code):
+
+  | Code | Meaning for WisdomTree |
+  | --- | --- |
+  | `official-trailing-12m` | trailing 12-month yield published in the WisdomTree product catalog (a published 0.00% included) |
+  | `indicated` | updater estimate: latest distribution x inferred payments per year / market price, used when the catalog has no yield |
+
+  The codes `official-distribution-rate`, `official-other` and `computed-trailing-12m` of the shared standard are not produced by this updater
 - `secYield` - 30-day SEC yield when published; unavailable values stay empty and are never shown as 0
 - `returnsBasis` - mandatory non-empty text saying how the returns were computed: official WisdomTree month-end Market Price Returns (gaps filled with Yahoo estimates), or estimates derived from Yahoo adjusted closes when the product page is unavailable
 - `performanceAsOf` - mandatory ISO `YYYY-MM-DD` date the returns are as of: the WisdomTree month-end performance table date, or the last Yahoo close date when derived (not the NAV date); `null` only when truly unknown

@@ -233,6 +233,7 @@ export type CatalogFund = {
   premiumDiscount: number | null;
   netAssets: number | null;
   dividendYield: number | null;
+  dividendYieldBasis?: DividendYieldBasis | null;
   secYield: number | null;
   asOfDate: string | null;
   returns: CatalogReturns;
@@ -1340,6 +1341,20 @@ export function inferDistributionFrequency(dividends: Array<{ epoch: number; amo
   return { frequency: 'Irregular', paymentsPerYear: null };
 }
 
+export type DividendYieldBasis = 'official-trailing-12m' | 'official-distribution-rate' | 'official-other' | 'computed-trailing-12m' | 'indicated';
+const DIVIDEND_YIELD_BASES: readonly string[] = ['official-trailing-12m', 'official-distribution-rate', 'official-other', 'computed-trailing-12m', 'indicated'];
+export const YIELD_KIND_OFFICIAL = 'trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)';
+export const YIELD_KIND_INDICATED = 'indicated (latest distribution x inferred frequency / market price)';
+
+/** Maps the yield kind text of a published meta.yields (or an already stored code) to a standard code; null when the yield is null. */
+export function dividendYieldBasisFromKind(kind: unknown, yieldValue: number | null): DividendYieldBasis | null {
+  if (yieldValue === null) return null;
+  const text = String(kind ?? '');
+  if (DIVIDEND_YIELD_BASES.includes(text)) return text as DividendYieldBasis;
+  if (text === YIELD_KIND_OFFICIAL) return 'official-trailing-12m';
+  return 'indicated';
+}
+
 export const RETURNS_BASIS_OFFICIAL = 'official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes';
 export const RETURNS_BASIS_DERIVED = 'estimates derived from Yahoo Finance adjusted market-price closes, not official WisdomTree NAV returns';
 
@@ -1352,6 +1367,7 @@ export function performanceAsOfDate(returns: PriceReturns): string | null {
 export function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividends: Array<{ epoch: number; amount: number }>, frequency: { paymentsPerYear: number | null }, price: number | null, official = false): JsonRecord {
   const latest = dividends[dividends.length - 1];
   const indicated = fund.dividendYield ?? (latest && frequency.paymentsPerYear && price ? round((latest.amount * frequency.paymentsPerYear / price) * 100, 2) : null);
+  const dividendYieldBasis: DividendYieldBasis | null = indicated === null ? null : fund.dividendYield !== null ? (fund.dividendYieldBasis ?? 'official-trailing-12m') : 'indicated';
   return {
     ytd: derived.ytd,
     tr1y: derived.yr1,
@@ -1364,6 +1380,7 @@ export function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividend
     siAnn: derived.siAnn,
     dividendYield: indicated,
     dividendYieldText: indicated === null ? '—' : `${indicated.toFixed(2)}%`,
+    dividendYieldBasis,
     secYield: fund.secYield,
     secYieldText: fund.secYield === null ? '—' : `${fund.secYield.toFixed(2)}%`,
     returnsBasis: official ? RETURNS_BASIS_OFFICIAL : RETURNS_BASIS_DERIVED,
@@ -1443,6 +1460,7 @@ function parsePreviousFund(ticker: string, row: JsonRecord): CatalogFund {
     premiumDiscount: numberOrNull(row.premiumDiscountValue),
     netAssets: numberOrNull(row.aumValue),
     dividendYield: numberOrNull(metrics.dividendYield),
+    dividendYieldBasis: dividendYieldBasisFromKind(metrics.dividendYieldBasis, numberOrNull(metrics.dividendYield)),
     secYield: numberOrNull(metrics.secYield),
     asOfDate: null,
     returns: { ytd: numberOrNull(monthEnd.ytd), yr1: numberOrNull(monthEnd.yr1), yr3: numberOrNull(monthEnd.yr3), yr5: numberOrNull(monthEnd.yr5), yr10: numberOrNull(monthEnd.yr10), sinceInception: numberOrNull(monthEnd.sinceInception) },
@@ -1595,7 +1613,7 @@ export function isinFromCusip(cusip: string): string | null {
 }
 
 const NULL_QUARTER_END = { asOfDate: '—', ytd: null, yr1: null, yr3: null, yr5: null, yr10: null, sinceInception: null, navReturns: null, indexReturns: null };
-const METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'] as const;
+const METRIC_KEYS = ['ytd', 'tr1y', 'tr3y', 'tr5y', 'tr10y', 'cagr3y', 'cagr5y', 'cagr10y', 'siAnn', 'dividendYield', 'dividendYieldText', 'dividendYieldBasis', 'secYield', 'secYieldText', 'returnsBasis', 'performanceAsOf'] as const;
 
 function monthEndToPriceReturns(monthEnd: JsonRecord): PriceReturns {
   const iso = toIsoDate(monthEnd?.asOfDate);
@@ -1863,7 +1881,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount },
     aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: asOfDate ? formatDate(asOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : '—'), source: fund.source === 'wisdomtree' ? 'WisdomTree product table Assets Under Mgmt $(000)' : nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run' },
-    yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldKind: fund.dividendYield !== null ? 'trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)' : 'indicated (latest distribution x inferred frequency / market price)', distributionRate: productSummary?.distributionYield ?? numberOrNull(previousMeta?.yields?.distributionRate), secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: metrics.secYield !== null ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
+    yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldBasis: metrics.dividendYieldBasis, dividendYieldKind: metrics.dividendYieldBasis === 'official-trailing-12m' ? YIELD_KIND_OFFICIAL : YIELD_KIND_INDICATED, distributionRate: productSummary?.distributionYield ?? numberOrNull(previousMeta?.yields?.distributionRate), secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: metrics.secYield !== null ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
     returns,
     distributions: { frequency: distributionFrequency, paymentsPerYear: distributionPaymentsPerYear, source: distributionsSource, headers: distributionHeaders, rows: distributionTable },
     holdings: holdingPages.manifest,
@@ -1970,6 +1988,7 @@ export function rowFromMeta(meta: JsonRecord, firstHistoryDate: string | null = 
     ter: numberOrNull(meta.expenseRatio?.value),
     grossTer: numberOrNull(meta.expenseRatio?.grossValue),
     dividendYield: numberOrNull(meta.yields?.dividendYield),
+    dividendYieldBasis: dividendYieldBasisFromKind(meta.yields?.dividendYieldBasis ?? meta.yields?.dividendYieldKind, numberOrNull(meta.yields?.dividendYield)),
     secYield: numberOrNull(meta.yields?.secYield),
   };
   const official = /^WisdomTree product-page/.test(String(meta.returns?.derivedFrom || ''));
@@ -2220,7 +2239,7 @@ export async function writeIndex(funds: JsonRecord[]): Promise<void> {
 /** Index rows always carry the full metrics key set (null when unavailable); a row without funds/<T>/meta.json has no dataFile. */
 function normalizeIndexRow(row: JsonRecord, hasMeta: boolean): JsonRecord {
   const metrics: JsonRecord = {};
-  for (const key of METRIC_KEYS) metrics[key] = row.metrics?.[key] ?? (key === 'returnsBasis' ? RETURNS_BASIS_DERIVED : key.endsWith('Text') ? '—' : null);
+  for (const key of METRIC_KEYS) metrics[key] = row.metrics?.[key] ?? (key === 'returnsBasis' ? RETURNS_BASIS_DERIVED : key.endsWith('Text') ? '—' : key === 'dividendYieldBasis' ? dividendYieldBasisFromKind(null, numberOrNull(row.metrics?.dividendYield)) : null);
   for (const [key, value] of Object.entries(row.metrics || {})) if (!(key in metrics)) metrics[key] = value;
   return { ...row, dataFile: hasMeta ? row.dataFile ?? `./funds/${row.ticker}/meta.json` : null, metrics };
 }
