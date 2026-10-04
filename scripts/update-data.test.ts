@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, cleanHoldingTicker, deriveMetrics, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
+  annualizedToTotal, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
@@ -294,6 +294,28 @@ describe('metrics', () => {
     expect(estimated.ytd).not.toBe(0);
   });
 
+  test('dividendYieldBasis maps each yield source to a code and is null with a null yield', () => {
+    const derived = priceReturns([day('2025-01-02', 100), day('2026-01-02', 110)], new Date('2026-01-03T00:00:00Z'));
+    const dividends = [0, 1, 2].map((month) => ({ epoch: Date.UTC(2026, month, 15) / 1000, amount: 0.1 }));
+    const basis = (fund: any, rows = dividends) => deriveMetrics(derived, { secYield: null, ...fund }, rows, { paymentsPerYear: rows.length ? 12 : null }, 100).dividendYieldBasis;
+    expect(basis({ dividendYield: 4.72 })).toBe('official-trailing-12m');
+    expect(basis({ dividendYield: 0 })).toBe('official-trailing-12m');
+    expect(basis({ dividendYield: null })).toBe('indicated');
+    expect(basis({ dividendYield: null }, [])).toBeNull();
+    expect(basis({ dividendYield: 3, dividendYieldBasis: 'indicated' })).toBe('indicated');
+    expect(dividendYieldBasisFromKind('official-trailing-12m', 1)).toBe('official-trailing-12m');
+    expect(dividendYieldBasisFromKind('whatever', 1)).toBe('indicated');
+    expect(dividendYieldBasisFromKind('official-trailing-12m', null)).toBeNull();
+  });
+
+  test('dividendYieldBasis is on rebuilt rows too (code follows the stored kind, null with a null yield)', () => {
+    const meta = (yields: any) => ({ ticker: 'AAA', name: 'A', yields, aum: {}, returns: {}, distributions: { rows: [] }, holdings: {}, history: {} });
+    expect(rowFromMeta(meta({ dividendYield: 2, dividendYieldKind: 'trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)' })).metrics.dividendYieldBasis).toBe('official-trailing-12m');
+    expect(rowFromMeta(meta({ dividendYield: 2, dividendYieldBasis: 'indicated' })).metrics.dividendYieldBasis).toBe('indicated');
+    const none = rowFromMeta(meta({ dividendYield: null }));
+    expect([none.metrics.dividendYield, none.metrics.dividendYieldBasis]).toEqual([null, null]);
+  });
+
   test('distribution frequency is inferred like in every sibling updater', () => {
     const monthly = [0, 1, 2, 3].map((month) => ({ epoch: Date.UTC(2026, month, 15) / 1000, amount: 0.1 }));
     expect(inferDistributionFrequency(monthly)).toEqual({ frequency: 'Monthly', paymentsPerYear: 12 });
@@ -415,6 +437,8 @@ describe('pipeline', () => {
     expect(s.meta('AAA').expenseRatio).toMatchObject({ value: 0.15, grossValue: 0.4 });
     expect(row.metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
     for (const other of rest) expect(Object.keys(other.metrics)).toEqual(Object.keys(row.metrics));
+    for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
+    expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
   });
 
   test('a one-ticker run keeps every row: unreadable catalog, a catalog listing only that fund, an unfiltered failing run, MAX_FETCHES', async () => {
@@ -488,6 +512,7 @@ describe('pipeline', () => {
     expect(after.source.productPageStatus).toContain('retained');
     const row = s.index().funds.find((f: any) => f.ticker === 'AAA');
     expect([row.metrics.returnsBasis, row.metrics.performanceAsOf, row.metrics.secYield]).toEqual([RETURNS_BASIS_OFFICIAL, '2026-08-31', 3.68]);
+    expect([row.metrics.dividendYield, row.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
   });
 
   test('a partial product page (proxy dropped sections) keeps the published official sections; a full page missing a field is an honest null', async () => {
@@ -533,6 +558,7 @@ describe('pipeline', () => {
     const orphan = s.index().funds.find((f: any) => f.ticker === 'BBB');
     expect(orphan.dataFile).toBeNull();
     expect(Object.keys(orphan.metrics)).toEqual(Object.keys(s.index().funds[0].metrics));
+    expect([orphan.metrics.dividendYield, orphan.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
   });
 
   test('the cursor advances past skipped funds and wraps; a TICKERS run leaves it alone; filters that pass nothing count nothing', async () => {
