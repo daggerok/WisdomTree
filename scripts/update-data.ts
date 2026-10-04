@@ -318,7 +318,13 @@ export type ProductPageSummary = {
   totalAssets: number | null;
   productAsOfDate: string | null;
   officialReturns: { monthEnd: OfficialProductReturns | null; quarterEnd: OfficialProductReturns | null };
+  /** Which sections of the page are present at all (a heading or table), whether or not their values parsed. */
+  sections: ProductPageSections;
+  /** True only when the pricing tables AND the Total Returns section are present; anything less is a partial rendering. */
+  loadedFully: boolean;
 };
+
+export type ProductPageSections = { pricing: boolean; returns: boolean; distributions: boolean };
 
 type SecSeriesRef = { cik: string; seriesId: string; classId: string };
 type NportAccession = { accession: string; filed: string; reportDate: string; url: string };
@@ -894,7 +900,16 @@ export function parseProductPageSummary(markdown: string): ProductPageSummary {
   const monthReturns = monthMarker ? productReturnSection(monthBlock, toIsoDate(monthMarker[1])) : null;
   const quarterReturns = quarterMarker ? productReturnSection(quarterBlock, toIsoDate(quarterMarker[1])) : null;
   const productAsOf = (monthReturns?.asOfDate || quarterReturns?.asOfDate || distributionHero.asOfDate || secHero.asOfDate || expenseHero.asOfDate || null) || null;
+  // Page-loaded check: the pricing tables (NAV / Closing Market Price rows) and the Total Returns section must both be
+  // present. A page missing either came back partial (rendering proxy), so what it lacks is unknown, not an honest absence.
+  const sections: ProductPageSections = {
+    pricing: /\|\s*(NAV|Closing Market Price)\s*\|/i.test(source),
+    returns: totalReturnsStart >= 0 || monthReturns !== null || quarterReturns !== null,
+    distributions: /###\s+Recent Distributions\b/i.test(source),
+  };
   return {
+    sections,
+    loadedFully: sections.pricing && sections.returns,
     name: officialName,
     cusip: markdownTableValue(source, 'CUSIP'),
     nav,
@@ -1638,8 +1653,17 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     }
   }
   const productFetched = productSummary !== null;
-  // The product page is one source: when it failed (or is skipped) everything it supplies is kept from the previous run as one unit.
-  if (!productFetched) fund.secYield = fund.secYield ?? numberOrNull(previous.metrics?.secYield);
+  // A page that came back partial (see `loadedFully`) says nothing about the sections it lacks: each missing section counts as a
+  // FAILED read, exactly like a failed page, and is kept from the previous run as one unit. A fully loaded page lacking a field is an honest null.
+  const partialPage = productSummary !== null && !productSummary.loadedFully;
+  const pricingFailed = !productFetched || (partialPage && !productSummary!.sections.pricing);
+  const returnsFailed = !productFetched || (partialPage && !productSummary!.sections.returns);
+  const distributionsFailed = !productFetched || (partialPage && !productSummary!.sections.distributions);
+  if (partialPage) {
+    const lacking = [pricingFailed && 'NAV/price/premium', returnsFailed && 'returns', distributionsFailed && 'distributions'].filter(Boolean).join(', ');
+    outputNote(`[ ${'kept'.padEnd(9)}] ${fund.ticker}: product page came back partial, kept the published ${lacking}`);
+  }
+  if (!productFetched || (partialPage && fund.secYield === null)) fund.secYield = fund.secYield ?? numberOrNull(previous.metrics?.secYield);
   fund.cusip = fund.cusip || String(previous.cusip || '');
   fund.isin = fund.isin || String(previous.isin || '') || isinFromCusip(fund.cusip) || '';
   // SEC yield is only known after the product page, so this filter is applied here rather than from the catalog row.
@@ -1713,9 +1737,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
 
   // Official returns, quarter-end returns and the official distributions table come from the product page. When it failed
   // they are retained from the previous run together (returns with their date and basis), never replaced by Yahoo estimates.
-  const retainedReturns: JsonRecord | null = !productFetched && isOfficialSource(previousMeta?.returns?.derivedFrom) && previousMeta?.returns?.monthEnd ? previousMeta.returns : null;
-  const retainedDistributions: JsonRecord | null = !productFetched && isOfficialSource(previousMeta?.distributions?.source) && Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions : null;
-  const officialDistributions = productPageMarkdown ? parseOfficialDistributions(productPageMarkdown) : [];
+  const retainedReturns: JsonRecord | null = returnsFailed && isOfficialSource(previousMeta?.returns?.derivedFrom) && previousMeta?.returns?.monthEnd ? previousMeta.returns : null;
+  const retainedDistributions: JsonRecord | null = distributionsFailed && isOfficialSource(previousMeta?.distributions?.source) && Array.isArray(previousMeta?.distributions?.rows) ? previousMeta.distributions : null;
+  const officialDistributions = productPageMarkdown && !distributionsFailed ? parseOfficialDistributions(productPageMarkdown) : [];
   const yahooDividends = chart?.dividends || [];
   const merged = mergeDistributionRecords(officialDistributions, yahooDividends);
   const distributionRecords = retainedDistributions ? distributionRowsFromTable(retainedDistributions.rows) : merged.rows;
@@ -1724,12 +1748,12 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const frequency = retainedDistributions ? { frequency: String(retainedDistributions.frequency || '—'), paymentsPerYear: numberOrNull(retainedDistributions.paymentsPerYear) } : inferDistributionFrequency(distributionEvents);
   const latest = distributionEvents[distributionEvents.length - 1] || null;
   const derived = priceReturns(days);
-  const officialReturns = productSummary?.officialReturns.monthEnd || null;
+  const officialReturns = returnsFailed ? null : productSummary?.officialReturns.monthEnd || null;
   const effectiveReturns = retainedReturns ? monthEndToPriceReturns(retainedReturns.monthEnd) : mergeOfficialReturns(derived, officialReturns);
   const officialBasis = Boolean(officialReturns) || retainedReturns !== null;
 
   // NAV, market price and premium/discount travel together: from the page, or all retained when the page failed.
-  const retainedQuote = !productFetched && previous.navValue !== undefined;
+  const retainedQuote = pricingFailed && previous.navValue !== undefined;
   const nav = retainedQuote ? numberOrNull(previous.navValue) : fund.nav;
   const price = retainedQuote
     ? numberOrNull(previous.closePriceValue)
@@ -1797,7 +1821,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       navReturns: formatOfficialReturnRow(officialReturns?.navReturns ?? null),
       indexReturns: formatOfficialReturnRow(officialReturns?.indexReturns ?? null),
     },
-    quarterEnd: productSummary?.officialReturns.quarterEnd ? {
+    quarterEnd: !returnsFailed && productSummary?.officialReturns.quarterEnd ? {
       asOfDate: formatDate(productSummary.officialReturns.quarterEnd.asOfDate),
       ytd: productSummary.officialReturns.quarterEnd.ytd,
       yr1: productSummary.officialReturns.quarterEnd.yr1,
@@ -2102,7 +2126,10 @@ Examples:
 // File defaults and explicit overrides, one mechanism for the CLI and the
 // GitHub Actions workflow: allowlisted scalar controls only, so nothing is
 // interpolated into bash. Precedence: config file < advanced JSON < nonblank
-// inputs < environment (explicit env wins, including a deliberately blank one).
+// inputs < environment (explicit env wins, including a deliberately blank one; WISDOMTREE_<NAME> and HISTORICAL_PAGE_SIZE are
+// env aliases of the same layer, the plain name wins when both are set).
+// Legacy env names next to WISDOMTREE_<NAME>: same layer as the plain name (env), plain name wins, then WISDOMTREE_<NAME>, then these.
+const ENV_ALIASES: Record<string, string[]> = { HISTORY_PAGE_SIZE: ['HISTORICAL_PAGE_SIZE'] };
 export const CONTROL_NAMES = [
   'MAX_FETCHES', 'REQUEST_SLEEP', 'CONCURRENCY', 'AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD', 'TICKERS',
   'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES', 'HISTORY_RANGE',
@@ -2135,7 +2162,7 @@ export function resolveControls(
   apply(advanced);
   apply(inputs, true);
   for (const key of CONTROL_NAMES) {
-    const value = env[key];
+    const value = [key, `WISDOMTREE_${key}`, ...(ENV_ALIASES[key] ?? [])].map((name) => env[name]).find((v) => v !== undefined);
     if (value !== undefined) apply({ [key]: value });
   }
   for (const key of ['MAX_FETCHES', 'CONCURRENCY', 'HOLDINGS_PAGE_SIZE', 'HISTORY_PAGE_SIZE', 'MAX_RETRIES']) {

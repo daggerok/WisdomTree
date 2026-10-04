@@ -27,7 +27,7 @@ const defaultRoot = new URL('../api/wisdomtree/', import.meta.url);
 const savedEnv = { ...process.env };
 const tempDirs: string[] = [];
 const isControlVar = (key: string): boolean =>
-  (CONTROL_NAMES as readonly string[]).includes(key) || ['NODE_USE_SYSTEM_CA', 'ETF_UPDATER_SYSTEM_CA', 'GITHUB_STEP_SUMMARY'].includes(key);
+  (CONTROL_NAMES as readonly string[]).includes(key) || key.startsWith('WISDOMTREE_') || key === 'HISTORICAL_PAGE_SIZE' || ['NODE_USE_SYSTEM_CA', 'ETF_UPDATER_SYSTEM_CA', 'GITHUB_STEP_SUMMARY'].includes(key);
 
 beforeEach(() => {
   for (const key of Object.keys(process.env)) if (isControlVar(key)) delete process.env[key];
@@ -94,6 +94,18 @@ describe('controls', () => {
     expect(readConfig(resolveControls({ HISTORY_RANGE: '5Y' })).historyRange).toBe('5y');
     expect(HISTORY_RANGE_PATTERN.test('0y')).toBe(false);
     for (const bad of ['7d', 'ytd', '6mo', '0y', 'y', '5', '-1y', '1.5y']) expect(() => resolveControls({ HISTORY_RANGE: bad })).toThrow('HISTORY_RANGE');
+  });
+
+  test('brand env aliases (WISDOMTREE_<NAME>, HISTORICAL_PAGE_SIZE) sit in the env layer, the plain name wins, validation stays strict', () => {
+    expect(resolveControls({}, {}, {}, { WISDOMTREE_CONCURRENCY: '7' }).CONCURRENCY).toBe('7');
+    expect(resolveControls({}, {}, {}, { HISTORICAL_PAGE_SIZE: '500' }).HISTORY_PAGE_SIZE).toBe('500');
+    expect(resolveControls({ TICKERS: 'DGRW' }, {}, { TICKERS: 'USFR' }, { WISDOMTREE_TICKERS: 'GDE' }).TICKERS).toBe('GDE');
+    expect(resolveControls({}, {}, {}, { WISDOMTREE_CONCURRENCY: '7', CONCURRENCY: '2' }).CONCURRENCY).toBe('2');
+    expect(resolveControls({}, {}, {}, { HISTORY_PAGE_SIZE: '300', HISTORICAL_PAGE_SIZE: '500' }).HISTORY_PAGE_SIZE).toBe('300');
+    expect(resolveControls({ TICKERS: 'DGRW' }, {}, {}, { WISDOMTREE_TICKERS: '' }).TICKERS).toBe('');
+    for (const env of [{ WISDOMTREE_CONCURRENCY: '0' }, { HISTORICAL_PAGE_SIZE: 'x' }, { WISDOMTREE_SEC_UA: 'a\nb' }, { WISDOMTREE_HISTORY_RANGE: 'weekly' }, { WISDOMTREE_MAX_RETRIES: '0' }]) {
+      expect(() => resolveControls({}, {}, {}, env)).toThrow();
+    }
   });
 
   test('config file: keys equal CONTROL_NAMES and --help, values are strings, the scheduled path equals the defaults', async () => {
@@ -476,6 +488,33 @@ describe('pipeline', () => {
     expect(after.source.productPageStatus).toContain('retained');
     const row = s.index().funds.find((f: any) => f.ticker === 'AAA');
     expect([row.metrics.returnsBasis, row.metrics.performanceAsOf, row.metrics.secYield]).toEqual([RETURNS_BASIS_OFFICIAL, '2026-08-31', 3.68]);
+  });
+
+  test('a partial product page (proxy dropped sections) keeps the published official sections; a full page missing a field is an honest null', async () => {
+    const s = new Scenario();
+    await s.run();
+    const before = s.meta('AAA');
+    const base = s.handler;
+    const serve = (page: (t: string) => string) => { s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(page(url.split('/').pop()!.toUpperCase())) : base(url, init)); };
+    // 1. pricing present, performance and distributions dropped: zero diff
+    serve((t) => productPage(t).split('### Total Returns')[0]);
+    s.backdate();
+    const files = s.files().map((path) => readFileSync(path, 'utf8'));
+    await s.run();
+    expect(s.touched()).toEqual([]);
+    expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(files);
+    // 2. performance present with a new YTD, pricing dropped: returns refresh, NAV/price/premium stay as published
+    serve((t) => productPage(t, '9.99%').replace(/### Net Asset Value[\s\S]*?### Total Returns/, '### Total Returns'));
+    await s.run({ TICKERS: 'AAA' });
+    const mixed = s.meta('AAA');
+    expect(mixed.returns.monthEnd.ytd).toBe(9.99);
+    expect([mixed.nav, mixed.marketPrice, mixed.premiumDiscount]).toEqual([before.nav, before.marketPrice, before.premiumDiscount]);
+    expect(s.index().funds.find((f: any) => f.ticker === 'AAA').metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
+    // 3. a fully loaded page that lacks one field: null, nothing is refilled from the previous run
+    serve((t) => productPage(t).replace('| SEC 30-day Yield | 3.68% |\n', ''));
+    await s.run({ TICKERS: 'AAA' });
+    expect(s.index().funds.find((f: any) => f.ticker === 'AAA').metrics.secYield).toBeNull();
+    expect(s.meta('AAA').nav.value).toBe(50.476);
   });
 
   test('an honest page without a quarter-end table does not get a fabricated quarter-end date', async () => {
