@@ -157,12 +157,6 @@ function outputCreateReporter(root: URL | string, total: number) {
 
 import { appendFile, mkdir, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 
-declare const process: {
-  env: Record<string, string | undefined>;
-  argv: string[];
-  exitCode?: number;
-};
-
 type JsonRecord = Record<string, any>;
 type Range = { min?: number; max?: number };
 type ReturnPeriod = 'YTD' | '1Y' | '3Y' | '5Y' | '10Y';
