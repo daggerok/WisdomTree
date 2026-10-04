@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$22.22",
-    "value": 22.22,
-    "asOfDate": "Oct 01 2026"
+    "display": "$22.33",
+    "value": 22.33,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.04%",
-    "value": -0.043
+    "display": "0.11%",
+    "value": 0.107
   },
   "aum": {
     "display": "$305.45 M",

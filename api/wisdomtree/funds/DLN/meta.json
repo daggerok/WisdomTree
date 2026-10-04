@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dln",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dln",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$97.26",
-    "value": 97.26,
-    "asOfDate": "Oct 01 2026"
+    "display": "$97.78",
+    "value": 97.78,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "0.06%",
-    "value": 0.064
+    "display": "0.05%",
+    "value": 0.049
   },
   "aum": {
     "display": "$6.22 B",

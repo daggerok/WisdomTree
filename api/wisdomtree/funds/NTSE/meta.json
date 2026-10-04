@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntse",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$45.97",
-    "value": 45.973,
-    "asOfDate": "Oct 01 2026"
+    "display": "$46.62",
+    "value": 46.624,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.31%",
-    "value": -0.306
+    "display": "1.18%",
+    "value": 1.179
   },
   "aum": {
     "display": "$56.84 M",

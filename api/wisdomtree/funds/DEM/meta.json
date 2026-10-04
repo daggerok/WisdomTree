@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dem",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dem",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$54.90",
-    "value": 54.9,
-    "asOfDate": "Oct 01 2026"
+    "display": "$55.42",
+    "value": 55.42,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.25%",
-    "value": -0.249
+    "display": "0.70%",
+    "value": 0.697
   },
   "aum": {
     "display": "$4.26 B",

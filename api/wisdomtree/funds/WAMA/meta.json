@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wama",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wama",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$26.80",
-    "value": 26.8,
-    "asOfDate": "Oct 01 2026"
+    "display": "$27.02",
+    "value": 27.02,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.014
+    "display": "0.07%",
+    "value": 0.075
   },
   "aum": {
     "display": "$192.31 M",

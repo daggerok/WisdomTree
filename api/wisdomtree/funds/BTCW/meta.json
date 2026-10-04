@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$89.45",
-    "value": 89.45,
-    "asOfDate": "Oct 01 2026"
+    "display": "$89.00",
+    "value": 89,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.014
+    "display": "0.13%",
+    "value": 0.133
   },
   "aum": {
     "display": "$177.42 M",
@@ -133,8 +133,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-09-18",
-    "asOf": "Sep 18 2026",
+    "asOfDate": "2026-10-02",
+    "asOf": "Oct 02 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {

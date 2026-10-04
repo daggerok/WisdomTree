@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/hedj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/hedj",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$54.95",
-    "value": 54.95,
-    "asOfDate": "Oct 01 2026"
+    "display": "$55.64",
+    "value": 55.64,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.085
+    "display": "0.25%",
+    "value": 0.253
   },
   "aum": {
     "display": "$1.76 B",

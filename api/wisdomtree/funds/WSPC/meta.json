@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wspc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wspc",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$26.45",
-    "value": 26.455,
-    "asOfDate": "Oct 01 2026"
+    "display": "$27.30",
+    "value": 27.299,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "0.21%",
-    "value": 0.212
+    "display": "0.22%",
+    "value": 0.216
   },
   "aum": {
     "display": "$1.35 M",

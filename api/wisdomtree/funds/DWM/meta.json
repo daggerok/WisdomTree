@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$72.83",
-    "value": 72.83,
-    "asOfDate": "Oct 01 2026"
+    "display": "$73.48",
+    "value": 73.48,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "0.20%",
-    "value": 0.197
+    "display": "0.81%",
+    "value": 0.815
   },
   "aum": {
     "display": "$661.28 M",

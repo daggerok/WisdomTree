@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddwm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Oct 02 2026"
   },
   "marketPrice": {
-    "display": "$45.21",
-    "value": 45.21,
-    "asOfDate": "Oct 01 2026"
+    "display": "$45.76",
+    "value": 45.76,
+    "asOfDate": "Oct 02 2026"
   },
   "premiumDiscount": {
-    "display": "-0.24%",
-    "value": -0.238
+    "display": "0.75%",
+    "value": 0.753
   },
   "aum": {
     "display": "$1.44 B",
