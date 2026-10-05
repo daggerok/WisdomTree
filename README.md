@@ -6,9 +6,12 @@ One of the app's features lets you select WisdomTree ETFs in the Watchlist and a
 
 ```bash
 bunx degit daggerok/WisdomTree#main ./12345 && cd $_
-bunx serve . -p 1234
-open http://0:1234
+bun install
+bun run serve
+open http://localhost:1234
 ```
+
+`bun run serve` starts the Parcel dev server (it copies `api/` to `dist/api` first). `bun run build` writes the site to `dist/`, `bun run build-github-pages` does the same with the `/WisdomTree/` public URL used by the GitHub Pages workflow.
 
 The published application is available at <https://daggerok.github.io/WisdomTree/>.
 
@@ -127,7 +130,7 @@ PERFORMANCE_1Y="15:" ./scripts/update-data.ts
 
 ## TypeScript and verification
 
-The browser app is intentionally build-free: `index.html` carries the markup, styles and bootstrap, and `app.tsx` is TypeScript compiled in the browser with Babel standalone - no build step, no bundler, no `tsconfig.json` needed. Bun runs TypeScript out of the box.
+The browser app lives in `src/`: `index.html` carries the markup, `index.css` the Tailwind v4 styles and `main.tsx` the TypeScript, bundled by Parcel into `dist/` - no `tsconfig.json` needed. Bun runs the updater TypeScript out of the box. GitHub Pages is deployed by `.github/workflows/github-pages.yml`.
 
 Verification before every publish:
 
