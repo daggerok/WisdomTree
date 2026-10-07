@@ -122,7 +122,7 @@
      * slate-700/30 over that, selected #19274e = rgba(30,64,175,.22) over
      * that; light-mode #f8fafc / #eff6ff are already opaque.
      */
-    #table-scroll table{border-collapse:separate;border-spacing:0;isolation:isolate}
+    #table-scroll table{min-width:max-content;border-collapse:separate;border-spacing:0;isolation:isolate}
     #table-scroll tbody{position:relative;z-index:0}
     #table-scroll tbody tr{position:relative;z-index:0}
     #table-scroll .catalog-sticky-col{position:sticky;background:#fff;background-clip:padding-box}
@@ -307,5 +307,3 @@
     }
     .dark #app-summary { background: #0f172a; color: #cbd5e1; border-color: #475569; }
 
-/* WisdomTree only: 24 columns must keep their content width (the table scrolls horizontally) */
-#table-scroll table{min-width:max-content}
