@@ -2,7 +2,7 @@
   "ticker": "WSPC",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 61,
+  "totalRows": 66,
   "headers": [
     "Date",
     "Close",
@@ -375,6 +375,36 @@
       "Close": "27.299999237060547",
       "Adj Close": "27.3",
       "Volume": "700"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "27.450000762939453",
+      "Adj Close": "27.45",
+      "Volume": "400"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "27.729999542236328",
+      "Adj Close": "27.73",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "26.829999923706055",
+      "Adj Close": "26.83",
+      "Volume": "1300"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "25.959999084472656",
+      "Adj Close": "25.96",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "25.940000534057617",
+      "Adj Close": "25.94",
+      "Volume": "100"
     }
   ]
 }

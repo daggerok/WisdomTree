@@ -2,7 +2,7 @@
   "ticker": "WTIP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 325,
+  "totalRows": 330,
   "headers": [
     "Date",
     "Close",
@@ -1959,6 +1959,36 @@
       "Close": "37.36000061035156",
       "Adj Close": "37.36",
       "Volume": "3200"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "37.244998931884766",
+      "Adj Close": "37.24",
+      "Volume": "2300"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "37.47999954223633",
+      "Adj Close": "37.48",
+      "Volume": "3000"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "37.13399887084961",
+      "Adj Close": "37.13",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "37.2400016784668",
+      "Adj Close": "37.24",
+      "Volume": "16800"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "37.1879997253418",
+      "Adj Close": "37.19",
+      "Volume": "12900"
     }
   ]
 }

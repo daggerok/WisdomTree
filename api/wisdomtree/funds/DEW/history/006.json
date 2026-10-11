@@ -2,7 +2,7 @@
   "ticker": "DEW",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5106,
+  "totalRows": 5111,
   "headers": [
     "Date",
     "Close",
@@ -181,7 +181,7 @@
     {
       "Date": "Jun 12 2026",
       "Close": "70.08000183105469",
-      "Adj Close": "68.7",
+      "Adj Close": "68.71",
       "Volume": "900"
     },
     {
@@ -645,6 +645,36 @@
       "Close": "68.7300033569336",
       "Adj Close": "68.73",
       "Volume": "3900"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "68.73999786376953",
+      "Adj Close": "68.74",
+      "Volume": "4900"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "69.30000305175781",
+      "Adj Close": "69.3",
+      "Volume": "72900"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "68.86000061035156",
+      "Adj Close": "68.86",
+      "Volume": "5700"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "69.54000091552734",
+      "Adj Close": "69.54",
+      "Volume": "9200"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "69.55999755859375",
+      "Adj Close": "69.56",
+      "Volume": "4700"
     }
   ]
 }

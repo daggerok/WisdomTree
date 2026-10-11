@@ -2,7 +2,7 @@
   "ticker": "USFR",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3185,
+  "totalRows": 3190,
   "headers": [
     "Date",
     "Close",
@@ -1118,7 +1118,37 @@
       "Date": "Oct 02 2026",
       "Close": "50.400001525878906",
       "Adj Close": "50.4",
-      "Volume": "7890500"
+      "Volume": "7947600"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "50.40999984741211",
+      "Adj Close": "50.41",
+      "Volume": "6213100"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "50.40999984741211",
+      "Adj Close": "50.41",
+      "Volume": "5822400"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "50.41999816894531",
+      "Adj Close": "50.42",
+      "Volume": "5202300"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "50.43000030517578",
+      "Adj Close": "50.43",
+      "Volume": "6184800"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "50.439998626708984",
+      "Adj Close": "50.44",
+      "Volume": "5509500"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "AIVL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5106,
+  "totalRows": 5111,
   "headers": [
     "Date",
     "Close",
@@ -645,6 +645,36 @@
       "Close": "128.66000366210938",
       "Adj Close": "128.66",
       "Volume": "3100"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "129.88999938964844",
+      "Adj Close": "129.89",
+      "Volume": "19100"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "130.77999877929688",
+      "Adj Close": "130.78",
+      "Volume": "2500"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "130.1300048828125",
+      "Adj Close": "130.13",
+      "Volume": "800"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "130.80999755859375",
+      "Adj Close": "130.81",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "131.9600067138672",
+      "Adj Close": "131.96",
+      "Volume": "2300"
     }
   ]
 }

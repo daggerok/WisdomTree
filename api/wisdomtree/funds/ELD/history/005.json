@@ -2,7 +2,7 @@
   "ticker": "ELD",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4063,
+  "totalRows": 4068,
   "headers": [
     "Date",
     "Close",
@@ -387,6 +387,36 @@
       "Close": "27.809999465942383",
       "Adj Close": "27.81",
       "Volume": "8900"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "27.950000762939453",
+      "Adj Close": "27.95",
+      "Volume": "8400"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "28.1299991607666",
+      "Adj Close": "28.13",
+      "Volume": "12300"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "28.06999969482422",
+      "Adj Close": "28.07",
+      "Volume": "6700"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "28.079999923706055",
+      "Adj Close": "28.08",
+      "Volume": "14400"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "28.079999923706055",
+      "Adj Close": "28.08",
+      "Volume": "12600"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DIM",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5106,
+  "totalRows": 5111,
   "headers": [
     "Date",
     "Close",
@@ -645,6 +645,36 @@
       "Close": "85.83999633789062",
       "Adj Close": "85.84",
       "Volume": "2600"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "85.87000274658203",
+      "Adj Close": "85.87",
+      "Volume": "1700"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "85.93000030517578",
+      "Adj Close": "85.93",
+      "Volume": "6600"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "85.0999984741211",
+      "Adj Close": "85.1",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "85.05000305175781",
+      "Adj Close": "85.05",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "85.45999908447266",
+      "Adj Close": "85.46",
+      "Volume": "2000"
     }
   ]
 }

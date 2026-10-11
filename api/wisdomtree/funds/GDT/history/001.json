@@ -2,7 +2,7 @@
   "ticker": "GDT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 176,
+  "totalRows": 181,
   "headers": [
     "Date",
     "Close",
@@ -1065,6 +1065,36 @@
       "Close": "33.683998107910156",
       "Adj Close": "33.68",
       "Volume": "2400"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "33.63199996948242",
+      "Adj Close": "33.63",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "33.87099838256836",
+      "Adj Close": "33.87",
+      "Volume": "3800"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "33.43299865722656",
+      "Adj Close": "33.43",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "33.641998291015625",
+      "Adj Close": "33.64",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "34.07699966430664",
+      "Adj Close": "34.08",
+      "Volume": "800"
     }
   ]
 }

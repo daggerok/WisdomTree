@@ -2,12 +2,12 @@
   "ticker": "GDT",
   "name": "WisdomTree Efficient TIPS Plus Gold Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / -",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "productPageStatus": "fetched through the read-only rendering proxy",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GDT",
@@ -25,48 +25,48 @@
   "expenseRatio": {
     "display": "0.2%",
     "value": 0.2,
-    "grossDisplay": "—",
-    "grossValue": null,
+    "grossDisplay": "0.2%",
+    "grossValue": 0.2,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$33.57",
-    "value": 33.566,
-    "asOfDate": "Oct 02 2026"
+    "display": "$34.03",
+    "value": 34.029,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$33.68",
-    "value": 33.684,
-    "asOfDate": "Oct 02 2026"
+    "display": "$34.08",
+    "value": 34.077,
+    "asOfDate": "Oct 09 2026"
   },
   "premiumDiscount": {
-    "display": "0.35%",
-    "value": 0.349
+    "display": "0.14%",
+    "value": 0.139
   },
   "aum": {
-    "display": "$11.28 M",
-    "value": 11275160,
-    "asOfDate": "Sep 23 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "display": "$10.93 M",
+    "value": 10927210,
+    "asOfDate": "Oct 08 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.86,
-    "dividendYieldText": "0.86%",
+    "dividendYield": 0.88,
+    "dividendYieldText": "0.88%",
     "dividendYieldBasis": "indicated",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0.89,
-    "secYield": 1.52,
-    "secYieldText": "1.52%",
+    "secYield": 2.72,
+    "secYieldText": "2.72%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": 8.61,
-      "mo1Text": "8.61%",
-      "qtd": -3.15,
-      "qtdText": "-3.15%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -7.19,
+      "mo1Text": "-7.19%",
+      "qtd": 1.28,
+      "qtdText": "1.28%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -77,13 +77,13 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -7.64,
-      "sinceInceptionText": "-7.64%",
+      "sinceInception": -14.29,
+      "sinceInceptionText": "-14.29%",
       "navReturns": {
-        "mo1": 8.19,
-        "mo1Text": "8.19%",
-        "qtd": -3.79,
-        "qtdText": "-3.79%",
+        "mo1": -6.87,
+        "mo1Text": "-6.87%",
+        "qtd": 1.11,
+        "qtdText": "1.11%",
         "ytd": null,
         "ytdText": "—",
         "yr1": null,
@@ -94,26 +94,26 @@
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": -8.02,
-        "sinceInceptionText": "-8.02%"
+        "sinceInception": -14.34,
+        "sinceInceptionText": "-14.34%"
       },
       "indexReturns": null
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "ytd": null,
       "yr1": null,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": -15.37,
+      "sinceInception": -14.29,
       "navReturns": {
         "ytd": null,
         "yr1": null,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": -15.28
+        "sinceInception": -14.34
       },
       "indexReturns": null
     }
@@ -220,8 +220,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 176,
-    "asOf": "Oct 02 2026",
+    "totalRows": 181,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

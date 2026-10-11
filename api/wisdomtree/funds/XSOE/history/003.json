@@ -2,7 +2,7 @@
   "ticker": "XSOE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2958,
+  "totalRows": 2963,
   "headers": [
     "Date",
     "Close",
@@ -5757,6 +5757,36 @@
       "Close": "47.45000076293945",
       "Adj Close": "47.45",
       "Volume": "55300"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "48.119998931884766",
+      "Adj Close": "48.12",
+      "Volume": "85000"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "47.77000045776367",
+      "Adj Close": "47.77",
+      "Volume": "64100"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "47.18000030517578",
+      "Adj Close": "47.18",
+      "Volume": "113400"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "46.244998931884766",
+      "Adj Close": "46.24",
+      "Volume": "120100"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "46.78200149536133",
+      "Adj Close": "46.78",
+      "Volume": "64600"
     }
   ]
 }

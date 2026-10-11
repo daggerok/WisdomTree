@@ -2,7 +2,7 @@
   "ticker": "WTPI",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2667,
+  "totalRows": 2672,
   "headers": [
     "Date",
     "Close",
@@ -4011,6 +4011,36 @@
       "Close": "32.93000030517578",
       "Adj Close": "32.93",
       "Volume": "111900"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "33.04999923706055",
+      "Adj Close": "33.05",
+      "Volume": "112700"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "33.25",
+      "Adj Close": "33.25",
+      "Volume": "100600"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "33.209999084472656",
+      "Adj Close": "33.21",
+      "Volume": "72000"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "33.150001525878906",
+      "Adj Close": "33.15",
+      "Volume": "84000"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "33.279998779296875",
+      "Adj Close": "33.28",
+      "Volume": "113600"
     }
   ]
 }

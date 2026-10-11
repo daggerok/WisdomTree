@@ -1,0 +1,156 @@
+{
+  "ticker": "WSLS",
+  "name": "WisdomTree Efficient Long/Short U.S. Smallcap Equity Fund",
+  "category": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Long/Short",
+  "source": {
+    "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wsls",
+    "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wsls",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "N/A",
+    "holdingsDownload": null,
+    "pricesDownload": null,
+    "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WSLS",
+    "holdingsSource": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)",
+    "historySource": "Yahoo Finance public chart API (adjusted close)",
+    "distributionsSource": "not available",
+    "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
+  },
+  "identifiers": {
+    "cusip": "97717Y147",
+    "isin": "US97717Y1477",
+    "isinSource": "US ISIN derived from the CUSIP (country code + CUSIP + check digit)",
+    "indexTicker": null
+  },
+  "expenseRatio": {
+    "display": "0.88%",
+    "value": 0.88,
+    "grossDisplay": "0.88%",
+    "grossValue": 0.88,
+    "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
+  },
+  "nav": {
+    "display": "$24.71",
+    "value": 24.713,
+    "asOfDate": "Oct 09 2026"
+  },
+  "marketPrice": {
+    "display": "$24.80",
+    "value": 24.795,
+    "asOfDate": "Oct 09 2026"
+  },
+  "premiumDiscount": {
+    "display": "0.33%",
+    "value": 0.33
+  },
+  "aum": {
+    "display": "$2.48 M",
+    "value": 2479360,
+    "asOfDate": "Oct 08 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+  },
+  "yields": {
+    "dividendYield": null,
+    "dividendYieldText": "—",
+    "dividendYieldBasis": null,
+    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "distributionRate": null,
+    "secYield": null,
+    "secYieldText": "—",
+    "secYieldKind": "not present in the current official product-page rendering"
+  },
+  "returns": {
+    "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
+    "monthEnd": {
+      "asOfDate": "N/A",
+      "mo1": null,
+      "mo1Text": "—",
+      "qtd": null,
+      "qtdText": "—",
+      "ytd": null,
+      "ytdText": "—",
+      "yr1": null,
+      "yr1Text": "—",
+      "yr3": null,
+      "yr3Text": "—",
+      "yr5": null,
+      "yr5Text": "—",
+      "yr10": null,
+      "yr10Text": "—",
+      "sinceInception": null,
+      "sinceInceptionText": "—",
+      "navReturns": {
+        "mo1": null,
+        "mo1Text": "—",
+        "qtd": null,
+        "qtdText": "—",
+        "ytd": null,
+        "ytdText": "—",
+        "yr1": null,
+        "yr1Text": "—",
+        "yr3": null,
+        "yr3Text": "—",
+        "yr5": null,
+        "yr5Text": "—",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": null,
+        "sinceInceptionText": "—"
+      },
+      "indexReturns": null
+    },
+    "quarterEnd": {
+      "asOfDate": "N/A",
+      "ytd": null,
+      "yr1": null,
+      "yr3": null,
+      "yr5": null,
+      "yr10": null,
+      "sinceInception": null,
+      "navReturns": {
+        "ytd": null,
+        "yr1": null,
+        "yr3": null,
+        "yr5": null,
+        "yr10": null,
+        "sinceInception": null
+      },
+      "indexReturns": null
+    }
+  },
+  "distributions": {
+    "frequency": "—",
+    "paymentsPerYear": null,
+    "source": "not available",
+    "headers": [
+      "Ex-Date",
+      "Record Date",
+      "Payable Date",
+      "Ordinary Income",
+      "Short-Term Capital Gains",
+      "Long-Term Capital Gains",
+      "Return of Capital",
+      "Total Distribution"
+    ],
+    "rows": []
+  },
+  "holdings": {
+    "pages": [
+      "holdings/001.json"
+    ],
+    "pageSize": 250,
+    "totalRows": 34,
+    "asOfDate": null,
+    "asOf": "—",
+    "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
+  },
+  "history": {
+    "pages": [
+      "history/001.json"
+    ],
+    "pageSize": 1000,
+    "totalRows": 1,
+    "asOf": "Oct 09 2026",
+    "source": "Yahoo Finance public chart API (adjusted close)"
+  }
+}

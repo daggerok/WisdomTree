@@ -2,7 +2,7 @@
   "ticker": "EMMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2047,
+  "totalRows": 2052,
   "headers": [
     "Date",
     "Close",
@@ -291,6 +291,36 @@
       "Close": "38.119998931884766",
       "Adj Close": "38.12",
       "Volume": "7100"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "38.79999923706055",
+      "Adj Close": "38.8",
+      "Volume": "6200"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "38.689998626708984",
+      "Adj Close": "38.69",
+      "Volume": "12800"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "38.15999984741211",
+      "Adj Close": "38.16",
+      "Volume": "6700"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "37.560001373291016",
+      "Adj Close": "37.56",
+      "Volume": "10400"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "37.95000076293945",
+      "Adj Close": "37.95",
+      "Volume": "10300"
     }
   ]
 }

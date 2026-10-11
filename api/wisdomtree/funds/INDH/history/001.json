@@ -2,7 +2,7 @@
   "ticker": "INDH",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 602,
+  "totalRows": 607,
   "headers": [
     "Date",
     "Close",
@@ -3620,6 +3620,36 @@
       "Date": "Oct 02 2026",
       "Close": "36.939998626708984",
       "Adj Close": "36.94",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "36.90999984741211",
+      "Adj Close": "36.91",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "37.11600112915039",
+      "Adj Close": "37.12",
+      "Volume": "300"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "36.7869987487793",
+      "Adj Close": "36.79",
+      "Volume": "1500"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "36.48500061035156",
+      "Adj Close": "36.49",
+      "Volume": "2000"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "36.75699996948242",
+      "Adj Close": "36.76",
       "Volume": "100"
     }
   ]

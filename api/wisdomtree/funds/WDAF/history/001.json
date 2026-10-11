@@ -2,7 +2,7 @@
   "ticker": "WDAF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 266,
+  "totalRows": 271,
   "headers": [
     "Date",
     "Close",
@@ -1605,6 +1605,36 @@
       "Close": "31.18899917602539",
       "Adj Close": "31.19",
       "Volume": "1300"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "31.19300079345703",
+      "Adj Close": "31.19",
+      "Volume": "600"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "30.48699951171875",
+      "Adj Close": "30.49",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "29.570999145507812",
+      "Adj Close": "29.57",
+      "Volume": "6500"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "28.389999389648438",
+      "Adj Close": "28.39",
+      "Volume": "8800"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "28.565000534057617",
+      "Adj Close": "28.57",
+      "Volume": "600"
     }
   ]
 }

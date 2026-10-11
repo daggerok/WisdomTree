@@ -2,7 +2,7 @@
   "ticker": "USIN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 641,
+  "totalRows": 646,
   "headers": [
     "Date",
     "Close",
@@ -3855,6 +3855,36 @@
       "Close": "46.845001220703125",
       "Adj Close": "46.85",
       "Volume": "3200"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "46.79499816894531",
+      "Adj Close": "46.79",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "46.88399887084961",
+      "Adj Close": "46.88",
+      "Volume": "200"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "46.875999450683594",
+      "Adj Close": "46.88",
+      "Volume": "11200"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "47.06100082397461",
+      "Adj Close": "47.06",
+      "Volume": "1800"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "47.0260009765625",
+      "Adj Close": "47.03",
+      "Volume": "400"
     }
   ]
 }

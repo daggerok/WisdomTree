@@ -1,0 +1,323 @@
+{
+  "ticker": "WSLS",
+  "page": 1,
+  "pageSize": 250,
+  "totalRows": 34,
+  "headers": [
+    "Name",
+    "Ticker",
+    "Identifier",
+    "Weight",
+    "Market Value",
+    "Shares Held",
+    "Asset Category"
+  ],
+  "rows": [
+    {
+      "Name": "Group",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Cash&Collateral",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "100",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Treasuries",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "90.65",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Cash",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "9.35",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Equities",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "99.79",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Financial Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "15.54",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Materials",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "12.47",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Pharmaceuticals Biotechnology & Life Sciences",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.85",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Health Care Equipment & Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Utilities",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.67",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Energy",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "7.09",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Consumer Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.85",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Equity Real Estate Investment Trusts (REITs)",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Insurance",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Commercial & Professional Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.09",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Banks",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.79",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Food Beverage & Tobacco",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Food & Staples Retailing",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.28",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Capital Goods",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "11.58",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Automobiles & Components",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.92",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Technology Hardware & Equipment",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "3.61",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Transportation",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.08",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Telecommunication Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Consumer Durables & Apparel",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "4.4",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Other",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Semiconductors & Semiconductor Equipment",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.29",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Media & Entertainment",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1.72",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Commercial & Professional Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Real Estate Management & Development",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Household & Personal Products",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "0.53",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Retailing",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.46",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Software & Services",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.58",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Equity Futures",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "90",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "U.S. Equity",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "90",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    }
+  ]
+}

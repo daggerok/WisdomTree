@@ -1,12 +1,12 @@
 {
   "ticker": "WDEF",
-  "name": "WisdomTree Europe Defense Fund",
+  "name": "Europe Defense",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Regional/Single Country Small Cap",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdef",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Aug 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -25,8 +25,8 @@
   "expenseRatio": {
     "display": "0.45%",
     "value": 0.45,
-    "grossDisplay": "—",
-    "grossValue": null,
+    "grossDisplay": "0.45%",
+    "grossValue": 0.45,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
@@ -44,16 +44,16 @@
     "value": 0.048
   },
   "aum": {
-    "display": "$85.05 M",
-    "value": 85050470,
-    "asOfDate": "Sep 23 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$77.03 M",
+    "value": 77034810,
+    "asOfDate": "Oct 08 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.07,
-    "dividendYieldText": "0.07%",
-    "dividendYieldBasis": "indicated",
-    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "dividendYield": 0.08,
+    "dividendYieldText": "0.08%",
+    "dividendYieldBasis": "official-trailing-12m",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.08,
     "secYield": 0.67,
     "secYieldText": "0.67%",
@@ -184,8 +184,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 306,
-    "asOf": "Oct 02 2026",
+    "totalRows": 311,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

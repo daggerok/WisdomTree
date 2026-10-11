@@ -2,12 +2,12 @@
   "ticker": "INDH",
   "name": "WisdomTree India Hedged Equity Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity",
+  "categoryPath": "Emerging Markets Equity / Regional/Single Country",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/indh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/indh",
     "productPageStatus": "fetched through the read-only rendering proxy",
-    "productPageAsOf": "Aug 31 2026",
+    "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/INDH",
@@ -25,120 +25,120 @@
   "expenseRatio": {
     "display": "0.64%",
     "value": 0.64,
-    "grossDisplay": "—",
-    "grossValue": null,
+    "grossDisplay": "0.64%",
+    "grossValue": 0.64,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$36.88",
-    "value": 36.882,
-    "asOfDate": "Oct 02 2026"
+    "display": "$36.95",
+    "value": 36.948,
+    "asOfDate": "Oct 09 2026"
   },
   "marketPrice": {
-    "display": "$36.92",
-    "value": 36.92,
-    "asOfDate": "Oct 02 2026"
+    "display": "$36.76",
+    "value": 36.757,
+    "asOfDate": "Oct 09 2026"
   },
   "premiumDiscount": {
-    "display": "0.10%",
-    "value": 0.103
+    "display": "-0.52%",
+    "value": -0.518
   },
   "aum": {
-    "display": "$5.75 M",
-    "value": 5752080,
-    "asOfDate": "Sep 23 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "display": "$5.46 M",
+    "value": 5460030,
+    "asOfDate": "Oct 08 2026",
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0,
     "dividendYieldText": "0.00%",
-    "dividendYieldBasis": "indicated",
-    "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
+    "dividendYieldBasis": "official-trailing-12m",
+    "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0,
-    "secYield": 0.62,
-    "secYieldText": "0.62%",
+    "secYield": 0.71,
+    "secYieldText": "0.71%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Aug 31 2026",
-      "mo1": -0.48,
-      "mo1Text": "-0.48%",
-      "qtd": 0.28,
-      "qtdText": "0.28%",
-      "ytd": -7.39,
-      "ytdText": "-7.39%",
-      "yr1": -2.23,
-      "yr1Text": "-2.23%",
+      "asOfDate": "Sep 30 2026",
+      "mo1": -5.73,
+      "mo1Text": "-5.73%",
+      "qtd": -5.28,
+      "qtdText": "-5.28%",
+      "ytd": -12.7,
+      "ytdText": "-12.70%",
+      "yr1": -8.06,
+      "yr1Text": "-8.06%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 1.44,
-      "sinceInceptionText": "1.44%",
+      "sinceInception": -1.08,
+      "sinceInceptionText": "-1.08%",
       "navReturns": {
-        "mo1": -0.86,
-        "mo1Text": "-0.86%",
-        "qtd": 1.42,
-        "qtdText": "1.42%",
-        "ytd": -7.77,
-        "ytdText": "-7.77%",
-        "yr1": -2.51,
-        "yr1Text": "-2.51%",
+        "mo1": -5.18,
+        "mo1Text": "-5.18%",
+        "qtd": -3.85,
+        "qtdText": "-3.85%",
+        "ytd": -12.54,
+        "ytdText": "-12.54%",
+        "yr1": -7.87,
+        "yr1Text": "-7.87%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 1.4,
-        "sinceInceptionText": "1.40%"
+        "sinceInception": -0.88,
+        "sinceInceptionText": "-0.88%"
       },
       "indexReturns": {
-        "mo1": -1.28,
-        "mo1Text": "-1.28%",
-        "qtd": 1.3,
-        "qtdText": "1.30%",
-        "ytd": -7.44,
-        "ytdText": "-7.44%",
-        "yr1": -1.87,
-        "yr1Text": "-1.87%",
+        "mo1": -5.9,
+        "mo1Text": "-5.90%",
+        "qtd": -4.7,
+        "qtdText": "-4.70%",
+        "ytd": -12.91,
+        "ytdText": "-12.91%",
+        "yr1": -8.03,
+        "yr1Text": "-8.03%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 2.41,
-        "sinceInceptionText": "2.41%"
+        "sinceInception": -0.24,
+        "sinceInceptionText": "-0.24%"
       }
     },
     "quarterEnd": {
-      "asOfDate": "Jun 30 2026",
+      "asOfDate": "Sep 30 2026",
       "ytd": null,
-      "yr1": -6.7,
+      "yr1": -8.06,
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 1.32,
+      "sinceInception": -1.08,
       "navReturns": {
         "ytd": null,
-        "yr1": -7.52,
+        "yr1": -7.87,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": 0.85
+        "sinceInception": -0.88
       },
       "indexReturns": {
         "ytd": null,
-        "yr1": -7,
+        "yr1": -8.03,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": 2
+        "sinceInception": -0.24
       }
     }
   },
@@ -234,8 +234,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 602,
-    "asOf": "Oct 02 2026",
+    "totalRows": 607,
+    "asOf": "Oct 09 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

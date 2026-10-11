@@ -2,7 +2,7 @@
   "ticker": "WDEF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 306,
+  "totalRows": 311,
   "headers": [
     "Date",
     "Close",
@@ -1845,6 +1845,36 @@
       "Close": "27.729999542236328",
       "Adj Close": "27.73",
       "Volume": "7400"
+    },
+    {
+      "Date": "Oct 05 2026",
+      "Close": "28.040000915527344",
+      "Adj Close": "28.04",
+      "Volume": "6100"
+    },
+    {
+      "Date": "Oct 06 2026",
+      "Close": "27.219999313354492",
+      "Adj Close": "27.22",
+      "Volume": "31500"
+    },
+    {
+      "Date": "Oct 07 2026",
+      "Close": "26.729999542236328",
+      "Adj Close": "26.73",
+      "Volume": "12400"
+    },
+    {
+      "Date": "Oct 08 2026",
+      "Close": "26.75",
+      "Adj Close": "26.75",
+      "Volume": "77300"
+    },
+    {
+      "Date": "Oct 09 2026",
+      "Close": "26.93000030517578",
+      "Adj Close": "26.93",
+      "Volume": "11200"
     }
   ]
 }
