@@ -134,8 +134,9 @@ function outputCreateReporter(root: URL | string, total: number) {
 // The browser application is deliberately static. This script builds the feed
 // under api/wisdomtree/** from public, issuer/SEC/market-data sources:
 //
-//   catalog   WisdomTree's U.S. ETF product table and per-fund product pages
-//             https://www.wisdomtree.com/us/products
+//   catalog   WisdomTree's U.S. fund list (the JSON behind the product table
+//             on https://www.wisdomtree.com/us/products), the rendered
+//             product table as the fallback, and per-fund product pages
 //   holdings  SEC EDGAR Form N-PORT-P for the exact ETF series (full reported
 //             portfolio; the issuer page is used as a small fallback)
 //   returns   The per-fund product page's official "Total Returns" table
@@ -149,8 +150,8 @@ function outputCreateReporter(root: URL | string, total: number) {
 //             close and volume)
 //
 // WisdomTree currently protects some HTML/API routes with Cloudflare. The
-// catalog fetch first tries the official page and then uses the read-only
-// r.jina.ai rendering of that same official page. No user data or credentials
+// catalog fetch first tries the official fund list and then uses the read-only
+// r.jina.ai rendering of that same official URL. No user data or credentials
 // are sent to the proxy. SEC and Yahoo requests stay direct.
 //
 // Usage: bun ./scripts/update-data.ts [--help]
@@ -165,6 +166,10 @@ type RangeMap = Partial<Record<ReturnPeriod, Range>>;
 const WISDOMTREE_SITE = 'https://www.wisdomtree.com';
 const WISDOMTREE_CATALOG_URL = `${WISDOMTREE_SITE}/us/products`;
 const WISDOMTREE_CATALOG_PROXY_URL = `https://r.jina.ai/http://www.wisdomtree.com/us/products`;
+// Since the 2026-10 site rebuild the product table is a client-side widget (fundlisting.wisdomtree.com) that loads this JSON;
+// the server-rendered page and its rendering only show "No results found".
+const WISDOMTREE_FUND_LIST_URL = 'https://dataspanapi.wisdomtree.com/fundlist/data?divisionId=1&wtRegion=US&isoCode=en-US&isFP=false';
+const WISDOMTREE_FUND_LIST_PROXY_URL = `https://r.jina.ai/${WISDOMTREE_FUND_LIST_URL}`;
 const WISDOMTREE_PRODUCT_PROXY_PREFIX = 'https://r.jina.ai/http://www.wisdomtree.com';
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const SEC_DATA_HOST = 'https://data.sec.gov';
@@ -653,6 +658,65 @@ export function parseCatalogMarkdown(markdown: string): CatalogFund[] {
   return funds.sort((a, b) => a.ticker.localeCompare(b.ticker));
 }
 
+/** Percent from a fraction (0.0015 -> 0.15), the unit the product table showed. */
+function fractionToPercent(value: unknown, digits: number): number | null {
+  const parsed = numberOrNull(value);
+  return parsed === null ? null : round(parsed * 100, digits);
+}
+
+/** The fund list JSON as served directly (an array) or through the rendering proxy (a JSON envelope whose data.content holds the array). */
+export function parseFundListJson(text: string): CatalogFund[] {
+  let payload: unknown;
+  try {
+    payload = JSON.parse(String(text ?? ''));
+  } catch {
+    throw new Error('WisdomTree fund list: response was not JSON');
+  }
+  const content = (payload as JsonRecord)?.data?.content;
+  if (!Array.isArray(payload) && typeof content === 'string') {
+    try {
+      payload = JSON.parse(content);
+    } catch {
+      throw new Error('WisdomTree fund list: proxy content was not JSON');
+    }
+  }
+  if (!Array.isArray(payload)) throw new Error('WisdomTree fund list: no fund array found');
+  const funds: CatalogFund[] = [];
+  const seen = new Set<string>();
+  for (const row of payload as JsonRecord[]) {
+    const ticker = sanitizeTicker(row?.bloombergTicker || row?.exchangeTicker);
+    if (!ticker || seen.has(ticker)) continue;
+    seen.add(ticker);
+    const tier1 = cleanText(row.fundCategoryTier1);
+    const aum = numberOrNull(row.AUM ?? row.Net_Assets);
+    funds.push({
+      ticker,
+      name: cleanText(row.name) || ticker,
+      category: normalizeCategory(tier1),
+      categoryPath: `${tier1} / ${cleanText(row.fundCategoryTier2)}`.replace(/\s*\/\s*$/, ''),
+      inception: toIsoDate(row.inceptionDt) || null,
+      exchange: '',
+      cusip: '',
+      isin: '',
+      benchmark: '',
+      ter: fractionToPercent(row.expenseRatio, 4),
+      grossTer: fractionToPercent(row.grossExpenseRatio, 4),
+      nav: null,
+      close: null,
+      premiumDiscount: null,
+      netAssets: aum === null ? null : round(aum, 2),
+      dividendYield: fractionToPercent(row.TTMYieldOrdIncome, 2),
+      secYield: null,
+      asOfDate: toIsoDate(row.AUM_DateTime || row.NAV_Date) || null,
+      returns: { ...EMPTY_RETURNS },
+      fundPage: canonicalFundPage(cleanText(row.url), ticker),
+      source: 'wisdomtree',
+    });
+  }
+  if (!funds.length) throw new Error('WisdomTree fund list: no fund rows found');
+  return funds.sort((a, b) => a.ticker.localeCompare(b.ticker));
+}
+
 async function paceRequests(): Promise<void> {
   const now = Date.now();
   let lane = 0;
@@ -721,12 +785,12 @@ async function fetchJson(url: string, label: string, config: UpdaterConfig, head
 }
 
 /** The read-only r.jina.ai rendering: one global gate (>= 3.2 s between starts), at most one retry, and a verification page counts as a failure. */
-async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<string> {
+async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean, accept = 'text/markdown'): Promise<string> {
   let lastError: unknown = new Error('no request attempted');
   for (let attempt = 0; attempt < 2; attempt += 1) {
     try {
       await paceProxy(config);
-      const text = await fetchOnce(url, config, { Accept: 'text/markdown' });
+      const text = await fetchOnce(url, config, { Accept: accept });
       if (!valid(text)) throw new Error('proxy returned a verification page or an unexpected document');
       return text;
     } catch (error) {
@@ -737,18 +801,18 @@ async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, 
 }
 
 /** Direct first (a single read-only GET, no retry), the proxy only as the fallback. A Cloudflare block latches for the rest of the run. */
-async function fetchWisdomTreePage(directUrl: string, proxyUrl: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<{ text: string; via: 'direct' | 'proxy' }> {
+async function fetchWisdomTreePage(directUrl: string, proxyUrl: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean, accept?: string): Promise<{ text: string; via: 'direct' | 'proxy' }> {
   if (!directBlocked) {
     try {
       await paceRequests();
-      const text = await fetchOnce(directUrl, config, { Accept: 'text/markdown,text/html;q=0.9' });
+      const text = await fetchOnce(directUrl, config, { Accept: accept ?? 'text/markdown,text/html;q=0.9' });
       if (valid(text)) return { text, via: 'direct' };
       directBlocked = true;
     } catch (error) {
       if (error instanceof HttpError && (error.status === 403 || error.status === 429)) directBlocked = true;
     }
   }
-  return { text: await fetchViaProxy(proxyUrl, label, config, valid), via: 'proxy' };
+  return { text: await fetchViaProxy(proxyUrl, label, config, valid, accept), via: 'proxy' };
 }
 
 function looksLikeCatalog(text: string): boolean {
@@ -761,9 +825,22 @@ export function looksLikeProductPage(text: string): boolean {
   return /###\s+Total Returns\b/i.test(text) || /\|\s*NAV\s*\|/i.test(text) || /\|\s*Closing Market Price\s*\|/i.test(text);
 }
 
-async function fetchCatalog(config: UpdaterConfig): Promise<{ markdown: string; source: string }> {
-  const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, '[catalog ] WisdomTree product table', config, looksLikeCatalog);
-  return { markdown: text, source: via === 'direct' ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
+function looksLikeFundList(text: string): boolean {
+  try { return parseFundListJson(text).length > 0; } catch { return false; }
+}
+
+const viaLabel = (via: 'direct' | 'proxy'): string => (via === 'direct' ? '' : ' via read-only rendering proxy');
+
+/** The fund list JSON first (JSON is asked for from the proxy too: its markdown mode meets the verification page), the rendered product table second. */
+async function fetchCatalog(config: UpdaterConfig): Promise<{ funds: CatalogFund[]; raw: string; rawName: string; source: string }> {
+  try {
+    const { text, via } = await fetchWisdomTreePage(WISDOMTREE_FUND_LIST_URL, WISDOMTREE_FUND_LIST_PROXY_URL, 'WisdomTree fund list', config, looksLikeFundList, 'application/json');
+    return { funds: parseFundListJson(text), raw: text, rawName: 'fund-list', source: `WisdomTree official fund list${viaLabel(via)}` };
+  } catch (error) {
+    console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - trying the product table`);
+  }
+  const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, 'WisdomTree product table', config, looksLikeCatalog);
+  return { funds: parseCatalogMarkdown(text), raw: text, rawName: 'product-table', source: `WisdomTree official product table${viaLabel(via)}` };
 }
 
 function productProxyUrl(fundPage: string): string {
@@ -2093,9 +2170,9 @@ const USAGE = `
 WisdomTree ETF static data updater
 
 Sources:
-  catalog       WisdomTree U.S. ETF product table (official page; read-only
-                Jina rendering fallback when Cloudflare blocks a non-browser
-                request)
+  catalog       WisdomTree U.S. fund list (the JSON behind the official product
+                table), then the rendered product table; read-only Jina
+                rendering fallback when Cloudflare blocks a non-browser request
   holdings      SEC EDGAR Form N-PORT-P for each exact ETF series
   returns       Official product-page Total Returns table (Market Price, NAV
                 and Underlying Index Returns rows)
@@ -2219,6 +2296,7 @@ export async function writeIndex(funds: JsonRecord[]): Promise<void> {
       market: 'us',
       site: WISDOMTREE_SITE,
       catalog: WISDOMTREE_CATALOG_URL,
+      catalogData: WISDOMTREE_FUND_LIST_URL,
       catalogFallback: WISDOMTREE_CATALOG_PROXY_URL,
       holdings: 'SEC EDGAR Form N-PORT-P for exact series (issuer product-page top holdings fallback)',
       returns: 'Official WisdomTree product-page Total Returns table (Market Price, NAV and Underlying Index Returns rows)',
@@ -2259,7 +2337,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   if (!config.skipWisdomTree) {
     try {
       const fetched = await fetchCatalog(config);
-      const parsed = parseCatalogMarkdown(fetched.markdown);
+      const parsed = fetched.funds;
       liveCatalog = parsed;
       for (const fund of parsed) catalog.set(fund.ticker, fund);
       catalogSource = fetched.source;
@@ -2267,7 +2345,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
         // Raw downloads are a debugging aid: they live outside api/wisdomtree so the workflow never commits them.
         const raw = new URL('../../data/raw/', API_ROOT);
         await mkdir(raw, { recursive: true });
-        await writeFile(new URL(`product-table-${new Date().toISOString().slice(0, 10)}.md`, raw), fetched.markdown, 'utf8');
+        await writeFile(new URL(`${fetched.rawName}-${new Date().toISOString().slice(0, 10)}.${fetched.rawName === 'fund-list' ? 'json' : 'md'}`, raw), fetched.raw, 'utf8');
       }
     } catch (error) {
       console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - keeping the published feed`);
