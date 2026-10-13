@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
+  annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
@@ -468,6 +468,30 @@ describe('pipeline', () => {
     for (const other of rest) expect(Object.keys(other.metrics)).toEqual(Object.keys(row.metrics));
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
+  });
+
+  test('a rerun whose live catalog is unreachable keeps the published category path and net assets source', async () => {
+    // Live DGRW: one run read the fund list, the next one fell back to the previous index and published
+    // "Domestic Equity" instead of "Domestic Equity / Large Cap Core" and an N-PORT net assets label
+    const s = new Scenario(['AAA']);
+    s.nportAsOf = '2026-06-30';
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const first = s.meta('AAA');
+    expect([first.categoryPath, first.aum.source]).toEqual(['Equity / Core', 'WisdomTree product table Assets Under Mgmt $(000)']);
+    const live = s.handler;
+    s.handler = (url, init) => url.includes('dataspanapi.wisdomtree.com') || url.endsWith('/us/products') ? new Response('unavailable', { status: 503 }) : live(url, init);
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const second = s.meta('AAA');
+    expect([second.categoryPath, second.aum.source, second.aum.value]).toEqual([first.categoryPath, first.aum.source, first.aum.value]);
+  });
+
+  test('aumSource: live catalog label, published label for a retained value, N-PORT only when the value is not retained', () => {
+    const nport = { netAssets: 1, repPdDate: '2026-06-30' };
+    const published = { aum: { source: 'WisdomTree product table Assets Under Mgmt $(000)' } };
+    expect(aumSource({ source: 'wisdomtree', netAssets: 5 }, nport, null)).toBe('WisdomTree product table Assets Under Mgmt $(000)');
+    expect(aumSource({ source: 'previous index', netAssets: 5 }, nport, published)).toBe(published.aum.source);
+    expect(aumSource({ source: 'previous index', netAssets: null }, nport, published)).toBe('SEC Form N-PORT-P net assets (2026-06-30)');
+    expect(aumSource({ source: 'previous index', netAssets: null }, null, null)).toBe('previous run');
   });
 
   test('a one-ticker run keeps every row: unreadable catalog, a catalog listing only that fund, an unfiltered failing run, MAX_FETCHES', async () => {

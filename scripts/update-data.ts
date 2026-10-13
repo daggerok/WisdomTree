@@ -1751,6 +1751,17 @@ function distributionRowsFromTable(rows: unknown): DistributionRow[] {
 
 const isOfficialSource = (value: unknown): boolean => /^WisdomTree (official|product-page)/.test(String(value ?? ''));
 
+/**
+ * Where the published net assets came from. When this run's catalog row is the previous index (the live catalog
+ * was unreachable or did not list the fund), the value is the published one, so its published source label is kept
+ * too: a rerun with the same upstream data must not relabel it (product table -> N-PORT) and flip the fund to updated.
+ */
+export function aumSource(fund: Pick<CatalogFund, 'source' | 'netAssets'>, nport: { netAssets?: number | null; repPdDate?: string | null } | null | undefined, previousMeta: JsonRecord | null): string {
+  if (fund.source === 'wisdomtree') return 'WisdomTree product table Assets Under Mgmt $(000)';
+  if (fund.netAssets !== null && previousMeta?.aum?.source) return String(previousMeta.aum.source);
+  return nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run';
+}
+
 async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: JsonRecord = {}): Promise<JsonRecord> {
   const reasons = catalogFilterReasons(fund, config);
   if (reasons.length) {
@@ -1973,7 +1984,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     ticker: fund.ticker,
     name: fund.name,
     category: fund.category,
-    categoryPath: fund.categoryPath,
+    categoryPath: fund.source === 'wisdomtree' ? fund.categoryPath : String(previousMeta?.categoryPath || fund.categoryPath),
     source: {
       fundPage: fund.fundPage,
       officialProductPage: productProxyUrl(fund.fundPage),
@@ -1992,7 +2003,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     nav: { display: nav === null ? '—' : `$${nav.toFixed(2)}`, value: nav, asOfDate: navAsOfLabel },
     marketPrice: { display: marketPrice === null ? '—' : `$${marketPrice.toFixed(2)}`, value: marketPrice, asOfDate: marketPriceAsOfLabel },
     premiumDiscount: { display: premiumDiscount === null ? '—' : `${premiumDiscount.toFixed(2)}%`, value: premiumDiscount },
-    aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: asOfDate ? formatDate(asOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : '—'), source: fund.source === 'wisdomtree' ? 'WisdomTree product table Assets Under Mgmt $(000)' : nport ? `SEC Form N-PORT-P net assets (${nport.repPdDate || 'n/a'})` : 'previous run' },
+    aum: { display: formatAumDisplay(netAssets), value: netAssets, asOfDate: asOfDate ? formatDate(asOfDate) : (nport?.repPdDate ? formatDate(nport.repPdDate) : '—'), source: aumSource(fund, nport, previousMeta) },
     yields: { dividendYield: metrics.dividendYield, dividendYieldText: metrics.dividendYieldText, dividendYieldBasis: metrics.dividendYieldBasis, dividendYieldKind: metrics.dividendYieldBasis === 'official-trailing-12m' ? YIELD_KIND_OFFICIAL : YIELD_KIND_INDICATED, distributionRate: productSummary?.distributionYield ?? numberOrNull(previousMeta?.yields?.distributionRate), secYield: metrics.secYield, secYieldText: metrics.secYieldText, secYieldKind: metrics.secYield !== null ? '30-day SEC yield published on the official WisdomTree product page' : 'not present in the current official product-page rendering' },
     returns,
     distributions: { frequency: distributionFrequency, paymentsPerYear: distributionPaymentsPerYear, source: distributionsSource, headers: distributionHeaders, rows: distributionTable },
