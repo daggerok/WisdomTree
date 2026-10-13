@@ -2,7 +2,7 @@
   "ticker": "HYZD",
   "name": "WisdomTree Interest Rate Hedged High Yield Bond Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income",
+  "categoryPath": "Fixed Income / Credit",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$308.95 M",
-    "value": 308952740,
+    "value": 308952736,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 5.88,

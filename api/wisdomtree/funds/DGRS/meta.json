@@ -2,7 +2,7 @@
   "ticker": "DGRS",
   "name": "WisdomTree U.S. SmallCap Quality Dividend Growth Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Mid & Small Cap Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrs",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$379.88 M",
-    "value": 379882460,
+    "value": 379882464,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 2.03,

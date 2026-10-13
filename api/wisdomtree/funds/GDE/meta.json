@@ -2,7 +2,7 @@
   "ticker": "GDE",
   "name": "WisdomTree Efficient Gold Plus Equity Strategy Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs",
+  "categoryPath": "Capital Efficient ETFs / Core",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gde",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gde",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$466.46 M",
-    "value": 466462940,
+    "value": 466462944,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 4.1,
