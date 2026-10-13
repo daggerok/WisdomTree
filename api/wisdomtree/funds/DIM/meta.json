@@ -2,7 +2,7 @@
   "ticker": "DIM",
   "name": "WisdomTree International MidCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dim",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dim",
@@ -47,7 +47,7 @@
     "display": "$157.69 M",
     "value": 157689920,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.1,

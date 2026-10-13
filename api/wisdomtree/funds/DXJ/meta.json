@@ -2,7 +2,7 @@
   "ticker": "DXJ",
   "name": "WisdomTree Japan Hedged Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / Regional/Single Country",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dxj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dxj",
@@ -47,7 +47,7 @@
     "display": "$7.10 B",
     "value": 7095942140,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 0.9,

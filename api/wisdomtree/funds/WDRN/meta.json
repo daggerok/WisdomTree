@@ -2,11 +2,11 @@
   "ticker": "WDRN",
   "name": "WisdomTree Physical AI, Humanoids, and Drones Fund",
   "category": "Thematic",
-  "categoryPath": "Thematic / Megatrends",
+  "categoryPath": "Thematic",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdrn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdrn",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -47,7 +47,7 @@
     "display": "$17.83 M",
     "value": 17831110,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": null,

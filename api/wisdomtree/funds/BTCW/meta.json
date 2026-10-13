@@ -2,7 +2,7 @@
   "ticker": "BTCW",
   "name": "WisdomTree Bitcoin Fund",
   "category": "Crypto ETPs",
-  "categoryPath": "Crypto ETPs / Bitcoin",
+  "categoryPath": "Crypto ETPs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
@@ -47,7 +47,7 @@
     "display": "$169.20 M",
     "value": 169203380,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "previous run"
   },
   "yields": {
     "dividendYield": null,

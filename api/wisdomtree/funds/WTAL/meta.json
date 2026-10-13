@@ -2,11 +2,11 @@
   "ticker": "WTAL",
   "name": "WisdomTree Global Alpha Fund",
   "category": "Capital Efficient ETFs",
-  "categoryPath": "Capital Efficient ETFs / Long/Short",
+  "categoryPath": "Capital Efficient ETFs",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtal",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtal",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "N/A",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -47,7 +47,7 @@
     "display": "$2.47 M",
     "value": 2467420,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "previous run"
   },
   "yields": {
     "dividendYield": null,

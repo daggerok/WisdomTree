@@ -2,7 +2,7 @@
   "ticker": "DDLS",
   "name": "WisdomTree Dynamic International SmallCap Equity Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddls",
@@ -47,7 +47,7 @@
     "display": "$415.02 M",
     "value": 415023970,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.36,

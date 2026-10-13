@@ -2,7 +2,7 @@
   "ticker": "WIMA",
   "name": "WisdomTree International Adaptive Moving Average Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/wima",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wima",
@@ -47,7 +47,7 @@
     "display": "$78.09 M",
     "value": 78085220,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.72,

@@ -2,7 +2,7 @@
   "ticker": "DES",
   "name": "WisdomTree U.S. SmallCap Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity / Mid & Small Cap Value",
+  "categoryPath": "Domestic Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/des",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/des",
@@ -47,7 +47,7 @@
     "display": "$2.06 B",
     "value": 2056148860,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 2.37,

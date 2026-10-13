@@ -2,7 +2,7 @@
   "ticker": "USDU",
   "name": "WisdomTree Bloomberg U.S. Dollar Bullish Fund",
   "category": "Fixed Income",
-  "categoryPath": "Fixed Income / Currency Strategies",
+  "categoryPath": "Fixed Income",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/usdu",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/usdu",
@@ -47,7 +47,7 @@
     "display": "$313.44 M",
     "value": 313444260,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 3.64,

@@ -2,7 +2,7 @@
   "ticker": "DGS",
   "name": "WisdomTree Emerging Markets SmallCap Dividend Fund",
   "category": "Emerging Markets Equity",
-  "categoryPath": "Emerging Markets Equity / Emerging Markets",
+  "categoryPath": "Emerging Markets Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgs",
@@ -47,7 +47,7 @@
     "display": "$1.74 B",
     "value": 1737251710,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.7,

@@ -2,7 +2,7 @@
   "ticker": "GCC",
   "name": "WisdomTree Enhanced Commodity Strategy Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative / Commodity",
+  "categoryPath": "Alternative",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gcc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gcc",
@@ -47,7 +47,7 @@
     "display": "$330.91 M",
     "value": 330905090,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
   },
   "yields": {
     "dividendYield": 5.22,

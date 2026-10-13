@@ -1,12 +1,12 @@
 {
   "ticker": "DLS",
-  "name": "International SmallCap Dividend",
+  "name": "WisdomTree International SmallCap Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity / International Mid & Small Cap",
+  "categoryPath": "International Equity",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$86.04",
-    "value": 86.036,
-    "asOfDate": "Oct 09 2026"
+    "display": "$85.95",
+    "value": 85.953,
+    "asOfDate": "Oct 12 2026"
   },
   "marketPrice": {
     "display": "$86.13",
@@ -47,7 +47,7 @@
     "display": "$1.04 B",
     "value": 1036736510,
     "asOfDate": "Oct 09 2026",
-    "source": "WisdomTree product table Assets Under Mgmt $(000)"
+    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
   },
   "yields": {
     "dividendYield": 3.53,
