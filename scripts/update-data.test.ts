@@ -523,6 +523,33 @@ describe('pipeline', () => {
     expect(s.files().some((path) => path.includes('.tmp-'))).toBe(false);
   });
 
+  test('two runs on the same source data write zero changes even when Yahoo adjusted closes jitter across a cent boundary', async () => {
+    // Yahoo float32 noise seen live: AAM SPDV 2024-11-12 came back as 31.544998 and 31.545001 a minute apart
+    const s = new Scenario(['AAA']);
+    const base = s.handler;
+    const jittered = (shift: number) => (url: string, init?: any): Response | Promise<Response> => {
+      if (!url.includes('finance.yahoo.com')) return base(url, init);
+      const payload = chartPayload();
+      const result = payload.chart.result[0];
+      result.indicators.adjclose = [{ adjclose: result.indicators.quote[0].close.map((_: number, i: number) => 90.005 + i * 0.01 + shift) }];
+      return new Response(JSON.stringify(payload));
+    };
+    const adj = () => s.files().filter((path) => path.includes('/history/')).flatMap((path) => JSON.parse(readFileSync(path, 'utf8')).rows.map((row: any) => row['Adj Close']));
+    s.handler = jittered(0.000001);
+    await s.run();
+    expect(adj().slice(0, 2)).toEqual(['90.01', '90.02']);
+    s.backdate();
+    const before = s.files().map((path) => readFileSync(path, 'utf8'));
+    s.handler = jittered(-0.000002);
+    await s.run();
+    expect(s.touched()).toEqual([]);
+    expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
+    // a real change beyond the noise is still written
+    s.handler = jittered(-0.015);
+    await s.run();
+    expect(adj().slice(0, 2)).toEqual(['89.99', '90']);
+  });
+
   test('a failed product page keeps the previous official data as one unit (returns, quarter end, distributions, NAV, price, premium)', async () => {
     const s = new Scenario();
     await s.run();

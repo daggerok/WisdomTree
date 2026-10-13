@@ -1489,13 +1489,24 @@ export function deriveMetrics(derived: PriceReturns, fund: CatalogFund, dividend
   };
 }
 
-function historyRows(days: ChartDay[]): JsonRecord[] {
+// Yahoo's adjusted close is float32 and its last digits move with the request's period2, so a value
+// sitting on a cent boundary (31.544998 vs 31.545001) flips between runs. Within that noise the
+// published cent is kept: a rerun with the same source data changes nothing.
+export const ADJ_CLOSE_NOISE = 1e-4;
+export function keepPublishedAdjClose(adjClose: number, published: unknown): string {
+  const fresh = String(round(adjClose, 2));
+  const prior = numberOrNull(published);
+  return prior !== null && fresh !== String(published) && Math.abs(adjClose - prior) <= 0.005 + ADJ_CLOSE_NOISE ? String(published) : fresh;
+}
+
+export function historyRows(days: ChartDay[], published: JsonRecord[] = []): JsonRecord[] {
   // Yahoo recomputes the split/dividend-adjusted close on every request; storing
   // the raw float lets the last digit or two jitter between otherwise identical
   // requests, making every history row (and the fund) look "updated" on every
   // single run. Rounding to 2 decimals is well past any meaningful price
-  // precision and absorbs that jitter.
-  return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': String(round(day.adjClose, 2)), Volume: String(day.volume) }));
+  // precision and absorbs that jitter; keepPublishedAdjClose absorbs the cent-boundary flips.
+  const publishedAdj = new Map(published.map((row) => [toIsoDate(row.Date), row['Adj Close']]));
+  return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': keepPublishedAdjClose(day.adjClose, publishedAdj.get(day.date)), Volume: String(day.volume) }));
 }
 
 function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductReturns | null): PriceReturns {
@@ -1848,8 +1859,8 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       outputNote(`[ ${'chart'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
+  const previousRows = await readPreviousSheet(fund.ticker, 'history');
   if (!days.length) {
-    const previousRows = await readPreviousSheet(fund.ticker, 'history');
     days = previousRows.map((row) => ({ date: toIsoDate(row.Date), close: numberOrNull(row.Close) || 0, adjClose: numberOrNull(row['Adj Close']) || numberOrNull(row.Close) || 0, volume: numberOrNull(row.Volume) || 0 })).filter((row) => row.date && row.close > 0);
     if (previousRows.length) historySource = previousMeta?.history?.source || 'previous run';
   }
@@ -1887,7 +1898,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     return { __skipped: true, ticker: fund.ticker, __skipReasons: returnFilterReasons };
   }
 
-  const history = historyRows(days);
+  const history = historyRows(days, previousRows);
   const historyAsOf = derived.asOfDate || previousMeta?.history?.asOf || null;
   const holdingPages = await writePages(fundDir, fund.ticker, 'holdings', holdingsHeaders, holdingsRows, config.holdingsPageSize, holdingsAsOf, holdingsSource);
   const historyPages = await writePages(fundDir, fund.ticker, 'history', historyHeaders(), history, config.historyPageSize, historyAsOf, historySource);
