@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
+  annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
@@ -470,6 +470,30 @@ describe('pipeline', () => {
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
   });
 
+  test('a rerun whose live catalog is unreachable keeps the published category path and net assets source', async () => {
+    // Live DGRW: one run read the fund list, the next one fell back to the previous index and published
+    // "Domestic Equity" instead of "Domestic Equity / Large Cap Core" and an N-PORT net assets label
+    const s = new Scenario(['AAA']);
+    s.nportAsOf = '2026-06-30';
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const first = s.meta('AAA');
+    expect([first.categoryPath, first.aum.source]).toEqual(['Equity / Core', 'WisdomTree product table Assets Under Mgmt $(000)']);
+    const live = s.handler;
+    s.handler = (url, init) => url.includes('dataspanapi.wisdomtree.com') || url.endsWith('/us/products') ? new Response('unavailable', { status: 503 }) : live(url, init);
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const second = s.meta('AAA');
+    expect([second.categoryPath, second.aum.source, second.aum.value]).toEqual([first.categoryPath, first.aum.source, first.aum.value]);
+  });
+
+  test('aumSource: live catalog label, published label for a retained value, N-PORT only when the value is not retained', () => {
+    const nport = { netAssets: 1, repPdDate: '2026-06-30' };
+    const published = { aum: { source: 'WisdomTree product table Assets Under Mgmt $(000)' } };
+    expect(aumSource({ source: 'wisdomtree', netAssets: 5 }, nport, null)).toBe('WisdomTree product table Assets Under Mgmt $(000)');
+    expect(aumSource({ source: 'previous index', netAssets: 5 }, nport, published)).toBe(published.aum.source);
+    expect(aumSource({ source: 'previous index', netAssets: null }, nport, published)).toBe('SEC Form N-PORT-P net assets (2026-06-30)');
+    expect(aumSource({ source: 'previous index', netAssets: null }, null, null)).toBe('previous run');
+  });
+
   test('a one-ticker run keeps every row: unreadable catalog, a catalog listing only that fund, an unfiltered failing run, MAX_FETCHES', async () => {
     const published = async (tickers: string[], metaOnly: string[]): Promise<Scenario> => {
       const s = new Scenario([...tickers, ...metaOnly]);
@@ -521,6 +545,33 @@ describe('pipeline', () => {
     expect(s.touched()).toEqual([]);
     expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
     expect(s.files().some((path) => path.includes('.tmp-'))).toBe(false);
+  });
+
+  test('two runs on the same source data write zero changes even when Yahoo adjusted closes jitter across a cent boundary', async () => {
+    // Yahoo float32 noise seen live: AAM SPDV 2024-11-12 came back as 31.544998 and 31.545001 a minute apart
+    const s = new Scenario(['AAA']);
+    const base = s.handler;
+    const jittered = (shift: number) => (url: string, init?: any): Response | Promise<Response> => {
+      if (!url.includes('finance.yahoo.com')) return base(url, init);
+      const payload = chartPayload();
+      const result = payload.chart.result[0];
+      result.indicators.adjclose = [{ adjclose: result.indicators.quote[0].close.map((_: number, i: number) => 90.005 + i * 0.01 + shift) }];
+      return new Response(JSON.stringify(payload));
+    };
+    const adj = () => s.files().filter((path) => path.includes('/history/')).flatMap((path) => JSON.parse(readFileSync(path, 'utf8')).rows.map((row: any) => row['Adj Close']));
+    s.handler = jittered(0.000001);
+    await s.run();
+    expect(adj().slice(0, 2)).toEqual(['90.01', '90.02']);
+    s.backdate();
+    const before = s.files().map((path) => readFileSync(path, 'utf8'));
+    s.handler = jittered(-0.000002);
+    await s.run();
+    expect(s.touched()).toEqual([]);
+    expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
+    // a real change beyond the noise is still written
+    s.handler = jittered(-0.015);
+    await s.run();
+    expect(adj().slice(0, 2)).toEqual(['89.99', '90']);
   });
 
   test('a failed product page keeps the previous official data as one unit (returns, quarter end, distributions, NAV, price, premium)', async () => {
