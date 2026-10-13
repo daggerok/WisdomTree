@@ -2,7 +2,7 @@
   "ticker": "DNL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5111,
+  "totalRows": 5112,
   "headers": [
     "Date",
     "Close",
@@ -675,6 +675,12 @@
       "Close": "45.15999984741211",
       "Adj Close": "45.16",
       "Volume": "14900"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "45.0099983215332",
+      "Adj Close": "45.01",
+      "Volume": "15200"
     }
   ]
 }

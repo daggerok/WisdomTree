@@ -2,7 +2,7 @@
   "ticker": "DWM",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5111,
+  "totalRows": 5112,
   "headers": [
     "Date",
     "Close",
@@ -675,6 +675,12 @@
       "Close": "72.83000183105469",
       "Adj Close": "72.83",
       "Volume": "3800"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "72.66200256347656",
+      "Adj Close": "72.66",
+      "Volume": "7282"
     }
   ]
 }

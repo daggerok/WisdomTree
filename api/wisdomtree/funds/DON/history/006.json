@@ -2,7 +2,7 @@
   "ticker": "DON",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5111,
+  "totalRows": 5112,
   "headers": [
     "Date",
     "Close",
@@ -675,6 +675,12 @@
       "Close": "54.70000076293945",
       "Adj Close": "54.7",
       "Volume": "128100"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "54.849998474121094",
+      "Adj Close": "54.85",
+      "Volume": "106200"
     }
   ]
 }

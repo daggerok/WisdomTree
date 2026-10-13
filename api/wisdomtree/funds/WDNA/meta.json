@@ -1,12 +1,12 @@
 {
   "ticker": "WDNA",
-  "name": "WisdomTree BioRevolution Fund",
+  "name": "BioRevolution",
   "category": "Thematic",
   "categoryPath": "Megatrends / -",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdna",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdna",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.222
   },
   "aum": {
-    "display": "$4.52 M",
-    "value": 4519600,
-    "asOfDate": "Oct 08 2026",
+    "display": "$4.69 M",
+    "value": 4689570,
+    "asOfDate": "Oct 09 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.29,
-    "dividendYieldText": "3.29%",
+    "dividendYield": 3.35,
+    "dividendYieldText": "3.35%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 3.29,
@@ -225,8 +225,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1345,
-    "asOf": "Oct 09 2026",
+    "totalRows": 1346,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

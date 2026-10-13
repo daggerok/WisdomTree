@@ -2,7 +2,7 @@
   "ticker": "WTRE",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4869,
+  "totalRows": 4870,
   "headers": [
     "Date",
     "Close",
@@ -5223,6 +5223,12 @@
       "Close": "22.43000030517578",
       "Adj Close": "22.43",
       "Volume": "600"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "22.40999984741211",
+      "Adj Close": "22.41",
+      "Volume": "3300"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DGS",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4766,
+  "totalRows": 4767,
   "headers": [
     "Date",
     "Close",
@@ -4605,6 +4605,12 @@
       "Close": "64.04000091552734",
       "Adj Close": "64.04",
       "Volume": "29200"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "63.81999969482422",
+      "Adj Close": "63.82",
+      "Volume": "31900"
     }
   ]
 }

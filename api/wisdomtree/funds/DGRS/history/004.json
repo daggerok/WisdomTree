@@ -2,7 +2,7 @@
   "ticker": "DGRS",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3323,
+  "totalRows": 3324,
   "headers": [
     "Date",
     "Close",
@@ -427,7 +427,7 @@
     {
       "Date": "Oct 07 2025",
       "Close": "49.58000183105469",
-      "Adj Close": "48.56",
+      "Adj Close": "48.55",
       "Volume": "8600"
     },
     {
@@ -1947,6 +1947,12 @@
       "Close": "56.2599983215332",
       "Adj Close": "56.26",
       "Volume": "9600"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "56.29999923706055",
+      "Adj Close": "56.3",
+      "Volume": "43200"
     }
   ]
 }

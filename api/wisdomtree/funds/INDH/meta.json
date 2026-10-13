@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$36.95",
-    "value": 36.948,
-    "asOfDate": "Oct 09 2026"
+    "display": "$36.61",
+    "value": 36.607,
+    "asOfDate": "Oct 12 2026"
   },
   "marketPrice": {
     "display": "$36.76",
@@ -44,9 +44,9 @@
     "value": -0.518
   },
   "aum": {
-    "display": "$5.46 M",
-    "value": 5460030,
-    "asOfDate": "Oct 08 2026",
+    "display": "$5.54 M",
+    "value": 5542140,
+    "asOfDate": "Oct 09 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -234,8 +234,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 607,
-    "asOf": "Oct 09 2026",
+    "totalRows": 608,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

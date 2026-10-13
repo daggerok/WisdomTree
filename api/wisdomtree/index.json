@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T02:30:01Z",
+  "generatedAt": "2026-10-13T02:39:53Z",
   "source": {
     "provider": "WisdomTree Asset Management, Inc. (U.S.-listed ETFs)",
     "market": "us",
@@ -14,7 +14,7 @@
   "counts": {
     "funds": 96,
     "holdings": 39334,
-    "history": 251173
+    "history": 251268
   },
   "funds": [
     {
@@ -29,11 +29,11 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$41.34",
-      "navValue": 41.345,
-      "aum": "$889.26 M",
-      "aumValue": 889263740,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$41.36",
+      "navValue": 41.361,
+      "aum": "$888.92 M",
+      "aumValue": 888916800,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 09 2015",
       "exchange": "PCX",
       "closePrice": "$41.35",
@@ -147,7 +147,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 2147,
-      "history": 2831
+      "history": 2832
     },
     {
       "ticker": "AGZD",
@@ -161,11 +161,11 @@
       "terValue": 0.23,
       "terGross": "0.23%",
       "terGrossValue": 0.23,
-      "nav": "$22.55",
-      "navValue": 22.545,
-      "aum": "$150.98 M",
-      "aumValue": 150982130,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$22.56",
+      "navValue": 22.558,
+      "aum": "$153.31 M",
+      "aumValue": 153308670,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 18 2013",
       "exchange": "NGM",
       "closePrice": "$22.53",
@@ -279,7 +279,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1396,
-      "history": 3221
+      "history": 3222
     },
     {
       "ticker": "AIVI",
@@ -293,11 +293,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$56.68",
-      "navValue": 56.676,
-      "aum": "$59.32 M",
-      "aumValue": 59318810,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$56.91",
+      "navValue": 56.911,
+      "aum": "$59.51 M",
+      "aumValue": 59510140,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$56.80",
@@ -378,8 +378,8 @@
         "cagr5y": 12.43,
         "cagr10y": 8.85,
         "siAnn": 5.41,
-        "dividendYield": 5.08,
-        "dividendYieldText": "5.08%",
+        "dividendYield": 5.06,
+        "dividendYieldText": "5.06%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.89,
         "secYieldText": "2.89%",
@@ -387,7 +387,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 141,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "AIVL",
@@ -401,11 +401,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$132.02",
-      "navValue": 132.019,
-      "aum": "$412.37 M",
-      "aumValue": 412371040,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$132.53",
+      "navValue": 132.534,
+      "aum": "$415.86 M",
+      "aumValue": 415859390,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$131.96",
@@ -495,7 +495,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 104,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "BTCW",
@@ -509,11 +509,11 @@
       "terValue": 0.25,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$86.99",
-      "navValue": 86.994,
-      "aum": "$167.67 M",
-      "aumValue": 167670180,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$87.16",
+      "navValue": 87.161,
+      "aum": "$169.20 M",
+      "aumValue": 169203380,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 11 2024",
       "exchange": "BTS",
       "closePrice": "$86.89",
@@ -603,7 +603,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1,
-      "history": 689
+      "history": 690
     },
     {
       "ticker": "CEW",
@@ -617,11 +617,11 @@
       "terValue": 0.55,
       "terGross": "0.55%",
       "terGrossValue": 0.55,
-      "nav": "$19.68",
-      "navValue": 19.684,
-      "aum": "$19.66 M",
-      "aumValue": 19663460,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$19.71",
+      "navValue": 19.71,
+      "aum": "$19.68 M",
+      "aumValue": 19683760,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 06 2009",
       "exchange": "PCX",
       "closePrice": "$19.63",
@@ -711,7 +711,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 32,
-      "history": 4367
+      "history": 4368
     },
     {
       "ticker": "CXSE",
@@ -725,11 +725,11 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$34.89",
-      "navValue": 34.89,
-      "aum": "$442.46 M",
-      "aumValue": 442457220,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$34.58",
+      "navValue": 34.575,
+      "aum": "$449.21 M",
+      "aumValue": 449207200,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Sep 19 2012",
       "exchange": "NGM",
       "closePrice": "$34.93",
@@ -834,8 +834,8 @@
         "cagr5y": -6.59,
         "cagr10y": 4.21,
         "siAnn": 3.97,
-        "dividendYield": 1.99,
-        "dividendYieldText": "1.99%",
+        "dividendYield": 2.01,
+        "dividendYieldText": "2.01%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 1.05,
         "secYieldText": "1.05%",
@@ -843,7 +843,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 264,
-      "history": 3533
+      "history": 3534
     },
     {
       "ticker": "DDLS",
@@ -857,11 +857,11 @@
       "terValue": 0.48,
       "terGross": "0.48%",
       "terGrossValue": 0.48,
-      "nav": "$44.87",
-      "navValue": 44.868,
-      "aum": "$411.45 M",
-      "aumValue": 411448160,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$44.84",
+      "navValue": 44.844,
+      "aum": "$415.02 M",
+      "aumValue": 415023970,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 07 2016",
       "exchange": "BTS",
       "closePrice": "$44.91",
@@ -975,7 +975,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1109,
-      "history": 2630
+      "history": 2631
     },
     {
       "ticker": "DDWM",
@@ -989,11 +989,11 @@
       "terValue": 0.4,
       "terGross": "0.4%",
       "terGrossValue": 0.4,
-      "nav": "$45.31",
-      "navValue": 45.315,
-      "aum": "$1.40 B",
-      "aumValue": 1401393150,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$45.47",
+      "navValue": 45.465,
+      "aum": "$1.41 B",
+      "aumValue": 1411575300,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 07 2016",
       "exchange": "BTS",
       "closePrice": "$45.60",
@@ -1107,7 +1107,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1545,
-      "history": 2686
+      "history": 2687
     },
     {
       "ticker": "DEM",
@@ -1121,11 +1121,11 @@
       "terValue": 0.63,
       "terGross": "0.63%",
       "terGrossValue": 0.63,
-      "nav": "$55.59",
-      "navValue": 55.586,
-      "aum": "$4.16 B",
-      "aumValue": 4162214400,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$55.72",
+      "navValue": 55.723,
+      "aum": "$4.19 B",
+      "aumValue": 4185658110,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 13 2007",
       "exchange": "PCX",
       "closePrice": "$55.45",
@@ -1230,8 +1230,8 @@
         "cagr5y": 11.15,
         "cagr10y": 9.46,
         "siAnn": 5.12,
-        "dividendYield": 3.98,
-        "dividendYieldText": "3.98%",
+        "dividendYield": 3.97,
+        "dividendYieldText": "3.97%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 3.62,
         "secYieldText": "3.62%",
@@ -1239,7 +1239,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 534,
-      "history": 4842
+      "history": 4843
     },
     {
       "ticker": "DES",
@@ -1253,11 +1253,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$38.22",
-      "navValue": 38.218,
-      "aum": "$2.07 B",
-      "aumValue": 2065634560,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$38.28",
+      "navValue": 38.282,
+      "aum": "$2.06 B",
+      "aumValue": 2056148860,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$38.24",
@@ -1362,8 +1362,8 @@
         "cagr5y": 7.22,
         "cagr10y": 7.22,
         "siAnn": 7.51,
-        "dividendYield": 2.38,
-        "dividendYieldText": "2.38%",
+        "dividendYield": 2.37,
+        "dividendYieldText": "2.37%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.63,
         "secYieldText": "2.63%",
@@ -1371,7 +1371,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 525,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DEW",
@@ -1385,11 +1385,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$69.25",
-      "navValue": 69.249,
-      "aum": "$155.46 M",
-      "aumValue": 155462740,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$69.67",
+      "navValue": 69.672,
+      "aum": "$155.81 M",
+      "aumValue": 155810370,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$69.56",
@@ -1494,8 +1494,8 @@
         "cagr5y": 12.32,
         "cagr10y": 9.05,
         "siAnn": 5.86,
-        "dividendYield": 3.16,
-        "dividendYieldText": "3.16%",
+        "dividendYield": 3.15,
+        "dividendYieldText": "3.15%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 3.25,
         "secYieldText": "3.25%",
@@ -1503,7 +1503,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 702,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DFE",
@@ -1517,11 +1517,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$73.32",
-      "navValue": 73.316,
-      "aum": "$156.03 M",
-      "aumValue": 156030780,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$73.29",
+      "navValue": 73.289,
+      "aum": "$157.63 M",
+      "aumValue": 157630060,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$73.35",
@@ -1635,7 +1635,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 379,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DFJ",
@@ -1649,11 +1649,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$114.98",
-      "navValue": 114.979,
-      "aum": "$440.17 M",
-      "aumValue": 440169760,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$114.77",
+      "navValue": 114.772,
+      "aum": "$442.67 M",
+      "aumValue": 442668640,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$115.71",
@@ -1767,7 +1767,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 797,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DGRE",
@@ -1781,11 +1781,11 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$40.43",
-      "navValue": 40.432,
-      "aum": "$148.88 M",
-      "aumValue": 148878270,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$40.20",
+      "navValue": 40.197,
+      "aum": "$149.60 M",
+      "aumValue": 149596940,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Aug 01 2013",
       "exchange": "NGM",
       "closePrice": "$40.38",
@@ -1875,7 +1875,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 283,
-      "history": 3318
+      "history": 3319
     },
     {
       "ticker": "DGRS",
@@ -1889,11 +1889,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$56.24",
-      "navValue": 56.237,
-      "aum": "$382.65 M",
-      "aumValue": 382648190,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$56.25",
+      "navValue": 56.249,
+      "aum": "$379.88 M",
+      "aumValue": 379882460,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 25 2013",
       "exchange": "NGM",
       "closePrice": "$56.27",
@@ -2007,7 +2007,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 201,
-      "history": 3323
+      "history": 3324
     },
     {
       "ticker": "DGRW",
@@ -2021,11 +2021,11 @@
       "terValue": 0.28,
       "terGross": "0.28%",
       "terGrossValue": 0.28,
-      "nav": "$98.87",
-      "navValue": 98.867,
-      "aum": "$17.07 B",
-      "aumValue": 17073739780,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$99.21",
+      "navValue": 99.211,
+      "aum": "$17.12 B",
+      "aumValue": 17118761980,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 22 2013",
       "exchange": "NGM",
       "closePrice": "$98.86",
@@ -2139,7 +2139,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 198,
-      "history": 3367
+      "history": 3368
     },
     {
       "ticker": "DGS",
@@ -2153,11 +2153,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$64.34",
-      "navValue": 64.343,
-      "aum": "$1.72 B",
-      "aumValue": 1724895870,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$64.22",
+      "navValue": 64.22,
+      "aum": "$1.74 B",
+      "aumValue": 1737251710,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Oct 30 2007",
       "exchange": "PCX",
       "closePrice": "$64.04",
@@ -2271,7 +2271,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1015,
-      "history": 4766
+      "history": 4767
     },
     {
       "ticker": "DHS",
@@ -2285,11 +2285,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$112.98",
-      "navValue": 112.98,
-      "aum": "$1.57 B",
-      "aumValue": 1568797180,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$113.67",
+      "navValue": 113.671,
+      "aum": "$1.56 B",
+      "aumValue": 1559128700,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$112.96",
@@ -2394,8 +2394,8 @@
         "cagr5y": 11.85,
         "cagr10y": 9.28,
         "siAnn": 7.99,
-        "dividendYield": 3.28,
-        "dividendYieldText": "3.28%",
+        "dividendYield": 3.26,
+        "dividendYieldText": "3.26%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 3.4,
         "secYieldText": "3.40%",
@@ -2403,7 +2403,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 326,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DIM",
@@ -2417,11 +2417,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$85.24",
-      "navValue": 85.238,
-      "aum": "$156.88 M",
-      "aumValue": 156884990,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$85.38",
+      "navValue": 85.376,
+      "aum": "$157.69 M",
+      "aumValue": 157689920,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$85.46",
@@ -2526,8 +2526,8 @@
         "cagr5y": 9.23,
         "cagr10y": 8.03,
         "siAnn": 6.23,
-        "dividendYield": 3.11,
-        "dividendYieldText": "3.11%",
+        "dividendYield": 3.1,
+        "dividendYieldText": "3.10%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.75,
         "secYieldText": "2.75%",
@@ -2535,7 +2535,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 598,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DLN",
@@ -2549,11 +2549,11 @@
       "terValue": 0.28,
       "terGross": "0.28%",
       "terGrossValue": 0.28,
-      "nav": "$99.08",
-      "navValue": 99.083,
-      "aum": "$6.25 B",
-      "aumValue": 6247714820,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$99.55",
+      "navValue": 99.551,
+      "aum": "$6.27 B",
+      "aumValue": 6266970620,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$99.11",
@@ -2658,8 +2658,8 @@
         "cagr5y": 12.72,
         "cagr10y": 12.41,
         "siAnn": 9.7,
-        "dividendYield": 1.75,
-        "dividendYieldText": "1.75%",
+        "dividendYield": 1.74,
+        "dividendYieldText": "1.74%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 1.82,
         "secYieldText": "1.82%",
@@ -2667,11 +2667,11 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 312,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DLS",
-      "name": "WisdomTree International SmallCap Dividend Fund",
+      "name": "International SmallCap Dividend",
       "category": "International Equity",
       "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
       "dataFile": "./funds/DLS/meta.json",
@@ -2683,9 +2683,9 @@
       "terGrossValue": 0.58,
       "nav": "$86.04",
       "navValue": 86.036,
-      "aum": "$1.03 B",
-      "aumValue": 1028027010,
-      "asOfDate": "Oct 08 2026",
+      "aum": "$1.04 B",
+      "aumValue": 1036736510,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$86.13",
@@ -2790,8 +2790,8 @@
         "cagr5y": 7.75,
         "cagr10y": 7.49,
         "siAnn": 6.46,
-        "dividendYield": 3.52,
-        "dividendYieldText": "3.52%",
+        "dividendYield": 3.53,
+        "dividendYieldText": "3.53%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 3.12,
         "secYieldText": "3.12%",
@@ -2799,7 +2799,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1023,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DNL",
@@ -2813,11 +2813,11 @@
       "terValue": 0.42,
       "terGross": "0.42%",
       "terGrossValue": 0.42,
-      "nav": "$45.19",
-      "navValue": 45.191,
-      "aum": "$479.21 M",
-      "aumValue": 479206980,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$45.12",
+      "navValue": 45.119,
+      "aum": "$483.54 M",
+      "aumValue": 483543140,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$45.16",
@@ -2931,7 +2931,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 214,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DOL",
@@ -2945,11 +2945,11 @@
       "terValue": 0.48,
       "terGross": "0.48%",
       "terGrossValue": 0.48,
-      "nav": "$73.36",
-      "navValue": 73.364,
-      "aum": "$817.86 M",
-      "aumValue": 817858110,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$73.46",
+      "navValue": 73.461,
+      "aum": "$821.67 M",
+      "aumValue": 821670780,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$73.51",
@@ -3063,7 +3063,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 302,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DON",
@@ -3077,11 +3077,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$54.68",
-      "navValue": 54.678,
-      "aum": "$3.81 B",
-      "aumValue": 3805232640,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$54.84",
+      "navValue": 54.841,
+      "aum": "$3.80 B",
+      "aumValue": 3802844930,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$54.70",
@@ -3186,8 +3186,8 @@
         "cagr5y": 8.07,
         "cagr10y": 8.62,
         "siAnn": 8.94,
-        "dividendYield": 2.39,
-        "dividendYieldText": "2.39%",
+        "dividendYield": 2.38,
+        "dividendYieldText": "2.38%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.39,
         "secYieldText": "2.39%",
@@ -3195,7 +3195,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 296,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DTD",
@@ -3209,11 +3209,11 @@
       "terValue": 0.28,
       "terGross": "0.28%",
       "terGrossValue": 0.28,
-      "nav": "$95.14",
-      "navValue": 95.14,
+      "nav": "$95.56",
+      "navValue": 95.564,
       "aum": "$1.65 B",
-      "aumValue": 1646569220,
-      "asOfDate": "Oct 08 2026",
+      "aumValue": 1650686210,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$95.09",
@@ -3318,8 +3318,8 @@
         "cagr5y": 12.25,
         "cagr10y": 11.84,
         "siAnn": 9.57,
-        "dividendYield": 1.83,
-        "dividendYieldText": "1.83%",
+        "dividendYield": 1.82,
+        "dividendYieldText": "1.82%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 1.91,
         "secYieldText": "1.91%",
@@ -3327,7 +3327,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 824,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DTH",
@@ -3341,11 +3341,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$54.95",
-      "navValue": 54.952,
-      "aum": "$622.94 M",
-      "aumValue": 622943680,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$55.14",
+      "navValue": 55.141,
+      "aum": "$626.45 M",
+      "aumValue": 626452100,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$55.12",
@@ -3450,8 +3450,8 @@
         "cagr5y": 13.61,
         "cagr10y": 8.84,
         "siAnn": 5.3,
-        "dividendYield": 4.05,
-        "dividendYieldText": "4.05%",
+        "dividendYield": 4.04,
+        "dividendYieldText": "4.04%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 4.02,
         "secYieldText": "4.02%",
@@ -3459,7 +3459,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 565,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DWM",
@@ -3473,11 +3473,11 @@
       "terValue": 0.48,
       "terGross": "0.48%",
       "terGrossValue": 0.48,
-      "nav": "$72.66",
-      "navValue": 72.659,
-      "aum": "$642.07 M",
-      "aumValue": 642072060,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$72.87",
+      "navValue": 72.874,
+      "aum": "$646.66 M",
+      "aumValue": 646662140,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$72.83",
@@ -3591,7 +3591,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1408,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "DWMF",
@@ -3605,11 +3605,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$33.14",
-      "navValue": 33.14,
-      "aum": "$32.95 M",
-      "aumValue": 32949480,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$33.27",
+      "navValue": 33.271,
+      "aum": "$33.14 M",
+      "aumValue": 33140230,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Aug 10 2018",
       "exchange": "PCX",
       "closePrice": "$33.00",
@@ -3690,8 +3690,8 @@
         "cagr5y": 8.73,
         "cagr10y": null,
         "siAnn": 7.02,
-        "dividendYield": 2.96,
-        "dividendYieldText": "2.96%",
+        "dividendYield": 2.95,
+        "dividendYieldText": "2.95%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.4,
         "secYieldText": "2.40%",
@@ -3699,7 +3699,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 255,
-      "history": 2052
+      "history": 2053
     },
     {
       "ticker": "DXJ",
@@ -3713,11 +3713,11 @@
       "terValue": 0.48,
       "terGross": "0.48%",
       "terGrossValue": 0.48,
-      "nav": "$60.19",
-      "navValue": 60.186,
-      "aum": "$7.07 B",
-      "aumValue": 7070835200,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$60.18",
+      "navValue": 60.182,
+      "aum": "$7.10 B",
+      "aumValue": 7095942140,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 16 2006",
       "exchange": "PCX",
       "closePrice": "$60.71",
@@ -3831,7 +3831,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 439,
-      "history": 5111
+      "history": 5112
     },
     {
       "ticker": "EES",
@@ -3845,11 +3845,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$65.47",
-      "navValue": 65.474,
-      "aum": "$680.70 M",
-      "aumValue": 680702780,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$65.48",
+      "navValue": 65.484,
+      "aum": "$680.93 M",
+      "aumValue": 680928130,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 23 2007",
       "exchange": "PCX",
       "closePrice": "$65.49",
@@ -3963,7 +3963,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 892,
-      "history": 4939
+      "history": 4940
     },
     {
       "ticker": "ELD",
@@ -3977,11 +3977,11 @@
       "terValue": 0.55,
       "terGross": "0.55%",
       "terGrossValue": 0.55,
-      "nav": "$28.14",
-      "navValue": 28.137,
-      "aum": "$137.70 M",
-      "aumValue": 137701950,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$28.19",
+      "navValue": 28.191,
+      "aum": "$137.87 M",
+      "aumValue": 137872580,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Aug 09 2010",
       "exchange": "PCX",
       "closePrice": "$28.08",
@@ -4062,8 +4062,8 @@
         "cagr5y": 3.1,
         "cagr10y": 2.13,
         "siAnn": 1.2,
-        "dividendYield": 6.18,
-        "dividendYieldText": "6.18%",
+        "dividendYield": 6.17,
+        "dividendYieldText": "6.17%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 6.75,
         "secYieldText": "6.75%",
@@ -4071,7 +4071,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 220,
-      "history": 4068
+      "history": 4069
     },
     {
       "ticker": "EMCB",
@@ -4085,11 +4085,11 @@
       "terValue": 0.6,
       "terGross": "0.61%",
       "terGrossValue": 0.61,
-      "nav": "$64.12",
-      "navValue": 64.121,
-      "aum": "$99.29 M",
-      "aumValue": 99287980,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$64.16",
+      "navValue": 64.159,
+      "aum": "$99.39 M",
+      "aumValue": 99388110,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 08 2012",
       "exchange": "NGM",
       "closePrice": "$64.31",
@@ -4179,7 +4179,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 203,
-      "history": 3669
+      "history": 3670
     },
     {
       "ticker": "EMMF",
@@ -4193,11 +4193,11 @@
       "terValue": 0.48,
       "terGross": "0.48%",
       "terGrossValue": 0.48,
-      "nav": "$37.87",
-      "navValue": 37.868,
-      "aum": "$184.43 M",
-      "aumValue": 184432380,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$37.73",
+      "navValue": 37.73,
+      "aum": "$189.34 M",
+      "aumValue": 189341660,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Aug 10 2018",
       "exchange": "PCX",
       "closePrice": "$37.95",
@@ -4278,8 +4278,8 @@
         "cagr5y": 10.84,
         "cagr10y": null,
         "siAnn": 7.89,
-        "dividendYield": 1.87,
-        "dividendYieldText": "1.87%",
+        "dividendYield": 1.88,
+        "dividendYieldText": "1.88%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.79,
         "secYieldText": "0.79%",
@@ -4287,7 +4287,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 265,
-      "history": 2052
+      "history": 2053
     },
     {
       "ticker": "EPI",
@@ -4301,11 +4301,11 @@
       "terValue": 0.84,
       "terGross": "0.84%",
       "terGrossValue": 0.84,
-      "nav": "$40.04",
-      "navValue": 40.037,
-      "aum": "$1.75 B",
-      "aumValue": 1746301700,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$40.27",
+      "navValue": 40.271,
+      "aum": "$1.77 B",
+      "aumValue": 1769650430,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 22 2008",
       "exchange": "PCX",
       "closePrice": "$39.89",
@@ -4419,7 +4419,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 571,
-      "history": 4686
+      "history": 4687
     },
     {
       "ticker": "EPS",
@@ -4433,11 +4433,11 @@
       "terValue": 0.08,
       "terGross": "0.08%",
       "terGrossValue": 0.08,
-      "nav": "$81.61",
-      "navValue": 81.61,
-      "aum": "$1.68 B",
-      "aumValue": 1675111420,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$81.59",
+      "navValue": 81.589,
+      "aum": "$1.69 B",
+      "aumValue": 1685251460,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 23 2007",
       "exchange": "PCX",
       "closePrice": "$81.62",
@@ -4551,7 +4551,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 506,
-      "history": 4939
+      "history": 4940
     },
     {
       "ticker": "EUDG",
@@ -4565,11 +4565,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$37.12",
-      "navValue": 37.12,
-      "aum": "$64.44 M",
-      "aumValue": 64435650,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$37.30",
+      "navValue": 37.3,
+      "aum": "$64.96 M",
+      "aumValue": 64960300,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 07 2014",
       "exchange": "PCX",
       "closePrice": "$37.15",
@@ -4674,8 +4674,8 @@
         "cagr5y": 5.68,
         "cagr10y": 7.95,
         "siAnn": 5.73,
-        "dividendYield": 2.43,
-        "dividendYieldText": "2.43%",
+        "dividendYield": 2.42,
+        "dividendYieldText": "2.42%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.16,
         "secYieldText": "2.16%",
@@ -4683,7 +4683,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 230,
-      "history": 3126
+      "history": 3127
     },
     {
       "ticker": "EZM",
@@ -4697,11 +4697,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$72.62",
-      "navValue": 72.622,
-      "aum": "$903.36 M",
-      "aumValue": 903364160,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$72.53",
+      "navValue": 72.528,
+      "aum": "$904.14 M",
+      "aumValue": 904143680,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 23 2007",
       "exchange": "PCX",
       "closePrice": "$72.57",
@@ -4815,7 +4815,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 509,
-      "history": 4939
+      "history": 4940
     },
     {
       "ticker": "GCC",
@@ -4829,11 +4829,11 @@
       "terValue": 0.55,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$26.79",
-      "navValue": 26.794,
-      "aum": "$333.30 M",
-      "aumValue": 333301280,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$26.91",
+      "navValue": 26.915,
+      "aum": "$330.91 M",
+      "aumValue": 330905090,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 21 2020",
       "exchange": "PCX",
       "closePrice": "$26.70",
@@ -4861,8 +4861,8 @@
           "yr3Text": "19.23%",
           "yr5": 13.03,
           "yr5Text": "13.03%",
-          "yr10": 7.88,
-          "yr10Text": "7.88%",
+          "yr10": 7.67,
+          "yr10Text": "7.67%",
           "sinceInception": 14.54,
           "sinceInceptionText": "14.54%",
           "navReturns": {
@@ -4909,13 +4909,13 @@
         "tr1y": 33,
         "tr3y": 69.49,
         "tr5y": 84.49,
-        "tr10y": 113.51,
+        "tr10y": 109.39,
         "cagr3y": 19.23,
         "cagr5y": 13.03,
-        "cagr10y": 7.88,
+        "cagr10y": 7.67,
         "siAnn": 14.54,
-        "dividendYield": 5.24,
-        "dividendYieldText": "5.24%",
+        "dividendYield": 5.22,
+        "dividendYieldText": "5.22%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.86,
         "secYieldText": "2.86%",
@@ -4923,7 +4923,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 32,
-      "history": 4708
+      "history": 4709
     },
     {
       "ticker": "GDE",
@@ -4937,11 +4937,11 @@
       "terValue": 0.2,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$65.24",
-      "navValue": 65.24,
-      "aum": "$458.21 M",
-      "aumValue": 458213600,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$64.88",
+      "navValue": 64.877,
+      "aum": "$466.46 M",
+      "aumValue": 466462940,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 17 2022",
       "exchange": "BTS",
       "closePrice": "$65.12",
@@ -5022,8 +5022,8 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": 26.45,
-        "dividendYield": 4.08,
-        "dividendYieldText": "4.08%",
+        "dividendYield": 4.1,
+        "dividendYieldText": "4.10%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.75,
         "secYieldText": "0.75%",
@@ -5031,7 +5031,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 506,
-      "history": 1146
+      "history": 1147
     },
     {
       "ticker": "GDMN",
@@ -5045,11 +5045,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$84.34",
-      "navValue": 84.341,
-      "aum": "$211.53 M",
-      "aumValue": 211528420,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$83.58",
+      "navValue": 83.582,
+      "aum": "$219.29 M",
+      "aumValue": 219285260,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 16 2021",
       "exchange": "BTS",
       "closePrice": "$84.51",
@@ -5130,8 +5130,8 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": 34.5,
-        "dividendYield": 2.98,
-        "dividendYieldText": "2.98%",
+        "dividendYield": 3.01,
+        "dividendYieldText": "3.01%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.54,
         "secYieldText": "0.54%",
@@ -5139,7 +5139,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 59,
-      "history": 1208
+      "history": 1209
     },
     {
       "ticker": "GDT",
@@ -5153,11 +5153,11 @@
       "terValue": 0.2,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$34.03",
-      "navValue": 34.029,
-      "aum": "$10.93 M",
-      "aumValue": 10927210,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$33.85",
+      "navValue": 33.854,
+      "aum": "$11.06 M",
+      "aumValue": 11059540,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 22 2026",
       "exchange": "BTS",
       "closePrice": "$34.08",
@@ -5247,7 +5247,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 21,
-      "history": 181
+      "history": 182
     },
     {
       "ticker": "GTR",
@@ -5261,11 +5261,11 @@
       "terValue": 0.7,
       "terGross": "0.7%",
       "terGrossValue": 0.7,
-      "nav": "$27.53",
-      "navValue": 27.529,
-      "aum": "$72.56 M",
-      "aumValue": 72556030,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$27.50",
+      "navValue": 27.5,
+      "aum": "$72.95 M",
+      "aumValue": 72951020,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Oct 07 2021",
       "exchange": "NGM",
       "closePrice": "$27.50",
@@ -5291,8 +5291,8 @@
           "yr1Text": "11.87%",
           "yr3": 13.56,
           "yr3Text": "13.56%",
-          "yr5": 5.1,
-          "yr5Text": "5.10%",
+          "yr5": 5.17,
+          "yr5Text": "5.17%",
           "yr10": null,
           "yr10Text": "—",
           "sinceInception": 5.06,
@@ -5340,14 +5340,14 @@
         "ytd": 9.88,
         "tr1y": 11.87,
         "tr3y": 46.45,
-        "tr5y": 28.24,
+        "tr5y": 28.66,
         "tr10y": null,
         "cagr3y": 13.56,
-        "cagr5y": 5.1,
+        "cagr5y": 5.17,
         "cagr10y": null,
         "siAnn": 5.06,
-        "dividendYield": 2.2,
-        "dividendYieldText": "2.20%",
+        "dividendYield": 2.21,
+        "dividendYieldText": "2.21%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.48,
         "secYieldText": "2.48%",
@@ -5355,7 +5355,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 18,
-      "history": 1257
+      "history": 1258
     },
     {
       "ticker": "HEDJ",
@@ -5372,8 +5372,8 @@
       "nav": "$55.20",
       "navValue": 55.205,
       "aum": "$1.73 B",
-      "aumValue": 1725417090,
-      "asOfDate": "Oct 08 2026",
+      "aumValue": 1733426180,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 31 2009",
       "exchange": "PCX",
       "closePrice": "$55.23",
@@ -5478,8 +5478,8 @@
         "cagr5y": 10.84,
         "cagr10y": 10.26,
         "siAnn": 8.72,
-        "dividendYield": 1.87,
-        "dividendYieldText": "1.87%",
+        "dividendYield": 1.85,
+        "dividendYieldText": "1.85%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.03,
         "secYieldText": "2.03%",
@@ -5487,7 +5487,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 139,
-      "history": 4209
+      "history": 4210
     },
     {
       "ticker": "HYIN",
@@ -5501,11 +5501,11 @@
       "terValue": 0.5,
       "terGross": "0.5%",
       "terGrossValue": 0.5,
-      "nav": "$12.44",
-      "navValue": 12.441,
-      "aum": "$45.75 M",
-      "aumValue": 45752000,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$12.39",
+      "navValue": 12.394,
+      "aum": "$45.53 M",
+      "aumValue": 45532860,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 06 2021",
       "exchange": "BTS",
       "closePrice": "$12.43",
@@ -5610,8 +5610,8 @@
         "cagr5y": -1.89,
         "cagr10y": null,
         "siAnn": -1.39,
-        "dividendYield": 14.94,
-        "dividendYieldText": "14.94%",
+        "dividendYield": 15,
+        "dividendYieldText": "15.00%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 14.88,
         "secYieldText": "14.88%",
@@ -5619,7 +5619,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 34,
-      "history": 1364
+      "history": 1365
     },
     {
       "ticker": "HYZD",
@@ -5633,11 +5633,11 @@
       "terValue": 0.43,
       "terGross": "0.43%",
       "terGrossValue": 0.43,
-      "nav": "$22.39",
-      "navValue": 22.388,
-      "aum": "$308.30 M",
-      "aumValue": 308300220,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$22.40",
+      "navValue": 22.397,
+      "aum": "$308.95 M",
+      "aumValue": 308952740,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 18 2013",
       "exchange": "NGM",
       "closePrice": "$22.42",
@@ -5718,8 +5718,8 @@
         "cagr5y": 5.99,
         "cagr10y": 5.06,
         "siAnn": 4.36,
-        "dividendYield": 5.89,
-        "dividendYieldText": "5.89%",
+        "dividendYield": 5.88,
+        "dividendYieldText": "5.88%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 6.63,
         "secYieldText": "6.63%",
@@ -5727,7 +5727,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 505,
-      "history": 3221
+      "history": 3222
     },
     {
       "ticker": "IHDG",
@@ -5741,11 +5741,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$51.66",
-      "navValue": 51.656,
-      "aum": "$2.06 B",
-      "aumValue": 2058808320,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$51.91",
+      "navValue": 51.91,
+      "aum": "$2.07 B",
+      "aumValue": 2074005760,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 07 2014",
       "exchange": "PCX",
       "closePrice": "$51.77",
@@ -5850,8 +5850,8 @@
         "cagr5y": 8.15,
         "cagr10y": 10.16,
         "siAnn": 9.33,
-        "dividendYield": 1.8,
-        "dividendYieldText": "1.80%",
+        "dividendYield": 1.79,
+        "dividendYieldText": "1.79%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 1.85,
         "secYieldText": "1.85%",
@@ -5859,7 +5859,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 405,
-      "history": 3126
+      "history": 3127
     },
     {
       "ticker": "INDH",
@@ -5873,11 +5873,11 @@
       "terValue": 0.64,
       "terGross": "0.64%",
       "terGrossValue": 0.64,
-      "nav": "$36.95",
-      "navValue": 36.948,
-      "aum": "$5.46 M",
-      "aumValue": 5460030,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$36.61",
+      "navValue": 36.607,
+      "aum": "$5.54 M",
+      "aumValue": 5542140,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 09 2024",
       "exchange": "NGM",
       "closePrice": "$36.76",
@@ -5991,7 +5991,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 81,
-      "history": 607
+      "history": 608
     },
     {
       "ticker": "IQDG",
@@ -6005,11 +6005,11 @@
       "terValue": 0.42,
       "terGross": "0.42%",
       "terGrossValue": 0.42,
-      "nav": "$41.88",
-      "navValue": 41.882,
-      "aum": "$673.94 M",
-      "aumValue": 673937280,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$42.01",
+      "navValue": 42.012,
+      "aum": "$678.49 M",
+      "aumValue": 678490940,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 07 2016",
       "exchange": "BTS",
       "closePrice": "$42.09",
@@ -6114,8 +6114,8 @@
         "cagr5y": 4.84,
         "cagr10y": 7.72,
         "siAnn": 7.74,
-        "dividendYield": 2.42,
-        "dividendYieldText": "2.42%",
+        "dividendYield": 2.41,
+        "dividendYieldText": "2.41%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.06,
         "secYieldText": "2.06%",
@@ -6123,7 +6123,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 267,
-      "history": 2643
+      "history": 2644
     },
     {
       "ticker": "MTGP",
@@ -6137,11 +6137,11 @@
       "terValue": 0.45,
       "terGross": "0.46%",
       "terGrossValue": 0.46,
-      "nav": "$42.02",
-      "navValue": 42.023,
-      "aum": "$71.47 M",
-      "aumValue": 71465150,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$42.05",
+      "navValue": 42.048,
+      "aum": "$71.44 M",
+      "aumValue": 71438970,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Nov 14 2019",
       "exchange": "PCX",
       "closePrice": "$42.10",
@@ -6231,7 +6231,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 184,
-      "history": 1719
+      "history": 1720
     },
     {
       "ticker": "NTSD",
@@ -6245,11 +6245,11 @@
       "terValue": 0.35,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$47.57",
-      "navValue": 47.571,
-      "aum": "$50.62 M",
-      "aumValue": 50616770,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$47.56",
+      "navValue": 47.563,
+      "aum": "$51.14 M",
+      "aumValue": 51138920,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 19 2026",
       "exchange": "PCX",
       "closePrice": "$47.64",
@@ -6339,7 +6339,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 510,
-      "history": 142
+      "history": 143
     },
     {
       "ticker": "NTSE",
@@ -6353,11 +6353,11 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$46.20",
-      "navValue": 46.198,
-      "aum": "$55.14 M",
-      "aumValue": 55143800,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$45.87",
+      "navValue": 45.87,
+      "aum": "$55.44 M",
+      "aumValue": 55437920,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 20 2021",
       "exchange": "PCX",
       "closePrice": "$45.92",
@@ -6438,8 +6438,8 @@
         "cagr5y": 6.9,
         "cagr10y": null,
         "siAnn": 5.77,
-        "dividendYield": 2.03,
-        "dividendYieldText": "2.03%",
+        "dividendYield": 2.04,
+        "dividendYieldText": "2.04%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.84,
         "secYieldText": "0.84%",
@@ -6447,7 +6447,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 441,
-      "history": 1354
+      "history": 1355
     },
     {
       "ticker": "NTSI",
@@ -6461,11 +6461,11 @@
       "terValue": 0.26,
       "terGross": "0.26%",
       "terGrossValue": 0.26,
-      "nav": "$45.47",
-      "navValue": 45.474,
-      "aum": "$470.45 M",
-      "aumValue": 470445950,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$45.58",
+      "navValue": 45.584,
+      "aum": "$472.93 M",
+      "aumValue": 472930620,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 20 2021",
       "exchange": "PCX",
       "closePrice": "$45.73",
@@ -6546,8 +6546,8 @@
         "cagr5y": 5.87,
         "cagr10y": null,
         "siAnn": 5.64,
-        "dividendYield": 3.18,
-        "dividendYieldText": "3.18%",
+        "dividendYield": 3.17,
+        "dividendYieldText": "3.17%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.32,
         "secYieldText": "2.32%",
@@ -6555,7 +6555,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 457,
-      "history": 1353
+      "history": 1354
     },
     {
       "ticker": "NTSX",
@@ -6569,11 +6569,11 @@
       "terValue": 0.2,
       "terGross": "0.2%",
       "terGrossValue": 0.2,
-      "nav": "$59.75",
-      "navValue": 59.748,
-      "aum": "$1.36 B",
-      "aumValue": 1358273150,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$59.74",
+      "navValue": 59.736,
+      "aum": "$1.37 B",
+      "aumValue": 1365247360,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Aug 02 2018",
       "exchange": "PCX",
       "closePrice": "$59.68",
@@ -6663,7 +6663,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 508,
-      "history": 2058
+      "history": 2059
     },
     {
       "ticker": "OPPE",
@@ -6677,11 +6677,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$57.11",
-      "navValue": 57.108,
-      "aum": "$281.67 M",
-      "aumValue": 281672960,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$57.45",
+      "navValue": 57.447,
+      "aum": "$285.54 M",
+      "aumValue": 285540960,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 04 2015",
       "exchange": "PCX",
       "closePrice": "$57.45",
@@ -6786,8 +6786,8 @@
         "cagr5y": 14.46,
         "cagr10y": 12.63,
         "siAnn": 11.13,
-        "dividendYield": 2.89,
-        "dividendYieldText": "2.89%",
+        "dividendYield": 2.87,
+        "dividendYieldText": "2.87%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.57,
         "secYieldText": "2.57%",
@@ -6795,7 +6795,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 131,
-      "history": 2919
+      "history": 2920
     },
     {
       "ticker": "OPPG",
@@ -6809,11 +6809,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$36.09",
-      "navValue": 36.092,
-      "aum": "$2.70 M",
-      "aumValue": 2701380,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$36.29",
+      "navValue": 36.287,
+      "aum": "$2.71 M",
+      "aumValue": 2706880,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 08 2025",
       "exchange": "PCX",
       "closePrice": "$36.13",
@@ -6903,7 +6903,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 66,
-      "history": 318
+      "history": 319
     },
     {
       "ticker": "OPPJ",
@@ -6917,11 +6917,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$58.66",
-      "navValue": 58.656,
-      "aum": "$334.21 M",
-      "aumValue": 334210980,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$58.57",
+      "navValue": 58.574,
+      "aum": "$334.34 M",
+      "aumValue": 334338880,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 28 2013",
       "exchange": "NGM",
       "closePrice": "$59.13",
@@ -7035,7 +7035,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 91,
-      "history": 3341
+      "history": 3342
     },
     {
       "ticker": "QGRW",
@@ -7049,11 +7049,11 @@
       "terValue": 0.28,
       "terGross": "0.28%",
       "terGrossValue": 0.28,
-      "nav": "$70.46",
-      "navValue": 70.46,
-      "aum": "$3.31 B",
-      "aumValue": 3306007040,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$70.11",
+      "navValue": 70.114,
+      "aum": "$3.34 B",
+      "aumValue": 3339793410,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 15 2022",
       "exchange": "PCX",
       "closePrice": "$70.46",
@@ -7167,7 +7167,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 102,
-      "history": 952
+      "history": 953
     },
     {
       "ticker": "QHY",
@@ -7182,10 +7182,10 @@
       "terGross": "0.38%",
       "terGrossValue": 0.38,
       "nav": "$44.52",
-      "navValue": 44.523,
-      "aum": "$248.98 M",
-      "aumValue": 248981820,
-      "asOfDate": "Oct 08 2026",
+      "navValue": 44.521,
+      "aum": "$249.33 M",
+      "aumValue": 249326110,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 27 2016",
       "exchange": "BTS",
       "closePrice": "$44.57",
@@ -7299,7 +7299,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 491,
-      "history": 2629
+      "history": 2630
     },
     {
       "ticker": "QIG",
@@ -7315,9 +7315,9 @@
       "terGrossValue": 0.18,
       "nav": "$42.31",
       "navValue": 42.313,
-      "aum": "$16.94 M",
-      "aumValue": 16937700,
-      "asOfDate": "Oct 08 2026",
+      "aum": "$16.93 M",
+      "aumValue": 16925260,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 27 2016",
       "exchange": "BTS",
       "closePrice": "$42.26",
@@ -7431,7 +7431,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 504,
-      "history": 2629
+      "history": 2630
     },
     {
       "ticker": "QMID",
@@ -7445,11 +7445,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$29.36",
-      "navValue": 29.363,
-      "aum": "$2.19 M",
-      "aumValue": 2187080,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$29.41",
+      "navValue": 29.408,
+      "aum": "$2.20 M",
+      "aumValue": 2202250,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 25 2024",
       "exchange": "NGM",
       "closePrice": "$29.36",
@@ -7563,7 +7563,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 125,
-      "history": 680
+      "history": 681
     },
     {
       "ticker": "QSIG",
@@ -7577,11 +7577,11 @@
       "terValue": 0.18,
       "terGross": "0.18%",
       "terGrossValue": 0.18,
-      "nav": "$47.45",
-      "navValue": 47.454,
-      "aum": "$52.24 M",
-      "aumValue": 52237470,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$47.47",
+      "navValue": 47.471,
+      "aum": "$52.20 M",
+      "aumValue": 52199570,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 27 2016",
       "exchange": "BTS",
       "closePrice": "$47.46",
@@ -7695,7 +7695,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 612,
-      "history": 2629
+      "history": 2630
     },
     {
       "ticker": "QSML",
@@ -7709,11 +7709,11 @@
       "terValue": 0.38,
       "terGross": "0.38%",
       "terGrossValue": 0.38,
-      "nav": "$33.23",
-      "navValue": 33.233,
-      "aum": "$12.38 M",
-      "aumValue": 12380650,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$33.26",
+      "navValue": 33.257,
+      "aum": "$12.46 M",
+      "aumValue": 12462500,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 25 2024",
       "exchange": "NGM",
       "closePrice": "$33.24",
@@ -7827,7 +7827,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 378,
-      "history": 680
+      "history": 681
     },
     {
       "ticker": "SHAG",
@@ -7841,11 +7841,11 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$46.50",
-      "navValue": 46.498,
-      "aum": "$69.80 M",
-      "aumValue": 69795070,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$46.51",
+      "navValue": 46.512,
+      "aum": "$69.75 M",
+      "aumValue": 69746410,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 18 2017",
       "exchange": "BTS",
       "closePrice": "$46.56",
@@ -7959,7 +7959,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 1190,
-      "history": 2361
+      "history": 2362
     },
     {
       "ticker": "UNIY",
@@ -7973,11 +7973,11 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$46.24",
-      "navValue": 46.245,
+      "nav": "$46.26",
+      "navValue": 46.262,
       "aum": "$1.26 B",
-      "aumValue": 1264532990,
-      "asOfDate": "Oct 08 2026",
+      "aumValue": 1264327680,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 07 2023",
       "exchange": "NGM",
       "closePrice": "$46.26",
@@ -8091,7 +8091,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 6159,
-      "history": 922
+      "history": 923
     },
     {
       "ticker": "USDU",
@@ -8105,11 +8105,11 @@
       "terValue": 0.5,
       "terGross": "0.51%",
       "terGrossValue": 0.51,
-      "nav": "$27.14",
-      "navValue": 27.138,
-      "aum": "$312.83 M",
-      "aumValue": 312827140,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$27.17",
+      "navValue": 27.17,
+      "aum": "$313.44 M",
+      "aumValue": 313444260,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 18 2013",
       "exchange": "PCX",
       "closePrice": "$27.17",
@@ -8199,7 +8199,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 123,
-      "history": 3221
+      "history": 3222
     },
     {
       "ticker": "USFR",
@@ -8213,11 +8213,11 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$50.44",
-      "navValue": 50.439,
-      "aum": "$20.79 B",
-      "aumValue": 20785307650,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$50.45",
+      "navValue": 50.455,
+      "aum": "$20.88 B",
+      "aumValue": 20880404480,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 04 2014",
       "exchange": "PCX",
       "closePrice": "$50.44",
@@ -8331,7 +8331,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 5,
-      "history": 3190
+      "history": 3191
     },
     {
       "ticker": "USIN",
@@ -8345,11 +8345,11 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$47.01",
-      "navValue": 47.013,
-      "aum": "$5.65 M",
-      "aumValue": 5646530,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$47.03",
+      "navValue": 47.03,
+      "aum": "$5.64 M",
+      "aumValue": 5641590,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 14 2024",
       "exchange": "NGM",
       "closePrice": "$47.03",
@@ -8463,7 +8463,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 13,
-      "history": 646
+      "history": 647
     },
     {
       "ticker": "USMF",
@@ -8477,11 +8477,11 @@
       "terValue": 0.28,
       "terGross": "0.28%",
       "terGrossValue": 0.28,
-      "nav": "$53.24",
-      "navValue": 53.242,
-      "aum": "$268.75 M",
-      "aumValue": 268747460,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$53.06",
+      "navValue": 53.059,
+      "aum": "$266.21 M",
+      "aumValue": 266210820,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 29 2017",
       "exchange": "BTS",
       "closePrice": "$53.20",
@@ -8586,8 +8586,8 @@
         "cagr5y": 7.52,
         "cagr10y": null,
         "siAnn": 9.94,
-        "dividendYield": 1.24,
-        "dividendYieldText": "1.24%",
+        "dividendYield": 1.25,
+        "dividendYieldText": "1.25%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.86,
         "secYieldText": "0.86%",
@@ -8595,7 +8595,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 202,
-      "history": 2333
+      "history": 2334
     },
     {
       "ticker": "USSH",
@@ -8609,11 +8609,11 @@
       "terValue": 0.15,
       "terGross": "0.15%",
       "terGrossValue": 0.15,
-      "nav": "$49.78",
-      "navValue": 49.785,
-      "aum": "$22.41 M",
-      "aumValue": 22412600,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$49.80",
+      "navValue": 49.801,
+      "aum": "$22.40 M",
+      "aumValue": 22403400,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 14 2024",
       "exchange": "NGM",
       "closePrice": "$49.80",
@@ -8727,7 +8727,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 25,
-      "history": 646
+      "history": 647
     },
     {
       "ticker": "WAMA",
@@ -8741,11 +8741,11 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$27.36",
-      "navValue": 27.358,
-      "aum": "$204.50 M",
-      "aumValue": 204497680,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$27.35",
+      "navValue": 27.353,
+      "aum": "$205.73 M",
+      "aumValue": 205729020,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 12 2026",
       "exchange": "NGM",
       "closePrice": "$27.37",
@@ -8835,7 +8835,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 505,
-      "history": 147
+      "history": 148
     },
     {
       "ticker": "WCBR",
@@ -8849,11 +8849,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$49.85",
-      "navValue": 49.846,
-      "aum": "$198.56 M",
-      "aumValue": 198561710,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$48.37",
+      "navValue": 48.369,
+      "aum": "$210.85 M",
+      "aumValue": 210846260,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 28 2021",
       "exchange": "NGM",
       "closePrice": "$49.96",
@@ -8967,7 +8967,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 27,
-      "history": 1432
+      "history": 1433
     },
     {
       "ticker": "WCLD",
@@ -8981,11 +8981,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$43.72",
-      "navValue": 43.72,
-      "aum": "$296.65 M",
-      "aumValue": 296647620,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$43.22",
+      "navValue": 43.221,
+      "aum": "$299.48 M",
+      "aumValue": 299481440,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Sep 06 2019",
       "exchange": "NGM",
       "closePrice": "$43.74",
@@ -9075,7 +9075,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 66,
-      "history": 1783
+      "history": 1784
     },
     {
       "ticker": "WDAF",
@@ -9089,11 +9089,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$28.64",
-      "navValue": 28.644,
-      "aum": "$10.02 M",
-      "aumValue": 10018660,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$28.40",
+      "navValue": 28.403,
+      "aum": "$10.03 M",
+      "aumValue": 10025270,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Sep 12 2025",
       "exchange": "NGM",
       "closePrice": "$28.57",
@@ -9207,11 +9207,11 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 62,
-      "history": 271
+      "history": 272
     },
     {
       "ticker": "WDEF",
-      "name": "Europe Defense",
+      "name": "WisdomTree Europe Defense Fund",
       "category": "International Equity",
       "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
       "dataFile": "./funds/WDEF/meta.json",
@@ -9221,17 +9221,17 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$27.72",
-      "navValue": 27.717,
-      "aum": "$77.03 M",
-      "aumValue": 77034810,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$27.30",
+      "navValue": 27.3,
+      "aum": "$77.34 M",
+      "aumValue": 77340450,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 17 2025",
       "exchange": "PCX",
-      "closePrice": "$27.73",
-      "closePriceValue": 27.73,
-      "premiumDiscount": "0.05%",
-      "premiumDiscountValue": 0.048,
+      "closePrice": "$26.93",
+      "closePriceValue": 26.93,
+      "premiumDiscount": "0.11%",
+      "premiumDiscountValue": 0.108,
       "distributions": {
         "frequency": "Unknown",
         "exDate": "12/26/2025",
@@ -9240,106 +9240,106 @@
       "returns": {
         "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
         "monthEnd": {
-          "asOfDate": "Aug 31 2026",
-          "mo1": 0.86,
-          "mo1Text": "0.86%",
-          "qtd": -2.33,
-          "qtdText": "-2.33%",
-          "ytd": 4.91,
-          "ytdText": "4.91%",
-          "yr1": 4.73,
-          "yr1Text": "4.73%",
+          "asOfDate": "Sep 30 2026",
+          "mo1": -8.54,
+          "mo1Text": "-8.54%",
+          "qtd": 2.68,
+          "qtdText": "2.68%",
+          "ytd": -4.05,
+          "ytdText": "-4.05%",
+          "yr1": -16.73,
+          "yr1Text": "-16.73%",
           "yr3": null,
           "yr3Text": "—",
           "yr5": null,
           "yr5Text": "—",
           "yr10": null,
           "yr10Text": "—",
-          "sinceInception": 3.06,
-          "sinceInceptionText": "3.06%",
+          "sinceInception": -4.47,
+          "sinceInceptionText": "-4.47%",
           "navReturns": {
-            "mo1": 1.66,
-            "mo1Text": "1.66%",
-            "qtd": -2.14,
-            "qtdText": "-2.14%",
-            "ytd": 5.47,
-            "ytdText": "5.47%",
-            "yr1": 5.33,
-            "yr1Text": "5.33%",
+            "mo1": -8.22,
+            "mo1Text": "-8.22%",
+            "qtd": 3.08,
+            "qtdText": "3.08%",
+            "ytd": -3.2,
+            "ytdText": "-3.20%",
+            "yr1": -15.69,
+            "yr1Text": "-15.69%",
             "yr3": null,
             "yr3Text": "—",
             "yr5": null,
             "yr5Text": "—",
             "yr10": null,
             "yr10Text": "—",
-            "sinceInception": 3.3,
-            "sinceInceptionText": "3.30%"
+            "sinceInception": -3.99,
+            "sinceInceptionText": "-3.99%"
           },
           "indexReturns": {
-            "mo1": 1.67,
-            "mo1Text": "1.67%",
-            "qtd": -2.05,
-            "qtdText": "-2.05%",
-            "ytd": 5.72,
-            "ytdText": "5.72%",
-            "yr1": 5.75,
-            "yr1Text": "5.75%",
+            "mo1": -8.18,
+            "mo1Text": "-8.18%",
+            "qtd": 3.22,
+            "qtdText": "3.22%",
+            "ytd": -2.93,
+            "ytdText": "-2.93%",
+            "yr1": -15.36,
+            "yr1Text": "-15.36%",
             "yr3": null,
             "yr3Text": "—",
             "yr5": null,
             "yr5Text": "—",
             "yr10": null,
             "yr10Text": "—",
-            "sinceInception": 3.78,
-            "sinceInceptionText": "3.78%"
+            "sinceInception": -3.54,
+            "sinceInceptionText": "-3.54%"
           }
         },
         "quarterEnd": {
-          "asOfDate": "Jun 30 2026",
+          "asOfDate": "Sep 30 2026",
           "ytd": null,
-          "yr1": null,
+          "yr1": -16.73,
           "yr3": null,
           "yr5": null,
           "yr10": null,
-          "sinceInception": -7.85,
+          "sinceInception": -4.47,
           "navReturns": {
             "ytd": null,
-            "yr1": null,
+            "yr1": -15.69,
             "yr3": null,
             "yr5": null,
             "yr10": null,
-            "sinceInception": -7.64
+            "sinceInception": -3.99
           },
           "indexReturns": {
             "ytd": null,
-            "yr1": null,
+            "yr1": -15.36,
             "yr3": null,
             "yr5": null,
             "yr10": null,
-            "sinceInception": -7.25
+            "sinceInception": -3.54
           }
         }
       },
       "metrics": {
-        "ytd": 4.91,
-        "tr1y": 4.73,
+        "ytd": -4.05,
+        "tr1y": -16.73,
         "tr3y": null,
         "tr5y": null,
         "tr10y": null,
         "cagr3y": null,
         "cagr5y": null,
         "cagr10y": null,
-        "siAnn": 3.06,
+        "siAnn": -4.47,
         "dividendYield": 0.08,
         "dividendYieldText": "0.08%",
         "dividendYieldBasis": "official-trailing-12m",
-        "secYield": 0.67,
-        "secYieldText": "0.67%",
+        "secYield": 0.69,
+        "secYieldText": "0.69%",
         "returnsBasis": "official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes",
-        "performanceAsOf": "2026-08-31"
+        "performanceAsOf": "2026-09-30"
       },
       "holdings": 44,
-      "history": 311
+      "history": 312
     },
     {
       "ticker": "WDGF",
@@ -9353,11 +9353,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$29.27",
-      "navValue": 29.268,
-      "aum": "$5.07 M",
-      "aumValue": 5065910,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$29.35",
+      "navValue": 29.347,
+      "aum": "$5.12 M",
+      "aumValue": 5121870,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Sep 12 2025",
       "exchange": "NGM",
       "closePrice": "$29.30",
@@ -9471,7 +9471,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 117,
-      "history": 271
+      "history": 272
     },
     {
       "ticker": "WDIG",
@@ -9485,11 +9485,11 @@
       "terValue": 0.55,
       "terGross": "0.55%",
       "terGrossValue": 0.55,
-      "nav": "$39.77",
-      "navValue": 39.766,
-      "aum": "$3.88 M",
-      "aumValue": 3878840,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$39.14",
+      "navValue": 39.136,
+      "aum": "$3.98 M",
+      "aumValue": 3976610,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 07 2026",
       "exchange": "BTS",
       "closePrice": "$40.03",
@@ -9579,11 +9579,11 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 112,
-      "history": 108
+      "history": 109
     },
     {
       "ticker": "WDNA",
-      "name": "WisdomTree BioRevolution Fund",
+      "name": "BioRevolution",
       "category": "Thematic",
       "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdna",
       "dataFile": "./funds/WDNA/meta.json",
@@ -9595,9 +9595,9 @@
       "terGrossValue": 0.45,
       "nav": "$23.45",
       "navValue": 23.448,
-      "aum": "$4.52 M",
-      "aumValue": 4519600,
-      "asOfDate": "Oct 08 2026",
+      "aum": "$4.69 M",
+      "aumValue": 4689570,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 03 2021",
       "exchange": "BTS",
       "closePrice": "$23.50",
@@ -9702,8 +9702,8 @@
         "cagr5y": 0.11,
         "cagr10y": null,
         "siAnn": 0.44,
-        "dividendYield": 3.29,
-        "dividendYieldText": "3.29%",
+        "dividendYield": 3.35,
+        "dividendYieldText": "3.35%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 0.02,
         "secYieldText": "0.02%",
@@ -9711,7 +9711,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 81,
-      "history": 1345
+      "history": 1346
     },
     {
       "ticker": "WDRN",
@@ -9725,11 +9725,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$25.47",
-      "navValue": 25.473,
-      "aum": "$17.84 M",
-      "aumValue": 17838460,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$25.06",
+      "navValue": 25.056,
+      "aum": "$17.83 M",
+      "aumValue": 17831110,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "May 14 2026",
       "exchange": "BTS",
       "closePrice": "$25.58",
@@ -9819,7 +9819,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 64,
-      "history": 103
+      "history": 104
     },
     {
       "ticker": "WIMA",
@@ -9833,11 +9833,11 @@
       "terValue": 0.42,
       "terGross": "0.42%",
       "terGrossValue": 0.42,
-      "nav": "$41.65",
-      "navValue": 41.646,
-      "aum": "$77.59 M",
-      "aumValue": 77594800,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$41.76",
+      "navValue": 41.759,
+      "aum": "$78.09 M",
+      "aumValue": 78085220,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Mar 12 2026",
       "exchange": "NGM",
       "closePrice": "$41.95",
@@ -9927,7 +9927,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 491,
-      "history": 147
+      "history": 148
     },
     {
       "ticker": "WQTM",
@@ -9941,11 +9941,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$31.12",
-      "navValue": 31.123,
-      "aum": "$343.38 M",
-      "aumValue": 343376830,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$30.18",
+      "navValue": 30.18,
+      "aum": "$346.24 M",
+      "aumValue": 346237630,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Oct 09 2025",
       "exchange": "BTS",
       "closePrice": "$31.13",
@@ -9967,8 +9967,8 @@
           "qtdText": "-15.28%",
           "ytd": 23.89,
           "ytdText": "23.89%",
-          "yr1": null,
-          "yr1Text": "—",
+          "yr1": 5.45,
+          "yr1Text": "5.45%",
           "yr3": null,
           "yr3Text": "—",
           "yr5": null,
@@ -10042,7 +10042,7 @@
       },
       "metrics": {
         "ytd": 23.89,
-        "tr1y": null,
+        "tr1y": 5.45,
         "tr3y": null,
         "tr5y": null,
         "tr10y": null,
@@ -10059,7 +10059,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 49,
-      "history": 252
+      "history": 253
     },
     {
       "ticker": "WSLS",
@@ -10073,11 +10073,11 @@
       "terValue": 0.88,
       "terGross": "0.88%",
       "terGrossValue": 0.88,
-      "nav": "$24.71",
-      "navValue": 24.713,
-      "aum": "$2.48 M",
-      "aumValue": 2479360,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$24.70",
+      "navValue": 24.701,
+      "aum": "$2.47 M",
+      "aumValue": 2471310,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Oct 08 2026",
       "exchange": "ASE",
       "closePrice": "$24.80",
@@ -10181,11 +10181,11 @@
       "terValue": 0.75,
       "terGross": "0.75%",
       "terGrossValue": 0.75,
-      "nav": "$25.91",
-      "navValue": 25.909,
+      "nav": "$25.62",
+      "navValue": 25.618,
       "aum": "$1.30 M",
-      "aumValue": 1297560,
-      "asOfDate": "Oct 08 2026",
+      "aumValue": 1295470,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jul 09 2026",
       "exchange": "NGM",
       "closePrice": "$25.94",
@@ -10203,8 +10203,8 @@
           "asOfDate": "Sep 30 2026",
           "mo1": -0.89,
           "mo1Text": "-0.89%",
-          "qtd": -1.97,
-          "qtdText": "-1.97%",
+          "qtd": -3.25,
+          "qtdText": "-3.25%",
           "ytd": null,
           "ytdText": "—",
           "yr1": null,
@@ -10275,7 +10275,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 10,
-      "history": 66
+      "history": 67
     },
     {
       "ticker": "WTAI",
@@ -10289,11 +10289,11 @@
       "terValue": 0.45,
       "terGross": "0.45%",
       "terGrossValue": 0.45,
-      "nav": "$44.32",
-      "navValue": 44.321,
-      "aum": "$687.48 M",
-      "aumValue": 687477120,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$43.22",
+      "navValue": 43.216,
+      "aum": "$704.71 M",
+      "aumValue": 704708350,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 09 2021",
       "exchange": "BTS",
       "closePrice": "$44.16",
@@ -10398,8 +10398,8 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": 12.69,
-        "dividendYield": 1.19,
-        "dividendYieldText": "1.19%",
+        "dividendYield": 1.22,
+        "dividendYieldText": "1.22%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": -0.36,
         "secYieldText": "-0.36%",
@@ -10407,7 +10407,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 59,
-      "history": 1213
+      "history": 1214
     },
     {
       "ticker": "WTAL",
@@ -10421,11 +10421,11 @@
       "terValue": 0.88,
       "terGross": "0.88%",
       "terGrossValue": 0.88,
-      "nav": "$24.67",
-      "navValue": 24.674,
-      "aum": "$2.48 M",
-      "aumValue": 2481710,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$24.60",
+      "navValue": 24.602,
+      "aum": "$2.47 M",
+      "aumValue": 2467420,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Oct 08 2026",
       "exchange": "ASE",
       "closePrice": "$24.89",
@@ -10515,7 +10515,7 @@
         "performanceAsOf": null
       },
       "holdings": 57,
-      "history": 1
+      "history": 2
     },
     {
       "ticker": "WTBN",
@@ -10531,9 +10531,9 @@
       "terGrossValue": 0.64,
       "nav": "$24.02",
       "navValue": 24.025,
-      "aum": "$102.79 M",
-      "aumValue": 102794620,
-      "asOfDate": "Oct 08 2026",
+      "aum": "$103.31 M",
+      "aumValue": 103306160,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 20 2023",
       "exchange": "NGM",
       "closePrice": "$24.01",
@@ -10647,7 +10647,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 17,
-      "history": 703
+      "history": 704
     },
     {
       "ticker": "WTIP",
@@ -10661,11 +10661,11 @@
       "terValue": 0.65,
       "terGross": "0.66%",
       "terGrossValue": 0.66,
-      "nav": "$37.23",
-      "navValue": 37.226,
-      "aum": "$27.90 M",
-      "aumValue": 27896910,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$37.36",
+      "navValue": 37.364,
+      "aum": "$27.92 M",
+      "aumValue": 27919510,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 18 2025",
       "exchange": "NGM",
       "closePrice": "$37.18",
@@ -10746,8 +10746,8 @@
         "cagr5y": null,
         "cagr10y": null,
         "siAnn": 21.32,
-        "dividendYield": 3.43,
-        "dividendYieldText": "3.43%",
+        "dividendYield": 3.41,
+        "dividendYieldText": "3.41%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.03,
         "secYieldText": "2.03%",
@@ -10755,7 +10755,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 37,
-      "history": 330
+      "history": 331
     },
     {
       "ticker": "WTLS",
@@ -10769,11 +10769,11 @@
       "terValue": 0.88,
       "terGross": "0.88%",
       "terGrossValue": 0.88,
-      "nav": "$63.20",
-      "navValue": 63.197,
-      "aum": "$20.18 M",
-      "aumValue": 20176900,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$63.21",
+      "navValue": 63.208,
+      "aum": "$20.22 M",
+      "aumValue": 20222940,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 22 2026",
       "exchange": "BTS",
       "closePrice": "$63.41",
@@ -10863,7 +10863,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 5,
-      "history": 180
+      "history": 181
     },
     {
       "ticker": "WTMF",
@@ -10877,11 +10877,11 @@
       "terValue": 0.65,
       "terGross": "0.67%",
       "terGrossValue": 0.67,
-      "nav": "$42.64",
-      "navValue": 42.638,
-      "aum": "$283.41 M",
-      "aumValue": 283405380,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$42.73",
+      "navValue": 42.728,
+      "aum": "$283.54 M",
+      "aumValue": 283541660,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jan 05 2011",
       "exchange": "PCX",
       "closePrice": "$42.58",
@@ -10971,7 +10971,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 30,
-      "history": 3964
+      "history": 3965
     },
     {
       "ticker": "WTMU",
@@ -10985,11 +10985,11 @@
       "terValue": 0.25,
       "terGross": "0.25%",
       "terGrossValue": 0.25,
-      "nav": "$24.43",
-      "navValue": 24.433,
-      "aum": "$8.75 M",
-      "aumValue": 8750010,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$24.44",
+      "navValue": 24.444,
+      "aum": "$8.80 M",
+      "aumValue": 8795980,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 03 2025",
       "exchange": "NGM",
       "closePrice": "$24.45",
@@ -11079,7 +11079,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 106,
-      "history": 382
+      "history": 383
     },
     {
       "ticker": "WTMY",
@@ -11093,11 +11093,11 @@
       "terValue": 0.35,
       "terGross": "0.35%",
       "terGrossValue": 0.35,
-      "nav": "$23.90",
-      "navValue": 23.903,
-      "aum": "$4.76 M",
-      "aumValue": 4755570,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$23.91",
+      "navValue": 23.914,
+      "aum": "$4.78 M",
+      "aumValue": 4780660,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Apr 03 2025",
       "exchange": "NGM",
       "closePrice": "$23.89",
@@ -11187,7 +11187,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 81,
-      "history": 382
+      "history": 383
     },
     {
       "ticker": "WTPI",
@@ -11201,11 +11201,11 @@
       "terValue": 0.44,
       "terGross": "0.44%",
       "terGrossValue": 0.44,
-      "nav": "$33.25",
-      "navValue": 33.251,
-      "aum": "$560.05 M",
-      "aumValue": 560054910,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$33.26",
+      "navValue": 33.259,
+      "aum": "$561.94 M",
+      "aumValue": 561939330,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 24 2016",
       "exchange": "PCX",
       "closePrice": "$33.28",
@@ -11295,7 +11295,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 6,
-      "history": 2672
+      "history": 2673
     },
     {
       "ticker": "WTRE",
@@ -11309,11 +11309,11 @@
       "terValue": 0.58,
       "terGross": "0.58%",
       "terGrossValue": 0.58,
-      "nav": "$22.47",
-      "navValue": 22.473,
-      "aum": "$14.31 M",
-      "aumValue": 14314650,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$22.50",
+      "navValue": 22.5,
+      "aum": "$14.61 M",
+      "aumValue": 14607150,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Jun 05 2007",
       "exchange": "PCX",
       "closePrice": "$22.43",
@@ -11427,7 +11427,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 63,
-      "history": 4869
+      "history": 4870
     },
     {
       "ticker": "WTV",
@@ -11441,11 +11441,11 @@
       "terValue": 0.12,
       "terGross": "0.12%",
       "terGrossValue": 0.12,
-      "nav": "$104.46",
-      "navValue": 104.462,
+      "nav": "$104.77",
+      "navValue": 104.766,
       "aum": "$3.20 B",
-      "aumValue": 3195277310,
-      "asOfDate": "Oct 08 2026",
+      "aumValue": 3202803200,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Feb 23 2007",
       "exchange": "PCX",
       "closePrice": "$104.51",
@@ -11526,8 +11526,8 @@
         "cagr5y": 13.64,
         "cagr10y": 14.47,
         "siAnn": 9.38,
-        "dividendYield": 2.05,
-        "dividendYieldText": "2.05%",
+        "dividendYield": 2.04,
+        "dividendYieldText": "2.04%",
         "dividendYieldBasis": "official-trailing-12m",
         "secYield": 2.11,
         "secYieldText": "2.11%",
@@ -11535,7 +11535,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 126,
-      "history": 4939
+      "history": 4940
     },
     {
       "ticker": "XC",
@@ -11549,11 +11549,11 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$30.91",
-      "navValue": 30.91,
-      "aum": "$73.45 M",
-      "aumValue": 73449630,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$31.01",
+      "navValue": 31.006,
+      "aum": "$74.18 M",
+      "aumValue": 74183780,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Sep 22 2022",
       "exchange": "PCX",
       "closePrice": "$30.91",
@@ -11667,7 +11667,7 @@
         "performanceAsOf": "2026-09-30"
       },
       "holdings": 515,
-      "history": 1016
+      "history": 1017
     },
     {
       "ticker": "XSOE",
@@ -11681,17 +11681,17 @@
       "terValue": 0.32,
       "terGross": "0.32%",
       "terGrossValue": 0.32,
-      "nav": "$47.21",
-      "navValue": 47.212,
-      "aum": "$2.07 B",
-      "aumValue": 2070818300,
-      "asOfDate": "Oct 08 2026",
+      "nav": "$46.80",
+      "navValue": 46.802,
+      "aum": "$2.08 B",
+      "aumValue": 2084110460,
+      "asOfDate": "Oct 09 2026",
       "inceptionDate": "Dec 10 2014",
       "exchange": "PCX",
-      "closePrice": "$47.45",
-      "closePriceValue": 47.45,
-      "premiumDiscount": "0.50%",
-      "premiumDiscountValue": 0.502,
+      "closePrice": "$46.78",
+      "closePriceValue": 46.782,
+      "premiumDiscount": "-0.79%",
+      "premiumDiscountValue": -0.791,
       "distributions": {
         "frequency": "Quarterly",
         "exDate": "09/25/2026",
@@ -11700,106 +11700,106 @@
       "returns": {
         "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
         "monthEnd": {
-          "asOfDate": "Aug 31 2026",
-          "mo1": 4.85,
-          "mo1Text": "4.85%",
-          "qtd": -2.34,
-          "qtdText": "-2.34%",
-          "ytd": 22.74,
-          "ytdText": "22.74%",
-          "yr1": 35.91,
-          "yr1Text": "35.91%",
-          "yr3": 21.4,
-          "yr3Text": "21.40%",
-          "yr5": 5.69,
-          "yr5Text": "5.69%",
-          "yr10": 9.39,
-          "yr10Text": "9.39%",
-          "sinceInception": 7.65,
-          "sinceInceptionText": "7.65%",
+          "asOfDate": "Sep 30 2026",
+          "mo1": -1.05,
+          "mo1Text": "-1.05%",
+          "qtd": -4.19,
+          "qtdText": "-4.19%",
+          "ytd": 21.45,
+          "ytdText": "21.45%",
+          "yr1": 25.65,
+          "yr1Text": "25.65%",
+          "yr3": 22.55,
+          "yr3Text": "22.55%",
+          "yr5": 6.42,
+          "yr5Text": "6.42%",
+          "yr10": 8.94,
+          "yr10Text": "8.94%",
+          "sinceInception": 7.5,
+          "sinceInceptionText": "7.50%",
           "navReturns": {
-            "mo1": 3.63,
-            "mo1Text": "3.63%",
-            "qtd": -1.61,
-            "qtdText": "-1.61%",
-            "ytd": 23.09,
-            "ytdText": "23.09%",
-            "yr1": 37.23,
-            "yr1Text": "37.23%",
-            "yr3": 21.61,
-            "yr3Text": "21.61%",
-            "yr5": 5.69,
-            "yr5Text": "5.69%",
-            "yr10": 9.34,
-            "yr10Text": "9.34%",
-            "sinceInception": 7.65,
-            "sinceInceptionText": "7.65%"
+            "mo1": -1.27,
+            "mo1Text": "-1.27%",
+            "qtd": -2.27,
+            "qtdText": "-2.27%",
+            "ytd": 21.53,
+            "ytdText": "21.53%",
+            "yr1": 26.71,
+            "yr1Text": "26.71%",
+            "yr3": 22.56,
+            "yr3Text": "22.56%",
+            "yr5": 6.41,
+            "yr5Text": "6.41%",
+            "yr10": 8.99,
+            "yr10Text": "8.99%",
+            "sinceInception": 7.48,
+            "sinceInceptionText": "7.48%"
           },
           "indexReturns": {
-            "mo1": 3.59,
-            "mo1Text": "3.59%",
-            "qtd": -1.63,
-            "qtdText": "-1.63%",
-            "ytd": 22.15,
-            "ytdText": "22.15%",
-            "yr1": 36.46,
-            "yr1Text": "36.46%",
-            "yr3": 21.78,
-            "yr3Text": "21.78%",
-            "yr5": 6.08,
-            "yr5Text": "6.08%",
-            "yr10": 9.83,
-            "yr10Text": "9.83%",
-            "sinceInception": 8.39,
-            "sinceInceptionText": "8.39%"
+            "mo1": -1.46,
+            "mo1Text": "-1.46%",
+            "qtd": -2.42,
+            "qtdText": "-2.42%",
+            "ytd": 20.36,
+            "ytdText": "20.36%",
+            "yr1": 25.74,
+            "yr1Text": "25.74%",
+            "yr3": 22.65,
+            "yr3Text": "22.65%",
+            "yr5": 6.74,
+            "yr5Text": "6.74%",
+            "yr10": 9.45,
+            "yr10Text": "9.45%",
+            "sinceInception": 8.19,
+            "sinceInceptionText": "8.19%"
           }
         },
         "quarterEnd": {
-          "asOfDate": "Jun 30 2026",
+          "asOfDate": "Sep 30 2026",
           "ytd": null,
-          "yr1": 45.1,
-          "yr3": 22.66,
-          "yr5": 4.93,
-          "yr10": 10.45,
-          "sinceInception": 8.07,
+          "yr1": 25.65,
+          "yr3": 22.55,
+          "yr5": 6.42,
+          "yr10": 8.94,
+          "sinceInception": 7.5,
           "navReturns": {
             "ytd": null,
-            "yr1": 43.56,
-            "yr3": 22.22,
-            "yr5": 4.66,
-            "yr10": 10.25,
-            "sinceInception": 7.86
+            "yr1": 26.71,
+            "yr3": 22.56,
+            "yr5": 6.41,
+            "yr10": 8.99,
+            "sinceInception": 7.48
           },
           "indexReturns": {
             "ytd": null,
-            "yr1": 42.75,
-            "yr3": 22.46,
-            "yr5": 5.05,
-            "yr10": 10.77,
-            "sinceInception": 8.61
+            "yr1": 25.74,
+            "yr3": 22.65,
+            "yr5": 6.74,
+            "yr10": 9.45,
+            "sinceInception": 8.19
           }
         }
       },
       "metrics": {
-        "ytd": 22.74,
-        "tr1y": 35.91,
-        "tr3y": 78.92,
-        "tr5y": 31.88,
-        "tr10y": 145.34,
-        "cagr3y": 21.4,
-        "cagr5y": 5.69,
-        "cagr10y": 9.39,
-        "siAnn": 7.65,
-        "dividendYield": 1.65,
-        "dividendYieldText": "1.65%",
+        "ytd": 21.45,
+        "tr1y": 25.65,
+        "tr3y": 84.05,
+        "tr5y": 36.49,
+        "tr10y": 135.44,
+        "cagr3y": 22.55,
+        "cagr5y": 6.42,
+        "cagr10y": 8.94,
+        "siAnn": 7.5,
+        "dividendYield": 1.66,
+        "dividendYieldText": "1.66%",
         "dividendYieldBasis": "official-trailing-12m",
-        "secYield": 0.66,
-        "secYieldText": "0.66%",
+        "secYield": 0.63,
+        "secYieldText": "0.63%",
         "returnsBasis": "official WisdomTree product-page Market Price Returns (month-end table); gaps filled with estimates derived from Yahoo Finance adjusted closes",
-        "performanceAsOf": "2026-08-31"
+        "performanceAsOf": "2026-09-30"
       },
       "holdings": 855,
-      "history": 2963
+      "history": 2964
     }
   ]
 }

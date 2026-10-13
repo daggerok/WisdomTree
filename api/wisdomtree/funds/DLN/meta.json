@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$99.08",
-    "value": 99.083,
-    "asOfDate": "Oct 09 2026"
+    "display": "$99.55",
+    "value": 99.551,
+    "asOfDate": "Oct 12 2026"
   },
   "marketPrice": {
     "display": "$99.11",
@@ -44,14 +44,14 @@
     "value": 0.028
   },
   "aum": {
-    "display": "$6.25 B",
-    "value": 6247714820,
-    "asOfDate": "Oct 08 2026",
+    "display": "$6.27 B",
+    "value": 6266970620,
+    "asOfDate": "Oct 09 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.75,
-    "dividendYieldText": "1.75%",
+    "dividendYield": 1.74,
+    "dividendYieldText": "1.74%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.36,
@@ -2100,8 +2100,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5111,
-    "asOf": "Oct 09 2026",
+    "totalRows": 5112,
+    "asOf": "Oct 12 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

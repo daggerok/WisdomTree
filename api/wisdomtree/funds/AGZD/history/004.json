@@ -2,7 +2,7 @@
   "ticker": "AGZD",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3221,
+  "totalRows": 3222,
   "headers": [
     "Date",
     "Close",
@@ -1335,6 +1335,12 @@
       "Close": "22.530000686645508",
       "Adj Close": "22.53",
       "Volume": "61000"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "22.549999237060547",
+      "Adj Close": "22.55",
+      "Volume": "285800"
     }
   ]
 }

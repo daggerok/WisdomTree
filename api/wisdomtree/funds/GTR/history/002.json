@@ -2,7 +2,7 @@
   "ticker": "GTR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1257,
+  "totalRows": 1258,
   "headers": [
     "Date",
     "Close",
@@ -1551,6 +1551,12 @@
       "Close": "27.5",
       "Adj Close": "27.5",
       "Volume": "4800"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "27.454999923706055",
+      "Adj Close": "27.45",
+      "Volume": "2966"
     }
   ]
 }

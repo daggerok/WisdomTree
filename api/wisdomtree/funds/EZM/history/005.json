@@ -2,7 +2,7 @@
   "ticker": "EZM",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4939,
+  "totalRows": 4940,
   "headers": [
     "Date",
     "Close",
@@ -5643,6 +5643,12 @@
       "Close": "72.56999969482422",
       "Adj Close": "72.57",
       "Volume": "53700"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "72.55000305175781",
+      "Adj Close": "72.55",
+      "Volume": "12204"
     }
   ]
 }

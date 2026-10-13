@@ -2,7 +2,7 @@
   "ticker": "EPS",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4939,
+  "totalRows": 4940,
   "headers": [
     "Date",
     "Close",
@@ -5643,6 +5643,12 @@
       "Close": "81.62000274658203",
       "Adj Close": "81.62",
       "Volume": "22100"
+    },
+    {
+      "Date": "Oct 12 2026",
+      "Close": "81.62000274658203",
+      "Adj Close": "81.62",
+      "Volume": "26500"
     }
   ]
 }
