@@ -2,7 +2,7 @@
   "ticker": "DEW",
   "name": "WisdomTree Global High Dividend Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dew",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$155.81 M",
-    "value": 155810370,
+    "value": 155810368,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 3.15,

@@ -2,7 +2,7 @@
   "ticker": "DLN",
   "name": "WisdomTree U.S. LargeCap Dividend Fund",
   "category": "Domestic Equity",
-  "categoryPath": "Domestic Equity",
+  "categoryPath": "Domestic Equity / Large Cap Value",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dln",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dln",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$6.27 B",
-    "value": 6266970620,
+    "value": 6266970624,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 1.74,

@@ -2,7 +2,7 @@
   "ticker": "DNL",
   "name": "WisdomTree Global ex-US Quality Growth Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dnl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dnl",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$483.54 M",
-    "value": 483543140,
+    "value": 483543136,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 1.14,

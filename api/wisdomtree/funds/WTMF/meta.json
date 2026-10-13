@@ -2,7 +2,7 @@
   "ticker": "WTMF",
   "name": "WisdomTree Managed Futures Strategy Fund",
   "category": "Alternative",
-  "categoryPath": "Alternative",
+  "categoryPath": "Alternative / Managed Futures",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtmf",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$283.54 M",
-    "value": 283541660,
+    "value": 283541664,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-05-31)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 2.71,

@@ -22,11 +22,12 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     performanceRanges: 'PERFORMANCE', totalReturnRanges: 'TOTAL_RETURN',
     skipVanEck: 'SKIP_VANECK', skipProShares: 'SKIP_PROSHARES',
     skipWisdomTree: 'SKIP_WISDOMTREE', skipGoldmanSachs: 'SKIP_GOLDMANSACHS',
+    skipGlobalX: 'SKIP_GLOBALX', skipNorthernTrust: 'SKIP_NORTHERNTRUST',
   };
-  const range = (v: any): string => v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
+  const range = (v: any): string => typeof v === 'string' ? v : v?.source ?? `${Number.isFinite(v?.min) ? v.min : ''}:${Number.isFinite(v?.max) ? v.max : ''}`;
   for (const [key, value] of Object.entries(config)) {
     if (['proxyGapMs', 'fetchTimeoutMs', 'retryDelayMs'].includes(key)) continue;
-    const name = aliases[key] ?? key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase();
+    const name = aliases[key] ?? (/^[A-Z0-9_]+$/.test(key) ? key : key.replace(/([a-z0-9])([A-Z])/g, '$1_$2').toUpperCase());
     if (name === 'PERFORMANCE' || name === 'TOTAL_RETURN') {
       for (const period of ['YTD', '1Y', '3Y', '5Y', '10Y']) values.set(`${name}_${period}`, range(value?.[period]));
     } else if (['AUM', 'TER', 'DIVIDEND_YIELD', 'SEC_YIELD'].includes(name)) {
@@ -41,13 +42,18 @@ function outputConfigEntries(config: Record<string, any>): [string, string][] {
     return (ai < 0 ? first.length : ai) - (bi < 0 ? first.length : bi) || a.localeCompare(b);
   });
 }
+function outputConfigValue(key: string, value: string): string {
+  if (/TOKEN|PASSWORD|SECRET|COOKIE|SEC_UA/i.test(key)) return '<redacted>';
+  if (key === 'TICKERS' && ['', 'null', 'undefined'].includes(value)) return 'all';
+  return outputClean(value);
+}
 function outputPrintConfig(brand: string, config: Record<string, any>): void {
   const entries: [string, string][] = [...outputConfigEntries(config), ['VERBOSE', String(outputVerbose())]];
-  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${/TOKEN|PASSWORD|SECRET|COOKIE|^SEC_UA$/i.test(key) ? '<redacted>' : outputClean(value)}`).join('\n')}`);
+  console.log(`[ config   ] ${brand} updater:\n${entries.map(([key, value]) => `              ${key}=${outputConfigValue(key, value)}`).join('\n')}`);
 }
 function outputHasOutputFilters(config: Record<string, any>): boolean {
   return outputConfigEntries(config).some(([name, value]) =>
-    /^(TICKERS|CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
+    /^(CATEGORY|AUM|TER|DIVIDEND_YIELD|SEC_YIELD|PERFORMANCE_|TOTAL_RETURN_)/.test(name) &&
     !['', ':', 'null', 'all'].includes(value));
 }
 function outputPrintFilter(selected: number, total: number, deferred = false): void {
@@ -79,18 +85,29 @@ async function outputInspectFund(root: URL | string, ticker: string): Promise<{ 
 }
 const outputCount = (value: any): unknown => typeof value === 'number' ? value : Array.isArray(value) ? value.length : value?.totalRows ?? value?.rows?.length ?? null;
 const outputScalar = (value: any): any => value && typeof value === 'object' ? value.display ?? value.value ?? null : value;
+const outputUnits: Record<string, number> = { K: 1e3, M: 1e6, B: 1e9, T: 1e12, THOUSAND: 1e3, MILLION: 1e6, BILLION: 1e9, TRILLION: 1e12 };
 function outputMoney(value: any): string {
-  const raw = outputScalar(value);
+  const raw = value && typeof value === 'object' && typeof value.value === 'number' && Number.isFinite(value.value) ? value.value : outputScalar(value);
   if (raw === null || raw === undefined || raw === '—' || raw === '--') return 'null';
   const text = String(raw).replace(/[$,\s]/g, '');
-  const match = text.match(/^([+-]?[\d.]+)([KMBT])?$/i);
+  const match = text.match(/^([+-]?[\d.]+)(K|M|B|T|Thousand|Million|Billion|Trillion)?$/i);
   if (!match) return outputClean(raw);
-  const number = Number(match[1]) * ({ K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[match[2]?.toUpperCase() as 'K' | 'M' | 'B' | 'T'] ?? 1);
+  const number = Number(match[1]) * (outputUnits[match[2]?.toUpperCase() ?? ''] ?? 1);
   if (!Number.isFinite(number)) return 'null';
   for (const [unit, scale] of [['T', 1e12], ['B', 1e9], ['M', 1e6], ['K', 1e3]] as const) {
     if (Math.abs(number) >= scale) return `$${(number / scale).toFixed(1)}${unit}`;
   }
   return `$${number.toFixed(2)}`;
+}
+/** Yields: rounded to 2 decimals without trailing zeros; placeholders are omitted like null. */
+function outputPercent(value: any): unknown {
+  const raw = outputScalar(value);
+  if (raw === null || raw === undefined) return null;
+  if (typeof raw === 'number') return Number.isFinite(raw) ? Number(raw.toFixed(2)) : null;
+  const text = String(raw).trim().replace(/%$/, '').trim();
+  if (['', '-', '—', '--', 'n/a'].includes(text.toLowerCase())) return null;
+  const number = Number(text.replace(/,/g, ''));
+  return Number.isFinite(number) ? Number(number.toFixed(2)) : outputClean(raw);
 }
 function outputFundLine(index: number, total: number, ticker: string, status: string, data: any = {}, reason?: unknown): string {
   const width = Math.max(2, String(total).length);
@@ -111,21 +128,34 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('divs', outputCount(data.worksheets?.Distributions ?? data.distributions)),
     field('netAssets', outputMoney(data.netAssets ?? data.aum)),
     field('total', outputMoney(data.totalFundNetAssets ?? data.totalNetAssets)),
-    field('div', outputScalar(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
-    field('sec', outputScalar(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
+    field('div', outputPercent(data.trailingYield ?? data.yields?.effectiveYield ?? data.yields?.dividendYield ?? data.dividendYield ?? metrics.dividendYield)),
+    field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
   return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
+  const tally = new Map<string, number>();
   return {
     before: (ticker: string) => outputInspectFund(root, ticker),
     async result(ticker: string, before: { digest: string }, status?: string, reason?: unknown, extra: any = {}) {
       const after = await outputInspectFund(root, ticker);
-      console.log(outputFundLine(++completed, total, ticker, status ?? (before.digest === after.digest ? 'unchanged' : 'updated'), { ...after.meta, ...extra }, reason));
+      const final = status ?? (before.digest === after.digest ? 'unchanged' : 'updated');
+      tally.set(final, (tally.get(final) ?? 0) + 1);
+      console.log(outputFundLine(++completed, total, ticker, final, { ...after.meta, ...extra }, reason));
+    },
+    /** First [ done ] line: the statuses of every fund line this reporter printed. */
+    summary(startedAt: number): string {
+      const order = ['updated', 'unchanged', 'kept', 'skipped', 'failed'];
+      const statuses = [...order, ...[...tally.keys()].filter(status => !order.includes(status))];
+      return `[ done     ] ${completed} fund${completed === 1 ? '' : 's'}: ${statuses.map(status => `${tally.get(status) ?? 0} ${status}`).join(', ')} in ${((Date.now() - startedAt) / 1000).toFixed(1)}s`;
     },
   };
+}
+/** Second [ done ] line: published totals. */
+function outputCounts(funds: number, holdings: number, history: number): string {
+  return `[ done     ] counts: ${funds.toLocaleString('en-US')} funds / ${holdings.toLocaleString('en-US')} holdings rows / ${history.toLocaleString('en-US')} history rows`;
 }
 
 
@@ -134,8 +164,9 @@ function outputCreateReporter(root: URL | string, total: number) {
 // The browser application is deliberately static. This script builds the feed
 // under api/wisdomtree/** from public, issuer/SEC/market-data sources:
 //
-//   catalog   WisdomTree's U.S. ETF product table and per-fund product pages
-//             https://www.wisdomtree.com/us/products
+//   catalog   WisdomTree's U.S. fund list (the JSON behind the product table
+//             on https://www.wisdomtree.com/us/products), the rendered
+//             product table as the fallback, and per-fund product pages
 //   holdings  SEC EDGAR Form N-PORT-P for the exact ETF series (full reported
 //             portfolio; the issuer page is used as a small fallback)
 //   returns   The per-fund product page's official "Total Returns" table
@@ -149,8 +180,8 @@ function outputCreateReporter(root: URL | string, total: number) {
 //             close and volume)
 //
 // WisdomTree currently protects some HTML/API routes with Cloudflare. The
-// catalog fetch first tries the official page and then uses the read-only
-// r.jina.ai rendering of that same official page. No user data or credentials
+// catalog fetch first tries the official fund list and then uses the read-only
+// r.jina.ai rendering of that same official URL. No user data or credentials
 // are sent to the proxy. SEC and Yahoo requests stay direct.
 //
 // Usage: bun ./scripts/update-data.ts [--help]
@@ -165,6 +196,10 @@ type RangeMap = Partial<Record<ReturnPeriod, Range>>;
 const WISDOMTREE_SITE = 'https://www.wisdomtree.com';
 const WISDOMTREE_CATALOG_URL = `${WISDOMTREE_SITE}/us/products`;
 const WISDOMTREE_CATALOG_PROXY_URL = `https://r.jina.ai/http://www.wisdomtree.com/us/products`;
+// Since the 2026-10 site rebuild the product table is a client-side widget (fundlisting.wisdomtree.com) that loads this JSON;
+// the server-rendered page and its rendering only show "No results found".
+const WISDOMTREE_FUND_LIST_URL = 'https://dataspanapi.wisdomtree.com/fundlist/data?divisionId=1&wtRegion=US&isoCode=en-US&isFP=false';
+const WISDOMTREE_FUND_LIST_PROXY_URL = `https://r.jina.ai/${WISDOMTREE_FUND_LIST_URL}`;
 const WISDOMTREE_PRODUCT_PROXY_PREFIX = 'https://r.jina.ai/http://www.wisdomtree.com';
 const YAHOO_CHART_URL = 'https://query1.finance.yahoo.com/v8/finance/chart';
 const SEC_DATA_HOST = 'https://data.sec.gov';
@@ -653,6 +688,65 @@ export function parseCatalogMarkdown(markdown: string): CatalogFund[] {
   return funds.sort((a, b) => a.ticker.localeCompare(b.ticker));
 }
 
+/** Percent from a fraction (0.0015 -> 0.15), the unit the product table showed. */
+function fractionToPercent(value: unknown, digits: number): number | null {
+  const parsed = numberOrNull(value);
+  return parsed === null ? null : round(parsed * 100, digits);
+}
+
+/** The fund list JSON as served directly (an array) or through the rendering proxy (a JSON envelope whose data.content holds the array). */
+export function parseFundListJson(text: string): CatalogFund[] {
+  let payload: unknown;
+  try {
+    payload = JSON.parse(String(text ?? ''));
+  } catch {
+    throw new Error('WisdomTree fund list: response was not JSON');
+  }
+  const content = (payload as JsonRecord)?.data?.content;
+  if (!Array.isArray(payload) && typeof content === 'string') {
+    try {
+      payload = JSON.parse(content);
+    } catch {
+      throw new Error('WisdomTree fund list: proxy content was not JSON');
+    }
+  }
+  if (!Array.isArray(payload)) throw new Error('WisdomTree fund list: no fund array found');
+  const funds: CatalogFund[] = [];
+  const seen = new Set<string>();
+  for (const row of payload as JsonRecord[]) {
+    const ticker = sanitizeTicker(row?.bloombergTicker || row?.exchangeTicker);
+    if (!ticker || seen.has(ticker)) continue;
+    seen.add(ticker);
+    const tier1 = cleanText(row.fundCategoryTier1);
+    const aum = numberOrNull(row.AUM ?? row.Net_Assets);
+    funds.push({
+      ticker,
+      name: cleanText(row.name) || ticker,
+      category: normalizeCategory(tier1),
+      categoryPath: `${tier1} / ${cleanText(row.fundCategoryTier2)}`.replace(/\s*\/\s*$/, ''),
+      inception: toIsoDate(row.inceptionDt) || null,
+      exchange: '',
+      cusip: '',
+      isin: '',
+      benchmark: '',
+      ter: fractionToPercent(row.expenseRatio, 4),
+      grossTer: fractionToPercent(row.grossExpenseRatio, 4),
+      nav: null,
+      close: null,
+      premiumDiscount: null,
+      netAssets: aum === null ? null : round(aum, 2),
+      dividendYield: fractionToPercent(row.TTMYieldOrdIncome, 2),
+      secYield: null,
+      asOfDate: toIsoDate(row.AUM_DateTime || row.NAV_Date) || null,
+      returns: { ...EMPTY_RETURNS },
+      fundPage: canonicalFundPage(cleanText(row.url), ticker),
+      source: 'wisdomtree',
+    });
+  }
+  if (!funds.length) throw new Error('WisdomTree fund list: no fund rows found');
+  return funds.sort((a, b) => a.ticker.localeCompare(b.ticker));
+}
+
 async function paceRequests(): Promise<void> {
   const now = Date.now();
   let lane = 0;
@@ -721,12 +815,12 @@ async function fetchJson(url: string, label: string, config: UpdaterConfig, head
 }
 
 /** The read-only r.jina.ai rendering: one global gate (>= 3.2 s between starts), at most one retry, and a verification page counts as a failure. */
-async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<string> {
+async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean, accept = 'text/markdown'): Promise<string> {
   let lastError: unknown = new Error('no request attempted');
   for (let attempt = 0; attempt < 2; attempt += 1) {
     try {
       await paceProxy(config);
-      const text = await fetchOnce(url, config, { Accept: 'text/markdown' });
+      const text = await fetchOnce(url, config, { Accept: accept });
       if (!valid(text)) throw new Error('proxy returned a verification page or an unexpected document');
       return text;
     } catch (error) {
@@ -737,18 +831,18 @@ async function fetchViaProxy(url: string, label: string, config: UpdaterConfig, 
 }
 
 /** Direct first (a single read-only GET, no retry), the proxy only as the fallback. A Cloudflare block latches for the rest of the run. */
-async function fetchWisdomTreePage(directUrl: string, proxyUrl: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean): Promise<{ text: string; via: 'direct' | 'proxy' }> {
+async function fetchWisdomTreePage(directUrl: string, proxyUrl: string, label: string, config: UpdaterConfig, valid: (text: string) => boolean, accept?: string): Promise<{ text: string; via: 'direct' | 'proxy' }> {
   if (!directBlocked) {
     try {
       await paceRequests();
-      const text = await fetchOnce(directUrl, config, { Accept: 'text/markdown,text/html;q=0.9' });
+      const text = await fetchOnce(directUrl, config, { Accept: accept ?? 'text/markdown,text/html;q=0.9' });
       if (valid(text)) return { text, via: 'direct' };
       directBlocked = true;
     } catch (error) {
       if (error instanceof HttpError && (error.status === 403 || error.status === 429)) directBlocked = true;
     }
   }
-  return { text: await fetchViaProxy(proxyUrl, label, config, valid), via: 'proxy' };
+  return { text: await fetchViaProxy(proxyUrl, label, config, valid, accept), via: 'proxy' };
 }
 
 function looksLikeCatalog(text: string): boolean {
@@ -761,9 +855,22 @@ export function looksLikeProductPage(text: string): boolean {
   return /###\s+Total Returns\b/i.test(text) || /\|\s*NAV\s*\|/i.test(text) || /\|\s*Closing Market Price\s*\|/i.test(text);
 }
 
-async function fetchCatalog(config: UpdaterConfig): Promise<{ markdown: string; source: string }> {
-  const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, '[catalog ] WisdomTree product table', config, looksLikeCatalog);
-  return { markdown: text, source: via === 'direct' ? 'WisdomTree official product table' : 'WisdomTree official product table via read-only rendering proxy' };
+function looksLikeFundList(text: string): boolean {
+  try { return parseFundListJson(text).length > 0; } catch { return false; }
+}
+
+const viaLabel = (via: 'direct' | 'proxy'): string => (via === 'direct' ? '' : ' via read-only rendering proxy');
+
+/** The fund list JSON first (JSON is asked for from the proxy too: its markdown mode meets the verification page), the rendered product table second. */
+async function fetchCatalog(config: UpdaterConfig): Promise<{ funds: CatalogFund[]; raw: string; rawName: string; source: string }> {
+  try {
+    const { text, via } = await fetchWisdomTreePage(WISDOMTREE_FUND_LIST_URL, WISDOMTREE_FUND_LIST_PROXY_URL, 'WisdomTree fund list', config, looksLikeFundList, 'application/json');
+    return { funds: parseFundListJson(text), raw: text, rawName: 'fund-list', source: `WisdomTree official fund list${viaLabel(via)}` };
+  } catch (error) {
+    console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - trying the product table`);
+  }
+  const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, 'WisdomTree product table', config, looksLikeCatalog);
+  return { funds: parseCatalogMarkdown(text), raw: text, rawName: 'product-table', source: `WisdomTree official product table${viaLabel(via)}` };
 }
 
 function productProxyUrl(fundPage: string): string {
@@ -1198,7 +1305,7 @@ async function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, S
   fundTickerMapPromise = (async () => {
     const payload = await fetchJson(SEC_FUND_TICKERS_URL, '[edgar   ] fund ticker table', config, secHeaders());
     fundTickerMap = parseFundTickerMap(payload);
-    outputNote(`[ ${'edgar'.padEnd(9)}] SEC fund ticker table: ${fundTickerMap.size} share classes`);
+    outputNote(`[ ${'edgar'.padEnd(9)}] SEC fund ticker table: ${Array.isArray(payload?.data) ? payload.data.length : fundTickerMap.size} share classes`);
     return fundTickerMap;
   })();
   try {
@@ -1214,7 +1321,7 @@ async function loadCompanyTickerTable(config: UpdaterConfig): Promise<Map<string
   companyTickerMapPromise = (async () => {
     const payload = await fetchJson(SEC_COMPANY_TICKERS_URL, '[edgar   ] company ticker table', config, secHeaders());
     companyTickerMap = parseCompanyTickerMap(payload);
-    outputNote(`[ ${'edgar'.padEnd(9)}] SEC company ticker table: ${companyTickerMap.size} issuer names`);
+    outputNote(`[ ${'edgar'.padEnd(9)}] SEC company ticker table: ${payload && typeof payload === 'object' ? Object.keys(payload).length : companyTickerMap.size} issuer names`);
     return companyTickerMap;
   })();
   try {
@@ -2093,9 +2200,9 @@ const USAGE = `
 WisdomTree ETF static data updater
 
 Sources:
-  catalog       WisdomTree U.S. ETF product table (official page; read-only
-                Jina rendering fallback when Cloudflare blocks a non-browser
-                request)
+  catalog       WisdomTree U.S. fund list (the JSON behind the official product
+                table), then the rendered product table; read-only Jina
+                rendering fallback when Cloudflare blocks a non-browser request
   holdings      SEC EDGAR Form N-PORT-P for each exact ETF series
   returns       Official product-page Total Returns table (Market Price, NAV
                 and Underlying Index Returns rows)
@@ -2219,6 +2326,7 @@ export async function writeIndex(funds: JsonRecord[]): Promise<void> {
       market: 'us',
       site: WISDOMTREE_SITE,
       catalog: WISDOMTREE_CATALOG_URL,
+      catalogData: WISDOMTREE_FUND_LIST_URL,
       catalogFallback: WISDOMTREE_CATALOG_PROXY_URL,
       holdings: 'SEC EDGAR Form N-PORT-P for exact series (issuer product-page top holdings fallback)',
       returns: 'Official WisdomTree product-page Total Returns table (Market Price, NAV and Underlying Index Returns rows)',
@@ -2259,7 +2367,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   if (!config.skipWisdomTree) {
     try {
       const fetched = await fetchCatalog(config);
-      const parsed = parseCatalogMarkdown(fetched.markdown);
+      const parsed = fetched.funds;
       liveCatalog = parsed;
       for (const fund of parsed) catalog.set(fund.ticker, fund);
       catalogSource = fetched.source;
@@ -2267,7 +2375,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
         // Raw downloads are a debugging aid: they live outside api/wisdomtree so the workflow never commits them.
         const raw = new URL('../../data/raw/', API_ROOT);
         await mkdir(raw, { recursive: true });
-        await writeFile(new URL(`product-table-${new Date().toISOString().slice(0, 10)}.md`, raw), fetched.markdown, 'utf8');
+        await writeFile(new URL(`${fetched.rawName}-${new Date().toISOString().slice(0, 10)}.${fetched.rawName === 'fund-list' ? 'json' : 'md'}`, raw), fetched.raw, 'utf8');
       }
     } catch (error) {
       console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - keeping the published feed`);
@@ -2349,9 +2457,9 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   await writeIndex(funds);
   // A TICKERS run never touches the cursor; a full run resets it.
   if (!config.tickers) await writeIfChanged(STATE_FILE, { cursor: config.maxFetches > 0 ? lastDispatched ?? (cursor || null) : null, savedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') });
-  console.log(`[ ${'done'.padEnd(9)}] ${results.length} funds updated, ${failures} failures`);
-  console.log(`[ ${'done'.padEnd(9)}] counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows`);
-  if (stoppedAtDeadline) console.warn(`[ ${'done'.padEnd(9)}] soft deadline reached; ${queue.length} funds were not taken this run (the index was still written)`);
+  if (stoppedAtDeadline) console.warn(`[ ${'deadline'.padEnd(9)}] soft deadline reached; ${queue.length} funds were not taken this run (the index was still written)`);
+  console.log(output.summary(startedAt));
+  console.log(outputCounts(counts.funds, counts.holdings, counts.history));
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### WisdomTree data update\n\n- updated: ${results.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n${noteLines.map((line) => `- ${line}\n`).join('')}${stoppedAtDeadline ? '- soft deadline reached before every fund was taken\n' : ''}`, 'utf8');
   // Every fund failed (or no fund got fresh data from any enabled source): the run is red.
   const sourcesEnabled = !config.skipWisdomTree || !config.skipYahoo || config.edgarFallback;

@@ -8,7 +8,7 @@ import {
   CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
   annualizedToTotal, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
-  parseCatalogMarkdown, parseChart, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
+  parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
   rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, writeIndex, yahooChartQuery,
 } from './update-data';
@@ -183,6 +183,25 @@ describe('parsing', () => {
     const gde = funds.find((row) => row.ticker === 'GDE')!;
     expect([gde.dividendYield, gde.category, gde.ter]).toEqual([null, 'Alternative', 0.75]);
     expect(() => parseCatalogMarkdown('| WisdomTree Fund | Fund Ticker | a | b | c | d | e | f | g | h |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n')).toThrow('no fund rows found');
+  });
+
+  test('fund list JSON: direct array and proxy envelope; fractions become percent, the page link is canonical, an empty or non-JSON list is rejected', () => {
+    const rows = [
+      { name: 'WisdomTree Floating Rate Treasury Fund', bloombergTicker: 'USFR', fundCategoryTier1: 'Fixed Income', fundCategoryTier2: 'Government Strategies', inceptionDt: '2014-02-04', expenseRatio: 0.0015, grossExpenseRatio: 0.0015, AUM: 20_880_404_480, AUM_DateTime: '2026-10-09T00:00:00Z', TTMYieldOrdIncome: 0.037232, url: 'https://www.wisdomtree.com/investments/etfs/fixed-income/USFR' },
+      { name: 'WisdomTree Bitcoin Fund', bloombergTicker: 'BTCW', fundCategoryTier1: 'Crypto ETPs', fundCategoryTier2: 'Bitcoin', inceptionDt: '2024-01-11', expenseRatio: 0.0025, grossExpenseRatio: 0.0025, AUM: 169_203_376, NAV_Date: '2026-10-09', TTMYieldOrdIncome: null, url: 'https://www.wisdomtree.com/investments/etfs/crypto/btcw' },
+      { name: 'duplicate', bloombergTicker: 'USFR' },
+      { name: 'no ticker', bloombergTicker: null },
+    ];
+    const direct = parseFundListJson(JSON.stringify(rows));
+    expect(parseFundListJson(JSON.stringify({ data: { content: JSON.stringify(rows) } }))).toEqual(direct);
+    expect(direct.map((row) => row.ticker)).toEqual(['BTCW', 'USFR']);
+    const usfr = direct.find((row) => row.ticker === 'USFR')!;
+    expect([usfr.ter, usfr.grossTer, usfr.netAssets, usfr.dividendYield, usfr.asOfDate, usfr.inception, usfr.category, usfr.categoryPath, usfr.fundPage])
+      .toEqual([0.15, 0.15, 20_880_404_480, 3.72, '2026-10-09', '2014-02-04', 'Fixed Income', 'Fixed Income / Government Strategies', 'https://www.wisdomtree.com/us/products/fixed-income/usfr']);
+    const btcw = direct.find((row) => row.ticker === 'BTCW')!;
+    expect([btcw.dividendYield, btcw.asOfDate, btcw.fundPage]).toEqual([null, '2026-10-09', 'https://www.wisdomtree.com/us/products/crypto/btcw']);
+    expect(() => parseFundListJson('[]')).toThrow('no fund rows found');
+    expect(() => parseFundListJson('Title: Just a moment...')).toThrow('not JSON');
   });
 
   test('product page: NAV, market price, SEC yield, CUSIP; NAV and index rows sit beside the primary Market Price Returns row', () => {
@@ -369,6 +388,15 @@ const catalogFor = (tickers: string[]): string => [
   ...tickers.map((t) => `| [Fund ${t}](https://www.wisdomtree.com/investments/etfs/equity/${t.toLowerCase()}) | [$${t}](https://www.wisdomtree.com/investments/etfs/equity/${t.toLowerCase()}) | Equity | Core | 06/04/2014 | 0.40% | 0.15% | $16,985,696.89 | 4.72% | $100,000,000 |`),
 ].join('\n');
 
+/** The dataspan fund list rows behind the product table, with the same values as catalogFor. */
+const fundListRows = (tickers: string[]): any[] => tickers.map((t) => ({
+  name: `Fund ${t}`, bloombergTicker: t, exchangeTicker: null, fundCategoryTier1: 'Equity', fundCategoryTier2: 'Core', inceptionDt: '2014-06-04',
+  expenseRatio: 0.0015, grossExpenseRatio: 0.004, AUM: 16_985_696_890, AUM_DateTime: '2026-09-15T00:00:00Z', TTMYieldOrdIncome: 0.0472,
+  url: `https://www.wisdomtree.com/investments/etfs/equity/${t}`,
+}));
+/** As r.jina.ai returns it for Accept: application/json. */
+const fundListFor = (tickers: string[]): string => JSON.stringify({ code: 200, status: 20000, data: { title: '', url: 'https://dataspanapi.wisdomtree.com/fundlist/data', content: JSON.stringify(fundListRows(tickers)) } });
+
 function chartPayload(days = 400, last = Date.UTC(2026, 8, 25)): any {
   const timestamps = Array.from({ length: days }, (_, i) => Math.floor((last - (days - 1 - i) * 86_400_000) / 1000));
   const close = timestamps.map((_, i) => 100 + i * 0.1);
@@ -395,6 +423,7 @@ class Scenario {
   handler = (url: string, _init?: any): Response | Promise<Response> => {
     const sec = secResponse(url, this.nportAsOf);
     if (sec) return sec;
+    if (url.startsWith('https://r.jina.ai/https://dataspanapi.wisdomtree.com/')) return new Response(fundListFor(this.tickers));
     if (url.startsWith('https://r.jina.ai/')) return url.endsWith('/us/products') ? new Response(catalogFor(this.tickers)) : new Response(productPage(url.split('/').pop()!.toUpperCase()));
     if (url.includes('wisdomtree.com')) return new Response('blocked', { status: 403 });
     if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload()));
@@ -609,7 +638,7 @@ describe('pipeline', () => {
   test('catalog changes: a new fund is picked up, a delisted fund keeps its data in the index; raw downloads stay outside api/', async () => {
     const s = new Scenario();
     await s.run({ STORE_RAW_DOWNLOADS: 'true' });
-    expect(readdirSync(join(s.dir, 'data/raw')).some((name) => name.startsWith('product-table-'))).toBe(true);
+    expect(readdirSync(join(s.dir, 'data/raw')).some((name) => name.startsWith('fund-list-') && name.endsWith('.json'))).toBe(true);
     expect(existsSync(join(s.dir, 'api/wisdomtree/raw'))).toBe(false);
     s.tickers = ['AAA', 'BBB', 'DDD'];
     await s.run({ TICKERS: 'AAA' });
@@ -647,10 +676,20 @@ describe('network', () => {
 
   test('a reachable direct page is used and the proxy is never called', async () => {
     const s = new Scenario();
-    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.includes('wisdomtree.com') ? new Response(url.endsWith('/us/products') ? catalogFor(s.tickers) : productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload())) : new Response('no', { status: 404 }));
+    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.startsWith('https://dataspanapi.wisdomtree.com/') ? new Response(JSON.stringify(fundListRows(s.tickers))) : url.includes('wisdomtree.com') ? new Response(productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload())) : new Response('no', { status: 404 }));
     await s.run();
     expect(s.calls.some((c) => c.url.startsWith('https://r.jina.ai/'))).toBe(false);
     expect(s.meta('AAA').source.productPageStatus).toContain('directly');
+  });
+
+  test('an unusable fund list falls back to the rendered product table', async () => {
+    const s = new Scenario();
+    const base = s.handler;
+    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response('Title: Just a moment...') : base(url, init));
+    await s.run();
+    expect(s.index().funds.map((row: any) => row.ticker)).toEqual(['AAA', 'BBB', 'CCC']);
+    expect(s.calls.filter((c) => c.url.startsWith('https://r.jina.ai/') && c.url.includes('dataspanapi'))).toHaveLength(2);
+    expect(s.calls.some((c) => c.url === 'https://r.jina.ai/http://www.wisdomtree.com/us/products')).toBe(true);
   });
 
   test('requests carry a timeout signal that aborts a hanging response and a stalled body', async () => {

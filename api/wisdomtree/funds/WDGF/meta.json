@@ -2,7 +2,7 @@
   "ticker": "WDGF",
   "name": "WisdomTree Global Defense Fund",
   "category": "International Equity",
-  "categoryPath": "International Equity",
+  "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdgf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdgf",
@@ -45,9 +45,9 @@
   },
   "aum": {
     "display": "$5.12 M",
-    "value": 5121870,
+    "value": 5121867,
     "asOfDate": "Oct 09 2026",
-    "source": "SEC Form N-PORT-P net assets (2026-06-30)"
+    "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
     "dividendYield": 0.05,
