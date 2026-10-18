@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/emcb",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/emcb",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$64.16",
-    "value": 64.159,
-    "asOfDate": "Oct 12 2026"
+    "display": "$64.34",
+    "value": 64.34,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$64.31",
-    "value": 64.315,
-    "asOfDate": "Oct 09 2026"
+    "display": "$64.33",
+    "value": 64.325,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.30%",
-    "value": 0.301
+    "display": "-0.02%",
+    "value": -0.023
   },
   "aum": {
     "display": "$99.73 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "5.53%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 5.62,
-    "secYield": 6.02,
-    "secYieldText": "6.02%",
+    "distributionRate": 5.59,
+    "secYield": 6.1,
+    "secYieldText": "6.10%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

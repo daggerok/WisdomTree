@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/aggy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/aggy",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$41.36",
-    "value": 41.361,
-    "asOfDate": "Oct 12 2026"
+    "display": "$41.74",
+    "value": 41.743,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$41.35",
-    "value": 41.35,
-    "asOfDate": "Oct 09 2026"
+    "display": "$41.72",
+    "value": 41.72,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.012
+    "display": "-0.05%",
+    "value": -0.054
   },
   "aum": {
     "display": "$893.29 M",
@@ -54,7 +54,7 @@
     "dividendYieldText": "4.78%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 5.22,
+    "distributionRate": 5.17,
     "secYield": 5.43,
     "secYieldText": "5.43%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"

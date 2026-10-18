@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/hyzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/hyzd",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$22.40",
-    "value": 22.397,
-    "asOfDate": "Oct 12 2026"
+    "display": "$22.33",
+    "value": 22.334,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$22.42",
-    "value": 22.42,
-    "asOfDate": "Oct 09 2026"
+    "display": "$22.36",
+    "value": 22.365,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
     "display": "0.14%",
-    "value": 0.143
+    "value": 0.137
   },
   "aum": {
     "display": "$312.68 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "5.90%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 5.91,
-    "secYield": 6.63,
-    "secYieldText": "6.63%",
+    "distributionRate": 5.9,
+    "secYield": 6.69,
+    "secYieldText": "6.69%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

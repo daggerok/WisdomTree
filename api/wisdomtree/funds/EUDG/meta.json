@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eudg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eudg",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$37.30",
-    "value": 37.3,
-    "asOfDate": "Oct 12 2026"
+    "display": "$38.42",
+    "value": 38.417,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$37.15",
-    "value": 37.15,
-    "asOfDate": "Oct 09 2026"
+    "display": "$37.95",
+    "value": 37.95,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.08%",
-    "value": 0.08
+    "display": "-1.23%",
+    "value": -1.23
   },
   "aum": {
     "display": "$67.23 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.35%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 0.48,
-    "secYield": 2.16,
-    "secYieldText": "2.16%",
+    "distributionRate": 0.47,
+    "secYield": 1.97,
+    "secYieldText": "1.97%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

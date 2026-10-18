@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$87.16",
-    "value": 87.161,
-    "asOfDate": "Oct 12 2026"
+    "display": "$85.85",
+    "value": 85.852,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$86.89",
-    "value": 86.89,
-    "asOfDate": "Oct 09 2026"
+    "display": "$86.12",
+    "value": 86.12,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.12
+    "display": "0.31%",
+    "value": 0.311
   },
   "aum": {
     "display": "$166.98 M",
@@ -134,8 +134,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-10-12",
-    "asOf": "Oct 12 2026",
+    "asOfDate": "2026-09-18",
+    "asOf": "Sep 18 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {

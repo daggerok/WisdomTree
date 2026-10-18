@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrw",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$99.21",
-    "value": 99.211,
-    "asOfDate": "Oct 12 2026"
+    "display": "$98.85",
+    "value": 98.85,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
     "display": "$98.86",
     "value": 98.86,
-    "asOfDate": "Oct 09 2026"
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.007
+    "display": "0.01%",
+    "value": 0.01
   },
   "aum": {
     "display": "$17.11 B",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.06,
-    "secYield": 1.2,
-    "secYieldText": "1.20%",
+    "secYield": 1.19,
+    "secYieldText": "1.19%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
