@@ -2,7 +2,7 @@
   "ticker": "DHS",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5112,
+  "totalRows": 5116,
   "headers": [
     "Date",
     "Close",
@@ -681,6 +681,30 @@
       "Close": "113.72000122070312",
       "Adj Close": "113.72",
       "Volume": "33700"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "113.69000244140625",
+      "Adj Close": "113.69",
+      "Volume": "20100"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "114.44000244140625",
+      "Adj Close": "114.44",
+      "Volume": "25000"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "115.29000091552734",
+      "Adj Close": "115.29",
+      "Volume": "18500"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "116.19000244140625",
+      "Adj Close": "116.19",
+      "Volume": "48600"
     }
   ]
 }

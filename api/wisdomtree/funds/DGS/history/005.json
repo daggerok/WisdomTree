@@ -2,7 +2,7 @@
   "ticker": "DGS",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4767,
+  "totalRows": 4771,
   "headers": [
     "Date",
     "Close",
@@ -4611,6 +4611,30 @@
       "Close": "63.81999969482422",
       "Adj Close": "63.82",
       "Volume": "31900"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "63.869998931884766",
+      "Adj Close": "63.87",
+      "Volume": "32700"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "63.22999954223633",
+      "Adj Close": "63.23",
+      "Volume": "16300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "62.709999084472656",
+      "Adj Close": "62.71",
+      "Volume": "36700"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "61.939998626708984",
+      "Adj Close": "61.94",
+      "Volume": "31400"
     }
   ]
 }

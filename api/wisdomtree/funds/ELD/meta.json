@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/eld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/eld",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.203
   },
   "aum": {
-    "display": "$137.87 M",
-    "value": 137872576,
-    "asOfDate": "Oct 09 2026",
+    "display": "$138.22 M",
+    "value": 138222528,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -2064,8 +2064,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4069,
-    "asOf": "Oct 12 2026",
+    "totalRows": 4073,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

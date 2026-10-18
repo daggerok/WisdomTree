@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwmf",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.415
   },
   "aum": {
-    "display": "$33.14 M",
-    "value": 33140228,
-    "asOfDate": "Oct 09 2026",
+    "display": "$33.45 M",
+    "value": 33451054,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.95,
-    "dividendYieldText": "2.95%",
+    "dividendYield": 2.93,
+    "dividendYieldText": "2.93%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.45,
@@ -483,8 +483,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2053,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2057,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

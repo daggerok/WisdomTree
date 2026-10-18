@@ -2,7 +2,7 @@
   "ticker": "EPS",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4940,
+  "totalRows": 4944,
   "headers": [
     "Date",
     "Close",
@@ -5649,6 +5649,30 @@
       "Close": "81.62000274658203",
       "Adj Close": "81.62",
       "Volume": "26500"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "81.54000091552734",
+      "Adj Close": "81.54",
+      "Volume": "58900"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "80.62000274658203",
+      "Adj Close": "80.62",
+      "Volume": "66800"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "80.88999938964844",
+      "Adj Close": "80.89",
+      "Volume": "55800"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "80.02999877929688",
+      "Adj Close": "80.03",
+      "Volume": "289500"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmy",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.035
   },
   "aum": {
-    "display": "$4.78 M",
-    "value": 4780655.5,
-    "asOfDate": "Oct 09 2026",
+    "display": "$4.85 M",
+    "value": 4847663.5,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.18,
-    "dividendYieldText": "4.18%",
+    "dividendYield": 4.13,
+    "dividendYieldText": "4.13%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 6.06,
@@ -330,8 +330,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 383,
-    "asOf": "Oct 12 2026",
+    "totalRows": 387,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

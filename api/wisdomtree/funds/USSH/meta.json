@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/ussh",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/ussh",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.029
   },
   "aum": {
-    "display": "$22.40 M",
-    "value": 22403398,
-    "asOfDate": "Oct 09 2026",
+    "display": "$22.46 M",
+    "value": 22455468,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -494,8 +494,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 647,
-    "asOf": "Oct 12 2026",
+    "totalRows": 651,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

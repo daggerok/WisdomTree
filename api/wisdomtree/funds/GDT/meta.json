@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdt",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdt",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.139
   },
   "aum": {
-    "display": "$11.06 M",
-    "value": 11059537,
-    "asOfDate": "Oct 09 2026",
+    "display": "$11.03 M",
+    "value": 11027472,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -220,8 +220,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 182,
-    "asOf": "Oct 12 2026",
+    "totalRows": 186,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

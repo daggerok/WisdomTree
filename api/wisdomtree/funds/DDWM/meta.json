@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddwm",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.624
   },
   "aum": {
-    "display": "$1.41 B",
-    "value": 1411575296,
-    "asOfDate": "Oct 09 2026",
+    "display": "$1.44 B",
+    "value": 1435190656,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.58,
-    "dividendYieldText": "2.58%",
+    "dividendYield": 2.54,
+    "dividendYieldText": "2.54%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.81,
@@ -612,8 +612,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2687,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2691,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

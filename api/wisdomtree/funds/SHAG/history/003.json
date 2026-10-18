@@ -2,7 +2,7 @@
   "ticker": "SHAG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2362,
+  "totalRows": 2366,
   "headers": [
     "Date",
     "Close",
@@ -2181,6 +2181,30 @@
       "Close": "46.5620002746582",
       "Adj Close": "46.56",
       "Volume": "1500"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "46.55500030517578",
+      "Adj Close": "46.56",
+      "Volume": "8500"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "46.54999923706055",
+      "Adj Close": "46.55",
+      "Volume": "31300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "46.630001068115234",
+      "Adj Close": "46.63",
+      "Volume": "51400"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "46.654998779296875",
+      "Adj Close": "46.65",
+      "Volume": "10300"
     }
   ]
 }

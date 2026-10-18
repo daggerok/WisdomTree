@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/emcb",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/emcb",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.301
   },
   "aum": {
-    "display": "$99.39 M",
-    "value": 99388112,
-    "asOfDate": "Oct 09 2026",
+    "display": "$99.73 M",
+    "value": 99727160,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 5.55,
-    "dividendYieldText": "5.55%",
+    "dividendYield": 5.53,
+    "dividendYieldText": "5.53%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 5.62,
@@ -1893,8 +1893,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3670,
-    "asOf": "Oct 12 2026",
+    "totalRows": 3674,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -44,14 +44,14 @@
     "value": 0.802
   },
   "aum": {
-    "display": "$334.34 M",
-    "value": 334338880,
-    "asOfDate": "Oct 09 2026",
+    "display": "$331.76 M",
+    "value": 331757376,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.08,
-    "dividendYieldText": "1.08%",
+    "dividendYield": 1.09,
+    "dividendYieldText": "1.09%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0,
@@ -517,8 +517,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3342,
-    "asOf": "Oct 12 2026",
+    "totalRows": 3346,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

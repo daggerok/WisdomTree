@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/iqdg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/iqdg",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.494
   },
   "aum": {
-    "display": "$678.49 M",
-    "value": 678490944,
-    "asOfDate": "Oct 09 2026",
+    "display": "$690.64 M",
+    "value": 690642240,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.41,
-    "dividendYieldText": "2.41%",
+    "dividendYield": 2.37,
+    "dividendYieldText": "2.37%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.15,
@@ -607,8 +607,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2644,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2648,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

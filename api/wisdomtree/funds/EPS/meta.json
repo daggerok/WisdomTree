@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eps",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eps",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,31 +30,31 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$81.59",
-    "value": 81.589,
-    "asOfDate": "Oct 12 2026"
+    "display": "$80.01",
+    "value": 80.013,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$81.62",
-    "value": 81.62,
-    "asOfDate": "Oct 09 2026"
+    "display": "$80.03",
+    "value": 80.03,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.012
+    "display": "0.02%",
+    "value": 0.021
   },
   "aum": {
-    "display": "$1.69 B",
-    "value": 1685251456,
-    "asOfDate": "Oct 09 2026",
+    "display": "$1.65 B",
+    "value": 1652276992,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.1,
-    "dividendYieldText": "1.10%",
+    "dividendYield": 1.12,
+    "dividendYieldText": "1.12%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.1,
+    "distributionRate": 1.12,
     "secYield": 1.13,
     "secYieldText": "1.13%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
@@ -970,8 +970,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4940,
-    "asOf": "Oct 12 2026",
+    "totalRows": 4944,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

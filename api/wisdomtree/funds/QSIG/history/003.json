@@ -2,7 +2,7 @@
   "ticker": "QSIG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2630,
+  "totalRows": 2634,
   "headers": [
     "Date",
     "Close",
@@ -3789,6 +3789,30 @@
       "Close": "47.393001556396484",
       "Adj Close": "47.39",
       "Volume": "7600"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "47.40999984741211",
+      "Adj Close": "47.41",
+      "Volume": "3300"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "47.459999084472656",
+      "Adj Close": "47.46",
+      "Volume": "34300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "47.48500061035156",
+      "Adj Close": "47.49",
+      "Volume": "30900"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "47.529998779296875",
+      "Adj Close": "47.53",
+      "Volume": "13500"
     }
   ]
 }

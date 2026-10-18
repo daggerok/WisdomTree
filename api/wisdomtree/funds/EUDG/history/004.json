@@ -2,7 +2,7 @@
   "ticker": "EUDG",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3127,
+  "totalRows": 3131,
   "headers": [
     "Date",
     "Close",
@@ -771,6 +771,30 @@
       "Close": "37.06100082397461",
       "Adj Close": "37.06",
       "Volume": "4700"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "37.31800079345703",
+      "Adj Close": "37.32",
+      "Volume": "1200"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "37.34400177001953",
+      "Adj Close": "37.34",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "38.018001556396484",
+      "Adj Close": "38.02",
+      "Volume": "400"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "37.95000076293945",
+      "Adj Close": "37.95",
+      "Volume": "8500"
     }
   ]
 }

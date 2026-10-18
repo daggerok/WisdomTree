@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtls",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$63.21",
-    "value": 63.208,
-    "asOfDate": "Oct 12 2026"
+    "display": "$62.51",
+    "value": 62.513,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$63.41",
-    "value": 63.41,
-    "asOfDate": "Oct 09 2026"
+    "display": "$61.89",
+    "value": 61.892,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.34%",
-    "value": 0.336
+    "display": "-1.00%",
+    "value": -1.004
   },
   "aum": {
-    "display": "$20.22 M",
-    "value": 20222944,
-    "asOfDate": "Oct 09 2026",
+    "display": "$20.00 M",
+    "value": 20004244,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -55,8 +55,8 @@
     "dividendYieldBasis": null,
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 2.97,
-    "secYieldText": "2.97%",
+    "secYield": 3,
+    "secYieldText": "3.00%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -143,8 +143,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 181,
-    "asOf": "Oct 12 2026",
+    "totalRows": 185,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

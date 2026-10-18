@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ezm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ezm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,28 +30,28 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$72.53",
-    "value": 72.528,
-    "asOfDate": "Oct 12 2026"
+    "display": "$72.79",
+    "value": 72.794,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$72.57",
-    "value": 72.57,
-    "asOfDate": "Oct 09 2026"
+    "display": "$72.79",
+    "value": 72.787,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.072
+    "display": "-0.01%",
+    "value": -0.009
   },
   "aum": {
-    "display": "$904.14 M",
-    "value": 904143680,
-    "asOfDate": "Oct 09 2026",
+    "display": "$906.28 M",
+    "value": 906279232,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.25,
-    "dividendYieldText": "1.25%",
+    "dividendYield": 1.24,
+    "dividendYieldText": "1.24%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.21,
@@ -980,8 +980,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4940,
-    "asOf": "Oct 12 2026",
+    "totalRows": 4944,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

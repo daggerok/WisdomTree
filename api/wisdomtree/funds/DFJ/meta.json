@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfj",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,28 +30,28 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$114.77",
-    "value": 114.772,
-    "asOfDate": "Oct 12 2026"
+    "display": "$114.65",
+    "value": 114.654,
+    "asOfDate": "Oct 16 2026"
   },
   "marketPrice": {
-    "display": "$115.71",
-    "value": 115.712,
-    "asOfDate": "Oct 09 2026"
+    "display": "$114.06",
+    "value": 114.06,
+    "asOfDate": "Oct 16 2026"
   },
   "premiumDiscount": {
-    "display": "0.63%",
-    "value": 0.634
+    "display": "-0.52%",
+    "value": -0.521
   },
   "aum": {
-    "display": "$442.67 M",
-    "value": 442668640,
-    "asOfDate": "Oct 09 2026",
+    "display": "$447.15 M",
+    "value": 447149888,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.41,
-    "dividendYieldText": "2.41%",
+    "dividendYield": 2.42,
+    "dividendYieldText": "2.42%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.23,
@@ -712,8 +712,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5112,
-    "asOf": "Oct 12 2026",
+    "totalRows": 5116,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

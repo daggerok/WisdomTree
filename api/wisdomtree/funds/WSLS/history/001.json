@@ -2,7 +2,7 @@
   "ticker": "WSLS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 1,
+  "totalRows": 5,
   "headers": [
     "Date",
     "Close",
@@ -15,6 +15,30 @@
       "Close": "24.719999313354492",
       "Adj Close": "24.72",
       "Volume": "800"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "24.510000228881836",
+      "Adj Close": "24.51",
+      "Volume": "500"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "24.350000381469727",
+      "Adj Close": "24.35",
+      "Volume": "300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "24.639999389648438",
+      "Adj Close": "24.64",
+      "Volume": "1100"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "24.309999465942383",
+      "Adj Close": "24.31",
+      "Volume": "700"
     }
   ]
 }

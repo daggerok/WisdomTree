@@ -2,7 +2,7 @@
   "ticker": "DXJ",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5112,
+  "totalRows": 5116,
   "headers": [
     "Date",
     "Close",
@@ -681,6 +681,30 @@
       "Close": "60.66999816894531",
       "Adj Close": "60.67",
       "Volume": "464600"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "60.599998474121094",
+      "Adj Close": "60.6",
+      "Volume": "1227000"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "60.09000015258789",
+      "Adj Close": "60.09",
+      "Volume": "482300"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "59.83000183105469",
+      "Adj Close": "59.83",
+      "Volume": "393400"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "59.79999923706055",
+      "Adj Close": "59.8",
+      "Volume": "383000"
     }
   ]
 }

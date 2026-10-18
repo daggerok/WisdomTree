@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrw",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.007
   },
   "aum": {
-    "display": "$17.12 B",
-    "value": 17118761984,
-    "asOfDate": "Oct 09 2026",
+    "display": "$17.11 B",
+    "value": 17106030592,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -1777,8 +1777,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3368,
-    "asOf": "Oct 12 2026",
+    "totalRows": 3372,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

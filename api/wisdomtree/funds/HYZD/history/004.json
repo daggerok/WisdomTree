@@ -2,7 +2,7 @@
   "ticker": "HYZD",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3222,
+  "totalRows": 3226,
   "headers": [
     "Date",
     "Close",
@@ -1341,6 +1341,30 @@
       "Close": "22.440000534057617",
       "Adj Close": "22.44",
       "Volume": "29300"
+    },
+    {
+      "Date": "Oct 13 2026",
+      "Close": "22.459999084472656",
+      "Adj Close": "22.46",
+      "Volume": "188700"
+    },
+    {
+      "Date": "Oct 14 2026",
+      "Close": "22.399999618530273",
+      "Adj Close": "22.4",
+      "Volume": "63400"
+    },
+    {
+      "Date": "Oct 15 2026",
+      "Close": "22.3799991607666",
+      "Adj Close": "22.38",
+      "Volume": "102500"
+    },
+    {
+      "Date": "Oct 16 2026",
+      "Close": "22.360000610351562",
+      "Adj Close": "22.36",
+      "Volume": "35300"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/aggy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/aggy",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.012
   },
   "aum": {
-    "display": "$888.92 M",
-    "value": 888916800,
-    "asOfDate": "Oct 09 2026",
+    "display": "$893.29 M",
+    "value": 893289024,
+    "asOfDate": "Oct 16 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.82,
-    "dividendYieldText": "4.82%",
+    "dividendYield": 4.78,
+    "dividendYieldText": "4.78%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 5.22,
@@ -1554,8 +1554,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2832,
-    "asOf": "Oct 12 2026",
+    "totalRows": 2836,
+    "asOf": "Oct 16 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

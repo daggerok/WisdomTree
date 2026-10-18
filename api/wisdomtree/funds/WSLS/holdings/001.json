@@ -35,7 +35,7 @@
       "Name": "Treasuries",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "90.65",
+      "Weight": "90.67",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -44,7 +44,7 @@
       "Name": "Cash",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "9.35",
+      "Weight": "9.33",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -53,7 +53,7 @@
       "Name": "Equities",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "99.79",
+      "Weight": "97.3",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -62,7 +62,7 @@
       "Name": "Financial Services",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "15.54",
+      "Weight": "15.18",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -71,16 +71,7 @@
       "Name": "Materials",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "12.47",
-      "Market Value": "-",
-      "Shares Held": "-",
-      "Asset Category": "-"
-    },
-    {
-      "Name": "Pharmaceuticals Biotechnology & Life Sciences",
-      "Ticker": "-",
-      "Identifier": "-",
-      "Weight": "5.85",
+      "Weight": "12.17",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -95,10 +86,19 @@
       "Asset Category": "-"
     },
     {
+      "Name": "Pharmaceuticals Biotechnology & Life Sciences",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "5.62",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
       "Name": "Utilities",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "5.67",
+      "Weight": "5.66",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -107,7 +107,7 @@
       "Name": "Energy",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "7.09",
+      "Weight": "6.87",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -116,7 +116,7 @@
       "Name": "Consumer Services",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "3.85",
+      "Weight": "3.87",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -125,7 +125,7 @@
       "Name": "Equity Real Estate Investment Trusts (REITs)",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "1",
+      "Weight": "0.99",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -143,16 +143,7 @@
       "Name": "Commercial & Professional Services",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "5.09",
-      "Market Value": "-",
-      "Shares Held": "-",
-      "Asset Category": "-"
-    },
-    {
-      "Name": "Banks",
-      "Ticker": "-",
-      "Identifier": "-",
-      "Weight": "3.79",
+      "Weight": "4.87",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -167,10 +158,10 @@
       "Asset Category": "-"
     },
     {
-      "Name": "Food & Staples Retailing",
+      "Name": "Banks",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "2.28",
+      "Weight": "3.78",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -179,7 +170,16 @@
       "Name": "Capital Goods",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "11.58",
+      "Weight": "11.32",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
+      "Name": "Food & Staples Retailing",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "2.25",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -188,7 +188,7 @@
       "Name": "Automobiles & Components",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "2.92",
+      "Weight": "2.82",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -197,7 +197,7 @@
       "Name": "Technology Hardware & Equipment",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "3.61",
+      "Weight": "3.24",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -206,7 +206,7 @@
       "Name": "Transportation",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "2.08",
+      "Weight": "2.05",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -224,7 +224,7 @@
       "Name": "Consumer Durables & Apparel",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "4.4",
+      "Weight": "4.51",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -239,10 +239,10 @@
       "Asset Category": "-"
     },
     {
-      "Name": "Semiconductors & Semiconductor Equipment",
+      "Name": "Commercial & Professional Services",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "2.29",
+      "Weight": "0",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -251,16 +251,7 @@
       "Name": "Media & Entertainment",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "1.72",
-      "Market Value": "-",
-      "Shares Held": "-",
-      "Asset Category": "-"
-    },
-    {
-      "Name": "Commercial & Professional Services",
-      "Ticker": "-",
-      "Identifier": "-",
-      "Weight": "0",
+      "Weight": "1.78",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -275,10 +266,19 @@
       "Asset Category": "-"
     },
     {
+      "Name": "Semiconductors & Semiconductor Equipment",
+      "Ticker": "-",
+      "Identifier": "-",
+      "Weight": "1.89",
+      "Market Value": "-",
+      "Shares Held": "-",
+      "Asset Category": "-"
+    },
+    {
       "Name": "Household & Personal Products",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "0.53",
+      "Weight": "0.54",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -287,7 +287,7 @@
       "Name": "Retailing",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "2.46",
+      "Weight": "2.52",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
@@ -296,7 +296,7 @@
       "Name": "Software & Services",
       "Ticker": "-",
       "Identifier": "-",
-      "Weight": "5.58",
+      "Weight": "5.36",
       "Market Value": "-",
       "Shares Held": "-",
       "Asset Category": "-"
