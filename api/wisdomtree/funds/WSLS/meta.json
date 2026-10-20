@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$24.44",
-    "value": 24.44,
-    "asOfDate": "Oct 16 2026"
+    "display": "$24.27",
+    "value": 24.267,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
     "display": "$24.31",
@@ -149,8 +149,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5,
-    "asOf": "Oct 16 2026",
+    "totalRows": 6,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

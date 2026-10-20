@@ -2,7 +2,7 @@
   "ticker": "ELD",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4073,
+  "totalRows": 4074,
   "headers": [
     "Date",
     "Close",
@@ -447,6 +447,12 @@
       "Close": "28.1299991607666",
       "Adj Close": "28.13",
       "Volume": "12100"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "28.09000015258789",
+      "Adj Close": "28.09",
+      "Volume": "4700"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "XSOE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2968,
+  "totalRows": 2969,
   "headers": [
     "Date",
     "Close",
@@ -5817,6 +5817,12 @@
       "Close": "44.06999969482422",
       "Adj Close": "44.07",
       "Volume": "63500"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "44.459999084472656",
+      "Adj Close": "44.46",
+      "Volume": "70300"
     }
   ]
 }

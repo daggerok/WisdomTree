@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$33.45",
-    "value": 33.451,
-    "asOfDate": "Oct 16 2026"
+    "display": "$33.20",
+    "value": 33.199,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
     "display": "$32.92",
@@ -50,8 +50,8 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.93,
-    "dividendYieldText": "2.93%",
+    "dividendYield": 2.95,
+    "dividendYieldText": "2.95%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.43,
@@ -483,8 +483,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2057,
-    "asOf": "Oct 16 2026",
+    "totalRows": 2058,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

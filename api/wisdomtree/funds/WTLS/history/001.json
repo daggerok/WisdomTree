@@ -2,7 +2,7 @@
   "ticker": "WTLS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 185,
+  "totalRows": 186,
   "headers": [
     "Date",
     "Close",
@@ -1119,6 +1119,12 @@
       "Close": "61.891998291015625",
       "Adj Close": "61.89",
       "Volume": "4800"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "62.69200134277344",
+      "Adj Close": "62.69",
+      "Volume": "2600"
     }
   ]
 }

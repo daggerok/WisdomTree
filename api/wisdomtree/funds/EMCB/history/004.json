@@ -2,7 +2,7 @@
   "ticker": "EMCB",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3674,
+  "totalRows": 3675,
   "headers": [
     "Date",
     "Close",
@@ -4053,6 +4053,12 @@
       "Close": "64.33000183105469",
       "Adj Close": "64.33",
       "Volume": "11700"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "64.12999725341797",
+      "Adj Close": "64.13",
+      "Volume": "3300"
     }
   ]
 }

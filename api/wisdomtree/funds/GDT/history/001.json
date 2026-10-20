@@ -2,7 +2,7 @@
   "ticker": "GDT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 186,
+  "totalRows": 187,
   "headers": [
     "Date",
     "Close",
@@ -1124,6 +1124,12 @@
       "Date": "Oct 16 2026",
       "Close": "33.9900016784668",
       "Adj Close": "33.99",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "33.76599884033203",
+      "Adj Close": "33.77",
       "Volume": "100"
     }
   ]

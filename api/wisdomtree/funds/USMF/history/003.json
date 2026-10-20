@@ -2,7 +2,7 @@
   "ticker": "USMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2338,
+  "totalRows": 2339,
   "headers": [
     "Date",
     "Close",
@@ -2037,6 +2037,12 @@
       "Close": "51.67399978637695",
       "Adj Close": "51.67",
       "Volume": "22300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "51.90999984741211",
+      "Adj Close": "51.91",
+      "Volume": "18700"
     }
   ]
 }

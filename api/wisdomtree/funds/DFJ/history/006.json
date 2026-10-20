@@ -2,7 +2,7 @@
   "ticker": "DFJ",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5116,
+  "totalRows": 5117,
   "headers": [
     "Date",
     "Close",
@@ -705,6 +705,12 @@
       "Close": "114.05999755859375",
       "Adj Close": "114.06",
       "Volume": "18800"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "113.26000213623047",
+      "Adj Close": "113.26",
+      "Volume": "26600"
     }
   ]
 }

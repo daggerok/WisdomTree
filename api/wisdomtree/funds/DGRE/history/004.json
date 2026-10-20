@@ -2,7 +2,7 @@
   "ticker": "DGRE",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3323,
+  "totalRows": 3324,
   "headers": [
     "Date",
     "Close",
@@ -1947,6 +1947,12 @@
       "Close": "37.875999450683594",
       "Adj Close": "37.88",
       "Volume": "6800"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "38.43000030517578",
+      "Adj Close": "38.43",
+      "Volume": "5900"
     }
   ]
 }

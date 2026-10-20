@@ -2,7 +2,7 @@
   "ticker": "AIVI",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5116,
+  "totalRows": 5117,
   "headers": [
     "Date",
     "Close",
@@ -705,6 +705,12 @@
       "Close": "57.61000061035156",
       "Adj Close": "57.61",
       "Volume": "300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "57.13999938964844",
+      "Adj Close": "57.14",
+      "Volume": "200"
     }
   ]
 }

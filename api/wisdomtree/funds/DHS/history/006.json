@@ -2,7 +2,7 @@
   "ticker": "DHS",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5116,
+  "totalRows": 5117,
   "headers": [
     "Date",
     "Close",
@@ -705,6 +705,12 @@
       "Close": "116.19000244140625",
       "Adj Close": "116.19",
       "Volume": "48600"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "115.12999725341797",
+      "Adj Close": "115.13",
+      "Volume": "129600"
     }
   ]
 }

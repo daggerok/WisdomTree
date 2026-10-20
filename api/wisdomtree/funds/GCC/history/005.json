@@ -2,7 +2,7 @@
   "ticker": "GCC",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4713,
+  "totalRows": 4714,
   "headers": [
     "Date",
     "Close",
@@ -4287,6 +4287,12 @@
       "Close": "26.75",
       "Adj Close": "26.75",
       "Volume": "33800"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "26.81999969482422",
+      "Adj Close": "26.82",
+      "Volume": "17200"
     }
   ]
 }

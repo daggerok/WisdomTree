@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dim",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dim",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -50,8 +50,8 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.06,
-    "dividendYieldText": "3.06%",
+    "dividendYield": 3.07,
+    "dividendYieldText": "3.07%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.45,
@@ -931,8 +931,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5116,
-    "asOf": "Oct 16 2026",
+    "totalRows": 5117,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

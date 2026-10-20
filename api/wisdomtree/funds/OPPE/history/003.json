@@ -2,7 +2,7 @@
   "ticker": "OPPE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2924,
+  "totalRows": 2925,
   "headers": [
     "Date",
     "Close",
@@ -5553,6 +5553,12 @@
       "Close": "58.45600128173828",
       "Adj Close": "58.46",
       "Volume": "5300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "57.880001068115234",
+      "Adj Close": "57.88",
+      "Volume": "23700"
     }
   ]
 }

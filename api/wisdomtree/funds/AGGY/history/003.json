@@ -2,7 +2,7 @@
   "ticker": "AGGY",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2836,
+  "totalRows": 2837,
   "headers": [
     "Date",
     "Close",
@@ -5025,6 +5025,12 @@
       "Close": "41.720001220703125",
       "Adj Close": "41.72",
       "Volume": "82200"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "41.564998626708984",
+      "Adj Close": "41.56",
+      "Volume": "67400"
     }
   ]
 }

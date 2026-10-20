@@ -2,7 +2,7 @@
   "ticker": "USIN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 651,
+  "totalRows": 652,
   "headers": [
     "Date",
     "Close",
@@ -3914,6 +3914,12 @@
       "Date": "Oct 16 2026",
       "Close": "47.569000244140625",
       "Adj Close": "47.57",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "47.3849983215332",
+      "Adj Close": "47.38",
       "Volume": "100"
     }
   ]

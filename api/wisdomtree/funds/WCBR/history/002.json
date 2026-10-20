@@ -2,7 +2,7 @@
   "ticker": "WCBR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1437,
+  "totalRows": 1438,
   "headers": [
     "Date",
     "Close",
@@ -2631,6 +2631,12 @@
       "Close": "43.91999816894531",
       "Adj Close": "43.92",
       "Volume": "166700"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "44.67499923706055",
+      "Adj Close": "44.67",
+      "Volume": "78400"
     }
   ]
 }

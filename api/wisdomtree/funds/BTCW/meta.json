@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$85.85",
-    "value": 85.852,
-    "asOfDate": "Oct 16 2026"
+    "display": "$86.42",
+    "value": 86.425,
+    "asOfDate": "Oct 19 2026"
   },
   "marketPrice": {
     "display": "$86.12",
@@ -134,8 +134,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-09-18",
-    "asOf": "Sep 18 2026",
+    "asOfDate": "2026-10-19",
+    "asOf": "Oct 19 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -143,8 +143,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 694,
-    "asOf": "Oct 16 2026",
+    "totalRows": 695,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

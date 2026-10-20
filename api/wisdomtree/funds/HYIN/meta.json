@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/hyin",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/hyin",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -50,8 +50,8 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 15.12,
-    "dividendYieldText": "15.12%",
+    "dividendYield": 15.43,
+    "dividendYieldText": "15.43%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 13.66,
@@ -725,8 +725,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1369,
-    "asOf": "Oct 16 2026",
+    "totalRows": 1370,
+    "asOf": "Oct 19 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

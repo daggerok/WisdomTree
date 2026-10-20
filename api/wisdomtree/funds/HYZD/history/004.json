@@ -2,7 +2,7 @@
   "ticker": "HYZD",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3226,
+  "totalRows": 3227,
   "headers": [
     "Date",
     "Close",
@@ -1365,6 +1365,12 @@
       "Close": "22.360000610351562",
       "Adj Close": "22.36",
       "Volume": "35300"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "22.3700008392334",
+      "Adj Close": "22.37",
+      "Volume": "48900"
     }
   ]
 }

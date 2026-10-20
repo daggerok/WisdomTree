@@ -2,7 +2,7 @@
   "ticker": "GDE",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1151,
+  "totalRows": 1152,
   "headers": [
     "Date",
     "Close",
@@ -915,6 +915,12 @@
       "Close": "63.75",
       "Adj Close": "63.75",
       "Volume": "98000"
+    },
+    {
+      "Date": "Oct 19 2026",
+      "Close": "63.5",
+      "Adj Close": "63.5",
+      "Volume": "176800"
     }
   ]
 }
