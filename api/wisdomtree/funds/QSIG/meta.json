@@ -44,9 +44,9 @@
     "value": -0.174
   },
   "aum": {
-    "display": "$52.37 M",
-    "value": 52374044,
-    "asOfDate": "Oct 16 2026",
+    "display": "$52.29 M",
+    "value": 52291356,
+    "asOfDate": "Oct 19 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -1448,8 +1448,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2635,
-    "asOf": "Oct 19 2026",
+    "totalRows": 2636,
+    "asOf": "Oct 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

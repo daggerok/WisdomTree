@@ -2,7 +2,7 @@
   "ticker": "WTV",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4945,
+  "totalRows": 4946,
   "headers": [
     "Date",
     "Close",
@@ -5679,6 +5679,12 @@
       "Close": "105.19000244140625",
       "Adj Close": "105.19",
       "Volume": "185600"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "106.5999984741211",
+      "Adj Close": "106.6",
+      "Volume": "146700"
     }
   ]
 }

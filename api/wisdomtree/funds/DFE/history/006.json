@@ -2,7 +2,7 @@
   "ticker": "DFE",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5117,
+  "totalRows": 5118,
   "headers": [
     "Date",
     "Close",
@@ -711,6 +711,12 @@
       "Close": "73.76000213623047",
       "Adj Close": "73.76",
       "Volume": "2300"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "74.26000213623047",
+      "Adj Close": "74.26",
+      "Volume": "9300"
     }
   ]
 }

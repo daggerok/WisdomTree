@@ -2,7 +2,7 @@
   "ticker": "WDAF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 277,
+  "totalRows": 278,
   "headers": [
     "Date",
     "Close",
@@ -1671,6 +1671,12 @@
       "Close": "28.475000381469727",
       "Adj Close": "28.48",
       "Volume": "5700"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "27.648000717163086",
+      "Adj Close": "27.65",
+      "Volume": "500"
     }
   ]
 }

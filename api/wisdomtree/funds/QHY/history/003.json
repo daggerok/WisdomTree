@@ -2,7 +2,7 @@
   "ticker": "QHY",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2635,
+  "totalRows": 2636,
   "headers": [
     "Date",
     "Close",
@@ -3819,6 +3819,12 @@
       "Close": "44.47999954223633",
       "Adj Close": "44.48",
       "Volume": "9800"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "44.4900016784668",
+      "Adj Close": "44.49",
+      "Volume": "18600"
     }
   ]
 }

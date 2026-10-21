@@ -2,7 +2,7 @@
   "ticker": "DWMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2058,
+  "totalRows": 2059,
   "headers": [
     "Date",
     "Close",
@@ -356,6 +356,12 @@
       "Date": "Oct 19 2026",
       "Close": "32.709999084472656",
       "Adj Close": "32.71",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "32.93000030517578",
+      "Adj Close": "32.93",
       "Volume": "100"
     }
   ]

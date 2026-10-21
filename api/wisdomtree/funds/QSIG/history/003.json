@@ -2,7 +2,7 @@
   "ticker": "QSIG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2635,
+  "totalRows": 2636,
   "headers": [
     "Date",
     "Close",
@@ -3819,6 +3819,12 @@
       "Close": "47.459999084472656",
       "Adj Close": "47.46",
       "Volume": "4000"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "47.46500015258789",
+      "Adj Close": "47.47",
+      "Volume": "19900"
     }
   ]
 }

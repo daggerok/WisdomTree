@@ -2,7 +2,7 @@
   "ticker": "DES",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5117,
+  "totalRows": 5118,
   "headers": [
     "Date",
     "Close",
@@ -711,6 +711,12 @@
       "Close": "38.20000076293945",
       "Adj Close": "38.2",
       "Volume": "67800"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "38.66999816894531",
+      "Adj Close": "38.67",
+      "Volume": "79600"
     }
   ]
 }

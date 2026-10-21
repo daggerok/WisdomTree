@@ -2,7 +2,7 @@
   "ticker": "USFR",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3196,
+  "totalRows": 3197,
   "headers": [
     "Date",
     "Close",
@@ -1184,7 +1184,13 @@
       "Date": "Oct 19 2026",
       "Close": "50.5",
       "Adj Close": "50.5",
-      "Volume": "5215800"
+      "Volume": "5232900"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "50.5",
+      "Adj Close": "50.5",
+      "Volume": "5315500"
     }
   ]
 }

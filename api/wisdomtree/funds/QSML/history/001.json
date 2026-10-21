@@ -2,7 +2,7 @@
   "ticker": "QSML",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 686,
+  "totalRows": 687,
   "headers": [
     "Date",
     "Close",
@@ -4125,6 +4125,12 @@
       "Close": "33.25",
       "Adj Close": "33.25",
       "Volume": "700"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "33.823001861572266",
+      "Adj Close": "33.82",
+      "Volume": "2200"
     }
   ]
 }

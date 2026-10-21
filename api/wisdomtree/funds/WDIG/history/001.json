@@ -2,7 +2,7 @@
   "ticker": "WDIG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 114,
+  "totalRows": 115,
   "headers": [
     "Date",
     "Close",
@@ -693,6 +693,12 @@
       "Close": "36.15999984741211",
       "Adj Close": "36.16",
       "Volume": "600"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "36.18000030517578",
+      "Adj Close": "36.18",
+      "Volume": "1400"
     }
   ]
 }

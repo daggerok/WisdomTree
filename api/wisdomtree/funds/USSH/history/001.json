@@ -2,7 +2,7 @@
   "ticker": "USSH",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 652,
+  "totalRows": 653,
   "headers": [
     "Date",
     "Close",
@@ -3921,6 +3921,12 @@
       "Close": "49.8849983215332",
       "Adj Close": "49.88",
       "Volume": "100"
+    },
+    {
+      "Date": "Oct 20 2026",
+      "Close": "49.875",
+      "Adj Close": "49.88",
+      "Volume": "200"
     }
   ]
 }
