@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
   CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, inferDistributionFrequency, installSystemCa,
+  annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
@@ -258,6 +258,21 @@ describe('parsing', () => {
     expect(parseEdgarAtomFilings(atom)[0].url).toContain('0000000000-26-000001.txt');
   });
 
+  test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
+    const headers = ['Name', 'Ticker', 'Weight'];
+    const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
+    expect(holdingsGuard(headers, rows, 2)).toBeNull();
+    expect(holdingsGuard(headers, [['A', 'A', '60'], ['B', 'B', '40']], null)).toBeNull();
+    expect(holdingsGuard([], [], 0)).toBeNull(); // nothing published before: an empty sheet is honest
+    expect(holdingsGuard(headers, [], 505)).toContain('no holdings rows');
+    expect(holdingsGuard(['Name', 'Ticker', 'Wt'], rows, 2)).toContain('no weight column');
+    expect(holdingsGuard(headers, rows.map((row) => ({ ...row, Weight: '6\u200B0' })), 2)).toContain('numeric weight');
+    const allocation = [{ Name: 'Cash&Collateral', Ticker: '-', Weight: '100' }, { Name: 'Equities', Ticker: '-', Weight: '476' }];
+    expect(holdingsGuard(headers, allocation, 2)).toContain('outside 50..150');
+    expect(holdingsGuard(headers, allocation, 2, ['sum'])).toBeNull();
+    expect(holdingsGuard(headers, rows, 5)).toContain('less than half');
+  });
+
   test('Yahoo chart: close, adjusted close and dividends', () => {
     const parsed = parseChart({ chart: { result: [{ timestamp: [Date.UTC(2025, 0, 2) / 1000, Date.UTC(2025, 0, 3) / 1000], indicators: { quote: [{ close: [10, 11], volume: [100, 200] }], adjclose: [{ adjclose: [9, 10] }] }, events: { dividends: { '1735776000': { amount: 0.25 } } }, meta: { regularMarketPrice: 11, exchangeName: 'NYSEArca' } }] } });
     expect(parsed.days[1]).toMatchObject({ date: '2025-01-03', close: 11, adjClose: 10, volume: 200 });
@@ -409,7 +424,7 @@ function secResponse(url: string, nportAsOf: string): Response | null {
   if (url.includes('company_tickers_mf')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [['1350487', 'S000043966', 'C000136444', 'AAA']] }));
   if (url.includes('company_tickers')) return new Response('{}');
   if (url.includes('browse-edgar')) return new Response('<feed><entry><filing-type>NPORT-P</filing-type><accession-number>0000940400-26-000001</accession-number><filing-date>2026-07-30</filing-date></entry></feed>');
-  if (url.includes('/Archives/edgar/')) return new Response(`<edgarSubmission><genInfo><regCik>0001350487</regCik><repPdDate>${nportAsOf}</repPdDate><seriesName>Fund AAA</seriesName><seriesId>S000043966</seriesId></genInfo><fundInfo><netAssets>1000000</netAssets></fundInfo><invstOrSecs><invstOrSec><name>NPORT CO ${nportAsOf}</name><cusip>999999999</cusip><pctVal>5</pctVal><valUSD>50</valUSD><balance>1</balance><assetCat>EC</assetCat></invstOrSec></invstOrSecs></edgarSubmission>`);
+  if (url.includes('/Archives/edgar/')) return new Response(`<edgarSubmission><genInfo><regCik>0001350487</regCik><repPdDate>${nportAsOf}</repPdDate><seriesName>Fund AAA</seriesName><seriesId>S000043966</seriesId></genInfo><fundInfo><netAssets>1000000</netAssets></fundInfo><invstOrSecs><invstOrSec><name>NPORT CO ${nportAsOf}</name><cusip>999999999</cusip><pctVal>100</pctVal><valUSD>50</valUSD><balance>1</balance><assetCat>EC</assetCat></invstOrSec></invstOrSecs></edgarSubmission>`);
   return new Response('nope', { status: 404 });
 }
 
@@ -694,6 +709,27 @@ describe('pipeline', () => {
     s.tickers = ['AAA', 'BBB', 'DDD'];
     await s.run({ TICKERS: 'AAA' });
     expect(s.index().funds.map((f: any) => f.ticker)).toContain('CCC');
+  });
+
+  test('fresh holdings that fail the guard keep the fund exactly as published and report it failed', async () => {
+    // BBB has no N-PORT series in the SEC world, so its holdings come from the product-page top holdings table
+    const s = new Scenario(['BBB']);
+    const base = s.handler;
+    const serve = (...rows: string[]) => {
+      const page = `${productPage('BBB')}\n\n### Holdings\n\n#### As of 9/15/2026\n\n| Name | Weight (%) |\n| --- | --- |\n${rows.join('\n')}\n\nView all holdings`;
+      s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(page) : base(url, init));
+    };
+    serve('| Alpha Corp | 40.00 |', '| Beta Corp | 30.00 |', '| Gamma Corp | 20.00 |', '| Delta Corp | 10.00 |');
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    expect(s.meta('BBB').holdings.totalRows).toBe(4);
+    s.backdate();
+    const before = s.files().map((path) => readFileSync(path, 'utf8'));
+    serve('| Alpha Corp | 90.00 |'); // one row of four left: a truncated page, not a new portfolio
+    process.exitCode = 0;
+    await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
+    expect(s.touched()).toEqual([]);
+    expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
+    expect(process.exitCode).toBe(1);
   });
 
   test('N-PORT freshness: a filing older than the published holdings never replaces them, a newer one does', async () => {
