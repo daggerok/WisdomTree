@@ -1146,30 +1146,53 @@ function distributionRowToCells(row: DistributionRow): string[] {
   ];
 }
 
-export function parseTopHoldingsMarkdown(markdown: string, ticker: string, companyNames: Map<string, string> = new Map()): { headers: string[]; rows: JsonRecord[]; asOfDate: string | null } {
+/** Funds verified as leveraged whose product-page top holdings may add up to more than TOP_HOLDINGS_MAX_SUM. None yet: the
+ * long/short funds WSLS and WTAL publish only an allocation summary (Group, Long, Short, Group Weight), no holdings list. */
+const TOP_HOLDINGS_LEVERAGED = new Set<string>();
+/** A top-N holdings list covers at most the whole fund; a little slack for rounding. */
+const TOP_HOLDINGS_MAX_SUM = 105;
+
+/**
+ * The top holdings list of the product page (`### Holdings` section, up to the next heading of level 1-3). Only a table
+ * whose header is Name plus a weight column counts as a holdings list; an allocation table, or a list whose weights add
+ * up to more than TOP_HOLDINGS_MAX_SUM, yields no rows and a `rejected` reason, so the next source or the published sheet applies.
+ */
+export function parseTopHoldingsMarkdown(markdown: string, ticker: string, companyNames: Map<string, string> = new Map()): { headers: string[]; rows: JsonRecord[]; asOfDate: string | null; rejected: string | null } {
   const source = String(markdown ?? '').replace(/\r/g, '');
   const heading = /###\s+Holdings\s*\n+####\s+As of\s*([^\n]*)/i.exec(source);
   const asOfDate = heading ? toIsoDate(heading[1]) : null;
+  const none = (rejected: string | null) => ({ headers: HOLDINGS_HEADERS, rows: [] as JsonRecord[], asOfDate, rejected });
   const start = source.search(/###\s+Holdings\b/i);
-  if (start < 0) return { headers: HOLDINGS_HEADERS, rows: [], asOfDate };
-  const lines = source.slice(start).split('\n');
-  const rows: JsonRecord[] = [];
-  let tableStarted = false;
-  for (const line of lines) {
-    if (!line.trim().startsWith('|')) {
-      if (tableStarted && rows.length) break;
-      continue;
-    }
-    const cells = line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cleanText);
-    if (cells.length < 2 || cells[0].toLowerCase() === 'name' || /^-+$/.test(cells[0])) continue;
-    tableStarted = true;
-    const name = cells[0];
-    if (name.toLowerCase() === 'remaining portfolio') continue;
-    const normalized = normalizeHoldingName(name);
-    const resolvedTicker = companyNames.get(normalized) || companyNames.get(normalizeHoldingNameCore(name)) || '-';
-    rows.push({ Name: name, Ticker: resolvedTicker || '-', Identifier: '-', Weight: String(numberOrNull(cells[1]) ?? 0), 'Market Value': '-', 'Shares Held': '-', 'Asset Category': '-' });
+  if (start < 0) return none(null);
+  const section: string[] = [];
+  for (const line of source.slice(start).split('\n').slice(1)) {
+    if (/^#{1,3}\s/.test(line.trim())) break;
+    section.push(line.trim());
   }
-  return { headers: HOLDINGS_HEADERS, rows, asOfDate };
+  // Tables are runs of consecutive pipe lines; the first one with a Name and a weight header is the holdings list.
+  const tables: string[][][] = [];
+  let previousWasTable = false;
+  for (const line of section) {
+    const isTable = line.startsWith('|');
+    if (isTable && !previousWasTable) tables.push([]);
+    if (isTable) tables[tables.length - 1].push(line.replace(/^\|/, '').replace(/\|$/, '').split('|').map(cleanText));
+    previousWasTable = isTable;
+  }
+  const table = tables.find((rows) => rows[0][0].toLowerCase() === 'name' && rows[0].some((cell, i) => i > 0 && /^weight\b/i.test(cell)));
+  if (!table) return none(tables.length ? `no Name and weight table (headers: ${tables.map((rows) => rows[0].join(', ')).join('; ')})` : null);
+  const weightAt = table[0].findIndex((cell, i) => i > 0 && /^weight\b/i.test(cell));
+  const rows: JsonRecord[] = [];
+  let sum = 0;
+  for (const cells of table.slice(1)) {
+    const name = cells[0];
+    if (!name || /^:?-+:?$/.test(name) || name.toLowerCase() === 'remaining portfolio') continue;
+    const weight = numberOrNull(cells[weightAt]);
+    sum += weight ?? 0;
+    const resolvedTicker = companyNames.get(normalizeHoldingName(name)) || companyNames.get(normalizeHoldingNameCore(name)) || '-';
+    rows.push({ Name: name, Ticker: resolvedTicker || '-', Identifier: '-', Weight: String(weight ?? 0), 'Market Value': '-', 'Shares Held': '-', 'Asset Category': '-' });
+  }
+  if (sum > TOP_HOLDINGS_MAX_SUM && !TOP_HOLDINGS_LEVERAGED.has(ticker)) return none(`top holdings add up to ${round(sum, 2)}, more than ${TOP_HOLDINGS_MAX_SUM}`);
+  return { headers: HOLDINGS_HEADERS, rows, asOfDate, rejected: null };
 }
 
 function secHeaders(): Record<string, string> {
@@ -1847,6 +1870,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
 
   if (!holdingsRows.length && config.edgarFallback && productPageMarkdown) {
     const top = parseTopHoldingsMarkdown(productPageMarkdown, fund.ticker, companyTickerMap || new Map());
+    if (top.rejected) outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: product page top holdings rejected: ${top.rejected}`);
     if (top.rows.length && (!previousMeta?.holdings?.totalRows || /^WisdomTree product page/.test(String(previousMeta.holdings.source || '')))) {
       holdingsRows = top.rows;
       holdingsFresh = true;
