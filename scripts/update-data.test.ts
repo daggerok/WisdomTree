@@ -9,7 +9,7 @@ import {
   annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
-  parseProductPageSummary, parseRange, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
+  parseProductPageSummary, parseRange, parseTopHoldingsMarkdown, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
   rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, writeIndex, yahooChartQuery,
 } from './update-data';
 
@@ -56,6 +56,9 @@ const catalogFixture = [
 ].join('\n');
 const usfrPage = `# USFR WisdomTree Floating Rate Treasury Fund\n\n### 3.68%\n\n30-day SEC yield\n\nAs of 9/15/2026\n\n| Product Overview | As of 9/16/2026 |\n| --- | --- |\n| Expense Ratio | 0.15% |\n| CUSIP | 97717Y527 |\n| Total Assets (000) | $19,560,180.26 |\n| SEC 30-day Yield | 3.68% |\n\n### Net Asset Value\n\n| Net Asset Value | As of 9/16/2026 |\n| --- | --- |\n| NAV | $50.476 |\n| Premium/Discount to NAV | 0.01% |\n\n### Closing Market Price\n\n| Closing Market Value | As of 9/15/2026 |\n| --- | --- |\n| Closing Market Price | $50.470 |\n\n### Total Returns\n\nMonth End Performance (8/31/2026)\n\n| Cumulative | 1 Month | 3 Month | YTD | Since Inception* | |\n| --- | --- | --- | --- | --- | --- |\n| Underlying Index Returns | 0.33% | 1.04% | 2.70% | 30.94% | |\n| NAV Returns | 0.32% | 1.00% | 2.57% | 28.21% | |\n| Market Price Returns | 0.32% | 1.02% | 2.59% | 28.05% | |\n| Average Annual | 1 Year | 3 Year | 5 Year | 10 Year | Since Inception* |\n| Underlying Index Returns | 4.18% | 4.84% | 4.04% | 2.67% | 2.17% |\n| NAV Returns | 3.98% | 4.66% | 3.86% | 2.49% | 2.00% |\n| Market Price Returns | 4.00% | 4.65% | 3.86% | 2.52% | 1.99% |\n\nQuarter End Performance (6/30/2026)\n\n| Cumulative | Since Inception* |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n| Underlying Index Returns | 30.04% |  |  |  |  |\n| NAV Returns | 27.37% |  |  |  |  |\n| Market Price Returns | 27.19% |  |  |  |  |\n| Average Annual | 1 Year | 3 Year | 5 Year | 10 Year | Since Inception* |\n| Underlying Index Returns | 4.30% | 4.90% | 4.10% | 2.70% | 2.20% |\n| NAV Returns | 4.10% | 4.70% | 3.90% | 2.50% | 2.02% |\n| Market Price Returns | 4.12% | 4.69% | 3.90% | 2.53% | 2.01% |`;
 const DIST_HEADER = '| Ex-Dividend Date | Record Date | Payable Date | Ordinary Income | Short Term Capital Gains | Long Term Capital Gains | Return of Capital | Total Distribution |\n| --- | --- | --- | --- | --- | --- | --- | --- |';
+/** The product-page holdings section: the top-N list of most funds, or the allocation summary of the long/short funds (WSLS, WTAL). */
+const holdingsSection = (header: string, ...rows: string[]): string => `### Holdings${header.startsWith('| Group') ? ' Summary\n\nAs of 10/22/2026' : '\n\n#### As of 10/22/2026'}\n\n${header}\n| --- | --- |\n${rows.join('\n')}\n\nView all holdings`;
+const ALLOCATION_ROWS = ['| Cash&Collateral | 100.00% | 0.00% | 100.00% |', '| Treasuries | 90.68% | 0.00% | 90.68% |', '| Equities | 100.72% | -88.06% | 90.00% |', '| Equity Futures | 90.00% | 0.00% | 90.00% |'];
 const distPage = (...rows: string[]) => `### Recent Distributions\n\n${DIST_HEADER}\n${rows.join('\n')}\n\n### Thought Leadership\n\n| Name | Ticker |\n| --- | --- |\n| unrelated | table |`;
 
 // ===========================================================================
@@ -256,6 +259,18 @@ describe('parsing', () => {
     const atom = `<feed><entry><filing-type>NPORT-P</filing-type><accession-number>0000000000-26-000001</accession-number><filing-date>2026-07-30</filing-date><filing-href>https://www.sec.gov/Archives/edgar/data/1350487/000000000026000001/x.txt</filing-href></entry><entry><filing-type>NPORT-P</filing-type><amend> </amend><accession-number>bad</accession-number></entry><entry><filing-type>NPORT-N</filing-type><accession-number>ignored</accession-number></entry></feed>`;
     expect(parseEdgarAtomFilings(atom)).toHaveLength(1);
     expect(parseEdgarAtomFilings(atom)[0].url).toContain('0000000000-26-000001.txt');
+  });
+
+  test('top holdings: only a Name and weight table up to the next heading; an allocation summary or a list adding up to more than 105 gives no rows', () => {
+    const top = parseTopHoldingsMarkdown(`${holdingsSection('| Name | Weight (%) |', '| Space Exploration Techn-Cl A | 17.06 |', '| Rocket Lab Corp | 4.54 |', '| Remaining Portfolio | 78.40 |')}\n\n### Sector Breakdown\n\n| Name | Weight (%) |\n| --- | --- |\n| Industrials | 63.71 |`, 'WSPC');
+    expect([top.rows.map((row) => [row.Name, row.Weight]), top.asOfDate, top.rejected]).toEqual([[['Space Exploration Techn-Cl A', '17.06'], ['Rocket Lab Corp', '4.54']], '2026-10-22', null]);
+    const allocation = parseTopHoldingsMarkdown(holdingsSection('| Group | Long | Short | Group Weight |', ...ALLOCATION_ROWS), 'WSLS');
+    expect([allocation.rows, allocation.rejected]).toEqual([[], 'no Name and weight table (headers: Group, Long, Short, Group Weight)']);
+    const over = parseTopHoldingsMarkdown(holdingsSection('| Name | Weight (%) |', '| Treasuries | 90.68 |', '| Equities | 100.72 |'), 'WTAL');
+    expect([over.rows, over.rejected]).toEqual([[], 'top holdings add up to 191.4, more than 105']);
+    // a list right before the next heading ends there; a page without a holdings section is no rejection
+    expect(parseTopHoldingsMarkdown('### Holdings\n\n| Name | Weight |\n| --- | --- |\n| A Corp | 5 |\n### Recent Distributions\n\n| Name | Weight |\n| --- | --- |\n| B Corp | 6 |', 'AAA').rows.map((row) => row.Name)).toEqual(['A Corp']);
+    expect(parseTopHoldingsMarkdown(usfrPage, 'USFR')).toMatchObject({ rows: [], rejected: null });
   });
 
   test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
@@ -730,6 +745,20 @@ describe('pipeline', () => {
     expect(s.touched()).toEqual([]);
     expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
     expect(process.exitCode).toBe(1);
+  });
+
+  test('a product page that turns its holdings list into an allocation summary keeps the published list and still refreshes the fund', async () => {
+    const s = new Scenario(['BBB']);
+    const base = s.handler;
+    const serve = (ytd: string, section: string) => { s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(`${productPage('BBB', ytd)}\n\n${section}`) : base(url, init)); };
+    serve('2.59%', holdingsSection('| Name | Weight (%) |', '| Alpha Corp | 60.00 |', '| Beta Corp | 40.00 |'));
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const published = s.meta('BBB').holdings;
+    expect(published.totalRows).toBe(2);
+    serve('9.99%', holdingsSection('| Group | Long | Short | Group Weight |', ...ALLOCATION_ROWS));
+    process.exitCode = 0;
+    await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
+    expect([s.meta('BBB').holdings, s.meta('BBB').returns.monthEnd.ytd, process.exitCode]).toEqual([published, 9.99, 0]);
   });
 
   test('N-PORT freshness: a filing older than the published holdings never replaces them, a newer one does', async () => {
