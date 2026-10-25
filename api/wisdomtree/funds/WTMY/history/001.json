@@ -2,7 +2,7 @@
   "ticker": "WTMY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 389,
+  "totalRows": 392,
   "headers": [
     "Date",
     "Close",
@@ -2342,6 +2342,24 @@
       "Date": "Oct 20 2026",
       "Close": "24.225000381469727",
       "Adj Close": "24.23",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "24.235000610351562",
+      "Adj Close": "24.24",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "24.3799991607666",
+      "Adj Close": "24.38",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "24.434999465942383",
+      "Adj Close": "24.43",
       "Volume": "100"
     }
   ]

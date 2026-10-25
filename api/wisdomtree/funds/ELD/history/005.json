@@ -2,7 +2,7 @@
   "ticker": "ELD",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4075,
+  "totalRows": 4078,
   "headers": [
     "Date",
     "Close",
@@ -459,6 +459,24 @@
       "Close": "28.190000534057617",
       "Adj Close": "28.19",
       "Volume": "39100"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "28.110000610351562",
+      "Adj Close": "28.11",
+      "Volume": "135900"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "28.06999969482422",
+      "Adj Close": "28.07",
+      "Volume": "12100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "28.139999389648438",
+      "Adj Close": "28.14",
+      "Volume": "16000"
     }
   ]
 }

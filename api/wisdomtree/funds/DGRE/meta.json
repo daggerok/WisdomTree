@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgre",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgre",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.381
   },
   "aum": {
-    "display": "$141.65 M",
-    "value": 141648928,
-    "asOfDate": "Oct 19 2026",
+    "display": "$142.61 M",
+    "value": 142611440,
+    "asOfDate": "Oct 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.48,
-    "dividendYieldText": "1.48%",
+    "dividendYield": 1.49,
+    "dividendYieldText": "1.49%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.09,
@@ -634,8 +634,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3325,
-    "asOf": "Oct 20 2026",
+    "totalRows": 3328,
+    "asOf": "Oct 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

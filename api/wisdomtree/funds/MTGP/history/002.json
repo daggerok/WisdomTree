@@ -2,7 +2,7 @@
   "ticker": "MTGP",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1726,
+  "totalRows": 1729,
   "headers": [
     "Date",
     "Close",
@@ -4365,6 +4365,24 @@
       "Close": "42.43000030517578",
       "Adj Close": "42.43",
       "Volume": "5100"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "42.415000915527344",
+      "Adj Close": "42.42",
+      "Volume": "4600"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "42.736000061035156",
+      "Adj Close": "42.74",
+      "Volume": "8100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "42.720001220703125",
+      "Adj Close": "42.72",
+      "Volume": "24800"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "WIMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 154,
+  "totalRows": 157,
   "headers": [
     "Date",
     "Close",
@@ -933,6 +933,24 @@
       "Close": "42.18000030517578",
       "Adj Close": "42.18",
       "Volume": "3100"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "42.33000183105469",
+      "Adj Close": "42.33",
+      "Volume": "900"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "41.9900016784668",
+      "Adj Close": "41.99",
+      "Volume": "4500"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "41.790000915527344",
+      "Adj Close": "41.79",
+      "Volume": "700"
     }
   ]
 }

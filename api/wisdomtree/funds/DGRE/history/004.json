@@ -2,7 +2,7 @@
   "ticker": "DGRE",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3325,
+  "totalRows": 3328,
   "headers": [
     "Date",
     "Close",
@@ -1959,6 +1959,24 @@
       "Close": "38.33599853515625",
       "Adj Close": "38.34",
       "Volume": "6900"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "38.60499954223633",
+      "Adj Close": "38.6",
+      "Volume": "3200"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "37.40599822998047",
+      "Adj Close": "37.41",
+      "Volume": "6000"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "37.64099884033203",
+      "Adj Close": "37.64",
+      "Volume": "4900"
     }
   ]
 }

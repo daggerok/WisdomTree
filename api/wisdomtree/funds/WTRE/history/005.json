@@ -2,7 +2,7 @@
   "ticker": "WTRE",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4876,
+  "totalRows": 4879,
   "headers": [
     "Date",
     "Close",
@@ -5265,6 +5265,24 @@
       "Close": "21.670000076293945",
       "Adj Close": "21.67",
       "Volume": "1900"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "21.479999542236328",
+      "Adj Close": "21.48",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "21.170000076293945",
+      "Adj Close": "21.17",
+      "Volume": "1500"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "21.329999923706055",
+      "Adj Close": "21.33",
+      "Volume": "2300"
     }
   ]
 }

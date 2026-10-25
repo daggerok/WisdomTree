@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/epi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/epi",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.208
   },
   "aum": {
-    "display": "$1.80 B",
-    "value": 1795681408,
-    "asOfDate": "Oct 19 2026",
+    "display": "$1.75 B",
+    "value": 1752606720,
+    "asOfDate": "Oct 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -730,8 +730,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4693,
-    "asOf": "Oct 20 2026",
+    "totalRows": 4696,
+    "asOf": "Oct 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

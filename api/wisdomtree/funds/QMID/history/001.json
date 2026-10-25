@@ -2,7 +2,7 @@
   "ticker": "QMID",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 687,
+  "totalRows": 690,
   "headers": [
     "Date",
     "Close",
@@ -4131,6 +4131,24 @@
       "Close": "29.993000030517578",
       "Adj Close": "29.99",
       "Volume": "200"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "30.05699920654297",
+      "Adj Close": "30.06",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "30.26300048828125",
+      "Adj Close": "30.26",
+      "Volume": "100"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "29.999000549316406",
+      "Adj Close": "30",
+      "Volume": "100"
     }
   ]
 }

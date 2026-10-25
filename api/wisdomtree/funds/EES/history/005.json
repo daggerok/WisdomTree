@@ -2,7 +2,7 @@
   "ticker": "EES",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4946,
+  "totalRows": 4949,
   "headers": [
     "Date",
     "Close",
@@ -5685,6 +5685,24 @@
       "Close": "65.75",
       "Adj Close": "65.75",
       "Volume": "8400"
+    },
+    {
+      "Date": "Oct 21 2026",
+      "Close": "65.94999694824219",
+      "Adj Close": "65.95",
+      "Volume": "5800"
+    },
+    {
+      "Date": "Oct 22 2026",
+      "Close": "66.12000274658203",
+      "Adj Close": "66.12",
+      "Volume": "5500"
+    },
+    {
+      "Date": "Oct 23 2026",
+      "Close": "65.9000015258789",
+      "Adj Close": "65.9",
+      "Volume": "13800"
     }
   ]
 }

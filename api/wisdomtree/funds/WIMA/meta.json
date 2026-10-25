@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$41.92",
-    "value": 41.922,
-    "asOfDate": "Oct 20 2026"
+    "display": "$41.72",
+    "value": 41.716,
+    "asOfDate": "Oct 23 2026"
   },
   "marketPrice": {
-    "display": "$41.83",
-    "value": 41.833,
-    "asOfDate": "Oct 19 2026"
+    "display": "$41.79",
+    "value": 41.789,
+    "asOfDate": "Oct 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.41%",
-    "value": -0.405
+    "display": "0.17%",
+    "value": 0.174
   },
   "aum": {
-    "display": "$78.75 M",
-    "value": 78753928,
-    "asOfDate": "Oct 19 2026",
+    "display": "$78.22 M",
+    "value": 78217584,
+    "asOfDate": "Oct 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.73%",
     "dividendYieldBasis": "indicated",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": 2.71,
-    "secYield": 2.02,
-    "secYieldText": "2.02%",
+    "distributionRate": 2.73,
+    "secYield": 2.03,
+    "secYieldText": "2.03%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -97,7 +97,24 @@
         "sinceInception": 8.43,
         "sinceInceptionText": "8.43%"
       },
-      "indexReturns": null
+      "indexReturns": {
+        "mo1": -2.82,
+        "mo1Text": "-2.82%",
+        "qtd": 1.75,
+        "qtdText": "1.75%",
+        "ytd": null,
+        "ytdText": "—",
+        "yr1": null,
+        "yr1Text": "—",
+        "yr3": null,
+        "yr3Text": "—",
+        "yr5": null,
+        "yr5Text": "—",
+        "yr10": null,
+        "yr10Text": "—",
+        "sinceInception": 8.47,
+        "sinceInceptionText": "8.47%"
+      }
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -115,7 +132,14 @@
         "yr10": null,
         "sinceInception": 8.43
       },
-      "indexReturns": null
+      "indexReturns": {
+        "ytd": null,
+        "yr1": null,
+        "yr3": null,
+        "yr5": null,
+        "yr10": null,
+        "sinceInception": 8.47
+      }
     }
   },
   "distributions": {
@@ -171,8 +195,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 154,
-    "asOf": "Oct 20 2026",
+    "totalRows": 157,
+    "asOf": "Oct 23 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
