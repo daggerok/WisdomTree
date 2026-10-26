@@ -7,10 +7,10 @@ import { pathToFileURL } from 'node:url';
 import {
   CLOSED_FUNDS, CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
   annualizedToTotal, aumSource, cleanHoldingTicker, closedFund, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
-  isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
+  isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, mergeOfficialReturns, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseTopHoldingsMarkdown, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
-  rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, writeIndex, yahooChartQuery,
+  rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, withoutYoungSinceInception, writeIndex, yahooChartQuery,
 } from './update-data';
 
 // ---------------------------------------------------------------------------
@@ -328,22 +328,22 @@ describe('metrics', () => {
   const day = (date: string, close: number, adjClose = close) => ({ date, close, adjClose, volume: 1 });
 
   test('returns use adjusted closes, annualized values convert to cumulative', () => {
-    const result = priceReturns([day('2024-01-02', 100), day('2025-01-02', 110, 115), day('2026-01-02', 121, 132.25)], new Date('2026-01-03T00:00:00Z'));
+    const result = priceReturns([day('2024-01-02', 100), day('2025-01-02', 110, 115), day('2026-01-02', 121, 132.25)]);
     expect(result.yr1).toBe(32.25);
     expect(annualizedToTotal(10, 3)).toBe(33.1);
   });
 
   test('siAnn needs at least one year of history (null, never 0), a flat young fund keeps null horizons', () => {
     expect(priceReturns([day('2026-06-01', 100), day('2026-09-25', 110)]).siAnn).toBeNull();
-    expect(priceReturns([day('2024-09-25', 100), day('2026-09-25', 121)]).siAnn).toBeCloseTo(10, 0);
-    const young = priceReturns([day('2026-06-01', 100), day('2026-09-25', 110)], new Date('2026-09-26T00:00:00Z'));
+    expect(priceReturns([day('2024-09-25', 100), day('2026-09-25', 121)], '2024-09-25').siAnn).toBeCloseTo(10, 0);
+    const young = priceReturns([day('2026-06-01', 100), day('2026-09-25', 110)]);
     expect([young.yr1, young.cagr3y, young.cagr5y, young.cagr10y]).toEqual([null, null, null, null]);
   });
 
   test('metrics end with returnsBasis then performanceAsOf, official and derived bases travel with their own date', () => {
     const days = [day('2025-01-02', 100), day('2026-01-02', 110)];
     const fund = { dividendYield: null, secYield: null } as any;
-    const derived = priceReturns(days, new Date('2026-01-03T00:00:00Z'));
+    const derived = priceReturns(days);
     const estimated = deriveMetrics(derived, fund, [], { paymentsPerYear: null }, 110);
     expect([estimated.returnsBasis, estimated.performanceAsOf]).toEqual([RETURNS_BASIS_DERIVED, '2026-01-02']);
     expect(Object.keys(estimated).slice(-2)).toEqual(['returnsBasis', 'performanceAsOf']);
@@ -354,7 +354,7 @@ describe('metrics', () => {
   });
 
   test('dividendYieldBasis maps each yield source to a code and is null with a null yield', () => {
-    const derived = priceReturns([day('2025-01-02', 100), day('2026-01-02', 110)], new Date('2026-01-03T00:00:00Z'));
+    const derived = priceReturns([day('2025-01-02', 100), day('2026-01-02', 110)]);
     const dividends = [0, 1, 2].map((month) => ({ epoch: Date.UTC(2026, month, 15) / 1000, amount: 0.1 }));
     const basis = (fund: any, rows = dividends) => deriveMetrics(derived, { secYield: null, ...fund }, rows, { paymentsPerYear: rows.length ? 12 : null }, 100).dividendYieldBasis;
     expect(basis({ dividendYield: 4.72 })).toBe('official-trailing-12m');
@@ -375,6 +375,33 @@ describe('metrics 2', () => {
     expect(rowFromMeta(meta({ dividendYield: 2, dividendYieldBasis: 'indicated' })).metrics.dividendYieldBasis).toBe('indicated');
     const none = rowFromMeta(meta({ dividendYield: null }));
     expect([none.metrics.dividendYield, none.metrics.dividendYieldBasis]).toEqual([null, null]);
+  });
+
+  test('derived siAnn only from a series that starts at inception and spans a year, the 1-month window clamps to a shorter month', () => {
+    const day = (date: string, close: number) => ({ date, close, adjClose: close, volume: 1 });
+    const closes = [day('2021-09-30', 100), day('2024-09-30', 150), day('2026-09-30', 200)];
+    expect(priceReturns(closes, '2021-09-28').siAnn).toBeCloseTo(14.87, 1);
+    // A HISTORY_RANGE window that starts years after inception is not since inception (was cagr5y-like 14.87)
+    expect(priceReturns(closes.slice(1), '2021-09-28').siAnn).toBeNull();
+    expect(priceReturns(closes, null).siAnn).toBeNull();
+    // Oct 31 minus one month is Sep 30, not "Sep 31" = Oct 1 (that anchor gave -45)
+    expect(priceReturns([day('2026-09-30', 100), day('2026-10-01', 200), day('2026-10-31', 110)], '2026-09-30').mo1).toBe(10);
+  });
+
+  test('official since inception is null below one year between inception and the table date (main, NAV and index rows)', () => {
+    const monthEnd = parseProductPageSummary(usfrPage).officialReturns.monthEnd;
+    expect([monthEnd?.siAnn, monthEnd?.navReturns?.siAnn, monthEnd?.indexReturns?.siAnn]).toEqual([1.99, 2, 2.17]);
+    // NTSD: launched 2026-03-19, the 2026-09-30 table carried the cumulative 20.18 as annualized
+    const young = withoutYoungSinceInception(monthEnd, '2026-03-19');
+    expect([young?.siAnn, young?.navReturns?.siAnn, young?.indexReturns?.siAnn, young?.yr1, young?.ytd]).toEqual([null, null, null, 4, 2.59]);
+    expect(withoutYoungSinceInception(monthEnd, '2025-08-31')?.siAnn).toBe(1.99);
+    expect(withoutYoungSinceInception(monthEnd, '2014-12-11')?.siAnn).toBe(1.99);
+    expect(withoutYoungSinceInception(monthEnd, null)?.siAnn).toBe(1.99);
+    // and the gap is not filled with a Yahoo estimate from a later close (WQTM published -9.59 as of 2026-09-30)
+    const yahoo = { ...priceReturns([{ date: '2025-10-09', close: 100, adjClose: 100, volume: 1 }, { date: '2026-10-23', close: 90, adjClose: 90, volume: 1 }], '2025-10-09'), asOfDate: '2026-10-23' };
+    expect(yahoo.siAnn).not.toBeNull();
+    expect(mergeOfficialReturns(yahoo, withoutYoungSinceInception(monthEnd, '2025-10-09'), '2025-10-09').siAnn).toBeNull();
+    expect(mergeOfficialReturns(yahoo, { ...monthEnd!, siAnn: null }, '2014-12-11').siAnn).toBe(yahoo.siAnn);
   });
 
   test('distribution frequency is inferred like in every sibling updater', () => {

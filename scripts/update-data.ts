@@ -1418,10 +1418,41 @@ function annualized(start: number | null, end: number | null, years: number): nu
   return round(((end / start) ** (1 / years) - 1) * 100, 2);
 }
 
-/** Since-inception annualized return; null under one year of history (a few weeks annualized is noise). */
-function annualizedSince(first: ChartDay, end: number, date: Date): number | null {
+/** Days between two ISO dates (UTC), null when either is not an ISO date. */
+function daysBetween(from: string | null | undefined, to: string | null | undefined): number | null {
+  const a = toIsoDate(from), b = toIsoDate(to);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(a) || !/^\d{4}-\d{2}-\d{2}$/.test(b)) return null;
+  return (Date.parse(`${b}T00:00:00Z`) - Date.parse(`${a}T00:00:00Z`)) / 86_400_000;
+}
+
+/**
+ * Since-inception annualized return derived from closes. It is a since-INCEPTION figure only when the series starts at
+ * inception (first close within 10 days of the fund's first trade date, the official inception as fallback), so a
+ * HISTORY_RANGE window never turns cagr5y into siAnn; null under one year (a few months annualized is noise) or when
+ * the inception is unknown.
+ */
+function annualizedSince(first: ChartDay, end: number, date: Date, inception: string | null): number | null {
+  const gap = daysBetween(inception, first.date);
+  if (gap === null || gap > 10) return null;
   const years = (date.getTime() - new Date(`${first.date}T00:00:00Z`).getTime()) / (365.25 * 86_400_000);
   return years < 1 ? null : annualized(first.adjClose, end, years);
+}
+
+/**
+ * WisdomTree publishes "Since Inception" CUMULATIVE for a fund younger than one year (NTSD, launched 2026-03-19: 20.18 as of
+ * 2026-09-30) in the Average Annual row. Annualized since-inception exists only from one year on, so below 365 days
+ * between inception and the table date it is null (main, NAV and index rows); an unknown inception keeps the figure.
+ */
+export function withoutYoungSinceInception(returns: OfficialProductReturns | null, inception: string | null): OfficialProductReturns | null {
+  if (!returns) return returns;
+  const age = daysBetween(inception, returns.asOfDate);
+  if (age === null || age >= 365) return returns;
+  return {
+    ...returns,
+    siAnn: null,
+    navReturns: returns.navReturns ? { ...returns.navReturns, siAnn: null } : null,
+    indexReturns: returns.indexReturns ? { ...returns.indexReturns, siAnn: null } : null,
+  };
 }
 
 function anchor(days: ChartDay[], target: Date): ChartDay | null {
@@ -1433,7 +1464,8 @@ function anchor(days: ChartDay[], target: Date): ChartDay | null {
   return found;
 }
 
-export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
+/** `inception`: the fund's first trade date (Yahoo) or official inception, ISO; siAnn stays null without it. */
+export function priceReturns(days: ChartDay[], inception: string | null = null): PriceReturns {
   const ordered = [...days].sort((a, b) => a.date.localeCompare(b.date));
   const last = ordered[ordered.length - 1];
   if (!last) return { ...EMPTY_PRICE_RETURNS };
@@ -1442,7 +1474,9 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
   const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
   const quarterStartMonth = Math.floor(date.getUTCMonth() / 3) * 3;
   const quarterStart = new Date(Date.UTC(date.getUTCFullYear(), quarterStartMonth, 1));
-  const monthStart = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() - 1, date.getUTCDate()));
+  // Same day one month back, clamped to the end of a shorter month (Oct 31 -> Sep 30, never "Sep 31" = Oct 1).
+  const lastDayOfPreviousMonth = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 0)).getUTCDate();
+  const monthStart = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() - 1, Math.min(date.getUTCDate(), lastDayOfPreviousMonth)));
   const start = (d: ChartDay | null) => d?.adjClose ?? null;
   const end = last.adjClose;
   return {
@@ -1454,7 +1488,7 @@ export function priceReturns(days: ChartDay[], now = new Date()): PriceReturns {
     cagr3y: annualized(start(anchor(ordered, target(3))), end, 3),
     cagr5y: annualized(start(anchor(ordered, target(5))), end, 5),
     cagr10y: annualized(start(anchor(ordered, target(10))), end, 10),
-    siAnn: ordered.length > 1 ? annualizedSince(ordered[0], end, date) : null,
+    siAnn: ordered.length > 1 ? annualizedSince(ordered[0], end, date, inception) : null,
   };
 }
 
@@ -1539,8 +1573,15 @@ export function historyRows(days: ChartDay[], published: JsonRecord[] = []): Jso
   return days.map((day) => ({ Date: formatDate(day.date), Close: String(day.close), 'Adj Close': keepPublishedAdjClose(day.adjClose, publishedAdj.get(day.date)), Volume: String(day.volume) }));
 }
 
-function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductReturns | null): PriceReturns {
+/**
+ * Official tenors win, gaps are filled from the Yahoo estimate. siAnn is never filled for a fund younger than one year at the
+ * official table date: the official figure was nulled for that reason, and a Yahoo estimate dated weeks later would sit under
+ * the official date (WQTM: -9.59 to 2026-10-23 published as of 2026-09-30).
+ */
+export function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductReturns | null, inception: string | null = null): PriceReturns {
   if (!official) return derived;
+  const age = daysBetween(inception, official.asOfDate);
+  const youngAtTableDate = age !== null && age < 365;
   return {
     ...derived,
     asOfDate: official.asOfDate || derived.asOfDate,
@@ -1551,7 +1592,7 @@ function mergeOfficialReturns(derived: PriceReturns, official: OfficialProductRe
     cagr3y: official.cagr3y ?? derived.cagr3y,
     cagr5y: official.cagr5y ?? derived.cagr5y,
     cagr10y: official.cagr10y ?? derived.cagr10y,
-    siAnn: official.siAnn ?? derived.siAnn,
+    siAnn: official.siAnn ?? (youngAtTableDate ? null : derived.siAnn),
   };
 }
 
@@ -1809,6 +1850,10 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       productPageMarkdown = page.text;
       productVia = page.via;
       productSummary = parseProductPageSummary(productPageMarkdown);
+      productSummary.officialReturns = {
+        monthEnd: withoutYoungSinceInception(productSummary.officialReturns.monthEnd, fund.inception),
+        quarterEnd: withoutYoungSinceInception(productSummary.officialReturns.quarterEnd, fund.inception),
+      };
       fresh = true;
       if (productSummary.name) fund.name = productSummary.name;
       if (productSummary.cusip) fund.cusip = productSummary.cusip;
@@ -1933,9 +1978,10 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const distributionEvents = distributionRecordEvents(distributionRecords);
   const frequency = retainedDistributions ? { frequency: String(retainedDistributions.frequency || '—'), paymentsPerYear: numberOrNull(retainedDistributions.paymentsPerYear) } : inferDistributionFrequency(distributionEvents);
   const latest = distributionEvents[distributionEvents.length - 1] || null;
-  const derived = priceReturns(days);
+  const firstTrade = chart?.firstTradeDate ? new Date(chart.firstTradeDate * 1000).toISOString().slice(0, 10) : null;
+  const derived = priceReturns(days, firstTrade ?? fund.inception);
   const officialReturns = returnsFailed ? null : productSummary?.officialReturns.monthEnd || null;
-  const effectiveReturns = retainedReturns ? monthEndToPriceReturns(retainedReturns.monthEnd) : mergeOfficialReturns(derived, officialReturns);
+  const effectiveReturns = retainedReturns ? monthEndToPriceReturns(retainedReturns.monthEnd) : mergeOfficialReturns(derived, officialReturns, fund.inception);
   const officialBasis = Boolean(officialReturns) || retainedReturns !== null;
 
   // NAV, market price and premium/discount travel together: from the page, or all retained when the page failed.

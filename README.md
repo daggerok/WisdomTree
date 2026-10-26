@@ -64,7 +64,7 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `ytd` / `tr1y` - official YTD and 1-year returns -> *YTD Return*, *TR 1Y*
 - `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
-- `siAnn` - since-inception annualized -> *SI Ann.*; derived only for funds with at least one year of history
+- `siAnn` - since-inception annualized -> *SI Ann.*; `null` below one year between inception and the returns date (WisdomTree prints the cumulative figure for younger funds), derived only from a Yahoo series that starts at the first trade date
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price); a catalog 0.00% is the provider's published value and is kept as published (`yields.dividendYieldKind` says so)
 - `dividendYieldBasis` - code of the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it travels with the yield (a retained yield keeps its code):
 
