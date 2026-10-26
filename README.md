@@ -64,7 +64,8 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - `ytd` / `tr1y` - official YTD and 1-year returns -> *YTD Return*, *TR 1Y*
 - `cagr3y` / `cagr5y` / `cagr10y` - published annualized 3Y/5Y/10Y figures -> *CAGR 3Y/5Y/10Y*
 - `tr3y` / `tr5y` / `tr10y` - cumulative 3Y/5Y/10Y figures `(1 + CAGR)^n - 1` -> *TR 3Y/5Y/10Y*
-- `siAnn` - since-inception annualized -> *SI Ann.*; `null` below one year between inception and the returns date (WisdomTree prints the cumulative figure for younger funds), derived only from a Yahoo series that starts at the first trade date
+- `siAnn` - since-inception annualized -> *SI Ann.*; `null` below one year (WisdomTree prints the cumulative figure for younger funds), derived only from a Yahoo series that starts at the first trade date
+- A fund younger than one year (calendar anniversary of its start at the returns date, inclusive; the start is the earliest of the catalog inception, the first Yahoo trade and the first history day, so a fund that joined WisdomTree with a track record, such as GCC, keeps it) publishes no 1-year or since-inception return, and no 3, 5 or 10-year one before those anniversaries, official (Market Price, NAV and Underlying Index rows) or derived
 - `dividendYield` - 12-month trailing yield or indicated yield (latest distribution x frequency / price); a catalog 0.00% is the provider's published value and is kept as published (`yields.dividendYieldKind` says so)
 - `dividendYieldBasis` - code of the definition behind `dividendYield`, `null` exactly when `dividendYield` is `null`; it travels with the yield (a retained yield keeps its code):
 
@@ -82,7 +83,9 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 - A product page that loads only partly (the r.jina.ai rendering proxy sometimes drops sections) counts as a failed read of the missing sections: the page is complete only when it has the pricing tables (NAV, Closing Market Price) and the Total Returns section. Each missing section (NAV/price/premium, returns with `performanceAsOf` and `returnsBasis`, distributions with the tax breakdown) keeps the previous official values as one unit and a `[ kept ]` line is printed with `VERBOSE`; a fully loaded page that lacks a field gives an honest `null`, never a refill from the previous run
 - Expense ratio: `terValue` is the net expense ratio (after waivers), `terGrossValue` the gross ratio from the catalog; both are `null` when unknown
 - `isin` is derived from the CUSIP (US prefix plus check digit) because the pages do not publish it; `cusip` stays empty for the few funds whose page lacks it, and `exchange` comes from Yahoo and stays empty when Yahoo is unavailable
-- A limited `HISTORY_RANGE` shortens the published history, so long-tenor figures derived from Yahoo are unavailable for ranges shorter than the tenor
+- A limited `HISTORY_RANGE` keeps the older published history (rescaled by the overlapping days); a window that does not join it keeps the published history
+- Holdings come from SEC EDGAR Form N-PORT-P when `EDGAR_FALLBACK` is on, the filing names the fund's own series (from SEC's fund ticker table) and its report period is strictly newer than the published N-PORT holdings (the newest report period first, read from the WisdomTree Trust's own EDGAR folder); a published product-page top holdings list (a fund with no N-PORT filing yet) is replaced by the first filing whatever its date. Otherwise the published sheet is kept. N-PORT identifiers are the position's own (a derivative never takes its reference security's identifiers, CUSIP `000000000` is no identifier), a ticker is set only for a U.S. equity traded in USD and never on two different securities (bonds, FX forwards and other derivatives keep `-`), and a missing weight, value or coupon stays empty, never `0`
+- Dates printed as `Mon DD YYYY`; month-name, U.S. and ISO dates are read as plain calendar text, never through the local time zone, so local runs match CI
 
 ### Update controls
 
@@ -97,11 +100,11 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |
 | `SEC_YIELD` | `:` | 30-day SEC yield percentage range (strict `min:max`), read from the product page; funds without a published SEC yield do not match. |
-| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `DGRW USFR WCLD`. |
+| `TICKERS` | empty (all) | Space-, comma- or semicolon-separated ticker allowlist, e.g. `DGRW USFR WCLD`; an invalid entry, or a ticker that is neither in the live catalog nor a published fund, is an error before any fund request (nothing is written). |
 | `HOLDINGS_PAGE_SIZE` | `250` | Rows in each generated current-holdings JSON page. |
 | `HISTORY_PAGE_SIZE` | `1000` | Rows in each generated daily-history JSON page. |
 | `MAX_RETRIES` | `2` | Retries after the initial request (integer, at least 1). Network errors and HTTP 403/408/425/429/5xx are retried with exponential backoff. |
-| `HISTORY_RANGE` | `max` | Yahoo history window: `max` or a whole number of years such as `5y`; sent as explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Anything else is an error. |
+| `HISTORY_RANGE` | `max` | Yahoo history window: `max` or a whole number of years such as `5y`; sent as explicit `period1`/`period2` (Yahoo ignores `range` when `period1=0`). Anything else is an error. A window keeps the older published history (rescaled by the overlapping days), and a window that does not join it keeps the published history. |
 | `STORE_RAW_DOWNLOADS` | `false` | Store the rendered official catalog under `data/raw/` (outside `api/wisdomtree`, so the workflow never commits it). |
 | `EDGAR_FALLBACK` | `true` | Use SEC EDGAR Form N-PORT-P for full holdings. |
 | `SKIP_YAHOO` | `false` | Keep previous history and distributions while refreshing catalog and holdings. |
@@ -114,7 +117,7 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 
 Environment aliases: `WISDOMTREE_<NAME>` (for example `WISDOMTREE_CONCURRENCY`) and `HISTORICAL_PAGE_SIZE` (for `HISTORY_PAGE_SIZE`) work in the environment layer, the same layer as the plain name; when several are set the plain name wins, then `WISDOMTREE_<NAME>`, then the legacy alias. They are validated exactly like the plain names.
 
-Unknown `TICKERS` are an error. Return filters (`PERFORMANCE_*`, `TOTAL_RETURN_*`) exclude funds whose value for a bounded range is unavailable. The run takes no new fund after 25 minutes and still writes the index; it exits non-zero when every fund failed or no fund got data from a live source. A rerun with identical upstream data changes no file. When the live catalog adds or drops funds the run prints `NEW FUNDS: ...` or `DROPPED FUNDS: ...` (also in the Actions step summary); dropped funds keep their published data. Files are written through a temp file and a rename, pages first, then `meta.json`, with stale pages removed afterwards.
+Unknown `TICKERS` are an error before any fund request. Return filters (`PERFORMANCE_*`, `TOTAL_RETURN_*`) exclude funds whose value for a bounded range is unavailable. The run takes no new fund after 25 minutes and still writes the index; it exits non-zero when every fund failed or no fund got data from a live source. A rerun with identical upstream data changes no file. `NEW FUNDS: ...` is printed (and added to the Actions step summary) when a fund is published for the first time, also when its first read failed and a later run succeeds; `NEW FUNDS (not published yet): ...` names new catalog funds whose first read failed. When the live catalog drops published funds the run prints `DROPPED FUNDS: ...` (also in the step summary) and they keep their published data; a catalog-only row that the live catalog no longer lists (for example an old mistyped `TICKERS` entry) is dropped. Files are written through a temp file and a rename, pages first, then `meta.json`, with stale pages removed afterwards.
 
 `TICKERS` combines with the AUM, TER, yield and return filters using AND logic; it does not override them. Filtered or bounded runs (`TICKERS`, `MAX_FETCHES`, filters, `SKIP_WISDOMTREE`) and runs where the live catalog could not be read never shrink the feed: funds that were not refreshed keep their published row and files, and `index.json` always lists every known fund (the published index plus every `funds/*/meta.json`).
 

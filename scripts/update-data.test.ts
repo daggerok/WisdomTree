@@ -5,12 +5,12 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
-  CLOSED_FUNDS, CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, aumSource, cleanHoldingTicker, closedFund, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
-  isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, mergeOfficialReturns, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
-  parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
+  CLOSED_FUNDS, CONTROL_NAMES, HISTORY_RANGE_PATTERN, HOLDINGS_GUARD_RELAX, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
+  annualizedToTotal, aumSource, catalogOnlyRow, closedFund, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, holdingsWeightCount, inferDistributionFrequency, installSystemCa,
+  isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, mergeOfficialReturns, nportHoldingsSheet, nportIsFresh, nportTickers, numberOrNull, parseAumRange,
+  parseCatalogMarkdown, parseChart, parseFundListJson, parseNportFiling, parseOfficialDistributions, parseSecCompanyNames, parseSecFundTickers,
   parseProductPageSummary, parseRange, parseTopHoldingsMarkdown, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
-  rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, withoutYoungSinceInception, writeIndex, yahooChartQuery,
+  rowFromMeta, runUpdate, runtimeControls, setApiRoot, toIsoDate, withoutYoungOfficialReturns, writeIndex, yahooChartQuery,
 } from './update-data';
 
 // ---------------------------------------------------------------------------
@@ -253,16 +253,25 @@ describe('parsing 2', () => {
     expect([none.yahooOnlyCount, none.rows.map((row) => row.total), none.rows.every((row) => row.ordinaryIncome === null)]).toEqual([2, [0.16, 0.065], true]);
   });
 
-  test('SEC: compact mutual-fund ticker schema, raw submission XML (not the EDGAR header), Atom keeps N-PORT-P without amendments', () => {
-    const map = parseFundTickerMap({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [['1350487', 'S000043966', 'C000136444', 'USFR']] });
+  test('SEC N-PORT (shared nport-reader): ticker map, sheet with empty missing numbers, own identifiers, tickers only for U.S. equities (WT-2)', () => {
+    const map = parseSecFundTickers({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [['1350487', 'S000043966', 'C000136444', 'USFR']] });
     expect(map.get('USFR')).toEqual({ cik: '0001350487', seriesId: 'S000043966', classId: 'C000136444' });
-    expect(nportUrlFor('0001350487', '0000940400-26-028883')).toContain('/1350487/000094040026028883/0000940400-26-028883.txt');
-    const parsed = parseNport(`<edgarSubmission><genInfo><regName>WisdomTree Trust</regName><regCik>0001350487</regCik><repPdDate>2026-05-31</repPdDate><seriesName>WisdomTree Floating Rate Treasury Fund</seriesName><seriesId>S000043966</seriesId></genInfo><fundInfo><netAssets>16985696887.65</netAssets></fundInfo><invstOrSecs><invstOrSec><name>UNITED STATES OF AMERICA</name><cusip>91282CPX3</cusip><pctVal>27.91</pctVal><valUSD>4740918723.73</valUSD><balance>4739107200</balance><assetCat>DBT</assetCat><debtSec><annualizedRt>3.694</annualizedRt><maturityDt>2028-01-31</maturityDt></debtSec></invstOrSec></invstOrSecs></edgarSubmission>`);
-    expect([parsed.seriesId, parsed.repPdDate, parsed.netAssets, parsed.holdings.length]).toEqual(['S000043966', '2026-05-31', 16985696887.65, 1]);
-    expect(parsed.holdings[0]).toMatchObject({ Identifier: '91282CPX3', Weight: '27.91', Coupon: '3.694', Maturity: '2028-01-31' });
-    const atom = `<feed><entry><filing-type>NPORT-P</filing-type><accession-number>0000000000-26-000001</accession-number><filing-date>2026-07-30</filing-date><filing-href>https://www.sec.gov/Archives/edgar/data/1350487/000000000026000001/x.txt</filing-href></entry><entry><filing-type>NPORT-P</filing-type><amend> </amend><accession-number>bad</accession-number></entry><entry><filing-type>NPORT-N</filing-type><accession-number>ignored</accession-number></entry></feed>`;
-    expect(parseEdgarAtomFilings(atom)).toHaveLength(1);
-    expect(parseEdgarAtomFilings(atom)[0].url).toContain('0000000000-26-000001.txt');
+    const position = (name: string, ids: string, cat: string, rest: string, currency = 'USD') => `<invstOrSec><name>${name}</name>${ids}<curCd>${currency}</curCd>${rest}<assetCat>${cat}</assetCat></invstOrSec>`;
+    const filing = parseNportFiling(`<edgarSubmission><genInfo><regName>WisdomTree Trust</regName><regCik>0001350487</regCik><repPdDate>2026-05-31</repPdDate><seriesName>WisdomTree Floating Rate Treasury Fund</seriesName><seriesId>S000043966</seriesId></genInfo><fundInfo><netAssets>16985696887.65</netAssets></fundInfo><invstOrSecs>
+${position('MERCK &amp; CO INC', '<cusip>58933Y105</cusip><identifiers><isin value="US58933Y1055"/></identifiers>', 'EC', '<balance>37710468.00000000</balance><valUSD>5541249108.24</valUSD><pctVal>4.91</pctVal>')}
+${position('UNITED PARCEL SERVICE INC', '<cusip>911312BN5</cusip>', 'DBT', '<balance>1000000</balance><valUSD>990000</valUSD><debtSec><maturityDt>2028-01-31</maturityDt><annualizedRt>3.694</annualizedRt></debtSec>')}
+${position('CITIGROUP INC.', '<cusip>000000000</cusip><identifiers><other otherDesc="internal" value="FWD-JPY-1"/></identifiers>', 'DFE', '<valUSD>-234620.85</valUSD><pctVal>-0.0033</pctVal><derivativeInfo><fwdDeriv derivCat="FWD"/></derivativeInfo>')}
+${position('FANUC CORP', '<cusip>000000000</cusip><identifiers><isin value="JP3802400006"/></identifiers>', 'EC', '<valUSD>45756902.02</valUSD><pctVal>0.646314721418</pctVal>', 'JPY')}
+</invstOrSecs></edgarSubmission>`);
+    expect([filing.seriesId, filing.repPdDate, filing.netAssets, filing.positions.length]).toEqual(['S000043966', '2026-05-31', 16985696887.65, 4]);
+    const names = parseSecCompanyNames({ 0: { ticker: 'MRK', title: 'Merck & Co., Inc.' }, 1: { ticker: 'UPS', title: 'UNITED PARCEL SERVICE INC' }, 2: { ticker: 'C', title: 'CITIGROUP INC' }, 3: { ticker: 'FANUF', title: 'FANUC CORP' } });
+    const sheet = nportHoldingsSheet(filing, nportTickers(filing.positions, names));
+    expect(sheet.headers).toEqual(['Name', 'Ticker', 'Identifier', 'Weight', 'Market Value', 'Shares Held', 'Asset Category', 'Coupon', 'Maturity']);
+    expect(sheet.rows[0]).toEqual({ Name: 'MERCK & CO INC', Ticker: 'MRK', Identifier: '58933Y105', Weight: '4.91', 'Market Value': '5541249108.24', 'Shares Held': '37710468', 'Asset Category': 'EC', Coupon: '', Maturity: '-' });
+    // WT-2: the bond keeps no issuer ticker (UPS) and an empty weight (never 0); the FX forward keeps no counterparty ticker (C) and its
+    // own id (never 000000000); the Tokyo listing keeps no OTC ADR ticker (FANUF) and gets its ISIN
+    expect(sheet.rows.slice(1).map((row) => [row.Ticker, row.Identifier, row.Weight, row['Shares Held'], row.Coupon, row.Maturity]))
+      .toEqual([['-', '911312BN5', '', '1000000', '3.694', '2028-01-31'], ['-', 'FWD-JPY-1', '-0.0033', '', '', '-'], ['-', 'JP3802400006', '0.64631472', '', '', '-']]);
   });
 
   test('top holdings: only a Name and weight table up to the next heading; an allocation summary or a list adding up to more than 105 gives no rows', () => {
@@ -304,16 +313,14 @@ describe('parsing 3', () => {
     expect([parsed.dividends[0].amount, parsed.exchangeName]).toEqual([0.25, 'NYSEArca']);
   });
 
-  test('dates and names normalize: UTC dates in any zone, issuer names, ISIN from the CUSIP check digit', () => {
-    for (const zone of ['Pacific/Auckland', 'America/Los_Angeles', 'UTC']) {
+  test('dates: month-name, U.S. and ISO dates are the same calendar day in every time zone; numbers; ISIN from the CUSIP check digit', () => {
+    for (const zone of ['Asia/Tokyo', 'Pacific/Auckland', 'America/Los_Angeles', 'UTC']) {
       process.env.TZ = zone;
-      expect([toIsoDate('Sep 25 2026'), toIsoDate('August 31, 2026'), toIsoDate('09/15/2026'), formatDate('2026-06-04')]).toEqual(['2026-09-25', '2026-08-31', '2026-09-15', 'Jun 04 2026']);
+      expect(['Oct 24, 2026', 'October 24 2026', '24 Oct 2026', '10/24/2026', '10/24/26', '2026-10-24', '2026-10-24T22:00:00-07:00'].map((raw) => toIsoDate(raw))).toEqual(Array(7).fill('2026-10-24'));
+      expect([toIsoDate('Sept. 30, 2026'), toIsoDate('not a date'), formatDate('2026-06-04')]).toEqual(['2026-09-30', 'not a date', 'Jun 04 2026']);
     }
     expect(['abc', '', '—', 'n/a', null, undefined].map((value) => numberOrNull(value))).toEqual([null, null, null, null, null, null]);
     expect([numberOrNull('0'), numberOrNull('(1.5%)'), numberOrNull('$1,234.50')]).toEqual([0, -1.5, 1234.5]);
-    expect(normalizeHoldingName('Apple Inc. Class A')).toContain('APPLE');
-    expect(normalizeHoldingName("McDonald's Corp.")).toBe('MCDONALDS');
-    expect([cleanHoldingTicker('n/a'), cleanHoldingTicker(' MSFT ')]).toEqual(['', 'MSFT']);
     expect([isinFromCusip('037833100'), isinFromCusip('594918104'), isinFromCusip('bad')]).toEqual(['US0378331005', 'US5949181045', null]);
   });
 
@@ -388,20 +395,22 @@ describe('metrics 2', () => {
     expect(priceReturns([day('2026-09-30', 100), day('2026-10-01', 200), day('2026-10-31', 110)], '2026-09-30').mo1).toBe(10);
   });
 
-  test('official since inception is null below one year between inception and the table date (main, NAV and index rows)', () => {
+  test('official returns lose every horizon the fund is too young for at the table date, calendar anniversary inclusive (main, NAV and index rows)', () => {
     const monthEnd = parseProductPageSummary(usfrPage).officialReturns.monthEnd;
     expect([monthEnd?.siAnn, monthEnd?.navReturns?.siAnn, monthEnd?.indexReturns?.siAnn]).toEqual([1.99, 2, 2.17]);
     // NTSD: launched 2026-03-19, the 2026-09-30 table carried the cumulative 20.18 as annualized
-    const young = withoutYoungSinceInception(monthEnd, '2026-03-19');
-    expect([young?.siAnn, young?.navReturns?.siAnn, young?.indexReturns?.siAnn, young?.yr1, young?.ytd]).toEqual([null, null, null, 4, 2.59]);
-    expect(withoutYoungSinceInception(monthEnd, '2025-08-31')?.siAnn).toBe(1.99);
-    expect(withoutYoungSinceInception(monthEnd, '2014-12-11')?.siAnn).toBe(1.99);
-    expect(withoutYoungSinceInception(monthEnd, null)?.siAnn).toBe(1.99);
-    // and the gap is not filled with a Yahoo estimate from a later close (WQTM published -9.59 as of 2026-09-30)
+    const young = withoutYoungOfficialReturns(monthEnd, '2026-03-19');
+    expect([young?.siAnn, young?.navReturns?.siAnn, young?.indexReturns?.siAnn, young?.yr1, young?.indexReturns?.yr1, young?.cagr3y, young?.ytd]).toEqual([null, null, null, null, null, null, 2.59]);
+    // one year old on the anniversary itself (2025-08-31 -> 2026-08-31): 1y and since inception stay, 3y does not
+    const one = withoutYoungOfficialReturns(monthEnd, '2025-08-31');
+    expect([one?.siAnn, one?.yr1, one?.cagr3y, one?.navReturns?.cagr3y]).toEqual([1.99, 4, null, null]);
+    // 365 days across a 29 February are one day short of the anniversary (the old 365-day rule kept it)
+    expect(withoutYoungOfficialReturns(monthEnd && { ...monthEnd, asOfDate: '2024-08-30' }, '2023-08-31')?.siAnn).toBeNull();
+    expect([withoutYoungOfficialReturns(monthEnd, '2014-12-11')?.siAnn, withoutYoungOfficialReturns(monthEnd, null)?.cagr10y]).toEqual([1.99, 2.52]);
+    // official tenors win, gaps are filled from the Yahoo estimate (the young-fund rule runs on the merged result)
     const yahoo = { ...priceReturns([{ date: '2025-10-09', close: 100, adjClose: 100, volume: 1 }, { date: '2026-10-23', close: 90, adjClose: 90, volume: 1 }], '2025-10-09'), asOfDate: '2026-10-23' };
-    expect(yahoo.siAnn).not.toBeNull();
-    expect(mergeOfficialReturns(yahoo, withoutYoungSinceInception(monthEnd, '2025-10-09'), '2025-10-09').siAnn).toBeNull();
-    expect(mergeOfficialReturns(yahoo, { ...monthEnd!, siAnn: null }, '2014-12-11').siAnn).toBe(yahoo.siAnn);
+    expect(mergeOfficialReturns(yahoo, { ...monthEnd!, siAnn: null }).siAnn).toBe(yahoo.siAnn);
+    expect(mergeOfficialReturns(yahoo, monthEnd).yr1).toBe(4);
   });
 
   test('distribution frequency is inferred like in every sibling updater', () => {
@@ -472,7 +481,7 @@ function chartPayload(days = 400, last = Date.UTC(2026, 8, 25)): any {
   return { chart: { result: [{ timestamp: timestamps, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: {} }, meta: { exchangeName: 'NGM', regularMarketPrice: 140, regularMarketTime: Math.floor(last / 1000) } }] } };
 }
 
-/** SEC world shared by every EDGAR test (the updater caches the ticker table for the whole process, so it must never differ between tests). */
+/** SEC world shared by every EDGAR test (each run starts with a fresh SEC state, so a test may change it). */
 function secResponse(url: string, nportAsOf: string): Response | null {
   if (!url.includes('sec.gov')) return null;
   if (url.includes('company_tickers_mf')) return new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [['1350487', 'S000043966', 'C000136444', 'AAA']] }));
@@ -486,6 +495,8 @@ class Scenario {
   dir = mkdtempSync(join(tmpdir(), 'wt-scn-'));
   root = pathToFileURL(`${this.dir}/api/wisdomtree/`);
   calls: Call[] = [];
+  /** console.log lines of the runs */
+  logs: string[] = [];
   nportAsOf = '2026-05-31';
   constructor(public tickers: string[] = ['AAA', 'BBB', 'CCC']) { tempDirs.push(this.dir); mkdirSync(join(this.dir, 'api/wisdomtree'), { recursive: true }); }
   /** Default world: direct wisdomtree.com is Cloudflare-blocked, the proxy serves the catalog and product pages, Yahoo serves a chart, SEC serves AAA. */
@@ -504,7 +515,8 @@ class Scenario {
       this.calls.push({ url, ua: String(init?.headers?.['User-Agent'] ?? ''), at: Date.now() });
       return this.handler(url, init);
     }) as unknown as typeof fetch;
-    console.log = console.warn = console.error = () => {};
+    console.warn = console.error = () => {};
+    console.log = (line: unknown) => { this.logs.push(String(line)); };
     setApiRoot(this.root);
     try {
       const config = { ...readConfig(resolveControls({ REQUEST_SLEEP: '0', MAX_RETRIES: '1', EDGAR_FALLBACK: 'false', CONCURRENCY: '1', ...env })), proxyGapMs: 0, retryDelayMs: 0, ...overrides } as any;
@@ -522,6 +534,8 @@ class Scenario {
     walk(join(this.dir, 'api/wisdomtree'));
     return out;
   }
+  /** Every published file by its path below the scenario dir -> its text. */
+  snapshot(): Record<string, string> { return Object.fromEntries(this.files().map((path) => [path.slice(this.dir.length), readFileSync(path, 'utf8')])); }
   backdate(): void { for (const path of this.files()) utimesSync(path, 1_000_000_000, 1_000_000_000); }
   touched(): string[] { return this.files().filter((path) => statSync(path).mtimeMs !== 1_000_000_000_000); }
 }
@@ -735,7 +749,7 @@ describe('pipeline 3', () => {
     s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && !url.endsWith('/us/products') ? new Response(productPage('AAA').replace('| 2.52% |', '| — |')) : base(url, init));
     await s.run({ PERFORMANCE_10Y: '0:', SKIP_YAHOO: 'true' });
     expect(['AAA', 'BBB', 'CCC'].map((t) => existsSync(new URL(`funds/${t}/meta.json`, s.root)))).toEqual([false, false, false]);
-    await expect(new Scenario().run({ TICKERS: 'AAA ZZZ' })).rejects.toThrow('unknown ticker ZZZ');
+    await expect(new Scenario().run({ TICKERS: 'AAA ZZZ' })).rejects.toThrow('TICKERS: ZZZ not in the WisdomTree catalog or published feed');
   });
 });
 
@@ -875,7 +889,9 @@ describe('pipeline 5', () => {
     await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
     expect(s.touched()).toEqual([]);
   });
+});
 
+describe('pipeline 6', () => {
   test('N-PORT freshness: a filing older than the published holdings never replaces them, a newer one does', async () => {
     const s = new Scenario(['AAA']);
     await s.run({ EDGAR_FALLBACK: 'true' });
@@ -887,6 +903,154 @@ describe('pipeline 5', () => {
     s.nportAsOf = '2026-08-31';
     await s.run({ EDGAR_FALLBACK: 'true' });
     expect(s.meta('AAA').holdings.asOfDate).toBe('2026-08-31');
+    // the document is read from the registrant's own folder (the accession prefix 0000940400 is the filer agent)
+    expect(s.calls.some((c) => c.url === 'https://www.sec.gov/Archives/edgar/data/1350487/000094040026000001/primary_doc.xml')).toBe(true);
+    expect(s.calls.some((c) => c.url.includes('/edgar/data/940400/'))).toBe(false);
+  });
+
+  test('N-PORT freshness rule: strictly newer only, nothing published accepts any report, an unknown published date keeps the sheet', () => {
+    expect(nportIsFresh('2026-06-30', '2026-06-30', 439)).toBe(false); // the same report period is no newer data
+    expect(nportIsFresh('2026-08-31', '2026-06-30', 439)).toBe(true);
+    expect(nportIsFresh('2026-05-31', '2026-06-30', 439)).toBe(false);
+    expect(nportIsFresh('', '2026-03-31', 100)).toBe(false);
+    expect(nportIsFresh('2026-06-30', null, 0)).toBe(true);
+    expect(nportIsFresh('2026-06-30', null, 100)).toBe(false);
+  });
+
+  test('a published product-page top-N list never blocks the first N-PORT filing, whatever its date', async () => {
+    // WSPC, BTCW: the top 10 list is dated every day (10/22/2026), the first N-PORT report period is older (2026-05-31)
+    const s = new Scenario(['AAA']);
+    const base = s.handler;
+    const page = `${productPage('AAA')}\n\n${holdingsSection('| Name | Weight (%) |', '| Alpha Corp | 30.00 |', '| Beta Corp | 17.00 |')}`;
+    const world = (sec: boolean) => (url: string, init?: any): Response | Promise<Response> => (url.includes('company_tickers_mf') && !sec ? new Response(JSON.stringify({ fields: ['cik', 'seriesId', 'classId', 'symbol'], data: [] }))
+      : url.startsWith('https://r.jina.ai/') && url.endsWith('/aaa') ? new Response(page) : base(url, init));
+    HOLDINGS_GUARD_RELAX.AAA = ['sum'];
+    try {
+      s.handler = world(false);
+      await s.run({ EDGAR_FALLBACK: 'true' });
+      expect([s.meta('AAA').holdings.totalRows, s.meta('AAA').holdings.asOfDate, s.meta('AAA').source.holdingsSource]).toEqual([2, '2026-10-22', 'WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)']);
+      s.handler = world(true);
+      await s.run({ EDGAR_FALLBACK: 'true' });
+      expect([s.meta('AAA').holdings.totalRows, s.meta('AAA').holdings.asOfDate]).toEqual([1, '2026-05-31']);
+    } finally {
+      delete HOLDINGS_GUARD_RELAX.AAA;
+    }
+  });
+});
+
+describe('pipeline 7', () => {
+  test('N-PORT sheet: a bond and an FX forward keep Ticker - although an issuer name matches a company, a U.S. stock gets its ticker (WT-2)', async () => {
+    const s = new Scenario(['AAA']);
+    const base = s.handler;
+    const row = (name: string, cusip: string, cat: string, rest: string) => `<invstOrSec><name>${name}</name><cusip>${cusip}</cusip><curCd>USD</curCd>${rest}<assetCat>${cat}</assetCat></invstOrSec>`;
+    const xml = `<edgarSubmission><genInfo><regCik>0001350487</regCik><repPdDate>2026-05-31</repPdDate><seriesName>Fund AAA</seriesName><seriesId>S000043966</seriesId></genInfo><invstOrSecs>${[
+      row('MERCK &amp; CO INC', '58933Y105', 'EC', '<balance>10.00000000</balance><valUSD>60</valUSD><pctVal>60</pctVal>'),
+      row('UNITED PARCEL SERVICE INC', '911312BN5', 'DBT', '<balance>1000</balance><valUSD>39</valUSD><pctVal>39</pctVal><debtSec><maturityDt>2030-04-01</maturityDt><annualizedRt>4.45</annualizedRt></debtSec>'),
+      row('CITIGROUP INC.', '000000000', 'DFE', '<valUSD>1</valUSD><pctVal>1</pctVal><derivativeInfo><fwdDeriv derivCat="FWD"/></derivativeInfo>'),
+    ].join('')}</invstOrSecs></edgarSubmission>`;
+    const names = { 0: { ticker: 'MRK', title: 'Merck & Co., Inc.' }, 1: { ticker: 'UPS', title: 'UNITED PARCEL SERVICE INC' }, 2: { ticker: 'C', title: 'CITIGROUP INC' } };
+    s.handler = (url, init) => (url.includes('/Archives/edgar/') ? new Response(xml) : url.endsWith('/company_tickers.json') ? new Response(JSON.stringify(names)) : base(url, init));
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const sheet = JSON.parse(readFileSync(new URL('funds/AAA/holdings/001.json', s.root), 'utf8'));
+    expect(sheet.rows.map((r: any) => [r.Name, r.Ticker, r.Identifier, r['Asset Category'], r.Coupon, r.Maturity]))
+      .toEqual([['MERCK & CO INC', 'MRK', '58933Y105', 'EC', '', '-'], ['UNITED PARCEL SERVICE INC', '-', '911312BN5', 'DBT', '4.45', '2030-04-01'], ['CITIGROUP INC.', '-', '-', 'DFE', '', '-']]);
+  });
+
+  test('a fund younger than one year at the table date publishes no 1y, 3y or since-inception return, official or derived', async () => {
+    // WQTM: started 2025-09-11, the 2026-08-31 table is before its first anniversary, Yahoo closes to 2026-09-25 span a year
+    const s = new Scenario(['AAA']);
+    const base = s.handler;
+    const listing = (inceptionDt: string) => JSON.stringify({ data: { content: JSON.stringify(fundListRows(['AAA']).map((row) => ({ ...row, inceptionDt }))) } });
+    let inception = '2025-09-11';
+    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(380))) : base(url, init));
+    await s.run();
+    const metrics = s.index().funds[0].metrics;
+    expect([metrics.ytd, metrics.tr1y, metrics.cagr3y, metrics.siAnn, metrics.performanceAsOf]).toEqual([2.59, null, null, null, '2026-08-31']);
+    expect([s.meta('AAA').returns.monthEnd.yr1, s.meta('AAA').returns.quarterEnd.yr1]).toEqual([null, null]);
+    // the age counts from the earliest known start: a catalog inception after the first trade (GCC joined WisdomTree in 2020, trades since 2008) keeps the official figures
+    inception = '2026-01-15';
+    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : base(url, init));
+    await s.run();
+    expect([s.index().funds[0].metrics.tr1y, s.meta('AAA').returns.monthEnd.sinceInception, s.meta('AAA').returns.monthEnd.yr3]).toEqual([4, 1.99, null]);
+  });
+
+  test('a HISTORY_RANGE run after a full run keeps the older history and writes nothing (Q25)', async () => {
+    const s = new Scenario(['AAA']);
+    await s.run();
+    const first = s.snapshot();
+    const base = s.handler;
+    s.handler = (url, init) => {
+      if (!url.includes('finance.yahoo.com')) return base(url, init);
+      const payload = chartPayload();
+      const result = payload.chart.result[0];
+      result.timestamp = result.timestamp.slice(-300);
+      result.indicators.quote[0].close = result.indicators.quote[0].close.slice(-300);
+      result.indicators.quote[0].volume = result.indicators.quote[0].volume.slice(-300);
+      result.indicators.adjclose[0].adjclose = result.indicators.adjclose[0].adjclose.slice(-300);
+      return new Response(JSON.stringify(payload));
+    };
+    await s.run({ HISTORY_RANGE: '1y' });
+    expect(s.snapshot()).toEqual(first);
+    expect(s.meta('AAA').history.totalRows).toBe(400);
+  });
+
+  test('a relaxed guard still keeps numeric published weights from an all-blank N-PORT sheet (Q24)', async () => {
+    const s = new Scenario(['AAA']);
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const first = s.snapshot();
+    const base = s.handler;
+    s.nportAsOf = '2026-08-31';
+    s.handler = async (url, init) => (url.includes('/Archives/edgar/') ? new Response((await (await base(url, init)).text()).replace(/<pctVal>[^<]*<\/pctVal>/g, '')) : base(url, init));
+    HOLDINGS_GUARD_RELAX.AAA = ['numeric', 'sum'];
+    try {
+      process.exitCode = 0;
+      await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'AAA' });
+    } finally {
+      delete HOLDINGS_GUARD_RELAX.AAA;
+    }
+    expect(s.snapshot()).toEqual(first);
+    expect(process.exitCode).toBe(1);
+    expect(holdingsWeightCount(['Name', 'Weight'], [['A', '-'], ['B', '2']])).toBe(1);
+  });
+
+  test('TICKERS outside the live catalog stops the run before any fund request; a stale catalog-only row is dropped (Q27)', async () => {
+    const s = new Scenario(['AAA']);
+    await s.run();
+    const fund = { ticker: 'NOPE', name: 'NOPE', category: 'ETF', fundPage: '', cusip: '', isin: '', exchange: '', ter: null, grossTer: null, inception: null } as unknown as Parameters<typeof catalogOnlyRow>[0];
+    const index = s.index();
+    writeFileSync(new URL('index.json', s.root), JSON.stringify({ ...index, funds: [...index.funds, { ...catalogOnlyRow(fund), dataFile: null }] }));
+    const before = s.snapshot();
+    s.calls.length = 0;
+    await expect(s.run({ TICKERS: 'NOPE' })).rejects.toThrow('TICKERS: NOPE not in the WisdomTree catalog or published feed; nothing was fetched or written');
+    expect(s.calls.filter((c) => !c.url.includes('dataspanapi'))).toEqual([]);
+    expect(s.snapshot()).toEqual(before);
+    await s.run();
+    expect(s.index().funds.map((row: any) => row.ticker)).toEqual(['AAA']);
+  });
+});
+
+describe('pipeline 8', () => {
+  test('NEW FUNDS announces a fund on its first successful publish, a failed new fund as not published yet (Q28)', async () => {
+    const s = new Scenario(['AAA']);
+    await s.run();
+    expect(s.logs.filter((line) => /^NEW FUNDS/.test(line))).toEqual([]); // a first run reports nothing
+    const fund = { ticker: 'BBB', name: 'BBB', category: 'ETF', fundPage: '', cusip: '', isin: '', exchange: '', ter: null, grossTer: null, inception: null } as unknown as Parameters<typeof catalogOnlyRow>[0];
+    const index = s.index();
+    writeFileSync(new URL('index.json', s.root), JSON.stringify({ ...index, funds: [...index.funds, { ...catalogOnlyRow(fund), dataFile: null }] }));
+    s.tickers = ['AAA', 'BBB', 'CCC'];
+    const base = s.handler;
+    s.handler = (url, init) => (/ccc/i.test(url) ? new Response('down', { status: 500 }) : base(url, init));
+    process.env.GITHUB_STEP_SUMMARY = join(s.dir, 'summary.md');
+    const lines = (): string[] => s.logs.splice(0).filter((line) => /^NEW FUNDS/.test(line));
+    lines();
+    await s.run();
+    expect(lines()).toEqual(['NEW FUNDS: BBB', 'NEW FUNDS (not published yet): CCC']);
+    expect(readFileSync(join(s.dir, 'summary.md'), 'utf8')).toContain('### NEW FUNDS\n\nNEW FUNDS: BBB\nNEW FUNDS (not published yet): CCC\n');
+    await s.run();
+    expect(lines()).toEqual([]);
+    s.handler = base;
+    await s.run();
+    expect(lines()).toEqual(['NEW FUNDS: CCC']);
   });
 });
 
