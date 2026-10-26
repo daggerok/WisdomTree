@@ -271,6 +271,10 @@ describe('parsing', () => {
     // a list right before the next heading ends there; a page without a holdings section is no rejection
     expect(parseTopHoldingsMarkdown('### Holdings\n\n| Name | Weight |\n| --- | --- |\n| A Corp | 5 |\n### Recent Distributions\n\n| Name | Weight |\n| --- | --- |\n| B Corp | 6 |', 'AAA').rows.map((row) => row.Name)).toEqual(['A Corp']);
     expect(parseTopHoldingsMarkdown(usfrPage, 'USFR')).toMatchObject({ rows: [], rejected: null });
+    // a weight that is no number stays empty, never "0", so the guard's numeric check fires
+    const broken = parseTopHoldingsMarkdown(holdingsSection('| Name | Weight (%) |', '| A Corp | n/a |', '| B Corp | — |', '| C Corp | 5.00 |'), 'AAA');
+    expect(broken.rows.map((row) => row.Weight)).toEqual(['', '', '5']);
+    expect(holdingsGuard(broken.headers, broken.rows, null, ['sum'])).toContain('numeric weight');
   });
 
   test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
@@ -759,6 +763,16 @@ describe('pipeline', () => {
     process.exitCode = 0;
     await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
     expect([s.meta('BBB').holdings, s.meta('BBB').returns.monthEnd.ytd, process.exitCode]).toEqual([published, 9.99, 0]);
+    // a published sheet that is itself junk (the old parser published the allocation summary, WSLS and WTAL) is dropped, not republished
+    const page = join(s.dir, 'api/wisdomtree/funds/BBB/holdings/001.json');
+    const sheet = JSON.parse(readFileSync(page, 'utf8'));
+    writeFileSync(page, JSON.stringify({ ...sheet, rows: [{ ...sheet.rows[0], Name: 'Cash&Collateral', Weight: '100' }, { ...sheet.rows[1], Name: 'Equities', Weight: '476' }] }));
+    await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
+    expect([s.meta('BBB').holdings, s.meta('BBB').source.holdingsSource, existsSync(page), process.exitCode])
+      .toEqual([{ pages: [], pageSize: published.pageSize, totalRows: 0, asOfDate: null, asOf: '—', source: 'not available from current public SEC filing' }, 'not available from current public SEC filing', false, 0]);
+    s.backdate();
+    await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
+    expect(s.touched()).toEqual([]);
   });
 
   test('N-PORT freshness: a filing older than the published holdings never replaces them, a newer one does', async () => {

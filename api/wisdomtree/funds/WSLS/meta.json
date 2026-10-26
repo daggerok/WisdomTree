@@ -11,7 +11,7 @@
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WSLS",
-    "holdingsSource": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)",
+    "holdingsSource": "not available from current public SEC filing",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "not available",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
@@ -135,14 +135,12 @@
     "rows": []
   },
   "holdings": {
-    "pages": [
-      "holdings/001.json"
-    ],
+    "pages": [],
     "pageSize": 250,
-    "totalRows": 34,
+    "totalRows": 0,
     "asOfDate": null,
     "asOf": "—",
-    "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
+    "source": "not available from current public SEC filing"
   },
   "history": {
     "pages": [
