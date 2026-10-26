@@ -2744,14 +2744,21 @@ export function nportIdentifier(position: NportPosition): string {
   return position.cusip || position.isin || position.other;
 }
 
-/** A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. */
+/**
+ * A company name as a lookup key: upper case, punctuation and legal suffixes dropped, `CLASS A` -> `CL A`. Dotted
+ * abbreviations collapse like the undotted forms (`N.V.` = `NV`, `S.p.A.` = `SPA`, `A/S` = `A S` = `AS`, `S.A.B. de C.V.` = `SAB DE CV`)
+ * and `PUBLIC LIMITED COMPANY` is `plc`, so both spellings of one issuer give one key.
+ */
 export function nportNameKey(value: unknown): string {
   // EDGAR adds a state or qualifier suffix to company titles ("COSTCO WHOLESALE CORP /NEW", "BANK OF AMERICA CORP /DE/"): drop a trailing one
-  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*\/\s*[A-Za-z]{2,3}\s*\/?)+\s*$/, '');
+  const raw = String(value === null || value === undefined ? '' : value).replace(/(?:\s*\/\s*[A-Za-z]{2,3}\s*\/?)+\s*$/, '')
+    .replace(/\b[A-Za-z](?:\.[A-Za-z])+\.?(?![A-Za-z])/g, (dotted) => dotted.replace(/\./g, ''))
+    .replace(/\bA\/S\b/gi, 'AS');
   let text = nportText(raw).toUpperCase().replace(/['’]/g, '').replace(/&/g, ' AND ').replace(/[^A-Z0-9]+/g, ' ');
+  text = text.replace(/ A S ?$/, ' AS').replace(/\bPUBLIC (?:(?:LIMITED|LTD)(?: (?:COMP[A-Z]*|CO))?|(?:COMPANY|CO) (?:LIMITED|LTD))\b/g, 'PLC').replace(/\b(?:S DE RL )?DE CV\b/g, ' ');
   text = text.replace(/\bCLASS\s+([A-Z])\b/g, 'CL $1').replace(/\bCL\s+([A-Z])\b/g, 'CL $1');
   const share = /\bCL [A-Z]\b/.exec(text);
-  text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|NV|AG|SE|SPA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, ' ').replace(/\s+/g, ' ').trim();
+  text = text.replace(/\b(THE|INC|INCORPORATED|CORP|CORPORATION|CO|COMPANY|LTD|LIMITED|PLC|SA|SAB|NV|AG|SE|SPA|AS|ASA|ORDINARY|COMMON|STOCK|SHS|SHARES|ADR|DEPOSITARY|RECEIPT|USD|US|REG|REGISTERED)\b/g, ' ').replace(/\s+/g, ' ').trim();
   if (share && !/\bCL [A-Z]\b/.test(text)) text = `${text} ${share[0]}`;
   return text;
 }
