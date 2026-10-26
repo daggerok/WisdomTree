@@ -5,8 +5,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import {
-  CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
-  annualizedToTotal, aumSource, cleanHoldingTicker, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
+  CLOSED_FUNDS, CONTROL_NAMES, HISTORY_RANGE_PATTERN, RETURNS_BASIS_DERIVED, RETURNS_BASIS_OFFICIAL,
+  annualizedToTotal, aumSource, cleanHoldingTicker, closedFund, deriveMetrics, dividendYieldBasisFromKind, formatDate, hasConfiguredFilters, holdingsGuard, inferDistributionFrequency, installSystemCa,
   isCertError, isinFromCusip, looksLikeProductPage, mergeDistributionRecords, normalizeHoldingName, nportUrlFor, numberOrNull, parseAumRange,
   parseCatalogMarkdown, parseChart, parseFundListJson, parseEdgarAtomFilings, parseFundTickerMap, parseNport, parseOfficialDistributions,
   parseProductPageSummary, parseRange, parseTopHoldingsMarkdown, parseRanges, performanceAsOfDate, priceReturns, readConfig, readKnownRows, resolveControls,
@@ -110,7 +110,9 @@ describe('controls', () => {
       expect(() => resolveControls({}, {}, {}, env)).toThrow();
     }
   });
+});
 
+describe('controls 2', () => {
   test('config file: keys equal CONTROL_NAMES and --help, values are strings, the scheduled path equals the defaults', async () => {
     const file = configFile();
     expect(Object.keys(file).sort()).toEqual([...CONTROL_NAMES].sort());
@@ -225,7 +227,9 @@ describe('parsing', () => {
     const marketOnly = '# GDE WisdomTree Efficient Gold Plus Equity Strategy Fund\n\n### Total Returns\n\nMonth End Performance (8/31/2026)\n\n| Cumulative | 1 Month | 3 Month | YTD | Since Inception* | |\n| --- | --- | --- | --- | --- | --- |\n| Market Price Returns | 1.00% | 2.00% | 3.00% | 4.00% | |';
     expect(parseProductPageSummary(marketOnly).officialReturns.monthEnd).toMatchObject({ mo1: 1.00, navReturns: null, indexReturns: null });
   });
+});
 
+describe('parsing 2', () => {
   test('official distributions: dates and the full tax-character breakdown, blank cells are null, no section is an empty list', () => {
     const rows = parseOfficialDistributions(distPage('| 9/25/2026 | 9/25/2026 | 9/29/2026 | $0.17000 | $0.00000 | $0.00000 | $0.00000 | $0.17000 |', '| 8/26/2026 | 8/26/2026 | 8/28/2026 | $0.05500 | $0.00000 | $0.00000 | $0.00000 | $0.05500 |'));
     expect(rows).toHaveLength(2);
@@ -276,7 +280,9 @@ describe('parsing', () => {
     expect(broken.rows.map((row) => row.Weight)).toEqual(['', '', '5']);
     expect(holdingsGuard(broken.headers, broken.rows, null, ['sum'])).toContain('numeric weight');
   });
+});
 
+describe('parsing 3', () => {
   test('holdings guard: header-only, renamed weight column, broken weights, a bad weight sum and a halved sheet are rejected', () => {
     const headers = ['Name', 'Ticker', 'Weight'];
     const rows = [{ Name: 'A', Ticker: 'A', Weight: '60%' }, { Name: 'B', Ticker: 'B', Weight: '40%' }];
@@ -360,7 +366,9 @@ describe('metrics', () => {
     expect(dividendYieldBasisFromKind('whatever', 1)).toBe('indicated');
     expect(dividendYieldBasisFromKind('official-trailing-12m', null)).toBeNull();
   });
+});
 
+describe('metrics 2', () => {
   test('dividendYieldBasis is on rebuilt rows too (code follows the stored kind, null with a null yield)', () => {
     const meta = (yields: any) => ({ ticker: 'AAA', name: 'A', yields, aum: {}, returns: {}, distributions: { rows: [] }, holdings: {}, history: {} });
     expect(rowFromMeta(meta({ dividendYield: 2, dividendYieldKind: 'trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)' })).metrics.dividendYieldBasis).toBe('official-trailing-12m');
@@ -569,7 +577,9 @@ describe('pipeline', () => {
     await writeIndex([...known.values()]);
     expect(s.index().counts.funds).toBe(3);
   });
+});
 
+describe('pipeline 2', () => {
   test('a second identical run changes no file and no modification time', async () => {
     const s = new Scenario();
     await s.run();
@@ -655,7 +665,9 @@ describe('pipeline', () => {
     expect(s.index().funds.find((f: any) => f.ticker === 'AAA').metrics.secYield).toBeNull();
     expect(s.meta('AAA').nav.value).toBe(50.476);
   });
+});
 
+describe('pipeline 3', () => {
   test('an honest page without a quarter-end table does not get a fabricated quarter-end date', async () => {
     const s = new Scenario();
     const base = s.handler;
@@ -698,7 +710,9 @@ describe('pipeline', () => {
     expect(['AAA', 'BBB', 'CCC'].map((t) => existsSync(new URL(`funds/${t}/meta.json`, s.root)))).toEqual([false, false, false]);
     await expect(new Scenario().run({ TICKERS: 'AAA ZZZ' })).rejects.toThrow('unknown ticker ZZZ');
   });
+});
 
+describe('pipeline 4', () => {
   test('a run where every fund failed to get live data exits non-zero', async () => {
     const s = new Scenario();
     await s.run();
@@ -749,6 +763,66 @@ describe('pipeline', () => {
     expect(s.touched()).toEqual([]);
     expect(s.files().map((path) => readFileSync(path, 'utf8'))).toEqual(before);
     expect(process.exitCode).toBe(1);
+  });
+});
+
+describe('pipeline 5', () => {
+  test('a closed fund is never fetched or reported failed: its files stay as published, its index row says closed, a rerun writes nothing', async () => {
+    const entry = { ticker: 'BBB', closed: '2026-10-01', source: 'https://www.sec.gov/Archives/edgar/data/1/notice.htm' };
+    expect(() => closedFund([{ ...entry, closed: 'soon' }], 'BBB')).toThrow('CLOSED_FUNDS');
+    expect(closedFund([entry], 'bbb')).toEqual(entry);
+    const s = new Scenario(['AAA', 'BBB', 'CCC']);
+    const base = s.handler;
+    const serve = (...rows: string[]) => { s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && url.endsWith('/bbb') ? new Response(`${productPage('BBB')}\n\n${holdingsSection('| Name | Weight (%) |', ...rows)}`) : base(url, init)); };
+    serve('| Alpha Corp | 40.00 |', '| Beta Corp | 30.00 |', '| Gamma Corp | 20.00 |', '| Delta Corp | 10.00 |');
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const contents = (): Record<string, string> => Object.fromEntries(s.files().map((path) => [path.slice(s.dir.length), readFileSync(path, 'utf8')]));
+    const first = contents();
+    const firstRow = s.index().funds.find((row: any) => row.ticker === 'BBB');
+    serve('| Alpha Corp | 90.00 |'); // the guard would reject these holdings
+    s.tickers = ['AAA', 'CCC']; // the live catalog no longer lists the closed fund: TICKERS still accepts it, nothing of it is pruned
+    CLOSED_FUNDS.push(entry);
+    try {
+      s.calls.length = 0;
+      process.exitCode = 0;
+      await s.run({ EDGAR_FALLBACK: 'true', TICKERS: 'BBB' });
+      expect(s.calls.filter((call) => /bbb/i.test(call.url))).toEqual([]);
+      expect(process.exitCode).not.toBe(1);
+      const closed = contents();
+      for (const path of Object.keys(first)) if (!path.endsWith('/index.json')) expect([path, closed[path]]).toEqual([path, first[path]]);
+      const rows = s.index().funds;
+      expect(rows.map((row: any) => row.ticker)).toEqual(['AAA', 'BBB', 'CCC']);
+      expect(rows.find((row: any) => row.ticker === 'BBB')).toEqual({ ...firstRow, status: 'closed', closedDate: '2026-10-01', closedSource: entry.source });
+      expect(rows.filter((row: any) => row.status === 'closed')).toHaveLength(1);
+      s.backdate();
+      await s.run({ EDGAR_FALLBACK: 'true' });
+      expect([s.touched(), contents()]).toEqual([[], closed]);
+    } finally {
+      CLOSED_FUNDS.splice(CLOSED_FUNDS.indexOf(entry), 1);
+    }
+  });
+
+  test('a new fund whose first refresh fails (guard rejection, no source answered) is failed with a catalog-only row, never read back as published state', async () => {
+    const s = new Scenario(['AAA']);
+    await s.run();
+    const base = s.handler;
+    s.tickers = ['AAA', 'BBB', 'DDD'];
+    // BBB: fresh top holdings add up to 10, the guard rejects them; DDD: every request about DDD fails
+    s.handler = (url, init) => (/ddd/i.test(url) ? new Response('down', { status: 500 })
+      : url.startsWith('https://r.jina.ai/') && url.endsWith('/bbb') ? new Response(`${productPage('BBB')}\n\n${holdingsSection('| Name | Weight (%) |', '| Alpha Corp | 10.00 |')}`)
+      : base(url, init));
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    const rows = s.index().funds;
+    expect(rows.map((row: any) => [row.ticker, row.dataFile, row.holdings])).toEqual([['AAA', './funds/AAA/meta.json', 1], ['BBB', null, 0], ['DDD', null, 0]]);
+    for (const row of rows.slice(1)) expect([Object.keys(row.metrics), row.metrics.returnsBasis, row.metrics.tr1y]).toEqual([Object.keys(rows[0].metrics), RETURNS_BASIS_DERIVED, null]);
+    expect(['BBB', 'DDD'].map((t) => existsSync(new URL(`funds/${t}/`, s.root)))).toEqual([false, false]);
+    s.backdate();
+    await s.run({ EDGAR_FALLBACK: 'true' });
+    expect(s.touched()).toEqual([]);
+    // DDD's product page still fails, Yahoo answers now: the catalog-only row is no published quote to retain
+    s.handler = (url, init) => (url.startsWith('https://r.jina.ai/') && url.endsWith('/ddd') ? new Response('down', { status: 500 }) : base(url, init));
+    await s.run({ TICKERS: 'DDD' });
+    expect(s.index().funds.find((row: any) => row.ticker === 'DDD')).toMatchObject({ dataFile: './funds/DDD/meta.json', closePriceValue: 140 });
   });
 
   test('a product page that turns its holdings list into an allocation summary keeps the published list and still refreshes the fund', async () => {
@@ -843,7 +917,9 @@ describe('network', () => {
     await expect(stalled.run({}, { fetchTimeoutMs: 30 })).rejects.toThrow('No catalog rows');
     expect([hanging.calls.length > 0, stalled.calls.length > 0, withoutSignal]).toEqual([true, true, 0]);
   });
+});
 
+describe('network 2', () => {
   test('only the SEC receives the SEC contact as User-Agent', async () => {
     const s = new Scenario();
     await s.run({ EDGAR_FALLBACK: 'true' });
