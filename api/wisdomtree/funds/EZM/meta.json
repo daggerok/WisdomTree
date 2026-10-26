@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ezm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ezm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Sep 30 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$72.79",
-    "value": 72.794,
-    "asOfDate": "Oct 16 2026"
+    "display": "$73.67",
+    "value": 73.667,
+    "asOfDate": "Oct 23 2026"
   },
   "marketPrice": {
-    "display": "$72.79",
-    "value": 72.787,
-    "asOfDate": "Oct 16 2026"
+    "display": "$73.57",
+    "value": 73.57,
+    "asOfDate": "Oct 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.009
+    "display": "-0.13%",
+    "value": -0.132
   },
   "aum": {
     "display": "$920.84 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "1.23%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.21,
-    "secYield": 1.23,
-    "secYieldText": "1.23%",
+    "distributionRate": 1.19,
+    "secYield": 1.22,
+    "secYieldText": "1.22%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

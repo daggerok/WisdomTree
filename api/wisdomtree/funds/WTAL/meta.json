@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtal",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtal",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "N/A",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$24.23",
-    "value": 24.231,
-    "asOfDate": "Oct 20 2026"
+    "display": "$23.79",
+    "value": 23.792,
+    "asOfDate": "Oct 23 2026"
   },
   "marketPrice": {
-    "display": "$24.53",
-    "value": 24.53,
-    "asOfDate": "Oct 19 2026"
+    "display": "$23.81",
+    "value": 23.81,
+    "asOfDate": "Oct 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.65%",
-    "value": 0.649
+    "display": "0.08%",
+    "value": 0.076
   },
   "aum": {
     "display": "$3.57 M",
