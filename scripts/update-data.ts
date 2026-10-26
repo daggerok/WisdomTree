@@ -1189,7 +1189,8 @@ export function parseTopHoldingsMarkdown(markdown: string, ticker: string, compa
     const weight = numberOrNull(cells[weightAt]);
     sum += weight ?? 0;
     const resolvedTicker = companyNames.get(normalizeHoldingName(name)) || companyNames.get(normalizeHoldingNameCore(name)) || '-';
-    rows.push({ Name: name, Ticker: resolvedTicker || '-', Identifier: '-', Weight: String(weight ?? 0), 'Market Value': '-', 'Shares Held': '-', 'Asset Category': '-' });
+    // a weight that is no number stays empty (never "0"), so the holdings guard can reject the list
+    rows.push({ Name: name, Ticker: resolvedTicker || '-', Identifier: '-', Weight: weight === null ? '' : String(weight), 'Market Value': '-', 'Shares Held': '-', 'Asset Category': '-' });
   }
   if (sum > TOP_HOLDINGS_MAX_SUM && !TOP_HOLDINGS_LEVERAGED.has(ticker)) return none(`top holdings add up to ${round(sum, 2)}, more than ${TOP_HOLDINGS_MAX_SUM}`);
   return { headers: HOLDINGS_HEADERS, rows, asOfDate, rejected: null };
@@ -1881,10 +1882,19 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   }
 
   if (!holdingsRows.length) {
-    holdingsRows = await readPreviousSheet(fund.ticker, 'holdings');
-    holdingsHeaders = (await readPreviousHeaders(fund.ticker, 'holdings')) || holdingsHeaders;
-    holdingsAsOf = previousMeta?.holdings?.asOfDate || null;
-    holdingsSource = previousMeta?.holdings?.source || holdingsSource;
+    const previousSheet = await readPreviousSheet(fund.ticker, 'holdings');
+    const previousHeaders = (await readPreviousHeaders(fund.ticker, 'holdings')) || holdingsHeaders;
+    // A published sheet that fails the guard on its own is junk, not holdings (WSLS and WTAL published their allocation
+    // summary, weights adding up to 581 and 600): it is not republished, the fund has no holdings until a valid source exists.
+    const junk = previousSheet.length ? holdingsGuard(previousHeaders, previousSheet, null, HOLDINGS_GUARD_RELAX[fund.ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? []) : null;
+    if (junk) {
+      console.warn(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: published holdings dropped (${junk}); none until a valid source exists`);
+    } else {
+      holdingsRows = previousSheet;
+      holdingsHeaders = previousHeaders;
+      holdingsAsOf = previousMeta?.holdings?.asOfDate || null;
+      holdingsSource = previousMeta?.holdings?.source || holdingsSource;
+    }
   }
 
   let chart: ParsedChart | null = null;
