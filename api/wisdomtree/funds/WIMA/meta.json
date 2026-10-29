@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$41.72",
-    "value": 41.716,
-    "asOfDate": "Oct 23 2026"
+    "display": "$41.82",
+    "value": 41.821,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$41.79",
-    "value": 41.789,
-    "asOfDate": "Oct 23 2026"
+    "display": "$42.13",
+    "value": 42.132,
+    "asOfDate": "Oct 28 2026"
   },
   "premiumDiscount": {
-    "display": "0.17%",
-    "value": 0.174
+    "display": "0.74%",
+    "value": 0.737
   },
   "aum": {
-    "display": "$78.22 M",
-    "value": 78217584,
-    "asOfDate": "Oct 23 2026",
+    "display": "$78.41 M",
+    "value": 78414360,
+    "asOfDate": "Oct 28 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.73,
-    "dividendYieldText": "2.73%",
+    "dividendYield": 2.71,
+    "dividendYieldText": "2.71%",
     "dividendYieldBasis": "indicated",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 2.73,
-    "secYield": 2.03,
-    "secYieldText": "2.03%",
+    "secYield": 1.98,
+    "secYieldText": "1.98%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -77,8 +77,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 8.12,
-      "sinceInceptionText": "8.12%",
+      "sinceInception": null,
+      "sinceInceptionText": "—",
       "navReturns": {
         "mo1": -2.8,
         "mo1Text": "-2.80%",
@@ -94,27 +94,10 @@
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 8.43,
-        "sinceInceptionText": "8.43%"
+        "sinceInception": null,
+        "sinceInceptionText": "—"
       },
-      "indexReturns": {
-        "mo1": -2.82,
-        "mo1Text": "-2.82%",
-        "qtd": 1.75,
-        "qtdText": "1.75%",
-        "ytd": null,
-        "ytdText": "—",
-        "yr1": null,
-        "yr1Text": "—",
-        "yr3": null,
-        "yr3Text": "—",
-        "yr5": null,
-        "yr5Text": "—",
-        "yr10": null,
-        "yr10Text": "—",
-        "sinceInception": 8.47,
-        "sinceInceptionText": "8.47%"
-      }
+      "indexReturns": null
     },
     "quarterEnd": {
       "asOfDate": "Sep 30 2026",
@@ -123,23 +106,16 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": 8.12,
+      "sinceInception": null,
       "navReturns": {
         "ytd": null,
         "yr1": null,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": 8.43
+        "sinceInception": null
       },
-      "indexReturns": {
-        "ytd": null,
-        "yr1": null,
-        "yr3": null,
-        "yr5": null,
-        "yr10": null,
-        "sinceInception": 8.47
-      }
+      "indexReturns": null
     }
   },
   "distributions": {
@@ -195,8 +171,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 157,
-    "asOf": "Oct 23 2026",
+    "totalRows": 161,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "USMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2343,
+  "totalRows": 2347,
   "headers": [
     "Date",
     "Close",
@@ -2067,6 +2067,30 @@
       "Close": "51.540000915527344",
       "Adj Close": "51.54",
       "Volume": "9500"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "51.95199966430664",
+      "Adj Close": "51.95",
+      "Volume": "5600"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "52.310001373291016",
+      "Adj Close": "52.31",
+      "Volume": "16400"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "52.439998626708984",
+      "Adj Close": "52.44",
+      "Volume": "11900"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "52.38159942626953",
+      "Adj Close": "52.38",
+      "Volume": "4788"
     }
   ]
 }

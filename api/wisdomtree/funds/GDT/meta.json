@@ -13,7 +13,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GDT",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028866, report period 2026-05-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 3 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 4 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$32.75",
-    "value": 32.746,
-    "asOfDate": "Oct 23 2026"
+    "display": "$32.94",
+    "value": 32.944,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$32.74",
-    "value": 32.742,
-    "asOfDate": "Oct 23 2026"
+    "display": "$33.16",
+    "value": 33.155,
+    "asOfDate": "Oct 28 2026"
   },
   "premiumDiscount": {
-    "display": "-0.01%",
-    "value": -0.012
+    "display": "0.64%",
+    "value": 0.638
   },
   "aum": {
-    "display": "$10.64 M",
-    "value": 10642565,
-    "asOfDate": "Oct 23 2026",
+    "display": "$10.71 M",
+    "value": 10706708,
+    "asOfDate": "Oct 28 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.92,
-    "dividendYieldText": "0.92%",
+    "dividendYield": 4.89,
+    "dividendYieldText": "4.89%",
     "dividendYieldBasis": "indicated",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
-    "distributionRate": 0.91,
-    "secYield": 4.42,
-    "secYieldText": "4.42%",
+    "distributionRate": 4.92,
+    "secYield": 5.2,
+    "secYieldText": "5.20%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -77,8 +77,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -14.29,
-      "sinceInceptionText": "-14.29%",
+      "sinceInception": null,
+      "sinceInceptionText": "—",
       "navReturns": {
         "mo1": -6.87,
         "mo1Text": "-6.87%",
@@ -94,8 +94,8 @@
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": -14.34,
-        "sinceInceptionText": "-14.34%"
+        "sinceInception": null,
+        "sinceInceptionText": "—"
       },
       "indexReturns": null
     },
@@ -106,14 +106,14 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": -14.29,
+      "sinceInception": null,
       "navReturns": {
         "ytd": null,
         "yr1": null,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": -14.34
+        "sinceInception": null
       },
       "indexReturns": null
     }
@@ -121,7 +121,7 @@
   "distributions": {
     "frequency": "Monthly",
     "paymentsPerYear": 12,
-    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 3 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 4 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
       "Record Date",
@@ -165,12 +165,12 @@
       ],
       [
         "06/25/2026",
-        "06/25/2026",
-        "06/29/2026",
-        "0.265",
-        "0",
-        "0",
-        "0",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.265"
       ],
       [
@@ -202,6 +202,16 @@
         "0",
         "0",
         "0.025"
+      ],
+      [
+        "10/27/2026",
+        "10/27/2026",
+        "10/29/2026",
+        "0.135",
+        "0",
+        "0",
+        "0",
+        "0.135"
       ]
     ]
   },
@@ -220,8 +230,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 191,
-    "asOf": "Oct 23 2026",
+    "totalRows": 195,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "WAMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 157,
+  "totalRows": 161,
   "headers": [
     "Date",
     "Close",
@@ -951,6 +951,30 @@
       "Close": "26.700000762939453",
       "Adj Close": "26.7",
       "Volume": "1900"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "26.8700008392334",
+      "Adj Close": "26.87",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "27.030000686645508",
+      "Adj Close": "27.03",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "27.09000015258789",
+      "Adj Close": "27.09",
+      "Volume": "3600"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "26.976299285888672",
+      "Adj Close": "26.98",
+      "Volume": "3571"
     }
   ]
 }

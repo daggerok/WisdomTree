@@ -2,7 +2,7 @@
   "ticker": "DOL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5121,
+  "totalRows": 5125,
   "headers": [
     "Date",
     "Close",
@@ -735,6 +735,30 @@
       "Close": "73.25",
       "Adj Close": "73.25",
       "Volume": "13700"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "73.55999755859375",
+      "Adj Close": "73.56",
+      "Volume": "9800"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "73.63999938964844",
+      "Adj Close": "73.64",
+      "Volume": "15700"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "73.93000030517578",
+      "Adj Close": "73.93",
+      "Volume": "15200"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "74.15709686279297",
+      "Adj Close": "74.16",
+      "Volume": "16049"
     }
   ]
 }

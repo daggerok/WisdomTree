@@ -30,28 +30,28 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$59.03",
-    "value": 59.032,
-    "asOfDate": "Oct 23 2026"
+    "display": "$59.72",
+    "value": 59.717,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$59.10",
-    "value": 59.1,
-    "asOfDate": "Oct 23 2026"
+    "display": "$59.64",
+    "value": 59.64,
+    "asOfDate": "Oct 28 2026"
   },
   "premiumDiscount": {
-    "display": "0.12%",
-    "value": 0.116
+    "display": "-0.13%",
+    "value": -0.129
   },
   "aum": {
-    "display": "$1.35 B",
-    "value": 1348873344,
-    "asOfDate": "Oct 23 2026",
+    "display": "$1.36 B",
+    "value": 1364536192,
+    "asOfDate": "Oct 28 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.06,
-    "dividendYieldText": "1.06%",
+    "dividendYield": 1.05,
+    "dividendYieldText": "1.05%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.04,
@@ -504,8 +504,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2068,
-    "asOf": "Oct 23 2026",
+    "totalRows": 2072,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

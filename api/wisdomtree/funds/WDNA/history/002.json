@@ -2,7 +2,7 @@
   "ticker": "WDNA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1355,
+  "totalRows": 1359,
   "headers": [
     "Date",
     "Close",
@@ -2139,6 +2139,30 @@
       "Close": "23.045000076293945",
       "Adj Close": "23.05",
       "Volume": "100"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "23.174999237060547",
+      "Adj Close": "23.17",
+      "Volume": "2500"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "23.964000701904297",
+      "Adj Close": "23.96",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "24.606000900268555",
+      "Adj Close": "24.61",
+      "Volume": "800"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "24.670900344848633",
+      "Adj Close": "24.67",
+      "Volume": "1985"
     }
   ]
 }

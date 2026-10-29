@@ -2,7 +2,7 @@
   "ticker": "WTAL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 11,
+  "totalRows": 15,
   "headers": [
     "Date",
     "Close",
@@ -75,6 +75,30 @@
       "Close": "23.809999465942383",
       "Adj Close": "23.81",
       "Volume": "5700"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "23.90999984741211",
+      "Adj Close": "23.91",
+      "Volume": "22800"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "24.139999389648438",
+      "Adj Close": "24.14",
+      "Volume": "6700"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "24.1200008392334",
+      "Adj Close": "24.12",
+      "Volume": "6200"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "23.959999084472656",
+      "Adj Close": "23.96",
+      "Volume": "784"
     }
   ]
 }

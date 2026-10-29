@@ -2,7 +2,7 @@
   "ticker": "DFJ",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5121,
+  "totalRows": 5125,
   "headers": [
     "Date",
     "Close",
@@ -735,6 +735,30 @@
       "Close": "112.11000061035156",
       "Adj Close": "112.11",
       "Volume": "29600"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "112.29000091552734",
+      "Adj Close": "112.29",
+      "Volume": "18400"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "113.45999908447266",
+      "Adj Close": "113.46",
+      "Volume": "76500"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "112.13999938964844",
+      "Adj Close": "112.14",
+      "Volume": "14000"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "112.3499984741211",
+      "Adj Close": "112.35",
+      "Volume": "10679"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "WDRN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 113,
+  "totalRows": 117,
   "headers": [
     "Date",
     "Close",
@@ -687,6 +687,30 @@
       "Close": "23.25",
       "Adj Close": "23.25",
       "Volume": "6500"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "23.639999389648438",
+      "Adj Close": "23.64",
+      "Volume": "3700"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "24.280000686645508",
+      "Adj Close": "24.28",
+      "Volume": "4600"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "24.520000457763672",
+      "Adj Close": "24.52",
+      "Volume": "4100"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "24.290000915527344",
+      "Adj Close": "24.29",
+      "Volume": "6951"
     }
   ]
 }

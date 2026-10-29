@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$23.96",
-    "value": 23.965,
-    "asOfDate": "Oct 23 2026"
+    "display": "$24.95",
+    "value": 24.954,
+    "asOfDate": "Oct 28 2026"
   },
   "marketPrice": {
-    "display": "$23.97",
-    "value": 23.969,
-    "asOfDate": "Oct 23 2026"
+    "display": "$24.95",
+    "value": 24.95,
+    "asOfDate": "Oct 28 2026"
   },
   "premiumDiscount": {
-    "display": "0.01%",
-    "value": 0.015
+    "display": "-0.02%",
+    "value": -0.016
   },
   "aum": {
-    "display": "$1.20 M",
-    "value": 1198260,
-    "asOfDate": "Oct 23 2026",
+    "display": "$1.25 M",
+    "value": 1247705,
+    "asOfDate": "Oct 28 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -55,8 +55,8 @@
     "dividendYieldBasis": null,
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": -0.47,
-    "secYieldText": "-0.47%",
+    "secYield": -0.45,
+    "secYieldText": "-0.45%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -65,8 +65,8 @@
       "asOfDate": "Sep 30 2026",
       "mo1": -0.89,
       "mo1Text": "-0.89%",
-      "qtd": -9.41,
-      "qtdText": "-9.41%",
+      "qtd": -4.16,
+      "qtdText": "-4.16%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -77,8 +77,8 @@
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -9.78,
-      "sinceInceptionText": "-9.78%",
+      "sinceInception": null,
+      "sinceInceptionText": "—",
       "navReturns": {
         "mo1": -1.41,
         "mo1Text": "-1.41%",
@@ -94,8 +94,8 @@
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": -10.12,
-        "sinceInceptionText": "-10.12%"
+        "sinceInception": null,
+        "sinceInceptionText": "—"
       },
       "indexReturns": null
     },
@@ -106,14 +106,14 @@
       "yr3": null,
       "yr5": null,
       "yr10": null,
-      "sinceInception": -9.78,
+      "sinceInception": null,
       "navReturns": {
         "ytd": null,
         "yr1": null,
         "yr3": null,
         "yr5": null,
         "yr10": null,
-        "sinceInception": -10.12
+        "sinceInception": null
       },
       "indexReturns": null
     }
@@ -134,8 +134,8 @@
     ],
     "pageSize": 250,
     "totalRows": 10,
-    "asOfDate": "2026-10-23",
-    "asOf": "Oct 23 2026",
+    "asOfDate": "2026-10-28",
+    "asOf": "Oct 28 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -143,8 +143,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 76,
-    "asOf": "Oct 23 2026",
+    "totalRows": 80,
+    "asOf": "Oct 29 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

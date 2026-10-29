@@ -2,7 +2,7 @@
   "ticker": "CEW",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4377,
+  "totalRows": 4381,
   "headers": [
     "Date",
     "Close",
@@ -2271,6 +2271,30 @@
       "Close": "19.65999984741211",
       "Adj Close": "19.66",
       "Volume": "2700"
+    },
+    {
+      "Date": "Oct 26 2026",
+      "Close": "19.559999465942383",
+      "Adj Close": "19.56",
+      "Volume": "2300"
+    },
+    {
+      "Date": "Oct 27 2026",
+      "Close": "19.530000686645508",
+      "Adj Close": "19.53",
+      "Volume": "2800"
+    },
+    {
+      "Date": "Oct 28 2026",
+      "Close": "19.559999465942383",
+      "Adj Close": "19.56",
+      "Volume": "600"
+    },
+    {
+      "Date": "Oct 29 2026",
+      "Close": "19.552000045776367",
+      "Adj Close": "19.55",
+      "Volume": "699"
     }
   ]
 }
