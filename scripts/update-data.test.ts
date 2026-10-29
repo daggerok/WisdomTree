@@ -557,6 +557,9 @@ describe('pipeline', () => {
     expect(s.meta('AAA').expenseRatio).toMatchObject({ value: 0.15, grossValue: 0.4 });
     expect(row.metrics.returnsBasis).toBe(RETURNS_BASIS_OFFICIAL);
     for (const other of rest) expect(Object.keys(other.metrics)).toEqual(Object.keys(row.metrics));
+    // every row carries the 52-week keys from its history pages (range-52w block)
+    const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
   });
