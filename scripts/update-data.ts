@@ -132,7 +132,7 @@ function outputFundLine(index: number, total: number, ticker: string, status: st
     field('sec', outputPercent(data.secYield ?? data.yields?.secYield ?? metrics.secYield)),
     field('wp', data.workplaceRaw),
   ].filter(part => part !== '').join(' ');
-  return `[ ${String(index).padStart(width)}/${String(total).padEnd(width)}  ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
+  return `[ ${`${String(index).padStart(width)}/${total}`.padEnd(8)} ] ${outputClean(ticker).padEnd(5)} ${status.padEnd(9)}${detail ? ` ${detail}` : ''}${reason ? ` reason=${outputClean(reason)}` : ''}`;
 }
 function outputCreateReporter(root: URL | string, total: number) {
   let completed = 0;
@@ -848,7 +848,7 @@ async function fetchCatalog(config: UpdaterConfig): Promise<{ funds: CatalogFund
     const { text, via } = await fetchWisdomTreePage(WISDOMTREE_FUND_LIST_URL, WISDOMTREE_FUND_LIST_PROXY_URL, 'WisdomTree fund list', config, looksLikeFundList, 'application/json');
     return { funds: parseFundListJson(text), raw: text, rawName: 'fund-list', source: `WisdomTree official fund list${viaLabel(via)}` };
   } catch (error) {
-    console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - trying the product table`);
+    console.warn(`[ ${'catalog'.padEnd(8)} ] ${error instanceof Error ? error.message : String(error)} - trying the product table`);
   }
   const { text, via } = await fetchWisdomTreePage(WISDOMTREE_CATALOG_URL, WISDOMTREE_CATALOG_PROXY_URL, 'WisdomTree product table', config, looksLikeCatalog);
   return { funds: parseCatalogMarkdown(text), raw: text, rawName: 'product-table', source: `WisdomTree official product table${viaLabel(via)}` };
@@ -1186,7 +1186,7 @@ export function resetSecState(): void {
 /** SEC's ticker -> registrant CIK + series id table, loaded once per run (a failed load is asked again by the next fund). */
 function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSeriesRef>> {
   if (!secState.funds) {
-    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[edgar   ] fund ticker table', config, secHeaders()).then((payload) => parseSecFundTickers(payload));
+    const loading = fetchJson(SEC_FUND_TICKERS_URL, '[ edgar    ] fund ticker table', config, secHeaders()).then((payload) => parseSecFundTickers(payload));
     secState.funds = loading;
     loading.catch(() => { if (secState.funds === loading) secState.funds = null; });
   }
@@ -1196,7 +1196,7 @@ function loadFundTickerTable(config: UpdaterConfig): Promise<Map<string, NportSe
 /** SEC's company name -> ticker table (N-PORT rows and product-page top holdings), loaded once per run. */
 function loadCompanyNames(config: UpdaterConfig): Promise<Map<string, string>> {
   if (!secState.names) {
-    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[edgar   ] company ticker table', config, secHeaders()).then((payload) => parseSecCompanyNames(payload));
+    const loading = fetchJson(SEC_COMPANY_TICKERS_URL, '[ edgar    ] company ticker table', config, secHeaders()).then((payload) => parseSecCompanyNames(payload));
     secState.names = loading;
     loading.catch(() => { if (secState.names === loading) secState.names = null; });
   }
@@ -1692,7 +1692,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   let productVia: 'direct' | 'proxy' | null = null;
   if (!config.skipWisdomTree && fund.fundPage) {
     try {
-      const page = await fetchWisdomTreePage(fund.fundPage, productProxyUrl(fund.fundPage), `[product ] ${fund.ticker}`, config, looksLikeProductPage);
+      const page = await fetchWisdomTreePage(fund.fundPage, productProxyUrl(fund.fundPage), `[ product  ] ${fund.ticker}`, config, looksLikeProductPage);
       productPageMarkdown = page.text;
       productVia = page.via;
       productSummary = parseProductPageSummary(productPageMarkdown);
@@ -1707,7 +1707,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     } catch (error) {
       productPageMarkdown = null;
       productSummary = null;
-      outputNote(`[ ${'product'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+      outputNote(`[ ${'product'.padEnd(8)} ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
   const productFetched = productSummary !== null;
@@ -1719,7 +1719,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   const distributionsFailed = !productFetched || (partialPage && !productSummary!.sections.distributions);
   if (partialPage) {
     const lacking = [pricingFailed && 'NAV/price/premium', returnsFailed && 'returns', distributionsFailed && 'distributions'].filter(Boolean).join(', ');
-    outputNote(`[ ${'kept'.padEnd(9)}] ${fund.ticker}: product page came back partial, kept the published ${lacking}`);
+    outputNote(`[ ${'kept'.padEnd(8)} ] ${fund.ticker}: product page came back partial, kept the published ${lacking}`);
   }
   if (!productFetched || (partialPage && fund.secYield === null)) fund.secYield = fund.secYield ?? numberOrNull(previous.metrics?.secYield);
   fund.cusip = fund.cusip || String(previous.cusip || '');
@@ -1742,11 +1742,11 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       const published = { asOf: calendarIso(previousMeta?.holdings?.asOfDate), rows: topList ? 0 : numberOrNull(previousMeta?.holdings?.totalRows) ?? 0 };
       const ref = (await loadFundTickerTable(config)).get(fund.ticker);
       const read = ref
-        ? await readNportHoldings({ ticker: fund.ticker, cik: ref.cik, seriesId: ref.seriesId }, published, (url, label) => fetchText(url, `[nport   ] ${label}`, config, secHeaders()), { cache: secState.reader })
+        ? await readNportHoldings({ ticker: fund.ticker, cik: ref.cik, seriesId: ref.seriesId }, published, (url, label) => fetchText(url, `[ nport    ] ${label}`, config, secHeaders()), { cache: secState.reader })
         : { problem: `${fund.ticker}: not in the SEC fund ticker table` };
-      if ('problem' in read) outputNote(`[ ${'nport'.padEnd(9)}] ${read.problem}`);
+      if ('problem' in read) outputNote(`[ ${'nport'.padEnd(8)} ] ${read.problem}`);
       else {
-        const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[nport   ] ${label}`, config, secHeaders()))));
+        const sheet = nportHoldingsSheet(read.filing, nportTickers(read.filing.positions, await loadCompanyNames(config).catch(() => null), await loadUsListings((url, label) => fetchText(url, `[ nport    ] ${label}`, config, secHeaders()))));
         holdingsRows = sheet.rows;
         holdingsHeaders = sheet.headers;
         holdingsFresh = true;
@@ -1756,13 +1756,13 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
         holdingsSource = `SEC EDGAR Form N-PORT-P (accession ${read.candidate.accession}, report period ${read.filing.repPdDate || 'n/a'})`;
       }
     } catch (error) {
-      outputNote(`[ ${'nport'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+      outputNote(`[ ${'nport'.padEnd(8)} ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
   if (!holdingsRows.length && config.edgarFallback && productPageMarkdown) {
     const top = parseTopHoldingsMarkdown(productPageMarkdown, fund.ticker, (await loadCompanyNames(config).catch(() => null)) || new Map());
-    if (top.rejected) outputNote(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: product page top holdings rejected: ${top.rejected}`);
+    if (top.rejected) outputNote(`[ ${'holdings'.padEnd(8)} ] ${fund.ticker}: product page top holdings rejected: ${top.rejected}`);
     if (top.rows.length && (!previousMeta?.holdings?.totalRows || /^WisdomTree product page/.test(String(previousMeta.holdings.source || '')))) {
       holdingsRows = top.rows;
       holdingsFresh = true;
@@ -1779,7 +1779,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
     // summary, weights adding up to 581 and 600): it is not republished, the fund has no holdings until a valid source exists.
     const junk = previousSheet.length ? holdingsGuard(previousHeaders, previousSheet, null, HOLDINGS_GUARD_RELAX[fund.ticker] ?? HOLDINGS_GUARD_RELAX['*'] ?? [], holdingsWeightCount(previousHeaders, previousSheet)) : null;
     if (junk) {
-      console.warn(`[ ${'holdings'.padEnd(9)}] ${fund.ticker}: published holdings dropped (${junk}); none until a valid source exists`);
+      console.warn(`[ ${'holdings'.padEnd(8)} ] ${fund.ticker}: published holdings dropped (${junk}); none until a valid source exists`);
     } else {
       holdingsRows = previousSheet;
       holdingsHeaders = previousHeaders;
@@ -1795,7 +1795,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
   if (!config.skipYahoo) {
     try {
       const query = yahooChartQuery(config.historyRange);
-      const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[chart   ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
+      const payload = await fetchJson(`${YAHOO_CHART_URL}/${encodeURIComponent(fund.ticker)}?${query.toString()}`, `[ chart    ] ${fund.ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
       const fetched = parseChart(payload);
       // A HISTORY_RANGE window never shrinks the published history (and with it 3y, 5y, 10y and since inception); the published
       // distributions table is [Ex-Date, ..., Total Distribution], the window merge reads [date, amount]
@@ -1805,7 +1805,7 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       days = chart.days;
       fresh = fresh || days.length > 0;
     } catch (error) {
-      outputNote(`[ ${'chart'.padEnd(9)}] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
+      outputNote(`[ ${'chart'.padEnd(8)} ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
   // A new fund that no source answered publishes nothing (never an empty meta.json reported updated): it fails and keeps a catalog-only row.
@@ -2377,7 +2377,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
         await writeFile(new URL(`${fetched.rawName}-${new Date().toISOString().slice(0, 10)}.${fetched.rawName === 'fund-list' ? 'json' : 'md'}`, raw), fetched.raw, 'utf8');
       }
     } catch (error) {
-      console.warn(`[ ${'catalog'.padEnd(9)}] ${error instanceof Error ? error.message : String(error)} - keeping the published feed`);
+      console.warn(`[ ${'catalog'.padEnd(8)} ] ${error instanceof Error ? error.message : String(error)} - keeping the published feed`);
     }
   }
   // The live catalog (null when only the published feed is known): a catalog-only row it no longer lists is dropped, never retried.
@@ -2387,7 +2387,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
 
   const universe = [...catalog.values()].sort((a, b) => a.ticker.localeCompare(b.ticker));
   if (!universe.length) throw new Error('No catalog rows available. Run this where www.wisdomtree.com is reachable or seed api/wisdomtree/index.json first.');
-  console.log(`[ ${'catalog'.padEnd(9)}] ${universe.length} WisdomTree ETFs (${catalogSource})`);
+  console.log(`[ ${'catalog'.padEnd(8)} ] ${universe.length} WisdomTree ETFs (${catalogSource})`);
   const noteLines: string[] = [];
   if (live && previous.size) {
     const listed = new Set(live);
@@ -2395,7 +2395,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
     const dropped = Array.from(previous.keys()).filter((ticker) => !listed.has(ticker) && previous.get(ticker)?.dataFile).sort();
     if (dropped.length && listed.size * 2 >= previous.size) noteLines.push(`DROPPED FUNDS: ${dropped.join(', ')} (no longer in the live catalog; their published data is kept)`);
   }
-  for (const line of noteLines) console.log(`[ ${'catalog'.padEnd(9)}] ${line}`);
+  for (const line of noteLines) console.log(`[ ${'catalog'.padEnd(8)} ] ${line}`);
   // Q27: a TICKERS entry outside the live catalog and the published funds stops the run before any fund request
   assertKnownTickers(config.tickers ? Array.from(config.tickers) : null, knownTickers(live, Array.from(previous.values())), 'the WisdomTree catalog or published feed');
 
@@ -2464,14 +2464,14 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   for (const line of newFunds) console.log(line);
   // A TICKERS run never touches the cursor; a full run resets it.
   if (!config.tickers) await writeIfChanged(STATE_FILE, { cursor: config.maxFetches > 0 ? lastDispatched ?? (cursor || null) : null, savedAt: new Date().toISOString().replace(/\.\d{3}Z$/, 'Z') });
-  if (stoppedAtDeadline) console.warn(`[ ${'deadline'.padEnd(9)}] soft deadline reached; ${queue.length} funds were not taken this run (the index was still written)`);
+  if (stoppedAtDeadline) console.warn(`[ ${'deadline'.padEnd(8)} ] soft deadline reached; ${queue.length} funds were not taken this run (the index was still written)`);
   console.log(output.summary(startedAt));
   console.log(outputCounts(counts.funds, counts.holdings, counts.history));
   if (process.env.GITHUB_STEP_SUMMARY) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### WisdomTree data update\n\n- updated: ${results.length}\n- failed: ${failures}\n- counts: ${counts.funds} funds / ${counts.holdings.toLocaleString('en-US')} holdings rows / ${counts.history.toLocaleString('en-US')} history rows\n${noteLines.map((line) => `- ${line}\n`).join('')}${stoppedAtDeadline ? '- soft deadline reached before every fund was taken\n' : ''}${newFunds.length ? `\n### NEW FUNDS\n\n${newFunds.join('\n')}\n` : ''}`, 'utf8');
   // Every fund failed (or no fund got fresh data from any enabled source): the run is red.
   const sourcesEnabled = !config.skipWisdomTree || !config.skipYahoo || config.edgarFallback;
   if ((processed > 0 && failures === processed) || (sourcesEnabled && results.length > 0 && fundsWithFreshData === 0)) {
-    console.error(`[ ${'failed'.padEnd(9)}] no fund was updated from a live source`);
+    console.error(`[ ${'failed'.padEnd(8)} ] no fund was updated from a live source`);
     process.exitCode = 1;
   }
 }
