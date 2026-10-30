@@ -1003,6 +1003,13 @@ describe('pipeline 7', () => {
     await s.run({ HISTORY_RANGE: '1y' });
     expect(s.snapshot()).toEqual(first);
     expect(s.meta('AAA').history.totalRows).toBe(400);
+    // a truncated default-range (max) answer never shrinks the history either: one that joins the published days keeps them all,
+    // one of a new day that does not join keeps the fund as published
+    await s.run();
+    expect(s.snapshot()).toEqual(first);
+    s.handler = (url, init) => (url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(1, Date.UTC(2026, 9, 25)))) : base(url, init));
+    await s.run();
+    expect(s.meta('AAA').history.totalRows).toBe(400);
   });
 
   test('a relaxed guard still keeps numeric published weights from an all-blank N-PORT sheet (Q24)', async () => {
