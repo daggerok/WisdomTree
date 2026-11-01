@@ -2,7 +2,7 @@
   "ticker": "WTPI",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2686,
+  "totalRows": 2687,
   "headers": [
     "Date",
     "Close",
@@ -4124,7 +4124,13 @@
       "Date": "Oct 29 2026",
       "Close": "32.88999938964844",
       "Adj Close": "32.89",
-      "Volume": "105787"
+      "Volume": "105800"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "32.400001525878906",
+      "Adj Close": "32.4",
+      "Volume": "125900"
     }
   ]
 }

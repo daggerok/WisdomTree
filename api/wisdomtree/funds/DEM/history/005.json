@@ -2,7 +2,7 @@
   "ticker": "DEM",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4856,
+  "totalRows": 4857,
   "headers": [
     "Date",
     "Close",
@@ -5142,9 +5142,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "53.005001068115234",
+      "Close": "53.0099983215332",
       "Adj Close": "53.01",
-      "Volume": "133633"
+      "Volume": "133600"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "52.79999923706055",
+      "Adj Close": "52.8",
+      "Volume": "254900"
     }
   ]
 }

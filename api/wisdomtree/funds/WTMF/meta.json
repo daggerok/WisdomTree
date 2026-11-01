@@ -11,7 +11,7 @@
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WTMF",
-    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028876, report period 2026-05-31)",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-042012, report period 2026-08-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 10 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$39.80",
-    "value": 39.805,
-    "asOfDate": "Oct 28 2026"
+    "display": "$39.66",
+    "value": 39.663,
+    "asOfDate": "Oct 30 2026"
   },
   "marketPrice": {
-    "display": "$39.89",
-    "value": 39.89,
-    "asOfDate": "Oct 28 2026"
+    "display": "$39.92",
+    "value": 39.92,
+    "asOfDate": "Oct 30 2026"
   },
   "premiumDiscount": {
-    "display": "0.21%",
-    "value": 0.213
+    "display": "0.65%",
+    "value": 0.645
   },
   "aum": {
-    "display": "$262.71 M",
-    "value": 262712560,
-    "asOfDate": "Oct 28 2026",
+    "display": "$263.76 M",
+    "value": 263756432,
+    "asOfDate": "Oct 30 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 9.96,
-    "dividendYieldText": "9.96%",
+    "dividendYield": 7.92,
+    "dividendYieldText": "7.92%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 7.05,
-    "secYield": 2.83,
-    "secYieldText": "2.83%",
+    "distributionRate": 7.06,
+    "secYield": 2.82,
+    "secYieldText": "2.82%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -280,10 +280,10 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 30,
-    "asOfDate": "2026-05-31",
-    "asOf": "May 31 2026",
-    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028876, report period 2026-05-31)"
+    "totalRows": 26,
+    "asOfDate": "2026-08-31",
+    "asOf": "Aug 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-042012, report period 2026-08-31)"
   },
   "history": {
     "pages": [
@@ -293,8 +293,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3978,
-    "asOf": "Oct 29 2026",
+    "totalRows": 3979,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "DXJ",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5125,
+  "totalRows": 5126,
   "headers": [
     "Date",
     "Close",
@@ -758,7 +758,13 @@
       "Date": "Oct 29 2026",
       "Close": "59.59000015258789",
       "Adj Close": "59.59",
-      "Volume": "700495"
+      "Volume": "700600"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "58.38999938964844",
+      "Adj Close": "58.39",
+      "Volume": "1052500"
     }
   ]
 }

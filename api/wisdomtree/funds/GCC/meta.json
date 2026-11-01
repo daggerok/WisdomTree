@@ -11,7 +11,7 @@
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/GCC",
-    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028861, report period 2026-05-31)",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-041998, report period 2026-08-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 6 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$20.07",
-    "value": 20.074,
-    "asOfDate": "Oct 28 2026"
+    "display": "$19.76",
+    "value": 19.764,
+    "asOfDate": "Oct 30 2026"
   },
   "marketPrice": {
-    "display": "$20.12",
-    "value": 20.12,
-    "asOfDate": "Oct 28 2026"
+    "display": "$19.76",
+    "value": 19.76,
+    "asOfDate": "Oct 30 2026"
   },
   "premiumDiscount": {
-    "display": "0.23%",
-    "value": 0.231
+    "display": "-0.02%",
+    "value": -0.02
   },
   "aum": {
-    "display": "$216.79 M",
-    "value": 216794128,
-    "asOfDate": "Oct 28 2026",
+    "display": "$209.50 M",
+    "value": 209497392,
+    "asOfDate": "Oct 30 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 39.14,
-    "dividendYieldText": "39.14%",
+    "dividendYield": 34.26,
+    "dividendYieldText": "34.26%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 32.14,
-    "secYield": 3.85,
-    "secYieldText": "3.85%",
+    "distributionRate": 32.42,
+    "secYield": 3.84,
+    "secYieldText": "3.84%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -75,8 +75,8 @@
       "yr3Text": "19.23%",
       "yr5": 13.03,
       "yr5Text": "13.03%",
-      "yr10": 4.5,
-      "yr10Text": "4.50%",
+      "yr10": 7.3,
+      "yr10Text": "7.30%",
       "sinceInception": 14.54,
       "sinceInceptionText": "14.54%",
       "navReturns": {
@@ -240,10 +240,10 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 32,
-    "asOfDate": "2026-05-31",
-    "asOf": "May 31 2026",
-    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028861, report period 2026-05-31)"
+    "totalRows": 34,
+    "asOfDate": "2026-08-31",
+    "asOf": "Aug 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-041998, report period 2026-08-31)"
   },
   "history": {
     "pages": [
@@ -254,8 +254,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4722,
-    "asOf": "Oct 29 2026",
+    "totalRows": 4723,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

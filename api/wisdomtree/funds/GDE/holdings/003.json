@@ -2,7 +2,7 @@
   "ticker": "GDE",
   "page": 3,
   "pageSize": 250,
-  "totalRows": 506,
+  "totalRows": 508,
   "headers": [
     "Name",
     "Ticker",
@@ -14,57 +14,75 @@
   ],
   "rows": [
     {
-      "Name": "ONEOK INC",
-      "Ticker": "-",
-      "Identifier": "682680103",
-      "Weight": "0.061740955276",
-      "Market Value": "367405.38",
-      "Shares Held": "4377.00000000",
+      "Name": "SLB LTD",
+      "Ticker": "SLB",
+      "Identifier": "806857108",
+      "Weight": "0.04103677",
+      "Market Value": "197668.9",
+      "Shares Held": "3289",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "TALEN ENERGY CORP",
+      "Ticker": "TLN",
+      "Identifier": "87422Q109",
+      "Weight": "0.01301698",
+      "Market Value": "62701.12",
+      "Shares Held": "212",
       "Asset Category": "EC"
     },
     {
       "Name": "VERTEX PHARMACEUTICALS INC",
-      "Ticker": "-",
+      "Ticker": "VRTX",
       "Identifier": "92532F100",
-      "Weight": "0.137403640078",
-      "Market Value": "817655.58",
-      "Shares Held": "1827.00000000",
+      "Weight": "0.16572296",
+      "Market Value": "798266.32",
+      "Shares Held": "1466",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "ONEOK INC",
+      "Ticker": "OKE",
+      "Identifier": "682680103",
+      "Weight": "0.06892493",
+      "Market Value": "332002.58",
+      "Shares Held": "3458",
       "Asset Category": "EC"
     },
     {
       "Name": "EOG RESOURCES INC",
       "Ticker": "EOG",
       "Identifier": "26875P101",
-      "Weight": "0.094138621982",
-      "Market Value": "560196",
-      "Shares Held": "4200.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "REGENERON PHARMACEUTICALS INC",
-      "Ticker": "REGN",
-      "Identifier": "75886F107",
-      "Weight": "0.084301969828",
-      "Market Value": "501660.48",
-      "Shares Held": "816.00000000",
+      "Weight": "0.10219996",
+      "Market Value": "492284.16",
+      "Shares Held": "3396",
       "Asset Category": "EC"
     },
     {
       "Name": "NRG ENERGY INC",
       "Ticker": "NRG",
       "Identifier": "629377508",
-      "Weight": "0.01286553773",
-      "Market Value": "76559.68",
-      "Shares Held": "571.00000000",
+      "Weight": "0.00887019",
+      "Market Value": "42726.56",
+      "Shares Held": "388",
       "Asset Category": "EC"
     },
     {
-      "Name": "OLD DOMINION FREIGHT LINE INC",
-      "Ticker": "ODFL",
-      "Identifier": "679580100",
-      "Weight": "0.056942467748",
-      "Market Value": "338850.75",
-      "Shares Held": "1505.00000000",
+      "Name": "REGENERON PHARMACEUTICALS INC",
+      "Ticker": "REGN",
+      "Identifier": "75886F107",
+      "Weight": "0.11114756",
+      "Market Value": "535383.6",
+      "Shares Held": "670",
+      "Asset Category": "EC"
+    },
+    {
+      "Name": "SS&C TECHNOLOGIES HOLDINGS INC",
+      "Ticker": "SSNC",
+      "Identifier": "78467J100",
+      "Weight": "0.02552726",
+      "Market Value": "122961.54",
+      "Shares Held": "1482",
       "Asset Category": "EC"
     }
   ]

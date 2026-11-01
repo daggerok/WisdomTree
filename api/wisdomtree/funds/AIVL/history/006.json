@@ -2,7 +2,7 @@
   "ticker": "AIVL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5125,
+  "totalRows": 5126,
   "headers": [
     "Date",
     "Close",
@@ -756,9 +756,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "135.83299255371094",
+      "Close": "135.8300018310547",
       "Adj Close": "135.83",
-      "Volume": "596"
+      "Volume": "600"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "134.49000549316406",
+      "Adj Close": "134.49",
+      "Volume": "1300"
     }
   ]
 }

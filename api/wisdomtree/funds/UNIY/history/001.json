@@ -2,7 +2,7 @@
   "ticker": "UNIY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 936,
+  "totalRows": 937,
   "headers": [
     "Date",
     "Close",
@@ -5622,9 +5622,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "46.739601135253906",
+      "Close": "46.7400016784668",
       "Adj Close": "46.74",
-      "Volume": "520"
+      "Volume": "400"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "46.80099868774414",
+      "Adj Close": "46.8",
+      "Volume": "300"
     }
   ]
 }

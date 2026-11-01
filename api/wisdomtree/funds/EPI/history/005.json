@@ -2,7 +2,7 @@
   "ticker": "EPI",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4700,
+  "totalRows": 4701,
   "headers": [
     "Date",
     "Close",
@@ -4208,7 +4208,13 @@
       "Date": "Oct 29 2026",
       "Close": "40.779998779296875",
       "Adj Close": "40.78",
-      "Volume": "308596"
+      "Volume": "308600"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "40.970001220703125",
+      "Adj Close": "40.97",
+      "Volume": "431200"
     }
   ]
 }

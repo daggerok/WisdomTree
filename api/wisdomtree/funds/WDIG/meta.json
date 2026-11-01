@@ -11,7 +11,7 @@
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDIG",
-    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028863, report period 2026-05-31)",
+    "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-042011, report period 2026-08-31)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
     "distributionsSource": "WisdomTree official product page Recent Distributions table (Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
@@ -30,28 +30,28 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$35.53",
-    "value": 35.53,
-    "asOfDate": "Oct 28 2026"
+    "display": "$33.09",
+    "value": 33.095,
+    "asOfDate": "Oct 30 2026"
   },
   "marketPrice": {
-    "display": "$35.57",
-    "value": 35.573,
-    "asOfDate": "Oct 28 2026"
+    "display": "$32.80",
+    "value": 32.797,
+    "asOfDate": "Oct 30 2026"
   },
   "premiumDiscount": {
-    "display": "0.12%",
-    "value": 0.122
+    "display": "-0.91%",
+    "value": -0.91
   },
   "aum": {
-    "display": "$3.55 M",
-    "value": 3552989,
-    "asOfDate": "Oct 28 2026",
+    "display": "$3.31 M",
+    "value": 3309523.75,
+    "asOfDate": "Oct 30 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.36,
-    "dividendYieldText": "0.36%",
+    "dividendYield": 0.38,
+    "dividendYieldText": "0.38%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.36,
@@ -150,18 +150,18 @@
       "holdings/001.json"
     ],
     "pageSize": 250,
-    "totalRows": 112,
-    "asOfDate": "2026-05-31",
-    "asOf": "May 31 2026",
-    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-028863, report period 2026-05-31)"
+    "totalRows": 124,
+    "asOfDate": "2026-08-31",
+    "asOf": "Aug 31 2026",
+    "source": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-042011, report period 2026-08-31)"
   },
   "history": {
     "pages": [
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 122,
-    "asOf": "Oct 29 2026",
+    "totalRows": 123,
+    "asOf": "Oct 30 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

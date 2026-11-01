@@ -2,7 +2,7 @@
   "ticker": "DDLS",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2644,
+  "totalRows": 2645,
   "headers": [
     "Date",
     "Close",
@@ -3870,9 +3870,15 @@
     },
     {
       "Date": "Oct 29 2026",
-      "Close": "44.56610107421875",
+      "Close": "44.566001892089844",
       "Adj Close": "44.57",
-      "Volume": "5976"
+      "Volume": "6000"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "44.15599822998047",
+      "Adj Close": "44.16",
+      "Volume": "5900"
     }
   ]
 }

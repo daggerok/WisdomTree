@@ -2,7 +2,7 @@
   "ticker": "SHAG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2375,
+  "totalRows": 2376,
   "headers": [
     "Date",
     "Close",
@@ -2258,7 +2258,13 @@
       "Date": "Oct 29 2026",
       "Close": "46.60499954223633",
       "Adj Close": "46.6",
-      "Volume": "49609"
+      "Volume": "49600"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "46.69499969482422",
+      "Adj Close": "46.69",
+      "Volume": "23800"
     }
   ]
 }

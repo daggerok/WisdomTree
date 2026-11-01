@@ -2,7 +2,7 @@
   "ticker": "QGRW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 966,
+  "totalRows": 967,
   "headers": [
     "Date",
     "Close",
@@ -5804,7 +5804,13 @@
       "Date": "Oct 29 2026",
       "Close": "66.4000015258789",
       "Adj Close": "66.4",
-      "Volume": "227445"
+      "Volume": "227900"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "64.55999755859375",
+      "Adj Close": "64.56",
+      "Volume": "314600"
     }
   ]
 }

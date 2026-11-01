@@ -2,7 +2,7 @@
   "ticker": "WTPI",
   "page": 1,
   "pageSize": 250,
-  "totalRows": 6,
+  "totalRows": 7,
   "headers": [
     "Name",
     "Ticker",
@@ -18,60 +18,79 @@
     {
       "Name": "MORGAN STANLEY & CO. LLC",
       "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "-0.01441383912",
-      "Market Value": "-69025.88",
-      "Shares Held": "-3377.00000000",
-      "Asset Category": "DE"
+      "Identifier": "BYM7K6TB5",
+      "Weight": "-1.73828735",
+      "Market Value": "-9177933.96",
+      "Shares Held": "-3436",
+      "Asset Category": "DE",
+      "Coupon": "",
+      "Maturity": "-"
     },
     {
       "Name": "MORGAN STANLEY & CO. LLC",
       "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "-0.29585623118",
-      "Market Value": "-1416814.53",
-      "Shares Held": "-3309.00000000",
-      "Asset Category": "DE"
+      "Identifier": "BYM7M43E0",
+      "Weight": "-1.40999496",
+      "Market Value": "-7444592.28",
+      "Shares Held": "-3522",
+      "Asset Category": "DE",
+      "Coupon": "",
+      "Maturity": "-"
+    },
+    {
+      "Name": "MORGAN STANLEY & CO. LLC",
+      "Ticker": "-",
+      "Identifier": "BYM7K6TB5",
+      "Weight": "-0.02782474",
+      "Market Value": "-146911.05",
+      "Shares Held": "-55",
+      "Asset Category": "DE",
+      "Coupon": "",
+      "Maturity": "-"
     },
     {
       "Name": "WisdomTree Trust",
-      "Ticker": "-",
+      "Ticker": "USFR",
       "Identifier": "97717Y527",
-      "Weight": "4.350743883548",
-      "Market Value": "20835110.1",
-      "Shares Held": "413970.00000000",
-      "Asset Category": "EC"
-    },
-    {
-      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
-      "Ticker": "-",
-      "Identifier": "912797RG4",
-      "Weight": "47.60615442853",
-      "Market Value": "227979282.51",
-      "Shares Held": "229500000.00000000",
-      "Asset Category": "DBT",
-      "Coupon": "0.00000000",
-      "Maturity": "2026-08-06"
+      "Weight": "4.3628233",
+      "Market Value": "23035146.64",
+      "Shares Held": "457228",
+      "Asset Category": "EC",
+      "Coupon": "",
+      "Maturity": "-"
     },
     {
       "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
       "Ticker": "-",
       "Identifier": "912797UM7",
-      "Weight": "47.16063719286",
-      "Market Value": "225845762.15",
-      "Shares Held": "229500000.00000000",
+      "Weight": "48.72250227",
+      "Market Value": "257248553.94",
+      "Shares Held": "259000000",
       "Asset Category": "DBT",
-      "Coupon": "0.00000000",
+      "Coupon": "0",
       "Maturity": "2026-11-05"
     },
     {
       "Name": "DREYFUS TRSY OBLIG CASH M",
       "Ticker": "-",
-      "Identifier": "000000000",
-      "Weight": "1.225633490988",
-      "Market Value": "5869389.1",
-      "Shares Held": "5869389.10000000",
-      "Asset Category": "STIV"
+      "Identifier": "X9USDDRET",
+      "Weight": "0.55447379",
+      "Market Value": "2927550.37",
+      "Shares Held": "2927550.37",
+      "Asset Category": "STIV",
+      "Coupon": "",
+      "Maturity": "-"
+    },
+    {
+      "Name": "UNITED STATES OF AMERICA - BUREAU OF THE PUBLIC DEBT",
+      "Ticker": "-",
+      "Identifier": "912797VT1",
+      "Weight": "48.35530197",
+      "Market Value": "255309783.54",
+      "Shares Held": "259000000",
+      "Asset Category": "DBT",
+      "Coupon": "0",
+      "Maturity": "2027-01-14"
     }
   ]
 }

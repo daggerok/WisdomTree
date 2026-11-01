@@ -2,7 +2,7 @@
   "ticker": "OPPJ",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3355,
+  "totalRows": 3356,
   "headers": [
     "Date",
     "Close",
@@ -2138,7 +2138,13 @@
       "Date": "Oct 29 2026",
       "Close": "58.15999984741211",
       "Adj Close": "58.16",
-      "Volume": "19809"
+      "Volume": "19700"
+    },
+    {
+      "Date": "Oct 30 2026",
+      "Close": "56.61000061035156",
+      "Adj Close": "56.61",
+      "Volume": "99300"
     }
   ]
 }
