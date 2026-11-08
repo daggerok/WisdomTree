@@ -2,7 +2,7 @@
   "ticker": "HYIN",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1379,
+  "totalRows": 1384,
   "headers": [
     "Date",
     "Close",
@@ -2283,6 +2283,36 @@
       "Close": "12.12600040435791",
       "Adj Close": "12.13",
       "Volume": "48800"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "12.270000457763672",
+      "Adj Close": "12.27",
+      "Volume": "18200"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "12.16100025177002",
+      "Adj Close": "12.16",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "12.470999717712402",
+      "Adj Close": "12.47",
+      "Volume": "5900"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "12.187000274658203",
+      "Adj Close": "12.19",
+      "Volume": "9900"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "12.072999954223633",
+      "Adj Close": "12.07",
+      "Volume": "33500"
     }
   ]
 }

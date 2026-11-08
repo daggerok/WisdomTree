@@ -2,7 +2,7 @@
   "ticker": "UNIY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 937,
+  "totalRows": 942,
   "headers": [
     "Date",
     "Close",
@@ -5631,6 +5631,36 @@
       "Close": "46.80099868774414",
       "Adj Close": "46.8",
       "Volume": "300"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "46.8489990234375",
+      "Adj Close": "46.85",
+      "Volume": "700"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "46.76900100708008",
+      "Adj Close": "46.77",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "46.9900016784668",
+      "Adj Close": "46.99",
+      "Volume": "200"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "47.084999084472656",
+      "Adj Close": "47.08",
+      "Volume": "200"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "47.04999923706055",
+      "Adj Close": "47.05",
+      "Volume": "700"
     }
   ]
 }

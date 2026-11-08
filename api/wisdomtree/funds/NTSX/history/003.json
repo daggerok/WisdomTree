@@ -2,7 +2,7 @@
   "ticker": "NTSX",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2073,
+  "totalRows": 2078,
   "headers": [
     "Date",
     "Close",
@@ -447,6 +447,36 @@
       "Close": "58.84000015258789",
       "Adj Close": "58.84",
       "Volume": "25600"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "58.650001525878906",
+      "Adj Close": "58.65",
+      "Volume": "28100"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "58.68000030517578",
+      "Adj Close": "58.68",
+      "Volume": "61000"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "59.58000183105469",
+      "Adj Close": "59.58",
+      "Volume": "29500"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "57.5",
+      "Adj Close": "57.5",
+      "Volume": "47800"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "57.56999969482422",
+      "Adj Close": "57.57",
+      "Volume": "66700"
     }
   ]
 }

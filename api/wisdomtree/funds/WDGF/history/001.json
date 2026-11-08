@@ -2,7 +2,7 @@
   "ticker": "WDGF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 286,
+  "totalRows": 291,
   "headers": [
     "Date",
     "Close",
@@ -1725,6 +1725,36 @@
       "Close": "30.738000869750977",
       "Adj Close": "30.74",
       "Volume": "3900"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "30.73900032043457",
+      "Adj Close": "30.74",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "30.770999908447266",
+      "Adj Close": "30.77",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "30.00200080871582",
+      "Adj Close": "30",
+      "Volume": "300"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "28.493000030517578",
+      "Adj Close": "28.49",
+      "Volume": "1500"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "28.61199951171875",
+      "Adj Close": "28.61",
+      "Volume": "1000"
     }
   ]
 }

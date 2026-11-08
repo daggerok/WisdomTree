@@ -7,7 +7,7 @@
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/uniy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/uniy",
     "productPageStatus": "fetched through the read-only rendering proxy",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/UNIY",
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$46.86",
-    "value": 46.858,
-    "asOfDate": "Oct 30 2026"
+    "display": "$47.04",
+    "value": 47.039,
+    "asOfDate": "Nov 06 2026"
   },
   "marketPrice": {
-    "display": "$46.80",
-    "value": 46.801,
-    "asOfDate": "Oct 30 2026"
+    "display": "$47.05",
+    "value": 47.05,
+    "asOfDate": "Nov 06 2026"
   },
   "premiumDiscount": {
-    "display": "-0.12%",
-    "value": -0.123
+    "display": "0.02%",
+    "value": 0.024
   },
   "aum": {
     "display": "$1.30 B",
@@ -62,58 +62,58 @@
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -2.68,
-      "mo1Text": "-2.68%",
-      "qtd": -3.59,
-      "qtdText": "-3.59%",
-      "ytd": -2.74,
-      "ytdText": "-2.74%",
-      "yr1": -1.8,
-      "yr1Text": "-1.80%",
-      "yr3": 4.37,
-      "yr3Text": "4.37%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": 2.09,
+      "mo1Text": "2.09%",
+      "qtd": -0.24,
+      "qtdText": "-0.24%",
+      "ytd": -0.72,
+      "ytdText": "-0.72%",
+      "yr1": -0.39,
+      "yr1Text": "-0.39%",
+      "yr3": 5.62,
+      "yr3Text": "5.62%",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 2.75,
-      "sinceInceptionText": "2.75%",
+      "sinceInception": 3.25,
+      "sinceInceptionText": "3.25%",
       "navReturns": {
-        "mo1": -2.69,
-        "mo1Text": "-2.69%",
-        "qtd": -3.61,
-        "qtdText": "-3.61%",
-        "ytd": -2.77,
-        "ytdText": "-2.77%",
-        "yr1": -1.82,
-        "yr1Text": "-1.82%",
-        "yr3": 4.37,
-        "yr3Text": "4.37%",
+        "mo1": 2.22,
+        "mo1Text": "2.22%",
+        "qtd": -0.09,
+        "qtdText": "-0.09%",
+        "ytd": -0.61,
+        "ytdText": "-0.61%",
+        "yr1": -0.26,
+        "yr1Text": "-0.26%",
+        "yr3": 5.65,
+        "yr3Text": "5.65%",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 2.74,
-        "sinceInceptionText": "2.74%"
+        "sinceInception": 3.29,
+        "sinceInceptionText": "3.29%"
       },
       "indexReturns": {
-        "mo1": -2.68,
-        "mo1Text": "-2.68%",
-        "qtd": -3.6,
-        "qtdText": "-3.60%",
-        "ytd": -2.74,
-        "ytdText": "-2.74%",
-        "yr1": -1.62,
-        "yr1Text": "-1.62%",
-        "yr3": 4.7,
-        "yr3Text": "4.70%",
+        "mo1": 2.2,
+        "mo1Text": "2.20%",
+        "qtd": -0.09,
+        "qtdText": "-0.09%",
+        "ytd": -0.6,
+        "ytdText": "-0.60%",
+        "yr1": -0.1,
+        "yr1Text": "-0.10%",
+        "yr3": 5.97,
+        "yr3Text": "5.97%",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 3.08,
-        "sinceInceptionText": "3.08%"
+        "sinceInception": 3.61,
+        "sinceInceptionText": "3.61%"
       }
     },
     "quarterEnd": {
@@ -647,8 +647,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 937,
-    "asOf": "Oct 30 2026",
+    "totalRows": 942,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "DNL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5126,
+  "totalRows": 5131,
   "headers": [
     "Date",
     "Close",
@@ -765,6 +765,36 @@
       "Close": "43.290000915527344",
       "Adj Close": "43.29",
       "Volume": "17100"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "43.470001220703125",
+      "Adj Close": "43.47",
+      "Volume": "30000"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "43.4900016784668",
+      "Adj Close": "43.49",
+      "Volume": "22400"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "43.790000915527344",
+      "Adj Close": "43.79",
+      "Volume": "9800"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "40.93000030517578",
+      "Adj Close": "40.93",
+      "Volume": "42400"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "41.41999816894531",
+      "Adj Close": "41.42",
+      "Volume": "295800"
     }
   ]
 }

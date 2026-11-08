@@ -2,7 +2,7 @@
   "ticker": "CXSE",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3548,
+  "totalRows": 3553,
   "headers": [
     "Date",
     "Close",
@@ -3297,6 +3297,36 @@
       "Close": "31.239999771118164",
       "Adj Close": "31.24",
       "Volume": "67100"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "31.56999969482422",
+      "Adj Close": "31.57",
+      "Volume": "24600"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "31.309999465942383",
+      "Adj Close": "31.31",
+      "Volume": "6100"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "32.9900016784668",
+      "Adj Close": "32.99",
+      "Volume": "62100"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "32.939998626708984",
+      "Adj Close": "32.94",
+      "Volume": "99500"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "32.790000915527344",
+      "Adj Close": "32.79",
+      "Volume": "16600"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "AGGY",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2846,
+  "totalRows": 2851,
   "headers": [
     "Date",
     "Close",
@@ -5085,6 +5085,36 @@
       "Close": "41.93000030517578",
       "Adj Close": "41.93",
       "Volume": "103300"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "41.90999984741211",
+      "Adj Close": "41.91",
+      "Volume": "72000"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "41.86000061035156",
+      "Adj Close": "41.86",
+      "Volume": "121200"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "42.099998474121094",
+      "Adj Close": "42.1",
+      "Volume": "89200"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "42.154998779296875",
+      "Adj Close": "42.15",
+      "Volume": "96800"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "42.15999984741211",
+      "Adj Close": "42.16",
+      "Volume": "138600"
     }
   ]
 }

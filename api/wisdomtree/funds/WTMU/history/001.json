@@ -2,7 +2,7 @@
   "ticker": "WTMU",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 397,
+  "totalRows": 402,
   "headers": [
     "Date",
     "Close",
@@ -2391,6 +2391,36 @@
       "Close": "24.975000381469727",
       "Adj Close": "24.98",
       "Volume": "400"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "24.989999771118164",
+      "Adj Close": "24.99",
+      "Volume": "3800"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "25.065000534057617",
+      "Adj Close": "25.07",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "25.135000228881836",
+      "Adj Close": "25.14",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "25.204999923706055",
+      "Adj Close": "25.2",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "25.264999389648438",
+      "Adj Close": "25.26",
+      "Volume": "100"
     }
   ]
 }

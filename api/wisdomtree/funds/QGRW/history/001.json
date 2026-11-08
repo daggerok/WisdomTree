@@ -2,7 +2,7 @@
   "ticker": "QGRW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 967,
+  "totalRows": 972,
   "headers": [
     "Date",
     "Close",
@@ -5811,6 +5811,36 @@
       "Close": "64.55999755859375",
       "Adj Close": "64.56",
       "Volume": "314600"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "63.95000076293945",
+      "Adj Close": "63.95",
+      "Volume": "1075600"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "64.76000213623047",
+      "Adj Close": "64.76",
+      "Volume": "296200"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "65.62000274658203",
+      "Adj Close": "65.62",
+      "Volume": "189100"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "61.90999984741211",
+      "Adj Close": "61.91",
+      "Volume": "377500"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "62.5099983215332",
+      "Adj Close": "62.51",
+      "Volume": "1413400"
     }
   ]
 }

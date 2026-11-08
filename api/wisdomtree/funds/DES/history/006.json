@@ -2,7 +2,7 @@
   "ticker": "DES",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5126,
+  "totalRows": 5131,
   "headers": [
     "Date",
     "Close",
@@ -765,6 +765,36 @@
       "Close": "39.209999084472656",
       "Adj Close": "39.21",
       "Volume": "114800"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "39.66999816894531",
+      "Adj Close": "39.67",
+      "Volume": "130000"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "39.34000015258789",
+      "Adj Close": "39.34",
+      "Volume": "78300"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "39.900001525878906",
+      "Adj Close": "39.9",
+      "Volume": "92900"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "38.61000061035156",
+      "Adj Close": "38.61",
+      "Volume": "74800"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "38.54999923706055",
+      "Adj Close": "38.55",
+      "Volume": "85400"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "HEDJ",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4224,
+  "totalRows": 4229,
   "headers": [
     "Date",
     "Close",
@@ -1353,6 +1353,36 @@
       "Close": "55.68000030517578",
       "Adj Close": "55.68",
       "Volume": "31900"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "56.06999969482422",
+      "Adj Close": "56.07",
+      "Volume": "44000"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "55.91999816894531",
+      "Adj Close": "55.92",
+      "Volume": "23400"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "57.4900016784668",
+      "Adj Close": "57.49",
+      "Volume": "59200"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "56.90999984741211",
+      "Adj Close": "56.91",
+      "Volume": "33000"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "56.439998626708984",
+      "Adj Close": "56.44",
+      "Volume": "15300"
     }
   ]
 }

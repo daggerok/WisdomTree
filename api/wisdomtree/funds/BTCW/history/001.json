@@ -2,7 +2,7 @@
   "ticker": "BTCW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 704,
+  "totalRows": 709,
   "headers": [
     "Date",
     "Close",
@@ -4233,6 +4233,36 @@
       "Close": "81.05999755859375",
       "Adj Close": "81.06",
       "Volume": "37100"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "80.87999725341797",
+      "Adj Close": "80.88",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "82.20999908447266",
+      "Adj Close": "82.21",
+      "Volume": "7700"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "84.58000183105469",
+      "Adj Close": "84.58",
+      "Volume": "48300"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "80.30000305175781",
+      "Adj Close": "80.3",
+      "Volume": "25100"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "79.9800033569336",
+      "Adj Close": "79.98",
+      "Volume": "9700"
     }
   ]
 }

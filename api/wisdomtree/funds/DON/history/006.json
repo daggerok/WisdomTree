@@ -2,7 +2,7 @@
   "ticker": "DON",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5126,
+  "totalRows": 5131,
   "headers": [
     "Date",
     "Close",
@@ -765,6 +765,36 @@
       "Close": "57.349998474121094",
       "Adj Close": "57.35",
       "Volume": "191200"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "57.90999984741211",
+      "Adj Close": "57.91",
+      "Volume": "118400"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "57.65999984741211",
+      "Adj Close": "57.66",
+      "Volume": "108300"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "58.470001220703125",
+      "Adj Close": "58.47",
+      "Volume": "145800"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "57.0099983215332",
+      "Adj Close": "57.01",
+      "Volume": "151700"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "56.95000076293945",
+      "Adj Close": "56.95",
+      "Volume": "141700"
     }
   ]
 }

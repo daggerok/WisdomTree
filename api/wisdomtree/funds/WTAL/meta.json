@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtal",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtal",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "N/A",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -147,8 +147,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 16,
-    "asOf": "Oct 30 2026",
+    "totalRows": 21,
+    "asOf": "Nov 06 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "WCBR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1447,
+  "totalRows": 1452,
   "headers": [
     "Date",
     "Close",
@@ -2691,6 +2691,36 @@
       "Close": "48.16999816894531",
       "Adj Close": "48.17",
       "Volume": "196800"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "44.974998474121094",
+      "Adj Close": "44.97",
+      "Volume": "213400"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "45.292999267578125",
+      "Adj Close": "45.29",
+      "Volume": "240700"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "45.11000061035156",
+      "Adj Close": "45.11",
+      "Volume": "266200"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "41.970001220703125",
+      "Adj Close": "41.97",
+      "Volume": "269100"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "41.755001068115234",
+      "Adj Close": "41.76",
+      "Volume": "110600"
     }
   ]
 }

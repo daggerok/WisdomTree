@@ -2,7 +2,7 @@
   "ticker": "IHDG",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3141,
+  "totalRows": 3146,
   "headers": [
     "Date",
     "Close",
@@ -855,6 +855,36 @@
       "Close": "51.79999923706055",
       "Adj Close": "51.8",
       "Volume": "138500"
+    },
+    {
+      "Date": "Nov 02 2026",
+      "Close": "52.029998779296875",
+      "Adj Close": "52.03",
+      "Volume": "69200"
+    },
+    {
+      "Date": "Nov 03 2026",
+      "Close": "51.83000183105469",
+      "Adj Close": "51.83",
+      "Volume": "65200"
+    },
+    {
+      "Date": "Nov 04 2026",
+      "Close": "53.060001373291016",
+      "Adj Close": "53.06",
+      "Volume": "51600"
+    },
+    {
+      "Date": "Nov 05 2026",
+      "Close": "51.45000076293945",
+      "Adj Close": "51.45",
+      "Volume": "102300"
+    },
+    {
+      "Date": "Nov 06 2026",
+      "Close": "51.380001068115234",
+      "Adj Close": "51.38",
+      "Volume": "69200"
     }
   ]
 }
