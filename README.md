@@ -76,6 +76,13 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
 
   The codes `official-distribution-rate`, `official-other` and `computed-trailing-12m` of the shared standard are not produced by this updater
 - `secYield` - 30-day SEC yield when published; unavailable values stay empty and are never shown as 0
+- Swing metrics (shared `swing` block, the formulas of the Stocks feed) from the split-adjusted, not dividend-adjusted daily `Close` column of the published history, with the last close as the price; `null` (never `0`) when the history is too short:
+  - `pctFrom52wHigh` - last close against the highest close of the last 52 weeks, in percent
+  - `athPrice`, `athDate`, `athBasis` - highest close of the whole history, its date and the history it covers (`daily closes since <first date>`)
+  - `pctFromAth` - last close against `athPrice`, in percent
+  - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
+  - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
+  - `high60d`, `low60d` - highest and lowest of the last 60 closes
 - `returnsBasis` - mandatory non-empty text saying how the returns were computed: official WisdomTree month-end Market Price Returns (gaps filled with Yahoo estimates), or estimates derived from Yahoo adjusted closes when the product page is unavailable
 - `performanceAsOf` - mandatory ISO `YYYY-MM-DD` date the returns are as of: the WisdomTree month-end performance table date, or the last Yahoo close date when derived (not the NAV date); `null` only when truly unknown
 - NAV and the catalog figures come from WisdomTree; history and returns derived from Yahoo adjusted closes are market-price estimates, not official NAV returns
