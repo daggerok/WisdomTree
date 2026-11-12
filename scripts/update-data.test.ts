@@ -560,6 +560,9 @@ describe('pipeline', () => {
     // every row carries the 52-week keys from its history pages (range-52w block)
     const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
     for (const f of [row, ...rest]) expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
+    // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-11, -2)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+    expect([typeof row.metrics.athPrice, row.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
   });
