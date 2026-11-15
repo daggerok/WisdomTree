@@ -2,7 +2,7 @@
   "ticker": "EPS",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4959,
+  "totalRows": 4964,
   "headers": [
     "Date",
     "Close",
@@ -5763,6 +5763,36 @@
       "Close": "77.0199966430664",
       "Adj Close": "77.02",
       "Volume": "174000"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "78.6500015258789",
+      "Adj Close": "78.65",
+      "Volume": "132100"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "78.44000244140625",
+      "Adj Close": "78.44",
+      "Volume": "59100"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "79.41000366210938",
+      "Adj Close": "79.41",
+      "Volume": "44100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "79.04000091552734",
+      "Adj Close": "79.04",
+      "Volume": "33600"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "78.83999633789062",
+      "Adj Close": "78.84",
+      "Volume": "35300"
     }
   ]
 }

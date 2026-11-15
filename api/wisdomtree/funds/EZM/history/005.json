@@ -2,7 +2,7 @@
   "ticker": "EZM",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4959,
+  "totalRows": 4964,
   "headers": [
     "Date",
     "Close",
@@ -5763,6 +5763,36 @@
       "Close": "73.73999786376953",
       "Adj Close": "73.74",
       "Volume": "26400"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "75.77999877929688",
+      "Adj Close": "75.78",
+      "Volume": "20500"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "75.70999908447266",
+      "Adj Close": "75.71",
+      "Volume": "35000"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "76.30000305175781",
+      "Adj Close": "76.3",
+      "Volume": "12500"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "75.47000122070312",
+      "Adj Close": "75.47",
+      "Volume": "12400"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "75.5999984741211",
+      "Adj Close": "75.6",
+      "Volume": "7900"
     }
   ]
 }

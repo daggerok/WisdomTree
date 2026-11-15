@@ -2,7 +2,7 @@
   "ticker": "WTBN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 723,
+  "totalRows": 728,
   "headers": [
     "Date",
     "Close",
@@ -4347,6 +4347,36 @@
       "Close": "24.413000106811523",
       "Adj Close": "24.41",
       "Volume": "46200"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "24.424999237060547",
+      "Adj Close": "24.42",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "24.2549991607666",
+      "Adj Close": "24.25",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "24.25",
+      "Adj Close": "24.25",
+      "Volume": "2200"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "24.079999923706055",
+      "Adj Close": "24.08",
+      "Volume": "3700"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "24.03499984741211",
+      "Adj Close": "24.03",
+      "Volume": "6300"
     }
   ]
 }

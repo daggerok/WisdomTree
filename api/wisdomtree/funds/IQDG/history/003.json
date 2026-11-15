@@ -2,7 +2,7 @@
   "ticker": "IQDG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2663,
+  "totalRows": 2668,
   "headers": [
     "Date",
     "Close",
@@ -3987,6 +3987,36 @@
       "Close": "41.779998779296875",
       "Adj Close": "41.78",
       "Volume": "33300"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "43.11000061035156",
+      "Adj Close": "43.11",
+      "Volume": "32800"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "42.869998931884766",
+      "Adj Close": "42.87",
+      "Volume": "31500"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "42.959999084472656",
+      "Adj Close": "42.96",
+      "Volume": "20500"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "42.625",
+      "Adj Close": "42.63",
+      "Volume": "37400"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "42.6349983215332",
+      "Adj Close": "42.63",
+      "Volume": "28900"
     }
   ]
 }

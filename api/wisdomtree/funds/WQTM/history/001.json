@@ -2,7 +2,7 @@
   "ticker": "WQTM",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 272,
+  "totalRows": 277,
   "headers": [
     "Date",
     "Close",
@@ -1641,6 +1641,36 @@
       "Close": "25.149999618530273",
       "Adj Close": "25.15",
       "Volume": "383900"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "26.670000076293945",
+      "Adj Close": "26.67",
+      "Volume": "155500"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "26.25",
+      "Adj Close": "26.25",
+      "Volume": "214500"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "26.540000915527344",
+      "Adj Close": "26.54",
+      "Volume": "113300"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "25.739999771118164",
+      "Adj Close": "25.74",
+      "Volume": "190400"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "25.06999969482422",
+      "Adj Close": "25.07",
+      "Volume": "115300"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "USDU",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3241,
+  "totalRows": 3246,
   "headers": [
     "Date",
     "Close",
@@ -1455,6 +1455,36 @@
       "Close": "27.260000228881836",
       "Adj Close": "27.26",
       "Volume": "270200"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "27.110000610351562",
+      "Adj Close": "27.11",
+      "Volume": "215200"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "27.280000686645508",
+      "Adj Close": "27.28",
+      "Volume": "88500"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "27.399999618530273",
+      "Adj Close": "27.4",
+      "Volume": "130800"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "27.450000762939453",
+      "Adj Close": "27.45",
+      "Volume": "119200"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "27.489999771118164",
+      "Adj Close": "27.49",
+      "Volume": "103900"
     }
   ]
 }

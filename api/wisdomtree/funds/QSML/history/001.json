@@ -2,7 +2,7 @@
   "ticker": "QSML",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 700,
+  "totalRows": 705,
   "headers": [
     "Date",
     "Close",
@@ -4209,6 +4209,36 @@
       "Close": "34.2599983215332",
       "Adj Close": "34.26",
       "Volume": "500"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "35.02299880981445",
+      "Adj Close": "35.02",
+      "Volume": "600"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "34.89099884033203",
+      "Adj Close": "34.89",
+      "Volume": "114400"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "35.11600112915039",
+      "Adj Close": "35.12",
+      "Volume": "6100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "34.6619987487793",
+      "Adj Close": "34.66",
+      "Volume": "400"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "34.779998779296875",
+      "Adj Close": "34.78",
+      "Volume": "300"
     }
   ]
 }

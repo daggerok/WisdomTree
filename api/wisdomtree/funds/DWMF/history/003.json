@@ -2,7 +2,7 @@
   "ticker": "DWMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2072,
+  "totalRows": 2077,
   "headers": [
     "Date",
     "Close",
@@ -440,6 +440,36 @@
       "Date": "Nov 06 2026",
       "Close": "32.5099983215332",
       "Adj Close": "32.51",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "33.349998474121094",
+      "Adj Close": "33.35",
+      "Volume": "500"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "33.459999084472656",
+      "Adj Close": "33.46",
+      "Volume": "1800"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "33.75",
+      "Adj Close": "33.75",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "33.459999084472656",
+      "Adj Close": "33.46",
+      "Volume": "15100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "33.70000076293945",
+      "Adj Close": "33.7",
       "Volume": "100"
     }
   ]

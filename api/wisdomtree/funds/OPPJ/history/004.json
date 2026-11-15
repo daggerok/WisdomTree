@@ -2,7 +2,7 @@
   "ticker": "OPPJ",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3361,
+  "totalRows": 3366,
   "headers": [
     "Date",
     "Close",
@@ -2175,6 +2175,36 @@
       "Close": "53.86000061035156",
       "Adj Close": "53.86",
       "Volume": "70700"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "55.599998474121094",
+      "Adj Close": "55.6",
+      "Volume": "61400"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "55.779998779296875",
+      "Adj Close": "55.78",
+      "Volume": "37000"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "56.88999938964844",
+      "Adj Close": "56.89",
+      "Volume": "50600"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "56.959999084472656",
+      "Adj Close": "56.96",
+      "Volume": "24500"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "57.060001373291016",
+      "Adj Close": "57.06",
+      "Volume": "24000"
     }
   ]
 }

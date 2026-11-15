@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/BTCW",
@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$80.75",
-    "value": 80.748,
-    "asOfDate": "Oct 30 2026"
+    "display": "$72.77",
+    "value": 72.772,
+    "asOfDate": "Nov 13 2026"
   },
   "marketPrice": {
-    "display": "$81.06",
-    "value": 81.06,
-    "asOfDate": "Oct 30 2026"
+    "display": "$72.65",
+    "value": 72.65,
+    "asOfDate": "Nov 13 2026"
   },
   "premiumDiscount": {
-    "display": "0.38%",
-    "value": 0.384
+    "display": "-0.17%",
+    "value": -0.167
   },
   "aum": {
-    "display": "$153.42 M",
-    "value": 153421968,
-    "asOfDate": "Oct 30 2026",
+    "display": "$138.27 M",
+    "value": 138265840,
+    "asOfDate": "Nov 13 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -62,40 +62,40 @@
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": 5.92,
-      "mo1Text": "5.92%",
-      "qtd": 42.17,
-      "qtdText": "42.17%",
-      "ytd": -4.74,
-      "ytdText": "-4.74%",
-      "yr1": -27.2,
-      "yr1Text": "-27.20%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -8.21,
+      "mo1Text": "-8.21%",
+      "qtd": 21.88,
+      "qtdText": "21.88%",
+      "ytd": -12.56,
+      "ytdText": "-12.56%",
+      "yr1": -30.33,
+      "yr1Text": "-30.33%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 24.39,
-      "sinceInceptionText": "24.39%",
+      "sinceInception": 19.86,
+      "sinceInceptionText": "19.86%",
       "navReturns": {
-        "mo1": 5.88,
-        "mo1Text": "5.88%",
-        "qtd": 42.77,
-        "qtdText": "42.77%",
-        "ytd": -4.3,
-        "ytdText": "-4.30%",
-        "yr1": -26.8,
-        "yr1Text": "-26.80%",
+        "mo1": -8.69,
+        "mo1Text": "-8.69%",
+        "qtd": 21.37,
+        "qtdText": "21.37%",
+        "ytd": -12.61,
+        "ytdText": "-12.61%",
+        "yr1": -30.44,
+        "yr1Text": "-30.44%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 24.48,
-        "sinceInceptionText": "24.48%"
+        "sinceInception": 19.72,
+        "sinceInceptionText": "19.72%"
       },
       "indexReturns": null
     },
@@ -134,8 +134,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-10-30",
-    "asOf": "Oct 30 2026",
+    "asOfDate": "2026-11-13",
+    "asOf": "Nov 13 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -143,8 +143,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 709,
-    "asOf": "Nov 06 2026",
+    "totalRows": 714,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

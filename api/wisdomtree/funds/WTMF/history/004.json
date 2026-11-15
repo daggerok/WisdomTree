@@ -2,7 +2,7 @@
   "ticker": "WTMF",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3984,
+  "totalRows": 3989,
   "headers": [
     "Date",
     "Close",
@@ -5913,6 +5913,36 @@
       "Close": "38.779998779296875",
       "Adj Close": "38.78",
       "Volume": "173300"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "38.91999816894531",
+      "Adj Close": "38.92",
+      "Volume": "11100"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "38.95000076293945",
+      "Adj Close": "38.95",
+      "Volume": "23400"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "39.13999938964844",
+      "Adj Close": "39.14",
+      "Volume": "12400"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "39.04999923706055",
+      "Adj Close": "39.05",
+      "Volume": "20100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "39.02000045776367",
+      "Adj Close": "39.02",
+      "Volume": "64900"
     }
   ]
 }

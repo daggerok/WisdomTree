@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qsml",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qsml",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/QSML",
@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$34.39",
-    "value": 34.394,
-    "asOfDate": "Oct 30 2026"
+    "display": "$34.77",
+    "value": 34.765,
+    "asOfDate": "Nov 13 2026"
   },
   "marketPrice": {
-    "display": "$34.37",
-    "value": 34.369,
-    "asOfDate": "Oct 30 2026"
+    "display": "$34.73",
+    "value": 34.73,
+    "asOfDate": "Nov 13 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.071
+    "display": "-0.10%",
+    "value": -0.099
   },
   "aum": {
-    "display": "$12.90 M",
-    "value": 12897614,
-    "asOfDate": "Oct 30 2026",
+    "display": "$23.47 M",
+    "value": 23466054,
+    "asOfDate": "Nov 13 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -62,58 +62,58 @@
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -7.04,
-      "mo1Text": "-7.04%",
-      "qtd": -2.71,
-      "qtdText": "-2.71%",
-      "ytd": 12.37,
-      "ytdText": "12.37%",
-      "yr1": 15.02,
-      "yr1Text": "15.02%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": 6.37,
+      "mo1Text": "6.37%",
+      "qtd": 2.05,
+      "qtdText": "2.05%",
+      "ytd": 19.53,
+      "ytdText": "19.53%",
+      "yr1": 22.87,
+      "yr1Text": "22.87%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 10.79,
-      "sinceInceptionText": "10.79%",
+      "sinceInception": 12.94,
+      "sinceInceptionText": "12.94%",
       "navReturns": {
-        "mo1": -7.04,
-        "mo1Text": "-7.04%",
-        "qtd": -2.71,
-        "qtdText": "-2.71%",
-        "ytd": 12.41,
-        "ytdText": "12.41%",
-        "yr1": 15.01,
-        "yr1Text": "15.01%",
+        "mo1": 6.34,
+        "mo1Text": "6.34%",
+        "qtd": 2.02,
+        "qtdText": "2.02%",
+        "ytd": 19.53,
+        "ytdText": "19.53%",
+        "yr1": 22.87,
+        "yr1Text": "22.87%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 10.79,
-        "sinceInceptionText": "10.79%"
+        "sinceInception": 12.92,
+        "sinceInceptionText": "12.92%"
       },
       "indexReturns": {
-        "mo1": -7.02,
-        "mo1Text": "-7.02%",
-        "qtd": -2.63,
-        "qtdText": "-2.63%",
-        "ytd": 12.73,
-        "ytdText": "12.73%",
-        "yr1": 15.49,
-        "yr1Text": "15.49%",
+        "mo1": 6.36,
+        "mo1Text": "6.36%",
+        "qtd": 2.09,
+        "qtdText": "2.09%",
+        "ytd": 19.9,
+        "ytdText": "19.90%",
+        "yr1": 23.35,
+        "yr1Text": "23.35%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 11.22,
-        "sinceInceptionText": "11.22%"
+        "sinceInception": 13.35,
+        "sinceInceptionText": "13.35%"
       }
     },
     "quarterEnd": {
@@ -205,8 +205,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 700,
-    "asOf": "Nov 06 2026",
+    "totalRows": 705,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

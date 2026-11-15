@@ -2,7 +2,7 @@
   "ticker": "EMCB",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3689,
+  "totalRows": 3694,
   "headers": [
     "Date",
     "Close",
@@ -4143,6 +4143,36 @@
       "Close": "64.05999755859375",
       "Adj Close": "64.06",
       "Volume": "5000"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "64.26000213623047",
+      "Adj Close": "64.26",
+      "Volume": "1600"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "64.02999877929688",
+      "Adj Close": "64.03",
+      "Volume": "800"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "64.12000274658203",
+      "Adj Close": "64.12",
+      "Volume": "3400"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "63.939998626708984",
+      "Adj Close": "63.94",
+      "Volume": "1100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "63.7599983215332",
+      "Adj Close": "63.76",
+      "Volume": "1700"
     }
   ]
 }

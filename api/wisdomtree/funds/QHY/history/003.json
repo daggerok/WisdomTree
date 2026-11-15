@@ -2,7 +2,7 @@
   "ticker": "QHY",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2649,
+  "totalRows": 2654,
   "headers": [
     "Date",
     "Close",
@@ -3903,6 +3903,36 @@
       "Close": "44.65999984741211",
       "Adj Close": "44.66",
       "Volume": "17200"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "44.75",
+      "Adj Close": "44.75",
+      "Volume": "14200"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "44.52000045776367",
+      "Adj Close": "44.52",
+      "Volume": "39200"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "44.595001220703125",
+      "Adj Close": "44.6",
+      "Volume": "17700"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "44.369998931884766",
+      "Adj Close": "44.37",
+      "Volume": "21200"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "44.33000183105469",
+      "Adj Close": "44.33",
+      "Volume": "19900"
     }
   ]
 }

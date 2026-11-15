@@ -2,7 +2,7 @@
   "ticker": "NTSD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 162,
+  "totalRows": 167,
   "headers": [
     "Date",
     "Close",
@@ -981,6 +981,36 @@
       "Close": "44.68000030517578",
       "Adj Close": "44.68",
       "Volume": "10900"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "46.52000045776367",
+      "Adj Close": "46.52",
+      "Volume": "12200"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "46.13999938964844",
+      "Adj Close": "46.14",
+      "Volume": "2600"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "46.79999923706055",
+      "Adj Close": "46.8",
+      "Volume": "9100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "46.560001373291016",
+      "Adj Close": "46.56",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "46.459999084472656",
+      "Adj Close": "46.46",
+      "Volume": "10400"
     }
   ]
 }

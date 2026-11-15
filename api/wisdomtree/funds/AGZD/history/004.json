@@ -2,7 +2,7 @@
   "ticker": "AGZD",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3241,
+  "totalRows": 3246,
   "headers": [
     "Date",
     "Close",
@@ -1455,6 +1455,36 @@
       "Close": "22.530000686645508",
       "Adj Close": "22.53",
       "Volume": "132800"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "22.56999969482422",
+      "Adj Close": "22.57",
+      "Volume": "251800"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "22.610000610351562",
+      "Adj Close": "22.61",
+      "Volume": "396500"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "22.6299991607666",
+      "Adj Close": "22.63",
+      "Volume": "855300"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "22.579999923706055",
+      "Adj Close": "22.58",
+      "Volume": "578800"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "22.6200008392334",
+      "Adj Close": "22.62",
+      "Volume": "78200"
     }
   ]
 }

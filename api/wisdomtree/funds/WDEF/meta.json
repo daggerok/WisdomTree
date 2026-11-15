@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdef",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdef",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/WDEF",
@@ -30,90 +30,90 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$29.17",
-    "value": 29.174,
-    "asOfDate": "Oct 30 2026"
+    "display": "$26.80",
+    "value": 26.797,
+    "asOfDate": "Nov 13 2026"
   },
   "marketPrice": {
-    "display": "$29.04",
-    "value": 29.04,
-    "asOfDate": "Oct 30 2026"
+    "display": "$26.71",
+    "value": 26.71,
+    "asOfDate": "Nov 13 2026"
   },
   "premiumDiscount": {
-    "display": "-0.46%",
-    "value": -0.46
+    "display": "-0.33%",
+    "value": -0.327
   },
   "aum": {
-    "display": "$83.87 M",
-    "value": 83874152,
-    "asOfDate": "Oct 30 2026",
+    "display": "$75.03 M",
+    "value": 75032312,
+    "asOfDate": "Nov 13 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.07,
-    "dividendYieldText": "0.07%",
+    "dividendYield": 0.08,
+    "dividendYieldText": "0.08%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.07,
-    "secYield": 0.62,
-    "secYieldText": "0.62%",
+    "secYield": 0.6,
+    "secYieldText": "0.60%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -8.54,
-      "mo1Text": "-8.54%",
-      "qtd": 2.68,
-      "qtdText": "2.68%",
-      "ytd": -4.05,
-      "ytdText": "-4.05%",
-      "yr1": -16.73,
-      "yr1Text": "-16.73%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": 3.83,
+      "mo1Text": "3.83%",
+      "qtd": -4.22,
+      "qtdText": "-4.22%",
+      "ytd": -0.38,
+      "ytdText": "-0.38%",
+      "yr1": -4.94,
+      "yr1Text": "-4.94%",
       "yr3": null,
       "yr3Text": "—",
       "yr5": null,
       "yr5Text": "—",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": -4.47,
-      "sinceInceptionText": "-4.47%",
+      "sinceInception": -1.36,
+      "sinceInceptionText": "-1.36%",
       "navReturns": {
-        "mo1": -8.22,
-        "mo1Text": "-8.22%",
-        "qtd": 3.08,
-        "qtdText": "3.08%",
-        "ytd": -3.2,
-        "ytdText": "-3.20%",
-        "yr1": -15.69,
-        "yr1Text": "-15.69%",
+        "mo1": 3.7,
+        "mo1Text": "3.70%",
+        "qtd": -3.25,
+        "qtdText": "-3.25%",
+        "ytd": 0.38,
+        "ytdText": "0.38%",
+        "yr1": -4.48,
+        "yr1Text": "-4.48%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": -3.99,
-        "sinceInceptionText": "-3.99%"
+        "sinceInception": -0.99,
+        "sinceInceptionText": "-0.99%"
       },
       "indexReturns": {
-        "mo1": -8.18,
-        "mo1Text": "-8.18%",
-        "qtd": 3.22,
-        "qtdText": "3.22%",
-        "ytd": -2.93,
-        "ytdText": "-2.93%",
-        "yr1": -15.36,
-        "yr1Text": "-15.36%",
+        "mo1": 3.75,
+        "mo1Text": "3.75%",
+        "qtd": -3.14,
+        "qtdText": "-3.14%",
+        "ytd": 0.71,
+        "ytdText": "0.71%",
+        "yr1": -4.07,
+        "yr1Text": "-4.07%",
         "yr3": null,
         "yr3Text": "—",
         "yr5": null,
         "yr5Text": "—",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": -3.54,
-        "sinceInceptionText": "-3.54%"
+        "sinceInception": -0.52,
+        "sinceInceptionText": "-0.52%"
       }
     },
     "quarterEnd": {
@@ -184,8 +184,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 331,
-    "asOf": "Nov 06 2026",
+    "totalRows": 336,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

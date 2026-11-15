@@ -2,7 +2,7 @@
   "ticker": "DWM",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5131,
+  "totalRows": 5136,
   "headers": [
     "Date",
     "Close",
@@ -795,6 +795,36 @@
       "Close": "72.37000274658203",
       "Adj Close": "72.37",
       "Volume": "10100"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "74.36000061035156",
+      "Adj Close": "74.36",
+      "Volume": "12600"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "74.02999877929688",
+      "Adj Close": "74.03",
+      "Volume": "7400"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "74.12999725341797",
+      "Adj Close": "74.13",
+      "Volume": "4500"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "73.69000244140625",
+      "Adj Close": "73.69",
+      "Volume": "8000"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "73.86000061035156",
+      "Adj Close": "73.86",
+      "Volume": "5900"
     }
   ]
 }

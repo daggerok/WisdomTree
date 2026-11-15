@@ -2,7 +2,7 @@
   "ticker": "WTAI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1233,
+  "totalRows": 1238,
   "headers": [
     "Date",
     "Close",
@@ -1407,6 +1407,36 @@
       "Close": "31.530000686645508",
       "Adj Close": "31.53",
       "Volume": "572900"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "33.529998779296875",
+      "Adj Close": "33.53",
+      "Volume": "434000"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "33.150001525878906",
+      "Adj Close": "33.15",
+      "Volume": "206000"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "34.900001525878906",
+      "Adj Close": "34.9",
+      "Volume": "258100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "34.4900016784668",
+      "Adj Close": "34.49",
+      "Volume": "349500"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "33.599998474121094",
+      "Adj Close": "33.6",
+      "Volume": "250200"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DTD",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5131,
+  "totalRows": 5136,
   "headers": [
     "Date",
     "Close",
@@ -795,6 +795,36 @@
       "Close": "94.75",
       "Adj Close": "94.75",
       "Volume": "21100"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "96.56999969482422",
+      "Adj Close": "96.57",
+      "Volume": "13300"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "96.54000091552734",
+      "Adj Close": "96.54",
+      "Volume": "10900"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "97.27999877929688",
+      "Adj Close": "97.28",
+      "Volume": "12300"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "96.93000030517578",
+      "Adj Close": "96.93",
+      "Volume": "13200"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "97.05999755859375",
+      "Adj Close": "97.06",
+      "Volume": "10900"
     }
   ]
 }

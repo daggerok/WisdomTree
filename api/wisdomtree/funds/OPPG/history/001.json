@@ -2,7 +2,7 @@
   "ticker": "OPPG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 338,
+  "totalRows": 343,
   "headers": [
     "Date",
     "Close",
@@ -2037,6 +2037,36 @@
       "Close": "36.74100112915039",
       "Adj Close": "36.74",
       "Volume": "1000"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "37.6879997253418",
+      "Adj Close": "37.69",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "37.540000915527344",
+      "Adj Close": "37.54",
+      "Volume": "698600"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "37.52399826049805",
+      "Adj Close": "37.52",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "37.125999450683594",
+      "Adj Close": "37.13",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "37.310001373291016",
+      "Adj Close": "37.31",
+      "Volume": "2300"
     }
   ]
 }

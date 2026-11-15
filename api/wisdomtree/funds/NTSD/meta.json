@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSD",
@@ -23,30 +23,30 @@
     "indexTicker": null
   },
   "expenseRatio": {
-    "display": "0.35%",
-    "value": 0.35,
-    "grossDisplay": "0.35%",
-    "grossValue": 0.35,
+    "display": "0.36%",
+    "value": 0.36,
+    "grossDisplay": "0.36%",
+    "grossValue": 0.36,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$46.12",
-    "value": 46.117,
-    "asOfDate": "Oct 30 2026"
+    "display": "$46.45",
+    "value": 46.445,
+    "asOfDate": "Nov 13 2026"
   },
   "marketPrice": {
-    "display": "$46.07",
-    "value": 46.07,
-    "asOfDate": "Oct 30 2026"
+    "display": "$46.46",
+    "value": 46.463,
+    "asOfDate": "Nov 13 2026"
   },
   "premiumDiscount": {
-    "display": "-0.10%",
-    "value": -0.103
+    "display": "0.04%",
+    "value": 0.04
   },
   "aum": {
-    "display": "$51.88 M",
-    "value": 51882044,
-    "asOfDate": "Oct 30 2026",
+    "display": "$52.25 M",
+    "value": 52250464,
+    "asOfDate": "Nov 13 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -62,11 +62,11 @@
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -1.87,
-      "mo1Text": "-1.87%",
-      "qtd": 1.88,
-      "qtdText": "1.88%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": -1.45,
+      "mo1Text": "-1.45%",
+      "qtd": -0.12,
+      "qtdText": "-0.12%",
       "ytd": null,
       "ytdText": "—",
       "yr1": null,
@@ -80,10 +80,10 @@
       "sinceInception": null,
       "sinceInceptionText": "—",
       "navReturns": {
-        "mo1": -1.96,
-        "mo1Text": "-1.96%",
-        "qtd": 1.96,
-        "qtdText": "1.96%",
+        "mo1": -1.52,
+        "mo1Text": "-1.52%",
+        "qtd": -0.15,
+        "qtdText": "-0.15%",
         "ytd": null,
         "ytdText": "—",
         "yr1": null,
@@ -172,8 +172,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 162,
-    "asOf": "Nov 06 2026",
+    "totalRows": 167,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

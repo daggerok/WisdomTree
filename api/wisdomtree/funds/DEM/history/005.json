@@ -2,7 +2,7 @@
   "ticker": "DEM",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4862,
+  "totalRows": 4867,
   "headers": [
     "Date",
     "Close",
@@ -5181,6 +5181,36 @@
       "Close": "52.68000030517578",
       "Adj Close": "52.68",
       "Volume": "198500"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "53.54999923706055",
+      "Adj Close": "53.55",
+      "Volume": "145600"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "52.939998626708984",
+      "Adj Close": "52.94",
+      "Volume": "190400"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "53.09000015258789",
+      "Adj Close": "53.09",
+      "Volume": "242400"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "52.81999969482422",
+      "Adj Close": "52.82",
+      "Volume": "168900"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "53.09000015258789",
+      "Adj Close": "53.09",
+      "Volume": "201400"
     }
   ]
 }

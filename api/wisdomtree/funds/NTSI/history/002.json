@@ -2,7 +2,7 @@
   "ticker": "NTSI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1373,
+  "totalRows": 1378,
   "headers": [
     "Date",
     "Close",
@@ -2247,6 +2247,36 @@
       "Close": "46.029998779296875",
       "Adj Close": "46.03",
       "Volume": "8100"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "47.183998107910156",
+      "Adj Close": "47.18",
+      "Volume": "38700"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "46.65999984741211",
+      "Adj Close": "46.66",
+      "Volume": "25700"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "46.849998474121094",
+      "Adj Close": "46.85",
+      "Volume": "13000"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "46.46500015258789",
+      "Adj Close": "46.47",
+      "Volume": "8400"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "46.48500061035156",
+      "Adj Close": "46.49",
+      "Volume": "20000"
     }
   ]
 }

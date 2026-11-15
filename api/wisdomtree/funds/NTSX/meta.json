@@ -6,8 +6,8 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsx",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsx",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
-    "productPageAsOf": "Sep 30 2026",
+    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/NTSX",
@@ -23,79 +23,79 @@
     "indexTicker": null
   },
   "expenseRatio": {
-    "display": "0.2%",
-    "value": 0.2,
-    "grossDisplay": "0.2%",
-    "grossValue": 0.2,
+    "display": "0.22%",
+    "value": 0.22,
+    "grossDisplay": "0.22%",
+    "grossValue": 0.22,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$58.77",
-    "value": 58.769,
-    "asOfDate": "Oct 30 2026"
+    "display": "$58.28",
+    "value": 58.277,
+    "asOfDate": "Nov 13 2026"
   },
   "marketPrice": {
-    "display": "$58.84",
-    "value": 58.84,
-    "asOfDate": "Oct 30 2026"
+    "display": "$58.24",
+    "value": 58.24,
+    "asOfDate": "Nov 13 2026"
   },
   "premiumDiscount": {
-    "display": "0.12%",
-    "value": 0.121
+    "display": "-0.06%",
+    "value": -0.064
   },
   "aum": {
     "display": "$1.34 B",
-    "value": 1342864256,
-    "asOfDate": "Oct 30 2026",
+    "value": 1337464832,
+    "asOfDate": "Nov 13 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.07,
-    "dividendYieldText": "1.07%",
+    "dividendYield": 1.08,
+    "dividendYieldText": "1.08%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.04,
-    "secYield": 1.02,
-    "secYieldText": "1.02%",
+    "distributionRate": 1.06,
+    "secYield": 1.06,
+    "secYieldText": "1.06%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
-      "asOfDate": "Sep 30 2026",
-      "mo1": -2.48,
-      "mo1Text": "-2.48%",
-      "qtd": -0.74,
-      "qtdText": "-0.74%",
-      "ytd": 7.29,
-      "ytdText": "7.29%",
-      "yr1": 9.52,
-      "yr1Text": "9.52%",
-      "yr3": 20.13,
-      "yr3Text": "20.13%",
-      "yr5": 8.74,
-      "yr5Text": "8.74%",
+      "asOfDate": "Oct 31 2026",
+      "mo1": 0.69,
+      "mo1Text": "0.69%",
+      "qtd": 0.81,
+      "qtdText": "0.81%",
+      "ytd": 8.03,
+      "ytdText": "8.03%",
+      "yr1": 8,
+      "yr1Text": "8.00%",
+      "yr3": 21.67,
+      "yr3Text": "21.67%",
+      "yr5": 7.64,
+      "yr5Text": "7.64%",
       "yr10": null,
       "yr10Text": "—",
-      "sinceInception": 12.27,
-      "sinceInceptionText": "12.27%",
+      "sinceInception": 12.23,
+      "sinceInceptionText": "12.23%",
       "navReturns": {
-        "mo1": -2.22,
-        "mo1Text": "-2.22%",
-        "qtd": -0.79,
-        "qtdText": "-0.79%",
-        "ytd": 7.23,
-        "ytdText": "7.23%",
-        "yr1": 9.71,
-        "yr1Text": "9.71%",
-        "yr3": 20.16,
-        "yr3Text": "20.16%",
-        "yr5": 8.84,
-        "yr5Text": "8.84%",
+        "mo1": 0.62,
+        "mo1Text": "0.62%",
+        "qtd": 0.97,
+        "qtdText": "0.97%",
+        "ytd": 7.89,
+        "ytdText": "7.89%",
+        "yr1": 7.88,
+        "yr1Text": "7.88%",
+        "yr3": 21.64,
+        "yr3Text": "21.64%",
+        "yr5": 7.66,
+        "yr5Text": "7.66%",
         "yr10": null,
         "yr10Text": "—",
-        "sinceInception": 12.28,
-        "sinceInceptionText": "12.28%"
+        "sinceInception": 12.23,
+        "sinceInceptionText": "12.23%"
       },
       "indexReturns": null
     },
@@ -504,8 +504,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2078,
-    "asOf": "Nov 06 2026",
+    "totalRows": 2083,
+    "asOf": "Nov 13 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

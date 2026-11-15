@@ -2,7 +2,7 @@
   "ticker": "QIG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2649,
+  "totalRows": 2654,
   "headers": [
     "Date",
     "Close",
@@ -3903,6 +3903,36 @@
       "Close": "42.90999984741211",
       "Adj Close": "42.91",
       "Volume": "26300"
+    },
+    {
+      "Date": "Nov 09 2026",
+      "Close": "42.95899963378906",
+      "Adj Close": "42.96",
+      "Volume": "200"
+    },
+    {
+      "Date": "Nov 10 2026",
+      "Close": "42.625",
+      "Adj Close": "42.63",
+      "Volume": "1600"
+    },
+    {
+      "Date": "Nov 11 2026",
+      "Close": "42.665000915527344",
+      "Adj Close": "42.67",
+      "Volume": "1100"
+    },
+    {
+      "Date": "Nov 12 2026",
+      "Close": "42.3650016784668",
+      "Adj Close": "42.37",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 13 2026",
+      "Close": "42.56999969482422",
+      "Adj Close": "42.57",
+      "Volume": "23300"
     }
   ]
 }
