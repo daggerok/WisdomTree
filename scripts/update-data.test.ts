@@ -483,10 +483,16 @@ const fundListRows = (tickers: string[]): any[] => tickers.map((t) => ({
 /** As r.jina.ai returns it for Accept: application/json. */
 const fundListFor = (tickers: string[]): string => JSON.stringify({ code: 200, status: 20000, data: { title: '', url: 'https://dataspanapi.wisdomtree.com/fundlist/data', content: JSON.stringify(fundListRows(tickers)) } });
 
-function chartPayload(days = 400, last = Date.UTC(2026, 8, 25)): any {
+const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y'];
+
+function chartPayload(days = 400, last = Date.UTC(2026, 8, 25), dividend = false): any {
   const timestamps = Array.from({ length: days }, (_, i) => Math.floor((last - (days - 1 - i) * 86_400_000) / 1000));
   const close = timestamps.map((_, i) => 100 + i * 0.1);
-  return { chart: { result: [{ timestamp: timestamps, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends: {} }, meta: { exchangeName: 'NGM', regularMarketPrice: 140, regularMarketTime: Math.floor(last / 1000) } }] } };
+  // the dividends block asks for its own chart (includePrePost=false): one 0.25 event on the last bar, listing on the first bar
+  const lastBar = timestamps[timestamps.length - 1];
+  const dividends = dividend ? { [String(lastBar)]: { amount: 0.25, date: lastBar } } : {};
+  const meta = { exchangeName: 'NGM', regularMarketPrice: 140, regularMarketTime: Math.floor(last / 1000), ...(dividend ? { dataGranularity: '1d', firstTradeDate: timestamps[0] } : {}) };
+  return { chart: { result: [{ timestamp: timestamps, indicators: { quote: [{ close, volume: close.map(() => 1000) }], adjclose: [{ adjclose: close }] }, events: { dividends }, meta }] } };
 }
 
 /** SEC world shared by every EDGAR test (each run starts with a fresh SEC state, so a test may change it). */
@@ -514,7 +520,7 @@ class Scenario {
     if (url.startsWith('https://r.jina.ai/https://dataspanapi.wisdomtree.com/')) return new Response(fundListFor(this.tickers));
     if (url.startsWith('https://r.jina.ai/')) return url.endsWith('/us/products') ? new Response(catalogFor(this.tickers)) : new Response(productPage(url.split('/').pop()!.toUpperCase()));
     if (url.includes('wisdomtree.com')) return new Response('blocked', { status: 403 });
-    if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload()));
+    if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload(400, undefined, url.includes('includePrePost=false'))));
     return new Response('nope', { status: 404 });
   };
   async run(env: Record<string, string> = {}, overrides: Record<string, unknown> = {}, deadlineMs?: number): Promise<void> {
@@ -561,7 +567,16 @@ describe('pipeline', () => {
     const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
     for (const f of [row, ...rest]) expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
-    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-11, -2)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-17, -8)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+    // the dividend keys (shared dividends block): the mocked 0.25 event on the last bar is the trailing sum, the rest is unknown
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-8, -2)).toEqual(DIVIDEND_KEYS);
+    for (const f of [row, ...rest]) expect(DIVIDEND_KEYS.map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null]);
+    // one dividend chart per updated fund (it differs from the history chart by includePrePost=false), none for an unselected one
+    const dividendTickers = (from: number) => s.calls.slice(from).filter((call) => /finance\.yahoo\.com.*includePrePost=false/.test(call.url)).map((call) => /chart\/(\w+)\?/.exec(call.url)![1]).sort();
+    expect(dividendTickers(0)).toEqual(['AAA', 'BBB', 'CCC']);
+    const seen = s.calls.length;
+    await s.run({ TICKERS: 'AAA' });
+    expect(dividendTickers(seen)).toEqual(['AAA']);
     expect([typeof row.metrics.athPrice, row.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
@@ -976,7 +991,7 @@ describe('pipeline 7', () => {
     const base = s.handler;
     const listing = (inceptionDt: string) => JSON.stringify({ data: { content: JSON.stringify(fundListRows(['AAA']).map((row) => ({ ...row, inceptionDt }))) } });
     let inception = '2025-09-11';
-    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(380))) : base(url, init));
+    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(380, undefined, url.includes('includePrePost=false')))) : base(url, init));
     await s.run();
     const metrics = s.index().funds[0].metrics;
     expect([metrics.ytd, metrics.tr1y, metrics.cagr3y, metrics.siAnn, metrics.performanceAsOf]).toEqual([2.59, null, null, null, '2026-08-31']);
@@ -1010,7 +1025,7 @@ describe('pipeline 7', () => {
     // one of a new day that does not join keeps the fund as published
     await s.run();
     expect(s.snapshot()).toEqual(first);
-    s.handler = (url, init) => (url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(1, Date.UTC(2026, 9, 25)))) : base(url, init));
+    s.handler = (url, init) => (url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(1, Date.UTC(2026, 9, 25), url.includes('includePrePost=false')))) : base(url, init));
     await s.run();
     expect(s.meta('AAA').history.totalRows).toBe(400);
   });
@@ -1092,7 +1107,7 @@ describe('network', () => {
 
   test('a reachable direct page is used and the proxy is never called', async () => {
     const s = new Scenario();
-    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.startsWith('https://dataspanapi.wisdomtree.com/') ? new Response(JSON.stringify(fundListRows(s.tickers))) : url.includes('wisdomtree.com') ? new Response(productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload())) : new Response('no', { status: 404 }));
+    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.startsWith('https://dataspanapi.wisdomtree.com/') ? new Response(JSON.stringify(fundListRows(s.tickers))) : url.includes('wisdomtree.com') ? new Response(productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload(400, undefined, url.includes('includePrePost=false')))) : new Response('no', { status: 404 }));
     await s.run();
     expect(s.calls.some((c) => c.url.startsWith('https://r.jina.ai/'))).toBe(false);
     expect(s.meta('AAA').source.productPageStatus).toContain('directly');
