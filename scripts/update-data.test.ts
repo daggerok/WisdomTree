@@ -483,7 +483,11 @@ const fundListRows = (tickers: string[]): any[] => tickers.map((t) => ({
 /** As r.jina.ai returns it for Accept: application/json. */
 const fundListFor = (tickers: string[]): string => JSON.stringify({ code: 200, status: 20000, data: { title: '', url: 'https://dataspanapi.wisdomtree.com/fundlist/data', content: JSON.stringify(fundListRows(tickers)) } });
 
-const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y'];
+const DIVIDEND_KEYS = ['dividendRate', 'dividendGrowth', 'dividendGrowth3y', 'dividendGrowth5y', 'dividendStreak', 'dividendCut10y', 'paymentsPerYear', 'payFrequency'];
+// the 32 benchmark keys against SPY and QQQ sit before the two tail keys (shared benchmark block)
+const BENCHMARK_KEYS = ['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxDrawdown1y', 'maxDrawdown3y', 'maxDrawdown5y', 'maxDrawdown10y',
+  'vsSpy1y', 'vsSpy3y', 'vsSpy5y', 'vsSpy10y', 'beta1ySpy', 'corr1ySpy', 'upCapture3ySpy', 'downCapture3ySpy', 'relStrength3mSpy', 'stressReturnSpy', 'stressBasisSpy',
+  'vsQqq1y', 'vsQqq3y', 'vsQqq5y', 'vsQqq10y', 'beta1yQqq', 'corr1yQqq', 'upCapture3yQqq', 'downCapture3yQqq', 'relStrength3mQqq', 'stressReturnQqq', 'stressBasisQqq', 'benchmarkAsOf'];
 
 function chartPayload(days = 400, last = Date.UTC(2026, 8, 25), dividend = false): any {
   const timestamps = Array.from({ length: days }, (_, i) => Math.floor((last - (days - 1 - i) * 86_400_000) / 1000));
@@ -567,16 +571,19 @@ describe('pipeline', () => {
     const RANGE_KEYS = ['week52Low', 'week52High', 'range52w', 'range52wClose', 'range52wAsOf', 'range52wSince', 'range52wBasis'];
     for (const f of [row, ...rest]) expect(Object.keys(f.metrics)).toEqual(expect.arrayContaining(RANGE_KEYS));
     // the swing keys from the Close column of the same pages (shared swing block): ATH and its basis from the first close
-    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-17, -8)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-51, -42)).toEqual(['pctFrom52wHigh', 'athPrice', 'athDate', 'athBasis', 'pctFromAth', 'volatility1y', 'sigmaFromMean60d', 'high60d', 'low60d']);
     // the dividend keys (shared dividends block): the mocked 0.25 event on the last bar is the trailing sum, the rest is unknown
-    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-8, -2)).toEqual(DIVIDEND_KEYS);
-    for (const f of [row, ...rest]) expect(DIVIDEND_KEYS.map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null]);
-    // one dividend chart per updated fund (it differs from the history chart by includePrePost=false), none for an unselected one
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-42, -34)).toEqual(DIVIDEND_KEYS);
+    for (const f of [row, ...rest]) expect(Object.keys(f.metrics).slice(-34, -2)).toEqual(BENCHMARK_KEYS);
+    for (const f of [row, ...rest]) expect(DIVIDEND_KEYS.map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null, 1, 'annual']);
+    // the mock gives SPY and QQQ the same bars as every fund: the fund equals both benchmarks (no difference, beta and correlation 1)
+    expect([row.metrics.vsSpy1y, row.metrics.vsQqq1y, row.metrics.beta1ySpy, row.metrics.corr1yQqq, row.metrics.relStrength3mSpy, typeof row.metrics.benchmarkAsOf]).toEqual([0, 0, 1, 1, 0, 'string']);
+    // one chart per updated fund feeds swing, dividends and benchmark; SPY and QQQ are read once more per run (it differs from the history chart by includePrePost=false), none for an unselected one
     const dividendTickers = (from: number) => s.calls.slice(from).filter((call) => /finance\.yahoo\.com.*includePrePost=false/.test(call.url)).map((call) => /chart\/(\w+)\?/.exec(call.url)![1]).sort();
-    expect(dividendTickers(0)).toEqual(['AAA', 'BBB', 'CCC']);
+    expect(dividendTickers(0)).toEqual(['AAA', 'BBB', 'CCC', 'QQQ', 'SPY']);
     const seen = s.calls.length;
     await s.run({ TICKERS: 'AAA' });
-    expect(dividendTickers(seen)).toEqual(['AAA']);
+    expect(dividendTickers(seen)).toEqual(['AAA', 'QQQ', 'SPY']);
     expect([typeof row.metrics.athPrice, row.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
