@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/mtgp",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/mtgp",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.082
   },
   "aum": {
-    "display": "$71.97 M",
-    "value": 71970272,
-    "asOfDate": "Nov 13 2026",
+    "display": "$72.24 M",
+    "value": 72239920,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.72,
-    "dividendYieldText": "4.72%",
+    "dividendYield": 4.7,
+    "dividendYieldText": "4.70%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 5.94,
@@ -981,8 +981,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1744,
-    "asOf": "Nov 13 2026",
+    "totalRows": 1747,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

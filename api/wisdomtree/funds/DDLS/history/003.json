@@ -2,7 +2,7 @@
   "ticker": "DDLS",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2655,
+  "totalRows": 2658,
   "headers": [
     "Date",
     "Close",
@@ -3939,6 +3939,24 @@
       "Close": "44.9379997253418",
       "Adj Close": "44.94",
       "Volume": "21900"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "44.32899856567383",
+      "Adj Close": "44.33",
+      "Volume": "8700"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "43.81999969482422",
+      "Adj Close": "43.82",
+      "Volume": "7600"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "43.68000030517578",
+      "Adj Close": "43.68",
+      "Volume": "12700"
     }
   ]
 }

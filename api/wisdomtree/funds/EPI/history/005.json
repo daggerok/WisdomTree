@@ -2,7 +2,7 @@
   "ticker": "EPI",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4711,
+  "totalRows": 4714,
   "headers": [
     "Date",
     "Close",
@@ -4275,6 +4275,24 @@
       "Close": "44.130001068115234",
       "Adj Close": "44.13",
       "Volume": "264400"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "44.119998931884766",
+      "Adj Close": "44.12",
+      "Volume": "381800"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "44.43000030517578",
+      "Adj Close": "44.43",
+      "Volume": "567500"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "44.119998931884766",
+      "Adj Close": "44.12",
+      "Volume": "553900"
     }
   ]
 }

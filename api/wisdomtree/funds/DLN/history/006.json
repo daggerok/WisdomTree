@@ -2,7 +2,7 @@
   "ticker": "DLN",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5136,
+  "totalRows": 5139,
   "headers": [
     "Date",
     "Close",
@@ -825,6 +825,24 @@
       "Close": "100.7300033569336",
       "Adj Close": "100.73",
       "Volume": "116100"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "99.51000213623047",
+      "Adj Close": "99.51",
+      "Volume": "92400"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "98.3499984741211",
+      "Adj Close": "98.35",
+      "Volume": "121500"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "97.41999816894531",
+      "Adj Close": "97.42",
+      "Volume": "102300"
     }
   ]
 }

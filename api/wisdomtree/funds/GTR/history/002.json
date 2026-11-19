@@ -2,7 +2,7 @@
   "ticker": "GTR",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1282,
+  "totalRows": 1285,
   "headers": [
     "Date",
     "Close",
@@ -1701,6 +1701,24 @@
       "Close": "27.110000610351562",
       "Adj Close": "27.11",
       "Volume": "8500"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "26.600000381469727",
+      "Adj Close": "26.6",
+      "Volume": "3700"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "26.31999969482422",
+      "Adj Close": "26.32",
+      "Volume": "1900"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "26.267000198364258",
+      "Adj Close": "26.27",
+      "Volume": "3400"
     }
   ]
 }

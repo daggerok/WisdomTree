@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$72.77",
-    "value": 72.772,
-    "asOfDate": "Nov 13 2026"
+    "display": "$66.04",
+    "value": 66.042,
+    "asOfDate": "Nov 18 2026"
   },
   "marketPrice": {
-    "display": "$72.65",
-    "value": 72.65,
-    "asOfDate": "Nov 13 2026"
+    "display": "$67.45",
+    "value": 67.45,
+    "asOfDate": "Nov 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.17%",
-    "value": -0.167
+    "display": "0.06%",
+    "value": 0.063
   },
   "aum": {
-    "display": "$138.27 M",
-    "value": 138265840,
-    "asOfDate": "Nov 13 2026",
+    "display": "$128.07 M",
+    "value": 128074424,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -134,8 +134,8 @@
     ],
     "pageSize": 250,
     "totalRows": 1,
-    "asOfDate": "2026-11-13",
-    "asOf": "Nov 13 2026",
+    "asOfDate": "2026-11-18",
+    "asOf": "Nov 18 2026",
     "source": "WisdomTree product page top holdings (issuer fallback; full N-PORT filing unavailable)"
   },
   "history": {
@@ -143,8 +143,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 714,
-    "asOf": "Nov 13 2026",
+    "totalRows": 717,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

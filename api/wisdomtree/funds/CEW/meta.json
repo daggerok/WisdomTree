@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/cew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/cew",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.203
   },
   "aum": {
-    "display": "$19.47 M",
-    "value": 19474482,
-    "asOfDate": "Nov 13 2026",
+    "display": "$19.46 M",
+    "value": 19457406,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.4,
-    "dividendYieldText": "2.40%",
+    "dividendYield": 2.41,
+    "dividendYieldText": "2.41%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.39,
@@ -254,8 +254,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4392,
-    "asOf": "Nov 13 2026",
+    "totalRows": 4395,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "GDT",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 206,
+  "totalRows": 209,
   "headers": [
     "Date",
     "Close",
@@ -1245,6 +1245,24 @@
       "Close": "31.48900032043457",
       "Adj Close": "31.49",
       "Volume": "1400"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "31.309999465942383",
+      "Adj Close": "31.31",
+      "Volume": "300"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "31.308000564575195",
+      "Adj Close": "31.31",
+      "Volume": "400"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "30.400999069213867",
+      "Adj Close": "30.4",
+      "Volume": "600"
     }
   ]
 }

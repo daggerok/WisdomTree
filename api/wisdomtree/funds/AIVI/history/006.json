@@ -2,7 +2,7 @@
   "ticker": "AIVI",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5136,
+  "totalRows": 5139,
   "headers": [
     "Date",
     "Close",
@@ -825,6 +825,24 @@
       "Close": "58.47999954223633",
       "Adj Close": "58.48",
       "Volume": "300"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "57.869998931884766",
+      "Adj Close": "57.87",
+      "Volume": "900"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "57.209999084472656",
+      "Adj Close": "57.21",
+      "Volume": "100"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "56.43000030517578",
+      "Adj Close": "56.43",
+      "Volume": "3700"
     }
   ]
 }

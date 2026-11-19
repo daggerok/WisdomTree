@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdgf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdgf",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.134
   },
   "aum": {
-    "display": "$5.14 M",
-    "value": 5143153,
-    "asOfDate": "Nov 13 2026",
+    "display": "$5.02 M",
+    "value": 5019748,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -184,8 +184,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 296,
-    "asOf": "Nov 13 2026",
+    "totalRows": 299,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dem",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dem",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.241
   },
   "aum": {
-    "display": "$3.99 B",
-    "value": 3988059136,
-    "asOfDate": "Nov 13 2026",
+    "display": "$3.94 B",
+    "value": 3937294080,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.17,
-    "dividendYieldText": "4.17%",
+    "dividendYield": 4.26,
+    "dividendYieldText": "4.26%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 5.77,
@@ -890,8 +890,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4867,
-    "asOf": "Nov 13 2026",
+    "totalRows": 4870,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

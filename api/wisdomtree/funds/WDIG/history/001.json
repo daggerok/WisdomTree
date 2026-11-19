@@ -2,7 +2,7 @@
   "ticker": "WDIG",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 133,
+  "totalRows": 136,
   "headers": [
     "Date",
     "Close",
@@ -807,6 +807,24 @@
       "Close": "31.93000030517578",
       "Adj Close": "31.93",
       "Volume": "300"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "30.209999084472656",
+      "Adj Close": "30.21",
+      "Volume": "1300"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "29.270000457763672",
+      "Adj Close": "29.27",
+      "Volume": "1200"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "27.440000534057617",
+      "Adj Close": "27.44",
+      "Volume": "600"
     }
   ]
 }

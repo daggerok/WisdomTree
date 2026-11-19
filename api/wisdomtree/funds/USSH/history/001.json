@@ -2,7 +2,7 @@
   "ticker": "USSH",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 671,
+  "totalRows": 674,
   "headers": [
     "Date",
     "Close",
@@ -4035,6 +4035,24 @@
       "Close": "49.78499984741211",
       "Adj Close": "49.78",
       "Volume": "100"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "49.845001220703125",
+      "Adj Close": "49.85",
+      "Volume": "400"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "49.8849983215332",
+      "Adj Close": "49.88",
+      "Volume": "1500"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "49.880001068115234",
+      "Adj Close": "49.88",
+      "Volume": "2300"
     }
   ]
 }

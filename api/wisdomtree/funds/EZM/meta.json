@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ezm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ezm",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.024
   },
   "aum": {
-    "display": "$952.34 M",
-    "value": 952338368,
-    "asOfDate": "Nov 13 2026",
+    "display": "$928.92 M",
+    "value": 928918720,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.2,
-    "dividendYieldText": "1.20%",
+    "dividendYield": 1.22,
+    "dividendYieldText": "1.22%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.16,
@@ -980,8 +980,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4964,
-    "asOf": "Nov 13 2026",
+    "totalRows": 4967,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

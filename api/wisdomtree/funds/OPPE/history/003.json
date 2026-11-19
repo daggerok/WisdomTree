@@ -2,7 +2,7 @@
   "ticker": "OPPE",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2944,
+  "totalRows": 2947,
   "headers": [
     "Date",
     "Close",
@@ -5673,6 +5673,24 @@
       "Close": "60.16999816894531",
       "Adj Close": "60.17",
       "Volume": "5800"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "59.47999954223633",
+      "Adj Close": "59.48",
+      "Volume": "3100"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "58.80500030517578",
+      "Adj Close": "58.81",
+      "Volume": "4100"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "58.137001037597656",
+      "Adj Close": "58.14",
+      "Volume": "6500"
     }
   ]
 }

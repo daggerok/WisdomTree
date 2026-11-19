@@ -2,7 +2,7 @@
   "ticker": "GCC",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4733,
+  "totalRows": 4736,
   "headers": [
     "Date",
     "Close",
@@ -4407,6 +4407,24 @@
       "Close": "18.65999984741211",
       "Adj Close": "18.66",
       "Volume": "265900"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "18.270000457763672",
+      "Adj Close": "18.27",
+      "Volume": "148000"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "18.219999313354492",
+      "Adj Close": "18.22",
+      "Volume": "49500"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "17.770000457763672",
+      "Adj Close": "17.77",
+      "Volume": "294600"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DTH",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5136,
+  "totalRows": 5139,
   "headers": [
     "Date",
     "Close",
@@ -825,6 +825,24 @@
       "Close": "56.560001373291016",
       "Adj Close": "56.56",
       "Volume": "16900"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "55.959999084472656",
+      "Adj Close": "55.96",
+      "Volume": "14000"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "55.349998474121094",
+      "Adj Close": "55.35",
+      "Volume": "25000"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "54.4900016784668",
+      "Adj Close": "54.49",
+      "Volume": "17200"
     }
   ]
 }

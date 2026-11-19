@@ -2,7 +2,7 @@
   "ticker": "GDE",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1171,
+  "totalRows": 1174,
   "headers": [
     "Date",
     "Close",
@@ -1035,6 +1035,24 @@
       "Close": "50.79999923706055",
       "Adj Close": "50.8",
       "Volume": "85300"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "49.560001373291016",
+      "Adj Close": "49.56",
+      "Volume": "78000"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "49.20000076293945",
+      "Adj Close": "49.2",
+      "Volume": "86200"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "47.59000015258789",
+      "Adj Close": "47.59",
+      "Volume": "203200"
     }
   ]
 }

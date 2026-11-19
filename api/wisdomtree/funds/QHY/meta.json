@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$44.39",
-    "value": 44.39,
-    "asOfDate": "Nov 13 2026"
+    "display": "$44.28",
+    "value": 44.277,
+    "asOfDate": "Nov 18 2026"
   },
   "marketPrice": {
-    "display": "$44.33",
-    "value": 44.33,
-    "asOfDate": "Nov 13 2026"
+    "display": "$44.23",
+    "value": 44.23,
+    "asOfDate": "Nov 17 2026"
   },
   "premiumDiscount": {
-    "display": "-0.14%",
-    "value": -0.135
+    "display": "-0.11%",
+    "value": -0.11
   },
   "aum": {
-    "display": "$248.58 M",
-    "value": 248584208,
-    "asOfDate": "Nov 13 2026",
+    "display": "$247.96 M",
+    "value": 247960336,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 6.44,
-    "dividendYieldText": "6.44%",
+    "dividendYield": 6.46,
+    "dividendYieldText": "6.46%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 6.48,
-    "secYield": 6.84,
-    "secYieldText": "6.84%",
+    "distributionRate": 6.5,
+    "secYield": 6.92,
+    "secYieldText": "6.92%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1467,8 +1467,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2654,
-    "asOf": "Nov 13 2026",
+    "totalRows": 2657,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

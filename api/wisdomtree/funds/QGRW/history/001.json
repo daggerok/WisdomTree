@@ -2,7 +2,7 @@
   "ticker": "QGRW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 977,
+  "totalRows": 980,
   "headers": [
     "Date",
     "Close",
@@ -5871,6 +5871,24 @@
       "Close": "64.0199966430664",
       "Adj Close": "64.02",
       "Volume": "360600"
+    },
+    {
+      "Date": "Nov 16 2026",
+      "Close": "62.25",
+      "Adj Close": "62.25",
+      "Volume": "260100"
+    },
+    {
+      "Date": "Nov 17 2026",
+      "Close": "61.689998626708984",
+      "Adj Close": "61.69",
+      "Volume": "586000"
+    },
+    {
+      "Date": "Nov 18 2026",
+      "Close": "62.02000045776367",
+      "Adj Close": "62.02",
+      "Volume": "328200"
     }
   ]
 }

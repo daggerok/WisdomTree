@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gcc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gcc",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.032
   },
   "aum": {
-    "display": "$194.13 M",
-    "value": 194126976,
-    "asOfDate": "Nov 13 2026",
+    "display": "$183.63 M",
+    "value": 183625760,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 36.28,
-    "dividendYieldText": "36.28%",
+    "dividendYield": 38.12,
+    "dividendYieldText": "38.12%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 34.43,
@@ -254,8 +254,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4733,
-    "asOf": "Nov 13 2026",
+    "totalRows": 4736,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

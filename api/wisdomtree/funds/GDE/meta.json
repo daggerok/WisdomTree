@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gde",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gde",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.074
   },
   "aum": {
-    "display": "$376.20 M",
-    "value": 376198624,
-    "asOfDate": "Nov 13 2026",
+    "display": "$369.28 M",
+    "value": 369284000,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 17.17,
-    "dividendYieldText": "17.17%",
+    "dividendYield": 18.29,
+    "dividendYieldText": "18.29%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 16.08,
@@ -243,8 +243,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1171,
-    "asOf": "Nov 13 2026",
+    "totalRows": 1174,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

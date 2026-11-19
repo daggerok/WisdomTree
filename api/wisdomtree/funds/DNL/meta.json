@@ -1,12 +1,12 @@
 {
   "ticker": "DNL",
-  "name": "WisdomTree Global ex-US Quality Growth Fund",
+  "name": "WisdomTree Global ex-U.S. Quality Growth Fund",
   "category": "International Equity",
   "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dnl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dnl",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.209
   },
   "aum": {
-    "display": "$447.08 M",
-    "value": 447078912,
-    "asOfDate": "Nov 13 2026",
+    "display": "$427.21 M",
+    "value": 427207328,
+    "asOfDate": "Nov 17 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.21,
-    "dividendYieldText": "1.21%",
+    "dividendYield": 1.26,
+    "dividendYieldText": "1.26%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.81,
@@ -919,8 +919,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5136,
-    "asOf": "Nov 13 2026",
+    "totalRows": 5139,
+    "asOf": "Nov 18 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
