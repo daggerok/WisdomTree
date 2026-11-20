@@ -2,7 +2,7 @@
   "ticker": "WTIP",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 358,
+  "totalRows": 360,
   "headers": [
     "Date",
     "Close",
@@ -2157,6 +2157,18 @@
       "Close": "31.860000610351562",
       "Adj Close": "31.86",
       "Volume": "1800"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "31.889999389648438",
+      "Adj Close": "31.89",
+      "Volume": "2400"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "31.635000228881836",
+      "Adj Close": "31.64",
+      "Volume": "28495"
     }
   ]
 }

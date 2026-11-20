@@ -2,7 +2,7 @@
   "ticker": "DTD",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5139,
+  "totalRows": 5141,
   "headers": [
     "Date",
     "Close",
@@ -843,6 +843,18 @@
       "Close": "94.02999877929688",
       "Adj Close": "94.03",
       "Volume": "20100"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "92.4000015258789",
+      "Adj Close": "92.4",
+      "Volume": "36900"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "90.5",
+      "Adj Close": "90.5",
+      "Volume": "31765"
     }
   ]
 }

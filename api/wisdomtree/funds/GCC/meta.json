@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gcc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gcc",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$18.67",
-    "value": 18.666,
-    "asOfDate": "Nov 13 2026"
+    "display": "$17.73",
+    "value": 17.725,
+    "asOfDate": "Nov 19 2026"
   },
   "marketPrice": {
-    "display": "$18.66",
-    "value": 18.66,
-    "asOfDate": "Nov 13 2026"
+    "display": "$17.71",
+    "value": 17.71,
+    "asOfDate": "Nov 19 2026"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.032
+    "display": "-0.09%",
+    "value": -0.086
   },
   "aum": {
-    "display": "$183.63 M",
-    "value": 183625760,
-    "asOfDate": "Nov 17 2026",
+    "display": "$177.25 M",
+    "value": 177251456,
+    "asOfDate": "Nov 19 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 38.12,
-    "dividendYieldText": "38.12%",
+    "dividendYield": 38.2,
+    "dividendYieldText": "38.20%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 34.43,
-    "secYield": 3.54,
-    "secYieldText": "3.54%",
+    "distributionRate": 36.4,
+    "secYield": 3.4,
+    "secYieldText": "3.40%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -75,8 +75,8 @@
       "yr3Text": "18.46%",
       "yr5": 11.71,
       "yr5Text": "11.71%",
-      "yr10": 7.11,
-      "yr10Text": "7.11%",
+      "yr10": 6.37,
+      "yr10Text": "6.37%",
       "sinceInception": 13.93,
       "sinceInceptionText": "13.93%",
       "navReturns": {
@@ -254,8 +254,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4736,
-    "asOf": "Nov 18 2026",
+    "totalRows": 4738,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

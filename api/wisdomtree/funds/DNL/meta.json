@@ -1,12 +1,12 @@
 {
   "ticker": "DNL",
-  "name": "WisdomTree Global ex-U.S. Quality Growth Fund",
+  "name": "WisdomTree Global ex-US Quality Growth Fund",
   "category": "International Equity",
   "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dnl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dnl",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$42.58",
-    "value": 42.579,
-    "asOfDate": "Nov 13 2026"
+    "display": "$40.46",
+    "value": 40.459,
+    "asOfDate": "Nov 19 2026"
   },
   "marketPrice": {
-    "display": "$42.49",
-    "value": 42.49,
-    "asOfDate": "Nov 13 2026"
+    "display": "$39.70",
+    "value": 39.695,
+    "asOfDate": "Nov 19 2026"
   },
   "premiumDiscount": {
-    "display": "-0.21%",
-    "value": -0.209
+    "display": "-1.92%",
+    "value": -1.924
   },
   "aum": {
-    "display": "$427.21 M",
-    "value": 427207328,
-    "asOfDate": "Nov 17 2026",
+    "display": "$424.82 M",
+    "value": 424820576,
+    "asOfDate": "Nov 19 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.26,
-    "dividendYieldText": "1.26%",
+    "dividendYield": 1.27,
+    "dividendYieldText": "1.27%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 0.81,
-    "secYield": 0.88,
-    "secYieldText": "0.88%",
+    "distributionRate": 0.89,
+    "secYield": 1.15,
+    "secYieldText": "1.15%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -919,8 +919,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5139,
-    "asOf": "Nov 18 2026",
+    "totalRows": 5141,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

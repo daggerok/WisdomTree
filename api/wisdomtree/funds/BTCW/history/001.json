@@ -2,7 +2,7 @@
   "ticker": "BTCW",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 717,
+  "totalRows": 719,
   "headers": [
     "Date",
     "Close",
@@ -4311,6 +4311,18 @@
       "Close": "66",
       "Adj Close": "66",
       "Volume": "5100"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "65.5",
+      "Adj Close": "65.5",
+      "Volume": "9100"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "61.52000045776367",
+      "Adj Close": "61.52",
+      "Volume": "10978"
     }
   ]
 }

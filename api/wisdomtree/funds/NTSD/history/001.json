@@ -2,7 +2,7 @@
   "ticker": "NTSD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 170,
+  "totalRows": 172,
   "headers": [
     "Date",
     "Close",
@@ -1029,6 +1029,18 @@
       "Close": "44.15999984741211",
       "Adj Close": "44.16",
       "Volume": "4100"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "42.91999816894531",
+      "Adj Close": "42.92",
+      "Volume": "10500"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "40.76449966430664",
+      "Adj Close": "40.76",
+      "Volume": "34114"
     }
   ]
 }

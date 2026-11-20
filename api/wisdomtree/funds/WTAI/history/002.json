@@ -2,7 +2,7 @@
   "ticker": "WTAI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1241,
+  "totalRows": 1243,
   "headers": [
     "Date",
     "Close",
@@ -1455,6 +1455,18 @@
       "Close": "31.739999771118164",
       "Adj Close": "31.74",
       "Volume": "124800"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "30.934999465942383",
+      "Adj Close": "30.93",
+      "Volume": "383400"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "27.8799991607666",
+      "Adj Close": "27.88",
+      "Volume": "745905"
     }
   ]
 }

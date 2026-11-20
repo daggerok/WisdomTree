@@ -2,7 +2,7 @@
   "ticker": "CEW",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4395,
+  "totalRows": 4397,
   "headers": [
     "Date",
     "Close",
@@ -2379,6 +2379,18 @@
       "Close": "19.31999969482422",
       "Adj Close": "19.32",
       "Volume": "1800"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "19.170000076293945",
+      "Adj Close": "19.17",
+      "Volume": "2000"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "19.12700080871582",
+      "Adj Close": "19.13",
+      "Volume": "31960"
     }
   ]
 }

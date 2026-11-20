@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/emcb",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/emcb",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,23 +30,23 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$64.09",
-    "value": 64.087,
-    "asOfDate": "Nov 13 2026"
+    "display": "$63.92",
+    "value": 63.917,
+    "asOfDate": "Nov 19 2026"
   },
   "marketPrice": {
-    "display": "$63.71",
-    "value": 63.71,
-    "asOfDate": "Nov 13 2026"
+    "display": "$63.69",
+    "value": 63.69,
+    "asOfDate": "Nov 19 2026"
   },
   "premiumDiscount": {
-    "display": "-0.59%",
-    "value": -0.592
+    "display": "-0.36%",
+    "value": -0.356
   },
   "aum": {
-    "display": "$99.09 M",
-    "value": 99093328,
-    "asOfDate": "Nov 17 2026",
+    "display": "$99.07 M",
+    "value": 99071176,
+    "asOfDate": "Nov 19 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -54,9 +54,9 @@
     "dividendYieldText": "5.58%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 5.8,
-    "secYield": 6.21,
-    "secYieldText": "6.21%",
+    "distributionRate": 5.82,
+    "secYield": 6.25,
+    "secYieldText": "6.25%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -1903,8 +1903,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3697,
-    "asOf": "Nov 18 2026",
+    "totalRows": 3699,
+    "asOf": "Nov 20 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

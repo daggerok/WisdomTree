@@ -2,7 +2,7 @@
   "ticker": "XC",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1044,
+  "totalRows": 1046,
   "headers": [
     "Date",
     "Close",
@@ -273,6 +273,18 @@
       "Close": "30.323999404907227",
       "Adj Close": "30.32",
       "Volume": "14100"
+    },
+    {
+      "Date": "Nov 19 2026",
+      "Close": "30.047000885009766",
+      "Adj Close": "30.05",
+      "Volume": "4800"
+    },
+    {
+      "Date": "Nov 20 2026",
+      "Close": "30.013399124145508",
+      "Adj Close": "30.01",
+      "Volume": "17039"
     }
   ]
 }
