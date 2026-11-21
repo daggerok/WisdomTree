@@ -83,7 +83,7 @@ Each fund carries a derived `metrics` object that powers the catalog columns sha
   - `volatility1y` - annualized volatility of the last 252 daily log returns, in percent (needs 253 closes)
   - `sigmaFromMean60d` - distance of the last close from the mean of the last 60 closes, in sample standard deviations
   - `high60d`, `low60d` - highest and lowest of the last 60 closes
-- Dividend metrics (shared `dividends` block, the formulas of the Stocks feed) from the Yahoo Finance dividend events of the daily chart since listing (split adjusted; the published distribution table is not), one request per fund the run updates; a failed or truncated chart keeps the published values; `null` (never `0`) when unknown:
+- Dividend metrics (shared `dividends` block, the formulas of the Stocks feed) from the Yahoo Finance dividend events of the daily chart since listing (split adjusted; the published distribution table is not), read from the history chart request of each fund the run updates (one extra chart request per fund only when `HISTORY_RANGE` is not `max`); a failed or truncated chart keeps the published values; `null` (never `0`) when unknown:
   - `dividendRate` - sum of the distributions with ex-dates in the last 12 months
   - `dividendGrowth`, `dividendGrowth3y`, `dividendGrowth5y` - last complete calendar year against 1, 3, 5 years earlier (3 and 5 as a yearly rate), the listing year is never a base
   - `dividendStreak` - complete calendar years in a row with a higher sum
@@ -118,7 +118,7 @@ Every control is a key in `scripts/update-data.config.json`; values are strings.
 | --- | --: | --- |
 | `MAX_FETCHES` | `0` | Batch size over the funds that pass `TICKERS`/`AUM`/`TER`/`DIVIDEND_YIELD`: with a positive value the updater continues after the committed cursor in `api/wisdomtree/update-state.json` (in ticker order, wrapping around; the cursor moves past every fund taken, whatever its outcome); `0` is a full pass. A `TICKERS` run never touches the cursor. |
 | `REQUEST_SLEEP` | `2` | Minimum delay in seconds between outgoing request starts, including retries. |
-| `CONCURRENCY` | `2` | Number of parallel fund update workers, each with its own request pacing lane. |
+| `CONCURRENCY` | `4` | Number of parallel fund update workers, each with its own request pacing lane. |
 | `AUM` | `:` | Net Assets range. Each bound may be a USD amount or `K`/`M`/`B`/`T`, or one of `nano`, `micro`, `small`, `mid`, `large`. |
 | `TER` | `:` | Expense ratio range in % (strict `min:max`). |
 | `DIVIDEND_YIELD` | `:` | Dividend-yield percentage range. |

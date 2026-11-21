@@ -386,6 +386,8 @@ const EMPTY_PRICE_RETURNS: PriceReturns = { asOfDate: '', mo1: null, qtd: null, 
 let requestGates: number[] = [0];
 let requestSleepSeconds = 1.5;
 /** One run's SEC state: the two SEC ticker tables (each loaded once) and the N-PORT reader cache (submissions and documents). */
+/** This run's full daily Yahoo chart answers of the funds processFund refreshed, read once by the dividends and benchmark blocks. */
+const fundCharts = new Map<string, JsonRecord>();
 let secState: { funds: Promise<Map<string, NportSeriesRef>> | null; names: Promise<Map<string, string>> | null; reader: Map<string, unknown> } = { funds: null, names: null, reader: new Map() };
 
 function sleep(ms: number): Promise<void> {
@@ -1805,6 +1807,9 @@ async function processFund(fund: CatalogFund, config: UpdaterConfig, previous: J
       chart = mergeWindowedChart(fetched, previousRows, publishedDistributions);
       if (!chart) throw new Error(`chart does not join the published history (${config.historyRange}, ${fetched.days.length} days)`);
       days = chart.days;
+      // A full daily chart (period1=0) is the same answer as the dividends block's swingChartUrl request: kept for that block, so a
+      // fund costs one Yahoo chart request instead of two. A HISTORY_RANGE window is not kept (the block ignores HISTORY_RANGE).
+      if (query.get('period1') === '0') fundCharts.set(fund.ticker, payload);
       fresh = fresh || days.length > 0;
     } catch (error) {
       outputNote(`[ ${'chart'.padEnd(8)} ] ${fund.ticker}: ${error instanceof Error ? error.message : String(error)}`);
@@ -2357,6 +2362,7 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   requestGates = new Array(Math.max(1, config.concurrency)).fill(0);
   proxyNextStart = 0;
   directBlocked = false;
+  fundCharts.clear();
   resetSecState();
   outputPrintConfig('WisdomTree', config);
 
@@ -2465,7 +2471,14 @@ export async function runUpdate(config: UpdaterConfig, deadlineMs: number = SOFT
   // benchmark blocks); the SPY and QQQ charts are read once per run before any fund chart
   const chartFetch = (url: string, ticker: string) => fetchJson(url, `[ dividend ] ${ticker}`, config, { 'User-Agent': 'Mozilla/5.0' });
   const benchmarks = config.skipYahoo ? {} : await benchmarkLoad(chartFetch, (ticker, error) => outputNote(`[ bench    ] ${ticker}: ${error instanceof Error ? error.message : String(error)}; published ${ticker} benchmark metrics kept`));
-  const benchRows = benchmarkTap(chartFetch, benchmarks);
+  // A fund chart processFund already got in full is taken from memory (once); only the others are requested again.
+  const fundChartFetch = (url: string, ticker: string): Promise<unknown> => {
+    const kept = fundCharts.get(ticker);
+    if (!kept) return chartFetch(url, ticker);
+    fundCharts.delete(ticker);
+    return Promise.resolve(kept);
+  };
+  const benchRows = benchmarkTap(fundChartFetch, benchmarks);
   await writeIndex(await withBenchmark(API_ROOT, await withDividends(API_ROOT, await withSwing(API_ROOT, await withRange52w(API_ROOT, markClosedFunds(funds, CLOSED_FUNDS))), {
     fetchChart: benchRows.fetchChart,
     tickers: config.skipYahoo ? [] : results.map((row) => String(row.ticker)),
