@@ -130,7 +130,7 @@ describe('controls 2', () => {
       expect(help).toContain(t ? `${t[1]}_YTD|1Y|3Y|5Y|10Y` : `  ${name}=`);
     }
     const config = readConfig(resolveControls(file));
-    expect([config.maxFetches, config.requestSleep, config.concurrency, config.maxRetries, config.tickers, config.historyRange]).toEqual([0, 2, 2, 2, null, 'max']);
+    expect([config.maxFetches, config.requestSleep, config.concurrency, config.maxRetries, config.tickers, config.historyRange]).toEqual([0, 2, 4, 2, null, 'max']);
     expect([config.edgarFallback, config.skipYahoo, config.skipWisdomTree, config.storeRawDownloads, config.aum, config.secYield]).toEqual([true, false, false, false, undefined, undefined]);
   });
 
@@ -492,7 +492,7 @@ const BENCHMARK_KEYS = ['perf1y', 'perf3y', 'perf5y', 'perf10y', 'perfSi', 'maxD
 function chartPayload(days = 400, last = Date.UTC(2026, 8, 25), dividend = false): any {
   const timestamps = Array.from({ length: days }, (_, i) => Math.floor((last - (days - 1 - i) * 86_400_000) / 1000));
   const close = timestamps.map((_, i) => 100 + i * 0.1);
-  // the dividends block asks for its own chart (includePrePost=false): one 0.25 event on the last bar, listing on the first bar
+  // a full daily chart (period1=0, as Yahoo answers it): one 0.25 event on the last bar, listing on the first bar
   const lastBar = timestamps[timestamps.length - 1];
   const dividends = dividend ? { [String(lastBar)]: { amount: 0.25, date: lastBar } } : {};
   const meta = { exchangeName: 'NGM', regularMarketPrice: 140, regularMarketTime: Math.floor(last / 1000), ...(dividend ? { dataGranularity: '1d', firstTradeDate: timestamps[0] } : {}) };
@@ -524,7 +524,7 @@ class Scenario {
     if (url.startsWith('https://r.jina.ai/https://dataspanapi.wisdomtree.com/')) return new Response(fundListFor(this.tickers));
     if (url.startsWith('https://r.jina.ai/')) return url.endsWith('/us/products') ? new Response(catalogFor(this.tickers)) : new Response(productPage(url.split('/').pop()!.toUpperCase()));
     if (url.includes('wisdomtree.com')) return new Response('blocked', { status: 403 });
-    if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload(400, undefined, url.includes('includePrePost=false'))));
+    if (url.includes('finance.yahoo.com')) return new Response(JSON.stringify(chartPayload(400, undefined, url.includes('period1=0&'))));
     return new Response('nope', { status: 404 });
   };
   async run(env: Record<string, string> = {}, overrides: Record<string, unknown> = {}, deadlineMs?: number): Promise<void> {
@@ -578,12 +578,16 @@ describe('pipeline', () => {
     for (const f of [row, ...rest]) expect(DIVIDEND_KEYS.map((key) => f.metrics[key])).toEqual([0.25, null, null, null, null, null, 1, 'annual']);
     // the mock gives SPY and QQQ the same bars as every fund: the fund equals both benchmarks (no difference, beta and correlation 1)
     expect([row.metrics.vsSpy1y, row.metrics.vsQqq1y, row.metrics.beta1ySpy, row.metrics.corr1yQqq, row.metrics.relStrength3mSpy, typeof row.metrics.benchmarkAsOf]).toEqual([0, 0, 1, 1, 0, 'string']);
-    // one chart per updated fund feeds swing, dividends and benchmark; SPY and QQQ are read once more per run (it differs from the history chart by includePrePost=false), none for an unselected one
-    const dividendTickers = (from: number) => s.calls.slice(from).filter((call) => /finance\.yahoo\.com.*includePrePost=false/.test(call.url)).map((call) => /chart\/(\w+)\?/.exec(call.url)![1]).sort();
-    expect(dividendTickers(0)).toEqual(['AAA', 'BBB', 'CCC', 'QQQ', 'SPY']);
-    const seen = s.calls.length;
+    // one full daily chart per updated fund feeds the history, dividends and benchmark (the blocks reuse the history request); SPY and
+    // QQQ are read once per run, none for an unselected fund; a HISTORY_RANGE window is no full chart, the blocks ask for their own
+    const chartTickers = (from: number) => s.calls.slice(from).filter((call) => /finance\.yahoo\.com/.test(call.url)).map((call) => /chart\/(\w+)\?/.exec(call.url)![1]).sort();
+    expect(chartTickers(0)).toEqual(['AAA', 'BBB', 'CCC', 'QQQ', 'SPY']);
+    let seen = s.calls.length;
     await s.run({ TICKERS: 'AAA' });
-    expect(dividendTickers(seen)).toEqual(['AAA', 'QQQ', 'SPY']);
+    expect(chartTickers(seen)).toEqual(['AAA', 'QQQ', 'SPY']);
+    seen = s.calls.length;
+    await s.run({ TICKERS: 'AAA', HISTORY_RANGE: '1y' });
+    expect(chartTickers(seen)).toEqual(['AAA', 'AAA', 'QQQ', 'SPY']);
     expect([typeof row.metrics.athPrice, row.metrics.athBasis]).toEqual(['number', expect.stringMatching(/^daily closes since \d{4}-\d{2}-\d{2}$/)]);
     for (const f of [row, ...rest]) expect([f.metrics.dividendYield, f.metrics.dividendYieldBasis]).toEqual([4.72, 'official-trailing-12m']);
     expect(s.meta('AAA').yields.dividendYieldBasis).toBe(row.metrics.dividendYieldBasis);
@@ -998,7 +1002,7 @@ describe('pipeline 7', () => {
     const base = s.handler;
     const listing = (inceptionDt: string) => JSON.stringify({ data: { content: JSON.stringify(fundListRows(['AAA']).map((row) => ({ ...row, inceptionDt }))) } });
     let inception = '2025-09-11';
-    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(380, undefined, url.includes('includePrePost=false')))) : base(url, init));
+    s.handler = (url, init) => (url.includes('dataspanapi.wisdomtree.com') ? new Response(listing(inception)) : url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(380, undefined, url.includes('period1=0&')))) : base(url, init));
     await s.run();
     const metrics = s.index().funds[0].metrics;
     expect([metrics.ytd, metrics.tr1y, metrics.cagr3y, metrics.siAnn, metrics.performanceAsOf]).toEqual([2.59, null, null, null, '2026-08-31']);
@@ -1032,7 +1036,7 @@ describe('pipeline 7', () => {
     // one of a new day that does not join keeps the fund as published
     await s.run();
     expect(s.snapshot()).toEqual(first);
-    s.handler = (url, init) => (url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(1, Date.UTC(2026, 9, 25), url.includes('includePrePost=false')))) : base(url, init));
+    s.handler = (url, init) => (url.includes('finance.yahoo.com') ? new Response(JSON.stringify(chartPayload(1, Date.UTC(2026, 9, 25), url.includes('period1=0&')))) : base(url, init));
     await s.run();
     expect(s.meta('AAA').history.totalRows).toBe(400);
   });
@@ -1114,7 +1118,7 @@ describe('network', () => {
 
   test('a reachable direct page is used and the proxy is never called', async () => {
     const s = new Scenario();
-    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.startsWith('https://dataspanapi.wisdomtree.com/') ? new Response(JSON.stringify(fundListRows(s.tickers))) : url.includes('wisdomtree.com') ? new Response(productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload(400, undefined, url.includes('includePrePost=false')))) : new Response('no', { status: 404 }));
+    s.handler = (url) => secResponse(url, s.nportAsOf) ?? (url.startsWith('https://r.jina.ai/') ? new Response('should not be used', { status: 500 }) : url.startsWith('https://dataspanapi.wisdomtree.com/') ? new Response(JSON.stringify(fundListRows(s.tickers))) : url.includes('wisdomtree.com') ? new Response(productPage(url.split('/').pop()!.toUpperCase())) : url.includes('yahoo') ? new Response(JSON.stringify(chartPayload(400, undefined, url.includes('period1=0&')))) : new Response('no', { status: 404 }));
     await s.run();
     expect(s.calls.some((c) => c.url.startsWith('https://r.jina.ai/'))).toBe(false);
     expect(s.meta('AAA').source.productPageStatus).toContain('directly');
