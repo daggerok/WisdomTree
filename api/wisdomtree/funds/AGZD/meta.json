@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/agzd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/agzd",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.108
   },
   "aum": {
-    "display": "$221.78 M",
-    "value": 221778752,
-    "asOfDate": "Nov 23 2026",
+    "display": "$220.84 M",
+    "value": 220837152,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -1702,8 +1702,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3253,
-    "asOf": "Nov 24 2026",
+    "totalRows": 3254,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

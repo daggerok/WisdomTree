@@ -2,7 +2,7 @@
   "ticker": "WAMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 179,
+  "totalRows": 180,
   "headers": [
     "Date",
     "Close",
@@ -1083,6 +1083,12 @@
       "Close": "25.239999771118164",
       "Adj Close": "25.24",
       "Volume": "10100"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "25.25790023803711",
+      "Adj Close": "25.26",
+      "Volume": "11868"
     }
   ]
 }

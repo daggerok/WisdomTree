@@ -2,7 +2,7 @@
   "ticker": "QIG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2661,
+  "totalRows": 2662,
   "headers": [
     "Date",
     "Close",
@@ -3975,6 +3975,12 @@
       "Close": "42.67599868774414",
       "Adj Close": "42.68",
       "Volume": "300"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "42.81999969482422",
+      "Adj Close": "42.82",
+      "Volume": "865"
     }
   ]
 }

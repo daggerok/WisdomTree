@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wqtm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wqtm",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.633
   },
   "aum": {
-    "display": "$251.42 M",
-    "value": 251421328,
-    "asOfDate": "Nov 23 2026",
+    "display": "$242.59 M",
+    "value": 242588336,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -184,8 +184,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 284,
-    "asOf": "Nov 24 2026",
+    "totalRows": 285,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -2,7 +2,7 @@
   "ticker": "EMMF",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2084,
+  "totalRows": 2085,
   "headers": [
     "Date",
     "Close",
@@ -513,6 +513,12 @@
       "Close": "31.559999465942383",
       "Adj Close": "31.56",
       "Volume": "30800"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "31.428699493408203",
+      "Adj Close": "31.43",
+      "Volume": "21608"
     }
   ]
 }

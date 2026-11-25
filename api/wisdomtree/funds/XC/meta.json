@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xc",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.477
   },
   "aum": {
-    "display": "$72.35 M",
-    "value": 72346976,
-    "asOfDate": "Nov 23 2026",
+    "display": "$72.28 M",
+    "value": 72282656,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -347,8 +347,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1048,
-    "asOf": "Nov 24 2026",
+    "totalRows": 1049,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

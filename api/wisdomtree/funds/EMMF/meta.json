@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/emmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/emmf",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 3.642
   },
   "aum": {
-    "display": "$161.32 M",
-    "value": 161319888,
-    "asOfDate": "Nov 23 2026",
+    "display": "$167.07 M",
+    "value": 167074928,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -483,8 +483,8 @@
       "history/003.json"
     ],
     "pageSize": 1000,
-    "totalRows": 2084,
-    "asOf": "Nov 24 2026",
+    "totalRows": 2085,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

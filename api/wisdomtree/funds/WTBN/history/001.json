@@ -2,7 +2,7 @@
   "ticker": "WTBN",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 735,
+  "totalRows": 736,
   "headers": [
     "Date",
     "Close",
@@ -4419,6 +4419,12 @@
       "Close": "24.19300079345703",
       "Adj Close": "24.19",
       "Volume": "34600"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "24.31999969482422",
+      "Adj Close": "24.32",
+      "Volume": "14161"
     }
   ]
 }

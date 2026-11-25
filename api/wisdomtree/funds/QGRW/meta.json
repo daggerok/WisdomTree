@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qgrw",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.059
   },
   "aum": {
-    "display": "$3.09 B",
-    "value": 3085256704,
-    "asOfDate": "Nov 23 2026",
+    "display": "$2.94 B",
+    "value": 2944366848,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -214,8 +214,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 984,
-    "asOf": "Nov 24 2026",
+    "totalRows": 985,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

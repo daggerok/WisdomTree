@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwm",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.349
   },
   "aum": {
-    "display": "$620.83 M",
-    "value": 620829888,
-    "asOfDate": "Nov 23 2026",
+    "display": "$625.83 M",
+    "value": 625828224,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -934,8 +934,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5143,
-    "asOf": "Nov 24 2026",
+    "totalRows": 5144,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

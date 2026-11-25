@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppg",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.672
   },
   "aum": {
-    "display": "$50.79 M",
-    "value": 50786752,
-    "asOfDate": "Nov 23 2026",
+    "display": "$51.29 M",
+    "value": 51290012,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -160,8 +160,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 350,
-    "asOf": "Nov 24 2026",
+    "totalRows": 351,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

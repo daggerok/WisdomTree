@@ -2,7 +2,7 @@
   "ticker": "WTMY",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 414,
+  "totalRows": 415,
   "headers": [
     "Date",
     "Close",
@@ -2493,6 +2493,12 @@
       "Close": "24.46500015258789",
       "Adj Close": "24.47",
       "Volume": "100"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "24.514999389648438",
+      "Adj Close": "24.51",
+      "Volume": "271"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DIM",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5143,
+  "totalRows": 5144,
   "headers": [
     "Date",
     "Close",
@@ -867,6 +867,12 @@
       "Close": "83.0199966430664",
       "Adj Close": "83.02",
       "Volume": "1900"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "83.38150024414062",
+      "Adj Close": "83.38",
+      "Volume": "2922"
     }
   ]
 }

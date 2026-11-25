@@ -2,7 +2,7 @@
   "ticker": "HEDJ",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4241,
+  "totalRows": 4242,
   "headers": [
     "Date",
     "Close",
@@ -1455,6 +1455,12 @@
       "Close": "56.04999923706055",
       "Adj Close": "56.05",
       "Volume": "31600"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "55.91999816894531",
+      "Adj Close": "55.92",
+      "Volume": "23013"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DOL",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5143,
+  "totalRows": 5144,
   "headers": [
     "Date",
     "Close",
@@ -867,6 +867,12 @@
       "Close": "70",
       "Adj Close": "70",
       "Volume": "13900"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "70.47720336914062",
+      "Adj Close": "70.48",
+      "Volume": "12726"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "DLN",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5143,
+  "totalRows": 5144,
   "headers": [
     "Date",
     "Close",
@@ -867,6 +867,12 @@
       "Close": "96.54000091552734",
       "Adj Close": "96.54",
       "Volume": "174800"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "96.80000305175781",
+      "Adj Close": "96.8",
+      "Volume": "331700"
     }
   ]
 }

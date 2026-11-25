@@ -2,7 +2,7 @@
   "ticker": "MTGP",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1751,
+  "totalRows": 1752,
   "headers": [
     "Date",
     "Close",
@@ -4515,6 +4515,12 @@
       "Close": "42.79100036621094",
       "Adj Close": "42.79",
       "Volume": "1800"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "42.93000030517578",
+      "Adj Close": "42.93",
+      "Volume": "5936"
     }
   ]
 }

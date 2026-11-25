@@ -2,7 +2,7 @@
   "ticker": "WTMU",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 414,
+  "totalRows": 415,
   "headers": [
     "Date",
     "Close",
@@ -2493,6 +2493,12 @@
       "Close": "25.014999389648438",
       "Adj Close": "25.01",
       "Volume": "100"
+    },
+    {
+      "Date": "Nov 25 2026",
+      "Close": "25.065000534057617",
+      "Adj Close": "25.07",
+      "Volume": "161"
     }
   ]
 }

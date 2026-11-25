@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wtai",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wtai",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 1.769
   },
   "aum": {
-    "display": "$519.40 M",
-    "value": 519401952,
-    "asOfDate": "Nov 23 2026",
+    "display": "$505.98 M",
+    "value": 505980160,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -235,8 +235,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1245,
-    "asOf": "Nov 24 2026",
+    "totalRows": 1246,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.393
   },
   "aum": {
-    "display": "$960.33 M",
-    "value": 960334080,
-    "asOfDate": "Nov 23 2026",
+    "display": "$931.25 M",
+    "value": 931254400,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -933,8 +933,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5143,
-    "asOf": "Nov 24 2026",
+    "totalRows": 5144,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

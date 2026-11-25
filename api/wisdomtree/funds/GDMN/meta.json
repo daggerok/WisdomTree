@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gdmn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gdmn",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.112
   },
   "aum": {
-    "display": "$109.20 M",
-    "value": 109200912,
-    "asOfDate": "Nov 23 2026",
+    "display": "$105.89 M",
+    "value": 105893048,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -241,8 +241,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1240,
-    "asOf": "Nov 24 2026",
+    "totalRows": 1241,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

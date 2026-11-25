@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wtv",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wtv",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.087
   },
   "aum": {
-    "display": "$3.23 B",
-    "value": 3233934592,
-    "asOfDate": "Nov 23 2026",
+    "display": "$3.26 B",
+    "value": 3260742144,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -984,8 +984,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4971,
-    "asOf": "Nov 24 2026",
+    "totalRows": 4972,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

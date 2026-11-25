@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usfr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usfr",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.018
   },
   "aum": {
-    "display": "$22.28 B",
-    "value": 22284783616,
-    "asOfDate": "Nov 23 2026",
+    "display": "$22.11 B",
+    "value": 22107213824,
+    "asOfDate": "Nov 24 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -1347,8 +1347,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3222,
-    "asOf": "Nov 24 2026",
+    "totalRows": 3223,
+    "asOf": "Nov 25 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
