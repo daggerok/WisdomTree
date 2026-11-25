@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usin",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usin",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -0.038
   },
   "aum": {
-    "display": "$5.73 M",
-    "value": 5732185,
-    "asOfDate": "Nov 19 2026",
+    "display": "$5.78 M",
+    "value": 5782988,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.18,
-    "dividendYieldText": "4.18%",
+    "dividendYield": 4.53,
+    "dividendYieldText": "4.53%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 4.4,
@@ -494,8 +494,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 676,
-    "asOf": "Nov 20 2026",
+    "totalRows": 678,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

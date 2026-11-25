@@ -2,7 +2,7 @@
   "ticker": "NTSE",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1384,
+  "totalRows": 1386,
   "headers": [
     "Date",
     "Close",
@@ -2310,9 +2310,21 @@
     },
     {
       "Date": "Nov 20 2026",
-      "Close": "37.6338996887207",
+      "Close": "37.63399887084961",
       "Adj Close": "37.63",
-      "Volume": "4394"
+      "Volume": "4400"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "40.36800003051758",
+      "Adj Close": "40.37",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "39.43600082397461",
+      "Adj Close": "39.44",
+      "Volume": "4900"
     }
   ]
 }

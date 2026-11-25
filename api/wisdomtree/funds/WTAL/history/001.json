@@ -2,7 +2,7 @@
   "ticker": "WTAL",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 31,
+  "totalRows": 33,
   "headers": [
     "Date",
     "Close",
@@ -194,7 +194,19 @@
       "Date": "Nov 20 2026",
       "Close": "23.020000457763672",
       "Adj Close": "23.02",
-      "Volume": "35464"
+      "Volume": "35500"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "23.09000015258789",
+      "Adj Close": "23.09",
+      "Volume": "14500"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "23.030000686645508",
+      "Adj Close": "23.03",
+      "Volume": "29800"
     }
   ]
 }

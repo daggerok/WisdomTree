@@ -13,7 +13,7 @@
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DHS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036276, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 193 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 194 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -30,33 +30,33 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$114.61",
-    "value": 114.611,
-    "asOfDate": "Nov 19 2026"
+    "display": "$116.07",
+    "value": 116.068,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$114.70",
-    "value": 114.7,
-    "asOfDate": "Nov 19 2026"
+    "display": "$115.13",
+    "value": 115.13,
+    "asOfDate": "Nov 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.08%",
-    "value": 0.078
+    "display": "-0.01%",
+    "value": -0.011
   },
   "aum": {
     "display": "$1.60 B",
-    "value": 1598822528,
-    "asOfDate": "Nov 19 2026",
+    "value": 1600476800,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.31,
-    "dividendYieldText": "3.31%",
+    "dividendYield": 3.55,
+    "dividendYieldText": "3.55%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 3.25,
-    "secYield": 3.33,
-    "secYieldText": "3.33%",
+    "distributionRate": 3.23,
+    "secYield": 3.41,
+    "secYieldText": "3.41%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -145,7 +145,7 @@
   "distributions": {
     "frequency": "Monthly",
     "paymentsPerYear": 12,
-    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 193 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 194 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
       "Record Date",
@@ -2089,12 +2089,12 @@
       ],
       [
         "07/28/2026",
-        "07/28/2026",
-        "07/30/2026",
-        "0.305",
-        "0",
-        "0",
-        "0",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.305"
       ],
       [
@@ -2126,6 +2126,16 @@
         "0",
         "0",
         "0.31"
+      ],
+      [
+        "11/24/2026",
+        "11/24/2026",
+        "11/27/2026",
+        "0.32",
+        "0",
+        "0",
+        "0",
+        "0.32"
       ]
     ]
   },
@@ -2150,8 +2160,8 @@
       "history/006.json"
     ],
     "pageSize": 1000,
-    "totalRows": 5141,
-    "asOf": "Nov 20 2026",
+    "totalRows": 5143,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

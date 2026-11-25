@@ -2,7 +2,7 @@
   "ticker": "DFE",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5141,
+  "totalRows": 5143,
   "headers": [
     "Date",
     "Close",
@@ -852,9 +852,21 @@
     },
     {
       "Date": "Nov 20 2026",
-      "Close": "70.00060272216797",
+      "Close": "70",
       "Adj Close": "70",
-      "Volume": "2719"
+      "Volume": "2700"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "71.13999938964844",
+      "Adj Close": "71.14",
+      "Volume": "4300"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "71.44999694824219",
+      "Adj Close": "71.45",
+      "Volume": "2700"
     }
   ]
 }

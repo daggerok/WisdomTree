@@ -2,7 +2,7 @@
   "ticker": "DTH",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5141,
+  "totalRows": 5143,
   "headers": [
     "Date",
     "Close",
@@ -854,7 +854,19 @@
       "Date": "Nov 20 2026",
       "Close": "52.93000030517578",
       "Adj Close": "52.93",
-      "Volume": "32044"
+      "Volume": "32000"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "53.59000015258789",
+      "Adj Close": "53.59",
+      "Volume": "30900"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "53.91999816894531",
+      "Adj Close": "53.92",
+      "Volume": "18300"
     }
   ]
 }

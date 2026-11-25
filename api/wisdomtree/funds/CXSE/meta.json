@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/cxse",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/cxse",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": -1.725
   },
   "aum": {
-    "display": "$347.31 M",
-    "value": 347308608,
-    "asOfDate": "Nov 19 2026",
+    "display": "$341.40 M",
+    "value": 341401600,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.31,
-    "dividendYieldText": "2.31%",
+    "dividendYield": 2.35,
+    "dividendYieldText": "2.35%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 3.39,
@@ -568,8 +568,8 @@
       "history/004.json"
     ],
     "pageSize": 1000,
-    "totalRows": 3563,
-    "asOf": "Nov 20 2026",
+    "totalRows": 3565,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

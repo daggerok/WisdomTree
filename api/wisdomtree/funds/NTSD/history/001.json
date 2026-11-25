@@ -2,7 +2,7 @@
   "ticker": "NTSD",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 172,
+  "totalRows": 174,
   "headers": [
     "Date",
     "Close",
@@ -1038,9 +1038,21 @@
     },
     {
       "Date": "Nov 20 2026",
-      "Close": "40.76449966430664",
+      "Close": "40.7599983215332",
       "Adj Close": "40.76",
-      "Volume": "34114"
+      "Volume": "34100"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "43.310001373291016",
+      "Adj Close": "43.31",
+      "Volume": "20800"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "43.220001220703125",
+      "Adj Close": "43.22",
+      "Volume": "6400"
     }
   ]
 }

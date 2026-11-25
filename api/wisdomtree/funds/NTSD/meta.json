@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/capital-efficient/ntsd",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsd",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -23,10 +23,10 @@
     "indexTicker": null
   },
   "expenseRatio": {
-    "display": "0.36%",
-    "value": 0.36,
-    "grossDisplay": "0.36%",
-    "grossValue": 0.36,
+    "display": "0.35%",
+    "value": 0.35,
+    "grossDisplay": "0.35%",
+    "grossValue": 0.35,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
@@ -44,9 +44,9 @@
     "value": -0.313
   },
   "aum": {
-    "display": "$48.44 M",
-    "value": 48435964,
-    "asOfDate": "Nov 19 2026",
+    "display": "$48.67 M",
+    "value": 48670640,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -172,8 +172,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 172,
-    "asOf": "Nov 20 2026",
+    "totalRows": 174,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

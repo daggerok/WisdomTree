@@ -2,7 +2,7 @@
   "ticker": "WDEF",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 341,
+  "totalRows": 343,
   "headers": [
     "Date",
     "Close",
@@ -2054,7 +2054,19 @@
       "Date": "Nov 20 2026",
       "Close": "25.020000457763672",
       "Adj Close": "25.02",
-      "Volume": "29056"
+      "Volume": "29100"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "25.600000381469727",
+      "Adj Close": "25.6",
+      "Volume": "12500"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "26.034000396728516",
+      "Adj Close": "26.03",
+      "Volume": "15700"
     }
   ]
 }

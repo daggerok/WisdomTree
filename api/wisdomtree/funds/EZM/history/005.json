@@ -2,7 +2,7 @@
   "ticker": "EZM",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4969,
+  "totalRows": 4971,
   "headers": [
     "Date",
     "Close",
@@ -5822,7 +5822,19 @@
       "Date": "Nov 20 2026",
       "Close": "70.7300033569336",
       "Adj Close": "70.73",
-      "Volume": "36830"
+      "Volume": "36800"
+    },
+    {
+      "Date": "Nov 23 2026",
+      "Close": "72.62000274658203",
+      "Adj Close": "72.62",
+      "Volume": "24800"
+    },
+    {
+      "Date": "Nov 24 2026",
+      "Close": "72.98999786376953",
+      "Adj Close": "72.99",
+      "Volume": "21700"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsi",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -23,10 +23,10 @@
     "indexTicker": null
   },
   "expenseRatio": {
-    "display": "0.28%",
-    "value": 0.28,
-    "grossDisplay": "0.28%",
-    "grossValue": 0.28,
+    "display": "0.26%",
+    "value": 0.26,
+    "grossDisplay": "0.26%",
+    "grossValue": 0.26,
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
@@ -44,14 +44,14 @@
     "value": -0.583
   },
   "aum": {
-    "display": "$470.39 M",
-    "value": 470391552,
-    "asOfDate": "Nov 19 2026",
+    "display": "$465.41 M",
+    "value": 465405472,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 3.23,
-    "dividendYieldText": "3.23%",
+    "dividendYield": 3.24,
+    "dividendYieldText": "3.24%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.09,
@@ -392,8 +392,8 @@
       "history/002.json"
     ],
     "pageSize": 1000,
-    "totalRows": 1383,
-    "asOf": "Nov 20 2026",
+    "totalRows": 1385,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

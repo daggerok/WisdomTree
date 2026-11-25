@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtip",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtip",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,14 +44,14 @@
     "value": 0.317
   },
   "aum": {
-    "display": "$25.55 M",
-    "value": 25550740,
-    "asOfDate": "Nov 19 2026",
+    "display": "$25.44 M",
+    "value": 25435436,
+    "asOfDate": "Nov 23 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 9.85,
-    "dividendYieldText": "9.85%",
+    "dividendYield": 10.56,
+    "dividendYieldText": "10.56%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 73.46,
@@ -300,8 +300,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 360,
-    "asOf": "Nov 20 2026",
+    "totalRows": 362,
+    "asOf": "Nov 24 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }
