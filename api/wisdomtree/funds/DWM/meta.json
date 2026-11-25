@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dwm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$70.95",
-    "value": 70.95,
-    "asOfDate": "Nov 19 2026"
+    "display": "$70.32",
+    "value": 70.318,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$70.30",
-    "value": 70.302,
-    "asOfDate": "Nov 19 2026"
+    "display": "$70.00",
+    "value": 70.001,
+    "asOfDate": "Nov 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.92%",
-    "value": -0.922
+    "display": "0.35%",
+    "value": 0.349
   },
   "aum": {
     "display": "$620.83 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.85%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.63,
-    "secYield": 2.55,
-    "secYieldText": "2.55%",
+    "distributionRate": 1.66,
+    "secYield": 2.61,
+    "secYieldText": "2.61%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

@@ -6,14 +6,14 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrs",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrs",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
     "yahooChart": "https://query1.finance.yahoo.com/v8/finance/chart/DGRS",
     "holdingsSource": "SEC EDGAR Form N-PORT-P (accession 0000940400-26-036268, report period 2026-06-30)",
     "historySource": "Yahoo Finance public chart API (adjusted close)",
-    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 152 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "distributionsSource": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 153 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "provider": "WisdomTree U.S. product catalog + official WisdomTree product page + SEC EDGAR Form N-PORT-P + Yahoo Finance public chart API"
   },
   "identifiers": {
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$57.06",
-    "value": 57.057,
-    "asOfDate": "Nov 18 2026"
+    "display": "$56.08",
+    "value": 56.08,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$56.73",
-    "value": 56.73,
-    "asOfDate": "Nov 17 2026"
+    "display": "$56.15",
+    "value": 56.15,
+    "asOfDate": "Nov 23 2026"
   },
   "premiumDiscount": {
-    "display": "0.17%",
-    "value": 0.168
+    "display": "-0.02%",
+    "value": -0.021
   },
   "aum": {
     "display": "$379.94 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.24%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.26,
-    "secYield": 2.06,
-    "secYieldText": "2.06%",
+    "distributionRate": 1.28,
+    "secYield": 2.13,
+    "secYieldText": "2.13%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
@@ -145,7 +145,7 @@
   "distributions": {
     "frequency": "Monthly",
     "paymentsPerYear": 12,
-    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 152 earlier ex-dates the official table does not cover (ex-date and total amount only)",
+    "source": "WisdomTree official product page Recent Distributions table (4 most recent ex-dates; Ex-Date, Record Date, Payable Date and full Ordinary Income/Short-Term/Long-Term Capital Gains/Return of Capital breakdown) plus Yahoo Finance dividend events for 153 earlier ex-dates the official table does not cover (ex-date and total amount only)",
     "headers": [
       "Ex-Date",
       "Record Date",
@@ -1679,12 +1679,12 @@
       ],
       [
         "07/28/2026",
-        "07/28/2026",
-        "07/30/2026",
-        "0.05",
-        "0",
-        "0",
-        "0",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—",
         "0.05"
       ],
       [
@@ -1716,6 +1716,16 @@
         "0",
         "0",
         "0.06"
+      ],
+      [
+        "11/24/2026",
+        "11/24/2026",
+        "11/27/2026",
+        "0.09",
+        "0",
+        "0",
+        "0",
+        "0.09"
       ]
     ]
   },

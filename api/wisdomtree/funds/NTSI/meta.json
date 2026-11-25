@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/ntsi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/ntsi",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$44.80",
-    "value": 44.799,
-    "asOfDate": "Nov 19 2026"
+    "display": "$44.68",
+    "value": 44.677,
+    "asOfDate": "Nov 24 2026"
   },
   "marketPrice": {
-    "display": "$44.54",
-    "value": 44.539,
-    "asOfDate": "Nov 19 2026"
+    "display": "$44.71",
+    "value": 44.714,
+    "asOfDate": "Nov 23 2026"
   },
   "premiumDiscount": {
-    "display": "-0.58%",
-    "value": -0.583
+    "display": "0.87%",
+    "value": 0.872
   },
   "aum": {
     "display": "$465.41 M",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.09,
-    "secYield": 2.39,
-    "secYieldText": "2.39%",
+    "secYield": 2.46,
+    "secYieldText": "2.46%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
