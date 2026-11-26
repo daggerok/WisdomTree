@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T06:10:12Z",
+  "generatedAt": "2026-11-26T09:43:26Z",
   "source": {
     "provider": "WisdomTree Asset Management, Inc. (U.S.-listed ETFs)",
     "market": "us",
@@ -1216,7 +1216,7 @@
         "beta1ySpy": 0.87,
         "corr1ySpy": 0.6,
         "upCapture3ySpy": 45.86,
-        "downCapture3ySpy": 112.38,
+        "downCapture3ySpy": 112.39,
         "relStrength3mSpy": -16.28,
         "stressReturnSpy": -18.25,
         "stressBasisSpy": "SPY -11% 2026-10-06 to 2026-11-20",
@@ -3062,7 +3062,7 @@
         "perf10y": 182.65,
         "perfSi": 275.62,
         "maxDrawdown1y": -10.37,
-        "maxDrawdown3y": -16.22,
+        "maxDrawdown3y": -16.21,
         "maxDrawdown5y": -17.27,
         "maxDrawdown10y": -32.04,
         "vsSpy1y": -1.06,
