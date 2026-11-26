@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dol",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dol",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$70.00",
-    "value": 70,
-    "asOfDate": "Nov 24 2026"
+    "display": "$70.48",
+    "value": 70.477,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.18%",
-    "value": -0.183
+    "display": "1.46%",
+    "value": 1.455
   },
   "aum": {
     "display": "$781.33 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.69%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.6,
-    "secYield": 2.25,
-    "secYieldText": "2.25%",
+    "distributionRate": 1.61,
+    "secYield": 2.21,
+    "secYieldText": "2.21%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

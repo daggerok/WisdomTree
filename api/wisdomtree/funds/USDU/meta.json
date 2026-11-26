@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/usdu",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/usdu",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$27.66",
-    "value": 27.66,
-    "asOfDate": "Nov 24 2026"
+    "display": "$27.70",
+    "value": 27.7,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.07%",
-    "value": -0.07
+    "display": "0.05%",
+    "value": 0.046
   },
   "aum": {
     "display": "$344.71 M",

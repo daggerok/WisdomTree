@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xsoe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xsoe",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$39.51",
-    "value": 39.51,
-    "asOfDate": "Nov 24 2026"
+    "display": "$39.34",
+    "value": 39.337,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-1.85%",
-    "value": -1.849
+    "display": "0.86%",
+    "value": 0.859
   },
   "aum": {
     "display": "$1.81 B",
@@ -54,9 +54,9 @@
     "dividendYieldText": "1.99%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 2.14,
-    "secYield": 1.78,
-    "secYieldText": "1.78%",
+    "distributionRate": 2.21,
+    "secYield": 1.72,
+    "secYieldText": "1.72%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
