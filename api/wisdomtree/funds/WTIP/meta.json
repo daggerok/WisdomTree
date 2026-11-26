@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtip",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtip",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$31.27",
-    "value": 31.27,
-    "asOfDate": "Nov 24 2026"
+    "display": "$31.78",
+    "value": 31.78,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.80%",
-    "value": -0.796
+    "display": "0.18%",
+    "value": 0.182
   },
   "aum": {
-    "display": "$25.22 M",
-    "value": 25215192,
-    "asOfDate": "Nov 24 2026",
+    "display": "$25.38 M",
+    "value": 25377632,
+    "asOfDate": "Nov 25 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtal",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtal",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$23.03",
-    "value": 23.03,
-    "asOfDate": "Nov 24 2026"
+    "display": "$22.76",
+    "value": 22.76,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "1.30%",
-    "value": 1.297
+    "display": "1.04%",
+    "value": 1.044
   },
   "aum": {
-    "display": "$3.41 M",
-    "value": 3409680,
-    "asOfDate": "Nov 24 2026",
+    "display": "$3.38 M",
+    "value": 3378345,
+    "asOfDate": "Nov 25 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

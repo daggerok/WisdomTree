@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/qsig",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/qsig",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$47.49",
-    "value": 47.493,
-    "asOfDate": "Nov 24 2026"
+    "display": "$47.54",
+    "value": 47.54,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.016
+    "display": "-0.05%",
+    "value": -0.046
   },
   "aum": {
-    "display": "$47.50 M",
-    "value": 47500544,
-    "asOfDate": "Nov 24 2026",
+    "display": "$47.56 M",
+    "value": 47561736,
+    "asOfDate": "Nov 25 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

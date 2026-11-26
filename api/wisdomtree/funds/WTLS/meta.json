@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/wtls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/wtls",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$56.68",
-    "value": 56.677,
-    "asOfDate": "Nov 24 2026"
+    "display": "$56.45",
+    "value": 56.446,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.24%",
-    "value": -0.24
+    "display": "0.14%",
+    "value": 0.144
   },
   "aum": {
-    "display": "$20.45 M",
-    "value": 20452642,
-    "asOfDate": "Nov 24 2026",
+    "display": "$20.29 M",
+    "value": 20291214,
+    "asOfDate": "Nov 25 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
