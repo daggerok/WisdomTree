@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gtr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gtr",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$25.88",
-    "value": 25.881,
-    "asOfDate": "Nov 24 2026"
+    "display": "$25.89",
+    "value": 25.894,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$25.96",
-    "value": 25.96,
-    "asOfDate": "Nov 23 2026"
+    "display": "$25.84",
+    "value": 25.84,
+    "asOfDate": "Nov 24 2026"
   },
   "premiumDiscount": {
-    "display": "-0.05%",
-    "value": -0.049
+    "display": "-0.16%",
+    "value": -0.159
   },
   "aum": {
     "display": "$69.23 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.34%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 2.31,
-    "secYield": 2.65,
-    "secYieldText": "2.65%",
+    "distributionRate": 2.32,
+    "secYield": 2.55,
+    "secYieldText": "2.55%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$70.13",
-    "value": 70.128,
-    "asOfDate": "Nov 24 2026"
+    "display": "$69.45",
+    "value": 69.452,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$69.96",
-    "value": 69.96,
-    "asOfDate": "Nov 23 2026"
+    "display": "$70.00",
+    "value": 70,
+    "asOfDate": "Nov 24 2026"
   },
   "premiumDiscount": {
-    "display": "1.11%",
-    "value": 1.106
+    "display": "-0.18%",
+    "value": -0.183
   },
   "aum": {
     "display": "$788.94 M",
@@ -50,13 +50,13 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.66,
-    "dividendYieldText": "2.66%",
+    "dividendYield": 2.69,
+    "dividendYieldText": "2.69%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.62,
-    "secYield": 2.43,
-    "secYieldText": "2.43%",
+    "distributionRate": 1.6,
+    "secYield": 2.25,
+    "secYieldText": "2.25%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

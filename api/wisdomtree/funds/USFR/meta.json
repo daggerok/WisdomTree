@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/usfr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/usfr",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -31,17 +31,17 @@
   },
   "nav": {
     "display": "$50.37",
-    "value": 50.369,
-    "asOfDate": "Nov 24 2026"
+    "value": 50.371,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$50.52",
-    "value": 50.52,
-    "asOfDate": "Nov 23 2026"
+    "display": "$50.36",
+    "value": 50.36,
+    "asOfDate": "Nov 24 2026"
   },
   "premiumDiscount": {
     "display": "-0.02%",
-    "value": -0.018
+    "value": -0.017
   },
   "aum": {
     "display": "$22.11 B",
@@ -50,13 +50,13 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.04,
-    "dividendYieldText": "4.04%",
+    "dividendYield": 3.73,
+    "dividendYieldText": "3.73%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 4.06,
-    "secYield": 3.98,
-    "secYieldText": "3.98%",
+    "distributionRate": 3.9,
+    "secYield": 3.99,
+    "secYieldText": "3.99%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

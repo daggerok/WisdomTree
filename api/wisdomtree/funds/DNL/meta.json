@@ -1,12 +1,12 @@
 {
   "ticker": "DNL",
-  "name": "WisdomTree Global ex-U.S. Quality Growth Fund",
+  "name": "WisdomTree Global ex-US Quality Growth Fund",
   "category": "International Equity",
   "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dnl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dnl",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$40.04",
-    "value": 40.042,
-    "asOfDate": "Nov 24 2026"
+    "display": "$38.78",
+    "value": 38.781,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$40.10",
-    "value": 40.103,
-    "asOfDate": "Nov 23 2026"
+    "display": "$39.56",
+    "value": 39.56,
+    "asOfDate": "Nov 24 2026"
   },
   "premiumDiscount": {
-    "display": "2.24%",
-    "value": 2.241
+    "display": "-1.22%",
+    "value": -1.218
   },
   "aum": {
     "display": "$420.44 M",
@@ -50,13 +50,13 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 1.28,
-    "dividendYieldText": "1.28%",
+    "dividendYield": 1.33,
+    "dividendYieldText": "1.33%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 0.92,
-    "secYield": 1.23,
-    "secYieldText": "1.23%",
+    "distributionRate": 0.9,
+    "secYield": 1.25,
+    "secYieldText": "1.25%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
