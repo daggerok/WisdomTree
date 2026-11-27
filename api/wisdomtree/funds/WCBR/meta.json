@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wcbr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wcbr",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$44.98",
-    "value": 44.975,
-    "asOfDate": "Nov 24 2026"
+    "display": "$45.44",
+    "value": 45.44,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.33%",
-    "value": 0.332
+    "display": "0.21%",
+    "value": 0.21
   },
   "aum": {
     "display": "$253.93 M",

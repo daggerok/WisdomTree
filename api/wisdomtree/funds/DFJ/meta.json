@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfj",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$105.00",
-    "value": 104.997,
-    "asOfDate": "Nov 24 2026"
+    "display": "$105.86",
+    "value": 105.86,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.57%",
-    "value": -0.57
+    "display": "0.22%",
+    "value": 0.223
   },
   "aum": {
     "display": "$401.37 M",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.25,
-    "secYield": 2.85,
-    "secYieldText": "2.85%",
+    "secYield": 2.81,
+    "secYieldText": "2.81%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

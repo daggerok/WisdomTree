@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/wtpi",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/wtpi",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$30.60",
-    "value": 30.6,
-    "asOfDate": "Nov 24 2026"
+    "display": "$30.43",
+    "value": 30.43,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.18%",
-    "value": -0.182
+    "display": "-0.42%",
+    "value": -0.419
   },
   "aum": {
     "display": "$531.70 M",

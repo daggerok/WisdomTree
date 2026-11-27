@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/currency/cew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/currency/cew",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$19.16",
-    "value": 19.155,
-    "asOfDate": "Nov 24 2026"
+    "display": "$19.13",
+    "value": 19.132,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.09%",
-    "value": -0.091
+    "display": "0.30%",
+    "value": 0.3
   },
   "aum": {
     "display": "$17.17 M",

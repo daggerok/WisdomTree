@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/capital-efficient/gde",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/capital-efficient/gde",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$45.15",
-    "value": 45.15,
-    "asOfDate": "Nov 24 2026"
+    "display": "$45.17",
+    "value": 45.17,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.18%",
-    "value": 0.178
+    "display": "1.10%",
+    "value": 1.1
   },
   "aum": {
     "display": "$335.05 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "19.53%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 19.05,
-    "secYield": 0.89,
-    "secYieldText": "0.89%",
+    "distributionRate": 19.22,
+    "secYield": 0.92,
+    "secYieldText": "0.92%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

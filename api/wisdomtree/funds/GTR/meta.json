@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gtr",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gtr",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$25.84",
-    "value": 25.84,
-    "asOfDate": "Nov 24 2026"
+    "display": "$25.87",
+    "value": 25.87,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.16%",
-    "value": -0.159
+    "display": "-0.09%",
+    "value": -0.094
   },
   "aum": {
     "display": "$69.27 M",

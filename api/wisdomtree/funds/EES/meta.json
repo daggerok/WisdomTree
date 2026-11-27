@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ees",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ees",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$63.30",
-    "value": 63.3,
-    "asOfDate": "Nov 24 2026"
+    "display": "$63.80",
+    "value": 63.799,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.11%",
-    "value": -0.112
+    "display": "0.05%",
+    "value": 0.052
   },
   "aum": {
     "display": "$659.98 M",

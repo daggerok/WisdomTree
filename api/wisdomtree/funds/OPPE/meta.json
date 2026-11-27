@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/oppe",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/oppe",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$56.87",
-    "value": 56.867,
-    "asOfDate": "Nov 24 2026"
+    "display": "$57.01",
+    "value": 57.014,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.39%",
-    "value": 0.389
+    "display": "1.44%",
+    "value": 1.444
   },
   "aum": {
     "display": "$272.53 M",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.93%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.87,
-    "secYield": 2.44,
-    "secYieldText": "2.44%",
+    "distributionRate": 1.89,
+    "secYield": 2.45,
+    "secYieldText": "2.45%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

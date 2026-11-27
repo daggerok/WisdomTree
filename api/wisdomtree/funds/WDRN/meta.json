@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wdrn",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wdrn",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,18 +30,18 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$20.72",
-    "value": 20.722,
-    "asOfDate": "Nov 18 2026"
+    "display": "$19.86",
+    "value": 19.859,
+    "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$20.62",
-    "value": 20.62,
-    "asOfDate": "Nov 17 2026"
+    "display": "$20.03",
+    "value": 20.034,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.13%",
-    "value": -0.131
+    "display": "0.87%",
+    "value": 0.872
   },
   "aum": {
     "display": "$13.90 M",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": null,
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0,
-    "secYield": 0.32,
-    "secYieldText": "0.32%",
+    "secYield": 0.36,
+    "secYieldText": "0.36%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

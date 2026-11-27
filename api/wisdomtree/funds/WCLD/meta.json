@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/megatrends/wcld",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/megatrends/wcld",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$40.51",
-    "value": 40.51,
-    "asOfDate": "Nov 24 2026"
+    "display": "$40.86",
+    "value": 40.86,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.02%",
-    "value": 0.024
+    "display": "0.00%",
+    "value": 0.001
   },
   "aum": {
     "display": "$288.06 M",

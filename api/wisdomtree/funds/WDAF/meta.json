@@ -1,12 +1,12 @@
 {
   "ticker": "WDAF",
-  "name": "WisdomTree Asia Defend Fund",
+  "name": "WisdomTree Asia Defense Fund",
   "category": "International Equity",
   "categoryPath": "International Equity / Regional/Single Country Small Cap",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/wdaf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/wdaf",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$23.02",
-    "value": 23.02,
-    "asOfDate": "Nov 24 2026"
+    "display": "$23.11",
+    "value": 23.11,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.61%",
-    "value": -0.613
+    "display": "0.32%",
+    "value": 0.317
   },
   "aum": {
     "display": "$7.49 M",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0.16,
-    "secYield": 0.58,
-    "secYieldText": "0.58%",
+    "secYield": 0.56,
+    "secYieldText": "0.56%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

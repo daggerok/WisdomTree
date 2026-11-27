@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddwm",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddwm",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -37,11 +37,11 @@
   "marketPrice": {
     "display": "$44.72",
     "value": 44.72,
-    "asOfDate": "Nov 24 2026"
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "0.27%",
-    "value": 0.274
+    "display": "0.98%",
+    "value": 0.984
   },
   "aum": {
     "display": "$1.38 B",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.65%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 1.84,
-    "secYield": 2.46,
-    "secYieldText": "2.46%",
+    "distributionRate": 1.85,
+    "secYield": 2.44,
+    "secYieldText": "2.44%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

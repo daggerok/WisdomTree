@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/don",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/don",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$56.26",
-    "value": 56.26,
-    "asOfDate": "Nov 24 2026"
+    "display": "$56.78",
+    "value": 56.78,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.03%",
-    "value": -0.025
+    "display": "-0.13%",
+    "value": -0.129
   },
   "aum": {
     "display": "$3.94 B",
@@ -54,9 +54,9 @@
     "dividendYieldText": "2.41%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
-    "distributionRate": 2.67,
-    "secYield": 2.35,
-    "secYieldText": "2.35%",
+    "distributionRate": 2.64,
+    "secYield": 2.34,
+    "secYieldText": "2.34%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {

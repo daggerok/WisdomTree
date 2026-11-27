@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://wisdomtree.com/us/products/equity/usmf",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/usmf",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$48.18",
-    "value": 48.182,
-    "asOfDate": "Nov 24 2026"
+    "display": "$48.34",
+    "value": 48.34,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.02%",
-    "value": -0.018
+    "display": "0.10%",
+    "value": 0.098
   },
   "aum": {
     "display": "$188.34 M",
