@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/alternative/gcc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/alternative/gcc",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,13 +35,13 @@
     "asOfDate": "Nov 25 2026"
   },
   "marketPrice": {
-    "display": "$17.26",
-    "value": 17.26,
-    "asOfDate": "Nov 24 2026"
+    "display": "$17.47",
+    "value": 17.47,
+    "asOfDate": "Nov 25 2026"
   },
   "premiumDiscount": {
-    "display": "-0.17%",
-    "value": -0.166
+    "display": "0.99%",
+    "value": 0.986
   },
   "aum": {
     "display": "$173.84 M",
@@ -75,8 +75,8 @@
       "yr3Text": "18.46%",
       "yr5": 11.71,
       "yr5Text": "11.71%",
-      "yr10": 6.28,
-      "yr10Text": "6.28%",
+      "yr10": 6.38,
+      "yr10Text": "6.38%",
       "sinceInception": 13.93,
       "sinceInceptionText": "13.93%",
       "navReturns": {
@@ -254,8 +254,8 @@
       "history/005.json"
     ],
     "pageSize": 1000,
-    "totalRows": 4741,
-    "asOf": "Nov 25 2026",
+    "totalRows": 4742,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

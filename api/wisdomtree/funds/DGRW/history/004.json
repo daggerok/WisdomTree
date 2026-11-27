@@ -2,7 +2,7 @@
   "ticker": "DGRW",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3400,
+  "totalRows": 3401,
   "headers": [
     "Date",
     "Close",
@@ -2409,6 +2409,12 @@
       "Close": "93.52999877929688",
       "Adj Close": "93.53",
       "Volume": "1091200"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "94.86000061035156",
+      "Adj Close": "94.86",
+      "Volume": "237393"
     }
   ]
 }

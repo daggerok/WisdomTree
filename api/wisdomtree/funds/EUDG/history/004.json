@@ -2,7 +2,7 @@
   "ticker": "EUDG",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3159,
+  "totalRows": 3160,
   "headers": [
     "Date",
     "Close",
@@ -963,6 +963,12 @@
       "Close": "37.64099884033203",
       "Adj Close": "37.64",
       "Volume": "6800"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "38.03900146484375",
+      "Adj Close": "38.04",
+      "Volume": "1030"
     }
   ]
 }

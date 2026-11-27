@@ -2,7 +2,7 @@
   "ticker": "DLS",
   "page": 6,
   "pageSize": 1000,
-  "totalRows": 5144,
+  "totalRows": 5145,
   "headers": [
     "Date",
     "Close",
@@ -873,6 +873,12 @@
       "Close": "81.18000030517578",
       "Adj Close": "81.18",
       "Volume": "20600"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "82.68000030517578",
+      "Adj Close": "82.68",
+      "Volume": "3251"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "ticker": "WTMF",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3997,
+  "totalRows": 3998,
   "headers": [
     "Date",
     "Close",
@@ -5991,6 +5991,12 @@
       "Close": "38.77000045776367",
       "Adj Close": "38.77",
       "Volume": "22500"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "38.810001373291016",
+      "Adj Close": "38.81",
+      "Volume": "3799"
     }
   ]
 }

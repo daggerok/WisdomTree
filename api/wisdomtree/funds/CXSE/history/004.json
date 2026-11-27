@@ -2,7 +2,7 @@
   "ticker": "CXSE",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3566,
+  "totalRows": 3567,
   "headers": [
     "Date",
     "Close",
@@ -3405,6 +3405,12 @@
       "Close": "29.209999084472656",
       "Adj Close": "29.21",
       "Volume": "16300"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "30.812000274658203",
+      "Adj Close": "30.81",
+      "Volume": "4279"
     }
   ]
 }

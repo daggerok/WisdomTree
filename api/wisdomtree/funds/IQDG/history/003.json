@@ -2,7 +2,7 @@
   "ticker": "IQDG",
   "page": 3,
   "pageSize": 1000,
-  "totalRows": 2676,
+  "totalRows": 2677,
   "headers": [
     "Date",
     "Close",
@@ -4065,6 +4065,12 @@
       "Close": "40.90999984741211",
       "Adj Close": "40.91",
       "Volume": "23800"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "41.40999984741211",
+      "Adj Close": "41.41",
+      "Volume": "9159"
     }
   ]
 }

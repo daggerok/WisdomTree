@@ -2,7 +2,7 @@
   "ticker": "WIMA",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 180,
+  "totalRows": 181,
   "headers": [
     "Date",
     "Close",
@@ -1089,6 +1089,12 @@
       "Close": "40.189998626708984",
       "Adj Close": "40.19",
       "Volume": "17900"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "40.16999816894531",
+      "Adj Close": "40.17",
+      "Volume": "3512"
     }
   ]
 }

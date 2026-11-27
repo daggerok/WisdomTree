@@ -2,7 +2,7 @@
   "ticker": "NTSI",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1386,
+  "totalRows": 1387,
   "headers": [
     "Date",
     "Close",
@@ -2325,6 +2325,12 @@
       "Close": "44.880001068115234",
       "Adj Close": "44.88",
       "Volume": "13500"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "45.334999084472656",
+      "Adj Close": "45.33",
+      "Volume": "42963"
     }
   ]
 }

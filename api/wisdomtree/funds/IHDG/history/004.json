@@ -2,7 +2,7 @@
   "ticker": "IHDG",
   "page": 4,
   "pageSize": 1000,
-  "totalRows": 3159,
+  "totalRows": 3160,
   "headers": [
     "Date",
     "Close",
@@ -963,6 +963,12 @@
       "Close": "51.04999923706055",
       "Adj Close": "51.05",
       "Volume": "69700"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "51.900001525878906",
+      "Adj Close": "51.9",
+      "Volume": "37990"
     }
   ]
 }

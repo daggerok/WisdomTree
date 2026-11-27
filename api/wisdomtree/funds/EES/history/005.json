@@ -2,7 +2,7 @@
   "ticker": "EES",
   "page": 5,
   "pageSize": 1000,
-  "totalRows": 4972,
+  "totalRows": 4973,
   "headers": [
     "Date",
     "Close",
@@ -5841,6 +5841,12 @@
       "Close": "63.79999923706055",
       "Adj Close": "63.8",
       "Volume": "13300"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "64.75",
+      "Adj Close": "64.75",
+      "Volume": "6761"
     }
   ]
 }
