@@ -1,12 +1,12 @@
 {
   "ticker": "DNL",
-  "name": "WisdomTree Global ex-U.S. Quality Growth Fund",
+  "name": "WisdomTree Global ex-US Quality Growth Fund",
   "category": "International Equity",
   "categoryPath": "International Equity / Global",
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dnl",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dnl",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
