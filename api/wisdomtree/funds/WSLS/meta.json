@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$22.91",
-    "value": 22.908,
-    "asOfDate": "Nov 25 2026"
+    "display": "$23.40",
+    "value": 23.402,
+    "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
     "display": "$22.91",
@@ -63,8 +63,8 @@
     "derivedFrom": "WisdomTree product-page Market Price Returns where published; Yahoo adjusted market-price closes for missing values. navReturns and indexReturns come from the same official Total Returns table with no non-official fallback (indexReturns is the benchmark index, not the fund itself).",
     "monthEnd": {
       "asOfDate": "Oct 31 2026",
-      "mo1": -6.41,
-      "mo1Text": "-6.41%",
+      "mo1": -7.73,
+      "mo1Text": "-7.73%",
       "qtd": null,
       "qtdText": "—",
       "ytd": null,
@@ -147,8 +147,8 @@
       "history/001.json"
     ],
     "pageSize": 1000,
-    "totalRows": 33,
-    "asOf": "Nov 25 2026",
+    "totalRows": 34,
+    "asOf": "Nov 27 2026",
     "source": "Yahoo Finance public chart API (adjusted close)"
   }
 }

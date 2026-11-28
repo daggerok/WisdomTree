@@ -2,7 +2,7 @@
   "ticker": "WDNA",
   "page": 2,
   "pageSize": 1000,
-  "totalRows": 1378,
+  "totalRows": 1379,
   "headers": [
     "Date",
     "Close",
@@ -2277,6 +2277,12 @@
       "Close": "22.520000457763672",
       "Adj Close": "22.52",
       "Volume": "1900"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "22.5049991607666",
+      "Adj Close": "22.5",
+      "Volume": "200"
     }
   ]
 }

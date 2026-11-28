@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$24.28",
-    "value": 24.284,
-    "asOfDate": "Nov 25 2026"
+    "display": "$24.22",
+    "value": 24.221,
+    "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
     "display": "$24.32",
@@ -50,8 +50,8 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 4.15,
-    "dividendYieldText": "4.15%",
+    "dividendYield": 4.16,
+    "dividendYieldText": "4.16%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 4.22,

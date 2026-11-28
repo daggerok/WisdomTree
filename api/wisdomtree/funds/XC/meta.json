@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/xc",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/xc",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -30,9 +30,9 @@
     "basis": "value is the net expense ratio (after waivers); grossValue is the gross expense ratio"
   },
   "nav": {
-    "display": "$30.30",
-    "value": 30.301,
-    "asOfDate": "Nov 25 2026"
+    "display": "$30.72",
+    "value": 30.717,
+    "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
     "display": "$30.53",
@@ -50,8 +50,8 @@
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 2.05,
-    "dividendYieldText": "2.05%",
+    "dividendYield": 2.03,
+    "dividendYieldText": "2.03%",
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 1.58,

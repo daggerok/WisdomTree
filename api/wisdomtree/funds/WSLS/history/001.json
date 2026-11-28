@@ -2,7 +2,7 @@
   "ticker": "WSLS",
   "page": 1,
   "pageSize": 1000,
-  "totalRows": 33,
+  "totalRows": 34,
   "headers": [
     "Date",
     "Close",
@@ -207,6 +207,12 @@
       "Close": "22.90999984741211",
       "Adj Close": "22.91",
       "Volume": "2000"
+    },
+    {
+      "Date": "Nov 27 2026",
+      "Close": "22.920000076293945",
+      "Adj Close": "22.92",
+      "Volume": "100"
     }
   ]
 }
