@@ -35,13 +35,13 @@
     "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
-    "display": "$40.86",
-    "value": 40.86,
-    "asOfDate": "Nov 25 2026"
+    "display": "$41.70",
+    "value": 41.7,
+    "asOfDate": "Nov 27 2026"
   },
   "premiumDiscount": {
-    "display": "0.00%",
-    "value": 0.001
+    "display": "0.05%",
+    "value": 0.05
   },
   "aum": {
     "display": "$288.06 M",
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 0,
-    "secYield": -0.43,
-    "secYieldText": "-0.43%",
+    "secYield": -0.4,
+    "secYieldText": "-0.40%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
