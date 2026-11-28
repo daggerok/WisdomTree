@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/fixed-income/wtmy",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/fixed-income/wtmy",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -45,8 +45,8 @@
   },
   "aum": {
     "display": "$4.91 M",
-    "value": 4907293,
-    "asOfDate": "Nov 25 2026",
+    "value": 4907039,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

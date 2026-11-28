@@ -35,23 +35,23 @@
     "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
-    "display": "$43.19",
-    "value": 43.19,
-    "asOfDate": "Nov 25 2026"
+    "display": "$44.03",
+    "value": 44.028,
+    "asOfDate": "Nov 27 2026"
   },
   "premiumDiscount": {
-    "display": "0.64%",
-    "value": 0.644
+    "display": "0.03%",
+    "value": 0.032
   },
   "aum": {
-    "display": "$48.28 M",
-    "value": 48275896,
-    "asOfDate": "Nov 25 2026",
+    "display": "$49.52 M",
+    "value": 49515684,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
-    "dividendYield": 0.88,
-    "dividendYieldText": "0.88%",
+    "dividendYield": 0.86,
+    "dividendYieldText": "0.86%",
     "dividendYieldBasis": "indicated",
     "dividendYieldKind": "indicated (latest distribution x inferred frequency / market price)",
     "distributionRate": 0.89,

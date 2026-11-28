@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/ddls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/ddls",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.234
   },
   "aum": {
-    "display": "$390.28 M",
-    "value": 390283968,
-    "asOfDate": "Nov 25 2026",
+    "display": "$398.55 M",
+    "value": 398554816,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

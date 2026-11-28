@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dew",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dew",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.215
   },
   "aum": {
-    "display": "$166.41 M",
-    "value": 166413616,
-    "asOfDate": "Nov 25 2026",
+    "display": "$168.65 M",
+    "value": 168649264,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

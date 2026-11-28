@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dgrw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dgrw",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.043
   },
   "aum": {
-    "display": "$16.11 B",
-    "value": 16108398592,
-    "asOfDate": "Nov 25 2026",
+    "display": "$16.32 B",
+    "value": 16318445568,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

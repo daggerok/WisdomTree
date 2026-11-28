@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dfj",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dfj",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.822
   },
   "aum": {
-    "display": "$401.37 M",
-    "value": 401369664,
-    "asOfDate": "Nov 25 2026",
+    "display": "$406.32 M",
+    "value": 406322560,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

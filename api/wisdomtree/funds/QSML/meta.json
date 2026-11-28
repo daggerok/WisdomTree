@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/qsml",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/qsml",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": -0.108
   },
   "aum": {
-    "display": "$23.08 M",
-    "value": 23081098,
-    "asOfDate": "Nov 25 2026",
+    "display": "$23.44 M",
+    "value": 23444874,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

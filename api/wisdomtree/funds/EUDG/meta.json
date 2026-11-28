@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/eudg",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/eudg",
-    "productPageStatus": "fetched through the read-only rendering proxy",
+    "productPageStatus": "unavailable this run; official values retained from the previous run",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -44,9 +44,9 @@
     "value": 0.099
   },
   "aum": {
-    "display": "$64.94 M",
-    "value": 64940916,
-    "asOfDate": "Nov 25 2026",
+    "display": "$66.50 M",
+    "value": 66502364,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

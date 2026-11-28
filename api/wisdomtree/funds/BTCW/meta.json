@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/crypto/btcw",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/crypto/btcw",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
-    "display": "$63.59",
-    "value": 63.59,
-    "asOfDate": "Nov 25 2026"
+    "display": "$63.23",
+    "value": 63.23,
+    "asOfDate": "Nov 27 2026"
   },
   "premiumDiscount": {
-    "display": "0.47%",
-    "value": 0.472
+    "display": "0.27%",
+    "value": 0.265
   },
   "aum": {
-    "display": "$120.57 M",
-    "value": 120566752,
-    "asOfDate": "Nov 25 2026",
+    "display": "$120.13 M",
+    "value": 120134248,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {

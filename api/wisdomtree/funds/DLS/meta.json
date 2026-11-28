@@ -6,7 +6,7 @@
   "source": {
     "fundPage": "https://www.wisdomtree.com/us/products/equity/dls",
     "officialProductPage": "https://r.jina.ai/http://www.wisdomtree.com/us/products/equity/dls",
-    "productPageStatus": "unavailable this run; official values retained from the previous run",
+    "productPageStatus": "fetched through the read-only rendering proxy",
     "productPageAsOf": "Oct 31 2026",
     "holdingsDownload": null,
     "pricesDownload": null,
@@ -35,18 +35,18 @@
     "asOfDate": "Nov 27 2026"
   },
   "marketPrice": {
-    "display": "$81.18",
-    "value": 81.18,
-    "asOfDate": "Nov 25 2026"
+    "display": "$82.68",
+    "value": 82.68,
+    "asOfDate": "Nov 27 2026"
   },
   "premiumDiscount": {
-    "display": "0.68%",
-    "value": 0.684
+    "display": "0.32%",
+    "value": 0.318
   },
   "aum": {
-    "display": "$927.18 M",
-    "value": 927183424,
-    "asOfDate": "Nov 25 2026",
+    "display": "$947.79 M",
+    "value": 947794368,
+    "asOfDate": "Nov 27 2026",
     "source": "WisdomTree product table Assets Under Mgmt $(000)"
   },
   "yields": {
@@ -55,8 +55,8 @@
     "dividendYieldBasis": "official-trailing-12m",
     "dividendYieldKind": "trailing 12-month, published by WisdomTree catalog (a published 0.00% is kept as published)",
     "distributionRate": 2.98,
-    "secYield": 3.52,
-    "secYieldText": "3.52%",
+    "secYield": 3.59,
+    "secYieldText": "3.59%",
     "secYieldKind": "30-day SEC yield published on the official WisdomTree product page"
   },
   "returns": {
